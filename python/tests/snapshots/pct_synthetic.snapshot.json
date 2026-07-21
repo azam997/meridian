@@ -1,0 +1,5868 @@
+{
+  "abilityMeta": {
+    "34650": {
+      "iconPath": "/i/003000/003801.png",
+      "id": 34650,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Fire in Red"
+    },
+    "34651": {
+      "iconPath": "/i/003000/003802.png",
+      "id": 34651,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Aero in Green"
+    },
+    "34652": {
+      "iconPath": "/i/003000/003803.png",
+      "id": 34652,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Water in Blue"
+    },
+    "34653": {
+      "iconPath": "/i/003000/003804.png",
+      "id": 34653,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Blizzard in Cyan"
+    },
+    "34654": {
+      "iconPath": "/i/003000/003805.png",
+      "id": 34654,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Stone in Yellow"
+    },
+    "34655": {
+      "iconPath": "/i/003000/003806.png",
+      "id": 34655,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Thunder in Magenta"
+    },
+    "34662": {
+      "iconPath": "/i/003000/003813.png",
+      "id": 34662,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Holy in White"
+    },
+    "34663": {
+      "iconPath": "/i/003000/003814.png",
+      "id": 34663,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Comet in Black"
+    },
+    "34664": {
+      "iconPath": "/i/003000/003815.png",
+      "id": 34664,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Pom Motif"
+    },
+    "34665": {
+      "iconPath": "/i/003000/003816.png",
+      "id": 34665,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Wing Motif"
+    },
+    "34666": {
+      "iconPath": "/i/003000/003817.png",
+      "id": 34666,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Claw Motif"
+    },
+    "34667": {
+      "iconPath": "/i/003000/003818.png",
+      "id": 34667,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Maw Motif"
+    },
+    "34668": {
+      "iconPath": "/i/003000/003819.png",
+      "id": 34668,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Hammer Motif"
+    },
+    "34669": {
+      "iconPath": "/i/003000/003820.png",
+      "id": 34669,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Starry Sky Motif"
+    },
+    "34670": {
+      "iconPath": "/i/003000/003821.png",
+      "id": 34670,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Pom Muse"
+    },
+    "34671": {
+      "iconPath": "/i/003000/003822.png",
+      "id": 34671,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Winged Muse"
+    },
+    "34672": {
+      "iconPath": "/i/003000/003823.png",
+      "id": 34672,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Clawed Muse"
+    },
+    "34673": {
+      "iconPath": "/i/003000/003824.png",
+      "id": 34673,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Fanged Muse"
+    },
+    "34674": {
+      "iconPath": "/i/003000/003825.png",
+      "id": 34674,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Striking Muse"
+    },
+    "34675": {
+      "iconPath": "/i/003000/003826.png",
+      "id": 34675,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Starry Muse"
+    },
+    "34676": {
+      "iconPath": "/i/003000/003827.png",
+      "id": 34676,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Mog of the Ages"
+    },
+    "34677": {
+      "iconPath": "/i/003000/003828.png",
+      "id": 34677,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Retribution of the Madeen"
+    },
+    "34678": {
+      "iconPath": "/i/003000/003829.png",
+      "id": 34678,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Hammer Stamp"
+    },
+    "34679": {
+      "iconPath": "/i/003000/003830.png",
+      "id": 34679,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Hammer Brush"
+    },
+    "34680": {
+      "iconPath": "/i/003000/003831.png",
+      "id": 34680,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Polishing Hammer"
+    },
+    "34681": {
+      "iconPath": "/i/003000/003832.png",
+      "id": 34681,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Star Prism"
+    },
+    "34683": {
+      "iconPath": "/i/003000/003833.png",
+      "id": 34683,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Subtractive Palette"
+    },
+    "34688": {
+      "iconPath": "/i/003000/003838.png",
+      "id": 34688,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Rainbow Drip"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "34650": 15,
+        "34651": 14,
+        "34652": 13,
+        "34653": 9,
+        "34654": 9,
+        "34655": 9,
+        "34662": 3,
+        "34663": 9,
+        "34664": 2,
+        "34665": 3,
+        "34666": 3,
+        "34667": 2,
+        "34668": 6,
+        "34669": 2,
+        "34670": 3,
+        "34671": 3,
+        "34672": 3,
+        "34673": 2,
+        "34674": 7,
+        "34675": 3,
+        "34676": 3,
+        "34677": 2,
+        "34678": 7,
+        "34679": 7,
+        "34680": 7,
+        "34681": 3,
+        "34683": 9,
+        "34688": 3
+      },
+      "totalCasts": 161
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": [
+        "Starry Muse"
+      ]
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 695.65,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "targetability"
+    },
+    "Drift": {
+      "downtimeSource": "targetability",
+      "downtimeWindows": [],
+      "fightDurationSec": 360.0,
+      "findings": [
+        {
+          "abilityId": 34676,
+          "abilityName": "Mog of the Ages",
+          "cappedSeconds": 210.0,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 7.0,
+          "lostPotency": 7000.0,
+          "sharedConsumers": 2
+        },
+        {
+          "abilityId": 34670,
+          "abilityName": "Pom Muse",
+          "cappedSeconds": 6.88,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 8
+        },
+        {
+          "abilityId": 34674,
+          "abilityName": "Striking Muse",
+          "cappedSeconds": 5.7,
+          "casts": 7,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 34675,
+          "abilityName": "Starry Muse",
+          "cappedSeconds": 6.15,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 34650,
+          "expectedId": 34688,
+          "lostPotency": 510.0,
+          "position": 1,
+          "summary": "Opener slot #1: cast Fire in Red (490p), canonical uses Rainbow Drip (1000p) \u2014 -510p"
+        },
+        {
+          "actualId": 34681,
+          "expectedId": 34670,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Star Prism, canonical uses Pom Muse (same potency)"
+        },
+        {
+          "actualId": 34653,
+          "expectedId": 34674,
+          "lostPotency": 0.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Blizzard in Cyan, canonical uses Striking Muse (same potency)"
+        },
+        {
+          "actualId": 34654,
+          "expectedId": 34665,
+          "lostPotency": 0.0,
+          "position": 4,
+          "summary": "Opener slot #4: cast Stone in Yellow, canonical uses Wing Motif (same potency)"
+        },
+        {
+          "actualId": 34655,
+          "expectedId": 34675,
+          "lostPotency": 0.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Thunder in Magenta, canonical uses Starry Muse (same potency)"
+        },
+        {
+          "actualId": 34663,
+          "expectedId": 34678,
+          "lostPotency": 0.0,
+          "position": 6,
+          "summary": "Opener slot #6: cast Comet in Black, canonical uses Hammer Stamp (same potency)"
+        },
+        {
+          "actualId": 34678,
+          "expectedId": 34683,
+          "lostPotency": 0.0,
+          "position": 7,
+          "summary": "Opener slot #7: cast Hammer Stamp, canonical uses Subtractive Palette (same potency)"
+        },
+        {
+          "actualId": 34679,
+          "expectedId": 34653,
+          "lostPotency": 280.0,
+          "position": 8,
+          "summary": "Opener slot #8: cast Hammer Brush (580p), canonical uses Blizzard in Cyan (860p) \u2014 -280p"
+        },
+        {
+          "actualId": 34680,
+          "expectedId": 34654,
+          "lostPotency": 300.0,
+          "position": 9,
+          "summary": "Opener slot #9: cast Polishing Hammer (600p), canonical uses Stone in Yellow (900p) \u2014 -300p"
+        },
+        {
+          "actualId": 34688,
+          "expectedId": 34655,
+          "lostPotency": 0.0,
+          "position": 10,
+          "summary": "Opener slot #10: cast Rainbow Drip, canonical uses Thunder in Magenta (same potency)"
+        },
+        {
+          "actualId": 34665,
+          "expectedId": 34663,
+          "lostPotency": 940.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Wing Motif (0p), canonical uses Comet in Black (940p) \u2014 -940p"
+        },
+        {
+          "actualId": 34666,
+          "expectedId": 34671,
+          "lostPotency": 800.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Claw Motif (0p), canonical uses Winged Muse (800p) \u2014 -800p"
+        },
+        {
+          "actualId": 34668,
+          "expectedId": 34676,
+          "lostPotency": 1000.0,
+          "position": 13,
+          "summary": "Opener slot #13: cast Hammer Motif (0p), canonical uses Mog of the Ages (1000p) \u2014 -1000p"
+        },
+        {
+          "actualId": 34678,
+          "expectedId": 34681,
+          "lostPotency": 540.0,
+          "position": 14,
+          "summary": "Opener slot #14: cast Hammer Stamp (560p), canonical uses Star Prism (1100p) \u2014 -540p"
+        },
+        {
+          "actualId": 34667,
+          "expectedId": 34688,
+          "lostPotency": 1000.0,
+          "position": 17,
+          "summary": "Opener slot #17: cast Maw Motif (0p), canonical uses Rainbow Drip (1000p) \u2014 -1000p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Scoring": {
+      "deliveredObserved": 106154.39,
+      "deliveredPotency": 106154.39,
+      "downtimeSource": "targetability",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "34674": 1262.39,
+        "34675": 1508.52,
+        "34683": 925.92
+      },
+      "fightDurationSec": 360.0,
+      "idealizedLenient": 109007.56,
+      "idealizedMaster": 108802.41,
+      "idealizedObserved": 107393.4,
+      "idealizedPotency": 109007.56,
+      "idealizedStrict": 109007.56,
+      "masterBuffIntervals": [
+        [
+          7.0,
+          27.0,
+          1.05
+        ],
+        [
+          127.0,
+          147.0,
+          1.05
+        ],
+        [
+          247.0,
+          267.0,
+          1.05
+        ]
+      ],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.5,
+        "payload": null
+      },
+      "tinctureLoss": 1887.57,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 161"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Fire in Red",
+          15,
+          0
+        ],
+        [
+          "Aero in Green",
+          14,
+          0
+        ],
+        [
+          "Water in Blue",
+          13,
+          0
+        ],
+        [
+          "Blizzard in Cyan",
+          9,
+          0
+        ],
+        [
+          "Stone in Yellow",
+          9,
+          0
+        ],
+        [
+          "Thunder in Magenta",
+          9,
+          0
+        ],
+        [
+          "Comet in Black",
+          9,
+          0
+        ],
+        [
+          "Subtractive Palette",
+          9,
+          0
+        ],
+        [
+          "Striking Muse",
+          7,
+          0
+        ],
+        [
+          "Hammer Stamp",
+          7,
+          0
+        ],
+        [
+          "Hammer Brush",
+          7,
+          0
+        ],
+        [
+          "Polishing Hammer",
+          7,
+          0
+        ],
+        [
+          "Hammer Motif",
+          6,
+          0
+        ],
+        [
+          "Rainbow Drip",
+          3,
+          0
+        ],
+        [
+          "Holy in White",
+          3,
+          0
+        ],
+        [
+          "Wing Motif",
+          3,
+          0
+        ],
+        [
+          "Claw Motif",
+          3,
+          0
+        ],
+        [
+          "Pom Muse",
+          3,
+          0
+        ],
+        [
+          "Winged Muse",
+          3,
+          0
+        ],
+        [
+          "Clawed Muse",
+          3,
+          0
+        ],
+        [
+          "Starry Muse",
+          3,
+          0
+        ],
+        [
+          "Mog of the Ages",
+          3,
+          0
+        ],
+        [
+          "Star Prism",
+          3,
+          0
+        ],
+        [
+          "Pom Motif",
+          2,
+          0
+        ],
+        [
+          "Maw Motif",
+          2,
+          0
+        ],
+        [
+          "Starry Sky Motif",
+          2,
+          0
+        ],
+        [
+          "Fanged Muse",
+          2,
+          0
+        ],
+        [
+          "Retribution of the Madeen",
+          2,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No burst-alignment opportunities flagged."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 696p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "[drift] Mog of the Ages: 3 casts, drifted 210.0s \u2248 -7000p (ref avg -0p)"
+      ],
+      "summaryLines": [
+        "Total drift cost: -7000p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Mog of the Ages",
+          3,
+          210.0,
+          7000,
+          0,
+          "+7000"
+        ],
+        [
+          "Pom Muse",
+          3,
+          6.9,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Striking Muse",
+          7,
+          5.7,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Starry Muse",
+          3,
+          6.2,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #1: cast Fire in Red (490p), canonical uses Rainbow Drip (1000p) \u2014 -510p",
+        "[opener] Opener slot #8: cast Hammer Brush (580p), canonical uses Blizzard in Cyan (860p) \u2014 -280p",
+        "[opener] Opener slot #9: cast Polishing Hammer (600p), canonical uses Stone in Yellow (900p) \u2014 -300p",
+        "[opener] Opener slot #11: cast Wing Motif (0p), canonical uses Comet in Black (940p) \u2014 -940p",
+        "[opener] Opener slot #12: cast Claw Motif (0p), canonical uses Winged Muse (800p) \u2014 -800p",
+        "[opener] Opener slot #13: cast Hammer Motif (0p), canonical uses Mog of the Ages (1000p) \u2014 -1000p",
+        "[opener] Opener slot #14: cast Hammer Stamp (560p), canonical uses Star Prism (1100p) \u2014 -540p",
+        "[opener] Opener slot #17: cast Maw Motif (0p), canonical uses Rainbow Drip (1000p) \u2014 -1000p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 5370p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          1,
+          "Rainbow Drip",
+          "Fire in Red",
+          510
+        ],
+        [
+          2,
+          "Pom Muse",
+          "Star Prism",
+          0
+        ],
+        [
+          3,
+          "Striking Muse",
+          "Blizzard in Cyan",
+          0
+        ],
+        [
+          4,
+          "Wing Motif",
+          "Stone in Yellow",
+          0
+        ],
+        [
+          5,
+          "Starry Muse",
+          "Thunder in Magenta",
+          0
+        ],
+        [
+          6,
+          "Hammer Stamp",
+          "Comet in Black",
+          0
+        ],
+        [
+          7,
+          "Subtractive Palette",
+          "Hammer Stamp",
+          0
+        ],
+        [
+          8,
+          "Blizzard in Cyan",
+          "Hammer Brush",
+          280
+        ],
+        [
+          9,
+          "Stone in Yellow",
+          "Polishing Hammer",
+          300
+        ],
+        [
+          10,
+          "Thunder in Magenta",
+          "Rainbow Drip",
+          0
+        ],
+        [
+          11,
+          "Comet in Black",
+          "Wing Motif",
+          940
+        ],
+        [
+          12,
+          "Winged Muse",
+          "Claw Motif",
+          800
+        ],
+        [
+          13,
+          "Mog of the Ages",
+          "Hammer Motif",
+          1000
+        ],
+        [
+          14,
+          "Star Prism",
+          "Hammer Stamp",
+          540
+        ],
+        [
+          17,
+          "Rainbow Drip",
+          "Maw Motif",
+          1000
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 106154.39,
+    "downtimeSource": "targetability",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 97.38,
+    "efficiencyPctLenient": 97.38,
+    "efficiencyPctMaster": 97.57,
+    "efficiencyPctObserved": 98.85,
+    "efficiencyPctStrict": 97.38,
+    "idealizedMaster": 108802.41,
+    "idealizedObserved": 107393.4,
+    "killTimeSec": 360,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Pictomancer"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 109007.56,
+    "yourIdealizedPotencyLenient": 109007.56,
+    "yourPotency": 106154.39
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 32.5,
+      "multiplier": 1.08,
+      "startSec": 2.5
+    },
+    {
+      "endSec": 330.73,
+      "multiplier": 1.08,
+      "startSec": 300.73
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 34688,
+      "color": "#3b82f6",
+      "endSec": -2.5,
+      "iconPath": "/i/003000/003838.png",
+      "label": "Rai",
+      "startSec": -3.5,
+      "tooltip": "Rainbow Drip @ -3.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 2.5,
+      "tooltip": "Fire in Red @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 3.1,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 2.5,
+      "tooltip": "Striking Muse @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 6.0,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 5.0,
+      "tooltip": "Hammer Stamp @ 5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34675,
+      "color": "#f59e0b",
+      "endSec": 5.6,
+      "iconPath": "/i/003000/003826.png",
+      "label": "Sta",
+      "startSec": 5.0,
+      "tooltip": "Starry Muse @ 5.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34670,
+      "color": "#f59e0b",
+      "endSec": 6.3,
+      "iconPath": "/i/003000/003821.png",
+      "label": "Pom",
+      "startSec": 5.7,
+      "tooltip": "Pom Muse @ 5.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34681,
+      "color": "#3b82f6",
+      "endSec": 8.5,
+      "iconPath": "/i/003000/003832.png",
+      "label": "Sta",
+      "startSec": 7.5,
+      "tooltip": "Star Prism @ 7.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 10.38,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 9.38,
+      "tooltip": "Hammer Brush @ 9.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 12.88,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 11.88,
+      "tooltip": "Polishing Hammer @ 11.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34665,
+      "color": "#3b82f6",
+      "endSec": 15.38,
+      "iconPath": "/i/003000/003816.png",
+      "label": "Win",
+      "startSec": 14.38,
+      "tooltip": "Wing Motif @ 14.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 14.97,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 14.38,
+      "tooltip": "Subtractive Palette @ 14.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 19.38,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 18.38,
+      "tooltip": "Blizzard in Cyan @ 18.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34671,
+      "color": "#f59e0b",
+      "endSec": 18.98,
+      "iconPath": "/i/003000/003822.png",
+      "label": "Win",
+      "startSec": 18.38,
+      "tooltip": "Winged Muse @ 18.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 21.85,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 20.85,
+      "tooltip": "Stone in Yellow @ 20.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34676,
+      "color": "#f59e0b",
+      "endSec": 21.45,
+      "iconPath": "/i/003000/003827.png",
+      "label": "Mog",
+      "startSec": 20.85,
+      "tooltip": "Mog of the Ages @ 20.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 24.33,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 23.33,
+      "tooltip": "Thunder in Magenta @ 23.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 26.8,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 25.8,
+      "tooltip": "Comet in Black @ 25.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34688,
+      "color": "#3b82f6",
+      "endSec": 29.28,
+      "iconPath": "/i/003000/003838.png",
+      "label": "Rai",
+      "startSec": 28.28,
+      "tooltip": "Rainbow Drip @ 28.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34666,
+      "color": "#3b82f6",
+      "endSec": 31.78,
+      "iconPath": "/i/003000/003817.png",
+      "label": "Cla",
+      "startSec": 30.78,
+      "tooltip": "Claw Motif @ 30.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34672,
+      "color": "#f59e0b",
+      "endSec": 31.38,
+      "iconPath": "/i/003000/003823.png",
+      "label": "Cla",
+      "startSec": 30.78,
+      "tooltip": "Clawed Muse @ 30.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34667,
+      "color": "#3b82f6",
+      "endSec": 35.78,
+      "iconPath": "/i/003000/003818.png",
+      "label": "Maw",
+      "startSec": 34.78,
+      "tooltip": "Maw Motif @ 34.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 39.78,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 38.78,
+      "tooltip": "Hammer Motif @ 38.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 39.38,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 38.78,
+      "tooltip": "Striking Muse @ 38.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 43.78,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 42.78,
+      "tooltip": "Hammer Stamp @ 42.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 46.28,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 45.28,
+      "tooltip": "Hammer Brush @ 45.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 48.78,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 47.78,
+      "tooltip": "Polishing Hammer @ 47.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34673,
+      "color": "#f59e0b",
+      "endSec": 48.38,
+      "iconPath": "/i/003000/003824.png",
+      "label": "Fan",
+      "startSec": 47.78,
+      "tooltip": "Fanged Muse @ 47.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34664,
+      "color": "#3b82f6",
+      "endSec": 51.28,
+      "iconPath": "/i/003000/003815.png",
+      "label": "Pom",
+      "startSec": 50.28,
+      "tooltip": "Pom Motif @ 50.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 55.28,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 54.28,
+      "tooltip": "Hammer Motif @ 54.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34677,
+      "color": "#f59e0b",
+      "endSec": 54.88,
+      "iconPath": "/i/003000/003828.png",
+      "label": "Ret",
+      "startSec": 54.28,
+      "tooltip": "Retribution of the Madeen @ 54.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34669,
+      "color": "#3b82f6",
+      "endSec": 59.28,
+      "iconPath": "/i/003000/003820.png",
+      "label": "Sta",
+      "startSec": 58.28,
+      "tooltip": "Starry Sky Motif @ 58.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 63.28,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 62.28,
+      "tooltip": "Fire in Red @ 62.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 65.78,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 64.78,
+      "tooltip": "Aero in Green @ 64.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 65.38,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 64.78,
+      "tooltip": "Striking Muse @ 64.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 68.28,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 67.28,
+      "tooltip": "Hammer Stamp @ 67.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 70.78,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 69.78,
+      "tooltip": "Hammer Brush @ 69.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 73.28,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 72.28,
+      "tooltip": "Polishing Hammer @ 72.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 75.78,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 74.78,
+      "tooltip": "Hammer Motif @ 74.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 79.78,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 78.78,
+      "tooltip": "Water in Blue @ 78.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 82.28,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 81.28,
+      "tooltip": "Fire in Red @ 81.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 84.78,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 83.78,
+      "tooltip": "Aero in Green @ 83.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 87.28,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 86.28,
+      "tooltip": "Water in Blue @ 86.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 86.88,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 86.28,
+      "tooltip": "Subtractive Palette @ 86.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 89.78,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 88.78,
+      "tooltip": "Blizzard in Cyan @ 88.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34670,
+      "color": "#f59e0b",
+      "endSec": 89.38,
+      "iconPath": "/i/003000/003821.png",
+      "label": "Pom",
+      "startSec": 88.78,
+      "tooltip": "Pom Muse @ 88.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 93.08,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 92.08,
+      "tooltip": "Stone in Yellow @ 92.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 96.38,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 95.38,
+      "tooltip": "Thunder in Magenta @ 95.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 99.67,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 98.67,
+      "tooltip": "Comet in Black @ 98.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34665,
+      "color": "#3b82f6",
+      "endSec": 102.97,
+      "iconPath": "/i/003000/003816.png",
+      "label": "Win",
+      "startSec": 101.97,
+      "tooltip": "Wing Motif @ 102.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 106.97,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 105.97,
+      "tooltip": "Fire in Red @ 106.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 109.47,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 108.47,
+      "tooltip": "Aero in Green @ 108.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 111.97,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 110.97,
+      "tooltip": "Water in Blue @ 111.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 114.47,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 113.47,
+      "tooltip": "Fire in Red @ 113.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 116.97,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 115.97,
+      "tooltip": "Aero in Green @ 116.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 119.47,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 118.47,
+      "tooltip": "Water in Blue @ 118.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 119.07,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 118.47,
+      "tooltip": "Subtractive Palette @ 118.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 121.97,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 120.97,
+      "tooltip": "Blizzard in Cyan @ 121.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 125.27,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 124.27,
+      "tooltip": "Stone in Yellow @ 124.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 124.87,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 124.27,
+      "tooltip": "Striking Muse @ 124.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 128.57,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 127.57,
+      "tooltip": "Thunder in Magenta @ 127.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34675,
+      "color": "#f59e0b",
+      "endSec": 128.17,
+      "iconPath": "/i/003000/003826.png",
+      "label": "Sta",
+      "startSec": 127.57,
+      "tooltip": "Starry Muse @ 127.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 131.88,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 130.88,
+      "tooltip": "Comet in Black @ 130.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 131.47,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 130.88,
+      "tooltip": "Subtractive Palette @ 130.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34671,
+      "color": "#f59e0b",
+      "endSec": 132.17,
+      "iconPath": "/i/003000/003822.png",
+      "label": "Win",
+      "startSec": 131.57,
+      "tooltip": "Winged Muse @ 131.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 134.35,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 133.35,
+      "tooltip": "Blizzard in Cyan @ 133.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34676,
+      "color": "#f59e0b",
+      "endSec": 133.95,
+      "iconPath": "/i/003000/003827.png",
+      "label": "Mog",
+      "startSec": 133.35,
+      "tooltip": "Mog of the Ages @ 133.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 136.82,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 135.82,
+      "tooltip": "Stone in Yellow @ 135.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 139.3,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 138.3,
+      "tooltip": "Thunder in Magenta @ 138.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 141.77,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 140.77,
+      "tooltip": "Comet in Black @ 140.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34681,
+      "color": "#3b82f6",
+      "endSec": 144.25,
+      "iconPath": "/i/003000/003832.png",
+      "label": "Sta",
+      "startSec": 143.25,
+      "tooltip": "Star Prism @ 143.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 146.75,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 145.75,
+      "tooltip": "Hammer Stamp @ 145.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 149.25,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 148.25,
+      "tooltip": "Hammer Brush @ 148.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 151.75,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 150.75,
+      "tooltip": "Polishing Hammer @ 150.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34688,
+      "color": "#3b82f6",
+      "endSec": 154.25,
+      "iconPath": "/i/003000/003838.png",
+      "label": "Rai",
+      "startSec": 153.25,
+      "tooltip": "Rainbow Drip @ 153.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34666,
+      "color": "#3b82f6",
+      "endSec": 156.75,
+      "iconPath": "/i/003000/003817.png",
+      "label": "Cla",
+      "startSec": 155.75,
+      "tooltip": "Claw Motif @ 155.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 160.75,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 159.75,
+      "tooltip": "Hammer Motif @ 159.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34669,
+      "color": "#3b82f6",
+      "endSec": 164.75,
+      "iconPath": "/i/003000/003820.png",
+      "label": "Sta",
+      "startSec": 163.75,
+      "tooltip": "Starry Sky Motif @ 163.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 168.75,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 167.75,
+      "tooltip": "Fire in Red @ 167.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34672,
+      "color": "#f59e0b",
+      "endSec": 168.35,
+      "iconPath": "/i/003000/003823.png",
+      "label": "Cla",
+      "startSec": 167.75,
+      "tooltip": "Clawed Muse @ 167.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34667,
+      "color": "#3b82f6",
+      "endSec": 171.25,
+      "iconPath": "/i/003000/003818.png",
+      "label": "Maw",
+      "startSec": 170.25,
+      "tooltip": "Maw Motif @ 170.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 175.25,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 174.25,
+      "tooltip": "Aero in Green @ 174.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 177.75,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 176.75,
+      "tooltip": "Water in Blue @ 176.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 180.25,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 179.25,
+      "tooltip": "Fire in Red @ 179.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 182.75,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 181.75,
+      "tooltip": "Aero in Green @ 181.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 185.25,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 184.25,
+      "tooltip": "Water in Blue @ 184.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 184.85,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 184.25,
+      "tooltip": "Subtractive Palette @ 184.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 187.75,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 186.75,
+      "tooltip": "Blizzard in Cyan @ 186.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 187.35,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 186.75,
+      "tooltip": "Striking Muse @ 186.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 191.05,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 190.05,
+      "tooltip": "Stone in Yellow @ 190.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 194.35,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 193.35,
+      "tooltip": "Thunder in Magenta @ 193.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 197.65,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 196.65,
+      "tooltip": "Comet in Black @ 196.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 200.95,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 199.95,
+      "tooltip": "Hammer Stamp @ 200.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 203.45,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 202.45,
+      "tooltip": "Hammer Brush @ 202.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 205.95,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 204.95,
+      "tooltip": "Polishing Hammer @ 205.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 208.45,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 207.45,
+      "tooltip": "Hammer Motif @ 207.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34673,
+      "color": "#f59e0b",
+      "endSec": 208.05,
+      "iconPath": "/i/003000/003824.png",
+      "label": "Fan",
+      "startSec": 207.45,
+      "tooltip": "Fanged Muse @ 207.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34664,
+      "color": "#3b82f6",
+      "endSec": 212.45,
+      "iconPath": "/i/003000/003815.png",
+      "label": "Pom",
+      "startSec": 211.45,
+      "tooltip": "Pom Motif @ 211.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34677,
+      "color": "#f59e0b",
+      "endSec": 212.05,
+      "iconPath": "/i/003000/003828.png",
+      "label": "Ret",
+      "startSec": 211.45,
+      "tooltip": "Retribution of the Madeen @ 211.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 216.45,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 215.45,
+      "tooltip": "Fire in Red @ 215.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 218.95,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 217.95,
+      "tooltip": "Aero in Green @ 218.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 221.45,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 220.45,
+      "tooltip": "Water in Blue @ 220.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 223.95,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 222.95,
+      "tooltip": "Fire in Red @ 223.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 226.45,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 225.45,
+      "tooltip": "Aero in Green @ 225.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 228.95,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 227.95,
+      "tooltip": "Water in Blue @ 228.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 228.55,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 227.95,
+      "tooltip": "Subtractive Palette @ 228.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 231.45,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 230.45,
+      "tooltip": "Blizzard in Cyan @ 230.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 234.75,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 233.75,
+      "tooltip": "Stone in Yellow @ 233.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 238.05,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 237.05,
+      "tooltip": "Thunder in Magenta @ 237.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 241.35,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 240.35,
+      "tooltip": "Comet in Black @ 240.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 244.65,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 243.65,
+      "tooltip": "Fire in Red @ 243.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 247.15,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 246.15,
+      "tooltip": "Aero in Green @ 246.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 246.75,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 246.15,
+      "tooltip": "Striking Muse @ 246.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 249.65,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 248.65,
+      "tooltip": "Hammer Stamp @ 248.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34670,
+      "color": "#f59e0b",
+      "endSec": 249.25,
+      "iconPath": "/i/003000/003821.png",
+      "label": "Pom",
+      "startSec": 248.65,
+      "tooltip": "Pom Muse @ 248.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 252.15,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 251.15,
+      "tooltip": "Hammer Brush @ 251.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 254.65,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 253.65,
+      "tooltip": "Polishing Hammer @ 253.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34675,
+      "color": "#f59e0b",
+      "endSec": 254.25,
+      "iconPath": "/i/003000/003826.png",
+      "label": "Sta",
+      "startSec": 253.65,
+      "tooltip": "Starry Muse @ 253.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34681,
+      "color": "#3b82f6",
+      "endSec": 257.15,
+      "iconPath": "/i/003000/003832.png",
+      "label": "Sta",
+      "startSec": 256.15,
+      "tooltip": "Star Prism @ 256.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34665,
+      "color": "#3b82f6",
+      "endSec": 259.03,
+      "iconPath": "/i/003000/003816.png",
+      "label": "Win",
+      "startSec": 258.03,
+      "tooltip": "Wing Motif @ 258.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 258.63,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 258.03,
+      "tooltip": "Subtractive Palette @ 258.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 263.03,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 262.03,
+      "tooltip": "Blizzard in Cyan @ 262.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 265.5,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 264.5,
+      "tooltip": "Stone in Yellow @ 264.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 267.98,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 266.98,
+      "tooltip": "Thunder in Magenta @ 267.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 270.45,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 269.45,
+      "tooltip": "Comet in Black @ 269.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34688,
+      "color": "#3b82f6",
+      "endSec": 272.93,
+      "iconPath": "/i/003000/003838.png",
+      "label": "Rai",
+      "startSec": 271.93,
+      "tooltip": "Rainbow Drip @ 271.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 275.43,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 274.43,
+      "tooltip": "Hammer Motif @ 274.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 279.43,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 278.43,
+      "tooltip": "Fire in Red @ 278.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 281.93,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 280.93,
+      "tooltip": "Aero in Green @ 280.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 284.43,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 283.43,
+      "tooltip": "Water in Blue @ 283.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 286.93,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 285.93,
+      "tooltip": "Fire in Red @ 285.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34671,
+      "color": "#f59e0b",
+      "endSec": 286.53,
+      "iconPath": "/i/003000/003822.png",
+      "label": "Win",
+      "startSec": 285.93,
+      "tooltip": "Winged Muse @ 285.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34666,
+      "color": "#3b82f6",
+      "endSec": 289.43,
+      "iconPath": "/i/003000/003817.png",
+      "label": "Cla",
+      "startSec": 288.43,
+      "tooltip": "Claw Motif @ 288.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34676,
+      "color": "#f59e0b",
+      "endSec": 289.03,
+      "iconPath": "/i/003000/003827.png",
+      "label": "Mog",
+      "startSec": 288.43,
+      "tooltip": "Mog of the Ages @ 288.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 293.43,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 292.43,
+      "tooltip": "Aero in Green @ 292.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 295.93,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 294.93,
+      "tooltip": "Water in Blue @ 294.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 295.53,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 294.93,
+      "tooltip": "Subtractive Palette @ 294.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 298.43,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 297.43,
+      "tooltip": "Blizzard in Cyan @ 297.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 301.73,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 300.73,
+      "tooltip": "Stone in Yellow @ 300.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 305.03,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 304.03,
+      "tooltip": "Thunder in Magenta @ 304.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 304.63,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 304.03,
+      "tooltip": "Striking Muse @ 304.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 308.33,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 307.33,
+      "tooltip": "Comet in Black @ 307.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 311.63,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 310.63,
+      "tooltip": "Hammer Stamp @ 310.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 314.13,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 313.13,
+      "tooltip": "Hammer Brush @ 313.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 316.63,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 315.63,
+      "tooltip": "Polishing Hammer @ 315.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 319.13,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 318.13,
+      "tooltip": "Fire in Red @ 318.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 321.63,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 320.63,
+      "tooltip": "Aero in Green @ 320.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 324.13,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 323.13,
+      "tooltip": "Water in Blue @ 323.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 326.63,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 325.63,
+      "tooltip": "Fire in Red @ 325.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 329.13,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 328.13,
+      "tooltip": "Aero in Green @ 328.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34672,
+      "color": "#f59e0b",
+      "endSec": 328.73,
+      "iconPath": "/i/003000/003823.png",
+      "label": "Cla",
+      "startSec": 328.13,
+      "tooltip": "Clawed Muse @ 328.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 331.63,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 330.63,
+      "tooltip": "Water in Blue @ 330.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 331.23,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 330.63,
+      "tooltip": "Subtractive Palette @ 330.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 334.13,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 333.13,
+      "tooltip": "Blizzard in Cyan @ 333.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 337.43,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 336.43,
+      "tooltip": "Stone in Yellow @ 336.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 340.73,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 339.73,
+      "tooltip": "Thunder in Magenta @ 339.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 344.03,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 343.03,
+      "tooltip": "Comet in Black @ 343.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 347.33,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 346.33,
+      "tooltip": "Fire in Red @ 346.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 349.83,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 348.83,
+      "tooltip": "Aero in Green @ 348.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 352.33,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 351.33,
+      "tooltip": "Water in Blue @ 351.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34662,
+      "color": "#3b82f6",
+      "endSec": 354.83,
+      "iconPath": "/i/003000/003813.png",
+      "label": "Hol",
+      "startSec": 353.83,
+      "tooltip": "Holy in White @ 353.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34662,
+      "color": "#3b82f6",
+      "endSec": 357.33,
+      "iconPath": "/i/003000/003813.png",
+      "label": "Hol",
+      "startSec": 356.33,
+      "tooltip": "Holy in White @ 356.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34662,
+      "color": "#3b82f6",
+      "endSec": 359.83,
+      "iconPath": "/i/003000/003813.png",
+      "label": "Hol",
+      "startSec": 358.83,
+      "tooltip": "Holy in White @ 358.8s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackCanonical": [
+    {
+      "abilityId": 34688,
+      "color": "#3b82f6",
+      "endSec": -2.5,
+      "iconPath": "/i/003000/003838.png",
+      "label": "Rai",
+      "startSec": -3.5,
+      "tooltip": "Rainbow Drip @ -3.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 2.5,
+      "tooltip": "Fire in Red @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34670,
+      "color": "#f59e0b",
+      "endSec": 3.1,
+      "iconPath": "/i/003000/003821.png",
+      "label": "Pom",
+      "startSec": 2.5,
+      "tooltip": "Pom Muse @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34665,
+      "color": "#3b82f6",
+      "endSec": 6.0,
+      "iconPath": "/i/003000/003816.png",
+      "label": "Win",
+      "startSec": 5.0,
+      "tooltip": "Wing Motif @ 5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34671,
+      "color": "#f59e0b",
+      "endSec": 5.6,
+      "iconPath": "/i/003000/003822.png",
+      "label": "Win",
+      "startSec": 5.0,
+      "tooltip": "Winged Muse @ 5.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34666,
+      "color": "#3b82f6",
+      "endSec": 10.0,
+      "iconPath": "/i/003000/003817.png",
+      "label": "Cla",
+      "startSec": 9.0,
+      "tooltip": "Claw Motif @ 9.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34675,
+      "color": "#f59e0b",
+      "endSec": 9.6,
+      "iconPath": "/i/003000/003826.png",
+      "label": "Sta",
+      "startSec": 9.0,
+      "tooltip": "Starry Muse @ 9.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34681,
+      "color": "#3b82f6",
+      "endSec": 14.0,
+      "iconPath": "/i/003000/003832.png",
+      "label": "Sta",
+      "startSec": 13.0,
+      "tooltip": "Star Prism @ 13.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 13.6,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 13.0,
+      "tooltip": "Subtractive Palette @ 13.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 14.3,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 13.7,
+      "tooltip": "Striking Muse @ 13.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 15.88,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 14.88,
+      "tooltip": "Blizzard in Cyan @ 14.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34676,
+      "color": "#f59e0b",
+      "endSec": 15.47,
+      "iconPath": "/i/003000/003827.png",
+      "label": "Mog",
+      "startSec": 14.88,
+      "tooltip": "Mog of the Ages @ 14.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 18.35,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 17.35,
+      "tooltip": "Stone in Yellow @ 17.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34672,
+      "color": "#f59e0b",
+      "endSec": 17.95,
+      "iconPath": "/i/003000/003823.png",
+      "label": "Cla",
+      "startSec": 17.35,
+      "tooltip": "Clawed Muse @ 17.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 20.83,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 19.83,
+      "tooltip": "Thunder in Magenta @ 19.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 23.3,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 22.3,
+      "tooltip": "Comet in Black @ 22.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 25.78,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 24.78,
+      "tooltip": "Hammer Stamp @ 24.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 28.28,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 27.28,
+      "tooltip": "Hammer Brush @ 27.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 30.78,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 29.78,
+      "tooltip": "Polishing Hammer @ 29.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34688,
+      "color": "#3b82f6",
+      "endSec": 33.28,
+      "iconPath": "/i/003000/003838.png",
+      "label": "Rai",
+      "startSec": 32.28,
+      "tooltip": "Rainbow Drip @ 32.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34667,
+      "color": "#3b82f6",
+      "endSec": 35.78,
+      "iconPath": "/i/003000/003818.png",
+      "label": "Maw",
+      "startSec": 34.78,
+      "tooltip": "Maw Motif @ 34.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 39.78,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 38.78,
+      "tooltip": "Hammer Motif @ 38.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 39.38,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 38.78,
+      "tooltip": "Striking Muse @ 38.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 43.78,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 42.78,
+      "tooltip": "Hammer Stamp @ 42.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34673,
+      "color": "#f59e0b",
+      "endSec": 43.38,
+      "iconPath": "/i/003000/003824.png",
+      "label": "Fan",
+      "startSec": 42.78,
+      "tooltip": "Fanged Muse @ 42.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 46.28,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 45.28,
+      "tooltip": "Hammer Brush @ 45.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34677,
+      "color": "#f59e0b",
+      "endSec": 45.88,
+      "iconPath": "/i/003000/003828.png",
+      "label": "Ret",
+      "startSec": 45.28,
+      "tooltip": "Retribution of the Madeen @ 45.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 48.78,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 47.78,
+      "tooltip": "Polishing Hammer @ 47.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34664,
+      "color": "#3b82f6",
+      "endSec": 51.28,
+      "iconPath": "/i/003000/003815.png",
+      "label": "Pom",
+      "startSec": 50.28,
+      "tooltip": "Pom Motif @ 50.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 55.28,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 54.28,
+      "tooltip": "Hammer Motif @ 54.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34669,
+      "color": "#3b82f6",
+      "endSec": 59.28,
+      "iconPath": "/i/003000/003820.png",
+      "label": "Sta",
+      "startSec": 58.28,
+      "tooltip": "Starry Sky Motif @ 58.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 63.28,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 62.28,
+      "tooltip": "Fire in Red @ 62.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 65.78,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 64.78,
+      "tooltip": "Aero in Green @ 64.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 68.28,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 67.28,
+      "tooltip": "Water in Blue @ 67.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 70.78,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 69.78,
+      "tooltip": "Fire in Red @ 69.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 73.28,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 72.28,
+      "tooltip": "Aero in Green @ 72.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 75.78,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 74.78,
+      "tooltip": "Water in Blue @ 74.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 78.28,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 77.28,
+      "tooltip": "Fire in Red @ 77.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 80.78,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 79.78,
+      "tooltip": "Aero in Green @ 79.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 83.28,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 82.28,
+      "tooltip": "Water in Blue @ 82.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 85.78,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 84.78,
+      "tooltip": "Fire in Red @ 84.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34670,
+      "color": "#f59e0b",
+      "endSec": 85.38,
+      "iconPath": "/i/003000/003821.png",
+      "label": "Pom",
+      "startSec": 84.78,
+      "tooltip": "Pom Muse @ 84.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34665,
+      "color": "#3b82f6",
+      "endSec": 88.28,
+      "iconPath": "/i/003000/003816.png",
+      "label": "Win",
+      "startSec": 87.28,
+      "tooltip": "Wing Motif @ 87.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 92.28,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 91.28,
+      "tooltip": "Aero in Green @ 91.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 94.78,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 93.78,
+      "tooltip": "Water in Blue @ 93.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 97.28,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 96.28,
+      "tooltip": "Fire in Red @ 96.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 99.78,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 98.78,
+      "tooltip": "Aero in Green @ 98.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 102.28,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 101.28,
+      "tooltip": "Water in Blue @ 101.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 104.78,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 103.78,
+      "tooltip": "Fire in Red @ 103.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 107.28,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 106.28,
+      "tooltip": "Aero in Green @ 106.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 109.78,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 108.78,
+      "tooltip": "Water in Blue @ 108.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 112.28,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 111.28,
+      "tooltip": "Fire in Red @ 111.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 114.78,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 113.78,
+      "tooltip": "Aero in Green @ 113.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 117.28,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 116.28,
+      "tooltip": "Water in Blue @ 116.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 119.78,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 118.78,
+      "tooltip": "Fire in Red @ 118.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 122.28,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 121.28,
+      "tooltip": "Aero in Green @ 121.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 124.78,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 123.78,
+      "tooltip": "Water in Blue @ 123.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34671,
+      "color": "#f59e0b",
+      "endSec": 124.38,
+      "iconPath": "/i/003000/003822.png",
+      "label": "Win",
+      "startSec": 123.78,
+      "tooltip": "Winged Muse @ 123.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34666,
+      "color": "#3b82f6",
+      "endSec": 127.28,
+      "iconPath": "/i/003000/003817.png",
+      "label": "Cla",
+      "startSec": 126.28,
+      "tooltip": "Claw Motif @ 126.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34676,
+      "color": "#f59e0b",
+      "endSec": 126.88,
+      "iconPath": "/i/003000/003827.png",
+      "label": "Mog",
+      "startSec": 126.28,
+      "tooltip": "Mog of the Ages @ 126.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 131.28,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 130.28,
+      "tooltip": "Fire in Red @ 130.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34675,
+      "color": "#f59e0b",
+      "endSec": 130.88,
+      "iconPath": "/i/003000/003826.png",
+      "label": "Sta",
+      "startSec": 130.28,
+      "tooltip": "Starry Muse @ 130.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34681,
+      "color": "#3b82f6",
+      "endSec": 133.78,
+      "iconPath": "/i/003000/003832.png",
+      "label": "Sta",
+      "startSec": 132.78,
+      "tooltip": "Star Prism @ 132.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 133.38,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 132.78,
+      "tooltip": "Subtractive Palette @ 132.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 134.07,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 133.47,
+      "tooltip": "Striking Muse @ 133.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 135.65,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 134.65,
+      "tooltip": "Blizzard in Cyan @ 134.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 138.12,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 137.12,
+      "tooltip": "Stone in Yellow @ 137.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 140.6,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 139.6,
+      "tooltip": "Thunder in Magenta @ 139.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 143.07,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 142.07,
+      "tooltip": "Comet in Black @ 142.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 145.55,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 144.55,
+      "tooltip": "Hammer Stamp @ 144.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 148.05,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 147.05,
+      "tooltip": "Hammer Brush @ 147.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 150.55,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 149.55,
+      "tooltip": "Polishing Hammer @ 149.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34688,
+      "color": "#3b82f6",
+      "endSec": 153.05,
+      "iconPath": "/i/003000/003838.png",
+      "label": "Rai",
+      "startSec": 152.05,
+      "tooltip": "Rainbow Drip @ 152.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 155.55,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 154.55,
+      "tooltip": "Hammer Motif @ 154.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 155.15,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 154.55,
+      "tooltip": "Striking Muse @ 154.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34678,
+      "color": "#3b82f6",
+      "endSec": 159.55,
+      "iconPath": "/i/003000/003829.png",
+      "label": "Ham",
+      "startSec": 158.55,
+      "tooltip": "Hammer Stamp @ 158.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34679,
+      "color": "#3b82f6",
+      "endSec": 162.05,
+      "iconPath": "/i/003000/003830.png",
+      "label": "Ham",
+      "startSec": 161.05,
+      "tooltip": "Hammer Brush @ 161.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34680,
+      "color": "#3b82f6",
+      "endSec": 164.55,
+      "iconPath": "/i/003000/003831.png",
+      "label": "Pol",
+      "startSec": 163.55,
+      "tooltip": "Polishing Hammer @ 163.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34672,
+      "color": "#f59e0b",
+      "endSec": 164.15,
+      "iconPath": "/i/003000/003823.png",
+      "label": "Cla",
+      "startSec": 163.55,
+      "tooltip": "Clawed Muse @ 163.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34667,
+      "color": "#3b82f6",
+      "endSec": 167.05,
+      "iconPath": "/i/003000/003818.png",
+      "label": "Maw",
+      "startSec": 166.05,
+      "tooltip": "Maw Motif @ 166.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 171.05,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 170.05,
+      "tooltip": "Hammer Motif @ 170.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34669,
+      "color": "#3b82f6",
+      "endSec": 175.05,
+      "iconPath": "/i/003000/003820.png",
+      "label": "Sta",
+      "startSec": 174.05,
+      "tooltip": "Starry Sky Motif @ 174.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 179.05,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 178.05,
+      "tooltip": "Fire in Red @ 178.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 181.55,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 180.55,
+      "tooltip": "Aero in Green @ 180.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 184.05,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 183.05,
+      "tooltip": "Water in Blue @ 183.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 186.55,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 185.55,
+      "tooltip": "Fire in Red @ 185.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 189.05,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 188.05,
+      "tooltip": "Aero in Green @ 188.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 191.55,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 190.55,
+      "tooltip": "Water in Blue @ 190.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 194.05,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 193.05,
+      "tooltip": "Fire in Red @ 193.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 196.55,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 195.55,
+      "tooltip": "Aero in Green @ 195.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 199.05,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 198.05,
+      "tooltip": "Water in Blue @ 198.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 201.55,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 200.55,
+      "tooltip": "Fire in Red @ 200.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 204.05,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 203.05,
+      "tooltip": "Aero in Green @ 203.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34673,
+      "color": "#f59e0b",
+      "endSec": 203.65,
+      "iconPath": "/i/003000/003824.png",
+      "label": "Fan",
+      "startSec": 203.05,
+      "tooltip": "Fanged Muse @ 203.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34664,
+      "color": "#3b82f6",
+      "endSec": 206.55,
+      "iconPath": "/i/003000/003815.png",
+      "label": "Pom",
+      "startSec": 205.55,
+      "tooltip": "Pom Motif @ 205.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34677,
+      "color": "#f59e0b",
+      "endSec": 206.15,
+      "iconPath": "/i/003000/003828.png",
+      "label": "Ret",
+      "startSec": 205.55,
+      "tooltip": "Retribution of the Madeen @ 205.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 210.55,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 209.55,
+      "tooltip": "Water in Blue @ 209.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 213.05,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 212.05,
+      "tooltip": "Fire in Red @ 212.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 215.55,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 214.55,
+      "tooltip": "Aero in Green @ 214.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 218.05,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 217.05,
+      "tooltip": "Water in Blue @ 217.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 220.55,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 219.55,
+      "tooltip": "Fire in Red @ 219.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 223.05,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 222.05,
+      "tooltip": "Aero in Green @ 222.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 225.55,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 224.55,
+      "tooltip": "Water in Blue @ 224.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 228.05,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 227.05,
+      "tooltip": "Fire in Red @ 227.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 230.55,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 229.55,
+      "tooltip": "Aero in Green @ 229.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 233.05,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 232.05,
+      "tooltip": "Water in Blue @ 232.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 235.55,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 234.55,
+      "tooltip": "Fire in Red @ 234.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 238.05,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 237.05,
+      "tooltip": "Aero in Green @ 237.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 240.55,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 239.55,
+      "tooltip": "Water in Blue @ 239.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 243.05,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 242.05,
+      "tooltip": "Fire in Red @ 242.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 245.55,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 244.55,
+      "tooltip": "Aero in Green @ 244.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34670,
+      "color": "#f59e0b",
+      "endSec": 245.15,
+      "iconPath": "/i/003000/003821.png",
+      "label": "Pom",
+      "startSec": 244.55,
+      "tooltip": "Pom Muse @ 244.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34665,
+      "color": "#3b82f6",
+      "endSec": 248.05,
+      "iconPath": "/i/003000/003816.png",
+      "label": "Win",
+      "startSec": 247.05,
+      "tooltip": "Wing Motif @ 247.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 247.65,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 247.05,
+      "tooltip": "Subtractive Palette @ 247.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 252.05,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 251.05,
+      "tooltip": "Blizzard in Cyan @ 251.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34675,
+      "color": "#f59e0b",
+      "endSec": 251.65,
+      "iconPath": "/i/003000/003826.png",
+      "label": "Sta",
+      "startSec": 251.05,
+      "tooltip": "Starry Muse @ 251.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 255.35,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 254.35,
+      "tooltip": "Stone in Yellow @ 254.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34674,
+      "color": "#f59e0b",
+      "endSec": 254.95,
+      "iconPath": "/i/003000/003825.png",
+      "label": "Str",
+      "startSec": 254.35,
+      "tooltip": "Striking Muse @ 254.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 257.82,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 256.82,
+      "tooltip": "Thunder in Magenta @ 256.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 260.3,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 259.3,
+      "tooltip": "Comet in Black @ 259.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 259.9,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 259.3,
+      "tooltip": "Subtractive Palette @ 259.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 262.78,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 261.78,
+      "tooltip": "Blizzard in Cyan @ 261.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 265.25,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 264.25,
+      "tooltip": "Stone in Yellow @ 264.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 267.73,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 266.73,
+      "tooltip": "Thunder in Magenta @ 266.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34681,
+      "color": "#3b82f6",
+      "endSec": 271.03,
+      "iconPath": "/i/003000/003832.png",
+      "label": "Sta",
+      "startSec": 270.03,
+      "tooltip": "Star Prism @ 270.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 273.53,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 272.53,
+      "tooltip": "Comet in Black @ 272.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 273.13,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 272.53,
+      "tooltip": "Subtractive Palette @ 272.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 276.83,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 275.83,
+      "tooltip": "Blizzard in Cyan @ 275.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 280.13,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 279.13,
+      "tooltip": "Stone in Yellow @ 279.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 283.43,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 282.43,
+      "tooltip": "Thunder in Magenta @ 282.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 286.73,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 285.73,
+      "tooltip": "Comet in Black @ 285.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34671,
+      "color": "#f59e0b",
+      "endSec": 286.33,
+      "iconPath": "/i/003000/003822.png",
+      "label": "Win",
+      "startSec": 285.73,
+      "tooltip": "Winged Muse @ 285.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34676,
+      "color": "#f59e0b",
+      "endSec": 287.03,
+      "iconPath": "/i/003000/003827.png",
+      "label": "Mog",
+      "startSec": 286.43,
+      "tooltip": "Mog of the Ages @ 286.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34688,
+      "color": "#3b82f6",
+      "endSec": 290.03,
+      "iconPath": "/i/003000/003838.png",
+      "label": "Rai",
+      "startSec": 289.03,
+      "tooltip": "Rainbow Drip @ 289.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34666,
+      "color": "#3b82f6",
+      "endSec": 292.53,
+      "iconPath": "/i/003000/003817.png",
+      "label": "Cla",
+      "startSec": 291.53,
+      "tooltip": "Claw Motif @ 291.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34668,
+      "color": "#3b82f6",
+      "endSec": 296.53,
+      "iconPath": "/i/003000/003819.png",
+      "label": "Ham",
+      "startSec": 295.53,
+      "tooltip": "Hammer Motif @ 295.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 300.53,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 299.53,
+      "tooltip": "Fire in Red @ 299.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 303.03,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 302.03,
+      "tooltip": "Aero in Green @ 302.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 305.53,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 304.53,
+      "tooltip": "Water in Blue @ 304.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 308.03,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 307.03,
+      "tooltip": "Fire in Red @ 307.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 310.53,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 309.53,
+      "tooltip": "Aero in Green @ 309.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 313.03,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 312.03,
+      "tooltip": "Water in Blue @ 312.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 312.63,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 312.03,
+      "tooltip": "Subtractive Palette @ 312.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 315.53,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 314.53,
+      "tooltip": "Blizzard in Cyan @ 314.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 318.83,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 317.83,
+      "tooltip": "Stone in Yellow @ 317.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 322.13,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 321.13,
+      "tooltip": "Thunder in Magenta @ 321.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 325.43,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 324.43,
+      "tooltip": "Comet in Black @ 324.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34672,
+      "color": "#f59e0b",
+      "endSec": 325.03,
+      "iconPath": "/i/003000/003823.png",
+      "label": "Cla",
+      "startSec": 324.43,
+      "tooltip": "Clawed Muse @ 324.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 328.73,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 327.73,
+      "tooltip": "Fire in Red @ 327.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 331.23,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 330.23,
+      "tooltip": "Aero in Green @ 330.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 333.73,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 332.73,
+      "tooltip": "Water in Blue @ 332.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34650,
+      "color": "#3b82f6",
+      "endSec": 336.23,
+      "iconPath": "/i/003000/003801.png",
+      "label": "Fir",
+      "startSec": 335.23,
+      "tooltip": "Fire in Red @ 335.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34651,
+      "color": "#3b82f6",
+      "endSec": 338.73,
+      "iconPath": "/i/003000/003802.png",
+      "label": "Aer",
+      "startSec": 337.73,
+      "tooltip": "Aero in Green @ 337.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34652,
+      "color": "#3b82f6",
+      "endSec": 341.23,
+      "iconPath": "/i/003000/003803.png",
+      "label": "Wat",
+      "startSec": 340.23,
+      "tooltip": "Water in Blue @ 340.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34683,
+      "color": "#f59e0b",
+      "endSec": 340.83,
+      "iconPath": "/i/003000/003833.png",
+      "label": "Sub",
+      "startSec": 340.23,
+      "tooltip": "Subtractive Palette @ 340.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34653,
+      "color": "#3b82f6",
+      "endSec": 343.73,
+      "iconPath": "/i/003000/003804.png",
+      "label": "Bli",
+      "startSec": 342.73,
+      "tooltip": "Blizzard in Cyan @ 342.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "color": "#3b82f6",
+      "endSec": 347.03,
+      "iconPath": "/i/003000/003814.png",
+      "label": "Com",
+      "startSec": 346.03,
+      "tooltip": "Comet in Black @ 346.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "color": "#3b82f6",
+      "endSec": 350.33,
+      "iconPath": "/i/003000/003805.png",
+      "label": "Sto",
+      "startSec": 349.33,
+      "tooltip": "Stone in Yellow @ 349.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34655,
+      "color": "#3b82f6",
+      "endSec": 353.63,
+      "iconPath": "/i/003000/003806.png",
+      "label": "Thu",
+      "startSec": 352.63,
+      "tooltip": "Thunder in Magenta @ 352.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34662,
+      "color": "#3b82f6",
+      "endSec": 356.93,
+      "iconPath": "/i/003000/003813.png",
+      "label": "Hol",
+      "startSec": 355.93,
+      "tooltip": "Holy in White @ 355.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34662,
+      "color": "#3b82f6",
+      "endSec": 359.43,
+      "iconPath": "/i/003000/003813.png",
+      "label": "Hol",
+      "startSec": 358.43,
+      "tooltip": "Holy in White @ 358.4s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 1887.57,
+      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [],
+      "kind": "residual",
+      "lostPotency": 965.6,
+      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34688,
+      "abilityName": "Rainbow Drip",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #1: cast Fire in Red, canonical opens Rainbow Drip (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34653,
+      "abilityName": "Blizzard in Cyan",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #8: cast Hammer Brush, canonical opens Blizzard in Cyan (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34654,
+      "abilityName": "Stone in Yellow",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #9: cast Polishing Hammer, canonical opens Stone in Yellow (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34663,
+      "abilityName": "Comet in Black",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #11: cast Wing Motif, canonical opens Comet in Black (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34671,
+      "abilityName": "Winged Muse",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #12: cast Claw Motif, canonical opens Winged Muse (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34676,
+      "abilityName": "Mog of the Ages",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #13: cast Hammer Motif, canonical opens Mog of the Ages (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34681,
+      "abilityName": "Star Prism",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #14: cast Hammer Stamp, canonical opens Star Prism (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34688,
+      "abilityName": "Rainbow Drip",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #17: cast Maw Motif, canonical opens Rainbow Drip (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": -3.0,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": -3.5,
+        "tooltip": "Fire in Red  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34675,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/003000/003826.png",
+        "label": "Sta",
+        "startSec": 2.5,
+        "tooltip": "Starry Muse  (oGCD)  @  0:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34681,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003832.png",
+        "label": "Sta",
+        "startSec": 5.0,
+        "tooltip": "Star Prism  (GCD)  @  0:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34683,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003833.png",
+        "label": "Sub",
+        "startSec": 5.0,
+        "tooltip": "Subtractive Palette  (oGCD)  @  0:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34674,
+        "color": "#777777",
+        "endSec": 6.2,
+        "iconPath": "/i/003000/003825.png",
+        "label": "Str",
+        "startSec": 5.7,
+        "tooltip": "Striking Muse  (oGCD)  @  0:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34653,
+        "color": "#777777",
+        "endSec": 7.38,
+        "iconPath": "/i/003000/003804.png",
+        "label": "Bli",
+        "startSec": 6.88,
+        "tooltip": "Blizzard in Cyan  (GCD)  @  0:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34670,
+        "color": "#777777",
+        "endSec": 7.38,
+        "iconPath": "/i/003000/003821.png",
+        "label": "Pom",
+        "startSec": 6.88,
+        "tooltip": "Pom Muse  (oGCD)  @  0:07",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34654,
+        "color": "#777777",
+        "endSec": 9.85,
+        "iconPath": "/i/003000/003805.png",
+        "label": "Sto",
+        "startSec": 9.35,
+        "tooltip": "Stone in Yellow  (GCD)  @  0:09",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34655,
+        "color": "#777777",
+        "endSec": 12.32,
+        "iconPath": "/i/003000/003806.png",
+        "label": "Thu",
+        "startSec": 11.82,
+        "tooltip": "Thunder in Magenta  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34663,
+        "color": "#777777",
+        "endSec": 14.8,
+        "iconPath": "/i/003000/003814.png",
+        "label": "Com",
+        "startSec": 14.3,
+        "tooltip": "Comet in Black  (GCD)  @  0:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34678,
+        "color": "#777777",
+        "endSec": 17.27,
+        "iconPath": "/i/003000/003829.png",
+        "label": "Ham",
+        "startSec": 16.77,
+        "tooltip": "Hammer Stamp  (GCD)  @  0:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34679,
+        "color": "#777777",
+        "endSec": 19.77,
+        "iconPath": "/i/003000/003830.png",
+        "label": "Ham",
+        "startSec": 19.27,
+        "tooltip": "Hammer Brush  (GCD)  @  0:19",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34680,
+        "color": "#777777",
+        "endSec": 22.27,
+        "iconPath": "/i/003000/003831.png",
+        "label": "Pol",
+        "startSec": 21.77,
+        "tooltip": "Polishing Hammer  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34688,
+        "color": "#777777",
+        "endSec": 24.77,
+        "iconPath": "/i/003000/003838.png",
+        "label": "Rai",
+        "startSec": 24.27,
+        "tooltip": "Rainbow Drip  (GCD)  @  0:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34665,
+        "color": "#777777",
+        "endSec": 27.27,
+        "iconPath": "/i/003000/003816.png",
+        "label": "Win",
+        "startSec": 26.77,
+        "tooltip": "Wing Motif  (GCD)  @  0:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34671,
+        "color": "#777777",
+        "endSec": 27.27,
+        "iconPath": "/i/003000/003822.png",
+        "label": "Win",
+        "startSec": 26.77,
+        "tooltip": "Winged Muse  (oGCD)  @  0:27",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34666,
+        "color": "#777777",
+        "endSec": 31.27,
+        "iconPath": "/i/003000/003817.png",
+        "label": "Cla",
+        "startSec": 30.77,
+        "tooltip": "Claw Motif  (GCD)  @  0:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34676,
+        "color": "#777777",
+        "endSec": 31.27,
+        "iconPath": "/i/003000/003827.png",
+        "label": "Mog",
+        "startSec": 30.77,
+        "tooltip": "Mog of the Ages  (oGCD)  @  0:31",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34668,
+        "color": "#777777",
+        "endSec": 35.27,
+        "iconPath": "/i/003000/003819.png",
+        "label": "Ham",
+        "startSec": 34.77,
+        "tooltip": "Hammer Motif  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34674,
+        "color": "#777777",
+        "endSec": 35.27,
+        "iconPath": "/i/003000/003825.png",
+        "label": "Str",
+        "startSec": 34.77,
+        "tooltip": "Striking Muse  (oGCD)  @  0:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34678,
+        "color": "#777777",
+        "endSec": 39.27,
+        "iconPath": "/i/003000/003829.png",
+        "label": "Ham",
+        "startSec": 38.77,
+        "tooltip": "Hammer Stamp  (GCD)  @  0:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34672,
+        "color": "#777777",
+        "endSec": 39.27,
+        "iconPath": "/i/003000/003823.png",
+        "label": "Cla",
+        "startSec": 38.77,
+        "tooltip": "Clawed Muse  (oGCD)  @  0:39",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34679,
+        "color": "#777777",
+        "endSec": 41.77,
+        "iconPath": "/i/003000/003830.png",
+        "label": "Ham",
+        "startSec": 41.27,
+        "tooltip": "Hammer Brush  (GCD)  @  0:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34680,
+        "color": "#777777",
+        "endSec": 44.27,
+        "iconPath": "/i/003000/003831.png",
+        "label": "Pol",
+        "startSec": 43.77,
+        "tooltip": "Polishing Hammer  (GCD)  @  0:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34667,
+        "color": "#777777",
+        "endSec": 46.77,
+        "iconPath": "/i/003000/003818.png",
+        "label": "Maw",
+        "startSec": 46.27,
+        "tooltip": "Maw Motif  (GCD)  @  0:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34668,
+        "color": "#777777",
+        "endSec": 50.77,
+        "iconPath": "/i/003000/003819.png",
+        "label": "Ham",
+        "startSec": 50.27,
+        "tooltip": "Hammer Motif  (GCD)  @  0:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34673,
+        "color": "#777777",
+        "endSec": 50.77,
+        "iconPath": "/i/003000/003824.png",
+        "label": "Fan",
+        "startSec": 50.27,
+        "tooltip": "Fanged Muse  (oGCD)  @  0:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34664,
+        "color": "#777777",
+        "endSec": 54.77,
+        "iconPath": "/i/003000/003815.png",
+        "label": "Pom",
+        "startSec": 54.27,
+        "tooltip": "Pom Motif  (GCD)  @  0:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34669,
+        "color": "#777777",
+        "endSec": 58.77,
+        "iconPath": "/i/003000/003820.png",
+        "label": "Sta",
+        "startSec": 58.27,
+        "tooltip": "Starry Sky Motif  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 62.77,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 62.27,
+        "tooltip": "Fire in Red  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34677,
+        "color": "#777777",
+        "endSec": 62.77,
+        "iconPath": "/i/003000/003828.png",
+        "label": "Ret",
+        "startSec": 62.27,
+        "tooltip": "Retribution of the Madeen  (oGCD)  @  1:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 65.28,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 64.78,
+        "tooltip": "Aero in Green  (GCD)  @  1:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 67.78,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 67.28,
+        "tooltip": "Water in Blue  (GCD)  @  1:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34674,
+        "color": "#777777",
+        "endSec": 67.78,
+        "iconPath": "/i/003000/003825.png",
+        "label": "Str",
+        "startSec": 67.28,
+        "tooltip": "Striking Muse  (oGCD)  @  1:07",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34678,
+        "color": "#777777",
+        "endSec": 70.28,
+        "iconPath": "/i/003000/003829.png",
+        "label": "Ham",
+        "startSec": 69.78,
+        "tooltip": "Hammer Stamp  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34679,
+        "color": "#777777",
+        "endSec": 72.78,
+        "iconPath": "/i/003000/003830.png",
+        "label": "Ham",
+        "startSec": 72.28,
+        "tooltip": "Hammer Brush  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34680,
+        "color": "#777777",
+        "endSec": 75.28,
+        "iconPath": "/i/003000/003831.png",
+        "label": "Pol",
+        "startSec": 74.78,
+        "tooltip": "Polishing Hammer  (GCD)  @  1:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34668,
+        "color": "#777777",
+        "endSec": 77.78,
+        "iconPath": "/i/003000/003819.png",
+        "label": "Ham",
+        "startSec": 77.28,
+        "tooltip": "Hammer Motif  (GCD)  @  1:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 81.78,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 81.28,
+        "tooltip": "Fire in Red  (GCD)  @  1:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 84.28,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 83.78,
+        "tooltip": "Aero in Green  (GCD)  @  1:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 86.78,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 86.28,
+        "tooltip": "Water in Blue  (GCD)  @  1:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34683,
+        "color": "#777777",
+        "endSec": 86.78,
+        "iconPath": "/i/003000/003833.png",
+        "label": "Sub",
+        "startSec": 86.28,
+        "tooltip": "Subtractive Palette  (oGCD)  @  1:26",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34653,
+        "color": "#777777",
+        "endSec": 89.28,
+        "iconPath": "/i/003000/003804.png",
+        "label": "Bli",
+        "startSec": 88.78,
+        "tooltip": "Blizzard in Cyan  (GCD)  @  1:29",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34670,
+        "color": "#777777",
+        "endSec": 89.28,
+        "iconPath": "/i/003000/003821.png",
+        "label": "Pom",
+        "startSec": 88.78,
+        "tooltip": "Pom Muse  (oGCD)  @  1:29",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34654,
+        "color": "#777777",
+        "endSec": 92.58,
+        "iconPath": "/i/003000/003805.png",
+        "label": "Sto",
+        "startSec": 92.08,
+        "tooltip": "Stone in Yellow  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34655,
+        "color": "#777777",
+        "endSec": 95.88,
+        "iconPath": "/i/003000/003806.png",
+        "label": "Thu",
+        "startSec": 95.38,
+        "tooltip": "Thunder in Magenta  (GCD)  @  1:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34663,
+        "color": "#777777",
+        "endSec": 99.17,
+        "iconPath": "/i/003000/003814.png",
+        "label": "Com",
+        "startSec": 98.67,
+        "tooltip": "Comet in Black  (GCD)  @  1:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34665,
+        "color": "#777777",
+        "endSec": 102.47,
+        "iconPath": "/i/003000/003816.png",
+        "label": "Win",
+        "startSec": 101.97,
+        "tooltip": "Wing Motif  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 106.47,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 105.97,
+        "tooltip": "Fire in Red  (GCD)  @  1:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 108.97,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 108.47,
+        "tooltip": "Aero in Green  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 111.47,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 110.97,
+        "tooltip": "Water in Blue  (GCD)  @  1:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 113.97,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 113.47,
+        "tooltip": "Fire in Red  (GCD)  @  1:53",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 116.47,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 115.97,
+        "tooltip": "Aero in Green  (GCD)  @  1:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 118.97,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 118.47,
+        "tooltip": "Water in Blue  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34683,
+        "color": "#777777",
+        "endSec": 118.97,
+        "iconPath": "/i/003000/003833.png",
+        "label": "Sub",
+        "startSec": 118.47,
+        "tooltip": "Subtractive Palette  (oGCD)  @  1:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34653,
+        "color": "#777777",
+        "endSec": 121.47,
+        "iconPath": "/i/003000/003804.png",
+        "label": "Bli",
+        "startSec": 120.97,
+        "tooltip": "Blizzard in Cyan  (GCD)  @  2:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34654,
+        "color": "#777777",
+        "endSec": 124.77,
+        "iconPath": "/i/003000/003805.png",
+        "label": "Sto",
+        "startSec": 124.27,
+        "tooltip": "Stone in Yellow  (GCD)  @  2:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34675,
+        "color": "#777777",
+        "endSec": 124.77,
+        "iconPath": "/i/003000/003826.png",
+        "label": "Sta",
+        "startSec": 124.27,
+        "tooltip": "Starry Muse  (oGCD)  @  2:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34655,
+        "color": "#777777",
+        "endSec": 128.07,
+        "iconPath": "/i/003000/003806.png",
+        "label": "Thu",
+        "startSec": 127.57,
+        "tooltip": "Thunder in Magenta  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34674,
+        "color": "#777777",
+        "endSec": 128.07,
+        "iconPath": "/i/003000/003825.png",
+        "label": "Str",
+        "startSec": 127.57,
+        "tooltip": "Striking Muse  (oGCD)  @  2:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34663,
+        "color": "#777777",
+        "endSec": 130.55,
+        "iconPath": "/i/003000/003814.png",
+        "label": "Com",
+        "startSec": 130.05,
+        "tooltip": "Comet in Black  (GCD)  @  2:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34683,
+        "color": "#777777",
+        "endSec": 130.55,
+        "iconPath": "/i/003000/003833.png",
+        "label": "Sub",
+        "startSec": 130.05,
+        "tooltip": "Subtractive Palette  (oGCD)  @  2:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34671,
+        "color": "#777777",
+        "endSec": 131.25,
+        "iconPath": "/i/003000/003822.png",
+        "label": "Win",
+        "startSec": 130.75,
+        "tooltip": "Winged Muse  (oGCD)  @  2:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34653,
+        "color": "#777777",
+        "endSec": 133.02,
+        "iconPath": "/i/003000/003804.png",
+        "label": "Bli",
+        "startSec": 132.52,
+        "tooltip": "Blizzard in Cyan  (GCD)  @  2:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34676,
+        "color": "#777777",
+        "endSec": 133.02,
+        "iconPath": "/i/003000/003827.png",
+        "label": "Mog",
+        "startSec": 132.52,
+        "tooltip": "Mog of the Ages  (oGCD)  @  2:13",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34654,
+        "color": "#777777",
+        "endSec": 135.5,
+        "iconPath": "/i/003000/003805.png",
+        "label": "Sto",
+        "startSec": 135.0,
+        "tooltip": "Stone in Yellow  (GCD)  @  2:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34655,
+        "color": "#777777",
+        "endSec": 137.97,
+        "iconPath": "/i/003000/003806.png",
+        "label": "Thu",
+        "startSec": 137.47,
+        "tooltip": "Thunder in Magenta  (GCD)  @  2:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34663,
+        "color": "#777777",
+        "endSec": 140.45,
+        "iconPath": "/i/003000/003814.png",
+        "label": "Com",
+        "startSec": 139.95,
+        "tooltip": "Comet in Black  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34681,
+        "color": "#777777",
+        "endSec": 143.75,
+        "iconPath": "/i/003000/003832.png",
+        "label": "Sta",
+        "startSec": 143.25,
+        "tooltip": "Star Prism  (GCD)  @  2:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34678,
+        "color": "#777777",
+        "endSec": 146.25,
+        "iconPath": "/i/003000/003829.png",
+        "label": "Ham",
+        "startSec": 145.75,
+        "tooltip": "Hammer Stamp  (GCD)  @  2:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34679,
+        "color": "#777777",
+        "endSec": 148.75,
+        "iconPath": "/i/003000/003830.png",
+        "label": "Ham",
+        "startSec": 148.25,
+        "tooltip": "Hammer Brush  (GCD)  @  2:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34680,
+        "color": "#777777",
+        "endSec": 151.25,
+        "iconPath": "/i/003000/003831.png",
+        "label": "Pol",
+        "startSec": 150.75,
+        "tooltip": "Polishing Hammer  (GCD)  @  2:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34688,
+        "color": "#777777",
+        "endSec": 153.75,
+        "iconPath": "/i/003000/003838.png",
+        "label": "Rai",
+        "startSec": 153.25,
+        "tooltip": "Rainbow Drip  (GCD)  @  2:33",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34666,
+        "color": "#777777",
+        "endSec": 156.25,
+        "iconPath": "/i/003000/003817.png",
+        "label": "Cla",
+        "startSec": 155.75,
+        "tooltip": "Claw Motif  (GCD)  @  2:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34668,
+        "color": "#777777",
+        "endSec": 160.25,
+        "iconPath": "/i/003000/003819.png",
+        "label": "Ham",
+        "startSec": 159.75,
+        "tooltip": "Hammer Motif  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34669,
+        "color": "#777777",
+        "endSec": 164.25,
+        "iconPath": "/i/003000/003820.png",
+        "label": "Sta",
+        "startSec": 163.75,
+        "tooltip": "Starry Sky Motif  (GCD)  @  2:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 168.25,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 167.75,
+        "tooltip": "Fire in Red  (GCD)  @  2:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34672,
+        "color": "#777777",
+        "endSec": 168.25,
+        "iconPath": "/i/003000/003823.png",
+        "label": "Cla",
+        "startSec": 167.75,
+        "tooltip": "Clawed Muse  (oGCD)  @  2:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34667,
+        "color": "#777777",
+        "endSec": 170.75,
+        "iconPath": "/i/003000/003818.png",
+        "label": "Maw",
+        "startSec": 170.25,
+        "tooltip": "Maw Motif  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 174.75,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 174.25,
+        "tooltip": "Aero in Green  (GCD)  @  2:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 177.25,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 176.75,
+        "tooltip": "Water in Blue  (GCD)  @  2:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 179.75,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 179.25,
+        "tooltip": "Fire in Red  (GCD)  @  2:59",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 182.25,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 181.75,
+        "tooltip": "Aero in Green  (GCD)  @  3:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 184.75,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 184.25,
+        "tooltip": "Water in Blue  (GCD)  @  3:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34683,
+        "color": "#777777",
+        "endSec": 184.75,
+        "iconPath": "/i/003000/003833.png",
+        "label": "Sub",
+        "startSec": 184.25,
+        "tooltip": "Subtractive Palette  (oGCD)  @  3:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34653,
+        "color": "#777777",
+        "endSec": 187.25,
+        "iconPath": "/i/003000/003804.png",
+        "label": "Bli",
+        "startSec": 186.75,
+        "tooltip": "Blizzard in Cyan  (GCD)  @  3:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34674,
+        "color": "#777777",
+        "endSec": 187.25,
+        "iconPath": "/i/003000/003825.png",
+        "label": "Str",
+        "startSec": 186.75,
+        "tooltip": "Striking Muse  (oGCD)  @  3:07",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34654,
+        "color": "#777777",
+        "endSec": 190.55,
+        "iconPath": "/i/003000/003805.png",
+        "label": "Sto",
+        "startSec": 190.05,
+        "tooltip": "Stone in Yellow  (GCD)  @  3:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34655,
+        "color": "#777777",
+        "endSec": 193.85,
+        "iconPath": "/i/003000/003806.png",
+        "label": "Thu",
+        "startSec": 193.35,
+        "tooltip": "Thunder in Magenta  (GCD)  @  3:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34663,
+        "color": "#777777",
+        "endSec": 197.15,
+        "iconPath": "/i/003000/003814.png",
+        "label": "Com",
+        "startSec": 196.65,
+        "tooltip": "Comet in Black  (GCD)  @  3:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34678,
+        "color": "#777777",
+        "endSec": 200.45,
+        "iconPath": "/i/003000/003829.png",
+        "label": "Ham",
+        "startSec": 199.95,
+        "tooltip": "Hammer Stamp  (GCD)  @  3:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34679,
+        "color": "#777777",
+        "endSec": 202.95,
+        "iconPath": "/i/003000/003830.png",
+        "label": "Ham",
+        "startSec": 202.45,
+        "tooltip": "Hammer Brush  (GCD)  @  3:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34680,
+        "color": "#777777",
+        "endSec": 205.45,
+        "iconPath": "/i/003000/003831.png",
+        "label": "Pol",
+        "startSec": 204.95,
+        "tooltip": "Polishing Hammer  (GCD)  @  3:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34668,
+        "color": "#777777",
+        "endSec": 207.95,
+        "iconPath": "/i/003000/003819.png",
+        "label": "Ham",
+        "startSec": 207.45,
+        "tooltip": "Hammer Motif  (GCD)  @  3:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34673,
+        "color": "#777777",
+        "endSec": 207.95,
+        "iconPath": "/i/003000/003824.png",
+        "label": "Fan",
+        "startSec": 207.45,
+        "tooltip": "Fanged Muse  (oGCD)  @  3:27",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34664,
+        "color": "#777777",
+        "endSec": 211.95,
+        "iconPath": "/i/003000/003815.png",
+        "label": "Pom",
+        "startSec": 211.45,
+        "tooltip": "Pom Motif  (GCD)  @  3:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34677,
+        "color": "#777777",
+        "endSec": 211.95,
+        "iconPath": "/i/003000/003828.png",
+        "label": "Ret",
+        "startSec": 211.45,
+        "tooltip": "Retribution of the Madeen  (oGCD)  @  3:31",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 215.95,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 215.45,
+        "tooltip": "Fire in Red  (GCD)  @  3:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 218.45,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 217.95,
+        "tooltip": "Aero in Green  (GCD)  @  3:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 220.95,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 220.45,
+        "tooltip": "Water in Blue  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 223.45,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 222.95,
+        "tooltip": "Fire in Red  (GCD)  @  3:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 225.95,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 225.45,
+        "tooltip": "Aero in Green  (GCD)  @  3:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 228.45,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 227.95,
+        "tooltip": "Water in Blue  (GCD)  @  3:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34683,
+        "color": "#777777",
+        "endSec": 228.45,
+        "iconPath": "/i/003000/003833.png",
+        "label": "Sub",
+        "startSec": 227.95,
+        "tooltip": "Subtractive Palette  (oGCD)  @  3:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34653,
+        "color": "#777777",
+        "endSec": 230.95,
+        "iconPath": "/i/003000/003804.png",
+        "label": "Bli",
+        "startSec": 230.45,
+        "tooltip": "Blizzard in Cyan  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34654,
+        "color": "#777777",
+        "endSec": 234.25,
+        "iconPath": "/i/003000/003805.png",
+        "label": "Sto",
+        "startSec": 233.75,
+        "tooltip": "Stone in Yellow  (GCD)  @  3:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34655,
+        "color": "#777777",
+        "endSec": 237.55,
+        "iconPath": "/i/003000/003806.png",
+        "label": "Thu",
+        "startSec": 237.05,
+        "tooltip": "Thunder in Magenta  (GCD)  @  3:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34663,
+        "color": "#777777",
+        "endSec": 240.85,
+        "iconPath": "/i/003000/003814.png",
+        "label": "Com",
+        "startSec": 240.35,
+        "tooltip": "Comet in Black  (GCD)  @  4:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 244.15,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 243.65,
+        "tooltip": "Fire in Red  (GCD)  @  4:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 246.65,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 246.15,
+        "tooltip": "Aero in Green  (GCD)  @  4:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34675,
+        "color": "#777777",
+        "endSec": 246.65,
+        "iconPath": "/i/003000/003826.png",
+        "label": "Sta",
+        "startSec": 246.15,
+        "tooltip": "Starry Muse  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34681,
+        "color": "#777777",
+        "endSec": 249.15,
+        "iconPath": "/i/003000/003832.png",
+        "label": "Sta",
+        "startSec": 248.65,
+        "tooltip": "Star Prism  (GCD)  @  4:09",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34683,
+        "color": "#777777",
+        "endSec": 249.15,
+        "iconPath": "/i/003000/003833.png",
+        "label": "Sub",
+        "startSec": 248.65,
+        "tooltip": "Subtractive Palette  (oGCD)  @  4:09",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34674,
+        "color": "#777777",
+        "endSec": 249.85,
+        "iconPath": "/i/003000/003825.png",
+        "label": "Str",
+        "startSec": 249.35,
+        "tooltip": "Striking Muse  (oGCD)  @  4:09",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34653,
+        "color": "#777777",
+        "endSec": 251.03,
+        "iconPath": "/i/003000/003804.png",
+        "label": "Bli",
+        "startSec": 250.53,
+        "tooltip": "Blizzard in Cyan  (GCD)  @  4:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34670,
+        "color": "#777777",
+        "endSec": 251.03,
+        "iconPath": "/i/003000/003821.png",
+        "label": "Pom",
+        "startSec": 250.53,
+        "tooltip": "Pom Muse  (oGCD)  @  4:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34654,
+        "color": "#777777",
+        "endSec": 253.5,
+        "iconPath": "/i/003000/003805.png",
+        "label": "Sto",
+        "startSec": 253.0,
+        "tooltip": "Stone in Yellow  (GCD)  @  4:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34655,
+        "color": "#777777",
+        "endSec": 255.97,
+        "iconPath": "/i/003000/003806.png",
+        "label": "Thu",
+        "startSec": 255.47,
+        "tooltip": "Thunder in Magenta  (GCD)  @  4:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34663,
+        "color": "#777777",
+        "endSec": 258.45,
+        "iconPath": "/i/003000/003814.png",
+        "label": "Com",
+        "startSec": 257.95,
+        "tooltip": "Comet in Black  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34678,
+        "color": "#777777",
+        "endSec": 260.93,
+        "iconPath": "/i/003000/003829.png",
+        "label": "Ham",
+        "startSec": 260.43,
+        "tooltip": "Hammer Stamp  (GCD)  @  4:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34679,
+        "color": "#777777",
+        "endSec": 263.43,
+        "iconPath": "/i/003000/003830.png",
+        "label": "Ham",
+        "startSec": 262.93,
+        "tooltip": "Hammer Brush  (GCD)  @  4:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34680,
+        "color": "#777777",
+        "endSec": 265.93,
+        "iconPath": "/i/003000/003831.png",
+        "label": "Pol",
+        "startSec": 265.43,
+        "tooltip": "Polishing Hammer  (GCD)  @  4:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34688,
+        "color": "#777777",
+        "endSec": 268.43,
+        "iconPath": "/i/003000/003838.png",
+        "label": "Rai",
+        "startSec": 267.93,
+        "tooltip": "Rainbow Drip  (GCD)  @  4:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34665,
+        "color": "#777777",
+        "endSec": 270.93,
+        "iconPath": "/i/003000/003816.png",
+        "label": "Win",
+        "startSec": 270.43,
+        "tooltip": "Wing Motif  (GCD)  @  4:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34668,
+        "color": "#777777",
+        "endSec": 274.93,
+        "iconPath": "/i/003000/003819.png",
+        "label": "Ham",
+        "startSec": 274.43,
+        "tooltip": "Hammer Motif  (GCD)  @  4:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 278.93,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 278.43,
+        "tooltip": "Fire in Red  (GCD)  @  4:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 281.43,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 280.93,
+        "tooltip": "Aero in Green  (GCD)  @  4:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 283.93,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 283.43,
+        "tooltip": "Water in Blue  (GCD)  @  4:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 286.43,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 285.93,
+        "tooltip": "Fire in Red  (GCD)  @  4:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 288.93,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 288.43,
+        "tooltip": "Aero in Green  (GCD)  @  4:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34671,
+        "color": "#777777",
+        "endSec": 288.93,
+        "iconPath": "/i/003000/003822.png",
+        "label": "Win",
+        "startSec": 288.43,
+        "tooltip": "Winged Muse  (oGCD)  @  4:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34666,
+        "color": "#777777",
+        "endSec": 291.43,
+        "iconPath": "/i/003000/003817.png",
+        "label": "Cla",
+        "startSec": 290.93,
+        "tooltip": "Claw Motif  (GCD)  @  4:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34676,
+        "color": "#777777",
+        "endSec": 291.43,
+        "iconPath": "/i/003000/003827.png",
+        "label": "Mog",
+        "startSec": 290.93,
+        "tooltip": "Mog of the Ages  (oGCD)  @  4:51",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 295.43,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 294.93,
+        "tooltip": "Water in Blue  (GCD)  @  4:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34683,
+        "color": "#777777",
+        "endSec": 295.43,
+        "iconPath": "/i/003000/003833.png",
+        "label": "Sub",
+        "startSec": 294.93,
+        "tooltip": "Subtractive Palette  (oGCD)  @  4:55",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34653,
+        "color": "#777777",
+        "endSec": 297.93,
+        "iconPath": "/i/003000/003804.png",
+        "label": "Bli",
+        "startSec": 297.43,
+        "tooltip": "Blizzard in Cyan  (GCD)  @  4:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34654,
+        "color": "#777777",
+        "endSec": 301.23,
+        "iconPath": "/i/003000/003805.png",
+        "label": "Sto",
+        "startSec": 300.73,
+        "tooltip": "Stone in Yellow  (GCD)  @  5:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34655,
+        "color": "#777777",
+        "endSec": 304.52,
+        "iconPath": "/i/003000/003806.png",
+        "label": "Thu",
+        "startSec": 304.02,
+        "tooltip": "Thunder in Magenta  (GCD)  @  5:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34663,
+        "color": "#777777",
+        "endSec": 307.82,
+        "iconPath": "/i/003000/003814.png",
+        "label": "Com",
+        "startSec": 307.32,
+        "tooltip": "Comet in Black  (GCD)  @  5:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34674,
+        "color": "#777777",
+        "endSec": 307.82,
+        "iconPath": "/i/003000/003825.png",
+        "label": "Str",
+        "startSec": 307.32,
+        "tooltip": "Striking Muse  (oGCD)  @  5:07",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34678,
+        "color": "#777777",
+        "endSec": 311.12,
+        "iconPath": "/i/003000/003829.png",
+        "label": "Ham",
+        "startSec": 310.62,
+        "tooltip": "Hammer Stamp  (GCD)  @  5:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34679,
+        "color": "#777777",
+        "endSec": 313.62,
+        "iconPath": "/i/003000/003830.png",
+        "label": "Ham",
+        "startSec": 313.12,
+        "tooltip": "Hammer Brush  (GCD)  @  5:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34680,
+        "color": "#777777",
+        "endSec": 316.12,
+        "iconPath": "/i/003000/003831.png",
+        "label": "Pol",
+        "startSec": 315.62,
+        "tooltip": "Polishing Hammer  (GCD)  @  5:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 318.62,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 318.12,
+        "tooltip": "Fire in Red  (GCD)  @  5:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 321.12,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 320.62,
+        "tooltip": "Aero in Green  (GCD)  @  5:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 323.62,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 323.12,
+        "tooltip": "Water in Blue  (GCD)  @  5:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 326.12,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 325.62,
+        "tooltip": "Fire in Red  (GCD)  @  5:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 328.62,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 328.12,
+        "tooltip": "Aero in Green  (GCD)  @  5:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34672,
+        "color": "#777777",
+        "endSec": 328.62,
+        "iconPath": "/i/003000/003823.png",
+        "label": "Cla",
+        "startSec": 328.12,
+        "tooltip": "Clawed Muse  (oGCD)  @  5:28",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 331.12,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 330.62,
+        "tooltip": "Water in Blue  (GCD)  @  5:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34683,
+        "color": "#777777",
+        "endSec": 331.12,
+        "iconPath": "/i/003000/003833.png",
+        "label": "Sub",
+        "startSec": 330.62,
+        "tooltip": "Subtractive Palette  (oGCD)  @  5:31",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34653,
+        "color": "#777777",
+        "endSec": 333.62,
+        "iconPath": "/i/003000/003804.png",
+        "label": "Bli",
+        "startSec": 333.12,
+        "tooltip": "Blizzard in Cyan  (GCD)  @  5:33",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34654,
+        "color": "#777777",
+        "endSec": 336.93,
+        "iconPath": "/i/003000/003805.png",
+        "label": "Sto",
+        "startSec": 336.43,
+        "tooltip": "Stone in Yellow  (GCD)  @  5:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34655,
+        "color": "#777777",
+        "endSec": 340.23,
+        "iconPath": "/i/003000/003806.png",
+        "label": "Thu",
+        "startSec": 339.73,
+        "tooltip": "Thunder in Magenta  (GCD)  @  5:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34663,
+        "color": "#777777",
+        "endSec": 343.52,
+        "iconPath": "/i/003000/003814.png",
+        "label": "Com",
+        "startSec": 343.02,
+        "tooltip": "Comet in Black  (GCD)  @  5:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34650,
+        "color": "#777777",
+        "endSec": 346.82,
+        "iconPath": "/i/003000/003801.png",
+        "label": "Fir",
+        "startSec": 346.32,
+        "tooltip": "Fire in Red  (GCD)  @  5:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34651,
+        "color": "#777777",
+        "endSec": 349.32,
+        "iconPath": "/i/003000/003802.png",
+        "label": "Aer",
+        "startSec": 348.82,
+        "tooltip": "Aero in Green  (GCD)  @  5:49",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34652,
+        "color": "#777777",
+        "endSec": 351.82,
+        "iconPath": "/i/003000/003803.png",
+        "label": "Wat",
+        "startSec": 351.32,
+        "tooltip": "Water in Blue  (GCD)  @  5:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34662,
+        "color": "#777777",
+        "endSec": 354.32,
+        "iconPath": "/i/003000/003813.png",
+        "label": "Hol",
+        "startSec": 353.82,
+        "tooltip": "Holy in White  (GCD)  @  5:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34662,
+        "color": "#777777",
+        "endSec": 356.82,
+        "iconPath": "/i/003000/003813.png",
+        "label": "Hol",
+        "startSec": 356.32,
+        "tooltip": "Holy in White  (GCD)  @  5:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34662,
+        "color": "#777777",
+        "endSec": 359.32,
+        "iconPath": "/i/003000/003813.png",
+        "label": "Hol",
+        "startSec": 358.82,
+        "tooltip": "Holy in White  (GCD)  @  5:59",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 106154.39,
+    "efficiencyPct": 97.38,
+    "fightDurationSec": 360.0,
+    "idealizedPotency": 109007.56,
+    "killTimeSec": 360,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

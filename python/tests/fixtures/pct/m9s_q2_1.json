@@ -1,0 +1,6956 @@
+{
+  "label": "m9s_q2_1",
+  "report_code": "69RrPgYLTZvC3jyb",
+  "fight_id": 113,
+  "source_id": 6,
+  "fight_start_ms": 104915333,
+  "fight_end_ms": 105422694,
+  "duration_s": 507.361,
+  "parse_pct": null,
+  "cast_events": [
+    {
+      "timestamp": 104915333,
+      "type": "cast",
+      "packetID": 46909,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34688,
+      "fight": 113
+    },
+    {
+      "timestamp": 104916132,
+      "type": "cast",
+      "packetID": 46915,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34603669,
+      "fight": 113
+    },
+    {
+      "timestamp": 104916846,
+      "type": "cast",
+      "packetID": 46923,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34670,
+      "fight": 113
+    },
+    {
+      "timestamp": 104917513,
+      "type": "cast",
+      "packetID": 46926,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34674,
+      "fight": 113
+    },
+    {
+      "timestamp": 104918137,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34665,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 104920631,
+      "type": "cast",
+      "packetID": 46957,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34665,
+      "fight": 113
+    },
+    {
+      "timestamp": 104921345,
+      "type": "cast",
+      "packetID": 46965,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34675,
+      "fight": 113
+    },
+    {
+      "timestamp": 104922146,
+      "type": "cast",
+      "packetID": 46975,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34678,
+      "fight": 113
+    },
+    {
+      "timestamp": 104922814,
+      "type": "cast",
+      "packetID": 46984,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34671,
+      "fight": 113
+    },
+    {
+      "timestamp": 104923484,
+      "type": "cast",
+      "packetID": 46994,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 104924641,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 104925839,
+      "type": "cast",
+      "packetID": 47019,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 104927130,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 104928332,
+      "type": "cast",
+      "packetID": 47051,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 104929623,
+      "type": "cast",
+      "packetID": 47064,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 104930290,
+      "type": "cast",
+      "packetID": 47072,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34676,
+      "fight": 113
+    },
+    {
+      "timestamp": 104932073,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 104933276,
+      "type": "cast",
+      "packetID": 47102,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 104934611,
+      "type": "cast",
+      "packetID": 47115,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34681,
+      "fight": 113
+    },
+    {
+      "timestamp": 104935858,
+      "type": "cast",
+      "packetID": 47127,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34682,
+      "fight": 113,
+      "fake": true
+    },
+    {
+      "timestamp": 104936484,
+      "type": "cast",
+      "packetID": 47132,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34679,
+      "fight": 113
+    },
+    {
+      "timestamp": 104938981,
+      "type": "cast",
+      "packetID": 47158,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34680,
+      "fight": 113
+    },
+    {
+      "timestamp": 104941475,
+      "type": "cast",
+      "packetID": 47175,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34688,
+      "fight": 113
+    },
+    {
+      "timestamp": 104942186,
+      "type": "cast",
+      "packetID": 47179,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 7561,
+      "fight": 113
+    },
+    {
+      "timestamp": 104943969,
+      "type": "cast",
+      "packetID": 47190,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34666,
+      "fight": 113
+    },
+    {
+      "timestamp": 104944638,
+      "type": "cast",
+      "packetID": 47195,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34672,
+      "fight": 113
+    },
+    {
+      "timestamp": 104947932,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 104948913,
+      "type": "cast",
+      "packetID": 47221,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 104950472,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 104952968,
+      "type": "cast",
+      "packetID": 47250,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113
+    },
+    {
+      "timestamp": 104953726,
+      "type": "cast",
+      "packetID": 47252,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34674,
+      "fight": 113
+    },
+    {
+      "timestamp": 104954438,
+      "type": "cast",
+      "packetID": 47260,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34678,
+      "fight": 113
+    },
+    {
+      "timestamp": 104956973,
+      "type": "cast",
+      "packetID": 47283,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34679,
+      "fight": 113
+    },
+    {
+      "timestamp": 104959468,
+      "type": "cast",
+      "packetID": 47303,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34680,
+      "fight": 113
+    },
+    {
+      "timestamp": 104961518,
+      "type": "cast",
+      "packetID": 47321,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 7560,
+      "fight": 113
+    },
+    {
+      "timestamp": 104962140,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 104963121,
+      "type": "cast",
+      "packetID": 47332,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 104964638,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34667,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 104967137,
+      "type": "cast",
+      "packetID": 47368,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34667,
+      "fight": 113
+    },
+    {
+      "timestamp": 104968653,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 104971145,
+      "type": "cast",
+      "packetID": 47395,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113
+    },
+    {
+      "timestamp": 104972659,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 104973639,
+      "type": "cast",
+      "packetID": 47413,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 104975199,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 104976179,
+      "type": "cast",
+      "packetID": 47426,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 104977694,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 104978675,
+      "type": "cast",
+      "packetID": 47448,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 104980188,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 104981167,
+      "type": "cast",
+      "packetID": 47468,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 104982682,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34669,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 104985176,
+      "type": "cast",
+      "packetID": 47494,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34669,
+      "fight": 113
+    },
+    {
+      "timestamp": 104985800,
+      "type": "cast",
+      "packetID": 47504,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 104986692,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 104988472,
+      "type": "cast",
+      "packetID": 47527,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 104989983,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 104991762,
+      "type": "cast",
+      "packetID": 47545,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 104993275,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 104995058,
+      "type": "cast",
+      "packetID": 47570,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 104996573,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 104997553,
+      "type": "cast",
+      "packetID": 47587,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 104998220,
+      "type": "cast",
+      "packetID": 47593,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34673,
+      "fight": 113
+    },
+    {
+      "timestamp": 104999109,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105000091,
+      "type": "cast",
+      "packetID": 47606,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105000715,
+      "type": "cast",
+      "packetID": 47610,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34677,
+      "fight": 113
+    },
+    {
+      "timestamp": 105001608,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105002590,
+      "type": "cast",
+      "packetID": 47625,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105004101,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105005081,
+      "type": "cast",
+      "packetID": 47634,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105006596,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34664,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105009093,
+      "type": "cast",
+      "packetID": 47657,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34664,
+      "fight": 113
+    },
+    {
+      "timestamp": 105009984,
+      "type": "cast",
+      "packetID": 47663,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34670,
+      "fight": 113
+    },
+    {
+      "timestamp": 105010608,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105011587,
+      "type": "cast",
+      "packetID": 47673,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105013147,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105014129,
+      "type": "cast",
+      "packetID": 47690,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105015643,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105016620,
+      "type": "cast",
+      "packetID": 47707,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105018134,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105019117,
+      "type": "cast",
+      "packetID": 47726,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105020633,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105021613,
+      "type": "cast",
+      "packetID": 47746,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105023126,
+      "type": "cast",
+      "packetID": 47756,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105023794,
+      "type": "cast",
+      "packetID": 47763,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105025625,
+      "type": "cast",
+      "packetID": 47779,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 7561,
+      "fight": 113
+    },
+    {
+      "timestamp": 105026429,
+      "type": "cast",
+      "packetID": 47786,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34665,
+      "fight": 113
+    },
+    {
+      "timestamp": 105031102,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105031280,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105033062,
+      "type": "cast",
+      "packetID": 47830,
+      "sourceID": 6,
+      "targetID": 2608,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105035333,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105037117,
+      "type": "cast",
+      "packetID": 47852,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105037873,
+      "type": "cast",
+      "packetID": 47857,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34674,
+      "fight": 113
+    },
+    {
+      "timestamp": 105038633,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105040415,
+      "type": "cast",
+      "packetID": 47878,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105041392,
+      "type": "cast",
+      "packetID": 47886,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34675,
+      "fight": 113
+    },
+    {
+      "timestamp": 105042016,
+      "type": "cast",
+      "packetID": 47892,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105042951,
+      "type": "cast",
+      "packetID": 47903,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105044463,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 105045667,
+      "type": "cast",
+      "packetID": 47927,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105046962,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 105048164,
+      "type": "cast",
+      "packetID": 47952,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105049409,
+      "type": "cast",
+      "packetID": 47967,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105050076,
+      "type": "cast",
+      "packetID": 47976,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34671,
+      "fight": 113
+    },
+    {
+      "timestamp": 105051905,
+      "type": "cast",
+      "packetID": 47993,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34678,
+      "fight": 113
+    },
+    {
+      "timestamp": 105053018,
+      "type": "cast",
+      "packetID": 48005,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 7560,
+      "fight": 113
+    },
+    {
+      "timestamp": 105054398,
+      "type": "cast",
+      "packetID": 48018,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34679,
+      "fight": 113
+    },
+    {
+      "timestamp": 105055377,
+      "type": "cast",
+      "packetID": 48025,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34676,
+      "fight": 113
+    },
+    {
+      "timestamp": 105056934,
+      "type": "cast",
+      "packetID": 48042,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34681,
+      "fight": 113
+    },
+    {
+      "timestamp": 105058180,
+      "type": "cast",
+      "packetID": 48049,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34682,
+      "fight": 113,
+      "fake": true
+    },
+    {
+      "timestamp": 105058804,
+      "type": "cast",
+      "packetID": 48057,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34680,
+      "fight": 113
+    },
+    {
+      "timestamp": 105061301,
+      "type": "cast",
+      "packetID": 48078,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34688,
+      "fight": 113
+    },
+    {
+      "timestamp": 105063797,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105065579,
+      "type": "cast",
+      "packetID": 48105,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105067096,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105068077,
+      "type": "cast",
+      "packetID": 48123,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105069589,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105070568,
+      "type": "cast",
+      "packetID": 48141,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105072085,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105073066,
+      "type": "cast",
+      "packetID": 48158,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105073734,
+      "type": "cast",
+      "packetID": 48162,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105074627,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105076408,
+      "type": "cast",
+      "packetID": 48177,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105077923,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105079705,
+      "type": "cast",
+      "packetID": 48199,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105081219,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105083713,
+      "type": "cast",
+      "packetID": 48224,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113
+    },
+    {
+      "timestamp": 105085273,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105087057,
+      "type": "cast",
+      "packetID": 48243,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105087636,
+      "type": "cast",
+      "packetID": 48247,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34674,
+      "fight": 113
+    },
+    {
+      "timestamp": 105088571,
+      "type": "cast",
+      "packetID": 48256,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34678,
+      "fight": 113
+    },
+    {
+      "timestamp": 105091068,
+      "type": "cast",
+      "packetID": 48275,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34679,
+      "fight": 113
+    },
+    {
+      "timestamp": 105093565,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34666,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105096064,
+      "type": "cast",
+      "packetID": 48314,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34666,
+      "fight": 113
+    },
+    {
+      "timestamp": 105097583,
+      "type": "cast",
+      "packetID": 48320,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34680,
+      "fight": 113
+    },
+    {
+      "timestamp": 105100076,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34669,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105102571,
+      "type": "cast",
+      "packetID": 48354,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34669,
+      "fight": 113
+    },
+    {
+      "timestamp": 105104043,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105105024,
+      "type": "cast",
+      "packetID": 48370,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105106538,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105107520,
+      "type": "cast",
+      "packetID": 48393,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105108277,
+      "type": "cast",
+      "packetID": 48402,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34672,
+      "fight": 113
+    },
+    {
+      "timestamp": 105109077,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34667,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105111575,
+      "type": "cast",
+      "packetID": 48432,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34667,
+      "fight": 113
+    },
+    {
+      "timestamp": 105113044,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105114024,
+      "type": "cast",
+      "packetID": 48454,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105115584,
+      "type": "cast",
+      "packetID": 48473,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105118882,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105119861,
+      "type": "cast",
+      "packetID": 48505,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105121423,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105123919,
+      "type": "cast",
+      "packetID": 48535,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113
+    },
+    {
+      "timestamp": 105125391,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105126370,
+      "type": "cast",
+      "packetID": 48557,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105127885,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105128867,
+      "type": "cast",
+      "packetID": 48574,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105130380,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105131363,
+      "type": "cast",
+      "packetID": 48592,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105132878,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105133860,
+      "type": "cast",
+      "packetID": 48609,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105135417,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105136399,
+      "type": "cast",
+      "packetID": 48630,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105137914,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105138893,
+      "type": "cast",
+      "packetID": 48646,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105140407,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105141386,
+      "type": "cast",
+      "packetID": 48666,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105143301,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105144281,
+      "type": "cast",
+      "packetID": 48686,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105145084,
+      "type": "cast",
+      "packetID": 48696,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105145844,
+      "type": "cast",
+      "packetID": 48701,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105147936,
+      "type": "cast",
+      "packetID": 48713,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34674,
+      "fight": 113
+    },
+    {
+      "timestamp": 105149138,
+      "type": "cast",
+      "packetID": 48722,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34678,
+      "fight": 113
+    },
+    {
+      "timestamp": 105151675,
+      "type": "cast",
+      "packetID": 48737,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34679,
+      "fight": 113
+    },
+    {
+      "timestamp": 105154216,
+      "type": "cast",
+      "packetID": 48753,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34680,
+      "fight": 113
+    },
+    {
+      "timestamp": 105156710,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105159202,
+      "type": "cast",
+      "packetID": 48795,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113
+    },
+    {
+      "timestamp": 105160671,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105162454,
+      "type": "cast",
+      "packetID": 48817,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105163213,
+      "type": "cast",
+      "packetID": 48824,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34675,
+      "fight": 113
+    },
+    {
+      "timestamp": 105164193,
+      "type": "cast",
+      "packetID": 48838,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34681,
+      "fight": 113
+    },
+    {
+      "timestamp": 105165217,
+      "type": "cast",
+      "packetID": 48846,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34674,
+      "fight": 113
+    },
+    {
+      "timestamp": 105165439,
+      "type": "cast",
+      "packetID": 48847,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34682,
+      "fight": 113,
+      "fake": true
+    },
+    {
+      "timestamp": 105166062,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 105167263,
+      "type": "cast",
+      "packetID": 48866,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105167931,
+      "type": "cast",
+      "packetID": 48873,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34673,
+      "fight": 113
+    },
+    {
+      "timestamp": 105168511,
+      "type": "cast",
+      "packetID": 48878,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34678,
+      "fight": 113
+    },
+    {
+      "timestamp": 105169758,
+      "type": "cast",
+      "packetID": 48888,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34677,
+      "fight": 113
+    },
+    {
+      "timestamp": 105171050,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 105172252,
+      "type": "cast",
+      "packetID": 48915,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105172876,
+      "type": "cast",
+      "packetID": 48921,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 7560,
+      "fight": 113
+    },
+    {
+      "timestamp": 105173501,
+      "type": "cast",
+      "packetID": 48929,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34679,
+      "fight": 113
+    },
+    {
+      "timestamp": 105174214,
+      "type": "cast",
+      "packetID": 48940,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105176044,
+      "type": "cast",
+      "packetID": 48958,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105178496,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 105179699,
+      "type": "cast",
+      "packetID": 48990,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105180991,
+      "type": "cast",
+      "packetID": 49001,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34680,
+      "fight": 113
+    },
+    {
+      "timestamp": 105183485,
+      "type": "cast",
+      "packetID": 49018,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34688,
+      "fight": 113
+    },
+    {
+      "timestamp": 105185980,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105187763,
+      "type": "cast",
+      "packetID": 49047,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105189277,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105191059,
+      "type": "cast",
+      "packetID": 49069,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105192574,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34664,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105195066,
+      "type": "cast",
+      "packetID": 49096,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34664,
+      "fight": 113
+    },
+    {
+      "timestamp": 105196758,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105197734,
+      "type": "cast",
+      "packetID": 49116,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105199245,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34669,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105201740,
+      "type": "cast",
+      "packetID": 49145,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34669,
+      "fight": 113
+    },
+    {
+      "timestamp": 105203255,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105205747,
+      "type": "cast",
+      "packetID": 49178,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113
+    },
+    {
+      "timestamp": 105207263,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105208244,
+      "type": "cast",
+      "packetID": 49211,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105208869,
+      "type": "cast",
+      "packetID": 49215,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105209758,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105211537,
+      "type": "cast",
+      "packetID": 49249,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105212651,
+      "type": "cast",
+      "packetID": 49259,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34603669,
+      "fight": 113
+    },
+    {
+      "timestamp": 105213272,
+      "type": "cast",
+      "packetID": 49268,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105214875,
+      "type": "cast",
+      "packetID": 49286,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34670,
+      "fight": 113
+    },
+    {
+      "timestamp": 105216571,
+      "type": "cast",
+      "packetID": 49310,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34662,
+      "fight": 113
+    },
+    {
+      "timestamp": 105218350,
+      "type": "cast",
+      "packetID": 49323,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34674,
+      "fight": 113
+    },
+    {
+      "timestamp": 105219108,
+      "type": "cast",
+      "packetID": 49333,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34678,
+      "fight": 113
+    },
+    {
+      "timestamp": 105221604,
+      "type": "cast",
+      "packetID": 49359,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34679,
+      "fight": 113
+    },
+    {
+      "timestamp": 105224100,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2614,
+      "targetInstance": 2,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105225883,
+      "type": "cast",
+      "packetID": 49409,
+      "sourceID": 6,
+      "targetID": 2614,
+      "targetInstance": 2,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105227625,
+      "type": "cast",
+      "packetID": 49429,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34680,
+      "fight": 113
+    },
+    {
+      "timestamp": 105229268,
+      "type": "cast",
+      "packetID": 49451,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 7561,
+      "fight": 113
+    },
+    {
+      "timestamp": 105230114,
+      "type": "cast",
+      "packetID": 49457,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34665,
+      "fight": 113
+    },
+    {
+      "timestamp": 105231941,
+      "type": "cast",
+      "packetID": 49478,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34671,
+      "fight": 113
+    },
+    {
+      "timestamp": 105232742,
+      "type": "cast",
+      "packetID": 49489,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34676,
+      "fight": 113
+    },
+    {
+      "timestamp": 105234122,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105235905,
+      "type": "cast",
+      "packetID": 49527,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105237421,
+      "type": "cast",
+      "packetID": 49546,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34662,
+      "fight": 113
+    },
+    {
+      "timestamp": 105238535,
+      "type": "cast",
+      "packetID": 49557,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34685,
+      "fight": 113
+    },
+    {
+      "timestamp": 105239914,
+      "type": "cast",
+      "packetID": 49570,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34662,
+      "fight": 113
+    },
+    {
+      "timestamp": 105242899,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2615,
+      "targetInstance": 2,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105243881,
+      "type": "cast",
+      "packetID": 49614,
+      "sourceID": 6,
+      "targetID": 2615,
+      "targetInstance": 2,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105245887,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34666,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105248381,
+      "type": "cast",
+      "packetID": 49656,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34666,
+      "fight": 113
+    },
+    {
+      "timestamp": 105249672,
+      "type": "cast",
+      "packetID": 49670,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34672,
+      "fight": 113
+    },
+    {
+      "timestamp": 105250563,
+      "type": "cast",
+      "packetID": 49681,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34662,
+      "fight": 113
+    },
+    {
+      "timestamp": 105253194,
+      "type": "cast",
+      "packetID": 49707,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34662,
+      "fight": 113
+    },
+    {
+      "timestamp": 105255689,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2615,
+      "targetInstance": 3,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105256672,
+      "type": "cast",
+      "packetID": 49742,
+      "sourceID": 6,
+      "targetID": 2615,
+      "targetInstance": 3,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105258409,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2614,
+      "targetInstance": 5,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105260233,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105262729,
+      "type": "cast",
+      "packetID": 49795,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113
+    },
+    {
+      "timestamp": 105264205,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2615,
+      "targetInstance": 3,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105265186,
+      "type": "cast",
+      "packetID": 49824,
+      "sourceID": 6,
+      "targetID": 2615,
+      "targetInstance": 3,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105266748,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2615,
+      "targetInstance": 3,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105267729,
+      "type": "cast",
+      "packetID": 49848,
+      "sourceID": 6,
+      "targetID": 2615,
+      "targetInstance": 3,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105269377,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2615,
+      "targetInstance": 3,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105270360,
+      "type": "cast",
+      "packetID": 49878,
+      "sourceID": 6,
+      "targetID": 2615,
+      "targetInstance": 3,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105271963,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34667,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105274459,
+      "type": "cast",
+      "packetID": 49908,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34667,
+      "fight": 113
+    },
+    {
+      "timestamp": 105275931,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105276913,
+      "type": "cast",
+      "packetID": 49924,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105278427,
+      "type": "cast",
+      "packetID": 49934,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105279052,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105280834,
+      "type": "cast",
+      "packetID": 49947,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105281593,
+      "type": "cast",
+      "packetID": 49956,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34674,
+      "fight": 113
+    },
+    {
+      "timestamp": 105282351,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105284132,
+      "type": "cast",
+      "packetID": 49974,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105284799,
+      "type": "cast",
+      "packetID": 49983,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34675,
+      "fight": 113
+    },
+    {
+      "timestamp": 105285692,
+      "type": "cast",
+      "packetID": 49993,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105286315,
+      "type": "cast",
+      "packetID": 49999,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 7560,
+      "fight": 113
+    },
+    {
+      "timestamp": 105288143,
+      "type": "cast",
+      "packetID": 50018,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34681,
+      "fight": 113
+    },
+    {
+      "timestamp": 105289034,
+      "type": "cast",
+      "packetID": 50027,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34673,
+      "fight": 113
+    },
+    {
+      "timestamp": 105289391,
+      "type": "cast",
+      "packetID": 50033,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34682,
+      "fight": 113,
+      "fake": true
+    },
+    {
+      "timestamp": 105290013,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 105291216,
+      "type": "cast",
+      "packetID": 50049,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105291972,
+      "type": "cast",
+      "packetID": 50056,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105292641,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 105293847,
+      "type": "cast",
+      "packetID": 50073,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105295095,
+      "type": "cast",
+      "packetID": 50087,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105297591,
+      "type": "cast",
+      "packetID": 50113,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34678,
+      "fight": 113
+    },
+    {
+      "timestamp": 105300086,
+      "type": "cast",
+      "packetID": 50134,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34679,
+      "fight": 113
+    },
+    {
+      "timestamp": 105302579,
+      "type": "cast",
+      "packetID": 50152,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34680,
+      "fight": 113
+    },
+    {
+      "timestamp": 105305079,
+      "type": "cast",
+      "packetID": 50172,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34688,
+      "fight": 113
+    },
+    {
+      "timestamp": 105307616,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105308687,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105310472,
+      "type": "cast",
+      "packetID": 50206,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105311985,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105313768,
+      "type": "cast",
+      "packetID": 50234,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105315240,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105316218,
+      "type": "cast",
+      "packetID": 50251,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105317734,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34664,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105320231,
+      "type": "cast",
+      "packetID": 50281,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34664,
+      "fight": 113
+    },
+    {
+      "timestamp": 105321745,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105324240,
+      "type": "cast",
+      "packetID": 50315,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113
+    },
+    {
+      "timestamp": 105325756,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105326737,
+      "type": "cast",
+      "packetID": 50338,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105328252,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34669,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105330745,
+      "type": "cast",
+      "packetID": 50368,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34669,
+      "fight": 113
+    },
+    {
+      "timestamp": 105332257,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105333238,
+      "type": "cast",
+      "packetID": 50386,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105334754,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105335734,
+      "type": "cast",
+      "packetID": 50404,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105337252,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105338233,
+      "type": "cast",
+      "packetID": 50420,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105339793,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105340771,
+      "type": "cast",
+      "packetID": 50436,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105342286,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105343267,
+      "type": "cast",
+      "packetID": 50459,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105343892,
+      "type": "cast",
+      "packetID": 50464,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34677,
+      "fight": 113
+    },
+    {
+      "timestamp": 105346701,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2617,
+      "targetInstance": 3,
+      "abilityGameID": 34650,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105347683,
+      "type": "cast",
+      "packetID": 50500,
+      "sourceID": 6,
+      "targetID": 2617,
+      "targetInstance": 3,
+      "abilityGameID": 34650,
+      "fight": 113
+    },
+    {
+      "timestamp": 105349022,
+      "type": "cast",
+      "packetID": 50516,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105349688,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105351473,
+      "type": "cast",
+      "packetID": 50534,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105352990,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105354768,
+      "type": "cast",
+      "packetID": 50557,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105355437,
+      "type": "cast",
+      "packetID": 50564,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34670,
+      "fight": 113
+    },
+    {
+      "timestamp": 105356282,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34665,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105358777,
+      "type": "cast",
+      "packetID": 50592,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34665,
+      "fight": 113
+    },
+    {
+      "timestamp": 105360290,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105362074,
+      "type": "cast",
+      "packetID": 50619,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105363591,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105364573,
+      "type": "cast",
+      "packetID": 50644,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34651,
+      "fight": 113
+    },
+    {
+      "timestamp": 105366088,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113,
+      "duration": 1500
+    },
+    {
+      "timestamp": 105367071,
+      "type": "cast",
+      "packetID": 50658,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34652,
+      "fight": 113
+    },
+    {
+      "timestamp": 105368679,
+      "type": "cast",
+      "packetID": 50669,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105370368,
+      "type": "cast",
+      "packetID": 50682,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105371977,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105373760,
+      "type": "cast",
+      "packetID": 50705,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105374960,
+      "type": "cast",
+      "packetID": 50713,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34671,
+      "fight": 113
+    },
+    {
+      "timestamp": 105375628,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105377411,
+      "type": "cast",
+      "packetID": 50729,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105378036,
+      "type": "cast",
+      "packetID": 50742,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34674,
+      "fight": 113
+    },
+    {
+      "timestamp": 105379106,
+      "type": "cast",
+      "packetID": 50751,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34678,
+      "fight": 113
+    },
+    {
+      "timestamp": 105381600,
+      "type": "cast",
+      "packetID": 50775,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34679,
+      "fight": 113
+    },
+    {
+      "timestamp": 105384097,
+      "type": "cast",
+      "packetID": 50800,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34680,
+      "fight": 113
+    },
+    {
+      "timestamp": 105386770,
+      "type": "cast",
+      "packetID": 50824,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105390066,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 2300
+    },
+    {
+      "timestamp": 105391847,
+      "type": "cast",
+      "packetID": 50864,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105393450,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113,
+      "duration": 3000
+    },
+    {
+      "timestamp": 105395947,
+      "type": "cast",
+      "packetID": 50904,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34668,
+      "fight": 113
+    },
+    {
+      "timestamp": 105397061,
+      "type": "cast",
+      "packetID": 50912,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 7561,
+      "fight": 113
+    },
+    {
+      "timestamp": 105397860,
+      "type": "cast",
+      "packetID": 50916,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34666,
+      "fight": 113
+    },
+    {
+      "timestamp": 105399554,
+      "type": "cast",
+      "packetID": 50934,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34674,
+      "fight": 113
+    },
+    {
+      "timestamp": 105401874,
+      "type": "cast",
+      "packetID": 50957,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34678,
+      "fight": 113
+    },
+    {
+      "timestamp": 105404636,
+      "type": "cast",
+      "packetID": 50988,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34679,
+      "fight": 113
+    },
+    {
+      "timestamp": 105406242,
+      "type": "cast",
+      "packetID": 51011,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34675,
+      "fight": 113
+    },
+    {
+      "timestamp": 105407133,
+      "type": "cast",
+      "packetID": 51019,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34680,
+      "fight": 113
+    },
+    {
+      "timestamp": 105408027,
+      "type": "cast",
+      "packetID": 51024,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34676,
+      "fight": 113
+    },
+    {
+      "timestamp": 105408786,
+      "type": "cast",
+      "packetID": 51031,
+      "sourceID": 6,
+      "targetID": 6,
+      "abilityGameID": 34683,
+      "fight": 113
+    },
+    {
+      "timestamp": 105409633,
+      "type": "cast",
+      "packetID": 51042,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34663,
+      "fight": 113
+    },
+    {
+      "timestamp": 105410746,
+      "type": "cast",
+      "packetID": 51050,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34672,
+      "fight": 113
+    },
+    {
+      "timestamp": 105412082,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 105413286,
+      "type": "cast",
+      "packetID": 51075,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34653,
+      "fight": 113
+    },
+    {
+      "timestamp": 105413953,
+      "type": "cast",
+      "packetID": 51084,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 7560,
+      "fight": 113
+    },
+    {
+      "timestamp": 105414578,
+      "type": "cast",
+      "packetID": 51091,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34681,
+      "fight": 113
+    },
+    {
+      "timestamp": 105415826,
+      "type": "cast",
+      "packetID": 51106,
+      "sourceID": 6,
+      "targetID": -1,
+      "abilityGameID": 34682,
+      "fight": 113,
+      "fake": true
+    },
+    {
+      "timestamp": 105416449,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 105417656,
+      "type": "cast",
+      "packetID": 51127,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34654,
+      "fight": 113
+    },
+    {
+      "timestamp": 105418949,
+      "type": "begincast",
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113,
+      "duration": 1725
+    },
+    {
+      "timestamp": 105420148,
+      "type": "cast",
+      "packetID": 51151,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34655,
+      "fight": 113
+    },
+    {
+      "timestamp": 105421396,
+      "type": "cast",
+      "packetID": 51161,
+      "sourceID": 6,
+      "targetID": 2602,
+      "abilityGameID": 34688,
+      "fight": 113
+    }
+  ],
+  "targetability_events": [
+    {
+      "timestamp": 104984195,
+      "type": "targetabilityupdate",
+      "sourceID": 2602,
+      "targetID": 2602,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 0
+    },
+    {
+      "timestamp": 104984416,
+      "type": "targetabilityupdate",
+      "sourceID": 2608,
+      "targetID": 2608,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105034488,
+      "type": "targetabilityupdate",
+      "sourceID": 2602,
+      "targetID": 2602,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105213049,
+      "type": "targetabilityupdate",
+      "sourceID": 2614,
+      "sourceInstance": 1,
+      "targetID": 2614,
+      "targetInstance": 1,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105213049,
+      "type": "targetabilityupdate",
+      "sourceID": 2614,
+      "sourceInstance": 2,
+      "targetID": 2614,
+      "targetInstance": 2,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105213941,
+      "type": "targetabilityupdate",
+      "sourceID": 2615,
+      "sourceInstance": 1,
+      "targetID": 2615,
+      "targetInstance": 1,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105231184,
+      "type": "targetabilityupdate",
+      "sourceID": 2614,
+      "sourceInstance": 3,
+      "targetID": 2614,
+      "targetInstance": 3,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105231184,
+      "type": "targetabilityupdate",
+      "sourceID": 2614,
+      "sourceInstance": 4,
+      "targetID": 2614,
+      "targetInstance": 4,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105232074,
+      "type": "targetabilityupdate",
+      "sourceID": 2615,
+      "sourceInstance": 2,
+      "targetID": 2615,
+      "targetInstance": 2,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105249315,
+      "type": "targetabilityupdate",
+      "sourceID": 2614,
+      "sourceInstance": 5,
+      "targetID": 2614,
+      "targetInstance": 5,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105249315,
+      "type": "targetabilityupdate",
+      "sourceID": 2614,
+      "sourceInstance": 6,
+      "targetID": 2614,
+      "targetInstance": 6,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105250206,
+      "type": "targetabilityupdate",
+      "sourceID": 2615,
+      "sourceInstance": 3,
+      "targetID": 2615,
+      "targetInstance": 3,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105319071,
+      "type": "targetabilityupdate",
+      "sourceID": 2617,
+      "sourceInstance": 2,
+      "targetID": 2617,
+      "targetInstance": 2,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105319071,
+      "type": "targetabilityupdate",
+      "sourceID": 2617,
+      "sourceInstance": 1,
+      "targetID": 2617,
+      "targetInstance": 1,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105319071,
+      "type": "targetabilityupdate",
+      "sourceID": 2618,
+      "sourceInstance": 1,
+      "targetID": 2618,
+      "targetInstance": 1,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105319071,
+      "type": "targetabilityupdate",
+      "sourceID": 2619,
+      "sourceInstance": 1,
+      "targetID": 2619,
+      "targetInstance": 1,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105341484,
+      "type": "targetabilityupdate",
+      "sourceID": 2617,
+      "sourceInstance": 4,
+      "targetID": 2617,
+      "targetInstance": 4,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105341484,
+      "type": "targetabilityupdate",
+      "sourceID": 2617,
+      "sourceInstance": 3,
+      "targetID": 2617,
+      "targetInstance": 3,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105341484,
+      "type": "targetabilityupdate",
+      "sourceID": 2618,
+      "sourceInstance": 2,
+      "targetID": 2618,
+      "targetInstance": 2,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    },
+    {
+      "timestamp": 105341484,
+      "type": "targetabilityupdate",
+      "sourceID": 2619,
+      "sourceInstance": 2,
+      "targetID": 2619,
+      "targetInstance": 2,
+      "abilityGameID": 0,
+      "fight": 113,
+      "targetable": 1
+    }
+  ],
+  "enemy_npcs": [
+    {
+      "id": 2608,
+      "gameID": 19168,
+      "petOwner": null
+    },
+    {
+      "id": 2614,
+      "gameID": 19169,
+      "petOwner": null
+    },
+    {
+      "id": 2615,
+      "gameID": 19170,
+      "petOwner": null
+    },
+    {
+      "id": 2605,
+      "gameID": 2002605,
+      "petOwner": null
+    },
+    {
+      "id": 2618,
+      "gameID": 19187,
+      "petOwner": null
+    },
+    {
+      "id": 2619,
+      "gameID": 19171,
+      "petOwner": null
+    },
+    {
+      "id": 2617,
+      "gameID": 19188,
+      "petOwner": null
+    },
+    {
+      "id": 2616,
+      "gameID": 1002616,
+      "petOwner": null
+    },
+    {
+      "id": 2613,
+      "gameID": 2002613,
+      "petOwner": null
+    },
+    {
+      "id": 2611,
+      "gameID": 2002611,
+      "petOwner": null
+    },
+    {
+      "id": 2602,
+      "gameID": 19167,
+      "petOwner": null
+    },
+    {
+      "id": 2609,
+      "gameID": 2002609,
+      "petOwner": null
+    }
+  ],
+  "master_npc_actors": [
+    {
+      "id": -1,
+      "name": "Environment",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 0
+    },
+    {
+      "id": 9,
+      "name": "Omega",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 15708
+    },
+    {
+      "id": 14,
+      "name": "Omega",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000014
+    },
+    {
+      "id": 16,
+      "name": "Omega",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 15713
+    },
+    {
+      "id": 17,
+      "name": "Omega",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 15712
+    },
+    {
+      "id": 18,
+      "name": "Omega-F",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15715
+    },
+    {
+      "id": 19,
+      "name": "Omega-M",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15714
+    },
+    {
+      "id": 20,
+      "name": "Omega-M",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000020
+    },
+    {
+      "id": 21,
+      "name": "Omega-F",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000021
+    },
+    {
+      "id": 22,
+      "name": "optical unit",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15716
+    },
+    {
+      "id": 23,
+      "name": "Omega",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 15717
+    },
+    {
+      "id": 24,
+      "name": "right arm unit",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15719
+    },
+    {
+      "id": 25,
+      "name": "left arm unit",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15718
+    },
+    {
+      "id": 27,
+      "name": "Omega-F",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15722
+    },
+    {
+      "id": 28,
+      "name": "Omega-M",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 15720
+    },
+    {
+      "id": 29,
+      "name": "Omega",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15724
+    },
+    {
+      "id": 30,
+      "name": "Omega",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14669
+    },
+    {
+      "id": 31,
+      "name": "rocket punch",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15709
+    },
+    {
+      "id": 32,
+      "name": "rocket punch",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15710
+    },
+    {
+      "id": 33,
+      "name": "rear power unit",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15723
+    },
+    {
+      "id": 34,
+      "name": "Omega-M",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15721
+    },
+    {
+      "id": 35,
+      "name": "Alpha Omega",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 15725
+    },
+    {
+      "id": 36,
+      "name": "Alpha Omega",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000036
+    },
+    {
+      "id": 37,
+      "name": "cosmo comet",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15727
+    },
+    {
+      "id": 38,
+      "name": "cosmo meteor",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 15726
+    },
+    {
+      "id": 126,
+      "name": "Mistwake Petromole",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19320
+    },
+    {
+      "id": 127,
+      "name": "Mistwake Petromole",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19020
+    },
+    {
+      "id": 128,
+      "name": "Mistwake Crawler",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19044
+    },
+    {
+      "id": 129,
+      "name": "Mistwake Crawler",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19319
+    },
+    {
+      "id": 130,
+      "name": "Mistwake Bat",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19021
+    },
+    {
+      "id": 131,
+      "name": "Mistwake Gemkeeper",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19022
+    },
+    {
+      "id": 132,
+      "name": "Mistwake Crawler",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19019
+    },
+    {
+      "id": 133,
+      "name": "Treno Catoblepas",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 18497
+    },
+    {
+      "id": 134,
+      "name": "Treno Catoblepas",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000134
+    },
+    {
+      "id": 135,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000135
+    },
+    {
+      "id": 136,
+      "name": "Thunderhead",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 6358
+    },
+    {
+      "id": 137,
+      "name": "Mistwake Zemzelett",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19322
+    },
+    {
+      "id": 138,
+      "name": "Mistwake Rock",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19023
+    },
+    {
+      "id": 139,
+      "name": "Mistwake Golem",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19026
+    },
+    {
+      "id": 140,
+      "name": "Mistwake Zemzelett",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19024
+    },
+    {
+      "id": 141,
+      "name": "Mistwake Plasma",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19025
+    },
+    {
+      "id": 142,
+      "name": "Mistwake Rock",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19321
+    },
+    {
+      "id": 143,
+      "name": "Amdusias",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19063
+    },
+    {
+      "id": 144,
+      "name": "Amdusias",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000144
+    },
+    {
+      "id": 145,
+      "name": "Poison Cloud",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19064
+    },
+    {
+      "id": 146,
+      "name": "Treno Citizen",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19035
+    },
+    {
+      "id": 147,
+      "name": "Treno Citizen",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19036
+    },
+    {
+      "id": 148,
+      "name": "Mistwake Coeurl",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19324
+    },
+    {
+      "id": 149,
+      "name": "Mistwake Coeurl",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19028
+    },
+    {
+      "id": 150,
+      "name": "Thunder Spirit",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19030
+    },
+    {
+      "id": 151,
+      "name": "Mistwake Spirit",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19031
+    },
+    {
+      "id": 152,
+      "name": "Treno Citizen",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19040
+    },
+    {
+      "id": 153,
+      "name": "Mistwake Jabberwock",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19041
+    },
+    {
+      "id": 154,
+      "name": "Treno Citizen",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19037
+    },
+    {
+      "id": 155,
+      "name": "Treno Citizen",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19039
+    },
+    {
+      "id": 156,
+      "name": "Thunder Spirit",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19033
+    },
+    {
+      "id": 157,
+      "name": "Mistwake Jabberwock",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19034
+    },
+    {
+      "id": 158,
+      "name": "Mistwake Coeurl",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19032
+    },
+    {
+      "id": 159,
+      "name": "Mistwake Jabberwock",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19029
+    },
+    {
+      "id": 160,
+      "name": "Treno Citizen",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19150
+    },
+    {
+      "id": 161,
+      "name": "Mistwake Spirit",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19027
+    },
+    {
+      "id": 162,
+      "name": "Mistwake Spirit",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19323
+    },
+    {
+      "id": 163,
+      "name": "Thundergust Griffin",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19045
+    },
+    {
+      "id": 164,
+      "name": "Thundergust Griffin",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000164
+    },
+    {
+      "id": 165,
+      "name": "Ball Lightning",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19046
+    },
+    {
+      "id": 166,
+      "name": "Shock Storm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19047
+    },
+    {
+      "id": 193,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19194
+    },
+    {
+      "id": 197,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19191
+    },
+    {
+      "id": 200,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19193
+    },
+    {
+      "id": 201,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19192
+    },
+    {
+      "id": 203,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000203
+    },
+    {
+      "id": 216,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000216
+    },
+    {
+      "id": 244,
+      "name": "Kunoichi",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3017
+    },
+    {
+      "id": 245,
+      "name": "Shinobi",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3016
+    },
+    {
+      "id": 246,
+      "name": "Yellow Dragon",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3020
+    },
+    {
+      "id": 247,
+      "name": "Oceanus",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3019
+    },
+    {
+      "id": 248,
+      "name": "Dark General",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3018
+    },
+    {
+      "id": 251,
+      "name": "Scylla",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 3009
+    },
+    {
+      "id": 254,
+      "name": "Staff Of Eldering",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3010
+    },
+    {
+      "id": 256,
+      "name": "Shivering Soul",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3012
+    },
+    {
+      "id": 257,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000257
+    },
+    {
+      "id": 258,
+      "name": "Shuddering Soul",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3014
+    },
+    {
+      "id": 259,
+      "name": "Smoldering Soul",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3013
+    },
+    {
+      "id": 260,
+      "name": "Gomory",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3021
+    },
+    {
+      "id": 261,
+      "name": "Acheron",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3022
+    },
+    {
+      "id": 262,
+      "name": "Green Dragon",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3023
+    },
+    {
+      "id": 263,
+      "name": "Doga's Clone",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3024
+    },
+    {
+      "id": 264,
+      "name": "Unei's Clone",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3030
+    },
+    {
+      "id": 265,
+      "name": "Glasya Labolas",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 3031
+    },
+    {
+      "id": 266,
+      "name": "Glasya Labolas",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 434
+    },
+    {
+      "id": 267,
+      "name": "Clockwork Wright",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3033
+    },
+    {
+      "id": 268,
+      "name": "Red Dragon",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3025
+    },
+    {
+      "id": 269,
+      "name": "Azer",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3027
+    },
+    {
+      "id": 270,
+      "name": "Red Dragon",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3026
+    },
+    {
+      "id": 271,
+      "name": "Haokah",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3029
+    },
+    {
+      "id": 272,
+      "name": "Amon",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 3040
+    },
+    {
+      "id": 273,
+      "name": "Experimental By-product #66",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3044
+    },
+    {
+      "id": 274,
+      "name": "Kum Kum",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3047
+    },
+    {
+      "id": 275,
+      "name": "Dimensional Compression",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3042
+    },
+    {
+      "id": 276,
+      "name": "Experimental By-product #33",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3043
+    },
+    {
+      "id": 277,
+      "name": "Kichiknebik",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3046
+    },
+    {
+      "id": 278,
+      "name": "Ice Cage",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 3041
+    },
+    {
+      "id": 279,
+      "name": "Xande",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 3035
+    },
+    {
+      "id": 280,
+      "name": "Xande",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 410
+    },
+    {
+      "id": 281,
+      "name": "Aetherial Mine",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3039
+    },
+    {
+      "id": 282,
+      "name": "Stonefall Circle",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3037
+    },
+    {
+      "id": 283,
+      "name": "Starfall Circle",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3036
+    },
+    {
+      "id": 284,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000284
+    },
+    {
+      "id": 292,
+      "name": "Ifrit",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 209
+    },
+    {
+      "id": 293,
+      "name": "Infernal Nail",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 210
+    },
+    {
+      "id": 297,
+      "name": "Heckler Imp",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1424
+    },
+    {
+      "id": 298,
+      "name": "Doctore",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1410
+    },
+    {
+      "id": 299,
+      "name": "Gas Bomb",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1415
+    },
+    {
+      "id": 300,
+      "name": "Firemane",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17987
+    },
+    {
+      "id": 301,
+      "name": "Firemane",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000301
+    },
+    {
+      "id": 302,
+      "name": "Scythe Mantis",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1411
+    },
+    {
+      "id": 303,
+      "name": "Lightning Sprite",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1416
+    },
+    {
+      "id": 304,
+      "name": "Coliseum Python",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1412
+    },
+    {
+      "id": 305,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000305
+    },
+    {
+      "id": 306,
+      "name": "Gas Bomb",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 980
+    },
+    {
+      "id": 307,
+      "name": "Thunderclap Guivre",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17988
+    },
+    {
+      "id": 308,
+      "name": "Thunderclap Guivre",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000308
+    },
+    {
+      "id": 309,
+      "name": "Rudis Beak",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1413
+    },
+    {
+      "id": 310,
+      "name": "Tangata",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17989
+    },
+    {
+      "id": 311,
+      "name": "Damantus",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17990
+    },
+    {
+      "id": 312,
+      "name": "Noxius",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17991
+    },
+    {
+      "id": 313,
+      "name": "Tangata",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000313
+    },
+    {
+      "id": 324,
+      "name": "8th Cohort Hoplomachus",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14568
+    },
+    {
+      "id": 325,
+      "name": "Imperial War Hound",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14576
+    },
+    {
+      "id": 326,
+      "name": "8th Cohort Signifer",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14572
+    },
+    {
+      "id": 328,
+      "name": "8th Cohort Eques",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14570
+    },
+    {
+      "id": 329,
+      "name": "8th Cohort Sagittarius",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14573
+    },
+    {
+      "id": 330,
+      "name": "8th Cohort Decurion",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14575
+    },
+    {
+      "id": 331,
+      "name": "The Black Eft",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 14538
+    },
+    {
+      "id": 332,
+      "name": "8th Cohort Laquearius",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14539
+    },
+    {
+      "id": 333,
+      "name": "8th Cohort Signifer",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14540
+    },
+    {
+      "id": 334,
+      "name": "The Black Eft",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000334
+    },
+    {
+      "id": 335,
+      "name": "Magitek Colossus",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14668
+    },
+    {
+      "id": 336,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000336
+    },
+    {
+      "id": 337,
+      "name": "8th Cohort Secutor",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14571
+    },
+    {
+      "id": 338,
+      "name": "8th Cohort Medicus",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14574
+    },
+    {
+      "id": 339,
+      "name": "Magitek Vanguard",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14578
+    },
+    {
+      "id": 340,
+      "name": "8th Cohort Laquearius",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14569
+    },
+    {
+      "id": 341,
+      "name": "Magitek Death Claw",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14577
+    },
+    {
+      "id": 342,
+      "name": "Magitek Vanguard F-1",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 14541
+    },
+    {
+      "id": 343,
+      "name": "Magitek Vanguard F-1",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000343
+    },
+    {
+      "id": 344,
+      "name": "Magitek Vanguard",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14663
+    },
+    {
+      "id": 345,
+      "name": "Magitek Colossus",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14664
+    },
+    {
+      "id": 346,
+      "name": "Cid",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 14580
+    },
+    {
+      "id": 347,
+      "name": "Livia Sas Junius",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 14542
+    },
+    {
+      "id": 348,
+      "name": "Livia Sas Junius",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000348
+    },
+    {
+      "id": 409,
+      "name": "Typhon",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 3663
+    },
+    {
+      "id": 449,
+      "name": "Bomb",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3782
+    },
+    {
+      "id": 466,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 1000466
+    },
+    {
+      "id": 588,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000588
+    },
+    {
+      "id": 621,
+      "name": "Nechuciho",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17708
+    },
+    {
+      "id": 667,
+      "name": "Queen Hawk",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17707
+    },
+    {
+      "id": 676,
+      "name": "Ridgetrap",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17483
+    },
+    {
+      "id": 680,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000680
+    },
+    {
+      "id": 695,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000695
+    },
+    {
+      "id": 696,
+      "name": "Pkuucha",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17792
+    },
+    {
+      "id": 702,
+      "name": "The Raintriller",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17791
+    },
+    {
+      "id": 710,
+      "name": "Starcrier",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 16892
+    },
+    {
+      "id": 712,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000712
+    },
+    {
+      "id": 713,
+      "name": "Rrax Yity'a",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 16946
+    },
+    {
+      "id": 715,
+      "name": "Ty'aitya",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17250
+    },
+    {
+      "id": 727,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000727
+    },
+    {
+      "id": 729,
+      "name": "Sunbeard",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17277
+    },
+    {
+      "id": 730,
+      "name": "Yehehetoaua'pyo",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17371
+    },
+    {
+      "id": 733,
+      "name": "Flying Popoto",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17276
+    },
+    {
+      "id": 735,
+      "name": "Keheniheyamewi",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17372
+    },
+    {
+      "id": 736,
+      "name": "Gritclaw",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17280
+    },
+    {
+      "id": 744,
+      "name": "Ttokrrone",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 16863
+    },
+    {
+      "id": 759,
+      "name": "Ttokrrone",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 16933
+    },
+    {
+      "id": 769,
+      "name": "Sand Sphere",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 16990
+    },
+    {
+      "id": 777,
+      "name": "Eyeclops",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17489
+    },
+    {
+      "id": 778,
+      "name": "Urna Variabilis",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 16751
+    },
+    {
+      "id": 780,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000780
+    },
+    {
+      "id": 784,
+      "name": "Heshuala",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 16750
+    },
+    {
+      "id": 787,
+      "name": "Striking Dummy",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13728
+    },
+    {
+      "id": 788,
+      "name": "Striking Dummy",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 16841
+    },
+    {
+      "id": 791,
+      "name": "Sally the Sweeper",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17301
+    },
+    {
+      "id": 792,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000792
+    },
+    {
+      "id": 795,
+      "name": "Cat's Eye",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17302
+    },
+    {
+      "id": 806,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000806
+    },
+    {
+      "id": 807,
+      "name": "Yilan",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13759
+    },
+    {
+      "id": 809,
+      "name": "Thavnairian jhammel",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13534
+    },
+    {
+      "id": 811,
+      "name": "Sugriva",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13820
+    },
+    {
+      "id": 814,
+      "name": "asvattha",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 13529
+    },
+    {
+      "id": 815,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000815
+    },
+    {
+      "id": 816,
+      "name": "Aegeiros",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13937
+    },
+    {
+      "id": 817,
+      "name": "ceruleum sprite",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13482
+    },
+    {
+      "id": 819,
+      "name": "Minerva",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13833
+    },
+    {
+      "id": 821,
+      "name": "automated avenger",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13471
+    },
+    {
+      "id": 826,
+      "name": "jotunn",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13477
+    },
+    {
+      "id": 827,
+      "name": "almasty",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 13472
+    },
+    {
+      "id": 831,
+      "name": "hulder",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13789
+    },
+    {
+      "id": 832,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000832
+    },
+    {
+      "id": 833,
+      "name": "berkanan",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13391
+    },
+    {
+      "id": 834,
+      "name": "Storsie",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13790
+    },
+    {
+      "id": 835,
+      "name": "sweeper",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13364
+    },
+    {
+      "id": 836,
+      "name": "armalcolite",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13374
+    },
+    {
+      "id": 837,
+      "name": "lunatender queen",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13791
+    },
+    {
+      "id": 838,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000838
+    },
+    {
+      "id": 839,
+      "name": "trimmer",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13370
+    },
+    {
+      "id": 840,
+      "name": "mousse princess",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13835
+    },
+    {
+      "id": 841,
+      "name": "daphnia",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 13362
+    },
+    {
+      "id": 842,
+      "name": "osculator",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 13363
+    },
+    {
+      "id": 843,
+      "name": "wanderer",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13365
+    },
+    {
+      "id": 844,
+      "name": "Arch-Eta",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13760
+    },
+    {
+      "id": 845,
+      "name": "stellar shelled dragon",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13326
+    },
+    {
+      "id": 846,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000846
+    },
+    {
+      "id": 847,
+      "name": "Fan Ail",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13761
+    },
+    {
+      "id": 848,
+      "name": "lesser stellar dragon",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13324
+    },
+    {
+      "id": 851,
+      "name": "gryps",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13429
+    },
+    {
+      "id": 853,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000853
+    },
+    {
+      "id": 854,
+      "name": "Gurangatch",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13851
+    },
+    {
+      "id": 855,
+      "name": "yggdreant",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13426
+    },
+    {
+      "id": 856,
+      "name": "petalodus",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13819
+    },
+    {
+      "id": 867,
+      "name": "Nuckelavee",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10383
+    },
+    {
+      "id": 871,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000871
+    },
+    {
+      "id": 874,
+      "name": "giant iguana",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10364
+    },
+    {
+      "id": 876,
+      "name": "Nariphon",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10384
+    },
+    {
+      "id": 877,
+      "name": "Striking Dummy",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10183
+    },
+    {
+      "id": 878,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000878
+    },
+    {
+      "id": 879,
+      "name": "Sugaar",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10357
+    },
+    {
+      "id": 880,
+      "name": "sand mole",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10342
+    },
+    {
+      "id": 881,
+      "name": "Maliktender",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10356
+    },
+    {
+      "id": 882,
+      "name": "molamander",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10353
+    },
+    {
+      "id": 892,
+      "name": "the mudman",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10271
+    },
+    {
+      "id": 893,
+      "name": "moss fungus",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10255
+    },
+    {
+      "id": 895,
+      "name": "O Poorest Pauldia",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10272
+    },
+    {
+      "id": 896,
+      "name": "garden porxie",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10251
+    },
+    {
+      "id": 897,
+      "name": "tot aevis",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10260
+    },
+    {
+      "id": 898,
+      "name": "Grassman",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10298
+    },
+    {
+      "id": 899,
+      "name": "djinn",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10295
+    },
+    {
+      "id": 900,
+      "name": "Supay",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10297
+    },
+    {
+      "id": 901,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000901
+    },
+    {
+      "id": 902,
+      "name": "forest echo",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10275
+    },
+    {
+      "id": 903,
+      "name": "gizamaluk",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10284
+    },
+    {
+      "id": 904,
+      "name": "Rusalka",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10323
+    },
+    {
+      "id": 905,
+      "name": "Baal",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10324
+    },
+    {
+      "id": 906,
+      "name": "amphisbaena",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10307
+    },
+    {
+      "id": 999,
+      "name": "lykopersikon",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13438
+    },
+    {
+      "id": 1007,
+      "name": "stellar dragonfly",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13320
+    },
+    {
+      "id": 1015,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1001015
+    },
+    {
+      "id": 1017,
+      "name": "white gremlin",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10370
+    },
+    {
+      "id": 1019,
+      "name": "grey draco",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10363
+    },
+    {
+      "id": 1022,
+      "name": "Li'l Murderer",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10420
+    },
+    {
+      "id": 1023,
+      "name": "gulgnu",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10416
+    },
+    {
+      "id": 1024,
+      "name": "Huracan",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10421
+    },
+    {
+      "id": 1025,
+      "name": "upland iguana",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10400
+    },
+    {
+      "id": 1028,
+      "name": "sibilus",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10340
+    },
+    {
+      "id": 1029,
+      "name": "harvester",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10350
+    },
+    {
+      "id": 1030,
+      "name": "thistle mole",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10343
+    },
+    {
+      "id": 1034,
+      "name": "cracked Ronkan doll",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10276
+    },
+    {
+      "id": 1035,
+      "name": "wild swine",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10289
+    },
+    {
+      "id": 1036,
+      "name": "sea gelatin",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10313
+    },
+    {
+      "id": 1039,
+      "name": "green glider",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10254
+    },
+    {
+      "id": 1163,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1001163
+    },
+    {
+      "id": 1167,
+      "name": "Spinner",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 7442
+    },
+    {
+      "id": 1169,
+      "name": "Burrow Antlion",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 7355
+    },
+    {
+      "id": 2159,
+      "name": "Enuo",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19905
+    },
+    {
+      "id": 2163,
+      "name": "Yawning Void",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19906
+    },
+    {
+      "id": 2164,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1002164
+    },
+    {
+      "id": 2166,
+      "name": "Void",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19450
+    },
+    {
+      "id": 2168,
+      "name": "Enuo",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002168
+    },
+    {
+      "id": 2171,
+      "name": "Void",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19447
+    },
+    {
+      "id": 2172,
+      "name": "Void",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19909
+    },
+    {
+      "id": 2173,
+      "name": "Void",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19910
+    },
+    {
+      "id": 2174,
+      "name": "Void",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19908
+    },
+    {
+      "id": 2176,
+      "name": "Looming Shadow",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19911
+    },
+    {
+      "id": 2177,
+      "name": "Looming Shadow",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002177
+    },
+    {
+      "id": 2178,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1002178
+    },
+    {
+      "id": 2179,
+      "name": "Aggressive Shadow",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19913
+    },
+    {
+      "id": 2180,
+      "name": "Aggressive Shadow",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002180
+    },
+    {
+      "id": 2182,
+      "name": "Soothing Shadow",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19914
+    },
+    {
+      "id": 2183,
+      "name": "Protective Shadow",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19912
+    },
+    {
+      "id": 2184,
+      "name": "Soothing Shadow",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002184
+    },
+    {
+      "id": 2185,
+      "name": "Protective Shadow",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002185
+    },
+    {
+      "id": 2186,
+      "name": "Beacon in the Dark",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19915
+    },
+    {
+      "id": 2187,
+      "name": "Yawning Void",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19907
+    },
+    {
+      "id": 2188,
+      "name": "Void",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 20149
+    },
+    {
+      "id": 2268,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 1002268
+    },
+    {
+      "id": 2378,
+      "name": "Nabriales",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 3649
+    },
+    {
+      "id": 2379,
+      "name": "Dark Aether Isten",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3651
+    },
+    {
+      "id": 2380,
+      "name": "Dark Aether Salas",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3653
+    },
+    {
+      "id": 2381,
+      "name": "Dark Aether Sina",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3652
+    },
+    {
+      "id": 2382,
+      "name": "Shadow Sprite",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3654
+    },
+    {
+      "id": 2383,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1002383
+    },
+    {
+      "id": 2384,
+      "name": "Extension",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3655
+    },
+    {
+      "id": 2385,
+      "name": "Aetherial Tear",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 3656
+    },
+    {
+      "id": 2387,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1002387
+    },
+    {
+      "id": 2391,
+      "name": "Vulpangue",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10327
+    },
+    {
+      "id": 2399,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1002399
+    },
+    {
+      "id": 2406,
+      "name": "flower basket",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10247
+    },
+    {
+      "id": 2602,
+      "name": "Vamp Fatale",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19167
+    },
+    {
+      "id": 2605,
+      "name": "Vamp Fatale",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002605
+    },
+    {
+      "id": 2606,
+      "name": "Vampette Fatale",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19503
+    },
+    {
+      "id": 2608,
+      "name": "Coffinmaker",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19168
+    },
+    {
+      "id": 2609,
+      "name": "Coffinmaker",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002609
+    },
+    {
+      "id": 2610,
+      "name": "Neckbiter",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19189
+    },
+    {
+      "id": 2611,
+      "name": "Neckbiter",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002611
+    },
+    {
+      "id": 2612,
+      "name": "Deadly Doornail",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002612
+    },
+    {
+      "id": 2613,
+      "name": "Fatal Flail",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002613
+    },
+    {
+      "id": 2614,
+      "name": "Fatal Flail",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19169
+    },
+    {
+      "id": 2615,
+      "name": "Deadly Doornail",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19170
+    },
+    {
+      "id": 2616,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1002616
+    },
+    {
+      "id": 2617,
+      "name": "Charnel Cell",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19188
+    },
+    {
+      "id": 2618,
+      "name": "Charnel Cell",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19187
+    },
+    {
+      "id": 2619,
+      "name": "Charnel Cell",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19171
+    },
+    {
+      "id": 2620,
+      "name": "Nesting Orobon",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17419
+    },
+    {
+      "id": 2630,
+      "name": "Red Hot",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19287
+    },
+    {
+      "id": 2631,
+      "name": "Deep Blue",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002631
+    },
+    {
+      "id": 2632,
+      "name": "Red Hot",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002632
+    },
+    {
+      "id": 2635,
+      "name": "Deep Blue",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19288
+    },
+    {
+      "id": 2636,
+      "name": "The Xtremes",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19423
+    },
+    {
+      "id": 2637,
+      "name": "Xtreme Aether",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19289
+    },
+    {
+      "id": 2638,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1002638
+    },
+    {
+      "id": 2639,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1002639
+    },
+    {
+      "id": 2640,
+      "name": "Watery Grave",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19136
+    },
+    {
+      "id": 2641,
+      "name": "Watery Grave",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19292
+    },
+    {
+      "id": 2669,
+      "name": "The Tyrant",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19180
+    },
+    {
+      "id": 2673,
+      "name": "The Tyrant",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2002673
+    },
+    {
+      "id": 2675,
+      "name": "Comet",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19181
+    },
+    {
+      "id": 2676,
+      "name": "The Tyrant",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19178
+    },
+    {
+      "id": 2677,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1002677
+    },
+    {
+      "id": 2937,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 1002937
+    },
+    {
+      "id": 3231,
+      "name": "Chaba Gedan",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17473
+    },
+    {
+      "id": 3308,
+      "name": "Alpaca",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17465
+    },
+    {
+      "id": 3337,
+      "name": "hoptrap",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10372
+    },
+    {
+      "id": 3347,
+      "name": "Sayona",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17438
+    },
+    {
+      "id": 3349,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1003349
+    },
+    {
+      "id": 3367,
+      "name": "Notocactuar",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17478
+    },
+    {
+      "id": 3394,
+      "name": "Cerule Anala",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17273
+    },
+    {
+      "id": 3395,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1003395
+    },
+    {
+      "id": 3398,
+      "name": "Myrmeleon",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17496
+    },
+    {
+      "id": 3404,
+      "name": "Water Spirit",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 17507
+    },
+    {
+      "id": 3428,
+      "name": "automated cavalry",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13466
+    },
+    {
+      "id": 3433,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1003433
+    },
+    {
+      "id": 3436,
+      "name": "Eblan icetrap",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13474
+    },
+    {
+      "id": 3439,
+      "name": "huldu",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10398
+    },
+    {
+      "id": 3444,
+      "name": "lunatender",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13361
+    },
+    {
+      "id": 3448,
+      "name": "bird of Elpis",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 13432
+    },
+    {
+      "id": 3462,
+      "name": "wolverine",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10373
+    },
+    {
+      "id": 3464,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1003464
+    },
+    {
+      "id": 3469,
+      "name": "debitage",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10347
+    },
+    {
+      "id": 3470,
+      "name": "blood morpho",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10257
+    },
+    {
+      "id": 3471,
+      "name": "killer bee",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10267
+    },
+    {
+      "id": 3472,
+      "name": "Domovoi",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10273
+    },
+    {
+      "id": 3474,
+      "name": "vampire vine",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10278
+    },
+    {
+      "id": 3475,
+      "name": "tomatl",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10274
+    },
+    {
+      "id": 3478,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1003478
+    },
+    {
+      "id": 3479,
+      "name": "overgrown rose",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 13481
+    },
+    {
+      "id": 3480,
+      "name": "hobgoblin runner",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10898
+    },
+    {
+      "id": 3481,
+      "name": "angry villager",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10892
+    },
+    {
+      "id": 3482,
+      "name": "angry villager",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10890
+    },
+    {
+      "id": 3483,
+      "name": "angry villager",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10891
+    },
+    {
+      "id": 3485,
+      "name": "whiptail",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 10411
+    },
+    {
+      "id": 3487,
+      "name": "Forlorn Maiden",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 7586
+    },
+    {
+      "id": 3521,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19198
+    },
+    {
+      "id": 3528,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19195
+    },
+    {
+      "id": 3530,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19200
+    },
+    {
+      "id": 3531,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19201
+    },
+    {
+      "id": 3532,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2003532
+    },
+    {
+      "id": 3533,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19196
+    },
+    {
+      "id": 3534,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19239
+    },
+    {
+      "id": 3535,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19197
+    },
+    {
+      "id": 3536,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19240
+    },
+    {
+      "id": 3537,
+      "name": "Blood Vessel",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19199
+    },
+    {
+      "id": 3539,
+      "name": "Lindwurm",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19202
+    },
+    {
+      "id": 3540,
+      "name": "lindschrat",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19204
+    },
+    {
+      "id": 3541,
+      "name": "understudy",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19210
+    },
+    {
+      "id": 3542,
+      "name": "mana sphere",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19205
+    },
+    {
+      "id": 3543,
+      "name": "mana sphere",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19206
+    },
+    {
+      "id": 3544,
+      "name": "mana sphere",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19207
+    },
+    {
+      "id": 3545,
+      "name": "mana sphere",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19208
+    },
+    {
+      "id": 3546,
+      "name": "mana sphere",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19209
+    },
+    {
+      "id": 3547,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1003547
+    },
+    {
+      "id": 4519,
+      "name": "",
+      "server": null,
+      "type": "NPC",
+      "subType": "Unknown",
+      "petOwner": null,
+      "gameID": 1004519
+    }
+  ],
+  "friendly_actors": [
+    {
+      "id": 6,
+      "name": "Amane Aikawa",
+      "subType": "Pictomancer"
+    },
+    {
+      "id": 8,
+      "name": "Multiple Players",
+      "subType": "LimitBreak"
+    },
+    {
+      "id": 2595,
+      "name": "Seia Kazarishi",
+      "subType": "WhiteMage"
+    },
+    {
+      "id": 2596,
+      "name": "Matt Nohr",
+      "subType": "Dancer"
+    },
+    {
+      "id": 2597,
+      "name": "Wooper My'beloved",
+      "subType": "DarkKnight"
+    },
+    {
+      "id": 2598,
+      "name": "Glen Kaeru",
+      "subType": "Sage"
+    },
+    {
+      "id": 2599,
+      "name": "Reina Koucha",
+      "subType": "Ninja"
+    },
+    {
+      "id": 2600,
+      "name": "Juiced Goblin",
+      "subType": "Monk"
+    },
+    {
+      "id": 2601,
+      "name": "Kera Mel",
+      "subType": "Paladin"
+    }
+  ]
+}

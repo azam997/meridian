@@ -1,0 +1,965 @@
+{
+  "_comment": "Synthetic BLM fixture for end-to-end pipeline / contract testing. NOT a real log \u2014 deterministic output of scripts/gen_blm_synthetic_fixture.py (idealized BLM rotation: the Astral Fire / Umbral Ice phase loop, Fire IV \u00d76 -> Flare Star, Despair, Blizzard III/IV refill, Polyglot -> Xenoglossy, High Thunder DoT, and the 2-minute burst). All ids are BLM-only from jobs/blackmage/data.py.",
+  "label": "blm_synthetic",
+  "report_code": "BLM_SYNTH_001",
+  "fight_id": 1,
+  "source_id": 25,
+  "fight_start_ms": 1000000,
+  "fight_end_ms": 1300000,
+  "duration_s": 300.0,
+  "parse_pct": null,
+  "cast_events": [
+    {
+      "timestamp": 1000000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1000000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3573,
+      "fight": 1
+    },
+    {
+      "timestamp": 1000700,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25796,
+      "fight": 1
+    },
+    {
+      "timestamp": 1002500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1004625,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1006750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1008875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1011000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1013125,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1015250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1017375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1019500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36989,
+      "fight": 1
+    },
+    {
+      "timestamp": 1021625,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16505,
+      "fight": 1
+    },
+    {
+      "timestamp": 1021625,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3573,
+      "fight": 1
+    },
+    {
+      "timestamp": 1022325,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 158,
+      "fight": 1
+    },
+    {
+      "timestamp": 1024125,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1026250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1028375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1030500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1032625,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1034750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1036875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1039000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1041125,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1043250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36989,
+      "fight": 1
+    },
+    {
+      "timestamp": 1045750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16505,
+      "fight": 1
+    },
+    {
+      "timestamp": 1048250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 154,
+      "fight": 1
+    },
+    {
+      "timestamp": 1050750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3576,
+      "fight": 1
+    },
+    {
+      "timestamp": 1053250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1055750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1058250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 152,
+      "fight": 1
+    },
+    {
+      "timestamp": 1060750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1063250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1065750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1068250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1070750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1073250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1075750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1078250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1080750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36989,
+      "fight": 1
+    },
+    {
+      "timestamp": 1083250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1085750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16505,
+      "fight": 1
+    },
+    {
+      "timestamp": 1088250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 154,
+      "fight": 1
+    },
+    {
+      "timestamp": 1090750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3576,
+      "fight": 1
+    },
+    {
+      "timestamp": 1093250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1095750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 152,
+      "fight": 1
+    },
+    {
+      "timestamp": 1098250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1100750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1103250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1105750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1108250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1110750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1113250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1115750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1118250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1120750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36989,
+      "fight": 1
+    },
+    {
+      "timestamp": 1120750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3573,
+      "fight": 1
+    },
+    {
+      "timestamp": 1123250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1123250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25796,
+      "fight": 1
+    },
+    {
+      "timestamp": 1125375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1127500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16505,
+      "fight": 1
+    },
+    {
+      "timestamp": 1127500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 158,
+      "fight": 1
+    },
+    {
+      "timestamp": 1129625,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1131750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1133875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1136000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1138125,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1140250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1142375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1144875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1147375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36989,
+      "fight": 1
+    },
+    {
+      "timestamp": 1149875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16505,
+      "fight": 1
+    },
+    {
+      "timestamp": 1152375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1154875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 154,
+      "fight": 1
+    },
+    {
+      "timestamp": 1157375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3576,
+      "fight": 1
+    },
+    {
+      "timestamp": 1159875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1162375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 152,
+      "fight": 1
+    },
+    {
+      "timestamp": 1164875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1167375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1169875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1172375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1174875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1177375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1179875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1182375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1184875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1187375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36989,
+      "fight": 1
+    },
+    {
+      "timestamp": 1189875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16505,
+      "fight": 1
+    },
+    {
+      "timestamp": 1192375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 154,
+      "fight": 1
+    },
+    {
+      "timestamp": 1194875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1197375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3576,
+      "fight": 1
+    },
+    {
+      "timestamp": 1199875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1202375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 152,
+      "fight": 1
+    },
+    {
+      "timestamp": 1204875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1207375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1209875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1212375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1214875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1217375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1219875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1222375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1224875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1227375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36989,
+      "fight": 1
+    },
+    {
+      "timestamp": 1229875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16505,
+      "fight": 1
+    },
+    {
+      "timestamp": 1229875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 158,
+      "fight": 1
+    },
+    {
+      "timestamp": 1232375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1234875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1237375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1239875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1242375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1242375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3573,
+      "fight": 1
+    },
+    {
+      "timestamp": 1244875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1244875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25796,
+      "fight": 1
+    },
+    {
+      "timestamp": 1247000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1249125,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1251250,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1253375,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1255500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36989,
+      "fight": 1
+    },
+    {
+      "timestamp": 1257625,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16505,
+      "fight": 1
+    },
+    {
+      "timestamp": 1259750,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 154,
+      "fight": 1
+    },
+    {
+      "timestamp": 1261875,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3576,
+      "fight": 1
+    },
+    {
+      "timestamp": 1264000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1266500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 152,
+      "fight": 1
+    },
+    {
+      "timestamp": 1269000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 25797,
+      "fight": 1
+    },
+    {
+      "timestamp": 1271500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16507,
+      "fight": 1
+    },
+    {
+      "timestamp": 1274000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1276500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1279000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36986,
+      "fight": 1
+    },
+    {
+      "timestamp": 1281500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1284000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1286500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1289000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3577,
+      "fight": 1
+    },
+    {
+      "timestamp": 1291500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 36989,
+      "fight": 1
+    },
+    {
+      "timestamp": 1294000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 16505,
+      "fight": 1
+    },
+    {
+      "timestamp": 1296500,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 154,
+      "fight": 1
+    },
+    {
+      "timestamp": 1299000,
+      "type": "cast",
+      "sourceID": 25,
+      "abilityGameID": 3576,
+      "fight": 1
+    }
+  ]
+}

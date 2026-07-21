@@ -1,0 +1,30 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Default permissions for the Meridian main window.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-minimize",
+    "core:window:allow-toggle-maximize",
+    "core:window:allow-close",
+    "core:window:allow-start-dragging",
+    {
+      "identifier": "shell:allow-spawn",
+      "allow": [
+        {
+          "name": "dev-sidecar-python",
+          "cmd": "python",
+          "args": ["-m", "sidecar.main"]
+        },
+        {
+          "name": "binaries/fflogs-efficiency-analyzer-sidecar",
+          "sidecar": true
+        }
+      ]
+    },
+    "shell:allow-stdin-write",
+    "updater:default",
+    "process:allow-restart"
+  ]
+}

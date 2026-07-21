@@ -1,0 +1,4637 @@
+{
+  "abilityMeta": {
+    "16470": {
+      "iconPath": "/i/003000/003086.png",
+      "id": 16470,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Edge of Shadow"
+    },
+    "16472": {
+      "iconPath": "/i/003000/003088.png",
+      "id": 16472,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Living Shadow"
+    },
+    "25755": {
+      "iconPath": "/i/003000/003090.png",
+      "id": 25755,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Salt and Darkness"
+    },
+    "25757": {
+      "iconPath": "/i/003000/003091.png",
+      "id": 25757,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Shadowbringer"
+    },
+    "3617": {
+      "iconPath": "/i/003000/003051.png",
+      "id": 3617,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Hard Slash"
+    },
+    "3623": {
+      "iconPath": "/i/003000/003054.png",
+      "id": 3623,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Syphon Strike"
+    },
+    "3632": {
+      "iconPath": "/i/003000/003055.png",
+      "id": 3632,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Souleater"
+    },
+    "3639": {
+      "iconPath": "/i/003000/003066.png",
+      "id": 3639,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Salted Earth"
+    },
+    "3643": {
+      "iconPath": "/i/003000/003058.png",
+      "id": 3643,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Carve and Spit"
+    },
+    "36928": {
+      "iconPath": "/i/003000/003095.png",
+      "id": 36928,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Scarlet Delirium"
+    },
+    "36929": {
+      "iconPath": "/i/003000/003096.png",
+      "id": 36929,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Comeuppance"
+    },
+    "36930": {
+      "iconPath": "/i/003000/003097.png",
+      "id": 36930,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Torcleaver"
+    },
+    "36932": {
+      "iconPath": "/i/003000/003099.png",
+      "id": 36932,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Disesteem"
+    },
+    "7390": {
+      "iconPath": "/i/003000/003078.png",
+      "id": 7390,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Delirium"
+    },
+    "7392": {
+      "iconPath": "/i/003000/003080.png",
+      "id": 7392,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Bloodspiller"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "16470": 23,
+        "16472": 3,
+        "25755": 4,
+        "25757": 7,
+        "3617": 36,
+        "3623": 35,
+        "3632": 35,
+        "3639": 4,
+        "3643": 6,
+        "36928": 6,
+        "36929": 6,
+        "36930": 6,
+        "36932": 3,
+        "7390": 6,
+        "7392": 17
+      },
+      "totalCasts": 197
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": []
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 465.69,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "targetability"
+    },
+    "Drift": {
+      "downtimeSource": "targetability",
+      "downtimeWindows": [],
+      "fightDurationSec": 360.0,
+      "findings": [
+        {
+          "abilityId": 7390,
+          "abilityName": "Delirium",
+          "cappedSeconds": 2.5,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16472,
+          "abilityName": "Living Shadow",
+          "cappedSeconds": 0.0,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 3639,
+          "abilityName": "Salted Earth",
+          "cappedSeconds": 5.0,
+          "casts": 4,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 3643,
+          "abilityName": "Carve and Spit",
+          "cappedSeconds": 5.0,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 25757,
+          "abilityName": "Shadowbringer",
+          "cappedSeconds": 7.5,
+          "casts": 7,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 36928,
+          "expectedId": 3623,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Scarlet Delirium, canonical uses Syphon Strike (same potency)"
+        },
+        {
+          "actualId": 36929,
+          "expectedId": 3632,
+          "lostPotency": 0.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Comeuppance, canonical uses Souleater (same potency)"
+        },
+        {
+          "actualId": 36930,
+          "expectedId": 36928,
+          "lostPotency": 0.0,
+          "position": 4,
+          "summary": "Opener slot #4: cast Torcleaver, canonical uses Scarlet Delirium (same potency)"
+        },
+        {
+          "actualId": 36932,
+          "expectedId": 36929,
+          "lostPotency": 0.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Disesteem, canonical uses Comeuppance (same potency)"
+        },
+        {
+          "actualId": 3623,
+          "expectedId": 36930,
+          "lostPotency": 440.0,
+          "position": 6,
+          "summary": "Opener slot #6: cast Syphon Strike (380p), canonical uses Torcleaver (820p) \u2014 -440p"
+        },
+        {
+          "actualId": 3632,
+          "expectedId": 36932,
+          "lostPotency": 520.0,
+          "position": 7,
+          "summary": "Opener slot #7: cast Souleater (480p), canonical uses Disesteem (1000p) \u2014 -520p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Scoring": {
+      "darksideLostPotency": 0.0,
+      "darksideUncovered": [],
+      "darksideUncoveredLost": [],
+      "darksideUptimePct": 100.0,
+      "deliveredObserved": 106417.92,
+      "deliveredPotency": 106417.92,
+      "downtimeSource": "targetability",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "16472": 3245.15,
+        "3639": 866.17,
+        "7390": 1411.75
+      },
+      "entryGauges": {},
+      "fightDurationSec": 360.0,
+      "idealizedLenient": 108219.39,
+      "idealizedMaster": 107228.49,
+      "idealizedObserved": 107228.49,
+      "idealizedPotency": 108219.39,
+      "idealizedStrict": 108219.39,
+      "masterBuffIntervals": [],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.5,
+        "payload": null
+      },
+      "tinctureLoss": 2158.67,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.09,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 197"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Hard Slash",
+          36,
+          0
+        ],
+        [
+          "Syphon Strike",
+          35,
+          0
+        ],
+        [
+          "Souleater",
+          35,
+          0
+        ],
+        [
+          "Edge of Shadow",
+          23,
+          0
+        ],
+        [
+          "Bloodspiller",
+          17,
+          0
+        ],
+        [
+          "Shadowbringer",
+          7,
+          0
+        ],
+        [
+          "Scarlet Delirium",
+          6,
+          0
+        ],
+        [
+          "Comeuppance",
+          6,
+          0
+        ],
+        [
+          "Torcleaver",
+          6,
+          0
+        ],
+        [
+          "Carve and Spit",
+          6,
+          0
+        ],
+        [
+          "Delirium",
+          6,
+          0
+        ],
+        [
+          "Salt and Darkness",
+          4,
+          0
+        ],
+        [
+          "Salted Earth",
+          4,
+          0
+        ],
+        [
+          "Disesteem",
+          3,
+          0
+        ],
+        [
+          "Living Shadow",
+          3,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No raid-buff providers in this party \u2014 burst alignment N/A."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 466p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "No notable cooldown drift."
+      ],
+      "summaryLines": [
+        "Total drift cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Delirium",
+          6,
+          2.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Living Shadow",
+          3,
+          0.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Salted Earth",
+          4,
+          5.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Carve and Spit",
+          6,
+          5.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Shadowbringer",
+          7,
+          7.5,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #6: cast Syphon Strike (380p), canonical uses Torcleaver (820p) \u2014 -440p",
+        "[opener] Opener slot #7: cast Souleater (480p), canonical uses Disesteem (1000p) \u2014 -520p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 960p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          2,
+          "Syphon Strike",
+          "Scarlet Delirium",
+          0
+        ],
+        [
+          3,
+          "Souleater",
+          "Comeuppance",
+          0
+        ],
+        [
+          4,
+          "Scarlet Delirium",
+          "Torcleaver",
+          0
+        ],
+        [
+          5,
+          "Comeuppance",
+          "Disesteem",
+          0
+        ],
+        [
+          6,
+          "Torcleaver",
+          "Syphon Strike",
+          440
+        ],
+        [
+          7,
+          "Disesteem",
+          "Souleater",
+          520
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 106417.92,
+    "downtimeSource": "targetability",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 98.34,
+    "efficiencyPctLenient": 98.34,
+    "efficiencyPctMaster": 99.24,
+    "efficiencyPctObserved": 99.24,
+    "efficiencyPctStrict": 98.34,
+    "idealizedMaster": 107228.49,
+    "idealizedObserved": 107228.49,
+    "killTimeSec": 360,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "DarkKnight"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 108219.39,
+    "yourIdealizedPotencyLenient": 108219.39,
+    "yourPotency": 106417.92
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 30.0,
+      "multiplier": 1.09,
+      "startSec": 0.0
+    },
+    {
+      "endSec": 330.0,
+      "multiplier": 1.09,
+      "startSec": 300.0
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 0.0,
+      "tooltip": "Hard Slash @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3639,
+      "color": "#f59e0b",
+      "endSec": 0.6,
+      "iconPath": "/i/003000/003066.png",
+      "label": "Sal",
+      "startSec": 0.0,
+      "tooltip": "Salted Earth @ 0.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3643,
+      "color": "#f59e0b",
+      "endSec": 1.3,
+      "iconPath": "/i/003000/003058.png",
+      "label": "Car",
+      "startSec": 0.7,
+      "tooltip": "Carve and Spit @ 0.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 2.5,
+      "tooltip": "Syphon Strike @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25755,
+      "color": "#f59e0b",
+      "endSec": 3.1,
+      "iconPath": "/i/003000/003090.png",
+      "label": "Sal",
+      "startSec": 2.5,
+      "tooltip": "Salt and Darkness @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 3.8,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 3.2,
+      "tooltip": "Edge of Shadow @ 3.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 6.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 5.0,
+      "tooltip": "Souleater @ 5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25757,
+      "color": "#f59e0b",
+      "endSec": 5.6,
+      "iconPath": "/i/003000/003091.png",
+      "label": "Sha",
+      "startSec": 5.0,
+      "tooltip": "Shadowbringer @ 5.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7390,
+      "color": "#f59e0b",
+      "endSec": 6.3,
+      "iconPath": "/i/003000/003078.png",
+      "label": "Del",
+      "startSec": 5.7,
+      "tooltip": "Delirium @ 5.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 8.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 7.5,
+      "tooltip": "Hard Slash @ 7.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16472,
+      "color": "#f59e0b",
+      "endSec": 8.1,
+      "iconPath": "/i/003000/003088.png",
+      "label": "Liv",
+      "startSec": 7.5,
+      "tooltip": "Living Shadow @ 7.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25757,
+      "color": "#f59e0b",
+      "endSec": 8.8,
+      "iconPath": "/i/003000/003091.png",
+      "label": "Sha",
+      "startSec": 8.2,
+      "tooltip": "Shadowbringer @ 8.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 11.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 10.0,
+      "tooltip": "Syphon Strike @ 10.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 10.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 10.0,
+      "tooltip": "Edge of Shadow @ 10.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 13.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 12.5,
+      "tooltip": "Souleater @ 12.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 13.1,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 12.5,
+      "tooltip": "Edge of Shadow @ 12.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36928,
+      "color": "#3b82f6",
+      "endSec": 16.0,
+      "iconPath": "/i/003000/003095.png",
+      "label": "Sca",
+      "startSec": 15.0,
+      "tooltip": "Scarlet Delirium @ 15.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 15.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 15.0,
+      "tooltip": "Edge of Shadow @ 15.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36929,
+      "color": "#3b82f6",
+      "endSec": 18.5,
+      "iconPath": "/i/003000/003096.png",
+      "label": "Com",
+      "startSec": 17.5,
+      "tooltip": "Comeuppance @ 17.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36930,
+      "color": "#3b82f6",
+      "endSec": 21.0,
+      "iconPath": "/i/003000/003097.png",
+      "label": "Tor",
+      "startSec": 20.0,
+      "tooltip": "Torcleaver @ 20.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 23.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 22.5,
+      "tooltip": "Hard Slash @ 22.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 26.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 25.0,
+      "tooltip": "Syphon Strike @ 25.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 25.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 25.0,
+      "tooltip": "Edge of Shadow @ 25.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 28.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 27.5,
+      "tooltip": "Souleater @ 27.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 31.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 30.0,
+      "tooltip": "Hard Slash @ 30.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 33.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 32.5,
+      "tooltip": "Syphon Strike @ 32.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36932,
+      "color": "#3b82f6",
+      "endSec": 36.0,
+      "iconPath": "/i/003000/003099.png",
+      "label": "Dis",
+      "startSec": 35.0,
+      "tooltip": "Disesteem @ 35.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 38.5,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 37.5,
+      "tooltip": "Bloodspiller @ 37.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 41.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 40.0,
+      "tooltip": "Souleater @ 40.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 43.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 42.5,
+      "tooltip": "Hard Slash @ 42.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 46.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 45.0,
+      "tooltip": "Syphon Strike @ 45.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 48.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 47.5,
+      "tooltip": "Souleater @ 47.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 51.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 50.0,
+      "tooltip": "Hard Slash @ 50.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 53.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 52.5,
+      "tooltip": "Syphon Strike @ 52.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 53.1,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 52.5,
+      "tooltip": "Edge of Shadow @ 52.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 56.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 55.0,
+      "tooltip": "Souleater @ 55.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 58.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 57.5,
+      "tooltip": "Hard Slash @ 57.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 61.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 60.0,
+      "tooltip": "Syphon Strike @ 60.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 63.5,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 62.5,
+      "tooltip": "Bloodspiller @ 62.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3643,
+      "color": "#f59e0b",
+      "endSec": 63.1,
+      "iconPath": "/i/003000/003058.png",
+      "label": "Car",
+      "startSec": 62.5,
+      "tooltip": "Carve and Spit @ 62.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 66.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 65.0,
+      "tooltip": "Souleater @ 65.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 68.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 67.5,
+      "tooltip": "Hard Slash @ 67.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7390,
+      "color": "#f59e0b",
+      "endSec": 68.1,
+      "iconPath": "/i/003000/003078.png",
+      "label": "Del",
+      "startSec": 67.5,
+      "tooltip": "Delirium @ 67.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25757,
+      "color": "#f59e0b",
+      "endSec": 68.8,
+      "iconPath": "/i/003000/003091.png",
+      "label": "Sha",
+      "startSec": 68.2,
+      "tooltip": "Shadowbringer @ 68.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 71.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 70.0,
+      "tooltip": "Syphon Strike @ 70.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 70.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 70.0,
+      "tooltip": "Edge of Shadow @ 70.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36928,
+      "color": "#3b82f6",
+      "endSec": 73.5,
+      "iconPath": "/i/003000/003095.png",
+      "label": "Sca",
+      "startSec": 72.5,
+      "tooltip": "Scarlet Delirium @ 72.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36929,
+      "color": "#3b82f6",
+      "endSec": 76.0,
+      "iconPath": "/i/003000/003096.png",
+      "label": "Com",
+      "startSec": 75.0,
+      "tooltip": "Comeuppance @ 75.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 75.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 75.0,
+      "tooltip": "Edge of Shadow @ 75.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36930,
+      "color": "#3b82f6",
+      "endSec": 78.5,
+      "iconPath": "/i/003000/003097.png",
+      "label": "Tor",
+      "startSec": 77.5,
+      "tooltip": "Torcleaver @ 77.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 81.0,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 80.0,
+      "tooltip": "Bloodspiller @ 80.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 83.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 82.5,
+      "tooltip": "Souleater @ 82.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 86.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 85.0,
+      "tooltip": "Hard Slash @ 85.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 88.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 87.5,
+      "tooltip": "Syphon Strike @ 87.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 91.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 90.0,
+      "tooltip": "Souleater @ 90.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3639,
+      "color": "#f59e0b",
+      "endSec": 90.6,
+      "iconPath": "/i/003000/003066.png",
+      "label": "Sal",
+      "startSec": 90.0,
+      "tooltip": "Salted Earth @ 90.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25755,
+      "color": "#f59e0b",
+      "endSec": 91.3,
+      "iconPath": "/i/003000/003090.png",
+      "label": "Sal",
+      "startSec": 90.7,
+      "tooltip": "Salt and Darkness @ 90.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 93.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 92.5,
+      "tooltip": "Hard Slash @ 92.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 96.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 95.0,
+      "tooltip": "Syphon Strike @ 95.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 98.5,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 97.5,
+      "tooltip": "Bloodspiller @ 97.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 98.1,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 97.5,
+      "tooltip": "Edge of Shadow @ 97.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 101.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 100.0,
+      "tooltip": "Souleater @ 100.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 103.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 102.5,
+      "tooltip": "Hard Slash @ 102.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 106.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 105.0,
+      "tooltip": "Syphon Strike @ 105.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 108.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 107.5,
+      "tooltip": "Souleater @ 107.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 111.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 110.0,
+      "tooltip": "Hard Slash @ 110.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 113.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 112.5,
+      "tooltip": "Syphon Strike @ 112.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 116.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 115.0,
+      "tooltip": "Souleater @ 115.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 118.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 117.5,
+      "tooltip": "Hard Slash @ 117.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 121.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 120.0,
+      "tooltip": "Syphon Strike @ 120.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 120.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 120.0,
+      "tooltip": "Edge of Shadow @ 120.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 123.5,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 122.5,
+      "tooltip": "Bloodspiller @ 122.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3643,
+      "color": "#f59e0b",
+      "endSec": 123.1,
+      "iconPath": "/i/003000/003058.png",
+      "label": "Car",
+      "startSec": 122.5,
+      "tooltip": "Carve and Spit @ 122.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 126.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 125.0,
+      "tooltip": "Souleater @ 125.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 128.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 127.5,
+      "tooltip": "Hard Slash @ 127.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16472,
+      "color": "#f59e0b",
+      "endSec": 128.1,
+      "iconPath": "/i/003000/003088.png",
+      "label": "Liv",
+      "startSec": 127.5,
+      "tooltip": "Living Shadow @ 127.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7390,
+      "color": "#f59e0b",
+      "endSec": 128.8,
+      "iconPath": "/i/003000/003078.png",
+      "label": "Del",
+      "startSec": 128.2,
+      "tooltip": "Delirium @ 128.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 131.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 130.0,
+      "tooltip": "Syphon Strike @ 130.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25757,
+      "color": "#f59e0b",
+      "endSec": 130.6,
+      "iconPath": "/i/003000/003091.png",
+      "label": "Sha",
+      "startSec": 130.0,
+      "tooltip": "Shadowbringer @ 130.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 133.5,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 132.5,
+      "tooltip": "Bloodspiller @ 132.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 133.1,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 132.5,
+      "tooltip": "Edge of Shadow @ 132.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 136.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 135.0,
+      "tooltip": "Souleater @ 135.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36928,
+      "color": "#3b82f6",
+      "endSec": 138.5,
+      "iconPath": "/i/003000/003095.png",
+      "label": "Sca",
+      "startSec": 137.5,
+      "tooltip": "Scarlet Delirium @ 137.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36929,
+      "color": "#3b82f6",
+      "endSec": 141.0,
+      "iconPath": "/i/003000/003096.png",
+      "label": "Com",
+      "startSec": 140.0,
+      "tooltip": "Comeuppance @ 140.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36930,
+      "color": "#3b82f6",
+      "endSec": 143.5,
+      "iconPath": "/i/003000/003097.png",
+      "label": "Tor",
+      "startSec": 142.5,
+      "tooltip": "Torcleaver @ 142.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 146.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 145.0,
+      "tooltip": "Hard Slash @ 145.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 148.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 147.5,
+      "tooltip": "Syphon Strike @ 147.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 148.1,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 147.5,
+      "tooltip": "Edge of Shadow @ 147.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 151.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 150.0,
+      "tooltip": "Souleater @ 150.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 153.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 152.5,
+      "tooltip": "Hard Slash @ 152.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36932,
+      "color": "#3b82f6",
+      "endSec": 156.0,
+      "iconPath": "/i/003000/003099.png",
+      "label": "Dis",
+      "startSec": 155.0,
+      "tooltip": "Disesteem @ 155.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 158.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 157.5,
+      "tooltip": "Syphon Strike @ 157.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 161.0,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 160.0,
+      "tooltip": "Bloodspiller @ 160.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 163.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 162.5,
+      "tooltip": "Souleater @ 162.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 166.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 165.0,
+      "tooltip": "Hard Slash @ 165.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 168.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 167.5,
+      "tooltip": "Syphon Strike @ 167.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 171.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 170.0,
+      "tooltip": "Souleater @ 170.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 170.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 170.0,
+      "tooltip": "Edge of Shadow @ 170.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 173.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 172.5,
+      "tooltip": "Hard Slash @ 172.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 176.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 175.0,
+      "tooltip": "Syphon Strike @ 175.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 178.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 177.5,
+      "tooltip": "Souleater @ 177.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 181.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 180.0,
+      "tooltip": "Hard Slash @ 180.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3639,
+      "color": "#f59e0b",
+      "endSec": 180.6,
+      "iconPath": "/i/003000/003066.png",
+      "label": "Sal",
+      "startSec": 180.0,
+      "tooltip": "Salted Earth @ 180.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25755,
+      "color": "#f59e0b",
+      "endSec": 181.3,
+      "iconPath": "/i/003000/003090.png",
+      "label": "Sal",
+      "startSec": 180.7,
+      "tooltip": "Salt and Darkness @ 180.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 183.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 182.5,
+      "tooltip": "Syphon Strike @ 182.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3643,
+      "color": "#f59e0b",
+      "endSec": 183.1,
+      "iconPath": "/i/003000/003058.png",
+      "label": "Car",
+      "startSec": 182.5,
+      "tooltip": "Carve and Spit @ 182.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 186.0,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 185.0,
+      "tooltip": "Bloodspiller @ 185.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 188.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 187.5,
+      "tooltip": "Souleater @ 187.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25757,
+      "color": "#f59e0b",
+      "endSec": 188.1,
+      "iconPath": "/i/003000/003091.png",
+      "label": "Sha",
+      "startSec": 187.5,
+      "tooltip": "Shadowbringer @ 187.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7390,
+      "color": "#f59e0b",
+      "endSec": 188.8,
+      "iconPath": "/i/003000/003078.png",
+      "label": "Del",
+      "startSec": 188.2,
+      "tooltip": "Delirium @ 188.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 191.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 190.0,
+      "tooltip": "Hard Slash @ 190.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 190.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 190.0,
+      "tooltip": "Edge of Shadow @ 190.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 193.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 192.5,
+      "tooltip": "Syphon Strike @ 192.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36928,
+      "color": "#3b82f6",
+      "endSec": 196.0,
+      "iconPath": "/i/003000/003095.png",
+      "label": "Sca",
+      "startSec": 195.0,
+      "tooltip": "Scarlet Delirium @ 195.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 195.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 195.0,
+      "tooltip": "Edge of Shadow @ 195.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36929,
+      "color": "#3b82f6",
+      "endSec": 198.5,
+      "iconPath": "/i/003000/003096.png",
+      "label": "Com",
+      "startSec": 197.5,
+      "tooltip": "Comeuppance @ 197.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36930,
+      "color": "#3b82f6",
+      "endSec": 201.0,
+      "iconPath": "/i/003000/003097.png",
+      "label": "Tor",
+      "startSec": 200.0,
+      "tooltip": "Torcleaver @ 200.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 203.5,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 202.5,
+      "tooltip": "Bloodspiller @ 202.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 206.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 205.0,
+      "tooltip": "Souleater @ 205.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 208.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 207.5,
+      "tooltip": "Hard Slash @ 207.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 211.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 210.0,
+      "tooltip": "Syphon Strike @ 210.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 213.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 212.5,
+      "tooltip": "Souleater @ 212.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 216.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 215.0,
+      "tooltip": "Hard Slash @ 215.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 218.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 217.5,
+      "tooltip": "Syphon Strike @ 217.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 218.1,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 217.5,
+      "tooltip": "Edge of Shadow @ 217.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 221.0,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 220.0,
+      "tooltip": "Bloodspiller @ 220.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 223.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 222.5,
+      "tooltip": "Souleater @ 222.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 226.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 225.0,
+      "tooltip": "Hard Slash @ 225.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 228.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 227.5,
+      "tooltip": "Syphon Strike @ 227.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 231.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 230.0,
+      "tooltip": "Souleater @ 230.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 233.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 232.5,
+      "tooltip": "Hard Slash @ 232.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 236.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 235.0,
+      "tooltip": "Syphon Strike @ 235.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 238.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 237.5,
+      "tooltip": "Souleater @ 237.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 241.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 240.0,
+      "tooltip": "Hard Slash @ 240.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 240.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 240.0,
+      "tooltip": "Edge of Shadow @ 240.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 243.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 242.5,
+      "tooltip": "Syphon Strike @ 242.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3643,
+      "color": "#f59e0b",
+      "endSec": 243.1,
+      "iconPath": "/i/003000/003058.png",
+      "label": "Car",
+      "startSec": 242.5,
+      "tooltip": "Carve and Spit @ 242.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 246.0,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 245.0,
+      "tooltip": "Bloodspiller @ 245.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 248.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 247.5,
+      "tooltip": "Souleater @ 247.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16472,
+      "color": "#f59e0b",
+      "endSec": 248.1,
+      "iconPath": "/i/003000/003088.png",
+      "label": "Liv",
+      "startSec": 247.5,
+      "tooltip": "Living Shadow @ 247.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7390,
+      "color": "#f59e0b",
+      "endSec": 248.8,
+      "iconPath": "/i/003000/003078.png",
+      "label": "Del",
+      "startSec": 248.2,
+      "tooltip": "Delirium @ 248.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 251.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 250.0,
+      "tooltip": "Hard Slash @ 250.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25757,
+      "color": "#f59e0b",
+      "endSec": 250.6,
+      "iconPath": "/i/003000/003091.png",
+      "label": "Sha",
+      "startSec": 250.0,
+      "tooltip": "Shadowbringer @ 250.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 253.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 252.5,
+      "tooltip": "Syphon Strike @ 252.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 253.1,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 252.5,
+      "tooltip": "Edge of Shadow @ 252.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36928,
+      "color": "#3b82f6",
+      "endSec": 256.0,
+      "iconPath": "/i/003000/003095.png",
+      "label": "Sca",
+      "startSec": 255.0,
+      "tooltip": "Scarlet Delirium @ 255.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36929,
+      "color": "#3b82f6",
+      "endSec": 258.5,
+      "iconPath": "/i/003000/003096.png",
+      "label": "Com",
+      "startSec": 257.5,
+      "tooltip": "Comeuppance @ 257.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36930,
+      "color": "#3b82f6",
+      "endSec": 261.0,
+      "iconPath": "/i/003000/003097.png",
+      "label": "Tor",
+      "startSec": 260.0,
+      "tooltip": "Torcleaver @ 260.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 263.5,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 262.5,
+      "tooltip": "Bloodspiller @ 262.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 266.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 265.0,
+      "tooltip": "Souleater @ 265.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 268.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 267.5,
+      "tooltip": "Hard Slash @ 267.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 268.1,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 267.5,
+      "tooltip": "Edge of Shadow @ 267.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 271.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 270.0,
+      "tooltip": "Syphon Strike @ 270.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3639,
+      "color": "#f59e0b",
+      "endSec": 270.6,
+      "iconPath": "/i/003000/003066.png",
+      "label": "Sal",
+      "startSec": 270.0,
+      "tooltip": "Salted Earth @ 270.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25755,
+      "color": "#f59e0b",
+      "endSec": 271.3,
+      "iconPath": "/i/003000/003090.png",
+      "label": "Sal",
+      "startSec": 270.7,
+      "tooltip": "Salt and Darkness @ 270.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 273.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 272.5,
+      "tooltip": "Souleater @ 272.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36932,
+      "color": "#3b82f6",
+      "endSec": 276.0,
+      "iconPath": "/i/003000/003099.png",
+      "label": "Dis",
+      "startSec": 275.0,
+      "tooltip": "Disesteem @ 275.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 278.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 277.5,
+      "tooltip": "Hard Slash @ 277.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 281.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 280.0,
+      "tooltip": "Syphon Strike @ 280.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 283.5,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 282.5,
+      "tooltip": "Bloodspiller @ 282.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 286.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 285.0,
+      "tooltip": "Souleater @ 285.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 288.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 287.5,
+      "tooltip": "Hard Slash @ 287.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 291.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 290.0,
+      "tooltip": "Syphon Strike @ 290.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 290.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 290.0,
+      "tooltip": "Edge of Shadow @ 290.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 293.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 292.5,
+      "tooltip": "Souleater @ 292.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 296.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 295.0,
+      "tooltip": "Hard Slash @ 295.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 298.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 297.5,
+      "tooltip": "Syphon Strike @ 297.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 301.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 300.0,
+      "tooltip": "Souleater @ 300.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 303.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 302.5,
+      "tooltip": "Hard Slash @ 302.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3643,
+      "color": "#f59e0b",
+      "endSec": 303.1,
+      "iconPath": "/i/003000/003058.png",
+      "label": "Car",
+      "startSec": 302.5,
+      "tooltip": "Carve and Spit @ 302.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 306.0,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 305.0,
+      "tooltip": "Bloodspiller @ 305.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 308.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 307.5,
+      "tooltip": "Syphon Strike @ 307.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25757,
+      "color": "#f59e0b",
+      "endSec": 308.1,
+      "iconPath": "/i/003000/003091.png",
+      "label": "Sha",
+      "startSec": 307.5,
+      "tooltip": "Shadowbringer @ 307.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7390,
+      "color": "#f59e0b",
+      "endSec": 308.8,
+      "iconPath": "/i/003000/003078.png",
+      "label": "Del",
+      "startSec": 308.2,
+      "tooltip": "Delirium @ 308.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 311.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 310.0,
+      "tooltip": "Souleater @ 310.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 310.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 310.0,
+      "tooltip": "Edge of Shadow @ 310.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 313.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 312.5,
+      "tooltip": "Hard Slash @ 312.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 316.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 315.0,
+      "tooltip": "Syphon Strike @ 315.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 315.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 315.0,
+      "tooltip": "Edge of Shadow @ 315.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36928,
+      "color": "#3b82f6",
+      "endSec": 318.5,
+      "iconPath": "/i/003000/003095.png",
+      "label": "Sca",
+      "startSec": 317.5,
+      "tooltip": "Scarlet Delirium @ 317.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36929,
+      "color": "#3b82f6",
+      "endSec": 321.0,
+      "iconPath": "/i/003000/003096.png",
+      "label": "Com",
+      "startSec": 320.0,
+      "tooltip": "Comeuppance @ 320.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36930,
+      "color": "#3b82f6",
+      "endSec": 323.5,
+      "iconPath": "/i/003000/003097.png",
+      "label": "Tor",
+      "startSec": 322.5,
+      "tooltip": "Torcleaver @ 322.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 326.0,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 325.0,
+      "tooltip": "Bloodspiller @ 325.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 328.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 327.5,
+      "tooltip": "Souleater @ 327.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 331.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 330.0,
+      "tooltip": "Hard Slash @ 330.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 333.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 332.5,
+      "tooltip": "Syphon Strike @ 332.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 336.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 335.0,
+      "tooltip": "Souleater @ 335.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 338.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 337.5,
+      "tooltip": "Hard Slash @ 337.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 341.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 340.0,
+      "tooltip": "Syphon Strike @ 340.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 340.6,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 340.0,
+      "tooltip": "Edge of Shadow @ 340.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 343.5,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 342.5,
+      "tooltip": "Souleater @ 342.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 346.0,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 345.0,
+      "tooltip": "Hard Slash @ 345.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 348.5,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 347.5,
+      "tooltip": "Syphon Strike @ 347.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3632,
+      "color": "#3b82f6",
+      "endSec": 351.0,
+      "iconPath": "/i/003000/003055.png",
+      "label": "Sou",
+      "startSec": 350.0,
+      "tooltip": "Souleater @ 350.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3617,
+      "color": "#3b82f6",
+      "endSec": 353.5,
+      "iconPath": "/i/003000/003051.png",
+      "label": "Har",
+      "startSec": 352.5,
+      "tooltip": "Hard Slash @ 352.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3623,
+      "color": "#3b82f6",
+      "endSec": 356.0,
+      "iconPath": "/i/003000/003054.png",
+      "label": "Syp",
+      "startSec": 355.0,
+      "tooltip": "Syphon Strike @ 355.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7392,
+      "color": "#3b82f6",
+      "endSec": 358.5,
+      "iconPath": "/i/003000/003080.png",
+      "label": "Blo",
+      "startSec": 357.5,
+      "tooltip": "Bloodspiller @ 357.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "color": "#f59e0b",
+      "endSec": 358.1,
+      "iconPath": "/i/003000/003086.png",
+      "label": "Edg",
+      "startSec": 357.5,
+      "tooltip": "Edge of Shadow @ 357.5s (idealized)",
+      "yOffset": -0.55
+    }
+  ],
+  "idealizedTrackCanonical": [],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 0,
+          "abilityName": "Tincture",
+          "children": [],
+          "kind": "tincture",
+          "lostPotency": 2158.67,
+          "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+          "timeSec": 0.0
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 1801.47,
+      "summary": "Other \u2014 1 small located loss below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 36930,
+      "abilityName": "Torcleaver",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #6: cast Syphon Strike, canonical opens Torcleaver (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 36932,
+      "abilityName": "Disesteem",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #7: cast Souleater, canonical opens Disesteem (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 0.0,
+        "tooltip": "Hard Slash  (GCD)  @  0:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16472,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003088.png",
+        "label": "Liv",
+        "startSec": 0.0,
+        "tooltip": "Living Shadow  (oGCD)  @  0:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7390,
+        "color": "#777777",
+        "endSec": 1.2,
+        "iconPath": "/i/003000/003078.png",
+        "label": "Del",
+        "startSec": 0.7,
+        "tooltip": "Delirium  (oGCD)  @  0:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36928,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/003000/003095.png",
+        "label": "Sca",
+        "startSec": 2.5,
+        "tooltip": "Scarlet Delirium  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3639,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/003000/003066.png",
+        "label": "Sal",
+        "startSec": 2.5,
+        "tooltip": "Salted Earth  (oGCD)  @  0:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3643,
+        "color": "#777777",
+        "endSec": 3.7,
+        "iconPath": "/i/003000/003058.png",
+        "label": "Car",
+        "startSec": 3.2,
+        "tooltip": "Carve and Spit  (oGCD)  @  0:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36929,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003096.png",
+        "label": "Com",
+        "startSec": 5.0,
+        "tooltip": "Comeuppance  (GCD)  @  0:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25755,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003090.png",
+        "label": "Sal",
+        "startSec": 5.0,
+        "tooltip": "Salt and Darkness  (oGCD)  @  0:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 6.2,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 5.7,
+        "tooltip": "Edge of Shadow  (oGCD)  @  0:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36930,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/003000/003097.png",
+        "label": "Tor",
+        "startSec": 7.5,
+        "tooltip": "Torcleaver  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25757,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/003000/003091.png",
+        "label": "Sha",
+        "startSec": 7.5,
+        "tooltip": "Shadowbringer  (oGCD)  @  0:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25757,
+        "color": "#777777",
+        "endSec": 8.7,
+        "iconPath": "/i/003000/003091.png",
+        "label": "Sha",
+        "startSec": 8.2,
+        "tooltip": "Shadowbringer  (oGCD)  @  0:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36932,
+        "color": "#777777",
+        "endSec": 10.5,
+        "iconPath": "/i/003000/003099.png",
+        "label": "Dis",
+        "startSec": 10.0,
+        "tooltip": "Disesteem  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 10.5,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 10.0,
+        "tooltip": "Edge of Shadow  (oGCD)  @  0:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 12.5,
+        "tooltip": "Syphon Strike  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 12.5,
+        "tooltip": "Edge of Shadow  (oGCD)  @  0:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 15.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 15.0,
+        "tooltip": "Souleater  (GCD)  @  0:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 15.5,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 15.0,
+        "tooltip": "Edge of Shadow  (oGCD)  @  0:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 18.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 17.5,
+        "tooltip": "Bloodspiller  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 20.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 20.0,
+        "tooltip": "Hard Slash  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 23.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 22.5,
+        "tooltip": "Syphon Strike  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 25.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 25.0,
+        "tooltip": "Souleater  (GCD)  @  0:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 28.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 27.5,
+        "tooltip": "Hard Slash  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 30.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 30.0,
+        "tooltip": "Syphon Strike  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 33.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 32.5,
+        "tooltip": "Souleater  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 35.0,
+        "tooltip": "Hard Slash  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 37.5,
+        "tooltip": "Syphon Strike  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 37.5,
+        "tooltip": "Edge of Shadow  (oGCD)  @  0:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 40.0,
+        "tooltip": "Souleater  (GCD)  @  0:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 43.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 42.5,
+        "tooltip": "Bloodspiller  (GCD)  @  0:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 45.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 45.0,
+        "tooltip": "Hard Slash  (GCD)  @  0:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 48.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 47.5,
+        "tooltip": "Syphon Strike  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 50.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 50.0,
+        "tooltip": "Souleater  (GCD)  @  0:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 53.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 52.5,
+        "tooltip": "Hard Slash  (GCD)  @  0:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 55.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 55.0,
+        "tooltip": "Syphon Strike  (GCD)  @  0:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 58.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 57.5,
+        "tooltip": "Souleater  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 58.0,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 57.5,
+        "tooltip": "Edge of Shadow  (oGCD)  @  0:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 60.0,
+        "tooltip": "Bloodspiller  (GCD)  @  1:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 62.5,
+        "tooltip": "Hard Slash  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7390,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/003000/003078.png",
+        "label": "Del",
+        "startSec": 62.5,
+        "tooltip": "Delirium  (oGCD)  @  1:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3643,
+        "color": "#777777",
+        "endSec": 63.7,
+        "iconPath": "/i/003000/003058.png",
+        "label": "Car",
+        "startSec": 63.2,
+        "tooltip": "Carve and Spit  (oGCD)  @  1:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36928,
+        "color": "#777777",
+        "endSec": 65.5,
+        "iconPath": "/i/003000/003095.png",
+        "label": "Sca",
+        "startSec": 65.0,
+        "tooltip": "Scarlet Delirium  (GCD)  @  1:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36929,
+        "color": "#777777",
+        "endSec": 68.0,
+        "iconPath": "/i/003000/003096.png",
+        "label": "Com",
+        "startSec": 67.5,
+        "tooltip": "Comeuppance  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36930,
+        "color": "#777777",
+        "endSec": 70.5,
+        "iconPath": "/i/003000/003097.png",
+        "label": "Tor",
+        "startSec": 70.0,
+        "tooltip": "Torcleaver  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25757,
+        "color": "#777777",
+        "endSec": 70.5,
+        "iconPath": "/i/003000/003091.png",
+        "label": "Sha",
+        "startSec": 70.0,
+        "tooltip": "Shadowbringer  (oGCD)  @  1:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 71.2,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 70.7,
+        "tooltip": "Edge of Shadow  (oGCD)  @  1:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 73.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 72.5,
+        "tooltip": "Syphon Strike  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 75.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 75.0,
+        "tooltip": "Souleater  (GCD)  @  1:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 78.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 77.5,
+        "tooltip": "Bloodspiller  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 80.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 80.0,
+        "tooltip": "Hard Slash  (GCD)  @  1:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 83.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 82.5,
+        "tooltip": "Syphon Strike  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 85.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 85.0,
+        "tooltip": "Souleater  (GCD)  @  1:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 85.5,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 85.0,
+        "tooltip": "Edge of Shadow  (oGCD)  @  1:25",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 88.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 87.5,
+        "tooltip": "Hard Slash  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 90.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 90.0,
+        "tooltip": "Syphon Strike  (GCD)  @  1:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 92.5,
+        "tooltip": "Souleater  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3639,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/003000/003066.png",
+        "label": "Sal",
+        "startSec": 92.5,
+        "tooltip": "Salted Earth  (oGCD)  @  1:32",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25755,
+        "color": "#777777",
+        "endSec": 93.7,
+        "iconPath": "/i/003000/003090.png",
+        "label": "Sal",
+        "startSec": 93.2,
+        "tooltip": "Salt and Darkness  (oGCD)  @  1:33",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 95.0,
+        "tooltip": "Hard Slash  (GCD)  @  1:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 98.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 97.5,
+        "tooltip": "Syphon Strike  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 100.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 100.0,
+        "tooltip": "Souleater  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 103.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 102.5,
+        "tooltip": "Bloodspiller  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 105.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 105.0,
+        "tooltip": "Hard Slash  (GCD)  @  1:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 107.5,
+        "tooltip": "Syphon Strike  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 107.5,
+        "tooltip": "Edge of Shadow  (oGCD)  @  1:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 110.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 110.0,
+        "tooltip": "Souleater  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 113.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 112.5,
+        "tooltip": "Hard Slash  (GCD)  @  1:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 115.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 115.0,
+        "tooltip": "Syphon Strike  (GCD)  @  1:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 118.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 117.5,
+        "tooltip": "Souleater  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 120.5,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 120.0,
+        "tooltip": "Bloodspiller  (GCD)  @  2:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16472,
+        "color": "#777777",
+        "endSec": 120.5,
+        "iconPath": "/i/003000/003088.png",
+        "label": "Liv",
+        "startSec": 120.0,
+        "tooltip": "Living Shadow  (oGCD)  @  2:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36932,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/003000/003099.png",
+        "label": "Dis",
+        "startSec": 122.5,
+        "tooltip": "Disesteem  (GCD)  @  2:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7390,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/003000/003078.png",
+        "label": "Del",
+        "startSec": 122.5,
+        "tooltip": "Delirium  (oGCD)  @  2:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3643,
+        "color": "#777777",
+        "endSec": 123.7,
+        "iconPath": "/i/003000/003058.png",
+        "label": "Car",
+        "startSec": 123.2,
+        "tooltip": "Carve and Spit  (oGCD)  @  2:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36928,
+        "color": "#777777",
+        "endSec": 125.5,
+        "iconPath": "/i/003000/003095.png",
+        "label": "Sca",
+        "startSec": 125.0,
+        "tooltip": "Scarlet Delirium  (GCD)  @  2:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 125.5,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 125.0,
+        "tooltip": "Edge of Shadow  (oGCD)  @  2:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36929,
+        "color": "#777777",
+        "endSec": 128.0,
+        "iconPath": "/i/003000/003096.png",
+        "label": "Com",
+        "startSec": 127.5,
+        "tooltip": "Comeuppance  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36930,
+        "color": "#777777",
+        "endSec": 130.5,
+        "iconPath": "/i/003000/003097.png",
+        "label": "Tor",
+        "startSec": 130.0,
+        "tooltip": "Torcleaver  (GCD)  @  2:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25757,
+        "color": "#777777",
+        "endSec": 130.5,
+        "iconPath": "/i/003000/003091.png",
+        "label": "Sha",
+        "startSec": 130.0,
+        "tooltip": "Shadowbringer  (oGCD)  @  2:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 133.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 132.5,
+        "tooltip": "Hard Slash  (GCD)  @  2:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 135.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 135.0,
+        "tooltip": "Syphon Strike  (GCD)  @  2:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 135.5,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 135.0,
+        "tooltip": "Edge of Shadow  (oGCD)  @  2:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 138.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 137.5,
+        "tooltip": "Souleater  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 140.5,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 140.0,
+        "tooltip": "Bloodspiller  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 143.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 142.5,
+        "tooltip": "Hard Slash  (GCD)  @  2:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 145.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 145.0,
+        "tooltip": "Syphon Strike  (GCD)  @  2:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 148.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 147.5,
+        "tooltip": "Souleater  (GCD)  @  2:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 150.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 150.0,
+        "tooltip": "Hard Slash  (GCD)  @  2:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 153.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 152.5,
+        "tooltip": "Syphon Strike  (GCD)  @  2:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 155.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 155.0,
+        "tooltip": "Souleater  (GCD)  @  2:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 158.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 157.5,
+        "tooltip": "Hard Slash  (GCD)  @  2:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 158.0,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 157.5,
+        "tooltip": "Edge of Shadow  (oGCD)  @  2:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 160.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 160.0,
+        "tooltip": "Syphon Strike  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 163.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 162.5,
+        "tooltip": "Souleater  (GCD)  @  2:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 165.5,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 165.0,
+        "tooltip": "Bloodspiller  (GCD)  @  2:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 168.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 167.5,
+        "tooltip": "Hard Slash  (GCD)  @  2:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 170.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 170.0,
+        "tooltip": "Syphon Strike  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 173.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 172.5,
+        "tooltip": "Souleater  (GCD)  @  2:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 175.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 175.0,
+        "tooltip": "Hard Slash  (GCD)  @  2:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 178.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 177.5,
+        "tooltip": "Syphon Strike  (GCD)  @  2:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 178.0,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 177.5,
+        "tooltip": "Edge of Shadow  (oGCD)  @  2:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 180.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 180.0,
+        "tooltip": "Souleater  (GCD)  @  3:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 183.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 182.5,
+        "tooltip": "Bloodspiller  (GCD)  @  3:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7390,
+        "color": "#777777",
+        "endSec": 183.0,
+        "iconPath": "/i/003000/003078.png",
+        "label": "Del",
+        "startSec": 182.5,
+        "tooltip": "Delirium  (oGCD)  @  3:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3639,
+        "color": "#777777",
+        "endSec": 183.7,
+        "iconPath": "/i/003000/003066.png",
+        "label": "Sal",
+        "startSec": 183.2,
+        "tooltip": "Salted Earth  (oGCD)  @  3:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36928,
+        "color": "#777777",
+        "endSec": 185.5,
+        "iconPath": "/i/003000/003095.png",
+        "label": "Sca",
+        "startSec": 185.0,
+        "tooltip": "Scarlet Delirium  (GCD)  @  3:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3643,
+        "color": "#777777",
+        "endSec": 185.5,
+        "iconPath": "/i/003000/003058.png",
+        "label": "Car",
+        "startSec": 185.0,
+        "tooltip": "Carve and Spit  (oGCD)  @  3:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25755,
+        "color": "#777777",
+        "endSec": 186.2,
+        "iconPath": "/i/003000/003090.png",
+        "label": "Sal",
+        "startSec": 185.7,
+        "tooltip": "Salt and Darkness  (oGCD)  @  3:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36929,
+        "color": "#777777",
+        "endSec": 188.0,
+        "iconPath": "/i/003000/003096.png",
+        "label": "Com",
+        "startSec": 187.5,
+        "tooltip": "Comeuppance  (GCD)  @  3:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 188.0,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 187.5,
+        "tooltip": "Edge of Shadow  (oGCD)  @  3:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25757,
+        "color": "#777777",
+        "endSec": 188.7,
+        "iconPath": "/i/003000/003091.png",
+        "label": "Sha",
+        "startSec": 188.2,
+        "tooltip": "Shadowbringer  (oGCD)  @  3:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36930,
+        "color": "#777777",
+        "endSec": 190.5,
+        "iconPath": "/i/003000/003097.png",
+        "label": "Tor",
+        "startSec": 190.0,
+        "tooltip": "Torcleaver  (GCD)  @  3:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 193.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 192.5,
+        "tooltip": "Hard Slash  (GCD)  @  3:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 195.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 195.0,
+        "tooltip": "Syphon Strike  (GCD)  @  3:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 198.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 197.5,
+        "tooltip": "Souleater  (GCD)  @  3:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 200.5,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 200.0,
+        "tooltip": "Bloodspiller  (GCD)  @  3:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 203.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 202.5,
+        "tooltip": "Hard Slash  (GCD)  @  3:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 205.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 205.0,
+        "tooltip": "Syphon Strike  (GCD)  @  3:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 205.5,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 205.0,
+        "tooltip": "Edge of Shadow  (oGCD)  @  3:25",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 208.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 207.5,
+        "tooltip": "Souleater  (GCD)  @  3:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 210.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 210.0,
+        "tooltip": "Hard Slash  (GCD)  @  3:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 213.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 212.5,
+        "tooltip": "Syphon Strike  (GCD)  @  3:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 215.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 215.0,
+        "tooltip": "Souleater  (GCD)  @  3:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 218.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 217.5,
+        "tooltip": "Hard Slash  (GCD)  @  3:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 220.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 220.0,
+        "tooltip": "Syphon Strike  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 223.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 222.5,
+        "tooltip": "Souleater  (GCD)  @  3:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 225.5,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 225.0,
+        "tooltip": "Bloodspiller  (GCD)  @  3:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 228.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 227.5,
+        "tooltip": "Hard Slash  (GCD)  @  3:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 230.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 230.0,
+        "tooltip": "Syphon Strike  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 230.5,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 230.0,
+        "tooltip": "Edge of Shadow  (oGCD)  @  3:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 233.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 232.5,
+        "tooltip": "Souleater  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 235.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 235.0,
+        "tooltip": "Hard Slash  (GCD)  @  3:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 238.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 237.5,
+        "tooltip": "Syphon Strike  (GCD)  @  3:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 240.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 240.0,
+        "tooltip": "Souleater  (GCD)  @  4:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16472,
+        "color": "#777777",
+        "endSec": 240.5,
+        "iconPath": "/i/003000/003088.png",
+        "label": "Liv",
+        "startSec": 240.0,
+        "tooltip": "Living Shadow  (oGCD)  @  4:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36932,
+        "color": "#777777",
+        "endSec": 243.0,
+        "iconPath": "/i/003000/003099.png",
+        "label": "Dis",
+        "startSec": 242.5,
+        "tooltip": "Disesteem  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7390,
+        "color": "#777777",
+        "endSec": 243.0,
+        "iconPath": "/i/003000/003078.png",
+        "label": "Del",
+        "startSec": 242.5,
+        "tooltip": "Delirium  (oGCD)  @  4:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36928,
+        "color": "#777777",
+        "endSec": 245.5,
+        "iconPath": "/i/003000/003095.png",
+        "label": "Sca",
+        "startSec": 245.0,
+        "tooltip": "Scarlet Delirium  (GCD)  @  4:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3643,
+        "color": "#777777",
+        "endSec": 245.5,
+        "iconPath": "/i/003000/003058.png",
+        "label": "Car",
+        "startSec": 245.0,
+        "tooltip": "Carve and Spit  (oGCD)  @  4:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 246.2,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 245.7,
+        "tooltip": "Edge of Shadow  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36929,
+        "color": "#777777",
+        "endSec": 248.0,
+        "iconPath": "/i/003000/003096.png",
+        "label": "Com",
+        "startSec": 247.5,
+        "tooltip": "Comeuppance  (GCD)  @  4:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36930,
+        "color": "#777777",
+        "endSec": 250.5,
+        "iconPath": "/i/003000/003097.png",
+        "label": "Tor",
+        "startSec": 250.0,
+        "tooltip": "Torcleaver  (GCD)  @  4:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25757,
+        "color": "#777777",
+        "endSec": 250.5,
+        "iconPath": "/i/003000/003091.png",
+        "label": "Sha",
+        "startSec": 250.0,
+        "tooltip": "Shadowbringer  (oGCD)  @  4:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 253.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 252.5,
+        "tooltip": "Bloodspiller  (GCD)  @  4:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 255.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 255.0,
+        "tooltip": "Hard Slash  (GCD)  @  4:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 255.5,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 255.0,
+        "tooltip": "Edge of Shadow  (oGCD)  @  4:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 258.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 257.5,
+        "tooltip": "Syphon Strike  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 260.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 260.0,
+        "tooltip": "Souleater  (GCD)  @  4:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 263.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 262.5,
+        "tooltip": "Bloodspiller  (GCD)  @  4:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 265.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 265.0,
+        "tooltip": "Hard Slash  (GCD)  @  4:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 268.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 267.5,
+        "tooltip": "Syphon Strike  (GCD)  @  4:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 270.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 270.0,
+        "tooltip": "Souleater  (GCD)  @  4:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 273.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 272.5,
+        "tooltip": "Hard Slash  (GCD)  @  4:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 275.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 275.0,
+        "tooltip": "Syphon Strike  (GCD)  @  4:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3639,
+        "color": "#777777",
+        "endSec": 275.5,
+        "iconPath": "/i/003000/003066.png",
+        "label": "Sal",
+        "startSec": 275.0,
+        "tooltip": "Salted Earth  (oGCD)  @  4:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25755,
+        "color": "#777777",
+        "endSec": 276.2,
+        "iconPath": "/i/003000/003090.png",
+        "label": "Sal",
+        "startSec": 275.7,
+        "tooltip": "Salt and Darkness  (oGCD)  @  4:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 278.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 277.5,
+        "tooltip": "Souleater  (GCD)  @  4:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 278.0,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 277.5,
+        "tooltip": "Edge of Shadow  (oGCD)  @  4:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 280.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 280.0,
+        "tooltip": "Hard Slash  (GCD)  @  4:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 283.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 282.5,
+        "tooltip": "Syphon Strike  (GCD)  @  4:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 285.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 285.0,
+        "tooltip": "Souleater  (GCD)  @  4:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 288.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 287.5,
+        "tooltip": "Bloodspiller  (GCD)  @  4:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 290.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 290.0,
+        "tooltip": "Hard Slash  (GCD)  @  4:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 293.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 292.5,
+        "tooltip": "Syphon Strike  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 295.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 295.0,
+        "tooltip": "Souleater  (GCD)  @  4:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 298.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 297.5,
+        "tooltip": "Hard Slash  (GCD)  @  4:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 300.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 300.0,
+        "tooltip": "Syphon Strike  (GCD)  @  5:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 300.5,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 300.0,
+        "tooltip": "Edge of Shadow  (oGCD)  @  5:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 303.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 302.5,
+        "tooltip": "Souleater  (GCD)  @  5:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7390,
+        "color": "#777777",
+        "endSec": 303.0,
+        "iconPath": "/i/003000/003078.png",
+        "label": "Del",
+        "startSec": 302.5,
+        "tooltip": "Delirium  (oGCD)  @  5:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36928,
+        "color": "#777777",
+        "endSec": 305.5,
+        "iconPath": "/i/003000/003095.png",
+        "label": "Sca",
+        "startSec": 305.0,
+        "tooltip": "Scarlet Delirium  (GCD)  @  5:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3643,
+        "color": "#777777",
+        "endSec": 305.5,
+        "iconPath": "/i/003000/003058.png",
+        "label": "Car",
+        "startSec": 305.0,
+        "tooltip": "Carve and Spit  (oGCD)  @  5:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36929,
+        "color": "#777777",
+        "endSec": 308.0,
+        "iconPath": "/i/003000/003096.png",
+        "label": "Com",
+        "startSec": 307.5,
+        "tooltip": "Comeuppance  (GCD)  @  5:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 308.0,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 307.5,
+        "tooltip": "Edge of Shadow  (oGCD)  @  5:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25757,
+        "color": "#777777",
+        "endSec": 308.7,
+        "iconPath": "/i/003000/003091.png",
+        "label": "Sha",
+        "startSec": 308.2,
+        "tooltip": "Shadowbringer  (oGCD)  @  5:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36930,
+        "color": "#777777",
+        "endSec": 310.5,
+        "iconPath": "/i/003000/003097.png",
+        "label": "Tor",
+        "startSec": 310.0,
+        "tooltip": "Torcleaver  (GCD)  @  5:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 313.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 312.5,
+        "tooltip": "Bloodspiller  (GCD)  @  5:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 315.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 315.0,
+        "tooltip": "Hard Slash  (GCD)  @  5:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 318.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 317.5,
+        "tooltip": "Syphon Strike  (GCD)  @  5:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 320.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 320.0,
+        "tooltip": "Souleater  (GCD)  @  5:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 323.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 322.5,
+        "tooltip": "Bloodspiller  (GCD)  @  5:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 325.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 325.0,
+        "tooltip": "Hard Slash  (GCD)  @  5:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 328.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 327.5,
+        "tooltip": "Syphon Strike  (GCD)  @  5:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 328.0,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 327.5,
+        "tooltip": "Edge of Shadow  (oGCD)  @  5:28",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 330.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 330.0,
+        "tooltip": "Souleater  (GCD)  @  5:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 333.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 332.5,
+        "tooltip": "Hard Slash  (GCD)  @  5:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 335.5,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 335.0,
+        "tooltip": "Syphon Strike  (GCD)  @  5:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 338.0,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 337.5,
+        "tooltip": "Souleater  (GCD)  @  5:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 340.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 340.0,
+        "tooltip": "Hard Slash  (GCD)  @  5:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 343.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 342.5,
+        "tooltip": "Syphon Strike  (GCD)  @  5:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 345.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 345.0,
+        "tooltip": "Souleater  (GCD)  @  5:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16470,
+        "color": "#777777",
+        "endSec": 345.5,
+        "iconPath": "/i/003000/003086.png",
+        "label": "Edg",
+        "startSec": 345.0,
+        "tooltip": "Edge of Shadow  (oGCD)  @  5:45",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7392,
+        "color": "#777777",
+        "endSec": 348.0,
+        "iconPath": "/i/003000/003080.png",
+        "label": "Blo",
+        "startSec": 347.5,
+        "tooltip": "Bloodspiller  (GCD)  @  5:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 350.5,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 350.0,
+        "tooltip": "Hard Slash  (GCD)  @  5:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3623,
+        "color": "#777777",
+        "endSec": 353.0,
+        "iconPath": "/i/003000/003054.png",
+        "label": "Syp",
+        "startSec": 352.5,
+        "tooltip": "Syphon Strike  (GCD)  @  5:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3632,
+        "color": "#777777",
+        "endSec": 355.5,
+        "iconPath": "/i/003000/003055.png",
+        "label": "Sou",
+        "startSec": 355.0,
+        "tooltip": "Souleater  (GCD)  @  5:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3617,
+        "color": "#777777",
+        "endSec": 358.0,
+        "iconPath": "/i/003000/003051.png",
+        "label": "Har",
+        "startSec": 357.5,
+        "tooltip": "Hard Slash  (GCD)  @  5:58",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 106417.92,
+    "efficiencyPct": 98.34,
+    "fightDurationSec": 360.0,
+    "idealizedPotency": 108219.39,
+    "killTimeSec": 360,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

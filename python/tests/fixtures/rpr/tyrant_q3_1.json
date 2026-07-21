@@ -1,0 +1,4094 @@
+{
+  "label": "tyrant_q3_1",
+  "report_code": "gxjAWmc6THvt2rCL",
+  "fight_id": 3,
+  "source_id": 56,
+  "fight_start_ms": 1501354,
+  "fight_end_ms": 2144226,
+  "duration_s": 642.872,
+  "parse_pct": null,
+  "cast_events": [
+    {
+      "timestamp": 1501577,
+      "type": "cast",
+      "packetID": 62731,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3
+    },
+    {
+      "timestamp": 1502291,
+      "type": "cast",
+      "packetID": 62736,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24401,
+      "fight": 3
+    },
+    {
+      "timestamp": 1503360,
+      "type": "cast",
+      "packetID": 62742,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1504742,
+      "type": "cast",
+      "packetID": 62754,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 34603666,
+      "fight": 3
+    },
+    {
+      "timestamp": 1505812,
+      "type": "cast",
+      "packetID": 62763,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1506614,
+      "type": "cast",
+      "packetID": 62772,
+      "sourceID": 56,
+      "targetID": -1,
+      "abilityGameID": 24405,
+      "fight": 3
+    },
+    {
+      "timestamp": 1507238,
+      "type": "cast",
+      "packetID": 62775,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24393,
+      "fight": 3
+    },
+    {
+      "timestamp": 1508352,
+      "type": "cast",
+      "packetID": 62788,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36971,
+      "fight": 3
+    },
+    {
+      "timestamp": 1509020,
+      "type": "cast",
+      "packetID": 62794,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 7549,
+      "fight": 3
+    },
+    {
+      "timestamp": 1509733,
+      "type": "cast",
+      "packetID": 62800,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24404,
+      "fight": 3
+    },
+    {
+      "timestamp": 1510844,
+      "type": "cast",
+      "packetID": 62815,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36970,
+      "fight": 3
+    },
+    {
+      "timestamp": 1513469,
+      "type": "cast",
+      "packetID": 62840,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24385,
+      "fight": 3
+    },
+    {
+      "timestamp": 1514185,
+      "type": "cast",
+      "packetID": 62847,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1514807,
+      "type": "cast",
+      "packetID": 62850,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1515919,
+      "type": "cast",
+      "packetID": 62862,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1517434,
+      "type": "cast",
+      "packetID": 62877,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1518101,
+      "type": "cast",
+      "packetID": 62883,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1518946,
+      "type": "cast",
+      "packetID": 62890,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1520460,
+      "type": "cast",
+      "packetID": 62903,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1521128,
+      "type": "cast",
+      "packetID": 62910,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1521972,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1522730,
+      "type": "cast",
+      "packetID": 62922,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 1524512,
+      "type": "cast",
+      "packetID": 62937,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36973,
+      "fight": 3
+    },
+    {
+      "timestamp": 1527009,
+      "type": "cast",
+      "packetID": 62960,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1527633,
+      "type": "cast",
+      "packetID": 62967,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1529509,
+      "type": "cast",
+      "packetID": 62976,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1532003,
+      "type": "cast",
+      "packetID": 62992,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1534498,
+      "type": "cast",
+      "packetID": 63010,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1536990,
+      "type": "cast",
+      "packetID": 63023,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1538327,
+      "type": "cast",
+      "packetID": 63030,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1539527,
+      "type": "cast",
+      "packetID": 63038,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1542019,
+      "type": "cast",
+      "packetID": 63056,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1544506,
+      "type": "cast",
+      "packetID": 63073,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1545353,
+      "type": "cast",
+      "packetID": 63077,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 1547001,
+      "type": "cast",
+      "packetID": 63087,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1547669,
+      "type": "cast",
+      "packetID": 63092,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1549495,
+      "type": "cast",
+      "packetID": 63101,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1552705,
+      "type": "cast",
+      "packetID": 63120,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1553287,
+      "type": "cast",
+      "packetID": 63127,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1553912,
+      "type": "cast",
+      "packetID": 63132,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1555160,
+      "type": "cast",
+      "packetID": 63140,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1556676,
+      "type": "cast",
+      "packetID": 63149,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1558148,
+      "type": "cast",
+      "packetID": 63160,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1558817,
+      "type": "cast",
+      "packetID": 63165,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1559663,
+      "type": "cast",
+      "packetID": 63172,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1560332,
+      "type": "cast",
+      "packetID": 63176,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1562119,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1562876,
+      "type": "cast",
+      "packetID": 63202,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 1564615,
+      "type": "cast",
+      "packetID": 63212,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1565954,
+      "type": "cast",
+      "packetID": 63223,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 1567115,
+      "type": "cast",
+      "packetID": 63228,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1567783,
+      "type": "cast",
+      "packetID": 63233,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24393,
+      "fight": 3
+    },
+    {
+      "timestamp": 1569650,
+      "type": "cast",
+      "packetID": 63248,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36970,
+      "fight": 3
+    },
+    {
+      "timestamp": 1572144,
+      "type": "cast",
+      "packetID": 63272,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36971,
+      "fight": 3
+    },
+    {
+      "timestamp": 1574638,
+      "type": "cast",
+      "packetID": 63294,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1577128,
+      "type": "cast",
+      "packetID": 63311,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1579618,
+      "type": "cast",
+      "packetID": 63328,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1582112,
+      "type": "cast",
+      "packetID": 63341,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1584653,
+      "type": "cast",
+      "packetID": 63355,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1586078,
+      "type": "cast",
+      "packetID": 63374,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1587145,
+      "type": "cast",
+      "packetID": 63380,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1589680,
+      "type": "cast",
+      "packetID": 63405,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1590347,
+      "type": "cast",
+      "packetID": 63418,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24404,
+      "fight": 3
+    },
+    {
+      "timestamp": 1592173,
+      "type": "cast",
+      "packetID": 63432,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1594663,
+      "type": "cast",
+      "packetID": 63446,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1597243,
+      "type": "cast",
+      "packetID": 63462,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1597955,
+      "type": "cast",
+      "packetID": 63467,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 1598577,
+      "type": "cast",
+      "packetID": 63472,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1599779,
+      "type": "cast",
+      "packetID": 63479,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1602762,
+      "type": "cast",
+      "packetID": 63495,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1603386,
+      "type": "cast",
+      "packetID": 63504,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 3,
+      "fight": 3
+    },
+    {
+      "timestamp": 1605253,
+      "type": "cast",
+      "packetID": 63512,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1606590,
+      "type": "cast",
+      "packetID": 63522,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1607750,
+      "type": "cast",
+      "packetID": 63538,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1610282,
+      "type": "cast",
+      "packetID": 63557,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1612767,
+      "type": "cast",
+      "packetID": 63574,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1615262,
+      "type": "cast",
+      "packetID": 63597,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1617758,
+      "type": "cast",
+      "packetID": 63620,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1618427,
+      "type": "cast",
+      "packetID": 63623,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 7549,
+      "fight": 3
+    },
+    {
+      "timestamp": 1620293,
+      "type": "cast",
+      "packetID": 63645,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1621805,
+      "type": "cast",
+      "packetID": 63658,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1622784,
+      "type": "cast",
+      "packetID": 63664,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1624254,
+      "type": "cast",
+      "packetID": 63674,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1626749,
+      "type": "cast",
+      "packetID": 63696,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1627417,
+      "type": "cast",
+      "packetID": 63701,
+      "sourceID": 56,
+      "targetID": -1,
+      "abilityGameID": 24405,
+      "fight": 3
+    },
+    {
+      "timestamp": 1628083,
+      "type": "cast",
+      "packetID": 63707,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1628705,
+      "type": "cast",
+      "packetID": 63712,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1629460,
+      "type": "cast",
+      "packetID": 63718,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1630215,
+      "type": "cast",
+      "packetID": 63728,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1630883,
+      "type": "cast",
+      "packetID": 63731,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1631728,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1632484,
+      "type": "cast",
+      "packetID": 63746,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 1634221,
+      "type": "cast",
+      "packetID": 63762,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24385,
+      "fight": 3
+    },
+    {
+      "timestamp": 1634886,
+      "type": "cast",
+      "packetID": 63770,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1635553,
+      "type": "cast",
+      "packetID": 63777,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1636714,
+      "type": "cast",
+      "packetID": 63789,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1638269,
+      "type": "cast",
+      "packetID": 63805,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1638892,
+      "type": "cast",
+      "packetID": 63810,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1639739,
+      "type": "cast",
+      "packetID": 63816,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1640497,
+      "type": "cast",
+      "packetID": 63822,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24404,
+      "fight": 3
+    },
+    {
+      "timestamp": 1641255,
+      "type": "cast",
+      "packetID": 63828,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1641924,
+      "type": "cast",
+      "packetID": 63835,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1642772,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1643530,
+      "type": "cast",
+      "packetID": 63847,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 1644290,
+      "type": "cast",
+      "packetID": 63854,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 1645273,
+      "type": "cast",
+      "packetID": 63867,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36973,
+      "fight": 3
+    },
+    {
+      "timestamp": 1647811,
+      "type": "cast",
+      "packetID": 63890,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1648477,
+      "type": "cast",
+      "packetID": 63895,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24393,
+      "fight": 3
+    },
+    {
+      "timestamp": 1650348,
+      "type": "cast",
+      "packetID": 63906,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36971,
+      "fight": 3
+    },
+    {
+      "timestamp": 1652840,
+      "type": "cast",
+      "packetID": 63930,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36970,
+      "fight": 3
+    },
+    {
+      "timestamp": 1655325,
+      "type": "cast",
+      "packetID": 63952,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1656443,
+      "type": "cast",
+      "packetID": 63962,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1657824,
+      "type": "cast",
+      "packetID": 63972,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1660358,
+      "type": "cast",
+      "packetID": 63991,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1662847,
+      "type": "cast",
+      "packetID": 64006,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1664187,
+      "type": "cast",
+      "packetID": 64010,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1665343,
+      "type": "cast",
+      "packetID": 64025,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1667834,
+      "type": "cast",
+      "packetID": 64044,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1670292,
+      "type": "cast",
+      "packetID": 64057,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1672834,
+      "type": "cast",
+      "packetID": 64075,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1675333,
+      "type": "cast",
+      "packetID": 64091,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1676579,
+      "type": "cast",
+      "packetID": 64096,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1677826,
+      "type": "cast",
+      "packetID": 64107,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1680320,
+      "type": "cast",
+      "packetID": 64118,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1682822,
+      "type": "cast",
+      "packetID": 64137,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1685316,
+      "type": "cast",
+      "packetID": 64155,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1687812,
+      "type": "cast",
+      "packetID": 64173,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1690313,
+      "type": "cast",
+      "packetID": 64189,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1690981,
+      "type": "cast",
+      "packetID": 64194,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1692856,
+      "type": "cast",
+      "packetID": 64209,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1695311,
+      "type": "cast",
+      "packetID": 64234,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1696025,
+      "type": "cast",
+      "packetID": 64237,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1697811,
+      "type": "cast",
+      "packetID": 64250,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1698478,
+      "type": "cast",
+      "packetID": 64256,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1699368,
+      "type": "cast",
+      "packetID": 64261,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1700035,
+      "type": "cast",
+      "packetID": 64266,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1702619,
+      "type": "cast",
+      "packetID": 64281,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1703285,
+      "type": "cast",
+      "packetID": 64287,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 3,
+      "fight": 3
+    },
+    {
+      "timestamp": 1704089,
+      "type": "cast",
+      "packetID": 64293,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1706138,
+      "type": "cast",
+      "packetID": 64306,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1706760,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1707518,
+      "type": "cast",
+      "packetID": 64324,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 1709301,
+      "type": "cast",
+      "packetID": 64334,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1709928,
+      "type": "cast",
+      "packetID": 64338,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 1711797,
+      "type": "cast",
+      "packetID": 64349,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1712465,
+      "type": "cast",
+      "packetID": 64364,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24393,
+      "fight": 3
+    },
+    {
+      "timestamp": 1714294,
+      "type": "cast",
+      "packetID": 64377,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36971,
+      "fight": 3
+    },
+    {
+      "timestamp": 1716831,
+      "type": "cast",
+      "packetID": 64394,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36970,
+      "fight": 3
+    },
+    {
+      "timestamp": 1719327,
+      "type": "cast",
+      "packetID": 64414,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1720175,
+      "type": "cast",
+      "packetID": 64420,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24404,
+      "fight": 3
+    },
+    {
+      "timestamp": 1722756,
+      "type": "cast",
+      "packetID": 64434,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1725247,
+      "type": "cast",
+      "packetID": 64451,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1725868,
+      "type": "cast",
+      "packetID": 64457,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24401,
+      "fight": 3
+    },
+    {
+      "timestamp": 1727733,
+      "type": "cast",
+      "packetID": 64464,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3
+    },
+    {
+      "timestamp": 1729421,
+      "type": "cast",
+      "packetID": 64484,
+      "sourceID": 56,
+      "targetID": -1,
+      "abilityGameID": 24403,
+      "fight": 3
+    },
+    {
+      "timestamp": 1730266,
+      "type": "cast",
+      "packetID": 64487,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1731422,
+      "type": "cast",
+      "packetID": 64496,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1732756,
+      "type": "cast",
+      "packetID": 64504,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1735209,
+      "type": "cast",
+      "packetID": 64517,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1735969,
+      "type": "cast",
+      "packetID": 64522,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 7549,
+      "fight": 3
+    },
+    {
+      "timestamp": 1736682,
+      "type": "cast",
+      "packetID": 64528,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1737706,
+      "type": "cast",
+      "packetID": 64535,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1740194,
+      "type": "cast",
+      "packetID": 64550,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1742727,
+      "type": "cast",
+      "packetID": 64568,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1744241,
+      "type": "cast",
+      "packetID": 64578,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1745221,
+      "type": "cast",
+      "packetID": 64586,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1746736,
+      "type": "cast",
+      "packetID": 64596,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1748471,
+      "type": "cast",
+      "packetID": 64608,
+      "sourceID": 56,
+      "targetID": -1,
+      "abilityGameID": 24405,
+      "fight": 3
+    },
+    {
+      "timestamp": 1749228,
+      "type": "cast",
+      "packetID": 64617,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1749896,
+      "type": "cast",
+      "packetID": 64622,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1750744,
+      "type": "cast",
+      "packetID": 64631,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1751412,
+      "type": "cast",
+      "packetID": 64639,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1752258,
+      "type": "cast",
+      "packetID": 64644,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1752923,
+      "type": "cast",
+      "packetID": 64652,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1753766,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1754524,
+      "type": "cast",
+      "packetID": 64664,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 1756969,
+      "type": "cast",
+      "packetID": 64692,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24385,
+      "fight": 3
+    },
+    {
+      "timestamp": 1757636,
+      "type": "cast",
+      "packetID": 64699,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1758259,
+      "type": "cast",
+      "packetID": 64707,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1759465,
+      "type": "cast",
+      "packetID": 64717,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1760930,
+      "type": "cast",
+      "packetID": 64728,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1761596,
+      "type": "cast",
+      "packetID": 64733,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1762439,
+      "type": "cast",
+      "packetID": 64743,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1763952,
+      "type": "cast",
+      "packetID": 64752,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1764620,
+      "type": "cast",
+      "packetID": 64760,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1765466,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1766220,
+      "type": "cast",
+      "packetID": 64769,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 1766888,
+      "type": "cast",
+      "packetID": 64777,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 1768003,
+      "type": "cast",
+      "packetID": 64787,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36973,
+      "fight": 3
+    },
+    {
+      "timestamp": 1770497,
+      "type": "cast",
+      "packetID": 64805,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1772999,
+      "type": "cast",
+      "packetID": 64821,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1773668,
+      "type": "cast",
+      "packetID": 64825,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24393,
+      "fight": 3
+    },
+    {
+      "timestamp": 1775498,
+      "type": "cast",
+      "packetID": 64836,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36971,
+      "fight": 3
+    },
+    {
+      "timestamp": 1776259,
+      "type": "cast",
+      "packetID": 64842,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 1777999,
+      "type": "cast",
+      "packetID": 64857,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36970,
+      "fight": 3
+    },
+    {
+      "timestamp": 1780535,
+      "type": "cast",
+      "packetID": 64875,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1783026,
+      "type": "cast",
+      "packetID": 64895,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1784093,
+      "type": "cast",
+      "packetID": 64901,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1785559,
+      "type": "cast",
+      "packetID": 64910,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1788045,
+      "type": "cast",
+      "packetID": 64928,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1790533,
+      "type": "cast",
+      "packetID": 64945,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1791779,
+      "type": "cast",
+      "packetID": 64955,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1793023,
+      "type": "cast",
+      "packetID": 64963,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1795510,
+      "type": "cast",
+      "packetID": 64976,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1798002,
+      "type": "cast",
+      "packetID": 64988,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1800493,
+      "type": "cast",
+      "packetID": 65010,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1801337,
+      "type": "cast",
+      "packetID": 65014,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24404,
+      "fight": 3
+    },
+    {
+      "timestamp": 1803024,
+      "type": "cast",
+      "packetID": 65031,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1805521,
+      "type": "cast",
+      "packetID": 65045,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1808051,
+      "type": "cast",
+      "packetID": 65062,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1809650,
+      "type": "cast",
+      "packetID": 65074,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1810452,
+      "type": "cast",
+      "packetID": 65079,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 34603666,
+      "fight": 3
+    },
+    {
+      "timestamp": 1811118,
+      "type": "cast",
+      "packetID": 65087,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1811740,
+      "type": "cast",
+      "packetID": 65093,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1812450,
+      "type": "cast",
+      "packetID": 65103,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1813782,
+      "type": "cast",
+      "packetID": 65113,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1815291,
+      "type": "cast",
+      "packetID": 65126,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1815914,
+      "type": "cast",
+      "packetID": 65134,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1816760,
+      "type": "cast",
+      "packetID": 65145,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1818274,
+      "type": "cast",
+      "packetID": 65156,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1818940,
+      "type": "cast",
+      "packetID": 65163,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1819829,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1820590,
+      "type": "cast",
+      "packetID": 65175,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 1822323,
+      "type": "cast",
+      "packetID": 65189,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1824859,
+      "type": "cast",
+      "packetID": 65209,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1827315,
+      "type": "cast",
+      "packetID": 65227,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1829846,
+      "type": "cast",
+      "packetID": 65243,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1830780,
+      "type": "cast",
+      "packetID": 65251,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 1832337,
+      "type": "cast",
+      "packetID": 65264,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1833673,
+      "type": "cast",
+      "packetID": 65274,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24393,
+      "fight": 3
+    },
+    {
+      "timestamp": 1834830,
+      "type": "cast",
+      "packetID": 65282,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36970,
+      "fight": 3
+    },
+    {
+      "timestamp": 1837325,
+      "type": "cast",
+      "packetID": 65299,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36971,
+      "fight": 3
+    },
+    {
+      "timestamp": 1839816,
+      "type": "cast",
+      "packetID": 65314,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1841104,
+      "type": "cast",
+      "packetID": 65320,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1842353,
+      "type": "cast",
+      "packetID": 65327,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1844811,
+      "type": "cast",
+      "packetID": 65343,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1845836,
+      "type": "cast",
+      "packetID": 65350,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24402,
+      "fight": 3
+    },
+    {
+      "timestamp": 1847352,
+      "type": "cast",
+      "packetID": 65359,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3
+    },
+    {
+      "timestamp": 1850952,
+      "type": "cast",
+      "packetID": 65377,
+      "sourceID": 56,
+      "targetID": -1,
+      "abilityGameID": 24403,
+      "fight": 3
+    },
+    {
+      "timestamp": 1851800,
+      "type": "cast",
+      "packetID": 65385,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1853891,
+      "type": "cast",
+      "packetID": 65400,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1854827,
+      "type": "cast",
+      "packetID": 65409,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1857314,
+      "type": "cast",
+      "packetID": 65423,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1859801,
+      "type": "cast",
+      "packetID": 65440,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1860914,
+      "type": "cast",
+      "packetID": 65451,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 7549,
+      "fight": 3
+    },
+    {
+      "timestamp": 1862292,
+      "type": "cast",
+      "packetID": 65465,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1868198,
+      "type": "cast",
+      "packetID": 65486,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1869665,
+      "type": "cast",
+      "packetID": 65498,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1870734,
+      "type": "cast",
+      "packetID": 65506,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1871356,
+      "type": "cast",
+      "packetID": 65513,
+      "sourceID": 56,
+      "targetID": -1,
+      "abilityGameID": 24405,
+      "fight": 3
+    },
+    {
+      "timestamp": 1871981,
+      "type": "cast",
+      "packetID": 65519,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1873223,
+      "type": "cast",
+      "packetID": 65530,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1873846,
+      "type": "cast",
+      "packetID": 65537,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1874734,
+      "type": "cast",
+      "packetID": 65542,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1875360,
+      "type": "cast",
+      "packetID": 65550,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1876207,
+      "type": "cast",
+      "packetID": 65560,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1877680,
+      "type": "cast",
+      "packetID": 65572,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1878348,
+      "type": "cast",
+      "packetID": 65578,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1879192,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1879951,
+      "type": "cast",
+      "packetID": 65591,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 1881731,
+      "type": "cast",
+      "packetID": 65607,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1884229,
+      "type": "cast",
+      "packetID": 65624,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24385,
+      "fight": 3
+    },
+    {
+      "timestamp": 1884895,
+      "type": "cast",
+      "packetID": 65632,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1885560,
+      "type": "cast",
+      "packetID": 65637,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1886716,
+      "type": "cast",
+      "packetID": 65648,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1888232,
+      "type": "cast",
+      "packetID": 65661,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1888944,
+      "type": "cast",
+      "packetID": 65667,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1889923,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1890682,
+      "type": "cast",
+      "packetID": 65677,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3
+    },
+    {
+      "timestamp": 1895313,
+      "type": "cast",
+      "packetID": 65690,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1896781,
+      "type": "cast",
+      "packetID": 65701,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1897491,
+      "type": "cast",
+      "packetID": 65707,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1898824,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1899582,
+      "type": "cast",
+      "packetID": 65717,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 1901361,
+      "type": "cast",
+      "packetID": 65731,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1904127,
+      "type": "cast",
+      "packetID": 65754,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36973,
+      "fight": 3
+    },
+    {
+      "timestamp": 1904842,
+      "type": "cast",
+      "packetID": 65757,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 3,
+      "fight": 3
+    },
+    {
+      "timestamp": 1906986,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1907741,
+      "type": "cast",
+      "packetID": 65793,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3
+    },
+    {
+      "timestamp": 1910142,
+      "type": "cast",
+      "packetID": 65807,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1910856,
+      "type": "cast",
+      "packetID": 65812,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24393,
+      "fight": 3
+    },
+    {
+      "timestamp": 1912633,
+      "type": "cast",
+      "packetID": 65824,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36971,
+      "fight": 3
+    },
+    {
+      "timestamp": 1915124,
+      "type": "cast",
+      "packetID": 65839,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36970,
+      "fight": 3
+    },
+    {
+      "timestamp": 1917615,
+      "type": "cast",
+      "packetID": 65856,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1920117,
+      "type": "cast",
+      "packetID": 65868,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1928507,
+      "type": "cast",
+      "packetID": 65906,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1929974,
+      "type": "cast",
+      "packetID": 65916,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1931002,
+      "type": "cast",
+      "packetID": 65923,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1933450,
+      "type": "cast",
+      "packetID": 65943,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1936076,
+      "type": "cast",
+      "packetID": 65964,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24388,
+      "fight": 3
+    },
+    {
+      "timestamp": 1938565,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1939325,
+      "type": "cast",
+      "packetID": 66004,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3
+    },
+    {
+      "timestamp": 1941102,
+      "type": "cast",
+      "packetID": 66016,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1941859,
+      "type": "cast",
+      "packetID": 66023,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1943596,
+      "type": "cast",
+      "packetID": 66038,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1946047,
+      "type": "cast",
+      "packetID": 66060,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1948541,
+      "type": "cast",
+      "packetID": 66080,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1949386,
+      "type": "cast",
+      "packetID": 66089,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24404,
+      "fight": 3
+    },
+    {
+      "timestamp": 1951080,
+      "type": "cast",
+      "packetID": 66104,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1952326,
+      "type": "cast",
+      "packetID": 66114,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 1953574,
+      "type": "cast",
+      "packetID": 66125,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 1956067,
+      "type": "cast",
+      "packetID": 66147,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1958559,
+      "type": "cast",
+      "packetID": 66163,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1961050,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1961806,
+      "type": "cast",
+      "packetID": 66172,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3
+    },
+    {
+      "timestamp": 1964963,
+      "type": "cast",
+      "packetID": 66187,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 3,
+      "fight": 3
+    },
+    {
+      "timestamp": 1966339,
+      "type": "cast",
+      "packetID": 66195,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 1967763,
+      "type": "cast",
+      "packetID": 66205,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 1968830,
+      "type": "cast",
+      "packetID": 66212,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 1970608,
+      "type": "cast",
+      "packetID": 66222,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24401,
+      "fight": 3
+    },
+    {
+      "timestamp": 1971766,
+      "type": "cast",
+      "packetID": 66224,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24386,
+      "fight": 3
+    },
+    {
+      "timestamp": 1972700,
+      "type": "cast",
+      "packetID": 66231,
+      "sourceID": 56,
+      "targetID": -1,
+      "abilityGameID": 24403,
+      "fight": 3
+    },
+    {
+      "timestamp": 1974257,
+      "type": "cast",
+      "packetID": 66235,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 1975103,
+      "type": "cast",
+      "packetID": 66244,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24393,
+      "fight": 3
+    },
+    {
+      "timestamp": 1976789,
+      "type": "cast",
+      "packetID": 66254,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36971,
+      "fight": 3
+    },
+    {
+      "timestamp": 1979281,
+      "type": "cast",
+      "packetID": 66271,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36970,
+      "fight": 3
+    },
+    {
+      "timestamp": 1981774,
+      "type": "cast",
+      "packetID": 66288,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1982442,
+      "type": "cast",
+      "packetID": 66295,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24404,
+      "fight": 3
+    },
+    {
+      "timestamp": 1984265,
+      "type": "cast",
+      "packetID": 66308,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 1986801,
+      "type": "cast",
+      "packetID": 66321,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 1988049,
+      "type": "cast",
+      "packetID": 66328,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 1989298,
+      "type": "cast",
+      "packetID": 66337,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1990814,
+      "type": "cast",
+      "packetID": 66348,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 1992598,
+      "type": "cast",
+      "packetID": 66362,
+      "sourceID": 56,
+      "targetID": -1,
+      "abilityGameID": 24405,
+      "fight": 3
+    },
+    {
+      "timestamp": 1993310,
+      "type": "cast",
+      "packetID": 66373,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1993980,
+      "type": "cast",
+      "packetID": 66380,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1994826,
+      "type": "cast",
+      "packetID": 66389,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 1995629,
+      "type": "cast",
+      "packetID": 66398,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 1996340,
+      "type": "cast",
+      "packetID": 66403,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 1996964,
+      "type": "cast",
+      "packetID": 66411,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 1997854,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 1998615,
+      "type": "cast",
+      "packetID": 66429,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 2000353,
+      "type": "cast",
+      "packetID": 66444,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24385,
+      "fight": 3
+    },
+    {
+      "timestamp": 2000974,
+      "type": "cast",
+      "packetID": 66447,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 2001641,
+      "type": "cast",
+      "packetID": 66455,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 2002841,
+      "type": "cast",
+      "packetID": 66463,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 2004398,
+      "type": "cast",
+      "packetID": 66478,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 2005018,
+      "type": "cast",
+      "packetID": 66484,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 2005861,
+      "type": "cast",
+      "packetID": 66488,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 2007371,
+      "type": "cast",
+      "packetID": 66503,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 2008038,
+      "type": "cast",
+      "packetID": 66507,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 2008884,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 2009682,
+      "type": "cast",
+      "packetID": 66520,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 2011418,
+      "type": "cast",
+      "packetID": 66535,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36973,
+      "fight": 3
+    },
+    {
+      "timestamp": 2013908,
+      "type": "cast",
+      "packetID": 66550,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 2014575,
+      "type": "cast",
+      "packetID": 66555,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 2015241,
+      "type": "cast",
+      "packetID": 66557,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 2016398,
+      "type": "cast",
+      "packetID": 66566,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 2018975,
+      "type": "cast",
+      "packetID": 66591,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 2020400,
+      "type": "cast",
+      "packetID": 66599,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 2021511,
+      "type": "cast",
+      "packetID": 66607,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 2022180,
+      "type": "cast",
+      "packetID": 66613,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 7549,
+      "fight": 3
+    },
+    {
+      "timestamp": 2022846,
+      "type": "cast",
+      "packetID": 66618,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24404,
+      "fight": 3
+    },
+    {
+      "timestamp": 2024002,
+      "type": "cast",
+      "packetID": 66626,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 2024625,
+      "type": "cast",
+      "packetID": 66633,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 2025292,
+      "type": "cast",
+      "packetID": 66639,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 2026539,
+      "type": "cast",
+      "packetID": 66647,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 2028010,
+      "type": "cast",
+      "packetID": 66657,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 2028635,
+      "type": "cast",
+      "packetID": 66662,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 2029482,
+      "type": "cast",
+      "packetID": 66669,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 2030995,
+      "type": "cast",
+      "packetID": 66680,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 2031664,
+      "type": "cast",
+      "packetID": 66685,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 2032511,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 2033267,
+      "type": "cast",
+      "packetID": 66697,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 2035048,
+      "type": "cast",
+      "packetID": 66708,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 2035717,
+      "type": "cast",
+      "packetID": 66712,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24393,
+      "fight": 3
+    },
+    {
+      "timestamp": 2037544,
+      "type": "cast",
+      "packetID": 66722,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36971,
+      "fight": 3
+    },
+    {
+      "timestamp": 2040034,
+      "type": "cast",
+      "packetID": 66736,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36970,
+      "fight": 3
+    },
+    {
+      "timestamp": 2042525,
+      "type": "cast",
+      "packetID": 66755,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 2045021,
+      "type": "cast",
+      "packetID": 66767,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 2045689,
+      "type": "cast",
+      "packetID": 66776,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7542,
+      "fight": 3
+    },
+    {
+      "timestamp": 2047560,
+      "type": "cast",
+      "packetID": 66787,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 2050013,
+      "type": "cast",
+      "packetID": 66810,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 2052554,
+      "type": "cast",
+      "packetID": 66840,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 2053265,
+      "type": "cast",
+      "packetID": 66844,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 2054021,
+      "type": "cast",
+      "packetID": 66851,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 2055309,
+      "type": "cast",
+      "packetID": 66868,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 2057801,
+      "type": "cast",
+      "packetID": 66894,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 2058513,
+      "type": "cast",
+      "packetID": 66907,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 3,
+      "fight": 3
+    },
+    {
+      "timestamp": 2060292,
+      "type": "cast",
+      "packetID": 66921,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 2062742,
+      "type": "cast",
+      "packetID": 66944,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 2063412,
+      "type": "cast",
+      "packetID": 66951,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 2064438,
+      "type": "cast",
+      "packetID": 66957,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 2065240,
+      "type": "cast",
+      "packetID": 66965,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 2067734,
+      "type": "cast",
+      "packetID": 66983,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 2070268,
+      "type": "cast",
+      "packetID": 66996,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 2072754,
+      "type": "cast",
+      "packetID": 67011,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 2075282,
+      "type": "cast",
+      "packetID": 67032,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 2076794,
+      "type": "cast",
+      "packetID": 67038,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 2077770,
+      "type": "cast",
+      "packetID": 67044,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 2080257,
+      "type": "cast",
+      "packetID": 67057,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 2081279,
+      "type": "cast",
+      "packetID": 67060,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24404,
+      "fight": 3
+    },
+    {
+      "timestamp": 2082791,
+      "type": "cast",
+      "packetID": 67071,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 2085277,
+      "type": "cast",
+      "packetID": 67085,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 2086922,
+      "type": "cast",
+      "packetID": 67092,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    },
+    {
+      "timestamp": 2087812,
+      "type": "cast",
+      "packetID": 67098,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24382,
+      "fight": 3
+    },
+    {
+      "timestamp": 2090303,
+      "type": "cast",
+      "packetID": 67111,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 2092793,
+      "type": "cast",
+      "packetID": 67125,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 2095281,
+      "type": "cast",
+      "packetID": 67139,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 2095994,
+      "type": "cast",
+      "packetID": 67145,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24393,
+      "fight": 3
+    },
+    {
+      "timestamp": 2097773,
+      "type": "cast",
+      "packetID": 67155,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36971,
+      "fight": 3
+    },
+    {
+      "timestamp": 2100261,
+      "type": "cast",
+      "packetID": 67170,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36970,
+      "fight": 3
+    },
+    {
+      "timestamp": 2102793,
+      "type": "cast",
+      "packetID": 67186,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 2105277,
+      "type": "cast",
+      "packetID": 67201,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24373,
+      "fight": 3
+    },
+    {
+      "timestamp": 2107771,
+      "type": "cast",
+      "packetID": 67215,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24374,
+      "fight": 3
+    },
+    {
+      "timestamp": 2110304,
+      "type": "cast",
+      "packetID": 67234,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24375,
+      "fight": 3
+    },
+    {
+      "timestamp": 2110927,
+      "type": "cast",
+      "packetID": 67237,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 2111595,
+      "type": "cast",
+      "packetID": 67244,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 34603666,
+      "fight": 3
+    },
+    {
+      "timestamp": 2112795,
+      "type": "cast",
+      "packetID": 67256,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24378,
+      "fight": 3
+    },
+    {
+      "timestamp": 2115287,
+      "type": "cast",
+      "packetID": 67278,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 2115952,
+      "type": "cast",
+      "packetID": 67285,
+      "sourceID": 56,
+      "targetID": -1,
+      "abilityGameID": 24405,
+      "fight": 3
+    },
+    {
+      "timestamp": 2116795,
+      "type": "cast",
+      "packetID": 67293,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 2117419,
+      "type": "cast",
+      "packetID": 67300,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 2118309,
+      "type": "cast",
+      "packetID": 67306,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 2118933,
+      "type": "cast",
+      "packetID": 67314,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 2119822,
+      "type": "cast",
+      "packetID": 67324,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 2120445,
+      "type": "cast",
+      "packetID": 67327,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 2121333,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 2122090,
+      "type": "cast",
+      "packetID": 67345,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 2123826,
+      "type": "cast",
+      "packetID": 67358,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24385,
+      "fight": 3
+    },
+    {
+      "timestamp": 2124495,
+      "type": "cast",
+      "packetID": 67362,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24394,
+      "fight": 3
+    },
+    {
+      "timestamp": 2125120,
+      "type": "cast",
+      "packetID": 67366,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36969,
+      "fight": 3
+    },
+    {
+      "timestamp": 2126322,
+      "type": "cast",
+      "packetID": 67383,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 2127874,
+      "type": "cast",
+      "packetID": 67394,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 2128500,
+      "type": "cast",
+      "packetID": 67402,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 2129349,
+      "type": "cast",
+      "packetID": 67409,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24396,
+      "fight": 3
+    },
+    {
+      "timestamp": 2130863,
+      "type": "cast",
+      "packetID": 67422,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24395,
+      "fight": 3
+    },
+    {
+      "timestamp": 2131574,
+      "type": "cast",
+      "packetID": 67426,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24399,
+      "fight": 3
+    },
+    {
+      "timestamp": 2132377,
+      "type": "begincast",
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3,
+      "duration": 1300
+    },
+    {
+      "timestamp": 2133134,
+      "type": "cast",
+      "packetID": 67436,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24398,
+      "fight": 3
+    },
+    {
+      "timestamp": 2134915,
+      "type": "cast",
+      "packetID": 67450,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 36973,
+      "fight": 3
+    },
+    {
+      "timestamp": 2135585,
+      "type": "cast",
+      "packetID": 67457,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 7549,
+      "fight": 3
+    },
+    {
+      "timestamp": 2136252,
+      "type": "cast",
+      "packetID": 67464,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 7546,
+      "fight": 3
+    },
+    {
+      "timestamp": 2137409,
+      "type": "cast",
+      "packetID": 67476,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 2138076,
+      "type": "cast",
+      "packetID": 67483,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24391,
+      "fight": 3
+    },
+    {
+      "timestamp": 2138788,
+      "type": "cast",
+      "packetID": 67491,
+      "sourceID": 56,
+      "targetID": 56,
+      "abilityGameID": 24404,
+      "fight": 3
+    },
+    {
+      "timestamp": 2139946,
+      "type": "cast",
+      "packetID": 67503,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24383,
+      "fight": 3
+    },
+    {
+      "timestamp": 2142440,
+      "type": "cast",
+      "packetID": 67523,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24380,
+      "fight": 3
+    },
+    {
+      "timestamp": 2143109,
+      "type": "cast",
+      "packetID": 67533,
+      "sourceID": 56,
+      "targetID": 61,
+      "abilityGameID": 24390,
+      "fight": 3
+    }
+  ],
+  "targetability_events": [],
+  "enemy_npcs": [
+    {
+      "id": 73,
+      "gameID": 19178,
+      "petOwner": null
+    },
+    {
+      "id": 61,
+      "gameID": 19180,
+      "petOwner": null
+    },
+    {
+      "id": 72,
+      "gameID": 19181,
+      "petOwner": null
+    },
+    {
+      "id": 65,
+      "gameID": 2000065,
+      "petOwner": null
+    }
+  ],
+  "master_npc_actors": [
+    {
+      "id": -1,
+      "name": "Environment",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 0
+    },
+    {
+      "id": 61,
+      "name": "The Tyrant",
+      "server": null,
+      "type": "NPC",
+      "subType": "Boss",
+      "petOwner": null,
+      "gameID": 19180
+    },
+    {
+      "id": 65,
+      "name": "The Tyrant",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 2000065
+    },
+    {
+      "id": 72,
+      "name": "Comet",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19181
+    },
+    {
+      "id": 73,
+      "name": "The Tyrant",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 19178
+    },
+    {
+      "id": 74,
+      "name": "Multiple Enemies",
+      "server": null,
+      "type": "NPC",
+      "subType": "NPC",
+      "petOwner": null,
+      "gameID": 1000074
+    }
+  ],
+  "friendly_actors": [
+    {
+      "id": 18,
+      "name": "Reifujin Kuragari",
+      "subType": "Sage"
+    },
+    {
+      "id": 53,
+      "name": "Arik Naito",
+      "subType": "Warrior"
+    },
+    {
+      "id": 54,
+      "name": "Innovdil Aur",
+      "subType": "Paladin"
+    },
+    {
+      "id": 55,
+      "name": "Peach Jelly",
+      "subType": "WhiteMage"
+    },
+    {
+      "id": 56,
+      "name": "Arvis Kira",
+      "subType": "Reaper"
+    },
+    {
+      "id": 57,
+      "name": "Anna Split",
+      "subType": "Summoner"
+    },
+    {
+      "id": 58,
+      "name": "Reiko Vijiane",
+      "subType": "Ninja"
+    },
+    {
+      "id": 59,
+      "name": "Grampa Seri",
+      "subType": "Dancer"
+    },
+    {
+      "id": 60,
+      "name": "Multiple Players",
+      "subType": "LimitBreak"
+    },
+    {
+      "id": 75,
+      "name": "Limit Break",
+      "subType": "LimitBreak"
+    }
+  ]
+}

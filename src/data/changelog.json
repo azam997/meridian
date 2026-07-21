@@ -1,0 +1,96 @@
+[
+  {
+    "version": "0.8.5",
+    "date": "2026-07-20",
+    "summary": "Meridian now tells you what changed when it updates — plus Seraphism joins the mitigation planner's amplifier model.",
+    "sections": [
+      {
+        "heading": "Release notes in the app",
+        "items": [
+          "A **What's new** popup appears the first time you launch a new version — including any releases you skipped along the way.",
+          "A **Version history** tab under Resources lists every release, newest first."
+        ]
+      },
+      {
+        "heading": "Mitigation planner",
+        "items": [
+          "**Seraphism** is now modeled as a shield amplifier, alongside Zoe and Recitation — it scales every barrier cast inside its window instead of being counted as a standalone tool."
+        ]
+      }
+    ]
+  },
+  {
+    "version": "0.8.4",
+    "date": "2026-07-20",
+    "summary": "Smarter mitigation planning, and a complete healer amplifier model.",
+    "sections": [
+      {
+        "heading": "Smarter mitigation planning",
+        "body": "The auto mit planner now allocates by scope and cost rather than bare survival:",
+        "items": [
+          "Party-wide cooldowns are **banked off tank busters** — a raid mitigation spent on a single tank is no longer available for the raidwide that needs it.",
+          "Prevented damage is weighted by **who is actually hit**, so a party tool is no longer credited as if it covered eight players on a one-target hit.",
+          "Party mitigation and healer raid oGCDs now compete in **one value-ranked tier**, so healer raid cooldowns like Neutral Sect land on raidwides instead of being crowded out.",
+          "Spare oGCDs are spent to **cut the GCD-heal bill**, lowering the DPS tax the plan costs you."
+        ]
+      },
+      {
+        "heading": "Complete healer amplifier model",
+        "body": "Amplifiers now **scale the ability they power** instead of being counted as standalone tools, which makes double-counting impossible by construction:",
+        "items": [
+          "**Shield riders** — Zoe and Recitation multiply the barrier they enable.",
+          "**Healing-boost windows** — Temperance, Philosophia, Krasis, Physis II, and Protraction scale healing inside their window (caster-scoped buffs boost the caster's own GCD spells; receiver-scoped buffs boost all incoming healing)."
+        ]
+      },
+      {
+        "body": "Magnitudes were derived from the ability data and validated against top logs."
+      },
+      {
+        "heading": "Note for healers",
+        "body": "Because the planner's healing tax is now more accurate, **healer efficiency percentages and ranks will shift** in this release. This is an intended recalibration, not a regression."
+      }
+    ]
+  },
+  {
+    "version": "0.8.3",
+    "date": "2026-07-19",
+    "summary": "More reliable auto-updates: fixes the \"error opening file for writing\" failures during install (the updater now keeps its background workers from re-locking files mid-update). Plus the healer mitigation planner's Sim Plan (BETA) is now bundled and on by default."
+  },
+  {
+    "version": "0.8.2",
+    "date": "2026-07-19",
+    "summary": "Healer mitigation planner: import hand-authored PF mit plans (e.g. Dancing Mad) and let the scheduler pick timing; healer progression analysis now reconciles the ceiling's healing tax against your actual uptime healing instead of penalizing every heal."
+  },
+  {
+    "version": "0.8.1",
+    "date": "2026-07-18",
+    "summary": "Fixes the auto-updater \"error opening file for writing\" errors: the sidecar now drains its sim-pool worker processes (which mapped the onedir _internal/ DLLs) before the NSIS install runs. Same analyzer feature set as 0.8.0."
+  },
+  {
+    "version": "0.8.0",
+    "date": "2026-07-18",
+    "summary": "Progression logs and healer integration.",
+    "sections": [
+      {
+        "heading": "Progression logs",
+        "items": [
+          "Wipes are analyzable, not just kills — paste a report link or pick from your recent reports.",
+          "A pull that ends in a party wipe is **truncated at the death**, so the run isn't graded on time nobody was alive for.",
+          "Wipes report a **projected kill time** from the boss's remaining HP and your active damage rate."
+        ]
+      },
+      {
+        "heading": "Healer integration",
+        "items": [
+          "Healers route through the **mitigation planner** first; the plan's heal GCDs are then locked into the idealized ceiling, so the ceiling pays the same healing tax you do.",
+          "That makes the ceiling an **honest maximum** rather than a pure-DPS fantasy — and rank comparisons are hidden for healers, since top logs force their DPS into different heal windows."
+        ]
+      }
+    ]
+  },
+  {
+    "version": "0.6.0",
+    "date": "2026-07-16",
+    "summary": "First public release. Meridian scores your FFXIV raid pulls against a simulated optimal ceiling at your own GCD — with priced improvement suggestions, idealized-rotation timelines, comparisons against top logs (which get their own efficiency scores), and a kill-time theorizer that simulates an idealized potency rotation for a given kill time and party comp. Connects directly to your FF Logs account through their API."
+  }
+]

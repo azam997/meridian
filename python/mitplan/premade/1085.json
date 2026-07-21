@@ -1,0 +1,225 @@
+{
+  "encounter_id": 1085,
+  "encounter_name": "Dancing Mad (Ultimate)",
+  "version": 3,
+  "source": "Ikuya Mitty (DMU) mit sheet",
+  "_note": "The sheet's mit assignments across all 5 phases, cross-referenced to real boss_ability_ids from `scripts/dump_mechanics.py 1085`. HEALER mits are pinned by job (comp-specific); the shared-id party mits Feint (role:melee 7549), Addle (role:caster 7560) and Reprisal (role:tank 7535) are pinned by ROLE — the planner resolves each to an eligible comp job and distributes a shared cooldown (e.g. Reprisal across both tanks). Only FRESH casts are pinned; '➔' carry-over cells are omitted. Generic tank/ranged 'Party Mit' cells (Heart of Light / Dark Missionary / Troubadour / Passage of Arms…) vary by job and are left to the auto-planner, which schedules them on cooldown. Skipped sheet mechanics (Towers/Spelldriver, Black Holes tethers, Shocking Impact, Maddening Orchestra, Fell Forces, the intricate P5 Forsaken carry-over hits 2-8) don't classify as a distinct forced mechanic or were pure carry-over. Ability map: Spreadlo=Deployment Tactics 3585, 'Zoe Shields'=Eukrasian Prognosis II 37034, Neutral Sect/Sun Sign=AST Sun Sign 37031.",
+  "assignments": [
+    { "mechanic": "P1 Mystery Magic", "name": "Flagrant Fire III", "boss_ability_id": 47778, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 16536, "_ability": "Temperance" },
+      { "job": "Astrologian", "action_id": 37031, "_ability": "Sun Sign" },
+      { "job": "Scholar", "action_id": 3585, "_ability": "Deployment Tactics" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "job": "Sage", "action_id": 37034, "_ability": "Eukrasian Prognosis II (Zoe)" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] },
+    { "mechanic": "P1 Wave Cannon", "name": "Wave Cannon", "boss_ability_id": 47784, "occurrence": 0, "mits": [
+      { "job": "Scholar", "action_id": 16545, "_ability": "Summon Seraph" },
+      { "job": "Sage", "action_id": 24310, "_ability": "Holos" }
+    ] },
+    { "mechanic": "P1 Light of Judgment (1)", "name": "Light of Judgment", "boss_ability_id": 50722, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 7433, "_ability": "Plenary Indulgence" },
+      { "job": "Astrologian", "action_id": 3613, "_ability": "Collective Unconscious" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] },
+    { "mechanic": "P1 Gravitas (Part I)", "name": "Gravitas", "boss_ability_id": 47788, "occurrence": 0, "mits": [
+      { "job": "Astrologian", "action_id": 25874, "_ability": "Macrocosmos" },
+      { "job": "Scholar", "action_id": 37014, "_ability": "Seraphism" }
+    ] },
+    { "mechanic": "P1 Gravitas (Part II)", "name": "Gravitas", "boss_ability_id": 47788, "occurrence": 1, "mits": [
+      { "job": "White Mage", "action_id": 25862, "_ability": "Liturgy of the Bell" },
+      { "job": "Scholar", "action_id": 25868, "_ability": "Expedient" },
+      { "job": "Scholar", "action_id": 16538, "_ability": "Fey Illumination" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" }
+    ] },
+    { "mechanic": "P1 Double-Trouble Trap (2)", "name": "Double-Trouble Trap", "boss_ability_id": 47783, "occurrence": 1, "mits": [
+      { "job": "Scholar", "action_id": 3585, "_ability": "Deployment Tactics" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24311, "_ability": "Panhaima" },
+      { "job": "Sage", "action_id": 37034, "_ability": "Eukrasian Prognosis II (Zoe)" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" }
+    ] },
+    { "mechanic": "P1 Light of Judgment (2)", "name": "Light of Judgment", "boss_ability_id": 50722, "occurrence": 1, "mits": [
+      { "job": "White Mage", "action_id": 7433, "_ability": "Plenary Indulgence" },
+      { "job": "Astrologian", "action_id": 3613, "_ability": "Collective Unconscious" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] },
+    { "mechanic": "P1 Double-Trouble Trap (3)", "name": "Double-Trouble Trap", "boss_ability_id": 47783, "occurrence": 2, "mits": [
+      { "job": "White Mage", "action_id": 16536, "_ability": "Temperance" },
+      { "job": "Astrologian", "action_id": 37031, "_ability": "Sun Sign" }
+    ] },
+    { "mechanic": "P1 Indulgent Will", "name": "Indulgent Will", "boss_ability_id": 47797, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 37011, "_ability": "Divine Caress" },
+      { "job": "Astrologian", "action_id": 37031, "_ability": "Sun Sign" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" }
+    ] },
+
+    { "mechanic": "P2 Ultimate Embrace (1)", "name": "Ultimate Embrace", "boss_ability_id": 49740, "occurrence": 0, "mits": [
+      { "job": "Scholar", "action_id": 3585, "_ability": "Deployment Tactics" },
+      { "job": "Sage", "action_id": 24310, "_ability": "Holos" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] },
+    { "mechanic": "P2 Forsaken", "name": "Forsaken", "boss_ability_id": 47804, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 7433, "_ability": "Plenary Indulgence" },
+      { "job": "Astrologian", "action_id": 3613, "_ability": "Collective Unconscious" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "job": "Sage", "action_id": 37034, "_ability": "Eukrasian Prognosis II (Zoe)" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" },
+      { "role": "caster", "action_id": 7560, "_ability": "Addle" }
+    ] },
+    { "mechanic": "P2 Light of Judgement", "name": "Light of Judgment", "boss_ability_id": 47805, "occurrence": 0, "mits": [
+      { "job": "Scholar", "action_id": 3585, "_ability": "Deployment Tactics" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "job": "Sage", "action_id": 24310, "_ability": "Holos" },
+      { "job": "Sage", "action_id": 37034, "_ability": "Eukrasian Prognosis II (Zoe)" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" },
+      { "role": "caster", "action_id": 7560, "_ability": "Addle" }
+    ] },
+    { "mechanic": "P2 Wings of Destruction", "name": "Wings of Destruction", "boss_ability_id": 47823, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 7433, "_ability": "Plenary Indulgence" },
+      { "job": "Astrologian", "action_id": 3613, "_ability": "Collective Unconscious" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Scholar", "action_id": 16538, "_ability": "Fey Illumination" },
+      { "job": "Scholar", "action_id": 16545, "_ability": "Summon Seraph" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "job": "Sage", "action_id": 24311, "_ability": "Panhaima" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] },
+
+    { "mechanic": "P3 Bowels of Agony", "name": "Bowels of Agony", "boss_ability_id": 47858, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 7433, "_ability": "Plenary Indulgence" },
+      { "job": "Astrologian", "action_id": 3613, "_ability": "Collective Unconscious" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] },
+    { "mechanic": "P3 Thunder III (1st Set)", "name": "Thunder III", "boss_ability_id": 47884, "occurrence": 0, "mits": [
+      { "job": "Scholar", "action_id": 25868, "_ability": "Expedient" },
+      { "job": "Sage", "action_id": 24310, "_ability": "Holos" },
+      { "role": "caster", "action_id": 7560, "_ability": "Addle" }
+    ] },
+    { "mechanic": "P3 Ultima Blaster", "name": "Ultima Blaster", "boss_ability_id": 47843, "occurrence": 0, "mits": [
+      { "job": "Astrologian", "action_id": 37031, "_ability": "Sun Sign" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Scholar", "action_id": 16538, "_ability": "Fey Illumination" },
+      { "job": "Scholar", "action_id": 37014, "_ability": "Seraphism" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "job": "Sage", "action_id": 24311, "_ability": "Panhaima" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] },
+    { "mechanic": "P3 Cyclone", "name": "Cyclone", "boss_ability_id": 47864, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 37011, "_ability": "Divine Caress" }
+    ] },
+    { "mechanic": "P3 Earthquake", "name": "Earthquake", "boss_ability_id": 47866, "occurrence": 0, "mits": [
+      { "job": "Astrologian", "action_id": 25874, "_ability": "Macrocosmos" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] },
+    { "mechanic": "P3 Thunder III (5th Set)", "name": "Thunder III", "boss_ability_id": 47884, "occurrence": 6, "mits": [
+      { "job": "Scholar", "action_id": 3585, "_ability": "Deployment Tactics" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "job": "Sage", "action_id": 37034, "_ability": "Eukrasian Prognosis II (Zoe)" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" },
+      { "role": "caster", "action_id": 7560, "_ability": "Addle" }
+    ] },
+    { "mechanic": "P3 Stomp-a-Mole", "name": "Stomp-a-Mole", "boss_ability_id": 47856, "occurrence": 0, "mits": [
+      { "job": "Scholar", "action_id": 37014, "_ability": "Seraphism" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] },
+
+    { "mechanic": "P4 Grand Cross (1)", "name": "Grand Cross", "boss_ability_id": 47892, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 7433, "_ability": "Plenary Indulgence" },
+      { "job": "Astrologian", "action_id": 3613, "_ability": "Collective Unconscious" },
+      { "job": "Scholar", "action_id": 3585, "_ability": "Deployment Tactics" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "job": "Sage", "action_id": 24310, "_ability": "Holos" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] },
+    { "mechanic": "P4 Grand Cross (2)", "name": "Grand Cross", "boss_ability_id": 47892, "occurrence": 1, "mits": [
+      { "job": "White Mage", "action_id": 16536, "_ability": "Temperance" },
+      { "job": "Astrologian", "action_id": 37031, "_ability": "Sun Sign" },
+      { "job": "Scholar", "action_id": 25868, "_ability": "Expedient" },
+      { "job": "Scholar", "action_id": 16538, "_ability": "Fey Illumination" },
+      { "job": "Sage", "action_id": 24311, "_ability": "Panhaima" }
+    ] },
+    { "mechanic": "P4 Grand Cross (3)", "name": "Grand Cross", "boss_ability_id": 47892, "occurrence": 2, "mits": [
+      { "job": "White Mage", "action_id": 37011, "_ability": "Divine Caress" },
+      { "job": "Scholar", "action_id": 16545, "_ability": "Summon Seraph" }
+    ] },
+    { "mechanic": "P4 Ultima Upsurge (1)", "name": "Ultima Upsurge", "boss_ability_id": 49738, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 7433, "_ability": "Plenary Indulgence" },
+      { "job": "Astrologian", "action_id": 3613, "_ability": "Collective Unconscious" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" },
+      { "role": "caster", "action_id": 7560, "_ability": "Addle" }
+    ] },
+    { "mechanic": "P4 Ultima Upsurge (2)", "name": "Ultima Upsurge", "boss_ability_id": 49738, "occurrence": 1, "mits": [
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" }
+    ] },
+
+    { "mechanic": "P5 Ultima Repeater (1)", "name": "Ultima Repeater", "boss_ability_id": 47937, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 7433, "_ability": "Plenary Indulgence" },
+      { "job": "Astrologian", "action_id": 3613, "_ability": "Collective Unconscious" },
+      { "job": "Scholar", "action_id": 3585, "_ability": "Deployment Tactics" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "job": "Sage", "action_id": 24310, "_ability": "Holos" },
+      { "job": "Sage", "action_id": 37034, "_ability": "Eukrasian Prognosis II (Zoe)" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" }
+    ] },
+    { "mechanic": "P5 Chaotic Flood", "name": "Chaotic Flood", "boss_ability_id": 47951, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 16536, "_ability": "Temperance" },
+      { "job": "Astrologian", "action_id": 37031, "_ability": "Sun Sign" },
+      { "job": "Scholar", "action_id": 25868, "_ability": "Expedient" },
+      { "job": "Sage", "action_id": 24311, "_ability": "Panhaima" }
+    ] },
+    { "mechanic": "P5 Ultima Repeater (2)", "name": "Ultima Repeater", "boss_ability_id": 47937, "occurrence": 1, "mits": [
+      { "job": "White Mage", "action_id": 7433, "_ability": "Plenary Indulgence" },
+      { "job": "Astrologian", "action_id": 3613, "_ability": "Collective Unconscious" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" },
+      { "role": "caster", "action_id": 7560, "_ability": "Addle" }
+    ] },
+    { "mechanic": "P5 Forsaken (1st Hit)", "name": "Forsaken", "boss_ability_id": 47925, "occurrence": 0, "mits": [
+      { "job": "White Mage", "action_id": 16536, "_ability": "Temperance" },
+      { "job": "Astrologian", "action_id": 37031, "_ability": "Sun Sign" },
+      { "job": "Astrologian", "action_id": 3613, "_ability": "Collective Unconscious" },
+      { "job": "Scholar", "action_id": 3585, "_ability": "Deployment Tactics" },
+      { "job": "Scholar", "action_id": 16538, "_ability": "Fey Illumination" },
+      { "job": "Scholar", "action_id": 188, "_ability": "Sacred Soil" },
+      { "job": "Sage", "action_id": 37034, "_ability": "Eukrasian Prognosis II (Zoe)" },
+      { "job": "Sage", "action_id": 24310, "_ability": "Holos" },
+      { "job": "Sage", "action_id": 24298, "_ability": "Kerachole" },
+      { "role": "tank", "action_id": 7535, "_ability": "Reprisal" },
+      { "role": "melee", "action_id": 7549, "_ability": "Feint" }
+    ] }
+  ]
+}

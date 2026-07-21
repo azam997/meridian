@@ -1,0 +1,5375 @@
+{
+  "abilityMeta": {
+    "16137": {
+      "iconPath": "/i/003000/003401.png",
+      "id": 16137,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Keen Edge"
+    },
+    "16138": {
+      "iconPath": "/i/003000/003402.png",
+      "id": 16138,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "No Mercy"
+    },
+    "16139": {
+      "iconPath": "/i/003000/003403.png",
+      "id": 16139,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Brutal Shell"
+    },
+    "16145": {
+      "iconPath": "/i/003000/003409.png",
+      "id": 16145,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Solid Barrel"
+    },
+    "16146": {
+      "iconPath": "/i/003000/003410.png",
+      "id": 16146,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Gnashing Fang"
+    },
+    "16147": {
+      "iconPath": "/i/003000/003411.png",
+      "id": 16147,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Savage Claw"
+    },
+    "16150": {
+      "iconPath": "/i/003000/003414.png",
+      "id": 16150,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Wicked Talon"
+    },
+    "16153": {
+      "iconPath": "/i/003000/003417.png",
+      "id": 16153,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Sonic Break"
+    },
+    "16156": {
+      "iconPath": "/i/003000/003420.png",
+      "id": 16156,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Jugular Rip"
+    },
+    "16157": {
+      "iconPath": "/i/003000/003421.png",
+      "id": 16157,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Abdomen Tear"
+    },
+    "16158": {
+      "iconPath": "/i/003000/003422.png",
+      "id": 16158,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Eye Gouge"
+    },
+    "16159": {
+      "iconPath": "/i/003000/003423.png",
+      "id": 16159,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Bow Shock"
+    },
+    "16162": {
+      "iconPath": "/i/003000/003426.png",
+      "id": 16162,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Burst Strike"
+    },
+    "16164": {
+      "iconPath": "/i/003000/003428.png",
+      "id": 16164,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Bloodfest"
+    },
+    "16165": {
+      "iconPath": "/i/003000/003429.png",
+      "id": 16165,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Blasting Zone"
+    },
+    "25759": {
+      "iconPath": "/i/003000/003431.png",
+      "id": 25759,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Hypervelocity"
+    },
+    "25760": {
+      "iconPath": "/i/003000/003432.png",
+      "id": 25760,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Double Down"
+    },
+    "36937": {
+      "iconPath": "/i/003000/003437.png",
+      "id": 36937,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Reign of Beasts"
+    },
+    "36938": {
+      "iconPath": "/i/003000/003438.png",
+      "id": 36938,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Noble Blood"
+    },
+    "36939": {
+      "iconPath": "/i/003000/003439.png",
+      "id": 36939,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Lion Heart"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "16137": 25,
+        "16138": 6,
+        "16139": 24,
+        "16145": 24,
+        "16146": 12,
+        "16147": 12,
+        "16150": 12,
+        "16153": 6,
+        "16156": 12,
+        "16157": 12,
+        "16158": 12,
+        "16159": 6,
+        "16162": 5,
+        "16164": 6,
+        "16165": 12,
+        "25759": 5,
+        "25760": 6,
+        "36937": 6,
+        "36938": 6,
+        "36939": 6
+      },
+      "totalCasts": 215
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": []
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 500.0,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "targetability"
+    },
+    "Drift": {
+      "downtimeSource": "targetability",
+      "downtimeWindows": [],
+      "fightDurationSec": 360.0,
+      "findings": [
+        {
+          "abilityId": 16146,
+          "abilityName": "Gnashing Fang",
+          "cappedSeconds": 35.0,
+          "casts": 12,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 1.0,
+          "lostPotency": 1200.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16138,
+          "abilityName": "No Mercy",
+          "cappedSeconds": 0.0,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16164,
+          "abilityName": "Bloodfest",
+          "cappedSeconds": 0.7,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 25760,
+          "abilityName": "Double Down",
+          "cappedSeconds": 32.5,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16165,
+          "abilityName": "Blasting Zone",
+          "cappedSeconds": 5.0,
+          "casts": 12,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16159,
+          "abilityName": "Bow Shock",
+          "cappedSeconds": 5.7,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 36937,
+          "expectedId": 16146,
+          "lostPotency": 0.0,
+          "position": 4,
+          "summary": "Opener slot #4: cast Reign of Beasts, canonical uses Gnashing Fang (same potency)"
+        },
+        {
+          "actualId": 36938,
+          "expectedId": 16147,
+          "lostPotency": 0.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Noble Blood, canonical uses Savage Claw (same potency)"
+        },
+        {
+          "actualId": 36939,
+          "expectedId": 16150,
+          "lostPotency": 0.0,
+          "position": 6,
+          "summary": "Opener slot #6: cast Lion Heart, canonical uses Wicked Talon (same potency)"
+        },
+        {
+          "actualId": 25760,
+          "expectedId": 16162,
+          "lostPotency": 0.0,
+          "position": 8,
+          "summary": "Opener slot #8: cast Double Down, canonical uses Burst Strike (same potency)"
+        },
+        {
+          "actualId": 16137,
+          "expectedId": 25760,
+          "lostPotency": 700.0,
+          "position": 9,
+          "summary": "Opener slot #9: cast Keen Edge (300p), canonical uses Double Down (1000p) \u2014 -700p"
+        },
+        {
+          "actualId": 16139,
+          "expectedId": 36937,
+          "lostPotency": 420.0,
+          "position": 10,
+          "summary": "Opener slot #10: cast Brutal Shell (380p), canonical uses Reign of Beasts (800p) \u2014 -420p"
+        },
+        {
+          "actualId": 16145,
+          "expectedId": 36938,
+          "lostPotency": 440.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Solid Barrel (460p), canonical uses Noble Blood (900p) \u2014 -440p"
+        },
+        {
+          "actualId": 16137,
+          "expectedId": 36939,
+          "lostPotency": 700.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Keen Edge (300p), canonical uses Lion Heart (1000p) \u2014 -700p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": [
+        {
+          "abilityId": 16164,
+          "abilityName": "Bloodfest",
+          "gauge": "cartridges",
+          "lostPotency": 1260.0,
+          "timeSec": 150.7,
+          "wasted": 3
+        },
+        {
+          "abilityId": 16164,
+          "abilityName": "Bloodfest",
+          "gauge": "cartridges",
+          "lostPotency": 840.0,
+          "timeSec": 210.7,
+          "wasted": 2
+        },
+        {
+          "abilityId": 16164,
+          "abilityName": "Bloodfest",
+          "gauge": "cartridges",
+          "lostPotency": 840.0,
+          "timeSec": 270.7,
+          "wasted": 2
+        },
+        {
+          "abilityId": 16164,
+          "abilityName": "Bloodfest",
+          "gauge": "cartridges",
+          "lostPotency": 840.0,
+          "timeSec": 330.7,
+          "wasted": 2
+        },
+        {
+          "abilityId": 16145,
+          "abilityName": "Solid Barrel",
+          "gauge": "cartridges",
+          "lostPotency": 420.0,
+          "timeSec": 32.5,
+          "wasted": 1
+        },
+        {
+          "abilityId": 16164,
+          "abilityName": "Bloodfest",
+          "gauge": "cartridges",
+          "lostPotency": 420.0,
+          "timeSec": 90.7,
+          "wasted": 1
+        }
+      ]
+    },
+    "Scoring": {
+      "deliveredObserved": 107698.23,
+      "deliveredPotency": 107698.23,
+      "downtimeSource": "targetability",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "16138": 2084.25,
+        "16146": 0.0,
+        "16164": 1773.27,
+        "25760": 0.0
+      },
+      "entryGauges": {},
+      "fightDurationSec": 360.0,
+      "idealizedLenient": 113698.78,
+      "idealizedMaster": 112325.64,
+      "idealizedObserved": 112325.64,
+      "idealizedPotency": 113698.78,
+      "idealizedStrict": 113698.78,
+      "masterBuffIntervals": [],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.5,
+        "payload": null
+      },
+      "tinctureLoss": 1858.42,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.09,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 215"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Keen Edge",
+          25,
+          0
+        ],
+        [
+          "Brutal Shell",
+          24,
+          0
+        ],
+        [
+          "Solid Barrel",
+          24,
+          0
+        ],
+        [
+          "Gnashing Fang",
+          12,
+          0
+        ],
+        [
+          "Savage Claw",
+          12,
+          0
+        ],
+        [
+          "Wicked Talon",
+          12,
+          0
+        ],
+        [
+          "Jugular Rip",
+          12,
+          0
+        ],
+        [
+          "Abdomen Tear",
+          12,
+          0
+        ],
+        [
+          "Eye Gouge",
+          12,
+          0
+        ],
+        [
+          "Blasting Zone",
+          12,
+          0
+        ],
+        [
+          "No Mercy",
+          6,
+          0
+        ],
+        [
+          "Sonic Break",
+          6,
+          0
+        ],
+        [
+          "Bow Shock",
+          6,
+          0
+        ],
+        [
+          "Double Down",
+          6,
+          0
+        ],
+        [
+          "Bloodfest",
+          6,
+          0
+        ],
+        [
+          "Reign of Beasts",
+          6,
+          0
+        ],
+        [
+          "Noble Blood",
+          6,
+          0
+        ],
+        [
+          "Lion Heart",
+          6,
+          0
+        ],
+        [
+          "Hypervelocity",
+          5,
+          0
+        ],
+        [
+          "Burst Strike",
+          5,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No raid-buff providers in this party \u2014 burst alignment N/A."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 500p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "[drift] Gnashing Fang: 12 casts, drifted 35.0s \u2248 -1200p (ref avg -0p)"
+      ],
+      "summaryLines": [
+        "Total drift cost: -1200p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Gnashing Fang",
+          12,
+          35.0,
+          1200,
+          0,
+          "+1200"
+        ],
+        [
+          "No Mercy",
+          6,
+          0.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Bloodfest",
+          6,
+          0.7,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Double Down",
+          6,
+          32.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Blasting Zone",
+          12,
+          5.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Bow Shock",
+          6,
+          5.7,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #9: cast Keen Edge (300p), canonical uses Double Down (1000p) \u2014 -700p",
+        "[opener] Opener slot #10: cast Brutal Shell (380p), canonical uses Reign of Beasts (800p) \u2014 -420p",
+        "[opener] Opener slot #11: cast Solid Barrel (460p), canonical uses Noble Blood (900p) \u2014 -440p",
+        "[opener] Opener slot #12: cast Keen Edge (300p), canonical uses Lion Heart (1000p) \u2014 -700p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 2260p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          4,
+          "Gnashing Fang",
+          "Reign of Beasts",
+          0
+        ],
+        [
+          5,
+          "Savage Claw",
+          "Noble Blood",
+          0
+        ],
+        [
+          6,
+          "Wicked Talon",
+          "Lion Heart",
+          0
+        ],
+        [
+          8,
+          "Burst Strike",
+          "Double Down",
+          0
+        ],
+        [
+          9,
+          "Double Down",
+          "Keen Edge",
+          700
+        ],
+        [
+          10,
+          "Reign of Beasts",
+          "Brutal Shell",
+          420
+        ],
+        [
+          11,
+          "Noble Blood",
+          "Solid Barrel",
+          440
+        ],
+        [
+          12,
+          "Lion Heart",
+          "Keen Edge",
+          700
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[overcap] Cartridges overcap at 2:31 (Bloodfest, -1260p)",
+        "[overcap] Cartridges overcap at 3:31 (Bloodfest, -840p)",
+        "[overcap] Cartridges overcap at 4:31 (Bloodfest, -840p)",
+        "[overcap] Cartridges overcap at 5:31 (Bloodfest, -840p)",
+        "[overcap] Cartridges overcap at 0:32 (Solid Barrel, -420p)",
+        "[overcap] Cartridges overcap at 1:31 (Bloodfest, -420p)"
+      ],
+      "summaryLines": [
+        "Total overcap cost: -4620p",
+        "  Cartridges: -4620p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "2:31",
+          "cartridges",
+          "Bloodfest",
+          3,
+          1260
+        ],
+        [
+          "3:31",
+          "cartridges",
+          "Bloodfest",
+          2,
+          840
+        ],
+        [
+          "4:31",
+          "cartridges",
+          "Bloodfest",
+          2,
+          840
+        ],
+        [
+          "5:31",
+          "cartridges",
+          "Bloodfest",
+          2,
+          840
+        ],
+        [
+          "0:32",
+          "cartridges",
+          "Solid Barrel",
+          1,
+          420
+        ],
+        [
+          "1:31",
+          "cartridges",
+          "Bloodfest",
+          1,
+          420
+        ]
+      ]
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 107698.23,
+    "downtimeSource": "targetability",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 94.72,
+    "efficiencyPctLenient": 94.72,
+    "efficiencyPctMaster": 95.88,
+    "efficiencyPctObserved": 95.88,
+    "efficiencyPctStrict": 94.72,
+    "idealizedMaster": 112325.64,
+    "idealizedObserved": 112325.64,
+    "killTimeSec": 360,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Gunbreaker"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 113698.78,
+    "yourIdealizedPotencyLenient": 113698.78,
+    "yourPotency": 107698.23
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 30.0,
+      "multiplier": 1.09,
+      "startSec": 0.0
+    },
+    {
+      "endSec": 322.5,
+      "multiplier": 1.09,
+      "startSec": 292.5
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 0.0,
+      "tooltip": "Keen Edge @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16138,
+      "color": "#f59e0b",
+      "endSec": 0.6,
+      "iconPath": "/i/003000/003402.png",
+      "label": "No ",
+      "startSec": 0.0,
+      "tooltip": "No Mercy @ 0.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16164,
+      "color": "#f59e0b",
+      "endSec": 1.3,
+      "iconPath": "/i/003000/003428.png",
+      "label": "Blo",
+      "startSec": 0.7,
+      "tooltip": "Bloodfest @ 0.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 2.5,
+      "tooltip": "Brutal Shell @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 3.1,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 2.5,
+      "tooltip": "Blasting Zone @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16159,
+      "color": "#f59e0b",
+      "endSec": 3.8,
+      "iconPath": "/i/003000/003423.png",
+      "label": "Bow",
+      "startSec": 3.2,
+      "tooltip": "Bow Shock @ 3.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 6.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 5.0,
+      "tooltip": "Solid Barrel @ 5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 8.5,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 7.5,
+      "tooltip": "Gnashing Fang @ 7.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 8.1,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 7.5,
+      "tooltip": "Jugular Rip @ 7.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 11.0,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 10.0,
+      "tooltip": "Savage Claw @ 10.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 10.6,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 10.0,
+      "tooltip": "Abdomen Tear @ 10.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 13.5,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 12.5,
+      "tooltip": "Wicked Talon @ 12.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 13.1,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 12.5,
+      "tooltip": "Eye Gouge @ 12.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25760,
+      "color": "#3b82f6",
+      "endSec": 16.0,
+      "iconPath": "/i/003000/003432.png",
+      "label": "Dou",
+      "startSec": 15.0,
+      "tooltip": "Double Down @ 15.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16153,
+      "color": "#3b82f6",
+      "endSec": 18.5,
+      "iconPath": "/i/003000/003417.png",
+      "label": "Son",
+      "startSec": 17.5,
+      "tooltip": "Sonic Break @ 17.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36937,
+      "color": "#3b82f6",
+      "endSec": 21.0,
+      "iconPath": "/i/003000/003437.png",
+      "label": "Rei",
+      "startSec": 20.0,
+      "tooltip": "Reign of Beasts @ 20.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36938,
+      "color": "#3b82f6",
+      "endSec": 23.5,
+      "iconPath": "/i/003000/003438.png",
+      "label": "Nob",
+      "startSec": 22.5,
+      "tooltip": "Noble Blood @ 22.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36939,
+      "color": "#3b82f6",
+      "endSec": 26.0,
+      "iconPath": "/i/003000/003439.png",
+      "label": "Lio",
+      "startSec": 25.0,
+      "tooltip": "Lion Heart @ 25.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 28.5,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 27.5,
+      "tooltip": "Keen Edge @ 27.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 31.0,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 30.0,
+      "tooltip": "Brutal Shell @ 30.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 33.5,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 32.5,
+      "tooltip": "Solid Barrel @ 32.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 33.1,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 32.5,
+      "tooltip": "Blasting Zone @ 32.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 36.0,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 35.0,
+      "tooltip": "Gnashing Fang @ 35.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 35.6,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 35.0,
+      "tooltip": "Jugular Rip @ 35.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 38.5,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 37.5,
+      "tooltip": "Savage Claw @ 37.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 38.1,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 37.5,
+      "tooltip": "Abdomen Tear @ 37.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 41.0,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 40.0,
+      "tooltip": "Wicked Talon @ 40.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 40.6,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 40.0,
+      "tooltip": "Eye Gouge @ 40.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 43.5,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 42.5,
+      "tooltip": "Keen Edge @ 42.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 46.0,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 45.0,
+      "tooltip": "Brutal Shell @ 45.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 48.5,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 47.5,
+      "tooltip": "Solid Barrel @ 47.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 51.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 50.0,
+      "tooltip": "Keen Edge @ 50.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 53.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 52.5,
+      "tooltip": "Brutal Shell @ 52.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 56.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 55.0,
+      "tooltip": "Solid Barrel @ 55.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 58.5,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 57.5,
+      "tooltip": "Gnashing Fang @ 57.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 58.1,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 57.5,
+      "tooltip": "Jugular Rip @ 57.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 61.0,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 60.0,
+      "tooltip": "Savage Claw @ 60.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 60.6,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 60.0,
+      "tooltip": "Abdomen Tear @ 60.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16138,
+      "color": "#f59e0b",
+      "endSec": 61.3,
+      "iconPath": "/i/003000/003402.png",
+      "label": "No ",
+      "startSec": 60.7,
+      "tooltip": "No Mercy @ 60.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 63.5,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 62.5,
+      "tooltip": "Wicked Talon @ 62.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 63.1,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 62.5,
+      "tooltip": "Eye Gouge @ 62.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16164,
+      "color": "#f59e0b",
+      "endSec": 63.8,
+      "iconPath": "/i/003000/003428.png",
+      "label": "Blo",
+      "startSec": 63.2,
+      "tooltip": "Bloodfest @ 63.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36937,
+      "color": "#3b82f6",
+      "endSec": 66.0,
+      "iconPath": "/i/003000/003437.png",
+      "label": "Rei",
+      "startSec": 65.0,
+      "tooltip": "Reign of Beasts @ 65.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 65.6,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 65.0,
+      "tooltip": "Blasting Zone @ 65.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16159,
+      "color": "#f59e0b",
+      "endSec": 66.3,
+      "iconPath": "/i/003000/003423.png",
+      "label": "Bow",
+      "startSec": 65.7,
+      "tooltip": "Bow Shock @ 65.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36938,
+      "color": "#3b82f6",
+      "endSec": 68.5,
+      "iconPath": "/i/003000/003438.png",
+      "label": "Nob",
+      "startSec": 67.5,
+      "tooltip": "Noble Blood @ 67.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36939,
+      "color": "#3b82f6",
+      "endSec": 71.0,
+      "iconPath": "/i/003000/003439.png",
+      "label": "Lio",
+      "startSec": 70.0,
+      "tooltip": "Lion Heart @ 70.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16153,
+      "color": "#3b82f6",
+      "endSec": 73.5,
+      "iconPath": "/i/003000/003417.png",
+      "label": "Son",
+      "startSec": 72.5,
+      "tooltip": "Sonic Break @ 72.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25760,
+      "color": "#3b82f6",
+      "endSec": 76.0,
+      "iconPath": "/i/003000/003432.png",
+      "label": "Dou",
+      "startSec": 75.0,
+      "tooltip": "Double Down @ 75.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 78.5,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 77.5,
+      "tooltip": "Gnashing Fang @ 77.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 78.1,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 77.5,
+      "tooltip": "Jugular Rip @ 77.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 81.0,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 80.0,
+      "tooltip": "Savage Claw @ 80.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 80.6,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 80.0,
+      "tooltip": "Abdomen Tear @ 80.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 83.5,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 82.5,
+      "tooltip": "Wicked Talon @ 82.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 83.1,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 82.5,
+      "tooltip": "Eye Gouge @ 82.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 86.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 85.0,
+      "tooltip": "Keen Edge @ 85.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 88.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 87.5,
+      "tooltip": "Brutal Shell @ 87.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 91.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 90.0,
+      "tooltip": "Solid Barrel @ 90.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 93.5,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 92.5,
+      "tooltip": "Burst Strike @ 92.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 93.1,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 92.5,
+      "tooltip": "Hypervelocity @ 92.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 96.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 95.0,
+      "tooltip": "Keen Edge @ 95.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 95.6,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 95.0,
+      "tooltip": "Blasting Zone @ 95.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 98.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 97.5,
+      "tooltip": "Brutal Shell @ 97.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 101.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 100.0,
+      "tooltip": "Solid Barrel @ 100.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 103.5,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 102.5,
+      "tooltip": "Burst Strike @ 102.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 103.1,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 102.5,
+      "tooltip": "Hypervelocity @ 102.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 106.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 105.0,
+      "tooltip": "Keen Edge @ 105.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 108.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 107.5,
+      "tooltip": "Brutal Shell @ 107.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 111.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 110.0,
+      "tooltip": "Solid Barrel @ 110.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 113.5,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 112.5,
+      "tooltip": "Burst Strike @ 112.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 113.1,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 112.5,
+      "tooltip": "Hypervelocity @ 112.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 116.0,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 115.0,
+      "tooltip": "Burst Strike @ 115.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 115.6,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 115.0,
+      "tooltip": "Hypervelocity @ 115.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 118.5,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 117.5,
+      "tooltip": "Gnashing Fang @ 117.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 118.1,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 117.5,
+      "tooltip": "Jugular Rip @ 117.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 121.0,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 120.0,
+      "tooltip": "Savage Claw @ 120.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 120.6,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 120.0,
+      "tooltip": "Abdomen Tear @ 120.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16138,
+      "color": "#f59e0b",
+      "endSec": 121.3,
+      "iconPath": "/i/003000/003402.png",
+      "label": "No ",
+      "startSec": 120.7,
+      "tooltip": "No Mercy @ 120.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 123.5,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 122.5,
+      "tooltip": "Wicked Talon @ 122.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 123.1,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 122.5,
+      "tooltip": "Eye Gouge @ 122.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16164,
+      "color": "#f59e0b",
+      "endSec": 123.8,
+      "iconPath": "/i/003000/003428.png",
+      "label": "Blo",
+      "startSec": 123.2,
+      "tooltip": "Bloodfest @ 123.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36937,
+      "color": "#3b82f6",
+      "endSec": 126.0,
+      "iconPath": "/i/003000/003437.png",
+      "label": "Rei",
+      "startSec": 125.0,
+      "tooltip": "Reign of Beasts @ 125.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 125.6,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 125.0,
+      "tooltip": "Blasting Zone @ 125.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16159,
+      "color": "#f59e0b",
+      "endSec": 126.3,
+      "iconPath": "/i/003000/003423.png",
+      "label": "Bow",
+      "startSec": 125.7,
+      "tooltip": "Bow Shock @ 125.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36938,
+      "color": "#3b82f6",
+      "endSec": 128.5,
+      "iconPath": "/i/003000/003438.png",
+      "label": "Nob",
+      "startSec": 127.5,
+      "tooltip": "Noble Blood @ 127.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36939,
+      "color": "#3b82f6",
+      "endSec": 131.0,
+      "iconPath": "/i/003000/003439.png",
+      "label": "Lio",
+      "startSec": 130.0,
+      "tooltip": "Lion Heart @ 130.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16153,
+      "color": "#3b82f6",
+      "endSec": 133.5,
+      "iconPath": "/i/003000/003417.png",
+      "label": "Son",
+      "startSec": 132.5,
+      "tooltip": "Sonic Break @ 132.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 136.0,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 135.0,
+      "tooltip": "Gnashing Fang @ 135.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 135.6,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 135.0,
+      "tooltip": "Jugular Rip @ 135.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 138.5,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 137.5,
+      "tooltip": "Savage Claw @ 137.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 138.1,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 137.5,
+      "tooltip": "Abdomen Tear @ 137.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 141.0,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 140.0,
+      "tooltip": "Wicked Talon @ 140.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 140.6,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 140.0,
+      "tooltip": "Eye Gouge @ 140.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 143.5,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 142.5,
+      "tooltip": "Keen Edge @ 142.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 146.0,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 145.0,
+      "tooltip": "Brutal Shell @ 145.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 148.5,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 147.5,
+      "tooltip": "Solid Barrel @ 147.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25760,
+      "color": "#3b82f6",
+      "endSec": 151.0,
+      "iconPath": "/i/003000/003432.png",
+      "label": "Dou",
+      "startSec": 150.0,
+      "tooltip": "Double Down @ 150.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 153.5,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 152.5,
+      "tooltip": "Keen Edge @ 152.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 156.0,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 155.0,
+      "tooltip": "Brutal Shell @ 155.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 155.6,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 155.0,
+      "tooltip": "Blasting Zone @ 155.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 158.5,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 157.5,
+      "tooltip": "Solid Barrel @ 157.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 161.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 160.0,
+      "tooltip": "Keen Edge @ 160.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 163.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 162.5,
+      "tooltip": "Brutal Shell @ 162.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 166.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 165.0,
+      "tooltip": "Solid Barrel @ 165.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 168.5,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 167.5,
+      "tooltip": "Burst Strike @ 167.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 168.1,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 167.5,
+      "tooltip": "Hypervelocity @ 167.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 171.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 170.0,
+      "tooltip": "Keen Edge @ 170.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 173.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 172.5,
+      "tooltip": "Brutal Shell @ 172.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 176.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 175.0,
+      "tooltip": "Solid Barrel @ 175.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 178.5,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 177.5,
+      "tooltip": "Gnashing Fang @ 177.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 178.1,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 177.5,
+      "tooltip": "Jugular Rip @ 177.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 181.0,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 180.0,
+      "tooltip": "Savage Claw @ 180.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 180.6,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 180.0,
+      "tooltip": "Abdomen Tear @ 180.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16138,
+      "color": "#f59e0b",
+      "endSec": 181.3,
+      "iconPath": "/i/003000/003402.png",
+      "label": "No ",
+      "startSec": 180.7,
+      "tooltip": "No Mercy @ 180.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 183.5,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 182.5,
+      "tooltip": "Wicked Talon @ 182.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 183.1,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 182.5,
+      "tooltip": "Eye Gouge @ 182.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16164,
+      "color": "#f59e0b",
+      "endSec": 183.8,
+      "iconPath": "/i/003000/003428.png",
+      "label": "Blo",
+      "startSec": 183.2,
+      "tooltip": "Bloodfest @ 183.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36937,
+      "color": "#3b82f6",
+      "endSec": 186.0,
+      "iconPath": "/i/003000/003437.png",
+      "label": "Rei",
+      "startSec": 185.0,
+      "tooltip": "Reign of Beasts @ 185.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 185.6,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 185.0,
+      "tooltip": "Blasting Zone @ 185.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16159,
+      "color": "#f59e0b",
+      "endSec": 186.3,
+      "iconPath": "/i/003000/003423.png",
+      "label": "Bow",
+      "startSec": 185.7,
+      "tooltip": "Bow Shock @ 185.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36938,
+      "color": "#3b82f6",
+      "endSec": 188.5,
+      "iconPath": "/i/003000/003438.png",
+      "label": "Nob",
+      "startSec": 187.5,
+      "tooltip": "Noble Blood @ 187.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36939,
+      "color": "#3b82f6",
+      "endSec": 191.0,
+      "iconPath": "/i/003000/003439.png",
+      "label": "Lio",
+      "startSec": 190.0,
+      "tooltip": "Lion Heart @ 190.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16153,
+      "color": "#3b82f6",
+      "endSec": 193.5,
+      "iconPath": "/i/003000/003417.png",
+      "label": "Son",
+      "startSec": 192.5,
+      "tooltip": "Sonic Break @ 192.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 196.0,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 195.0,
+      "tooltip": "Gnashing Fang @ 195.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 195.6,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 195.0,
+      "tooltip": "Jugular Rip @ 195.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 198.5,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 197.5,
+      "tooltip": "Savage Claw @ 197.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 198.1,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 197.5,
+      "tooltip": "Abdomen Tear @ 197.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 201.0,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 200.0,
+      "tooltip": "Wicked Talon @ 200.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 200.6,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 200.0,
+      "tooltip": "Eye Gouge @ 200.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 203.5,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 202.5,
+      "tooltip": "Keen Edge @ 202.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 206.0,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 205.0,
+      "tooltip": "Brutal Shell @ 205.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 208.5,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 207.5,
+      "tooltip": "Solid Barrel @ 207.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25760,
+      "color": "#3b82f6",
+      "endSec": 211.0,
+      "iconPath": "/i/003000/003432.png",
+      "label": "Dou",
+      "startSec": 210.0,
+      "tooltip": "Double Down @ 210.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 213.5,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 212.5,
+      "tooltip": "Burst Strike @ 212.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 213.1,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 212.5,
+      "tooltip": "Hypervelocity @ 212.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 216.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 215.0,
+      "tooltip": "Keen Edge @ 215.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 215.6,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 215.0,
+      "tooltip": "Blasting Zone @ 215.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 218.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 217.5,
+      "tooltip": "Brutal Shell @ 217.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 221.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 220.0,
+      "tooltip": "Solid Barrel @ 220.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 223.5,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 222.5,
+      "tooltip": "Gnashing Fang @ 222.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 223.1,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 222.5,
+      "tooltip": "Jugular Rip @ 222.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 226.0,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 225.0,
+      "tooltip": "Savage Claw @ 225.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 225.6,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 225.0,
+      "tooltip": "Abdomen Tear @ 225.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 228.5,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 227.5,
+      "tooltip": "Wicked Talon @ 227.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 228.1,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 227.5,
+      "tooltip": "Eye Gouge @ 227.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 231.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 230.0,
+      "tooltip": "Keen Edge @ 230.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 233.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 232.5,
+      "tooltip": "Brutal Shell @ 232.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 236.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 235.0,
+      "tooltip": "Solid Barrel @ 235.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 238.5,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 237.5,
+      "tooltip": "Burst Strike @ 237.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 238.1,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 237.5,
+      "tooltip": "Hypervelocity @ 237.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 241.0,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 240.0,
+      "tooltip": "Burst Strike @ 240.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 240.6,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 240.0,
+      "tooltip": "Hypervelocity @ 240.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16138,
+      "color": "#f59e0b",
+      "endSec": 241.3,
+      "iconPath": "/i/003000/003402.png",
+      "label": "No ",
+      "startSec": 240.7,
+      "tooltip": "No Mercy @ 240.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 243.5,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 242.5,
+      "tooltip": "Burst Strike @ 242.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 243.1,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 242.5,
+      "tooltip": "Hypervelocity @ 242.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16164,
+      "color": "#f59e0b",
+      "endSec": 243.8,
+      "iconPath": "/i/003000/003428.png",
+      "label": "Blo",
+      "startSec": 243.2,
+      "tooltip": "Bloodfest @ 243.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36937,
+      "color": "#3b82f6",
+      "endSec": 246.0,
+      "iconPath": "/i/003000/003437.png",
+      "label": "Rei",
+      "startSec": 245.0,
+      "tooltip": "Reign of Beasts @ 245.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 245.6,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 245.0,
+      "tooltip": "Blasting Zone @ 245.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16159,
+      "color": "#f59e0b",
+      "endSec": 246.3,
+      "iconPath": "/i/003000/003423.png",
+      "label": "Bow",
+      "startSec": 245.7,
+      "tooltip": "Bow Shock @ 245.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36938,
+      "color": "#3b82f6",
+      "endSec": 248.5,
+      "iconPath": "/i/003000/003438.png",
+      "label": "Nob",
+      "startSec": 247.5,
+      "tooltip": "Noble Blood @ 247.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36939,
+      "color": "#3b82f6",
+      "endSec": 251.0,
+      "iconPath": "/i/003000/003439.png",
+      "label": "Lio",
+      "startSec": 250.0,
+      "tooltip": "Lion Heart @ 250.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16153,
+      "color": "#3b82f6",
+      "endSec": 253.5,
+      "iconPath": "/i/003000/003417.png",
+      "label": "Son",
+      "startSec": 252.5,
+      "tooltip": "Sonic Break @ 252.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 256.0,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 255.0,
+      "tooltip": "Gnashing Fang @ 255.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 255.6,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 255.0,
+      "tooltip": "Jugular Rip @ 255.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 258.5,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 257.5,
+      "tooltip": "Savage Claw @ 257.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 258.1,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 257.5,
+      "tooltip": "Abdomen Tear @ 257.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 261.0,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 260.0,
+      "tooltip": "Wicked Talon @ 260.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 260.6,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 260.0,
+      "tooltip": "Eye Gouge @ 260.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 263.5,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 262.5,
+      "tooltip": "Keen Edge @ 262.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 266.0,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 265.0,
+      "tooltip": "Brutal Shell @ 265.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 268.5,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 267.5,
+      "tooltip": "Solid Barrel @ 267.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25760,
+      "color": "#3b82f6",
+      "endSec": 271.0,
+      "iconPath": "/i/003000/003432.png",
+      "label": "Dou",
+      "startSec": 270.0,
+      "tooltip": "Double Down @ 270.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 273.5,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 272.5,
+      "tooltip": "Keen Edge @ 272.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 276.0,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 275.0,
+      "tooltip": "Brutal Shell @ 275.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 275.6,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 275.0,
+      "tooltip": "Blasting Zone @ 275.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 278.5,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 277.5,
+      "tooltip": "Solid Barrel @ 277.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 281.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 280.0,
+      "tooltip": "Keen Edge @ 280.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 283.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 282.5,
+      "tooltip": "Brutal Shell @ 282.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 286.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 285.0,
+      "tooltip": "Solid Barrel @ 285.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 288.5,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 287.5,
+      "tooltip": "Burst Strike @ 287.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 288.1,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 287.5,
+      "tooltip": "Hypervelocity @ 287.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 291.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 290.0,
+      "tooltip": "Keen Edge @ 290.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 293.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 292.5,
+      "tooltip": "Brutal Shell @ 292.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 296.0,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 295.0,
+      "tooltip": "Solid Barrel @ 295.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 298.5,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 297.5,
+      "tooltip": "Gnashing Fang @ 297.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 298.1,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 297.5,
+      "tooltip": "Jugular Rip @ 297.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 301.0,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 300.0,
+      "tooltip": "Savage Claw @ 300.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 300.6,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 300.0,
+      "tooltip": "Abdomen Tear @ 300.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16138,
+      "color": "#f59e0b",
+      "endSec": 301.3,
+      "iconPath": "/i/003000/003402.png",
+      "label": "No ",
+      "startSec": 300.7,
+      "tooltip": "No Mercy @ 300.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 303.5,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 302.5,
+      "tooltip": "Wicked Talon @ 302.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 303.1,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 302.5,
+      "tooltip": "Eye Gouge @ 302.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16164,
+      "color": "#f59e0b",
+      "endSec": 303.8,
+      "iconPath": "/i/003000/003428.png",
+      "label": "Blo",
+      "startSec": 303.2,
+      "tooltip": "Bloodfest @ 303.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36937,
+      "color": "#3b82f6",
+      "endSec": 306.0,
+      "iconPath": "/i/003000/003437.png",
+      "label": "Rei",
+      "startSec": 305.0,
+      "tooltip": "Reign of Beasts @ 305.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 305.6,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 305.0,
+      "tooltip": "Blasting Zone @ 305.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16159,
+      "color": "#f59e0b",
+      "endSec": 306.3,
+      "iconPath": "/i/003000/003423.png",
+      "label": "Bow",
+      "startSec": 305.7,
+      "tooltip": "Bow Shock @ 305.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36938,
+      "color": "#3b82f6",
+      "endSec": 308.5,
+      "iconPath": "/i/003000/003438.png",
+      "label": "Nob",
+      "startSec": 307.5,
+      "tooltip": "Noble Blood @ 307.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36939,
+      "color": "#3b82f6",
+      "endSec": 311.0,
+      "iconPath": "/i/003000/003439.png",
+      "label": "Lio",
+      "startSec": 310.0,
+      "tooltip": "Lion Heart @ 310.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16153,
+      "color": "#3b82f6",
+      "endSec": 313.5,
+      "iconPath": "/i/003000/003417.png",
+      "label": "Son",
+      "startSec": 312.5,
+      "tooltip": "Sonic Break @ 312.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 316.0,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 315.0,
+      "tooltip": "Gnashing Fang @ 315.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 315.6,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 315.0,
+      "tooltip": "Jugular Rip @ 315.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 318.5,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 317.5,
+      "tooltip": "Savage Claw @ 317.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 318.1,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 317.5,
+      "tooltip": "Abdomen Tear @ 317.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 321.0,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 320.0,
+      "tooltip": "Wicked Talon @ 320.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 320.6,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 320.0,
+      "tooltip": "Eye Gouge @ 320.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 323.5,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 322.5,
+      "tooltip": "Keen Edge @ 322.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 326.0,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 325.0,
+      "tooltip": "Brutal Shell @ 325.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 328.5,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 327.5,
+      "tooltip": "Solid Barrel @ 327.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 331.0,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 330.0,
+      "tooltip": "Burst Strike @ 330.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 330.6,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 330.0,
+      "tooltip": "Hypervelocity @ 330.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 333.5,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 332.5,
+      "tooltip": "Burst Strike @ 332.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 333.1,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 332.5,
+      "tooltip": "Hypervelocity @ 332.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16162,
+      "color": "#3b82f6",
+      "endSec": 336.0,
+      "iconPath": "/i/003000/003426.png",
+      "label": "Bur",
+      "startSec": 335.0,
+      "tooltip": "Burst Strike @ 335.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25759,
+      "color": "#f59e0b",
+      "endSec": 335.6,
+      "iconPath": "/i/003000/003431.png",
+      "label": "Hyp",
+      "startSec": 335.0,
+      "tooltip": "Hypervelocity @ 335.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16165,
+      "color": "#f59e0b",
+      "endSec": 336.3,
+      "iconPath": "/i/003000/003429.png",
+      "label": "Bla",
+      "startSec": 335.7,
+      "tooltip": "Blasting Zone @ 335.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 338.5,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 337.5,
+      "tooltip": "Keen Edge @ 337.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 341.0,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 340.0,
+      "tooltip": "Brutal Shell @ 340.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16145,
+      "color": "#3b82f6",
+      "endSec": 343.5,
+      "iconPath": "/i/003000/003409.png",
+      "label": "Sol",
+      "startSec": 342.5,
+      "tooltip": "Solid Barrel @ 342.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16146,
+      "color": "#3b82f6",
+      "endSec": 346.0,
+      "iconPath": "/i/003000/003410.png",
+      "label": "Gna",
+      "startSec": 345.0,
+      "tooltip": "Gnashing Fang @ 345.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16156,
+      "color": "#f59e0b",
+      "endSec": 345.6,
+      "iconPath": "/i/003000/003420.png",
+      "label": "Jug",
+      "startSec": 345.0,
+      "tooltip": "Jugular Rip @ 345.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16147,
+      "color": "#3b82f6",
+      "endSec": 348.5,
+      "iconPath": "/i/003000/003411.png",
+      "label": "Sav",
+      "startSec": 347.5,
+      "tooltip": "Savage Claw @ 347.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16157,
+      "color": "#f59e0b",
+      "endSec": 348.1,
+      "iconPath": "/i/003000/003421.png",
+      "label": "Abd",
+      "startSec": 347.5,
+      "tooltip": "Abdomen Tear @ 347.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16150,
+      "color": "#3b82f6",
+      "endSec": 351.0,
+      "iconPath": "/i/003000/003414.png",
+      "label": "Wic",
+      "startSec": 350.0,
+      "tooltip": "Wicked Talon @ 350.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16158,
+      "color": "#f59e0b",
+      "endSec": 350.6,
+      "iconPath": "/i/003000/003422.png",
+      "label": "Eye",
+      "startSec": 350.0,
+      "tooltip": "Eye Gouge @ 350.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25760,
+      "color": "#3b82f6",
+      "endSec": 353.5,
+      "iconPath": "/i/003000/003432.png",
+      "label": "Dou",
+      "startSec": 352.5,
+      "tooltip": "Double Down @ 352.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16137,
+      "color": "#3b82f6",
+      "endSec": 356.0,
+      "iconPath": "/i/003000/003401.png",
+      "label": "Kee",
+      "startSec": 355.0,
+      "tooltip": "Keen Edge @ 355.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16139,
+      "color": "#3b82f6",
+      "endSec": 358.5,
+      "iconPath": "/i/003000/003403.png",
+      "label": "Bru",
+      "startSec": 357.5,
+      "tooltip": "Brutal Shell @ 357.5s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackCanonical": [],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 1858.42,
+      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16164,
+      "abilityName": "Bloodfest",
+      "children": [],
+      "kind": "overcap",
+      "lostPotency": 1260.0,
+      "summary": "Cartridges overcap at 2:31 \u2014 Bloodfest (wasted 3)",
+      "timeSec": 150.7
+    },
+    {
+      "abilityId": 16164,
+      "abilityName": "Bloodfest",
+      "children": [],
+      "kind": "overcap",
+      "lostPotency": 840.0,
+      "summary": "Cartridges overcap at 3:31 \u2014 Bloodfest (wasted 2)",
+      "timeSec": 210.7
+    },
+    {
+      "abilityId": 16164,
+      "abilityName": "Bloodfest",
+      "children": [],
+      "kind": "overcap",
+      "lostPotency": 840.0,
+      "summary": "Cartridges overcap at 4:31 \u2014 Bloodfest (wasted 2)",
+      "timeSec": 270.7
+    },
+    {
+      "abilityId": 16164,
+      "abilityName": "Bloodfest",
+      "children": [],
+      "kind": "overcap",
+      "lostPotency": 840.0,
+      "summary": "Cartridges overcap at 5:31 \u2014 Bloodfest (wasted 2)",
+      "timeSec": 330.7
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 16145,
+          "abilityName": "Solid Barrel",
+          "children": [],
+          "kind": "overcap",
+          "lostPotency": 420.0,
+          "summary": "Cartridges overcap at 0:32 \u2014 Solid Barrel (wasted 1)",
+          "timeSec": 32.5
+        },
+        {
+          "abilityId": 16164,
+          "abilityName": "Bloodfest",
+          "children": [],
+          "kind": "overcap",
+          "lostPotency": 420.0,
+          "summary": "Cartridges overcap at 1:31 \u2014 Bloodfest (wasted 1)",
+          "timeSec": 90.7
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 362.13,
+      "summary": "Other \u2014 2 small located losses below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25760,
+      "abilityName": "Double Down",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #9: cast Keen Edge, canonical opens Double Down (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 36937,
+      "abilityName": "Reign of Beasts",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #10: cast Brutal Shell, canonical opens Reign of Beasts (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 36938,
+      "abilityName": "Noble Blood",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #11: cast Solid Barrel, canonical opens Noble Blood (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 36939,
+      "abilityName": "Lion Heart",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #12: cast Keen Edge, canonical opens Lion Heart (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 0.0,
+        "tooltip": "Keen Edge  (GCD)  @  0:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16138,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003402.png",
+        "label": "No ",
+        "startSec": 0.0,
+        "tooltip": "No Mercy  (oGCD)  @  0:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16164,
+        "color": "#777777",
+        "endSec": 1.2,
+        "iconPath": "/i/003000/003428.png",
+        "label": "Blo",
+        "startSec": 0.7,
+        "tooltip": "Bloodfest  (oGCD)  @  0:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 2.5,
+        "tooltip": "Brutal Shell  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 2.5,
+        "tooltip": "Blasting Zone  (oGCD)  @  0:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16159,
+        "color": "#777777",
+        "endSec": 3.7,
+        "iconPath": "/i/003000/003423.png",
+        "label": "Bow",
+        "startSec": 3.2,
+        "tooltip": "Bow Shock  (oGCD)  @  0:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 5.0,
+        "tooltip": "Solid Barrel  (GCD)  @  0:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36937,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/003000/003437.png",
+        "label": "Rei",
+        "startSec": 7.5,
+        "tooltip": "Reign of Beasts  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36938,
+        "color": "#777777",
+        "endSec": 10.5,
+        "iconPath": "/i/003000/003438.png",
+        "label": "Nob",
+        "startSec": 10.0,
+        "tooltip": "Noble Blood  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36939,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/003000/003439.png",
+        "label": "Lio",
+        "startSec": 12.5,
+        "tooltip": "Lion Heart  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16153,
+        "color": "#777777",
+        "endSec": 15.5,
+        "iconPath": "/i/003000/003417.png",
+        "label": "Son",
+        "startSec": 15.0,
+        "tooltip": "Sonic Break  (GCD)  @  0:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25760,
+        "color": "#777777",
+        "endSec": 18.0,
+        "iconPath": "/i/003000/003432.png",
+        "label": "Dou",
+        "startSec": 17.5,
+        "tooltip": "Double Down  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 20.5,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 20.0,
+        "tooltip": "Keen Edge  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 23.0,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 22.5,
+        "tooltip": "Brutal Shell  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 25.5,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 25.0,
+        "tooltip": "Solid Barrel  (GCD)  @  0:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 28.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 27.5,
+        "tooltip": "Keen Edge  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 30.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 30.0,
+        "tooltip": "Brutal Shell  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 33.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 32.5,
+        "tooltip": "Solid Barrel  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 33.0,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 32.5,
+        "tooltip": "Blasting Zone  (oGCD)  @  0:32",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 35.0,
+        "tooltip": "Gnashing Fang  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 35.0,
+        "tooltip": "Jugular Rip  (oGCD)  @  0:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 37.5,
+        "tooltip": "Savage Claw  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 37.5,
+        "tooltip": "Abdomen Tear  (oGCD)  @  0:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 40.0,
+        "tooltip": "Wicked Talon  (GCD)  @  0:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 40.0,
+        "tooltip": "Eye Gouge  (oGCD)  @  0:40",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 43.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 42.5,
+        "tooltip": "Keen Edge  (GCD)  @  0:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 45.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 45.0,
+        "tooltip": "Brutal Shell  (GCD)  @  0:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 48.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 47.5,
+        "tooltip": "Solid Barrel  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 50.5,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 50.0,
+        "tooltip": "Gnashing Fang  (GCD)  @  0:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 50.5,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 50.0,
+        "tooltip": "Jugular Rip  (oGCD)  @  0:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 53.0,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 52.5,
+        "tooltip": "Savage Claw  (GCD)  @  0:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 53.0,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 52.5,
+        "tooltip": "Abdomen Tear  (oGCD)  @  0:52",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 55.5,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 55.0,
+        "tooltip": "Wicked Talon  (GCD)  @  0:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 55.5,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 55.0,
+        "tooltip": "Eye Gouge  (oGCD)  @  0:55",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 58.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 57.5,
+        "tooltip": "Keen Edge  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 60.0,
+        "tooltip": "Brutal Shell  (GCD)  @  1:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16138,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/003000/003402.png",
+        "label": "No ",
+        "startSec": 60.0,
+        "tooltip": "No Mercy  (oGCD)  @  1:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16164,
+        "color": "#777777",
+        "endSec": 61.2,
+        "iconPath": "/i/003000/003428.png",
+        "label": "Blo",
+        "startSec": 60.7,
+        "tooltip": "Bloodfest  (oGCD)  @  1:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 62.5,
+        "tooltip": "Solid Barrel  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 62.5,
+        "tooltip": "Blasting Zone  (oGCD)  @  1:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16159,
+        "color": "#777777",
+        "endSec": 63.7,
+        "iconPath": "/i/003000/003423.png",
+        "label": "Bow",
+        "startSec": 63.2,
+        "tooltip": "Bow Shock  (oGCD)  @  1:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36937,
+        "color": "#777777",
+        "endSec": 65.5,
+        "iconPath": "/i/003000/003437.png",
+        "label": "Rei",
+        "startSec": 65.0,
+        "tooltip": "Reign of Beasts  (GCD)  @  1:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36938,
+        "color": "#777777",
+        "endSec": 68.0,
+        "iconPath": "/i/003000/003438.png",
+        "label": "Nob",
+        "startSec": 67.5,
+        "tooltip": "Noble Blood  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36939,
+        "color": "#777777",
+        "endSec": 70.5,
+        "iconPath": "/i/003000/003439.png",
+        "label": "Lio",
+        "startSec": 70.0,
+        "tooltip": "Lion Heart  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16153,
+        "color": "#777777",
+        "endSec": 73.0,
+        "iconPath": "/i/003000/003417.png",
+        "label": "Son",
+        "startSec": 72.5,
+        "tooltip": "Sonic Break  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 75.5,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 75.0,
+        "tooltip": "Gnashing Fang  (GCD)  @  1:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 75.5,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 75.0,
+        "tooltip": "Jugular Rip  (oGCD)  @  1:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 78.0,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 77.5,
+        "tooltip": "Savage Claw  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 78.0,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 77.5,
+        "tooltip": "Abdomen Tear  (oGCD)  @  1:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 80.5,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 80.0,
+        "tooltip": "Wicked Talon  (GCD)  @  1:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 80.5,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 80.0,
+        "tooltip": "Eye Gouge  (oGCD)  @  1:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 83.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 82.5,
+        "tooltip": "Keen Edge  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 85.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 85.0,
+        "tooltip": "Brutal Shell  (GCD)  @  1:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 88.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 87.5,
+        "tooltip": "Solid Barrel  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25760,
+        "color": "#777777",
+        "endSec": 90.5,
+        "iconPath": "/i/003000/003432.png",
+        "label": "Dou",
+        "startSec": 90.0,
+        "tooltip": "Double Down  (GCD)  @  1:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16162,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/003000/003426.png",
+        "label": "Bur",
+        "startSec": 92.5,
+        "tooltip": "Burst Strike  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25759,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/003000/003431.png",
+        "label": "Hyp",
+        "startSec": 92.5,
+        "tooltip": "Hypervelocity  (oGCD)  @  1:32",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 93.7,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 93.2,
+        "tooltip": "Blasting Zone  (oGCD)  @  1:33",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 95.0,
+        "tooltip": "Keen Edge  (GCD)  @  1:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 98.0,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 97.5,
+        "tooltip": "Brutal Shell  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 100.5,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 100.0,
+        "tooltip": "Solid Barrel  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 103.0,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 102.5,
+        "tooltip": "Gnashing Fang  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 103.0,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 102.5,
+        "tooltip": "Jugular Rip  (oGCD)  @  1:42",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 105.5,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 105.0,
+        "tooltip": "Savage Claw  (GCD)  @  1:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 105.5,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 105.0,
+        "tooltip": "Abdomen Tear  (oGCD)  @  1:45",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 107.5,
+        "tooltip": "Wicked Talon  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 107.5,
+        "tooltip": "Eye Gouge  (oGCD)  @  1:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 110.5,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 110.0,
+        "tooltip": "Keen Edge  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 113.0,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 112.5,
+        "tooltip": "Brutal Shell  (GCD)  @  1:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 115.5,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 115.0,
+        "tooltip": "Solid Barrel  (GCD)  @  1:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16162,
+        "color": "#777777",
+        "endSec": 118.0,
+        "iconPath": "/i/003000/003426.png",
+        "label": "Bur",
+        "startSec": 117.5,
+        "tooltip": "Burst Strike  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25759,
+        "color": "#777777",
+        "endSec": 118.0,
+        "iconPath": "/i/003000/003431.png",
+        "label": "Hyp",
+        "startSec": 117.5,
+        "tooltip": "Hypervelocity  (oGCD)  @  1:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 120.5,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 120.0,
+        "tooltip": "Keen Edge  (GCD)  @  2:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16138,
+        "color": "#777777",
+        "endSec": 120.5,
+        "iconPath": "/i/003000/003402.png",
+        "label": "No ",
+        "startSec": 120.0,
+        "tooltip": "No Mercy  (oGCD)  @  2:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16164,
+        "color": "#777777",
+        "endSec": 121.2,
+        "iconPath": "/i/003000/003428.png",
+        "label": "Blo",
+        "startSec": 120.7,
+        "tooltip": "Bloodfest  (oGCD)  @  2:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 122.5,
+        "tooltip": "Brutal Shell  (GCD)  @  2:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 125.5,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 125.0,
+        "tooltip": "Solid Barrel  (GCD)  @  2:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 125.5,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 125.0,
+        "tooltip": "Blasting Zone  (oGCD)  @  2:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16159,
+        "color": "#777777",
+        "endSec": 126.2,
+        "iconPath": "/i/003000/003423.png",
+        "label": "Bow",
+        "startSec": 125.7,
+        "tooltip": "Bow Shock  (oGCD)  @  2:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36937,
+        "color": "#777777",
+        "endSec": 128.0,
+        "iconPath": "/i/003000/003437.png",
+        "label": "Rei",
+        "startSec": 127.5,
+        "tooltip": "Reign of Beasts  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36938,
+        "color": "#777777",
+        "endSec": 130.5,
+        "iconPath": "/i/003000/003438.png",
+        "label": "Nob",
+        "startSec": 130.0,
+        "tooltip": "Noble Blood  (GCD)  @  2:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36939,
+        "color": "#777777",
+        "endSec": 133.0,
+        "iconPath": "/i/003000/003439.png",
+        "label": "Lio",
+        "startSec": 132.5,
+        "tooltip": "Lion Heart  (GCD)  @  2:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16153,
+        "color": "#777777",
+        "endSec": 135.5,
+        "iconPath": "/i/003000/003417.png",
+        "label": "Son",
+        "startSec": 135.0,
+        "tooltip": "Sonic Break  (GCD)  @  2:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 138.0,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 137.5,
+        "tooltip": "Gnashing Fang  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 138.0,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 137.5,
+        "tooltip": "Jugular Rip  (oGCD)  @  2:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 140.5,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 140.0,
+        "tooltip": "Savage Claw  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 140.5,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 140.0,
+        "tooltip": "Abdomen Tear  (oGCD)  @  2:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 143.0,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 142.5,
+        "tooltip": "Wicked Talon  (GCD)  @  2:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 143.0,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 142.5,
+        "tooltip": "Eye Gouge  (oGCD)  @  2:22",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 145.5,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 145.0,
+        "tooltip": "Keen Edge  (GCD)  @  2:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 148.0,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 147.5,
+        "tooltip": "Brutal Shell  (GCD)  @  2:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 150.5,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 150.0,
+        "tooltip": "Solid Barrel  (GCD)  @  2:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25760,
+        "color": "#777777",
+        "endSec": 153.0,
+        "iconPath": "/i/003000/003432.png",
+        "label": "Dou",
+        "startSec": 152.5,
+        "tooltip": "Double Down  (GCD)  @  2:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 155.5,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 155.0,
+        "tooltip": "Keen Edge  (GCD)  @  2:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 155.5,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 155.0,
+        "tooltip": "Blasting Zone  (oGCD)  @  2:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 158.0,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 157.5,
+        "tooltip": "Brutal Shell  (GCD)  @  2:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 160.5,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 160.0,
+        "tooltip": "Solid Barrel  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 163.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 162.5,
+        "tooltip": "Keen Edge  (GCD)  @  2:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 165.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 165.0,
+        "tooltip": "Brutal Shell  (GCD)  @  2:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 168.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 167.5,
+        "tooltip": "Solid Barrel  (GCD)  @  2:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 170.5,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 170.0,
+        "tooltip": "Gnashing Fang  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 170.5,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 170.0,
+        "tooltip": "Jugular Rip  (oGCD)  @  2:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 173.0,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 172.5,
+        "tooltip": "Savage Claw  (GCD)  @  2:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 173.0,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 172.5,
+        "tooltip": "Abdomen Tear  (oGCD)  @  2:52",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 175.5,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 175.0,
+        "tooltip": "Wicked Talon  (GCD)  @  2:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 175.5,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 175.0,
+        "tooltip": "Eye Gouge  (oGCD)  @  2:55",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 178.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 177.5,
+        "tooltip": "Keen Edge  (GCD)  @  2:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 180.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 180.0,
+        "tooltip": "Brutal Shell  (GCD)  @  3:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16138,
+        "color": "#777777",
+        "endSec": 180.5,
+        "iconPath": "/i/003000/003402.png",
+        "label": "No ",
+        "startSec": 180.0,
+        "tooltip": "No Mercy  (oGCD)  @  3:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16164,
+        "color": "#777777",
+        "endSec": 181.2,
+        "iconPath": "/i/003000/003428.png",
+        "label": "Blo",
+        "startSec": 180.7,
+        "tooltip": "Bloodfest  (oGCD)  @  3:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 183.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 182.5,
+        "tooltip": "Solid Barrel  (GCD)  @  3:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36937,
+        "color": "#777777",
+        "endSec": 185.5,
+        "iconPath": "/i/003000/003437.png",
+        "label": "Rei",
+        "startSec": 185.0,
+        "tooltip": "Reign of Beasts  (GCD)  @  3:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 185.5,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 185.0,
+        "tooltip": "Blasting Zone  (oGCD)  @  3:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16159,
+        "color": "#777777",
+        "endSec": 186.2,
+        "iconPath": "/i/003000/003423.png",
+        "label": "Bow",
+        "startSec": 185.7,
+        "tooltip": "Bow Shock  (oGCD)  @  3:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36938,
+        "color": "#777777",
+        "endSec": 188.0,
+        "iconPath": "/i/003000/003438.png",
+        "label": "Nob",
+        "startSec": 187.5,
+        "tooltip": "Noble Blood  (GCD)  @  3:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36939,
+        "color": "#777777",
+        "endSec": 190.5,
+        "iconPath": "/i/003000/003439.png",
+        "label": "Lio",
+        "startSec": 190.0,
+        "tooltip": "Lion Heart  (GCD)  @  3:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16153,
+        "color": "#777777",
+        "endSec": 193.0,
+        "iconPath": "/i/003000/003417.png",
+        "label": "Son",
+        "startSec": 192.5,
+        "tooltip": "Sonic Break  (GCD)  @  3:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 195.5,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 195.0,
+        "tooltip": "Gnashing Fang  (GCD)  @  3:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 195.5,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 195.0,
+        "tooltip": "Jugular Rip  (oGCD)  @  3:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 198.0,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 197.5,
+        "tooltip": "Savage Claw  (GCD)  @  3:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 198.0,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 197.5,
+        "tooltip": "Abdomen Tear  (oGCD)  @  3:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 200.5,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 200.0,
+        "tooltip": "Wicked Talon  (GCD)  @  3:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 200.5,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 200.0,
+        "tooltip": "Eye Gouge  (oGCD)  @  3:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 203.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 202.5,
+        "tooltip": "Keen Edge  (GCD)  @  3:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 205.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 205.0,
+        "tooltip": "Brutal Shell  (GCD)  @  3:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 208.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 207.5,
+        "tooltip": "Solid Barrel  (GCD)  @  3:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16162,
+        "color": "#777777",
+        "endSec": 210.5,
+        "iconPath": "/i/003000/003426.png",
+        "label": "Bur",
+        "startSec": 210.0,
+        "tooltip": "Burst Strike  (GCD)  @  3:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25759,
+        "color": "#777777",
+        "endSec": 210.5,
+        "iconPath": "/i/003000/003431.png",
+        "label": "Hyp",
+        "startSec": 210.0,
+        "tooltip": "Hypervelocity  (oGCD)  @  3:30",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25760,
+        "color": "#777777",
+        "endSec": 213.0,
+        "iconPath": "/i/003000/003432.png",
+        "label": "Dou",
+        "startSec": 212.5,
+        "tooltip": "Double Down  (GCD)  @  3:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 215.5,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 215.0,
+        "tooltip": "Keen Edge  (GCD)  @  3:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 215.5,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 215.0,
+        "tooltip": "Blasting Zone  (oGCD)  @  3:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 218.0,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 217.5,
+        "tooltip": "Brutal Shell  (GCD)  @  3:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 220.5,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 220.0,
+        "tooltip": "Solid Barrel  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 223.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 222.5,
+        "tooltip": "Keen Edge  (GCD)  @  3:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 225.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 225.0,
+        "tooltip": "Brutal Shell  (GCD)  @  3:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 228.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 227.5,
+        "tooltip": "Solid Barrel  (GCD)  @  3:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 230.5,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 230.0,
+        "tooltip": "Gnashing Fang  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 230.5,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 230.0,
+        "tooltip": "Jugular Rip  (oGCD)  @  3:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 233.0,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 232.5,
+        "tooltip": "Savage Claw  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 233.0,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 232.5,
+        "tooltip": "Abdomen Tear  (oGCD)  @  3:52",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 235.5,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 235.0,
+        "tooltip": "Wicked Talon  (GCD)  @  3:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 235.5,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 235.0,
+        "tooltip": "Eye Gouge  (oGCD)  @  3:55",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 238.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 237.5,
+        "tooltip": "Keen Edge  (GCD)  @  3:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 240.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 240.0,
+        "tooltip": "Brutal Shell  (GCD)  @  4:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16138,
+        "color": "#777777",
+        "endSec": 240.5,
+        "iconPath": "/i/003000/003402.png",
+        "label": "No ",
+        "startSec": 240.0,
+        "tooltip": "No Mercy  (oGCD)  @  4:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16164,
+        "color": "#777777",
+        "endSec": 241.2,
+        "iconPath": "/i/003000/003428.png",
+        "label": "Blo",
+        "startSec": 240.7,
+        "tooltip": "Bloodfest  (oGCD)  @  4:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 243.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 242.5,
+        "tooltip": "Solid Barrel  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36937,
+        "color": "#777777",
+        "endSec": 245.5,
+        "iconPath": "/i/003000/003437.png",
+        "label": "Rei",
+        "startSec": 245.0,
+        "tooltip": "Reign of Beasts  (GCD)  @  4:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 245.5,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 245.0,
+        "tooltip": "Blasting Zone  (oGCD)  @  4:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16159,
+        "color": "#777777",
+        "endSec": 246.2,
+        "iconPath": "/i/003000/003423.png",
+        "label": "Bow",
+        "startSec": 245.7,
+        "tooltip": "Bow Shock  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36938,
+        "color": "#777777",
+        "endSec": 248.0,
+        "iconPath": "/i/003000/003438.png",
+        "label": "Nob",
+        "startSec": 247.5,
+        "tooltip": "Noble Blood  (GCD)  @  4:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36939,
+        "color": "#777777",
+        "endSec": 250.5,
+        "iconPath": "/i/003000/003439.png",
+        "label": "Lio",
+        "startSec": 250.0,
+        "tooltip": "Lion Heart  (GCD)  @  4:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16153,
+        "color": "#777777",
+        "endSec": 253.0,
+        "iconPath": "/i/003000/003417.png",
+        "label": "Son",
+        "startSec": 252.5,
+        "tooltip": "Sonic Break  (GCD)  @  4:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 255.5,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 255.0,
+        "tooltip": "Gnashing Fang  (GCD)  @  4:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 255.5,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 255.0,
+        "tooltip": "Jugular Rip  (oGCD)  @  4:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 258.0,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 257.5,
+        "tooltip": "Savage Claw  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 258.0,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 257.5,
+        "tooltip": "Abdomen Tear  (oGCD)  @  4:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 260.5,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 260.0,
+        "tooltip": "Wicked Talon  (GCD)  @  4:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 260.5,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 260.0,
+        "tooltip": "Eye Gouge  (oGCD)  @  4:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 263.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 262.5,
+        "tooltip": "Keen Edge  (GCD)  @  4:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 265.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 265.0,
+        "tooltip": "Brutal Shell  (GCD)  @  4:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 268.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 267.5,
+        "tooltip": "Solid Barrel  (GCD)  @  4:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16162,
+        "color": "#777777",
+        "endSec": 270.5,
+        "iconPath": "/i/003000/003426.png",
+        "label": "Bur",
+        "startSec": 270.0,
+        "tooltip": "Burst Strike  (GCD)  @  4:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25759,
+        "color": "#777777",
+        "endSec": 270.5,
+        "iconPath": "/i/003000/003431.png",
+        "label": "Hyp",
+        "startSec": 270.0,
+        "tooltip": "Hypervelocity  (oGCD)  @  4:30",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25760,
+        "color": "#777777",
+        "endSec": 273.0,
+        "iconPath": "/i/003000/003432.png",
+        "label": "Dou",
+        "startSec": 272.5,
+        "tooltip": "Double Down  (GCD)  @  4:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 275.5,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 275.0,
+        "tooltip": "Keen Edge  (GCD)  @  4:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 275.5,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 275.0,
+        "tooltip": "Blasting Zone  (oGCD)  @  4:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 278.0,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 277.5,
+        "tooltip": "Brutal Shell  (GCD)  @  4:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 280.5,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 280.0,
+        "tooltip": "Solid Barrel  (GCD)  @  4:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 283.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 282.5,
+        "tooltip": "Keen Edge  (GCD)  @  4:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 285.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 285.0,
+        "tooltip": "Brutal Shell  (GCD)  @  4:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 288.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 287.5,
+        "tooltip": "Solid Barrel  (GCD)  @  4:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 290.5,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 290.0,
+        "tooltip": "Gnashing Fang  (GCD)  @  4:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 290.5,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 290.0,
+        "tooltip": "Jugular Rip  (oGCD)  @  4:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 293.0,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 292.5,
+        "tooltip": "Savage Claw  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 293.0,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 292.5,
+        "tooltip": "Abdomen Tear  (oGCD)  @  4:52",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 295.5,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 295.0,
+        "tooltip": "Wicked Talon  (GCD)  @  4:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 295.5,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 295.0,
+        "tooltip": "Eye Gouge  (oGCD)  @  4:55",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 298.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 297.5,
+        "tooltip": "Keen Edge  (GCD)  @  4:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 300.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 300.0,
+        "tooltip": "Brutal Shell  (GCD)  @  5:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16138,
+        "color": "#777777",
+        "endSec": 300.5,
+        "iconPath": "/i/003000/003402.png",
+        "label": "No ",
+        "startSec": 300.0,
+        "tooltip": "No Mercy  (oGCD)  @  5:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16164,
+        "color": "#777777",
+        "endSec": 301.2,
+        "iconPath": "/i/003000/003428.png",
+        "label": "Blo",
+        "startSec": 300.7,
+        "tooltip": "Bloodfest  (oGCD)  @  5:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 303.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 302.5,
+        "tooltip": "Solid Barrel  (GCD)  @  5:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36937,
+        "color": "#777777",
+        "endSec": 305.5,
+        "iconPath": "/i/003000/003437.png",
+        "label": "Rei",
+        "startSec": 305.0,
+        "tooltip": "Reign of Beasts  (GCD)  @  5:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 305.5,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 305.0,
+        "tooltip": "Blasting Zone  (oGCD)  @  5:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16159,
+        "color": "#777777",
+        "endSec": 306.2,
+        "iconPath": "/i/003000/003423.png",
+        "label": "Bow",
+        "startSec": 305.7,
+        "tooltip": "Bow Shock  (oGCD)  @  5:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36938,
+        "color": "#777777",
+        "endSec": 308.0,
+        "iconPath": "/i/003000/003438.png",
+        "label": "Nob",
+        "startSec": 307.5,
+        "tooltip": "Noble Blood  (GCD)  @  5:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36939,
+        "color": "#777777",
+        "endSec": 310.5,
+        "iconPath": "/i/003000/003439.png",
+        "label": "Lio",
+        "startSec": 310.0,
+        "tooltip": "Lion Heart  (GCD)  @  5:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16153,
+        "color": "#777777",
+        "endSec": 313.0,
+        "iconPath": "/i/003000/003417.png",
+        "label": "Son",
+        "startSec": 312.5,
+        "tooltip": "Sonic Break  (GCD)  @  5:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 315.5,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 315.0,
+        "tooltip": "Gnashing Fang  (GCD)  @  5:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 315.5,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 315.0,
+        "tooltip": "Jugular Rip  (oGCD)  @  5:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 318.0,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 317.5,
+        "tooltip": "Savage Claw  (GCD)  @  5:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 318.0,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 317.5,
+        "tooltip": "Abdomen Tear  (oGCD)  @  5:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 320.5,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 320.0,
+        "tooltip": "Wicked Talon  (GCD)  @  5:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 320.5,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 320.0,
+        "tooltip": "Eye Gouge  (oGCD)  @  5:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 323.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 322.5,
+        "tooltip": "Keen Edge  (GCD)  @  5:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 325.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 325.0,
+        "tooltip": "Brutal Shell  (GCD)  @  5:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 328.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 327.5,
+        "tooltip": "Solid Barrel  (GCD)  @  5:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16162,
+        "color": "#777777",
+        "endSec": 330.5,
+        "iconPath": "/i/003000/003426.png",
+        "label": "Bur",
+        "startSec": 330.0,
+        "tooltip": "Burst Strike  (GCD)  @  5:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25759,
+        "color": "#777777",
+        "endSec": 330.5,
+        "iconPath": "/i/003000/003431.png",
+        "label": "Hyp",
+        "startSec": 330.0,
+        "tooltip": "Hypervelocity  (oGCD)  @  5:30",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25760,
+        "color": "#777777",
+        "endSec": 333.0,
+        "iconPath": "/i/003000/003432.png",
+        "label": "Dou",
+        "startSec": 332.5,
+        "tooltip": "Double Down  (GCD)  @  5:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 335.5,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 335.0,
+        "tooltip": "Keen Edge  (GCD)  @  5:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16165,
+        "color": "#777777",
+        "endSec": 335.5,
+        "iconPath": "/i/003000/003429.png",
+        "label": "Bla",
+        "startSec": 335.0,
+        "tooltip": "Blasting Zone  (oGCD)  @  5:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 338.0,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 337.5,
+        "tooltip": "Brutal Shell  (GCD)  @  5:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 340.5,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 340.0,
+        "tooltip": "Solid Barrel  (GCD)  @  5:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 343.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 342.5,
+        "tooltip": "Keen Edge  (GCD)  @  5:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16139,
+        "color": "#777777",
+        "endSec": 345.5,
+        "iconPath": "/i/003000/003403.png",
+        "label": "Bru",
+        "startSec": 345.0,
+        "tooltip": "Brutal Shell  (GCD)  @  5:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16145,
+        "color": "#777777",
+        "endSec": 348.0,
+        "iconPath": "/i/003000/003409.png",
+        "label": "Sol",
+        "startSec": 347.5,
+        "tooltip": "Solid Barrel  (GCD)  @  5:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16146,
+        "color": "#777777",
+        "endSec": 350.5,
+        "iconPath": "/i/003000/003410.png",
+        "label": "Gna",
+        "startSec": 350.0,
+        "tooltip": "Gnashing Fang  (GCD)  @  5:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16156,
+        "color": "#777777",
+        "endSec": 350.5,
+        "iconPath": "/i/003000/003420.png",
+        "label": "Jug",
+        "startSec": 350.0,
+        "tooltip": "Jugular Rip  (oGCD)  @  5:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16147,
+        "color": "#777777",
+        "endSec": 353.0,
+        "iconPath": "/i/003000/003411.png",
+        "label": "Sav",
+        "startSec": 352.5,
+        "tooltip": "Savage Claw  (GCD)  @  5:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16157,
+        "color": "#777777",
+        "endSec": 353.0,
+        "iconPath": "/i/003000/003421.png",
+        "label": "Abd",
+        "startSec": 352.5,
+        "tooltip": "Abdomen Tear  (oGCD)  @  5:52",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16150,
+        "color": "#777777",
+        "endSec": 355.5,
+        "iconPath": "/i/003000/003414.png",
+        "label": "Wic",
+        "startSec": 355.0,
+        "tooltip": "Wicked Talon  (GCD)  @  5:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16158,
+        "color": "#777777",
+        "endSec": 355.5,
+        "iconPath": "/i/003000/003422.png",
+        "label": "Eye",
+        "startSec": 355.0,
+        "tooltip": "Eye Gouge  (oGCD)  @  5:55",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16137,
+        "color": "#777777",
+        "endSec": 358.0,
+        "iconPath": "/i/003000/003401.png",
+        "label": "Kee",
+        "startSec": 357.5,
+        "tooltip": "Keen Edge  (GCD)  @  5:58",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 107698.23,
+    "efficiencyPct": 94.72,
+    "fightDurationSec": 360.0,
+    "idealizedPotency": 113698.78,
+    "killTimeSec": 360,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

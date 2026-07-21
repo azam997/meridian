@@ -1,0 +1,3501 @@
+{
+  "abilityMeta": {
+    "16527": {
+      "iconPath": "/i/003000/003231.png",
+      "id": 16527,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Engagement"
+    },
+    "16530": {
+      "iconPath": "/i/003000/003234.png",
+      "id": 16530,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Scorch"
+    },
+    "25855": {
+      "iconPath": "/i/003000/003235.png",
+      "id": 25855,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Verthunder III"
+    },
+    "25856": {
+      "iconPath": "/i/003000/003236.png",
+      "id": 25856,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Veraero III"
+    },
+    "25858": {
+      "iconPath": "/i/003000/003238.png",
+      "id": 25858,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Resolution"
+    },
+    "37004": {
+      "iconPath": "/i/003000/003241.png",
+      "id": 37004,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Jolt III"
+    },
+    "37005": {
+      "iconPath": "/i/003000/003242.png",
+      "id": 37005,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Vice of Thorns"
+    },
+    "37006": {
+      "iconPath": "/i/003000/003243.png",
+      "id": 37006,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Grand Impact"
+    },
+    "37007": {
+      "iconPath": "/i/003000/003244.png",
+      "id": 37007,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Prefulgence"
+    },
+    "7506": {
+      "iconPath": "/i/003000/003204.png",
+      "id": 7506,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Corps-a-corps"
+    },
+    "7510": {
+      "iconPath": "/i/003000/003208.png",
+      "id": 7510,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Verfire"
+    },
+    "7511": {
+      "iconPath": "/i/003000/003209.png",
+      "id": 7511,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Verstone"
+    },
+    "7517": {
+      "iconPath": "/i/003000/003212.png",
+      "id": 7517,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Fleche"
+    },
+    "7518": {
+      "iconPath": "/i/003000/003214.png",
+      "id": 7518,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Acceleration"
+    },
+    "7519": {
+      "iconPath": "/i/003000/003217.png",
+      "id": 7519,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Contre Sixte"
+    },
+    "7520": {
+      "iconPath": "/i/003000/003218.png",
+      "id": 7520,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Embolden"
+    },
+    "7521": {
+      "iconPath": "/i/003000/003219.png",
+      "id": 7521,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Manafication"
+    },
+    "7525": {
+      "iconPath": "/i/003000/003223.png",
+      "id": 7525,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Verflare"
+    },
+    "7526": {
+      "iconPath": "/i/003000/003224.png",
+      "id": 7526,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Verholy"
+    },
+    "7527": {
+      "iconPath": "/i/003000/003225.png",
+      "id": 7527,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Enchanted Riposte"
+    },
+    "7528": {
+      "iconPath": "/i/003000/003226.png",
+      "id": 7528,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Enchanted Zwerchhau"
+    },
+    "7529": {
+      "iconPath": "/i/003000/003227.png",
+      "id": 7529,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Enchanted Redoublement"
+    },
+    "7561": {
+      "iconPath": "/i/000000/000866.png",
+      "id": 7561,
+      "isDefensive": true,
+      "isOgcd": true,
+      "name": "Swiftcast"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "16530": 1,
+        "25855": 12,
+        "25856": 21,
+        "25858": 1,
+        "37004": 11,
+        "7511": 1,
+        "7517": 1,
+        "7518": 1,
+        "7519": 1,
+        "7520": 1,
+        "7521": 1,
+        "7526": 1,
+        "7527": 1,
+        "7528": 1,
+        "7529": 1
+      },
+      "totalCasts": 56
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": [
+        "Embolden"
+      ]
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 439.0,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 2.0,
+        "idleLostPotency": 878.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 5.0,
+        "worstClips": [],
+        "worstIdle": [
+          [
+            47.5,
+            5.0
+          ]
+        ]
+      },
+      "downtimeSource": "fallback_heuristic"
+    },
+    "Drift": {
+      "downtimeSource": "fallback_heuristic",
+      "downtimeWindows": [],
+      "fightDurationSec": 122.5,
+      "findings": [
+        {
+          "abilityId": 7517,
+          "abilityName": "Fleche",
+          "cappedSeconds": 97.5,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 3.0,
+          "lostPotency": 1440.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7519,
+          "abilityName": "Contre Sixte",
+          "cappedSeconds": 91.0,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 2.0,
+          "lostPotency": 840.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7518,
+          "abilityName": "Acceleration",
+          "cappedSeconds": 67.5,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 1.0,
+          "lostPotency": 250.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7521,
+          "abilityName": "Manafication",
+          "cappedSeconds": 49.0,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7520,
+          "abilityName": "Embolden",
+          "cappedSeconds": 48.5,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 25856,
+          "expectedId": 25855,
+          "lostPotency": 0.0,
+          "position": 4,
+          "summary": "Opener slot #4: cast Veraero III, canonical uses Verthunder III (same potency)"
+        },
+        {
+          "actualId": 25855,
+          "expectedId": 7527,
+          "lostPotency": 0.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Verthunder III, canonical uses Enchanted Riposte (same potency)"
+        },
+        {
+          "actualId": 37004,
+          "expectedId": 7528,
+          "lostPotency": 20.0,
+          "position": 6,
+          "summary": "Opener slot #6: cast Jolt III (360p), canonical uses Enchanted Zwerchhau (380p) \u2014 -20p"
+        },
+        {
+          "actualId": 25856,
+          "expectedId": 7529,
+          "lostPotency": 120.0,
+          "position": 7,
+          "summary": "Opener slot #7: cast Veraero III (440p), canonical uses Enchanted Redoublement (560p) \u2014 -120p"
+        },
+        {
+          "actualId": 25855,
+          "expectedId": 7526,
+          "lostPotency": 210.0,
+          "position": 8,
+          "summary": "Opener slot #8: cast Verthunder III (440p), canonical uses Verholy (650p) \u2014 -210p"
+        },
+        {
+          "actualId": 37004,
+          "expectedId": 16530,
+          "lostPotency": 390.0,
+          "position": 9,
+          "summary": "Opener slot #9: cast Jolt III (360p), canonical uses Scorch (750p) \u2014 -390p"
+        },
+        {
+          "actualId": 25856,
+          "expectedId": 25858,
+          "lostPotency": 410.0,
+          "position": 10,
+          "summary": "Opener slot #10: cast Veraero III (440p), canonical uses Resolution (850p) \u2014 -410p"
+        },
+        {
+          "actualId": 25855,
+          "expectedId": 37006,
+          "lostPotency": 160.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Verthunder III (440p), canonical uses Grand Impact (600p) \u2014 -160p"
+        },
+        {
+          "actualId": 37004,
+          "expectedId": 7510,
+          "lostPotency": 20.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Jolt III (360p), canonical uses Verfire (380p) \u2014 -20p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": [
+        {
+          "abilityId": 25856,
+          "abilityName": "Veraero III",
+          "gauge": "white_mana",
+          "lostPotency": 24.0,
+          "timeSec": 110.0,
+          "wasted": 6
+        },
+        {
+          "abilityId": 25856,
+          "abilityName": "Veraero III",
+          "gauge": "white_mana",
+          "lostPotency": 24.0,
+          "timeSec": 112.5,
+          "wasted": 6
+        },
+        {
+          "abilityId": 7511,
+          "abilityName": "Verstone",
+          "gauge": "white_mana",
+          "lostPotency": 20.0,
+          "timeSec": 115.0,
+          "wasted": 5
+        },
+        {
+          "abilityId": 25856,
+          "abilityName": "Veraero III",
+          "gauge": "white_mana",
+          "lostPotency": 12.0,
+          "timeSec": 107.5,
+          "wasted": 3
+        },
+        {
+          "abilityId": 37004,
+          "abilityName": "Jolt III",
+          "gauge": "white_mana",
+          "lostPotency": 8.0,
+          "timeSec": 117.5,
+          "wasted": 2
+        }
+      ]
+    },
+    "Procs": {
+      "lostPotency": 0,
+      "overwriteEvents": [],
+      "overwrites": 0,
+      "totalGrants": 1,
+      "totalUsed": 1,
+      "totalWasted": 0,
+      "utilizationPct": 100.0,
+      "verfireGrants": 0,
+      "verfireUsed": 0,
+      "verfireWasted": 0,
+      "verstoneGrants": 1,
+      "verstoneUsed": 1,
+      "verstoneWasted": 0
+    },
+    "Scoring": {
+      "deliveredObserved": 23290.0,
+      "deliveredPotency": 23290.0,
+      "downtimeSource": "fallback_heuristic",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "7518": 189.85,
+        "7520": 793.98,
+        "7521": 2795.38
+      },
+      "fightDurationSec": 122.5,
+      "idealizedLenient": 37801.07,
+      "idealizedMaster": 37231.15,
+      "idealizedObserved": 37014.96,
+      "idealizedPotency": 37801.07,
+      "idealizedStrict": 37801.07,
+      "masterBuffIntervals": [
+        [
+          8.4,
+          28.4,
+          1.04
+        ]
+      ],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "procBudget": 1,
+      "simContext": {
+        "gcdBaseSec": 2.5,
+        "payload": 1
+      },
+      "tinctureLoss": 495.67,
+      "tinctureLossTimeSec": 30.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 1
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 56"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Veraero III",
+          21,
+          0
+        ],
+        [
+          "Verthunder III",
+          12,
+          0
+        ],
+        [
+          "Jolt III",
+          11,
+          0
+        ],
+        [
+          "Embolden",
+          1,
+          0
+        ],
+        [
+          "Manafication",
+          1,
+          0
+        ],
+        [
+          "Resolution",
+          1,
+          0
+        ],
+        [
+          "Verholy",
+          1,
+          0
+        ],
+        [
+          "Enchanted Riposte",
+          1,
+          0
+        ],
+        [
+          "Enchanted Zwerchhau",
+          1,
+          0
+        ],
+        [
+          "Enchanted Redoublement",
+          1,
+          0
+        ],
+        [
+          "Contre Sixte",
+          1,
+          0
+        ],
+        [
+          "Scorch",
+          1,
+          0
+        ],
+        [
+          "Verstone",
+          1,
+          0
+        ],
+        [
+          "Fleche",
+          1,
+          0
+        ],
+        [
+          "Acceleration",
+          1,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No burst-alignment opportunities flagged."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "[idle] 5.0s idle (2.0 GCDs) \u2248 -878p"
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 439p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "[drift] Fleche: 1 casts, drifted 97.5s \u2248 -1440p (ref avg -0p)",
+        "[drift] Contre Sixte: 1 casts, drifted 91.0s \u2248 -840p (ref avg -0p)",
+        "[drift] Acceleration: 1 casts, drifted 67.5s \u2248 -250p (ref avg -0p)"
+      ],
+      "summaryLines": [
+        "Total drift cost: -2530p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Fleche",
+          1,
+          97.5,
+          1440,
+          0,
+          "+1440"
+        ],
+        [
+          "Contre Sixte",
+          1,
+          91.0,
+          840,
+          0,
+          "+840"
+        ],
+        [
+          "Acceleration",
+          1,
+          67.5,
+          250,
+          0,
+          "+250"
+        ],
+        [
+          "Manafication",
+          1,
+          49.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Embolden",
+          1,
+          48.5,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #6: cast Jolt III (360p), canonical uses Enchanted Zwerchhau (380p) \u2014 -20p",
+        "[opener] Opener slot #7: cast Veraero III (440p), canonical uses Enchanted Redoublement (560p) \u2014 -120p",
+        "[opener] Opener slot #8: cast Verthunder III (440p), canonical uses Verholy (650p) \u2014 -210p",
+        "[opener] Opener slot #9: cast Jolt III (360p), canonical uses Scorch (750p) \u2014 -390p",
+        "[opener] Opener slot #10: cast Veraero III (440p), canonical uses Resolution (850p) \u2014 -410p",
+        "[opener] Opener slot #11: cast Verthunder III (440p), canonical uses Grand Impact (600p) \u2014 -160p",
+        "[opener] Opener slot #12: cast Jolt III (360p), canonical uses Verfire (380p) \u2014 -20p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 1330p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          4,
+          "Verthunder III",
+          "Veraero III",
+          0
+        ],
+        [
+          5,
+          "Enchanted Riposte",
+          "Verthunder III",
+          0
+        ],
+        [
+          6,
+          "Enchanted Zwerchhau",
+          "Jolt III",
+          20
+        ],
+        [
+          7,
+          "Enchanted Redoublement",
+          "Veraero III",
+          120
+        ],
+        [
+          8,
+          "Verholy",
+          "Verthunder III",
+          210
+        ],
+        [
+          9,
+          "Scorch",
+          "Jolt III",
+          390
+        ],
+        [
+          10,
+          "Resolution",
+          "Veraero III",
+          410
+        ],
+        [
+          11,
+          "Grand Impact",
+          "Verthunder III",
+          160
+        ],
+        [
+          12,
+          "Verfire",
+          "Jolt III",
+          20
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -88p",
+        "  White_mana: -88p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "1:50",
+          "white_mana",
+          "Veraero III",
+          6,
+          24
+        ],
+        [
+          "1:52",
+          "white_mana",
+          "Veraero III",
+          6,
+          24
+        ],
+        [
+          "1:55",
+          "white_mana",
+          "Verstone",
+          5,
+          20
+        ],
+        [
+          "1:48",
+          "white_mana",
+          "Veraero III",
+          3,
+          12
+        ],
+        [
+          "1:58",
+          "white_mana",
+          "Jolt III",
+          2,
+          8
+        ]
+      ]
+    },
+    "Procs": {
+      "aspectName": "Procs",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 23290.0,
+    "downtimeSource": "fallback_heuristic",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 61.61,
+    "efficiencyPctLenient": 61.61,
+    "efficiencyPctMaster": 62.56,
+    "efficiencyPctObserved": 62.92,
+    "efficiencyPctStrict": 61.61,
+    "idealizedMaster": 37231.15,
+    "idealizedObserved": 37014.96,
+    "killTimeSec": 122,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "RedMage"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 37801.07,
+    "yourIdealizedPotencyLenient": 37801.07,
+    "yourPotency": 23290.0
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 30.0,
+      "multiplier": 1.08,
+      "startSec": 0.0
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": -4.0,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": -5.0,
+      "tooltip": "Verthunder III @ -5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 0.0,
+      "tooltip": "Veraero III @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7520,
+      "color": "#f59e0b",
+      "endSec": 0.6,
+      "iconPath": "/i/003000/003218.png",
+      "label": "Emb",
+      "startSec": 0.0,
+      "tooltip": "Embolden @ 0.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37005,
+      "color": "#f59e0b",
+      "endSec": 1.3,
+      "iconPath": "/i/003000/003242.png",
+      "label": "Vic",
+      "startSec": 0.7,
+      "tooltip": "Vice of Thorns @ 0.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7510,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/003000/003208.png",
+      "label": "Ver",
+      "startSec": 2.5,
+      "tooltip": "Verfire @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7518,
+      "color": "#f59e0b",
+      "endSec": 3.1,
+      "iconPath": "/i/003000/003214.png",
+      "label": "Acc",
+      "startSec": 2.5,
+      "tooltip": "Acceleration @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37006,
+      "color": "#3b82f6",
+      "endSec": 6.0,
+      "iconPath": "/i/003000/003243.png",
+      "label": "Gra",
+      "startSec": 5.0,
+      "tooltip": "Grand Impact @ 5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7521,
+      "color": "#f59e0b",
+      "endSec": 5.6,
+      "iconPath": "/i/003000/003219.png",
+      "label": "Man",
+      "startSec": 5.0,
+      "tooltip": "Manafication @ 5.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37007,
+      "color": "#f59e0b",
+      "endSec": 6.3,
+      "iconPath": "/i/003000/003244.png",
+      "label": "Pre",
+      "startSec": 5.7,
+      "tooltip": "Prefulgence @ 5.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7527,
+      "color": "#3b82f6",
+      "endSec": 8.5,
+      "iconPath": "/i/003000/003225.png",
+      "label": "Enc",
+      "startSec": 7.5,
+      "tooltip": "Enchanted Riposte @ 7.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7518,
+      "color": "#f59e0b",
+      "endSec": 8.1,
+      "iconPath": "/i/003000/003214.png",
+      "label": "Acc",
+      "startSec": 7.5,
+      "tooltip": "Acceleration @ 7.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7517,
+      "color": "#f59e0b",
+      "endSec": 8.8,
+      "iconPath": "/i/003000/003212.png",
+      "label": "Fle",
+      "startSec": 8.2,
+      "tooltip": "Fleche @ 8.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7528,
+      "color": "#3b82f6",
+      "endSec": 10.0,
+      "iconPath": "/i/003000/003226.png",
+      "label": "Enc",
+      "startSec": 9.0,
+      "tooltip": "Enchanted Zwerchhau @ 9.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7519,
+      "color": "#f59e0b",
+      "endSec": 9.6,
+      "iconPath": "/i/003000/003217.png",
+      "label": "Con",
+      "startSec": 9.0,
+      "tooltip": "Contre Sixte @ 9.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16527,
+      "color": "#f59e0b",
+      "endSec": 10.3,
+      "iconPath": "/i/003000/003231.png",
+      "label": "Eng",
+      "startSec": 9.7,
+      "tooltip": "Engagement @ 9.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7529,
+      "color": "#3b82f6",
+      "endSec": 11.5,
+      "iconPath": "/i/003000/003227.png",
+      "label": "Enc",
+      "startSec": 10.5,
+      "tooltip": "Enchanted Redoublement @ 10.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16527,
+      "color": "#f59e0b",
+      "endSec": 11.1,
+      "iconPath": "/i/003000/003231.png",
+      "label": "Eng",
+      "startSec": 10.5,
+      "tooltip": "Engagement @ 10.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7506,
+      "color": "#f59e0b",
+      "endSec": 11.8,
+      "iconPath": "/i/003000/003204.png",
+      "label": "Cor",
+      "startSec": 11.2,
+      "tooltip": "Corps-a-corps @ 11.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7526,
+      "color": "#3b82f6",
+      "endSec": 13.7,
+      "iconPath": "/i/003000/003224.png",
+      "label": "Ver",
+      "startSec": 12.7,
+      "tooltip": "Verholy @ 12.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7506,
+      "color": "#f59e0b",
+      "endSec": 13.3,
+      "iconPath": "/i/003000/003204.png",
+      "label": "Cor",
+      "startSec": 12.7,
+      "tooltip": "Corps-a-corps @ 12.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16530,
+      "color": "#3b82f6",
+      "endSec": 16.2,
+      "iconPath": "/i/003000/003234.png",
+      "label": "Sco",
+      "startSec": 15.2,
+      "tooltip": "Scorch @ 15.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25858,
+      "color": "#3b82f6",
+      "endSec": 18.7,
+      "iconPath": "/i/003000/003238.png",
+      "label": "Res",
+      "startSec": 17.7,
+      "tooltip": "Resolution @ 17.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37006,
+      "color": "#3b82f6",
+      "endSec": 21.2,
+      "iconPath": "/i/003000/003243.png",
+      "label": "Gra",
+      "startSec": 20.2,
+      "tooltip": "Grand Impact @ 20.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 23.7,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 22.7,
+      "tooltip": "Verthunder III @ 22.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 26.2,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 25.2,
+      "tooltip": "Verthunder III @ 25.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 28.7,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 27.7,
+      "tooltip": "Veraero III @ 27.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7561,
+      "color": "#f59e0b",
+      "endSec": 28.3,
+      "iconPath": "/i/000000/000866.png",
+      "label": "Swi",
+      "startSec": 27.7,
+      "tooltip": "Swiftcast @ 27.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 31.2,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 30.2,
+      "tooltip": "Verthunder III @ 30.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 33.7,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 32.7,
+      "tooltip": "Jolt III @ 32.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 36.2,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 35.2,
+      "tooltip": "Veraero III @ 35.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7517,
+      "color": "#f59e0b",
+      "endSec": 35.8,
+      "iconPath": "/i/003000/003212.png",
+      "label": "Fle",
+      "startSec": 35.2,
+      "tooltip": "Fleche @ 35.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 38.7,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 37.7,
+      "tooltip": "Jolt III @ 37.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 41.2,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 40.2,
+      "tooltip": "Verthunder III @ 40.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 43.7,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 42.7,
+      "tooltip": "Jolt III @ 42.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 46.2,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 45.2,
+      "tooltip": "Veraero III @ 45.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7519,
+      "color": "#f59e0b",
+      "endSec": 45.8,
+      "iconPath": "/i/003000/003217.png",
+      "label": "Con",
+      "startSec": 45.2,
+      "tooltip": "Contre Sixte @ 45.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16527,
+      "color": "#f59e0b",
+      "endSec": 46.5,
+      "iconPath": "/i/003000/003231.png",
+      "label": "Eng",
+      "startSec": 45.9,
+      "tooltip": "Engagement @ 45.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7527,
+      "color": "#3b82f6",
+      "endSec": 48.7,
+      "iconPath": "/i/003000/003225.png",
+      "label": "Enc",
+      "startSec": 47.7,
+      "tooltip": "Enchanted Riposte @ 47.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7506,
+      "color": "#f59e0b",
+      "endSec": 48.3,
+      "iconPath": "/i/003000/003204.png",
+      "label": "Cor",
+      "startSec": 47.7,
+      "tooltip": "Corps-a-corps @ 47.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7528,
+      "color": "#3b82f6",
+      "endSec": 50.2,
+      "iconPath": "/i/003000/003226.png",
+      "label": "Enc",
+      "startSec": 49.2,
+      "tooltip": "Enchanted Zwerchhau @ 49.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7529,
+      "color": "#3b82f6",
+      "endSec": 51.7,
+      "iconPath": "/i/003000/003227.png",
+      "label": "Enc",
+      "startSec": 50.7,
+      "tooltip": "Enchanted Redoublement @ 50.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7526,
+      "color": "#3b82f6",
+      "endSec": 53.9,
+      "iconPath": "/i/003000/003224.png",
+      "label": "Ver",
+      "startSec": 52.9,
+      "tooltip": "Verholy @ 52.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16530,
+      "color": "#3b82f6",
+      "endSec": 56.4,
+      "iconPath": "/i/003000/003234.png",
+      "label": "Sco",
+      "startSec": 55.4,
+      "tooltip": "Scorch @ 55.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25858,
+      "color": "#3b82f6",
+      "endSec": 58.9,
+      "iconPath": "/i/003000/003238.png",
+      "label": "Res",
+      "startSec": 57.9,
+      "tooltip": "Resolution @ 57.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7518,
+      "color": "#f59e0b",
+      "endSec": 58.5,
+      "iconPath": "/i/003000/003214.png",
+      "label": "Acc",
+      "startSec": 57.9,
+      "tooltip": "Acceleration @ 57.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37006,
+      "color": "#3b82f6",
+      "endSec": 61.4,
+      "iconPath": "/i/003000/003243.png",
+      "label": "Gra",
+      "startSec": 60.4,
+      "tooltip": "Grand Impact @ 60.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7517,
+      "color": "#f59e0b",
+      "endSec": 61.0,
+      "iconPath": "/i/003000/003212.png",
+      "label": "Fle",
+      "startSec": 60.4,
+      "tooltip": "Fleche @ 60.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 63.9,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 62.9,
+      "tooltip": "Verthunder III @ 62.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 66.4,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 65.4,
+      "tooltip": "Jolt III @ 65.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 68.9,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 67.9,
+      "tooltip": "Verthunder III @ 67.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7561,
+      "color": "#f59e0b",
+      "endSec": 68.5,
+      "iconPath": "/i/000000/000866.png",
+      "label": "Swi",
+      "startSec": 67.9,
+      "tooltip": "Swiftcast @ 67.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 71.4,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 70.4,
+      "tooltip": "Veraero III @ 70.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 73.9,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 72.9,
+      "tooltip": "Jolt III @ 72.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 76.4,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 75.4,
+      "tooltip": "Verthunder III @ 75.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 78.9,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 77.9,
+      "tooltip": "Jolt III @ 77.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 81.4,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 80.4,
+      "tooltip": "Veraero III @ 80.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7519,
+      "color": "#f59e0b",
+      "endSec": 81.0,
+      "iconPath": "/i/003000/003217.png",
+      "label": "Con",
+      "startSec": 80.4,
+      "tooltip": "Contre Sixte @ 80.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16527,
+      "color": "#f59e0b",
+      "endSec": 81.7,
+      "iconPath": "/i/003000/003231.png",
+      "label": "Eng",
+      "startSec": 81.1,
+      "tooltip": "Engagement @ 81.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 83.9,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 82.9,
+      "tooltip": "Jolt III @ 82.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7506,
+      "color": "#f59e0b",
+      "endSec": 83.5,
+      "iconPath": "/i/003000/003204.png",
+      "label": "Cor",
+      "startSec": 82.9,
+      "tooltip": "Corps-a-corps @ 82.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 86.4,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 85.4,
+      "tooltip": "Verthunder III @ 85.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7517,
+      "color": "#f59e0b",
+      "endSec": 86.0,
+      "iconPath": "/i/003000/003212.png",
+      "label": "Fle",
+      "startSec": 85.4,
+      "tooltip": "Fleche @ 85.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 88.9,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 87.9,
+      "tooltip": "Jolt III @ 87.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 91.4,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 90.4,
+      "tooltip": "Veraero III @ 90.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7527,
+      "color": "#3b82f6",
+      "endSec": 93.9,
+      "iconPath": "/i/003000/003225.png",
+      "label": "Enc",
+      "startSec": 92.9,
+      "tooltip": "Enchanted Riposte @ 92.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7528,
+      "color": "#3b82f6",
+      "endSec": 95.4,
+      "iconPath": "/i/003000/003226.png",
+      "label": "Enc",
+      "startSec": 94.4,
+      "tooltip": "Enchanted Zwerchhau @ 94.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7529,
+      "color": "#3b82f6",
+      "endSec": 96.9,
+      "iconPath": "/i/003000/003227.png",
+      "label": "Enc",
+      "startSec": 95.9,
+      "tooltip": "Enchanted Redoublement @ 95.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7525,
+      "color": "#3b82f6",
+      "endSec": 99.1,
+      "iconPath": "/i/003000/003223.png",
+      "label": "Ver",
+      "startSec": 98.1,
+      "tooltip": "Verflare @ 98.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16530,
+      "color": "#3b82f6",
+      "endSec": 101.6,
+      "iconPath": "/i/003000/003234.png",
+      "label": "Sco",
+      "startSec": 100.6,
+      "tooltip": "Scorch @ 100.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25858,
+      "color": "#3b82f6",
+      "endSec": 104.1,
+      "iconPath": "/i/003000/003238.png",
+      "label": "Res",
+      "startSec": 103.1,
+      "tooltip": "Resolution @ 103.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 106.6,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 105.6,
+      "tooltip": "Jolt III @ 105.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 109.1,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 108.1,
+      "tooltip": "Veraero III @ 108.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7561,
+      "color": "#f59e0b",
+      "endSec": 108.7,
+      "iconPath": "/i/000000/000866.png",
+      "label": "Swi",
+      "startSec": 108.1,
+      "tooltip": "Swiftcast @ 108.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 111.6,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 110.6,
+      "tooltip": "Verthunder III @ 110.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7517,
+      "color": "#f59e0b",
+      "endSec": 111.2,
+      "iconPath": "/i/003000/003212.png",
+      "label": "Fle",
+      "startSec": 110.6,
+      "tooltip": "Fleche @ 110.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 114.1,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 113.1,
+      "tooltip": "Jolt III @ 113.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7518,
+      "color": "#f59e0b",
+      "endSec": 113.7,
+      "iconPath": "/i/003000/003214.png",
+      "label": "Acc",
+      "startSec": 113.1,
+      "tooltip": "Acceleration @ 113.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37006,
+      "color": "#3b82f6",
+      "endSec": 116.6,
+      "iconPath": "/i/003000/003243.png",
+      "label": "Gra",
+      "startSec": 115.6,
+      "tooltip": "Grand Impact @ 115.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7521,
+      "color": "#f59e0b",
+      "endSec": 116.2,
+      "iconPath": "/i/003000/003219.png",
+      "label": "Man",
+      "startSec": 115.6,
+      "tooltip": "Manafication @ 115.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37007,
+      "color": "#f59e0b",
+      "endSec": 116.9,
+      "iconPath": "/i/003000/003244.png",
+      "label": "Pre",
+      "startSec": 116.3,
+      "tooltip": "Prefulgence @ 116.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7527,
+      "color": "#3b82f6",
+      "endSec": 119.1,
+      "iconPath": "/i/003000/003225.png",
+      "label": "Enc",
+      "startSec": 118.1,
+      "tooltip": "Enchanted Riposte @ 118.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7519,
+      "color": "#f59e0b",
+      "endSec": 118.7,
+      "iconPath": "/i/003000/003217.png",
+      "label": "Con",
+      "startSec": 118.1,
+      "tooltip": "Contre Sixte @ 118.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16527,
+      "color": "#f59e0b",
+      "endSec": 119.4,
+      "iconPath": "/i/003000/003231.png",
+      "label": "Eng",
+      "startSec": 118.8,
+      "tooltip": "Engagement @ 118.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7528,
+      "color": "#3b82f6",
+      "endSec": 120.6,
+      "iconPath": "/i/003000/003226.png",
+      "label": "Enc",
+      "startSec": 119.6,
+      "tooltip": "Enchanted Zwerchhau @ 119.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7506,
+      "color": "#f59e0b",
+      "endSec": 120.2,
+      "iconPath": "/i/003000/003204.png",
+      "label": "Cor",
+      "startSec": 119.6,
+      "tooltip": "Corps-a-corps @ 119.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7520,
+      "color": "#f59e0b",
+      "endSec": 120.9,
+      "iconPath": "/i/003000/003218.png",
+      "label": "Emb",
+      "startSec": 120.3,
+      "tooltip": "Embolden @ 120.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7529,
+      "color": "#3b82f6",
+      "endSec": 122.1,
+      "iconPath": "/i/003000/003227.png",
+      "label": "Enc",
+      "startSec": 121.1,
+      "tooltip": "Enchanted Redoublement @ 121.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37005,
+      "color": "#f59e0b",
+      "endSec": 121.7,
+      "iconPath": "/i/003000/003242.png",
+      "label": "Vic",
+      "startSec": 121.1,
+      "tooltip": "Vice of Thorns @ 121.1s (idealized)",
+      "yOffset": -0.55
+    }
+  ],
+  "idealizedTrackCanonical": [
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": -4.0,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": -5.0,
+      "tooltip": "Verthunder III @ -5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 0.0,
+      "tooltip": "Veraero III @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7518,
+      "color": "#f59e0b",
+      "endSec": 0.6,
+      "iconPath": "/i/003000/003214.png",
+      "label": "Acc",
+      "startSec": 0.0,
+      "tooltip": "Acceleration @ 0.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7517,
+      "color": "#f59e0b",
+      "endSec": 1.3,
+      "iconPath": "/i/003000/003212.png",
+      "label": "Fle",
+      "startSec": 0.7,
+      "tooltip": "Fleche @ 0.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37006,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/003000/003243.png",
+      "label": "Gra",
+      "startSec": 2.5,
+      "tooltip": "Grand Impact @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7518,
+      "color": "#f59e0b",
+      "endSec": 3.1,
+      "iconPath": "/i/003000/003214.png",
+      "label": "Acc",
+      "startSec": 2.5,
+      "tooltip": "Acceleration @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7519,
+      "color": "#f59e0b",
+      "endSec": 3.8,
+      "iconPath": "/i/003000/003217.png",
+      "label": "Con",
+      "startSec": 3.2,
+      "tooltip": "Contre Sixte @ 3.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37006,
+      "color": "#3b82f6",
+      "endSec": 6.0,
+      "iconPath": "/i/003000/003243.png",
+      "label": "Gra",
+      "startSec": 5.0,
+      "tooltip": "Grand Impact @ 5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16527,
+      "color": "#f59e0b",
+      "endSec": 5.6,
+      "iconPath": "/i/003000/003231.png",
+      "label": "Eng",
+      "startSec": 5.0,
+      "tooltip": "Engagement @ 5.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16527,
+      "color": "#f59e0b",
+      "endSec": 6.3,
+      "iconPath": "/i/003000/003231.png",
+      "label": "Eng",
+      "startSec": 5.7,
+      "tooltip": "Engagement @ 5.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 8.5,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 7.5,
+      "tooltip": "Verthunder III @ 7.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7506,
+      "color": "#f59e0b",
+      "endSec": 8.1,
+      "iconPath": "/i/003000/003204.png",
+      "label": "Cor",
+      "startSec": 7.5,
+      "tooltip": "Corps-a-corps @ 7.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7506,
+      "color": "#f59e0b",
+      "endSec": 8.8,
+      "iconPath": "/i/003000/003204.png",
+      "label": "Cor",
+      "startSec": 8.2,
+      "tooltip": "Corps-a-corps @ 8.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 11.0,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 10.0,
+      "tooltip": "Veraero III @ 10.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7520,
+      "color": "#f59e0b",
+      "endSec": 10.6,
+      "iconPath": "/i/003000/003218.png",
+      "label": "Emb",
+      "startSec": 10.0,
+      "tooltip": "Embolden @ 10.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7521,
+      "color": "#f59e0b",
+      "endSec": 11.3,
+      "iconPath": "/i/003000/003219.png",
+      "label": "Man",
+      "startSec": 10.7,
+      "tooltip": "Manafication @ 10.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7527,
+      "color": "#3b82f6",
+      "endSec": 13.5,
+      "iconPath": "/i/003000/003225.png",
+      "label": "Enc",
+      "startSec": 12.5,
+      "tooltip": "Enchanted Riposte @ 12.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37007,
+      "color": "#f59e0b",
+      "endSec": 13.1,
+      "iconPath": "/i/003000/003244.png",
+      "label": "Pre",
+      "startSec": 12.5,
+      "tooltip": "Prefulgence @ 12.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37005,
+      "color": "#f59e0b",
+      "endSec": 13.8,
+      "iconPath": "/i/003000/003242.png",
+      "label": "Vic",
+      "startSec": 13.2,
+      "tooltip": "Vice of Thorns @ 13.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7528,
+      "color": "#3b82f6",
+      "endSec": 15.0,
+      "iconPath": "/i/003000/003226.png",
+      "label": "Enc",
+      "startSec": 14.0,
+      "tooltip": "Enchanted Zwerchhau @ 14.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7561,
+      "color": "#f59e0b",
+      "endSec": 14.6,
+      "iconPath": "/i/000000/000866.png",
+      "label": "Swi",
+      "startSec": 14.0,
+      "tooltip": "Swiftcast @ 14.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7529,
+      "color": "#3b82f6",
+      "endSec": 16.5,
+      "iconPath": "/i/003000/003227.png",
+      "label": "Enc",
+      "startSec": 15.5,
+      "tooltip": "Enchanted Redoublement @ 15.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7526,
+      "color": "#3b82f6",
+      "endSec": 18.7,
+      "iconPath": "/i/003000/003224.png",
+      "label": "Ver",
+      "startSec": 17.7,
+      "tooltip": "Verholy @ 17.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16530,
+      "color": "#3b82f6",
+      "endSec": 21.2,
+      "iconPath": "/i/003000/003234.png",
+      "label": "Sco",
+      "startSec": 20.2,
+      "tooltip": "Scorch @ 20.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25858,
+      "color": "#3b82f6",
+      "endSec": 23.7,
+      "iconPath": "/i/003000/003238.png",
+      "label": "Res",
+      "startSec": 22.7,
+      "tooltip": "Resolution @ 22.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 26.2,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 25.2,
+      "tooltip": "Verthunder III @ 25.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7510,
+      "color": "#3b82f6",
+      "endSec": 28.7,
+      "iconPath": "/i/003000/003208.png",
+      "label": "Ver",
+      "startSec": 27.7,
+      "tooltip": "Verfire @ 27.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7517,
+      "color": "#f59e0b",
+      "endSec": 28.3,
+      "iconPath": "/i/003000/003212.png",
+      "label": "Fle",
+      "startSec": 27.7,
+      "tooltip": "Fleche @ 27.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 31.2,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 30.2,
+      "tooltip": "Verthunder III @ 30.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 33.7,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 32.7,
+      "tooltip": "Jolt III @ 32.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 36.2,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 35.2,
+      "tooltip": "Veraero III @ 35.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 38.7,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 37.7,
+      "tooltip": "Jolt III @ 37.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 41.2,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 40.2,
+      "tooltip": "Verthunder III @ 40.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7519,
+      "color": "#f59e0b",
+      "endSec": 40.8,
+      "iconPath": "/i/003000/003217.png",
+      "label": "Con",
+      "startSec": 40.2,
+      "tooltip": "Contre Sixte @ 40.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16527,
+      "color": "#f59e0b",
+      "endSec": 41.5,
+      "iconPath": "/i/003000/003231.png",
+      "label": "Eng",
+      "startSec": 40.9,
+      "tooltip": "Engagement @ 40.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 43.7,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 42.7,
+      "tooltip": "Jolt III @ 42.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7506,
+      "color": "#f59e0b",
+      "endSec": 43.3,
+      "iconPath": "/i/003000/003204.png",
+      "label": "Cor",
+      "startSec": 42.7,
+      "tooltip": "Corps-a-corps @ 42.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 46.2,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 45.2,
+      "tooltip": "Veraero III @ 45.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7527,
+      "color": "#3b82f6",
+      "endSec": 48.7,
+      "iconPath": "/i/003000/003225.png",
+      "label": "Enc",
+      "startSec": 47.7,
+      "tooltip": "Enchanted Riposte @ 47.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7528,
+      "color": "#3b82f6",
+      "endSec": 50.2,
+      "iconPath": "/i/003000/003226.png",
+      "label": "Enc",
+      "startSec": 49.2,
+      "tooltip": "Enchanted Zwerchhau @ 49.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7529,
+      "color": "#3b82f6",
+      "endSec": 51.7,
+      "iconPath": "/i/003000/003227.png",
+      "label": "Enc",
+      "startSec": 50.7,
+      "tooltip": "Enchanted Redoublement @ 50.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7526,
+      "color": "#3b82f6",
+      "endSec": 53.9,
+      "iconPath": "/i/003000/003224.png",
+      "label": "Ver",
+      "startSec": 52.9,
+      "tooltip": "Verholy @ 52.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7517,
+      "color": "#f59e0b",
+      "endSec": 53.5,
+      "iconPath": "/i/003000/003212.png",
+      "label": "Fle",
+      "startSec": 52.9,
+      "tooltip": "Fleche @ 52.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16530,
+      "color": "#3b82f6",
+      "endSec": 56.4,
+      "iconPath": "/i/003000/003234.png",
+      "label": "Sco",
+      "startSec": 55.4,
+      "tooltip": "Scorch @ 55.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7518,
+      "color": "#f59e0b",
+      "endSec": 56.0,
+      "iconPath": "/i/003000/003214.png",
+      "label": "Acc",
+      "startSec": 55.4,
+      "tooltip": "Acceleration @ 55.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25858,
+      "color": "#3b82f6",
+      "endSec": 58.9,
+      "iconPath": "/i/003000/003238.png",
+      "label": "Res",
+      "startSec": 57.9,
+      "tooltip": "Resolution @ 57.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37006,
+      "color": "#3b82f6",
+      "endSec": 61.4,
+      "iconPath": "/i/003000/003243.png",
+      "label": "Gra",
+      "startSec": 60.4,
+      "tooltip": "Grand Impact @ 60.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 63.9,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 62.9,
+      "tooltip": "Verthunder III @ 62.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7561,
+      "color": "#f59e0b",
+      "endSec": 63.5,
+      "iconPath": "/i/000000/000866.png",
+      "label": "Swi",
+      "startSec": 62.9,
+      "tooltip": "Swiftcast @ 62.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 66.4,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 65.4,
+      "tooltip": "Verthunder III @ 65.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 68.9,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 67.9,
+      "tooltip": "Jolt III @ 67.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 71.4,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 70.4,
+      "tooltip": "Veraero III @ 70.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 73.9,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 72.9,
+      "tooltip": "Jolt III @ 72.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 76.4,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 75.4,
+      "tooltip": "Verthunder III @ 75.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7519,
+      "color": "#f59e0b",
+      "endSec": 76.0,
+      "iconPath": "/i/003000/003217.png",
+      "label": "Con",
+      "startSec": 75.4,
+      "tooltip": "Contre Sixte @ 75.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16527,
+      "color": "#f59e0b",
+      "endSec": 76.7,
+      "iconPath": "/i/003000/003231.png",
+      "label": "Eng",
+      "startSec": 76.1,
+      "tooltip": "Engagement @ 76.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 78.9,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 77.9,
+      "tooltip": "Jolt III @ 77.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7517,
+      "color": "#f59e0b",
+      "endSec": 78.5,
+      "iconPath": "/i/003000/003212.png",
+      "label": "Fle",
+      "startSec": 77.9,
+      "tooltip": "Fleche @ 77.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 81.4,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 80.4,
+      "tooltip": "Veraero III @ 80.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7506,
+      "color": "#f59e0b",
+      "endSec": 81.0,
+      "iconPath": "/i/003000/003204.png",
+      "label": "Cor",
+      "startSec": 80.4,
+      "tooltip": "Corps-a-corps @ 80.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 83.9,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 82.9,
+      "tooltip": "Jolt III @ 82.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 86.4,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 85.4,
+      "tooltip": "Verthunder III @ 85.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 88.9,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 87.9,
+      "tooltip": "Jolt III @ 87.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 91.4,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 90.4,
+      "tooltip": "Veraero III @ 90.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7527,
+      "color": "#3b82f6",
+      "endSec": 93.9,
+      "iconPath": "/i/003000/003225.png",
+      "label": "Enc",
+      "startSec": 92.9,
+      "tooltip": "Enchanted Riposte @ 92.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7528,
+      "color": "#3b82f6",
+      "endSec": 95.4,
+      "iconPath": "/i/003000/003226.png",
+      "label": "Enc",
+      "startSec": 94.4,
+      "tooltip": "Enchanted Zwerchhau @ 94.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7529,
+      "color": "#3b82f6",
+      "endSec": 96.9,
+      "iconPath": "/i/003000/003227.png",
+      "label": "Enc",
+      "startSec": 95.9,
+      "tooltip": "Enchanted Redoublement @ 95.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7525,
+      "color": "#3b82f6",
+      "endSec": 99.1,
+      "iconPath": "/i/003000/003223.png",
+      "label": "Ver",
+      "startSec": 98.1,
+      "tooltip": "Verflare @ 98.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16530,
+      "color": "#3b82f6",
+      "endSec": 101.6,
+      "iconPath": "/i/003000/003234.png",
+      "label": "Sco",
+      "startSec": 100.6,
+      "tooltip": "Scorch @ 100.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25858,
+      "color": "#3b82f6",
+      "endSec": 104.1,
+      "iconPath": "/i/003000/003238.png",
+      "label": "Res",
+      "startSec": 103.1,
+      "tooltip": "Resolution @ 103.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7517,
+      "color": "#f59e0b",
+      "endSec": 103.7,
+      "iconPath": "/i/003000/003212.png",
+      "label": "Fle",
+      "startSec": 103.1,
+      "tooltip": "Fleche @ 103.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7561,
+      "color": "#f59e0b",
+      "endSec": 104.4,
+      "iconPath": "/i/000000/000866.png",
+      "label": "Swi",
+      "startSec": 103.8,
+      "tooltip": "Swiftcast @ 103.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 106.6,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 105.6,
+      "tooltip": "Veraero III @ 105.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 109.1,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 108.1,
+      "tooltip": "Jolt III @ 108.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 111.6,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 110.6,
+      "tooltip": "Verthunder III @ 110.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7518,
+      "color": "#f59e0b",
+      "endSec": 111.2,
+      "iconPath": "/i/003000/003214.png",
+      "label": "Acc",
+      "startSec": 110.6,
+      "tooltip": "Acceleration @ 110.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7519,
+      "color": "#f59e0b",
+      "endSec": 111.9,
+      "iconPath": "/i/003000/003217.png",
+      "label": "Con",
+      "startSec": 111.3,
+      "tooltip": "Contre Sixte @ 111.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37006,
+      "color": "#3b82f6",
+      "endSec": 114.1,
+      "iconPath": "/i/003000/003243.png",
+      "label": "Gra",
+      "startSec": 113.1,
+      "tooltip": "Grand Impact @ 113.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16527,
+      "color": "#f59e0b",
+      "endSec": 113.7,
+      "iconPath": "/i/003000/003231.png",
+      "label": "Eng",
+      "startSec": 113.1,
+      "tooltip": "Engagement @ 113.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7506,
+      "color": "#f59e0b",
+      "endSec": 114.4,
+      "iconPath": "/i/003000/003204.png",
+      "label": "Cor",
+      "startSec": 113.8,
+      "tooltip": "Corps-a-corps @ 113.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25856,
+      "color": "#3b82f6",
+      "endSec": 116.6,
+      "iconPath": "/i/003000/003236.png",
+      "label": "Ver",
+      "startSec": 115.6,
+      "tooltip": "Veraero III @ 115.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37004,
+      "color": "#3b82f6",
+      "endSec": 119.1,
+      "iconPath": "/i/003000/003241.png",
+      "label": "Jol",
+      "startSec": 118.1,
+      "tooltip": "Jolt III @ 118.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25855,
+      "color": "#3b82f6",
+      "endSec": 121.6,
+      "iconPath": "/i/003000/003235.png",
+      "label": "Ver",
+      "startSec": 120.6,
+      "tooltip": "Verthunder III @ 120.6s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 7506,
+          "abilityName": "Corps-a-corps",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 130.0,
+          "summary": "Missed Corps-a-corps \u2014 fit one around 0:10",
+          "timeSec": 10.2
+        },
+        {
+          "abilityId": 7506,
+          "abilityName": "Corps-a-corps",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 130.0,
+          "summary": "Missed Corps-a-corps \u2014 fit one around 0:11",
+          "timeSec": 10.9
+        },
+        {
+          "abilityId": 7506,
+          "abilityName": "Corps-a-corps",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 130.0,
+          "summary": "Missed Corps-a-corps \u2014 fit one around 0:46",
+          "timeSec": 45.9
+        },
+        {
+          "abilityId": 7506,
+          "abilityName": "Corps-a-corps",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 130.0,
+          "summary": "Missed Corps-a-corps \u2014 fit one around 1:21",
+          "timeSec": 81.1
+        },
+        {
+          "abilityId": 7506,
+          "abilityName": "Corps-a-corps",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 130.0,
+          "summary": "Missed Corps-a-corps \u2014 fit one around 1:59",
+          "timeSec": 118.6
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 4430.5,
+      "summary": "Other \u2014 5 small located losses below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 7521,
+      "abilityName": "Manafication",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 2795.38,
+      "summary": "Missed Manafication \u2014 fit one around 1:53",
+      "timeSec": 113.1
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 0,
+          "abilityName": "",
+          "children": [],
+          "kind": "idle",
+          "lostPotency": 878.0,
+          "summary": "Time spent idle: 5.0s (2.0 GCDs)",
+          "timeSec": 47.5
+        },
+        {
+          "abilityId": 0,
+          "abilityName": "",
+          "children": [],
+          "kind": "cadence",
+          "lostPotency": 380.0,
+          "summary": "Loose GCD pacing \u2014 the optimal line fit ~1 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
+          "timeSec": 0.0
+        }
+      ],
+      "kind": "pacing",
+      "lostPotency": 1258.0,
+      "summary": "GCD uptime & pacing \u2014 idle gaps and loose GCD timing. These compound: a dropped or clipped GCD also shoves your next weave and burst window later.",
+      "timeSec": 47.5
+    },
+    {
+      "abilityId": 16527,
+      "abilityName": "Engagement",
+      "children": [
+        {
+          "abilityId": 16527,
+          "abilityName": "Engagement",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 180.0,
+          "summary": "Missed Engagement \u2014 fit one around 0:08",
+          "timeSec": 7.7
+        },
+        {
+          "abilityId": 16527,
+          "abilityName": "Engagement",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 180.0,
+          "summary": "Missed Engagement \u2014 fit one around 0:08",
+          "timeSec": 8.4
+        },
+        {
+          "abilityId": 16527,
+          "abilityName": "Engagement",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 180.0,
+          "summary": "Missed Engagement \u2014 fit one around 0:45",
+          "timeSec": 45.2
+        },
+        {
+          "abilityId": 16527,
+          "abilityName": "Engagement",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 180.0,
+          "summary": "Missed Engagement \u2014 fit one around 1:20",
+          "timeSec": 80.4
+        },
+        {
+          "abilityId": 16527,
+          "abilityName": "Engagement",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 180.0,
+          "summary": "Missed Engagement \u2014 fit one around 1:58",
+          "timeSec": 117.8
+        }
+      ],
+      "kind": "missed_cast",
+      "lostPotency": 900.0,
+      "summary": "Missed Engagement \u00d75 \u2014 first around 0:08",
+      "timeSec": 7.7
+    },
+    {
+      "abilityId": 7520,
+      "abilityName": "Embolden",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 793.98,
+      "summary": "Missed Embolden \u2014 fit one around 2:01",
+      "timeSec": 120.8
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 495.67,
+      "summary": "Used 0 of 1 tinctures \u2014 fitting 1 more on cooldown recovers this",
+      "timeSec": 30.0
+    },
+    {
+      "abilityId": 7517,
+      "abilityName": "Fleche",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 480.0,
+      "summary": "Missed Fleche \u2014 fit one around 0:33",
+      "timeSec": 32.7
+    },
+    {
+      "abilityId": 7517,
+      "abilityName": "Fleche",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 480.0,
+      "summary": "Missed Fleche \u2014 fit one around 0:58",
+      "timeSec": 57.9
+    },
+    {
+      "abilityId": 7517,
+      "abilityName": "Fleche",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 480.0,
+      "summary": "Missed Fleche \u2014 fit one around 1:23",
+      "timeSec": 82.9
+    },
+    {
+      "abilityId": 7517,
+      "abilityName": "Fleche",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 480.0,
+      "summary": "Missed Fleche \u2014 fit one around 1:48",
+      "timeSec": 108.1
+    },
+    {
+      "abilityId": 7519,
+      "abilityName": "Contre Sixte",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 420.0,
+      "summary": "Missed Contre Sixte \u2014 fit one around 0:06",
+      "timeSec": 6.2
+    },
+    {
+      "abilityId": 7519,
+      "abilityName": "Contre Sixte",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 420.0,
+      "summary": "Missed Contre Sixte \u2014 fit one around 0:43",
+      "timeSec": 42.7
+    },
+    {
+      "abilityId": 7519,
+      "abilityName": "Contre Sixte",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 420.0,
+      "summary": "Missed Contre Sixte \u2014 fit one around 1:57",
+      "timeSec": 117.1
+    },
+    {
+      "abilityId": 7518,
+      "abilityName": "Acceleration",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 189.85,
+      "summary": "Missed Acceleration \u2014 fit one around 0:05",
+      "timeSec": 4.7
+    },
+    {
+      "abilityId": 7518,
+      "abilityName": "Acceleration",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 189.85,
+      "summary": "Missed Acceleration \u2014 fit one around 1:00",
+      "timeSec": 60.4
+    },
+    {
+      "abilityId": 7518,
+      "abilityName": "Acceleration",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 189.85,
+      "summary": "Missed Acceleration \u2014 fit one around 1:56",
+      "timeSec": 116.3
+    },
+    {
+      "abilityId": 25856,
+      "abilityName": "Veraero III",
+      "children": [
+        {
+          "abilityId": 25856,
+          "abilityName": "Veraero III",
+          "children": [],
+          "kind": "overcap",
+          "lostPotency": 12.0,
+          "summary": "White_mana overcap at 1:48 \u2014 Veraero III (wasted 3)",
+          "timeSec": 107.5
+        },
+        {
+          "abilityId": 25856,
+          "abilityName": "Veraero III",
+          "children": [],
+          "kind": "overcap",
+          "lostPotency": 24.0,
+          "summary": "White_mana overcap at 1:50 \u2014 Veraero III (wasted 6)",
+          "timeSec": 110.0
+        },
+        {
+          "abilityId": 25856,
+          "abilityName": "Veraero III",
+          "children": [],
+          "kind": "overcap",
+          "lostPotency": 24.0,
+          "summary": "White_mana overcap at 1:52 \u2014 Veraero III (wasted 6)",
+          "timeSec": 112.5
+        }
+      ],
+      "kind": "overcap",
+      "lostPotency": 60.0,
+      "summary": "Veraero III overcap \u00d73 \u2014 first around 1:48",
+      "timeSec": 107.5
+    },
+    {
+      "abilityId": 7511,
+      "abilityName": "Verstone",
+      "children": [],
+      "kind": "overcap",
+      "lostPotency": 20.0,
+      "summary": "White_mana overcap at 1:55 \u2014 Verstone (wasted 5)",
+      "timeSec": 115.0
+    },
+    {
+      "abilityId": 37004,
+      "abilityName": "Jolt III",
+      "children": [],
+      "kind": "overcap",
+      "lostPotency": 8.0,
+      "summary": "White_mana overcap at 1:58 \u2014 Jolt III (wasted 2)",
+      "timeSec": 117.5
+    },
+    {
+      "abilityId": 7528,
+      "abilityName": "Enchanted Zwerchhau",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #6: cast Jolt III, canonical opens Enchanted Zwerchhau (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 7529,
+      "abilityName": "Enchanted Redoublement",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #7: cast Veraero III, canonical opens Enchanted Redoublement (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 7526,
+      "abilityName": "Verholy",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #8: cast Verthunder III, canonical opens Verholy (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16530,
+      "abilityName": "Scorch",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #9: cast Jolt III, canonical opens Scorch (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25858,
+      "abilityName": "Resolution",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #10: cast Veraero III, canonical opens Resolution (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 37006,
+      "abilityName": "Grand Impact",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #11: cast Verthunder III, canonical opens Grand Impact (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 7510,
+      "abilityName": "Verfire",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #12: cast Jolt III, canonical opens Verfire (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": -2.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": -2.5,
+        "tooltip": "Veraero III  (GCD)  @  -1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 0.0,
+        "tooltip": "Veraero III  (GCD)  @  0:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 2.5,
+        "tooltip": "Verthunder III  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 5.0,
+        "tooltip": "Jolt III  (GCD)  @  0:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7517,
+        "color": "#777777",
+        "endSec": 6.5,
+        "iconPath": "/i/003000/003212.png",
+        "label": "Fle",
+        "startSec": 6.0,
+        "tooltip": "Fleche  (oGCD)  @  0:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 7.5,
+        "tooltip": "Veraero III  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 10.5,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 10.0,
+        "tooltip": "Verthunder III  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 12.5,
+        "tooltip": "Jolt III  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7518,
+        "color": "#777777",
+        "endSec": 14.0,
+        "iconPath": "/i/003000/003214.png",
+        "label": "Acc",
+        "startSec": 13.5,
+        "tooltip": "Acceleration  (oGCD)  @  0:14",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 15.5,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 15.0,
+        "tooltip": "Veraero III  (GCD)  @  0:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 18.0,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 17.5,
+        "tooltip": "Verthunder III  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 20.5,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 20.0,
+        "tooltip": "Jolt III  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 23.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 22.5,
+        "tooltip": "Veraero III  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 25.5,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 25.0,
+        "tooltip": "Verthunder III  (GCD)  @  0:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 28.0,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 27.5,
+        "tooltip": "Jolt III  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 30.5,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 30.0,
+        "tooltip": "Veraero III  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 33.0,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 32.5,
+        "tooltip": "Verthunder III  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 35.0,
+        "tooltip": "Jolt III  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 37.5,
+        "tooltip": "Veraero III  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 40.0,
+        "tooltip": "Verthunder III  (GCD)  @  0:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 43.0,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 42.5,
+        "tooltip": "Jolt III  (GCD)  @  0:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 45.5,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 45.0,
+        "tooltip": "Veraero III  (GCD)  @  0:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 48.0,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 47.5,
+        "tooltip": "Verthunder III  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7520,
+        "color": "#777777",
+        "endSec": 49.0,
+        "iconPath": "/i/003000/003218.png",
+        "label": "Emb",
+        "startSec": 48.5,
+        "tooltip": "Embolden  (oGCD)  @  0:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7521,
+        "color": "#777777",
+        "endSec": 49.5,
+        "iconPath": "/i/003000/003219.png",
+        "label": "Man",
+        "startSec": 49.0,
+        "tooltip": "Manafication  (oGCD)  @  0:49",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7527,
+        "color": "#777777",
+        "endSec": 50.5,
+        "iconPath": "/i/003000/003225.png",
+        "label": "Enc",
+        "startSec": 50.0,
+        "tooltip": "Enchanted Riposte  (GCD)  @  0:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7528,
+        "color": "#777777",
+        "endSec": 52.0,
+        "iconPath": "/i/003000/003226.png",
+        "label": "Enc",
+        "startSec": 51.5,
+        "tooltip": "Enchanted Zwerchhau  (GCD)  @  0:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7529,
+        "color": "#777777",
+        "endSec": 53.5,
+        "iconPath": "/i/003000/003227.png",
+        "label": "Enc",
+        "startSec": 53.0,
+        "tooltip": "Enchanted Redoublement  (GCD)  @  0:53",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7526,
+        "color": "#777777",
+        "endSec": 55.5,
+        "iconPath": "/i/003000/003224.png",
+        "label": "Ver",
+        "startSec": 55.0,
+        "tooltip": "Verholy  (GCD)  @  0:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16530,
+        "color": "#777777",
+        "endSec": 58.0,
+        "iconPath": "/i/003000/003234.png",
+        "label": "Sco",
+        "startSec": 57.5,
+        "tooltip": "Scorch  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25858,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/003000/003238.png",
+        "label": "Res",
+        "startSec": 60.0,
+        "tooltip": "Resolution  (GCD)  @  1:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 62.5,
+        "tooltip": "Veraero III  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 65.5,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 65.0,
+        "tooltip": "Verthunder III  (GCD)  @  1:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 68.0,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 67.5,
+        "tooltip": "Jolt III  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 70.5,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 70.0,
+        "tooltip": "Veraero III  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 73.0,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 72.5,
+        "tooltip": "Verthunder III  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 75.5,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 75.0,
+        "tooltip": "Jolt III  (GCD)  @  1:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 78.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 77.5,
+        "tooltip": "Veraero III  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 80.5,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 80.0,
+        "tooltip": "Verthunder III  (GCD)  @  1:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 83.0,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 82.5,
+        "tooltip": "Jolt III  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 85.5,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 85.0,
+        "tooltip": "Veraero III  (GCD)  @  1:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 88.0,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 87.5,
+        "tooltip": "Verthunder III  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 90.5,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 90.0,
+        "tooltip": "Jolt III  (GCD)  @  1:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7519,
+        "color": "#777777",
+        "endSec": 91.5,
+        "iconPath": "/i/003000/003217.png",
+        "label": "Con",
+        "startSec": 91.0,
+        "tooltip": "Contre Sixte  (oGCD)  @  1:31",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 92.5,
+        "tooltip": "Veraero III  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 95.0,
+        "tooltip": "Veraero III  (GCD)  @  1:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 98.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 97.5,
+        "tooltip": "Veraero III  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 100.5,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 100.0,
+        "tooltip": "Veraero III  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 103.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 102.5,
+        "tooltip": "Veraero III  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 105.5,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 105.0,
+        "tooltip": "Veraero III  (GCD)  @  1:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 107.5,
+        "tooltip": "Veraero III  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 110.5,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 110.0,
+        "tooltip": "Veraero III  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25856,
+        "color": "#777777",
+        "endSec": 113.0,
+        "iconPath": "/i/003000/003236.png",
+        "label": "Ver",
+        "startSec": 112.5,
+        "tooltip": "Veraero III  (GCD)  @  1:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7511,
+        "color": "#777777",
+        "endSec": 115.5,
+        "iconPath": "/i/003000/003209.png",
+        "label": "Ver",
+        "startSec": 115.0,
+        "tooltip": "Verstone  (GCD)  @  1:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37004,
+        "color": "#777777",
+        "endSec": 118.0,
+        "iconPath": "/i/003000/003241.png",
+        "label": "Jol",
+        "startSec": 117.5,
+        "tooltip": "Jolt III  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25855,
+        "color": "#777777",
+        "endSec": 120.5,
+        "iconPath": "/i/003000/003235.png",
+        "label": "Ver",
+        "startSec": 120.0,
+        "tooltip": "Verthunder III  (GCD)  @  2:00",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 23290.0,
+    "efficiencyPct": 61.61,
+    "fightDurationSec": 122.5,
+    "idealizedPotency": 37801.07,
+    "killTimeSec": 122,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

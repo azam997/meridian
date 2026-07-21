@@ -1,0 +1,5738 @@
+{
+  "abilityMeta": {
+    "16540": {
+      "iconPath": "/i/002000/002820.png",
+      "id": 16540,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Biolysis"
+    },
+    "166": {
+      "iconPath": "/i/000000/000510.png",
+      "id": 166,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Aetherflow"
+    },
+    "167": {
+      "iconPath": "/i/000000/000514.png",
+      "id": 167,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Energy Drain"
+    },
+    "25865": {
+      "iconPath": "/i/002000/002875.png",
+      "id": 25865,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Broil IV"
+    },
+    "37012": {
+      "iconPath": "/i/002000/002879.png",
+      "id": 37012,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Baneful Impaction"
+    },
+    "7436": {
+      "iconPath": "/i/002000/002815.png",
+      "id": 7436,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Chain Stratagem"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "16540": 14,
+        "166": 6,
+        "167": 18,
+        "25865": 131,
+        "37012": 3,
+        "7436": 1
+      },
+      "totalCasts": 173
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": [
+        "Chain Stratagem"
+      ]
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 320.0,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "fallback_heuristic"
+    },
+    "Drift": {
+      "downtimeSource": "fallback_heuristic",
+      "downtimeWindows": [],
+      "fightDurationSec": 360.0,
+      "findings": [
+        {
+          "abilityId": 7436,
+          "abilityName": "Chain Stratagem",
+          "cappedSeconds": 240.0,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 2.0,
+          "lostPotency": 1400.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 166,
+          "abilityName": "Aetherflow",
+          "cappedSeconds": 6.0,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 16540,
+          "expectedId": 25865,
+          "lostPotency": 320.0,
+          "position": 1,
+          "summary": "Opener slot #1: cast Biolysis (0p), canonical uses Broil IV (320p) \u2014 -320p"
+        },
+        {
+          "actualId": 25865,
+          "expectedId": 16540,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Broil IV, canonical uses Biolysis (same potency)"
+        },
+        {
+          "actualId": 16540,
+          "expectedId": 25865,
+          "lostPotency": 320.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Biolysis (0p), canonical uses Broil IV (320p) \u2014 -320p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Scoring": {
+      "deliveredObserved": 56799.17,
+      "deliveredPotency": 56799.17,
+      "downtimeSource": "fallback_heuristic",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "7436": 719.15
+      },
+      "fightDurationSec": 360.0,
+      "idealizedLenient": 58529.85,
+      "idealizedMaster": 58428.09,
+      "idealizedObserved": 57686.83,
+      "idealizedPotency": 58529.85,
+      "idealizedStrict": 58529.85,
+      "masterBuffIntervals": [
+        [
+          6.0,
+          26.0,
+          1.06
+        ],
+        [
+          126.0,
+          146.0,
+          1.06
+        ],
+        [
+          246.0,
+          266.0,
+          1.06
+        ]
+      ],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.5,
+        "payload": null
+      },
+      "tinctureLoss": 868.86,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 173"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Broil IV",
+          131,
+          0
+        ],
+        [
+          "Energy Drain",
+          18,
+          0
+        ],
+        [
+          "Biolysis",
+          14,
+          0
+        ],
+        [
+          "Aetherflow",
+          6,
+          0
+        ],
+        [
+          "Baneful Impaction",
+          3,
+          0
+        ],
+        [
+          "Chain Stratagem",
+          1,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No burst-alignment opportunities flagged."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 320p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "[drift] Chain Stratagem: 1 casts, drifted 240.0s \u2248 -1400p (ref avg -0p)"
+      ],
+      "summaryLines": [
+        "Total drift cost: -1400p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Chain Stratagem",
+          1,
+          240.0,
+          1400,
+          0,
+          "+1400"
+        ],
+        [
+          "Aetherflow",
+          6,
+          6.0,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #1: cast Biolysis (0p), canonical uses Broil IV (320p) \u2014 -320p",
+        "[opener] Opener slot #12: cast Biolysis (0p), canonical uses Broil IV (320p) \u2014 -320p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 640p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          1,
+          "Broil IV",
+          "Biolysis",
+          320
+        ],
+        [
+          2,
+          "Biolysis",
+          "Broil IV",
+          0
+        ],
+        [
+          12,
+          "Broil IV",
+          "Biolysis",
+          320
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 56799.17,
+    "downtimeSource": "fallback_heuristic",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 97.04,
+    "efficiencyPctLenient": 97.04,
+    "efficiencyPctMaster": 97.21,
+    "efficiencyPctObserved": 98.46,
+    "efficiencyPctStrict": 97.04,
+    "idealizedMaster": 58428.09,
+    "idealizedObserved": 57686.83,
+    "killTimeSec": 360,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Scholar"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "rankSuppressed": true,
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 58529.85,
+    "yourIdealizedPotencyLenient": 58529.85,
+    "yourPotency": 56799.17
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 31.0,
+      "multiplier": 1.08,
+      "startSec": 1.0
+    },
+    {
+      "endSec": 333.5,
+      "multiplier": 1.08,
+      "startSec": 303.5
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": -0.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": -1.5,
+      "tooltip": "Broil IV @ -1.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 2.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 1.0,
+      "tooltip": "Biolysis @ 1.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 1.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 1.0,
+      "tooltip": "Aetherflow @ 1.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 2.3,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 1.7,
+      "tooltip": "Energy Drain @ 1.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 4.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 3.5,
+      "tooltip": "Broil IV @ 3.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7436,
+      "color": "#f59e0b",
+      "endSec": 4.1,
+      "iconPath": "/i/002000/002815.png",
+      "label": "Cha",
+      "startSec": 3.5,
+      "tooltip": "Chain Stratagem @ 3.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 7.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 6.0,
+      "tooltip": "Broil IV @ 6.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37012,
+      "color": "#f59e0b",
+      "endSec": 6.6,
+      "iconPath": "/i/002000/002879.png",
+      "label": "Ban",
+      "startSec": 6.0,
+      "tooltip": "Baneful Impaction @ 6.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 9.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 8.5,
+      "tooltip": "Broil IV @ 8.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 9.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 8.5,
+      "tooltip": "Energy Drain @ 8.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 12.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 11.0,
+      "tooltip": "Broil IV @ 11.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 11.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 11.0,
+      "tooltip": "Energy Drain @ 11.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 14.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 13.5,
+      "tooltip": "Broil IV @ 13.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 17.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 16.0,
+      "tooltip": "Broil IV @ 16.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 19.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 18.5,
+      "tooltip": "Broil IV @ 18.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 22.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 21.0,
+      "tooltip": "Broil IV @ 21.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 24.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 23.5,
+      "tooltip": "Broil IV @ 23.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 27.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 26.0,
+      "tooltip": "Broil IV @ 26.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 29.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 28.5,
+      "tooltip": "Biolysis @ 28.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 32.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 31.0,
+      "tooltip": "Broil IV @ 31.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 34.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 33.5,
+      "tooltip": "Broil IV @ 33.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 37.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 36.0,
+      "tooltip": "Broil IV @ 36.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 39.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 38.5,
+      "tooltip": "Broil IV @ 38.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 42.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 41.0,
+      "tooltip": "Broil IV @ 41.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 44.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 43.5,
+      "tooltip": "Broil IV @ 43.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 47.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 46.0,
+      "tooltip": "Broil IV @ 46.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 49.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 48.5,
+      "tooltip": "Broil IV @ 48.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 52.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 51.0,
+      "tooltip": "Broil IV @ 51.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 54.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 53.5,
+      "tooltip": "Broil IV @ 53.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 57.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 56.0,
+      "tooltip": "Biolysis @ 56.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 59.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 58.5,
+      "tooltip": "Broil IV @ 58.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 62.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 61.0,
+      "tooltip": "Broil IV @ 61.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 61.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 61.0,
+      "tooltip": "Aetherflow @ 61.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 64.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 63.5,
+      "tooltip": "Broil IV @ 63.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 64.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 63.5,
+      "tooltip": "Energy Drain @ 63.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 67.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 66.0,
+      "tooltip": "Broil IV @ 66.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 66.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 66.0,
+      "tooltip": "Energy Drain @ 66.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 69.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 68.5,
+      "tooltip": "Broil IV @ 68.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 69.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 68.5,
+      "tooltip": "Energy Drain @ 68.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 72.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 71.0,
+      "tooltip": "Broil IV @ 71.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 74.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 73.5,
+      "tooltip": "Broil IV @ 73.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 77.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 76.0,
+      "tooltip": "Broil IV @ 76.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 79.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 78.5,
+      "tooltip": "Broil IV @ 78.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 82.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 81.0,
+      "tooltip": "Broil IV @ 81.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 84.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 83.5,
+      "tooltip": "Biolysis @ 83.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 87.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 86.0,
+      "tooltip": "Broil IV @ 86.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 89.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 88.5,
+      "tooltip": "Broil IV @ 88.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 92.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 91.0,
+      "tooltip": "Broil IV @ 91.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 94.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 93.5,
+      "tooltip": "Broil IV @ 93.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 97.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 96.0,
+      "tooltip": "Broil IV @ 96.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 99.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 98.5,
+      "tooltip": "Broil IV @ 98.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 102.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 101.0,
+      "tooltip": "Broil IV @ 101.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 104.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 103.5,
+      "tooltip": "Broil IV @ 103.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 107.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 106.0,
+      "tooltip": "Broil IV @ 106.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 109.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 108.5,
+      "tooltip": "Broil IV @ 108.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 112.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 111.0,
+      "tooltip": "Biolysis @ 111.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 114.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 113.5,
+      "tooltip": "Broil IV @ 113.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 117.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 116.0,
+      "tooltip": "Broil IV @ 116.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 119.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 118.5,
+      "tooltip": "Broil IV @ 118.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 122.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 121.0,
+      "tooltip": "Broil IV @ 121.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 121.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 121.0,
+      "tooltip": "Aetherflow @ 121.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 124.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 123.5,
+      "tooltip": "Broil IV @ 123.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 124.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 123.5,
+      "tooltip": "Energy Drain @ 123.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 127.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 126.0,
+      "tooltip": "Broil IV @ 126.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7436,
+      "color": "#f59e0b",
+      "endSec": 126.6,
+      "iconPath": "/i/002000/002815.png",
+      "label": "Cha",
+      "startSec": 126.0,
+      "tooltip": "Chain Stratagem @ 126.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 129.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 128.5,
+      "tooltip": "Broil IV @ 128.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37012,
+      "color": "#f59e0b",
+      "endSec": 129.1,
+      "iconPath": "/i/002000/002879.png",
+      "label": "Ban",
+      "startSec": 128.5,
+      "tooltip": "Baneful Impaction @ 128.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 132.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 131.0,
+      "tooltip": "Broil IV @ 131.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 131.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 131.0,
+      "tooltip": "Energy Drain @ 131.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 134.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 133.5,
+      "tooltip": "Broil IV @ 133.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 134.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 133.5,
+      "tooltip": "Energy Drain @ 133.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 137.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 136.0,
+      "tooltip": "Broil IV @ 136.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 139.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 138.5,
+      "tooltip": "Biolysis @ 138.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 142.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 141.0,
+      "tooltip": "Broil IV @ 141.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 144.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 143.5,
+      "tooltip": "Broil IV @ 143.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 147.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 146.0,
+      "tooltip": "Broil IV @ 146.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 149.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 148.5,
+      "tooltip": "Broil IV @ 148.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 152.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 151.0,
+      "tooltip": "Broil IV @ 151.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 154.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 153.5,
+      "tooltip": "Broil IV @ 153.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 157.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 156.0,
+      "tooltip": "Broil IV @ 156.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 159.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 158.5,
+      "tooltip": "Broil IV @ 158.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 162.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 161.0,
+      "tooltip": "Broil IV @ 161.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 164.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 163.5,
+      "tooltip": "Broil IV @ 163.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 167.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 166.0,
+      "tooltip": "Biolysis @ 166.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 169.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 168.5,
+      "tooltip": "Broil IV @ 168.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 172.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 171.0,
+      "tooltip": "Broil IV @ 171.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 174.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 173.5,
+      "tooltip": "Broil IV @ 173.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 177.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 176.0,
+      "tooltip": "Broil IV @ 176.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 179.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 178.5,
+      "tooltip": "Broil IV @ 178.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 182.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 181.0,
+      "tooltip": "Broil IV @ 181.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 181.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 181.0,
+      "tooltip": "Aetherflow @ 181.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 184.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 183.5,
+      "tooltip": "Broil IV @ 183.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 184.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 183.5,
+      "tooltip": "Energy Drain @ 183.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 187.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 186.0,
+      "tooltip": "Broil IV @ 186.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 186.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 186.0,
+      "tooltip": "Energy Drain @ 186.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 189.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 188.5,
+      "tooltip": "Broil IV @ 188.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 189.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 188.5,
+      "tooltip": "Energy Drain @ 188.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 192.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 191.0,
+      "tooltip": "Broil IV @ 191.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 194.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 193.5,
+      "tooltip": "Biolysis @ 193.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 197.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 196.0,
+      "tooltip": "Broil IV @ 196.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 199.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 198.5,
+      "tooltip": "Broil IV @ 198.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 202.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 201.0,
+      "tooltip": "Broil IV @ 201.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 204.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 203.5,
+      "tooltip": "Broil IV @ 203.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 207.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 206.0,
+      "tooltip": "Broil IV @ 206.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 209.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 208.5,
+      "tooltip": "Broil IV @ 208.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 212.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 211.0,
+      "tooltip": "Broil IV @ 211.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 214.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 213.5,
+      "tooltip": "Broil IV @ 213.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 217.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 216.0,
+      "tooltip": "Broil IV @ 216.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 219.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 218.5,
+      "tooltip": "Broil IV @ 218.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 222.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 221.0,
+      "tooltip": "Biolysis @ 221.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 224.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 223.5,
+      "tooltip": "Broil IV @ 223.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 227.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 226.0,
+      "tooltip": "Broil IV @ 226.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 229.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 228.5,
+      "tooltip": "Broil IV @ 228.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 232.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 231.0,
+      "tooltip": "Broil IV @ 231.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 234.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 233.5,
+      "tooltip": "Broil IV @ 233.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 237.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 236.0,
+      "tooltip": "Broil IV @ 236.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 239.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 238.5,
+      "tooltip": "Broil IV @ 238.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 242.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 241.0,
+      "tooltip": "Broil IV @ 241.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 241.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 241.0,
+      "tooltip": "Aetherflow @ 241.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 244.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 243.5,
+      "tooltip": "Broil IV @ 243.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 244.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 243.5,
+      "tooltip": "Energy Drain @ 243.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 247.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 246.0,
+      "tooltip": "Broil IV @ 246.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7436,
+      "color": "#f59e0b",
+      "endSec": 246.6,
+      "iconPath": "/i/002000/002815.png",
+      "label": "Cha",
+      "startSec": 246.0,
+      "tooltip": "Chain Stratagem @ 246.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 249.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 248.5,
+      "tooltip": "Biolysis @ 248.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37012,
+      "color": "#f59e0b",
+      "endSec": 249.1,
+      "iconPath": "/i/002000/002879.png",
+      "label": "Ban",
+      "startSec": 248.5,
+      "tooltip": "Baneful Impaction @ 248.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 249.8,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 249.2,
+      "tooltip": "Energy Drain @ 249.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 252.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 251.0,
+      "tooltip": "Broil IV @ 251.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 251.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 251.0,
+      "tooltip": "Energy Drain @ 251.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 254.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 253.5,
+      "tooltip": "Broil IV @ 253.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 257.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 256.0,
+      "tooltip": "Broil IV @ 256.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 259.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 258.5,
+      "tooltip": "Broil IV @ 258.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 262.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 261.0,
+      "tooltip": "Broil IV @ 261.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 264.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 263.5,
+      "tooltip": "Broil IV @ 263.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 267.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 266.0,
+      "tooltip": "Broil IV @ 266.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 269.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 268.5,
+      "tooltip": "Broil IV @ 268.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 272.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 271.0,
+      "tooltip": "Broil IV @ 271.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 274.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 273.5,
+      "tooltip": "Broil IV @ 273.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 277.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 276.0,
+      "tooltip": "Biolysis @ 276.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 279.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 278.5,
+      "tooltip": "Broil IV @ 278.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 282.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 281.0,
+      "tooltip": "Broil IV @ 281.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 284.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 283.5,
+      "tooltip": "Broil IV @ 283.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 287.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 286.0,
+      "tooltip": "Broil IV @ 286.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 289.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 288.5,
+      "tooltip": "Broil IV @ 288.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 292.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 291.0,
+      "tooltip": "Broil IV @ 291.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 294.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 293.5,
+      "tooltip": "Broil IV @ 293.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 297.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 296.0,
+      "tooltip": "Broil IV @ 296.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 299.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 298.5,
+      "tooltip": "Broil IV @ 298.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 302.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 301.0,
+      "tooltip": "Broil IV @ 301.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 301.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 301.0,
+      "tooltip": "Aetherflow @ 301.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 304.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 303.5,
+      "tooltip": "Biolysis @ 303.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 304.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 303.5,
+      "tooltip": "Energy Drain @ 303.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 304.8,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 304.2,
+      "tooltip": "Energy Drain @ 304.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 307.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 306.0,
+      "tooltip": "Broil IV @ 306.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 306.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 306.0,
+      "tooltip": "Energy Drain @ 306.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 309.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 308.5,
+      "tooltip": "Broil IV @ 308.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 312.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 311.0,
+      "tooltip": "Broil IV @ 311.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 314.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 313.5,
+      "tooltip": "Broil IV @ 313.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 317.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 316.0,
+      "tooltip": "Broil IV @ 316.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 319.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 318.5,
+      "tooltip": "Broil IV @ 318.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 322.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 321.0,
+      "tooltip": "Broil IV @ 321.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 324.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 323.5,
+      "tooltip": "Broil IV @ 323.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 327.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 326.0,
+      "tooltip": "Broil IV @ 326.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 329.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 328.5,
+      "tooltip": "Broil IV @ 328.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 332.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 331.0,
+      "tooltip": "Biolysis @ 331.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 334.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 333.5,
+      "tooltip": "Broil IV @ 333.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 337.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 336.0,
+      "tooltip": "Broil IV @ 336.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 339.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 338.5,
+      "tooltip": "Broil IV @ 338.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 342.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 341.0,
+      "tooltip": "Broil IV @ 341.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 344.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 343.5,
+      "tooltip": "Broil IV @ 343.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 347.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 346.0,
+      "tooltip": "Broil IV @ 346.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 349.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 348.5,
+      "tooltip": "Broil IV @ 348.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 352.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 351.0,
+      "tooltip": "Broil IV @ 351.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 354.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 353.5,
+      "tooltip": "Broil IV @ 353.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 357.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 356.0,
+      "tooltip": "Broil IV @ 356.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 359.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 358.5,
+      "tooltip": "Biolysis @ 358.5s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackCanonical": [
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": -0.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": -1.5,
+      "tooltip": "Broil IV @ -1.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 2.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 1.0,
+      "tooltip": "Biolysis @ 1.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 1.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 1.0,
+      "tooltip": "Aetherflow @ 1.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 2.3,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 1.7,
+      "tooltip": "Energy Drain @ 1.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 4.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 3.5,
+      "tooltip": "Broil IV @ 3.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 4.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 3.5,
+      "tooltip": "Energy Drain @ 3.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 7.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 6.0,
+      "tooltip": "Broil IV @ 6.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7436,
+      "color": "#f59e0b",
+      "endSec": 6.6,
+      "iconPath": "/i/002000/002815.png",
+      "label": "Cha",
+      "startSec": 6.0,
+      "tooltip": "Chain Stratagem @ 6.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 9.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 8.5,
+      "tooltip": "Broil IV @ 8.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37012,
+      "color": "#f59e0b",
+      "endSec": 9.1,
+      "iconPath": "/i/002000/002879.png",
+      "label": "Ban",
+      "startSec": 8.5,
+      "tooltip": "Baneful Impaction @ 8.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 12.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 11.0,
+      "tooltip": "Broil IV @ 11.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 11.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 11.0,
+      "tooltip": "Energy Drain @ 11.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 14.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 13.5,
+      "tooltip": "Broil IV @ 13.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 17.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 16.0,
+      "tooltip": "Broil IV @ 16.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 19.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 18.5,
+      "tooltip": "Broil IV @ 18.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 22.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 21.0,
+      "tooltip": "Broil IV @ 21.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 24.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 23.5,
+      "tooltip": "Broil IV @ 23.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 27.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 26.0,
+      "tooltip": "Broil IV @ 26.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 29.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 28.5,
+      "tooltip": "Biolysis @ 28.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 32.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 31.0,
+      "tooltip": "Broil IV @ 31.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 34.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 33.5,
+      "tooltip": "Broil IV @ 33.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 37.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 36.0,
+      "tooltip": "Broil IV @ 36.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 39.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 38.5,
+      "tooltip": "Broil IV @ 38.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 42.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 41.0,
+      "tooltip": "Broil IV @ 41.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 44.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 43.5,
+      "tooltip": "Broil IV @ 43.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 47.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 46.0,
+      "tooltip": "Broil IV @ 46.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 49.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 48.5,
+      "tooltip": "Broil IV @ 48.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 52.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 51.0,
+      "tooltip": "Broil IV @ 51.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 54.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 53.5,
+      "tooltip": "Broil IV @ 53.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 57.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 56.0,
+      "tooltip": "Biolysis @ 56.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 59.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 58.5,
+      "tooltip": "Broil IV @ 58.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 62.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 61.0,
+      "tooltip": "Broil IV @ 61.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 61.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 61.0,
+      "tooltip": "Aetherflow @ 61.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 64.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 63.5,
+      "tooltip": "Broil IV @ 63.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 64.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 63.5,
+      "tooltip": "Energy Drain @ 63.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 67.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 66.0,
+      "tooltip": "Broil IV @ 66.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 66.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 66.0,
+      "tooltip": "Energy Drain @ 66.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 69.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 68.5,
+      "tooltip": "Broil IV @ 68.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 69.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 68.5,
+      "tooltip": "Energy Drain @ 68.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 72.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 71.0,
+      "tooltip": "Broil IV @ 71.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 74.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 73.5,
+      "tooltip": "Broil IV @ 73.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 77.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 76.0,
+      "tooltip": "Broil IV @ 76.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 79.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 78.5,
+      "tooltip": "Broil IV @ 78.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 82.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 81.0,
+      "tooltip": "Broil IV @ 81.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 84.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 83.5,
+      "tooltip": "Biolysis @ 83.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 87.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 86.0,
+      "tooltip": "Broil IV @ 86.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 89.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 88.5,
+      "tooltip": "Broil IV @ 88.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 92.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 91.0,
+      "tooltip": "Broil IV @ 91.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 94.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 93.5,
+      "tooltip": "Broil IV @ 93.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 97.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 96.0,
+      "tooltip": "Broil IV @ 96.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 99.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 98.5,
+      "tooltip": "Broil IV @ 98.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 102.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 101.0,
+      "tooltip": "Broil IV @ 101.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 104.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 103.5,
+      "tooltip": "Broil IV @ 103.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 107.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 106.0,
+      "tooltip": "Broil IV @ 106.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 109.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 108.5,
+      "tooltip": "Broil IV @ 108.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 112.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 111.0,
+      "tooltip": "Biolysis @ 111.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 114.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 113.5,
+      "tooltip": "Broil IV @ 113.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 117.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 116.0,
+      "tooltip": "Broil IV @ 116.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 119.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 118.5,
+      "tooltip": "Broil IV @ 118.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 122.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 121.0,
+      "tooltip": "Broil IV @ 121.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 121.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 121.0,
+      "tooltip": "Aetherflow @ 121.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 124.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 123.5,
+      "tooltip": "Broil IV @ 123.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 124.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 123.5,
+      "tooltip": "Energy Drain @ 123.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 127.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 126.0,
+      "tooltip": "Broil IV @ 126.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7436,
+      "color": "#f59e0b",
+      "endSec": 126.6,
+      "iconPath": "/i/002000/002815.png",
+      "label": "Cha",
+      "startSec": 126.0,
+      "tooltip": "Chain Stratagem @ 126.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 129.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 128.5,
+      "tooltip": "Broil IV @ 128.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37012,
+      "color": "#f59e0b",
+      "endSec": 129.1,
+      "iconPath": "/i/002000/002879.png",
+      "label": "Ban",
+      "startSec": 128.5,
+      "tooltip": "Baneful Impaction @ 128.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 132.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 131.0,
+      "tooltip": "Broil IV @ 131.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 131.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 131.0,
+      "tooltip": "Energy Drain @ 131.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 134.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 133.5,
+      "tooltip": "Broil IV @ 133.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 134.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 133.5,
+      "tooltip": "Energy Drain @ 133.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 137.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 136.0,
+      "tooltip": "Broil IV @ 136.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 139.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 138.5,
+      "tooltip": "Biolysis @ 138.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 142.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 141.0,
+      "tooltip": "Broil IV @ 141.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 144.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 143.5,
+      "tooltip": "Broil IV @ 143.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 147.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 146.0,
+      "tooltip": "Broil IV @ 146.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 149.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 148.5,
+      "tooltip": "Broil IV @ 148.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 152.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 151.0,
+      "tooltip": "Broil IV @ 151.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 154.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 153.5,
+      "tooltip": "Broil IV @ 153.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 157.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 156.0,
+      "tooltip": "Broil IV @ 156.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 159.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 158.5,
+      "tooltip": "Broil IV @ 158.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 162.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 161.0,
+      "tooltip": "Broil IV @ 161.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 164.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 163.5,
+      "tooltip": "Broil IV @ 163.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 167.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 166.0,
+      "tooltip": "Biolysis @ 166.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 169.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 168.5,
+      "tooltip": "Broil IV @ 168.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 172.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 171.0,
+      "tooltip": "Broil IV @ 171.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 174.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 173.5,
+      "tooltip": "Broil IV @ 173.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 177.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 176.0,
+      "tooltip": "Broil IV @ 176.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 179.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 178.5,
+      "tooltip": "Broil IV @ 178.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 182.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 181.0,
+      "tooltip": "Broil IV @ 181.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 181.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 181.0,
+      "tooltip": "Aetherflow @ 181.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 184.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 183.5,
+      "tooltip": "Broil IV @ 183.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 184.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 183.5,
+      "tooltip": "Energy Drain @ 183.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 187.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 186.0,
+      "tooltip": "Broil IV @ 186.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 186.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 186.0,
+      "tooltip": "Energy Drain @ 186.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 189.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 188.5,
+      "tooltip": "Broil IV @ 188.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 189.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 188.5,
+      "tooltip": "Energy Drain @ 188.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 192.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 191.0,
+      "tooltip": "Broil IV @ 191.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 194.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 193.5,
+      "tooltip": "Biolysis @ 193.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 197.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 196.0,
+      "tooltip": "Broil IV @ 196.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 199.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 198.5,
+      "tooltip": "Broil IV @ 198.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 202.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 201.0,
+      "tooltip": "Broil IV @ 201.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 204.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 203.5,
+      "tooltip": "Broil IV @ 203.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 207.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 206.0,
+      "tooltip": "Broil IV @ 206.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 209.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 208.5,
+      "tooltip": "Broil IV @ 208.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 212.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 211.0,
+      "tooltip": "Broil IV @ 211.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 214.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 213.5,
+      "tooltip": "Broil IV @ 213.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 217.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 216.0,
+      "tooltip": "Broil IV @ 216.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 219.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 218.5,
+      "tooltip": "Broil IV @ 218.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 222.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 221.0,
+      "tooltip": "Biolysis @ 221.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 224.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 223.5,
+      "tooltip": "Broil IV @ 223.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 227.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 226.0,
+      "tooltip": "Broil IV @ 226.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 229.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 228.5,
+      "tooltip": "Broil IV @ 228.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 232.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 231.0,
+      "tooltip": "Broil IV @ 231.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 234.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 233.5,
+      "tooltip": "Broil IV @ 233.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 237.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 236.0,
+      "tooltip": "Broil IV @ 236.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 239.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 238.5,
+      "tooltip": "Broil IV @ 238.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 242.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 241.0,
+      "tooltip": "Broil IV @ 241.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 241.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 241.0,
+      "tooltip": "Aetherflow @ 241.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 244.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 243.5,
+      "tooltip": "Broil IV @ 243.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 244.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 243.5,
+      "tooltip": "Energy Drain @ 243.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 247.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 246.0,
+      "tooltip": "Broil IV @ 246.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7436,
+      "color": "#f59e0b",
+      "endSec": 246.6,
+      "iconPath": "/i/002000/002815.png",
+      "label": "Cha",
+      "startSec": 246.0,
+      "tooltip": "Chain Stratagem @ 246.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 249.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 248.5,
+      "tooltip": "Biolysis @ 248.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37012,
+      "color": "#f59e0b",
+      "endSec": 249.1,
+      "iconPath": "/i/002000/002879.png",
+      "label": "Ban",
+      "startSec": 248.5,
+      "tooltip": "Baneful Impaction @ 248.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 249.8,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 249.2,
+      "tooltip": "Energy Drain @ 249.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 252.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 251.0,
+      "tooltip": "Broil IV @ 251.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 251.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 251.0,
+      "tooltip": "Energy Drain @ 251.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 254.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 253.5,
+      "tooltip": "Broil IV @ 253.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 257.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 256.0,
+      "tooltip": "Broil IV @ 256.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 259.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 258.5,
+      "tooltip": "Broil IV @ 258.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 262.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 261.0,
+      "tooltip": "Broil IV @ 261.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 264.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 263.5,
+      "tooltip": "Broil IV @ 263.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 267.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 266.0,
+      "tooltip": "Broil IV @ 266.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 269.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 268.5,
+      "tooltip": "Broil IV @ 268.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 272.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 271.0,
+      "tooltip": "Broil IV @ 271.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 274.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 273.5,
+      "tooltip": "Broil IV @ 273.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 277.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 276.0,
+      "tooltip": "Biolysis @ 276.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 279.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 278.5,
+      "tooltip": "Broil IV @ 278.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 282.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 281.0,
+      "tooltip": "Broil IV @ 281.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 284.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 283.5,
+      "tooltip": "Broil IV @ 283.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 287.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 286.0,
+      "tooltip": "Broil IV @ 286.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 289.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 288.5,
+      "tooltip": "Broil IV @ 288.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 292.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 291.0,
+      "tooltip": "Broil IV @ 291.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 294.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 293.5,
+      "tooltip": "Broil IV @ 293.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 297.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 296.0,
+      "tooltip": "Broil IV @ 296.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 299.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 298.5,
+      "tooltip": "Broil IV @ 298.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 302.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 301.0,
+      "tooltip": "Broil IV @ 301.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 166,
+      "color": "#f59e0b",
+      "endSec": 301.6,
+      "iconPath": "/i/000000/000510.png",
+      "label": "Aet",
+      "startSec": 301.0,
+      "tooltip": "Aetherflow @ 301.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 304.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 303.5,
+      "tooltip": "Biolysis @ 303.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 304.1,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 303.5,
+      "tooltip": "Energy Drain @ 303.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 304.8,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 304.2,
+      "tooltip": "Energy Drain @ 304.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 307.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 306.0,
+      "tooltip": "Broil IV @ 306.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 167,
+      "color": "#f59e0b",
+      "endSec": 306.6,
+      "iconPath": "/i/000000/000514.png",
+      "label": "Ene",
+      "startSec": 306.0,
+      "tooltip": "Energy Drain @ 306.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 309.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 308.5,
+      "tooltip": "Broil IV @ 308.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 312.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 311.0,
+      "tooltip": "Broil IV @ 311.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 314.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 313.5,
+      "tooltip": "Broil IV @ 313.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 317.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 316.0,
+      "tooltip": "Broil IV @ 316.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 319.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 318.5,
+      "tooltip": "Broil IV @ 318.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 322.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 321.0,
+      "tooltip": "Broil IV @ 321.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 324.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 323.5,
+      "tooltip": "Broil IV @ 323.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 327.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 326.0,
+      "tooltip": "Broil IV @ 326.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 329.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 328.5,
+      "tooltip": "Broil IV @ 328.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 332.0,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 331.0,
+      "tooltip": "Biolysis @ 331.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 334.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 333.5,
+      "tooltip": "Broil IV @ 333.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 337.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 336.0,
+      "tooltip": "Broil IV @ 336.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 339.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 338.5,
+      "tooltip": "Broil IV @ 338.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 342.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 341.0,
+      "tooltip": "Broil IV @ 341.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 344.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 343.5,
+      "tooltip": "Broil IV @ 343.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 347.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 346.0,
+      "tooltip": "Broil IV @ 346.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 349.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 348.5,
+      "tooltip": "Broil IV @ 348.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 352.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 351.0,
+      "tooltip": "Broil IV @ 351.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 354.5,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 353.5,
+      "tooltip": "Broil IV @ 353.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "color": "#3b82f6",
+      "endSec": 357.0,
+      "iconPath": "/i/002000/002875.png",
+      "label": "Bro",
+      "startSec": 356.0,
+      "tooltip": "Broil IV @ 356.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16540,
+      "color": "#3b82f6",
+      "endSec": 359.5,
+      "iconPath": "/i/002000/002820.png",
+      "label": "Bio",
+      "startSec": 358.5,
+      "tooltip": "Biolysis @ 358.5s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 868.86,
+      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 7436,
+      "abilityName": "Chain Stratagem",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 719.15,
+      "summary": "Missed Chain Stratagem \u2014 fit one around 2:01",
+      "timeSec": 121.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 7436,
+          "abilityName": "Chain Stratagem",
+          "children": [],
+          "kind": "missed_enabler",
+          "lostPotency": 719.15,
+          "summary": "Missed Chain Stratagem \u2014 fit one around 4:01",
+          "timeSec": 241.0
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 142.68,
+      "summary": "Other \u2014 1 small located loss below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "abilityName": "Broil IV",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #1: cast Biolysis, canonical opens Broil IV (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25865,
+      "abilityName": "Broil IV",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #12: cast Biolysis, canonical opens Broil IV (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": -1.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": -1.5,
+        "tooltip": "Broil IV  (GCD)  @  -1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 1.5,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 1.0,
+        "tooltip": "Biolysis  (GCD)  @  0:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7436,
+        "color": "#777777",
+        "endSec": 1.5,
+        "iconPath": "/i/002000/002815.png",
+        "label": "Cha",
+        "startSec": 1.0,
+        "tooltip": "Chain Stratagem  (oGCD)  @  0:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 37012,
+        "color": "#777777",
+        "endSec": 2.2,
+        "iconPath": "/i/002000/002879.png",
+        "label": "Ban",
+        "startSec": 1.7,
+        "tooltip": "Baneful Impaction  (oGCD)  @  0:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 4.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 3.5,
+        "tooltip": "Broil IV  (GCD)  @  0:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 166,
+        "color": "#777777",
+        "endSec": 4.0,
+        "iconPath": "/i/000000/000510.png",
+        "label": "Aet",
+        "startSec": 3.5,
+        "tooltip": "Aetherflow  (oGCD)  @  0:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 6.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 6.0,
+        "tooltip": "Broil IV  (GCD)  @  0:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 6.5,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 6.0,
+        "tooltip": "Energy Drain  (oGCD)  @  0:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 9.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 8.5,
+        "tooltip": "Broil IV  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 9.0,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 8.5,
+        "tooltip": "Energy Drain  (oGCD)  @  0:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 11.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 11.0,
+        "tooltip": "Broil IV  (GCD)  @  0:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 11.5,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 11.0,
+        "tooltip": "Energy Drain  (oGCD)  @  0:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 14.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 13.5,
+        "tooltip": "Broil IV  (GCD)  @  0:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 16.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 16.0,
+        "tooltip": "Broil IV  (GCD)  @  0:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 19.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 18.5,
+        "tooltip": "Broil IV  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 21.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 21.0,
+        "tooltip": "Broil IV  (GCD)  @  0:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 24.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 23.5,
+        "tooltip": "Broil IV  (GCD)  @  0:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 26.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 26.0,
+        "tooltip": "Broil IV  (GCD)  @  0:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 29.0,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 28.5,
+        "tooltip": "Biolysis  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 31.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 31.0,
+        "tooltip": "Broil IV  (GCD)  @  0:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 34.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 33.5,
+        "tooltip": "Broil IV  (GCD)  @  0:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 36.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 36.0,
+        "tooltip": "Broil IV  (GCD)  @  0:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 39.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 38.5,
+        "tooltip": "Broil IV  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 41.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 41.0,
+        "tooltip": "Broil IV  (GCD)  @  0:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 44.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 43.5,
+        "tooltip": "Broil IV  (GCD)  @  0:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 46.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 46.0,
+        "tooltip": "Broil IV  (GCD)  @  0:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 49.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 48.5,
+        "tooltip": "Broil IV  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 51.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 51.0,
+        "tooltip": "Broil IV  (GCD)  @  0:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 54.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 53.5,
+        "tooltip": "Broil IV  (GCD)  @  0:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 56.5,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 56.0,
+        "tooltip": "Biolysis  (GCD)  @  0:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 59.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 58.5,
+        "tooltip": "Broil IV  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 61.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 61.0,
+        "tooltip": "Broil IV  (GCD)  @  1:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 64.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 63.5,
+        "tooltip": "Broil IV  (GCD)  @  1:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 166,
+        "color": "#777777",
+        "endSec": 64.0,
+        "iconPath": "/i/000000/000510.png",
+        "label": "Aet",
+        "startSec": 63.5,
+        "tooltip": "Aetherflow  (oGCD)  @  1:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 66.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 66.0,
+        "tooltip": "Broil IV  (GCD)  @  1:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 66.5,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 66.0,
+        "tooltip": "Energy Drain  (oGCD)  @  1:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 69.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 68.5,
+        "tooltip": "Broil IV  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 69.0,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 68.5,
+        "tooltip": "Energy Drain  (oGCD)  @  1:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 71.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 71.0,
+        "tooltip": "Broil IV  (GCD)  @  1:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 71.5,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 71.0,
+        "tooltip": "Energy Drain  (oGCD)  @  1:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 74.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 73.5,
+        "tooltip": "Broil IV  (GCD)  @  1:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 76.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 76.0,
+        "tooltip": "Broil IV  (GCD)  @  1:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 79.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 78.5,
+        "tooltip": "Broil IV  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 81.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 81.0,
+        "tooltip": "Broil IV  (GCD)  @  1:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 84.0,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 83.5,
+        "tooltip": "Biolysis  (GCD)  @  1:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 86.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 86.0,
+        "tooltip": "Broil IV  (GCD)  @  1:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 89.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 88.5,
+        "tooltip": "Broil IV  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 91.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 91.0,
+        "tooltip": "Broil IV  (GCD)  @  1:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 94.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 93.5,
+        "tooltip": "Broil IV  (GCD)  @  1:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 96.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 96.0,
+        "tooltip": "Broil IV  (GCD)  @  1:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 99.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 98.5,
+        "tooltip": "Broil IV  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 101.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 101.0,
+        "tooltip": "Broil IV  (GCD)  @  1:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 104.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 103.5,
+        "tooltip": "Broil IV  (GCD)  @  1:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 106.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 106.0,
+        "tooltip": "Broil IV  (GCD)  @  1:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 109.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 108.5,
+        "tooltip": "Broil IV  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 111.5,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 111.0,
+        "tooltip": "Biolysis  (GCD)  @  1:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 114.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 113.5,
+        "tooltip": "Broil IV  (GCD)  @  1:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 116.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 116.0,
+        "tooltip": "Broil IV  (GCD)  @  1:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 119.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 118.5,
+        "tooltip": "Broil IV  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 121.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 121.0,
+        "tooltip": "Broil IV  (GCD)  @  2:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 124.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 123.5,
+        "tooltip": "Broil IV  (GCD)  @  2:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37012,
+        "color": "#777777",
+        "endSec": 124.0,
+        "iconPath": "/i/002000/002879.png",
+        "label": "Ban",
+        "startSec": 123.5,
+        "tooltip": "Baneful Impaction  (oGCD)  @  2:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 126.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 126.0,
+        "tooltip": "Broil IV  (GCD)  @  2:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 166,
+        "color": "#777777",
+        "endSec": 126.5,
+        "iconPath": "/i/000000/000510.png",
+        "label": "Aet",
+        "startSec": 126.0,
+        "tooltip": "Aetherflow  (oGCD)  @  2:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 129.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 128.5,
+        "tooltip": "Broil IV  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 129.0,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 128.5,
+        "tooltip": "Energy Drain  (oGCD)  @  2:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 131.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 131.0,
+        "tooltip": "Broil IV  (GCD)  @  2:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 131.5,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 131.0,
+        "tooltip": "Energy Drain  (oGCD)  @  2:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 134.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 133.5,
+        "tooltip": "Broil IV  (GCD)  @  2:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 134.0,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 133.5,
+        "tooltip": "Energy Drain  (oGCD)  @  2:14",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 136.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 136.0,
+        "tooltip": "Broil IV  (GCD)  @  2:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 139.0,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 138.5,
+        "tooltip": "Biolysis  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 141.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 141.0,
+        "tooltip": "Broil IV  (GCD)  @  2:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 144.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 143.5,
+        "tooltip": "Broil IV  (GCD)  @  2:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 146.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 146.0,
+        "tooltip": "Broil IV  (GCD)  @  2:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 149.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 148.5,
+        "tooltip": "Broil IV  (GCD)  @  2:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 151.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 151.0,
+        "tooltip": "Broil IV  (GCD)  @  2:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 154.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 153.5,
+        "tooltip": "Broil IV  (GCD)  @  2:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 156.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 156.0,
+        "tooltip": "Broil IV  (GCD)  @  2:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 159.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 158.5,
+        "tooltip": "Broil IV  (GCD)  @  2:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 161.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 161.0,
+        "tooltip": "Broil IV  (GCD)  @  2:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 164.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 163.5,
+        "tooltip": "Broil IV  (GCD)  @  2:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 166.5,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 166.0,
+        "tooltip": "Biolysis  (GCD)  @  2:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 169.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 168.5,
+        "tooltip": "Broil IV  (GCD)  @  2:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 171.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 171.0,
+        "tooltip": "Broil IV  (GCD)  @  2:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 174.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 173.5,
+        "tooltip": "Broil IV  (GCD)  @  2:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 176.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 176.0,
+        "tooltip": "Broil IV  (GCD)  @  2:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 179.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 178.5,
+        "tooltip": "Broil IV  (GCD)  @  2:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 181.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 181.0,
+        "tooltip": "Broil IV  (GCD)  @  3:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 184.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 183.5,
+        "tooltip": "Broil IV  (GCD)  @  3:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 186.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 186.0,
+        "tooltip": "Broil IV  (GCD)  @  3:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 166,
+        "color": "#777777",
+        "endSec": 186.5,
+        "iconPath": "/i/000000/000510.png",
+        "label": "Aet",
+        "startSec": 186.0,
+        "tooltip": "Aetherflow  (oGCD)  @  3:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 189.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 188.5,
+        "tooltip": "Broil IV  (GCD)  @  3:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 189.0,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 188.5,
+        "tooltip": "Energy Drain  (oGCD)  @  3:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 191.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 191.0,
+        "tooltip": "Broil IV  (GCD)  @  3:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 191.5,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 191.0,
+        "tooltip": "Energy Drain  (oGCD)  @  3:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 194.0,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 193.5,
+        "tooltip": "Biolysis  (GCD)  @  3:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 194.0,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 193.5,
+        "tooltip": "Energy Drain  (oGCD)  @  3:14",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 196.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 196.0,
+        "tooltip": "Broil IV  (GCD)  @  3:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 199.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 198.5,
+        "tooltip": "Broil IV  (GCD)  @  3:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 201.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 201.0,
+        "tooltip": "Broil IV  (GCD)  @  3:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 204.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 203.5,
+        "tooltip": "Broil IV  (GCD)  @  3:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 206.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 206.0,
+        "tooltip": "Broil IV  (GCD)  @  3:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 209.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 208.5,
+        "tooltip": "Broil IV  (GCD)  @  3:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 211.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 211.0,
+        "tooltip": "Broil IV  (GCD)  @  3:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 214.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 213.5,
+        "tooltip": "Broil IV  (GCD)  @  3:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 216.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 216.0,
+        "tooltip": "Broil IV  (GCD)  @  3:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 219.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 218.5,
+        "tooltip": "Broil IV  (GCD)  @  3:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 221.5,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 221.0,
+        "tooltip": "Biolysis  (GCD)  @  3:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 224.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 223.5,
+        "tooltip": "Broil IV  (GCD)  @  3:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 226.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 226.0,
+        "tooltip": "Broil IV  (GCD)  @  3:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 229.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 228.5,
+        "tooltip": "Broil IV  (GCD)  @  3:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 231.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 231.0,
+        "tooltip": "Broil IV  (GCD)  @  3:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 234.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 233.5,
+        "tooltip": "Broil IV  (GCD)  @  3:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 236.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 236.0,
+        "tooltip": "Broil IV  (GCD)  @  3:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 239.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 238.5,
+        "tooltip": "Broil IV  (GCD)  @  3:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 241.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 241.0,
+        "tooltip": "Broil IV  (GCD)  @  4:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 244.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 243.5,
+        "tooltip": "Broil IV  (GCD)  @  4:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37012,
+        "color": "#777777",
+        "endSec": 244.0,
+        "iconPath": "/i/002000/002879.png",
+        "label": "Ban",
+        "startSec": 243.5,
+        "tooltip": "Baneful Impaction  (oGCD)  @  4:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 246.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 246.0,
+        "tooltip": "Broil IV  (GCD)  @  4:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 166,
+        "color": "#777777",
+        "endSec": 246.5,
+        "iconPath": "/i/000000/000510.png",
+        "label": "Aet",
+        "startSec": 246.0,
+        "tooltip": "Aetherflow  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 249.0,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 248.5,
+        "tooltip": "Biolysis  (GCD)  @  4:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 249.0,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 248.5,
+        "tooltip": "Energy Drain  (oGCD)  @  4:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 249.7,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 249.2,
+        "tooltip": "Energy Drain  (oGCD)  @  4:09",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 251.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 251.0,
+        "tooltip": "Broil IV  (GCD)  @  4:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 251.5,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 251.0,
+        "tooltip": "Energy Drain  (oGCD)  @  4:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 254.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 253.5,
+        "tooltip": "Broil IV  (GCD)  @  4:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 256.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 256.0,
+        "tooltip": "Broil IV  (GCD)  @  4:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 259.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 258.5,
+        "tooltip": "Broil IV  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 261.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 261.0,
+        "tooltip": "Broil IV  (GCD)  @  4:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 264.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 263.5,
+        "tooltip": "Broil IV  (GCD)  @  4:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 266.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 266.0,
+        "tooltip": "Broil IV  (GCD)  @  4:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 269.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 268.5,
+        "tooltip": "Broil IV  (GCD)  @  4:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 271.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 271.0,
+        "tooltip": "Broil IV  (GCD)  @  4:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 274.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 273.5,
+        "tooltip": "Broil IV  (GCD)  @  4:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 276.5,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 276.0,
+        "tooltip": "Biolysis  (GCD)  @  4:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 279.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 278.5,
+        "tooltip": "Broil IV  (GCD)  @  4:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 281.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 281.0,
+        "tooltip": "Broil IV  (GCD)  @  4:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 284.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 283.5,
+        "tooltip": "Broil IV  (GCD)  @  4:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 286.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 286.0,
+        "tooltip": "Broil IV  (GCD)  @  4:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 289.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 288.5,
+        "tooltip": "Broil IV  (GCD)  @  4:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 291.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 291.0,
+        "tooltip": "Broil IV  (GCD)  @  4:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 294.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 293.5,
+        "tooltip": "Broil IV  (GCD)  @  4:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 296.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 296.0,
+        "tooltip": "Broil IV  (GCD)  @  4:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 299.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 298.5,
+        "tooltip": "Broil IV  (GCD)  @  4:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 301.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 301.0,
+        "tooltip": "Broil IV  (GCD)  @  5:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 304.0,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 303.5,
+        "tooltip": "Biolysis  (GCD)  @  5:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 306.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 306.0,
+        "tooltip": "Broil IV  (GCD)  @  5:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 166,
+        "color": "#777777",
+        "endSec": 306.5,
+        "iconPath": "/i/000000/000510.png",
+        "label": "Aet",
+        "startSec": 306.0,
+        "tooltip": "Aetherflow  (oGCD)  @  5:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 309.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 308.5,
+        "tooltip": "Broil IV  (GCD)  @  5:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 309.0,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 308.5,
+        "tooltip": "Energy Drain  (oGCD)  @  5:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 311.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 311.0,
+        "tooltip": "Broil IV  (GCD)  @  5:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 311.5,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 311.0,
+        "tooltip": "Energy Drain  (oGCD)  @  5:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 314.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 313.5,
+        "tooltip": "Broil IV  (GCD)  @  5:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 167,
+        "color": "#777777",
+        "endSec": 314.0,
+        "iconPath": "/i/000000/000514.png",
+        "label": "Ene",
+        "startSec": 313.5,
+        "tooltip": "Energy Drain  (oGCD)  @  5:14",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 316.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 316.0,
+        "tooltip": "Broil IV  (GCD)  @  5:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 319.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 318.5,
+        "tooltip": "Broil IV  (GCD)  @  5:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 321.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 321.0,
+        "tooltip": "Broil IV  (GCD)  @  5:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 324.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 323.5,
+        "tooltip": "Broil IV  (GCD)  @  5:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 326.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 326.0,
+        "tooltip": "Broil IV  (GCD)  @  5:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 329.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 328.5,
+        "tooltip": "Broil IV  (GCD)  @  5:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 331.5,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 331.0,
+        "tooltip": "Biolysis  (GCD)  @  5:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 334.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 333.5,
+        "tooltip": "Broil IV  (GCD)  @  5:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 336.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 336.0,
+        "tooltip": "Broil IV  (GCD)  @  5:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 339.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 338.5,
+        "tooltip": "Broil IV  (GCD)  @  5:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 341.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 341.0,
+        "tooltip": "Broil IV  (GCD)  @  5:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 344.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 343.5,
+        "tooltip": "Broil IV  (GCD)  @  5:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 346.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 346.0,
+        "tooltip": "Broil IV  (GCD)  @  5:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 349.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 348.5,
+        "tooltip": "Broil IV  (GCD)  @  5:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 351.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 351.0,
+        "tooltip": "Broil IV  (GCD)  @  5:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 354.0,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 353.5,
+        "tooltip": "Broil IV  (GCD)  @  5:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25865,
+        "color": "#777777",
+        "endSec": 356.5,
+        "iconPath": "/i/002000/002875.png",
+        "label": "Bro",
+        "startSec": 356.0,
+        "tooltip": "Broil IV  (GCD)  @  5:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16540,
+        "color": "#777777",
+        "endSec": 359.0,
+        "iconPath": "/i/002000/002820.png",
+        "label": "Bio",
+        "startSec": 358.5,
+        "tooltip": "Biolysis  (GCD)  @  5:58",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 56799.17,
+    "efficiencyPct": 97.04,
+    "fightDurationSec": 360.0,
+    "idealizedPotency": 58529.85,
+    "killTimeSec": 360,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

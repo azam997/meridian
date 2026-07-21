@@ -1,0 +1,5860 @@
+{
+  "abilityMeta": {
+    "34606": {
+      "iconPath": "/i/003000/003701.png",
+      "id": 34606,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Steel Fangs"
+    },
+    "34607": {
+      "iconPath": "/i/003000/003702.png",
+      "id": 34607,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Reaving Fangs"
+    },
+    "34608": {
+      "iconPath": "/i/003000/003703.png",
+      "id": 34608,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Hunter's Sting"
+    },
+    "34609": {
+      "iconPath": "/i/003000/003704.png",
+      "id": 34609,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Swiftskin's Sting"
+    },
+    "34610": {
+      "iconPath": "/i/003000/003705.png",
+      "id": 34610,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Flanksting Strike"
+    },
+    "34613": {
+      "iconPath": "/i/003000/003708.png",
+      "id": 34613,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Hindsbane Fang"
+    },
+    "34620": {
+      "iconPath": "/i/003000/003715.png",
+      "id": 34620,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Vicewinder"
+    },
+    "34621": {
+      "iconPath": "/i/003000/003716.png",
+      "id": 34621,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Hunter's Coil"
+    },
+    "34622": {
+      "iconPath": "/i/003000/003717.png",
+      "id": 34622,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Swiftskin's Coil"
+    },
+    "34626": {
+      "iconPath": "/i/003000/003721.png",
+      "id": 34626,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Reawaken"
+    },
+    "34627": {
+      "iconPath": "/i/003000/003722.png",
+      "id": 34627,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "First Generation"
+    },
+    "34628": {
+      "iconPath": "/i/003000/003723.png",
+      "id": 34628,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Second Generation"
+    },
+    "34629": {
+      "iconPath": "/i/003000/003724.png",
+      "id": 34629,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Third Generation"
+    },
+    "34630": {
+      "iconPath": "/i/003000/003725.png",
+      "id": 34630,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Fourth Generation"
+    },
+    "34631": {
+      "iconPath": "/i/003000/003726.png",
+      "id": 34631,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Ouroboros"
+    },
+    "34633": {
+      "iconPath": "/i/003000/003728.png",
+      "id": 34633,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Uncoiled Fury"
+    },
+    "34634": {
+      "iconPath": "/i/003000/003729.png",
+      "id": 34634,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Death Rattle"
+    },
+    "34636": {
+      "iconPath": "/i/003000/003731.png",
+      "id": 34636,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Twinfang Bite"
+    },
+    "34637": {
+      "iconPath": "/i/003000/003732.png",
+      "id": 34637,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Twinblood Bite"
+    },
+    "34640": {
+      "iconPath": "/i/003000/003735.png",
+      "id": 34640,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "First Legacy"
+    },
+    "34641": {
+      "iconPath": "/i/003000/003736.png",
+      "id": 34641,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Second Legacy"
+    },
+    "34642": {
+      "iconPath": "/i/003000/003737.png",
+      "id": 34642,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Third Legacy"
+    },
+    "34643": {
+      "iconPath": "/i/003000/003738.png",
+      "id": 34643,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Fourth Legacy"
+    },
+    "34644": {
+      "iconPath": "/i/003000/003739.png",
+      "id": 34644,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Uncoiled Twinfang"
+    },
+    "34645": {
+      "iconPath": "/i/003000/003740.png",
+      "id": 34645,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Uncoiled Twinblood"
+    },
+    "34647": {
+      "iconPath": "/i/003000/003742.png",
+      "id": 34647,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Serpent's Ire"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "34606": 10,
+        "34607": 9,
+        "34608": 9,
+        "34609": 9,
+        "34610": 9,
+        "34613": 9,
+        "34620": 9,
+        "34621": 9,
+        "34622": 9,
+        "34626": 8,
+        "34627": 8,
+        "34628": 8,
+        "34629": 8,
+        "34630": 8,
+        "34631": 8,
+        "34633": 12,
+        "34634": 18,
+        "34636": 18,
+        "34637": 18,
+        "34640": 8,
+        "34641": 8,
+        "34642": 8,
+        "34643": 8,
+        "34644": 12,
+        "34645": 12,
+        "34647": 3
+      },
+      "totalCasts": 255
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": []
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 579.72,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.28,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "targetability"
+    },
+    "Drift": {
+      "downtimeSource": "targetability",
+      "downtimeWindows": [],
+      "fightDurationSec": 300.0,
+      "findings": [
+        {
+          "abilityId": 34647,
+          "abilityName": "Serpent's Ire",
+          "cappedSeconds": 3.52,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 34620,
+          "expectedId": 34607,
+          "lostPotency": 0.0,
+          "position": 1,
+          "summary": "Opener slot #1: cast Vicewinder, canonical uses Reaving Fangs (same potency)"
+        },
+        {
+          "actualId": 34621,
+          "expectedId": 34609,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Hunter's Coil, canonical uses Swiftskin's Sting (same potency)"
+        },
+        {
+          "actualId": 34622,
+          "expectedId": 34620,
+          "lostPotency": 0.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Swiftskin's Coil, canonical uses Vicewinder (same potency)"
+        },
+        {
+          "actualId": 34626,
+          "expectedId": 34621,
+          "lostPotency": 0.0,
+          "position": 4,
+          "summary": "Opener slot #4: cast Reawaken, canonical uses Hunter's Coil (same potency)"
+        },
+        {
+          "actualId": 34627,
+          "expectedId": 34622,
+          "lostPotency": 0.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast First Generation, canonical uses Swiftskin's Coil (same potency)"
+        },
+        {
+          "actualId": 34628,
+          "expectedId": 34626,
+          "lostPotency": 70.0,
+          "position": 6,
+          "summary": "Opener slot #6: cast Second Generation (680p), canonical uses Reawaken (750p) \u2014 -70p"
+        },
+        {
+          "actualId": 34629,
+          "expectedId": 34627,
+          "lostPotency": 0.0,
+          "position": 7,
+          "summary": "Opener slot #7: cast Third Generation, canonical uses First Generation (same potency)"
+        },
+        {
+          "actualId": 34630,
+          "expectedId": 34628,
+          "lostPotency": 0.0,
+          "position": 8,
+          "summary": "Opener slot #8: cast Fourth Generation, canonical uses Second Generation (same potency)"
+        },
+        {
+          "actualId": 34631,
+          "expectedId": 34629,
+          "lostPotency": 0.0,
+          "position": 9,
+          "summary": "Opener slot #9: cast Ouroboros, canonical uses Third Generation (same potency)"
+        },
+        {
+          "actualId": 34620,
+          "expectedId": 34630,
+          "lostPotency": 140.0,
+          "position": 10,
+          "summary": "Opener slot #10: cast Vicewinder (540p), canonical uses Fourth Generation (680p) \u2014 -140p"
+        },
+        {
+          "actualId": 34621,
+          "expectedId": 34631,
+          "lostPotency": 470.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Hunter's Coil (680p), canonical uses Ouroboros (1150p) \u2014 -470p"
+        },
+        {
+          "actualId": 34622,
+          "expectedId": 34633,
+          "lostPotency": 0.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Swiftskin's Coil, canonical uses Uncoiled Fury (same potency)"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Scoring": {
+      "deliveredObserved": 118580.0,
+      "deliveredPotency": 118580.0,
+      "downtimeSource": "targetability",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "34647": 2755.91
+      },
+      "fightDurationSec": 300.0,
+      "hunterInstinctUptimePct": 100.0,
+      "idealizedLenient": 118896.69,
+      "idealizedMaster": 117737.68,
+      "idealizedObserved": 117737.68,
+      "idealizedPotency": 118896.69,
+      "idealizedStrict": 118896.69,
+      "masterBuffIntervals": [],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.12,
+        "payload": null
+      },
+      "tinctureLoss": 2262.18,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 255"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Death Rattle",
+          18,
+          0
+        ],
+        [
+          "Twinfang Bite",
+          18,
+          0
+        ],
+        [
+          "Twinblood Bite",
+          18,
+          0
+        ],
+        [
+          "Uncoiled Fury",
+          12,
+          0
+        ],
+        [
+          "Uncoiled Twinfang",
+          12,
+          0
+        ],
+        [
+          "Uncoiled Twinblood",
+          12,
+          0
+        ],
+        [
+          "Steel Fangs",
+          10,
+          0
+        ],
+        [
+          "Reaving Fangs",
+          9,
+          0
+        ],
+        [
+          "Hunter's Sting",
+          9,
+          0
+        ],
+        [
+          "Swiftskin's Sting",
+          9,
+          0
+        ],
+        [
+          "Flanksting Strike",
+          9,
+          0
+        ],
+        [
+          "Hindsbane Fang",
+          9,
+          0
+        ],
+        [
+          "Vicewinder",
+          9,
+          0
+        ],
+        [
+          "Hunter's Coil",
+          9,
+          0
+        ],
+        [
+          "Swiftskin's Coil",
+          9,
+          0
+        ],
+        [
+          "Reawaken",
+          8,
+          0
+        ],
+        [
+          "First Generation",
+          8,
+          0
+        ],
+        [
+          "Second Generation",
+          8,
+          0
+        ],
+        [
+          "Third Generation",
+          8,
+          0
+        ],
+        [
+          "Fourth Generation",
+          8,
+          0
+        ],
+        [
+          "Ouroboros",
+          8,
+          0
+        ],
+        [
+          "First Legacy",
+          8,
+          0
+        ],
+        [
+          "Second Legacy",
+          8,
+          0
+        ],
+        [
+          "Third Legacy",
+          8,
+          0
+        ],
+        [
+          "Fourth Legacy",
+          8,
+          0
+        ],
+        [
+          "Serpent's Ire",
+          3,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No raid-buff providers in this party \u2014 burst alignment N/A."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing \u2014 eff GCD 2.28s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.28s",
+        "Avg GCD potency: 580p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "No notable cooldown drift."
+      ],
+      "summaryLines": [
+        "Total drift cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Serpent's Ire",
+          3,
+          3.5,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #6: cast Second Generation (680p), canonical uses Reawaken (750p) \u2014 -70p",
+        "[opener] Opener slot #10: cast Vicewinder (540p), canonical uses Fourth Generation (680p) \u2014 -140p",
+        "[opener] Opener slot #11: cast Hunter's Coil (680p), canonical uses Ouroboros (1150p) \u2014 -470p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 680p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          1,
+          "Reaving Fangs",
+          "Vicewinder",
+          0
+        ],
+        [
+          2,
+          "Swiftskin's Sting",
+          "Hunter's Coil",
+          0
+        ],
+        [
+          3,
+          "Vicewinder",
+          "Swiftskin's Coil",
+          0
+        ],
+        [
+          4,
+          "Hunter's Coil",
+          "Reawaken",
+          0
+        ],
+        [
+          5,
+          "Swiftskin's Coil",
+          "First Generation",
+          0
+        ],
+        [
+          6,
+          "Reawaken",
+          "Second Generation",
+          70
+        ],
+        [
+          7,
+          "First Generation",
+          "Third Generation",
+          0
+        ],
+        [
+          8,
+          "Second Generation",
+          "Fourth Generation",
+          0
+        ],
+        [
+          9,
+          "Third Generation",
+          "Ouroboros",
+          0
+        ],
+        [
+          10,
+          "Fourth Generation",
+          "Vicewinder",
+          140
+        ],
+        [
+          11,
+          "Ouroboros",
+          "Hunter's Coil",
+          470
+        ],
+        [
+          12,
+          "Uncoiled Fury",
+          "Swiftskin's Coil",
+          0
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 118580.0,
+    "downtimeSource": "targetability",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.28,
+    "efficiencyPct": 99.73,
+    "efficiencyPctLenient": 99.73,
+    "efficiencyPctMaster": 100.0,
+    "efficiencyPctObserved": 100.0,
+    "efficiencyPctStrict": 99.73,
+    "idealizedMaster": 118580.0,
+    "idealizedObserved": 118580.0,
+    "killTimeSec": 300,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Viper"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 118896.69,
+    "yourIdealizedPotencyLenient": 118896.69,
+    "yourPotency": 118580.0
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 31.0,
+      "multiplier": 1.08,
+      "startSec": 1.0
+    },
+    {
+      "endSec": 303.34,
+      "multiplier": 1.08,
+      "startSec": 273.34
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 34620,
+      "color": "#3b82f6",
+      "endSec": 2.0,
+      "iconPath": "/i/003000/003715.png",
+      "label": "Vic",
+      "startSec": 1.0,
+      "tooltip": "Vicewinder @ 1.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34647,
+      "color": "#f59e0b",
+      "endSec": 1.6,
+      "iconPath": "/i/003000/003742.png",
+      "label": "Ser",
+      "startSec": 1.0,
+      "tooltip": "Serpent's Ire @ 1.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34621,
+      "color": "#3b82f6",
+      "endSec": 4.55,
+      "iconPath": "/i/003000/003716.png",
+      "label": "Hun",
+      "startSec": 3.55,
+      "tooltip": "Hunter's Coil @ 3.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 4.15,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 3.55,
+      "tooltip": "Twinfang Bite @ 3.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 4.85,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 4.25,
+      "tooltip": "Twinblood Bite @ 4.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34622,
+      "color": "#3b82f6",
+      "endSec": 7.1,
+      "iconPath": "/i/003000/003717.png",
+      "label": "Swi",
+      "startSec": 6.1,
+      "tooltip": "Swiftskin's Coil @ 6.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 6.7,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 6.1,
+      "tooltip": "Twinfang Bite @ 6.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 7.4,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 6.8,
+      "tooltip": "Twinblood Bite @ 6.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34626,
+      "color": "#3b82f6",
+      "endSec": 9.65,
+      "iconPath": "/i/003000/003721.png",
+      "label": "Rea",
+      "startSec": 8.65,
+      "tooltip": "Reawaken @ 8.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34627,
+      "color": "#3b82f6",
+      "endSec": 11.52,
+      "iconPath": "/i/003000/003722.png",
+      "label": "Fir",
+      "startSec": 10.52,
+      "tooltip": "First Generation @ 10.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34640,
+      "color": "#f59e0b",
+      "endSec": 11.12,
+      "iconPath": "/i/003000/003735.png",
+      "label": "Fir",
+      "startSec": 10.52,
+      "tooltip": "First Legacy @ 10.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34628,
+      "color": "#3b82f6",
+      "endSec": 13.22,
+      "iconPath": "/i/003000/003723.png",
+      "label": "Sec",
+      "startSec": 12.22,
+      "tooltip": "Second Generation @ 12.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34641,
+      "color": "#f59e0b",
+      "endSec": 12.82,
+      "iconPath": "/i/003000/003736.png",
+      "label": "Sec",
+      "startSec": 12.22,
+      "tooltip": "Second Legacy @ 12.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34629,
+      "color": "#3b82f6",
+      "endSec": 14.92,
+      "iconPath": "/i/003000/003724.png",
+      "label": "Thi",
+      "startSec": 13.92,
+      "tooltip": "Third Generation @ 13.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34642,
+      "color": "#f59e0b",
+      "endSec": 14.52,
+      "iconPath": "/i/003000/003737.png",
+      "label": "Thi",
+      "startSec": 13.92,
+      "tooltip": "Third Legacy @ 13.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34630,
+      "color": "#3b82f6",
+      "endSec": 16.62,
+      "iconPath": "/i/003000/003725.png",
+      "label": "Fou",
+      "startSec": 15.62,
+      "tooltip": "Fourth Generation @ 15.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34643,
+      "color": "#f59e0b",
+      "endSec": 16.22,
+      "iconPath": "/i/003000/003738.png",
+      "label": "Fou",
+      "startSec": 15.62,
+      "tooltip": "Fourth Legacy @ 15.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34631,
+      "color": "#3b82f6",
+      "endSec": 18.32,
+      "iconPath": "/i/003000/003726.png",
+      "label": "Our",
+      "startSec": 17.32,
+      "tooltip": "Ouroboros @ 17.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34620,
+      "color": "#3b82f6",
+      "endSec": 20.87,
+      "iconPath": "/i/003000/003715.png",
+      "label": "Vic",
+      "startSec": 19.87,
+      "tooltip": "Vicewinder @ 19.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34621,
+      "color": "#3b82f6",
+      "endSec": 23.42,
+      "iconPath": "/i/003000/003716.png",
+      "label": "Hun",
+      "startSec": 22.42,
+      "tooltip": "Hunter's Coil @ 22.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 23.02,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 22.42,
+      "tooltip": "Twinfang Bite @ 22.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 23.72,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 23.12,
+      "tooltip": "Twinblood Bite @ 23.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34622,
+      "color": "#3b82f6",
+      "endSec": 25.97,
+      "iconPath": "/i/003000/003717.png",
+      "label": "Swi",
+      "startSec": 24.97,
+      "tooltip": "Swiftskin's Coil @ 25.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 25.57,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 24.97,
+      "tooltip": "Twinfang Bite @ 25.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 26.27,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 25.67,
+      "tooltip": "Twinblood Bite @ 25.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 28.52,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 27.52,
+      "tooltip": "Uncoiled Fury @ 27.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 28.12,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 27.52,
+      "tooltip": "Uncoiled Twinfang @ 27.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 28.82,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 28.22,
+      "tooltip": "Uncoiled Twinblood @ 28.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 31.49,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 30.49,
+      "tooltip": "Uncoiled Fury @ 30.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 31.09,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 30.49,
+      "tooltip": "Uncoiled Twinfang @ 30.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 31.79,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 31.19,
+      "tooltip": "Uncoiled Twinblood @ 31.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 34.47,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 33.47,
+      "tooltip": "Uncoiled Fury @ 33.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 34.07,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 33.47,
+      "tooltip": "Uncoiled Twinfang @ 33.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 34.77,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 34.17,
+      "tooltip": "Uncoiled Twinblood @ 34.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34606,
+      "color": "#3b82f6",
+      "endSec": 37.45,
+      "iconPath": "/i/003000/003701.png",
+      "label": "Ste",
+      "startSec": 36.45,
+      "tooltip": "Steel Fangs @ 36.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34608,
+      "color": "#3b82f6",
+      "endSec": 39.57,
+      "iconPath": "/i/003000/003703.png",
+      "label": "Hun",
+      "startSec": 38.57,
+      "tooltip": "Hunter's Sting @ 38.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34610,
+      "color": "#3b82f6",
+      "endSec": 41.7,
+      "iconPath": "/i/003000/003705.png",
+      "label": "Fla",
+      "startSec": 40.7,
+      "tooltip": "Flanksting Strike @ 40.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 41.3,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 40.7,
+      "tooltip": "Death Rattle @ 40.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34620,
+      "color": "#3b82f6",
+      "endSec": 43.82,
+      "iconPath": "/i/003000/003715.png",
+      "label": "Vic",
+      "startSec": 42.82,
+      "tooltip": "Vicewinder @ 42.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34621,
+      "color": "#3b82f6",
+      "endSec": 46.37,
+      "iconPath": "/i/003000/003716.png",
+      "label": "Hun",
+      "startSec": 45.37,
+      "tooltip": "Hunter's Coil @ 45.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 45.97,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 45.37,
+      "tooltip": "Twinfang Bite @ 45.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 46.67,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 46.07,
+      "tooltip": "Twinblood Bite @ 46.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34622,
+      "color": "#3b82f6",
+      "endSec": 48.92,
+      "iconPath": "/i/003000/003717.png",
+      "label": "Swi",
+      "startSec": 47.92,
+      "tooltip": "Swiftskin's Coil @ 47.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 48.52,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 47.92,
+      "tooltip": "Twinfang Bite @ 47.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 49.22,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 48.62,
+      "tooltip": "Twinblood Bite @ 48.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 51.47,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 50.47,
+      "tooltip": "Uncoiled Fury @ 50.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 51.07,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 50.47,
+      "tooltip": "Uncoiled Twinfang @ 50.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 51.77,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 51.17,
+      "tooltip": "Uncoiled Twinblood @ 51.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34607,
+      "color": "#3b82f6",
+      "endSec": 54.44,
+      "iconPath": "/i/003000/003702.png",
+      "label": "Rea",
+      "startSec": 53.44,
+      "tooltip": "Reaving Fangs @ 53.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34609,
+      "color": "#3b82f6",
+      "endSec": 56.57,
+      "iconPath": "/i/003000/003704.png",
+      "label": "Swi",
+      "startSec": 55.57,
+      "tooltip": "Swiftskin's Sting @ 55.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34613,
+      "color": "#3b82f6",
+      "endSec": 58.69,
+      "iconPath": "/i/003000/003708.png",
+      "label": "Hin",
+      "startSec": 57.69,
+      "tooltip": "Hindsbane Fang @ 57.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 58.29,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 57.69,
+      "tooltip": "Death Rattle @ 57.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34626,
+      "color": "#3b82f6",
+      "endSec": 60.82,
+      "iconPath": "/i/003000/003721.png",
+      "label": "Rea",
+      "startSec": 59.82,
+      "tooltip": "Reawaken @ 59.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34627,
+      "color": "#3b82f6",
+      "endSec": 62.69,
+      "iconPath": "/i/003000/003722.png",
+      "label": "Fir",
+      "startSec": 61.69,
+      "tooltip": "First Generation @ 61.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34640,
+      "color": "#f59e0b",
+      "endSec": 62.29,
+      "iconPath": "/i/003000/003735.png",
+      "label": "Fir",
+      "startSec": 61.69,
+      "tooltip": "First Legacy @ 61.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34628,
+      "color": "#3b82f6",
+      "endSec": 64.39,
+      "iconPath": "/i/003000/003723.png",
+      "label": "Sec",
+      "startSec": 63.39,
+      "tooltip": "Second Generation @ 63.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34641,
+      "color": "#f59e0b",
+      "endSec": 63.99,
+      "iconPath": "/i/003000/003736.png",
+      "label": "Sec",
+      "startSec": 63.39,
+      "tooltip": "Second Legacy @ 63.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34629,
+      "color": "#3b82f6",
+      "endSec": 66.09,
+      "iconPath": "/i/003000/003724.png",
+      "label": "Thi",
+      "startSec": 65.09,
+      "tooltip": "Third Generation @ 65.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34642,
+      "color": "#f59e0b",
+      "endSec": 65.69,
+      "iconPath": "/i/003000/003737.png",
+      "label": "Thi",
+      "startSec": 65.09,
+      "tooltip": "Third Legacy @ 65.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34630,
+      "color": "#3b82f6",
+      "endSec": 67.79,
+      "iconPath": "/i/003000/003725.png",
+      "label": "Fou",
+      "startSec": 66.79,
+      "tooltip": "Fourth Generation @ 66.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34643,
+      "color": "#f59e0b",
+      "endSec": 67.39,
+      "iconPath": "/i/003000/003738.png",
+      "label": "Fou",
+      "startSec": 66.79,
+      "tooltip": "Fourth Legacy @ 66.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34631,
+      "color": "#3b82f6",
+      "endSec": 69.49,
+      "iconPath": "/i/003000/003726.png",
+      "label": "Our",
+      "startSec": 68.49,
+      "tooltip": "Ouroboros @ 68.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34606,
+      "color": "#3b82f6",
+      "endSec": 72.04,
+      "iconPath": "/i/003000/003701.png",
+      "label": "Ste",
+      "startSec": 71.04,
+      "tooltip": "Steel Fangs @ 71.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34608,
+      "color": "#3b82f6",
+      "endSec": 74.16,
+      "iconPath": "/i/003000/003703.png",
+      "label": "Hun",
+      "startSec": 73.16,
+      "tooltip": "Hunter's Sting @ 73.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34610,
+      "color": "#3b82f6",
+      "endSec": 76.29,
+      "iconPath": "/i/003000/003705.png",
+      "label": "Fla",
+      "startSec": 75.29,
+      "tooltip": "Flanksting Strike @ 75.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 75.89,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 75.29,
+      "tooltip": "Death Rattle @ 75.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34607,
+      "color": "#3b82f6",
+      "endSec": 78.41,
+      "iconPath": "/i/003000/003702.png",
+      "label": "Rea",
+      "startSec": 77.41,
+      "tooltip": "Reaving Fangs @ 77.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34609,
+      "color": "#3b82f6",
+      "endSec": 80.54,
+      "iconPath": "/i/003000/003704.png",
+      "label": "Swi",
+      "startSec": 79.54,
+      "tooltip": "Swiftskin's Sting @ 79.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34620,
+      "color": "#3b82f6",
+      "endSec": 82.66,
+      "iconPath": "/i/003000/003715.png",
+      "label": "Vic",
+      "startSec": 81.66,
+      "tooltip": "Vicewinder @ 81.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34621,
+      "color": "#3b82f6",
+      "endSec": 85.21,
+      "iconPath": "/i/003000/003716.png",
+      "label": "Hun",
+      "startSec": 84.21,
+      "tooltip": "Hunter's Coil @ 84.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 84.81,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 84.21,
+      "tooltip": "Twinfang Bite @ 84.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 85.51,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 84.91,
+      "tooltip": "Twinblood Bite @ 84.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34622,
+      "color": "#3b82f6",
+      "endSec": 87.76,
+      "iconPath": "/i/003000/003717.png",
+      "label": "Swi",
+      "startSec": 86.76,
+      "tooltip": "Swiftskin's Coil @ 86.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 87.36,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 86.76,
+      "tooltip": "Twinfang Bite @ 86.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 88.06,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 87.46,
+      "tooltip": "Twinblood Bite @ 87.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 90.31,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 89.31,
+      "tooltip": "Uncoiled Fury @ 89.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 89.91,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 89.31,
+      "tooltip": "Uncoiled Twinfang @ 89.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 90.61,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 90.01,
+      "tooltip": "Uncoiled Twinblood @ 90.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34613,
+      "color": "#3b82f6",
+      "endSec": 93.29,
+      "iconPath": "/i/003000/003708.png",
+      "label": "Hin",
+      "startSec": 92.29,
+      "tooltip": "Hindsbane Fang @ 92.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 92.89,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 92.29,
+      "tooltip": "Death Rattle @ 92.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34606,
+      "color": "#3b82f6",
+      "endSec": 95.41,
+      "iconPath": "/i/003000/003701.png",
+      "label": "Ste",
+      "startSec": 94.41,
+      "tooltip": "Steel Fangs @ 94.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34608,
+      "color": "#3b82f6",
+      "endSec": 97.54,
+      "iconPath": "/i/003000/003703.png",
+      "label": "Hun",
+      "startSec": 96.54,
+      "tooltip": "Hunter's Sting @ 96.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34610,
+      "color": "#3b82f6",
+      "endSec": 99.66,
+      "iconPath": "/i/003000/003705.png",
+      "label": "Fla",
+      "startSec": 98.66,
+      "tooltip": "Flanksting Strike @ 98.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 99.26,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 98.66,
+      "tooltip": "Death Rattle @ 98.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34607,
+      "color": "#3b82f6",
+      "endSec": 101.79,
+      "iconPath": "/i/003000/003702.png",
+      "label": "Rea",
+      "startSec": 100.79,
+      "tooltip": "Reaving Fangs @ 100.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34609,
+      "color": "#3b82f6",
+      "endSec": 103.91,
+      "iconPath": "/i/003000/003704.png",
+      "label": "Swi",
+      "startSec": 102.91,
+      "tooltip": "Swiftskin's Sting @ 102.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34613,
+      "color": "#3b82f6",
+      "endSec": 106.04,
+      "iconPath": "/i/003000/003708.png",
+      "label": "Hin",
+      "startSec": 105.04,
+      "tooltip": "Hindsbane Fang @ 105.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 105.64,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 105.04,
+      "tooltip": "Death Rattle @ 105.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34626,
+      "color": "#3b82f6",
+      "endSec": 108.16,
+      "iconPath": "/i/003000/003721.png",
+      "label": "Rea",
+      "startSec": 107.16,
+      "tooltip": "Reawaken @ 107.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34627,
+      "color": "#3b82f6",
+      "endSec": 110.03,
+      "iconPath": "/i/003000/003722.png",
+      "label": "Fir",
+      "startSec": 109.03,
+      "tooltip": "First Generation @ 109.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34640,
+      "color": "#f59e0b",
+      "endSec": 109.63,
+      "iconPath": "/i/003000/003735.png",
+      "label": "Fir",
+      "startSec": 109.03,
+      "tooltip": "First Legacy @ 109.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34628,
+      "color": "#3b82f6",
+      "endSec": 111.73,
+      "iconPath": "/i/003000/003723.png",
+      "label": "Sec",
+      "startSec": 110.73,
+      "tooltip": "Second Generation @ 110.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34641,
+      "color": "#f59e0b",
+      "endSec": 111.33,
+      "iconPath": "/i/003000/003736.png",
+      "label": "Sec",
+      "startSec": 110.73,
+      "tooltip": "Second Legacy @ 110.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34629,
+      "color": "#3b82f6",
+      "endSec": 113.43,
+      "iconPath": "/i/003000/003724.png",
+      "label": "Thi",
+      "startSec": 112.43,
+      "tooltip": "Third Generation @ 112.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34642,
+      "color": "#f59e0b",
+      "endSec": 113.03,
+      "iconPath": "/i/003000/003737.png",
+      "label": "Thi",
+      "startSec": 112.43,
+      "tooltip": "Third Legacy @ 112.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34630,
+      "color": "#3b82f6",
+      "endSec": 115.13,
+      "iconPath": "/i/003000/003725.png",
+      "label": "Fou",
+      "startSec": 114.13,
+      "tooltip": "Fourth Generation @ 114.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34643,
+      "color": "#f59e0b",
+      "endSec": 114.73,
+      "iconPath": "/i/003000/003738.png",
+      "label": "Fou",
+      "startSec": 114.13,
+      "tooltip": "Fourth Legacy @ 114.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34631,
+      "color": "#3b82f6",
+      "endSec": 116.83,
+      "iconPath": "/i/003000/003726.png",
+      "label": "Our",
+      "startSec": 115.83,
+      "tooltip": "Ouroboros @ 115.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34606,
+      "color": "#3b82f6",
+      "endSec": 119.38,
+      "iconPath": "/i/003000/003701.png",
+      "label": "Ste",
+      "startSec": 118.38,
+      "tooltip": "Steel Fangs @ 118.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34608,
+      "color": "#3b82f6",
+      "endSec": 121.51,
+      "iconPath": "/i/003000/003703.png",
+      "label": "Hun",
+      "startSec": 120.51,
+      "tooltip": "Hunter's Sting @ 120.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34620,
+      "color": "#3b82f6",
+      "endSec": 123.63,
+      "iconPath": "/i/003000/003715.png",
+      "label": "Vic",
+      "startSec": 122.63,
+      "tooltip": "Vicewinder @ 122.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34647,
+      "color": "#f59e0b",
+      "endSec": 123.23,
+      "iconPath": "/i/003000/003742.png",
+      "label": "Ser",
+      "startSec": 122.63,
+      "tooltip": "Serpent's Ire @ 122.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34621,
+      "color": "#3b82f6",
+      "endSec": 126.18,
+      "iconPath": "/i/003000/003716.png",
+      "label": "Hun",
+      "startSec": 125.18,
+      "tooltip": "Hunter's Coil @ 125.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 125.78,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 125.18,
+      "tooltip": "Twinfang Bite @ 125.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 126.48,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 125.88,
+      "tooltip": "Twinblood Bite @ 125.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34622,
+      "color": "#3b82f6",
+      "endSec": 128.73,
+      "iconPath": "/i/003000/003717.png",
+      "label": "Swi",
+      "startSec": 127.73,
+      "tooltip": "Swiftskin's Coil @ 127.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 128.33,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 127.73,
+      "tooltip": "Twinfang Bite @ 127.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 129.03,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 128.43,
+      "tooltip": "Twinblood Bite @ 128.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34626,
+      "color": "#3b82f6",
+      "endSec": 131.28,
+      "iconPath": "/i/003000/003721.png",
+      "label": "Rea",
+      "startSec": 130.28,
+      "tooltip": "Reawaken @ 130.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34627,
+      "color": "#3b82f6",
+      "endSec": 133.16,
+      "iconPath": "/i/003000/003722.png",
+      "label": "Fir",
+      "startSec": 132.16,
+      "tooltip": "First Generation @ 132.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34640,
+      "color": "#f59e0b",
+      "endSec": 132.75,
+      "iconPath": "/i/003000/003735.png",
+      "label": "Fir",
+      "startSec": 132.16,
+      "tooltip": "First Legacy @ 132.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34628,
+      "color": "#3b82f6",
+      "endSec": 134.85,
+      "iconPath": "/i/003000/003723.png",
+      "label": "Sec",
+      "startSec": 133.85,
+      "tooltip": "Second Generation @ 133.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34641,
+      "color": "#f59e0b",
+      "endSec": 134.45,
+      "iconPath": "/i/003000/003736.png",
+      "label": "Sec",
+      "startSec": 133.85,
+      "tooltip": "Second Legacy @ 133.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34629,
+      "color": "#3b82f6",
+      "endSec": 136.55,
+      "iconPath": "/i/003000/003724.png",
+      "label": "Thi",
+      "startSec": 135.55,
+      "tooltip": "Third Generation @ 135.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34642,
+      "color": "#f59e0b",
+      "endSec": 136.15,
+      "iconPath": "/i/003000/003737.png",
+      "label": "Thi",
+      "startSec": 135.55,
+      "tooltip": "Third Legacy @ 135.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34630,
+      "color": "#3b82f6",
+      "endSec": 138.25,
+      "iconPath": "/i/003000/003725.png",
+      "label": "Fou",
+      "startSec": 137.25,
+      "tooltip": "Fourth Generation @ 137.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34643,
+      "color": "#f59e0b",
+      "endSec": 137.85,
+      "iconPath": "/i/003000/003738.png",
+      "label": "Fou",
+      "startSec": 137.25,
+      "tooltip": "Fourth Legacy @ 137.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34631,
+      "color": "#3b82f6",
+      "endSec": 139.95,
+      "iconPath": "/i/003000/003726.png",
+      "label": "Our",
+      "startSec": 138.95,
+      "tooltip": "Ouroboros @ 139.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 142.5,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 141.5,
+      "tooltip": "Uncoiled Fury @ 141.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 142.1,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 141.5,
+      "tooltip": "Uncoiled Twinfang @ 141.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 142.8,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 142.2,
+      "tooltip": "Uncoiled Twinblood @ 142.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 145.48,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 144.48,
+      "tooltip": "Uncoiled Fury @ 144.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 145.08,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 144.48,
+      "tooltip": "Uncoiled Twinfang @ 144.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 145.78,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 145.18,
+      "tooltip": "Uncoiled Twinblood @ 145.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34610,
+      "color": "#3b82f6",
+      "endSec": 148.45,
+      "iconPath": "/i/003000/003705.png",
+      "label": "Fla",
+      "startSec": 147.45,
+      "tooltip": "Flanksting Strike @ 147.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 148.05,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 147.45,
+      "tooltip": "Death Rattle @ 147.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34607,
+      "color": "#3b82f6",
+      "endSec": 150.58,
+      "iconPath": "/i/003000/003702.png",
+      "label": "Rea",
+      "startSec": 149.58,
+      "tooltip": "Reaving Fangs @ 149.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34609,
+      "color": "#3b82f6",
+      "endSec": 152.7,
+      "iconPath": "/i/003000/003704.png",
+      "label": "Swi",
+      "startSec": 151.7,
+      "tooltip": "Swiftskin's Sting @ 151.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34613,
+      "color": "#3b82f6",
+      "endSec": 154.83,
+      "iconPath": "/i/003000/003708.png",
+      "label": "Hin",
+      "startSec": 153.83,
+      "tooltip": "Hindsbane Fang @ 153.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 154.43,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 153.83,
+      "tooltip": "Death Rattle @ 153.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34606,
+      "color": "#3b82f6",
+      "endSec": 156.95,
+      "iconPath": "/i/003000/003701.png",
+      "label": "Ste",
+      "startSec": 155.95,
+      "tooltip": "Steel Fangs @ 156.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34608,
+      "color": "#3b82f6",
+      "endSec": 159.08,
+      "iconPath": "/i/003000/003703.png",
+      "label": "Hun",
+      "startSec": 158.08,
+      "tooltip": "Hunter's Sting @ 158.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34610,
+      "color": "#3b82f6",
+      "endSec": 161.2,
+      "iconPath": "/i/003000/003705.png",
+      "label": "Fla",
+      "startSec": 160.2,
+      "tooltip": "Flanksting Strike @ 160.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 160.8,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 160.2,
+      "tooltip": "Death Rattle @ 160.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34620,
+      "color": "#3b82f6",
+      "endSec": 163.33,
+      "iconPath": "/i/003000/003715.png",
+      "label": "Vic",
+      "startSec": 162.33,
+      "tooltip": "Vicewinder @ 162.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34621,
+      "color": "#3b82f6",
+      "endSec": 165.88,
+      "iconPath": "/i/003000/003716.png",
+      "label": "Hun",
+      "startSec": 164.88,
+      "tooltip": "Hunter's Coil @ 164.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 165.48,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 164.88,
+      "tooltip": "Twinfang Bite @ 164.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 166.18,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 165.58,
+      "tooltip": "Twinblood Bite @ 165.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34622,
+      "color": "#3b82f6",
+      "endSec": 168.43,
+      "iconPath": "/i/003000/003717.png",
+      "label": "Swi",
+      "startSec": 167.43,
+      "tooltip": "Swiftskin's Coil @ 167.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 168.03,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 167.43,
+      "tooltip": "Twinfang Bite @ 167.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 168.73,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 168.13,
+      "tooltip": "Twinblood Bite @ 168.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34626,
+      "color": "#3b82f6",
+      "endSec": 170.98,
+      "iconPath": "/i/003000/003721.png",
+      "label": "Rea",
+      "startSec": 169.98,
+      "tooltip": "Reawaken @ 170.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34627,
+      "color": "#3b82f6",
+      "endSec": 172.85,
+      "iconPath": "/i/003000/003722.png",
+      "label": "Fir",
+      "startSec": 171.85,
+      "tooltip": "First Generation @ 171.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34640,
+      "color": "#f59e0b",
+      "endSec": 172.45,
+      "iconPath": "/i/003000/003735.png",
+      "label": "Fir",
+      "startSec": 171.85,
+      "tooltip": "First Legacy @ 171.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34628,
+      "color": "#3b82f6",
+      "endSec": 174.55,
+      "iconPath": "/i/003000/003723.png",
+      "label": "Sec",
+      "startSec": 173.55,
+      "tooltip": "Second Generation @ 173.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34641,
+      "color": "#f59e0b",
+      "endSec": 174.15,
+      "iconPath": "/i/003000/003736.png",
+      "label": "Sec",
+      "startSec": 173.55,
+      "tooltip": "Second Legacy @ 173.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34629,
+      "color": "#3b82f6",
+      "endSec": 176.25,
+      "iconPath": "/i/003000/003724.png",
+      "label": "Thi",
+      "startSec": 175.25,
+      "tooltip": "Third Generation @ 175.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34642,
+      "color": "#f59e0b",
+      "endSec": 175.85,
+      "iconPath": "/i/003000/003737.png",
+      "label": "Thi",
+      "startSec": 175.25,
+      "tooltip": "Third Legacy @ 175.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34630,
+      "color": "#3b82f6",
+      "endSec": 177.95,
+      "iconPath": "/i/003000/003725.png",
+      "label": "Fou",
+      "startSec": 176.95,
+      "tooltip": "Fourth Generation @ 176.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34643,
+      "color": "#f59e0b",
+      "endSec": 177.55,
+      "iconPath": "/i/003000/003738.png",
+      "label": "Fou",
+      "startSec": 176.95,
+      "tooltip": "Fourth Legacy @ 176.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34631,
+      "color": "#3b82f6",
+      "endSec": 179.65,
+      "iconPath": "/i/003000/003726.png",
+      "label": "Our",
+      "startSec": 178.65,
+      "tooltip": "Ouroboros @ 178.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 182.2,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 181.2,
+      "tooltip": "Uncoiled Fury @ 181.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 181.8,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 181.2,
+      "tooltip": "Uncoiled Twinfang @ 181.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 182.5,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 181.9,
+      "tooltip": "Uncoiled Twinblood @ 181.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34607,
+      "color": "#3b82f6",
+      "endSec": 185.17,
+      "iconPath": "/i/003000/003702.png",
+      "label": "Rea",
+      "startSec": 184.17,
+      "tooltip": "Reaving Fangs @ 184.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34609,
+      "color": "#3b82f6",
+      "endSec": 187.3,
+      "iconPath": "/i/003000/003704.png",
+      "label": "Swi",
+      "startSec": 186.3,
+      "tooltip": "Swiftskin's Sting @ 186.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34613,
+      "color": "#3b82f6",
+      "endSec": 189.42,
+      "iconPath": "/i/003000/003708.png",
+      "label": "Hin",
+      "startSec": 188.42,
+      "tooltip": "Hindsbane Fang @ 188.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 189.02,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 188.42,
+      "tooltip": "Death Rattle @ 188.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34606,
+      "color": "#3b82f6",
+      "endSec": 191.55,
+      "iconPath": "/i/003000/003701.png",
+      "label": "Ste",
+      "startSec": 190.55,
+      "tooltip": "Steel Fangs @ 190.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34608,
+      "color": "#3b82f6",
+      "endSec": 193.67,
+      "iconPath": "/i/003000/003703.png",
+      "label": "Hun",
+      "startSec": 192.67,
+      "tooltip": "Hunter's Sting @ 192.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34610,
+      "color": "#3b82f6",
+      "endSec": 195.8,
+      "iconPath": "/i/003000/003705.png",
+      "label": "Fla",
+      "startSec": 194.8,
+      "tooltip": "Flanksting Strike @ 194.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 195.4,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 194.8,
+      "tooltip": "Death Rattle @ 194.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34607,
+      "color": "#3b82f6",
+      "endSec": 197.92,
+      "iconPath": "/i/003000/003702.png",
+      "label": "Rea",
+      "startSec": 196.92,
+      "tooltip": "Reaving Fangs @ 196.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34609,
+      "color": "#3b82f6",
+      "endSec": 200.05,
+      "iconPath": "/i/003000/003704.png",
+      "label": "Swi",
+      "startSec": 199.05,
+      "tooltip": "Swiftskin's Sting @ 199.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34620,
+      "color": "#3b82f6",
+      "endSec": 202.17,
+      "iconPath": "/i/003000/003715.png",
+      "label": "Vic",
+      "startSec": 201.17,
+      "tooltip": "Vicewinder @ 201.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34621,
+      "color": "#3b82f6",
+      "endSec": 204.72,
+      "iconPath": "/i/003000/003716.png",
+      "label": "Hun",
+      "startSec": 203.72,
+      "tooltip": "Hunter's Coil @ 203.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 204.32,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 203.72,
+      "tooltip": "Twinfang Bite @ 203.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 205.02,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 204.42,
+      "tooltip": "Twinblood Bite @ 204.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34622,
+      "color": "#3b82f6",
+      "endSec": 207.27,
+      "iconPath": "/i/003000/003717.png",
+      "label": "Swi",
+      "startSec": 206.27,
+      "tooltip": "Swiftskin's Coil @ 206.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 206.87,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 206.27,
+      "tooltip": "Twinfang Bite @ 206.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 207.57,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 206.97,
+      "tooltip": "Twinblood Bite @ 207.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 209.82,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 208.82,
+      "tooltip": "Uncoiled Fury @ 208.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 209.42,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 208.82,
+      "tooltip": "Uncoiled Twinfang @ 208.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 210.12,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 209.52,
+      "tooltip": "Uncoiled Twinblood @ 209.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34613,
+      "color": "#3b82f6",
+      "endSec": 212.8,
+      "iconPath": "/i/003000/003708.png",
+      "label": "Hin",
+      "startSec": 211.8,
+      "tooltip": "Hindsbane Fang @ 211.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 212.4,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 211.8,
+      "tooltip": "Death Rattle @ 211.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34606,
+      "color": "#3b82f6",
+      "endSec": 214.92,
+      "iconPath": "/i/003000/003701.png",
+      "label": "Ste",
+      "startSec": 213.92,
+      "tooltip": "Steel Fangs @ 213.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34608,
+      "color": "#3b82f6",
+      "endSec": 217.05,
+      "iconPath": "/i/003000/003703.png",
+      "label": "Hun",
+      "startSec": 216.05,
+      "tooltip": "Hunter's Sting @ 216.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34610,
+      "color": "#3b82f6",
+      "endSec": 219.17,
+      "iconPath": "/i/003000/003705.png",
+      "label": "Fla",
+      "startSec": 218.17,
+      "tooltip": "Flanksting Strike @ 218.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 218.77,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 218.17,
+      "tooltip": "Death Rattle @ 218.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34626,
+      "color": "#3b82f6",
+      "endSec": 221.3,
+      "iconPath": "/i/003000/003721.png",
+      "label": "Rea",
+      "startSec": 220.3,
+      "tooltip": "Reawaken @ 220.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34627,
+      "color": "#3b82f6",
+      "endSec": 223.17,
+      "iconPath": "/i/003000/003722.png",
+      "label": "Fir",
+      "startSec": 222.17,
+      "tooltip": "First Generation @ 222.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34640,
+      "color": "#f59e0b",
+      "endSec": 222.77,
+      "iconPath": "/i/003000/003735.png",
+      "label": "Fir",
+      "startSec": 222.17,
+      "tooltip": "First Legacy @ 222.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34628,
+      "color": "#3b82f6",
+      "endSec": 224.87,
+      "iconPath": "/i/003000/003723.png",
+      "label": "Sec",
+      "startSec": 223.87,
+      "tooltip": "Second Generation @ 223.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34641,
+      "color": "#f59e0b",
+      "endSec": 224.47,
+      "iconPath": "/i/003000/003736.png",
+      "label": "Sec",
+      "startSec": 223.87,
+      "tooltip": "Second Legacy @ 223.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34629,
+      "color": "#3b82f6",
+      "endSec": 226.57,
+      "iconPath": "/i/003000/003724.png",
+      "label": "Thi",
+      "startSec": 225.57,
+      "tooltip": "Third Generation @ 225.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34642,
+      "color": "#f59e0b",
+      "endSec": 226.17,
+      "iconPath": "/i/003000/003737.png",
+      "label": "Thi",
+      "startSec": 225.57,
+      "tooltip": "Third Legacy @ 225.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34630,
+      "color": "#3b82f6",
+      "endSec": 228.27,
+      "iconPath": "/i/003000/003725.png",
+      "label": "Fou",
+      "startSec": 227.27,
+      "tooltip": "Fourth Generation @ 227.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34643,
+      "color": "#f59e0b",
+      "endSec": 227.87,
+      "iconPath": "/i/003000/003738.png",
+      "label": "Fou",
+      "startSec": 227.27,
+      "tooltip": "Fourth Legacy @ 227.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34631,
+      "color": "#3b82f6",
+      "endSec": 229.97,
+      "iconPath": "/i/003000/003726.png",
+      "label": "Our",
+      "startSec": 228.97,
+      "tooltip": "Ouroboros @ 229.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34607,
+      "color": "#3b82f6",
+      "endSec": 232.52,
+      "iconPath": "/i/003000/003702.png",
+      "label": "Rea",
+      "startSec": 231.52,
+      "tooltip": "Reaving Fangs @ 231.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34609,
+      "color": "#3b82f6",
+      "endSec": 234.64,
+      "iconPath": "/i/003000/003704.png",
+      "label": "Swi",
+      "startSec": 233.64,
+      "tooltip": "Swiftskin's Sting @ 233.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34613,
+      "color": "#3b82f6",
+      "endSec": 236.77,
+      "iconPath": "/i/003000/003708.png",
+      "label": "Hin",
+      "startSec": 235.77,
+      "tooltip": "Hindsbane Fang @ 235.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 236.37,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 235.77,
+      "tooltip": "Death Rattle @ 235.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34606,
+      "color": "#3b82f6",
+      "endSec": 238.89,
+      "iconPath": "/i/003000/003701.png",
+      "label": "Ste",
+      "startSec": 237.89,
+      "tooltip": "Steel Fangs @ 237.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34608,
+      "color": "#3b82f6",
+      "endSec": 241.02,
+      "iconPath": "/i/003000/003703.png",
+      "label": "Hun",
+      "startSec": 240.02,
+      "tooltip": "Hunter's Sting @ 240.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34620,
+      "color": "#3b82f6",
+      "endSec": 243.14,
+      "iconPath": "/i/003000/003715.png",
+      "label": "Vic",
+      "startSec": 242.14,
+      "tooltip": "Vicewinder @ 242.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34621,
+      "color": "#3b82f6",
+      "endSec": 245.69,
+      "iconPath": "/i/003000/003716.png",
+      "label": "Hun",
+      "startSec": 244.69,
+      "tooltip": "Hunter's Coil @ 244.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34647,
+      "color": "#f59e0b",
+      "endSec": 245.29,
+      "iconPath": "/i/003000/003742.png",
+      "label": "Ser",
+      "startSec": 244.69,
+      "tooltip": "Serpent's Ire @ 244.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 245.99,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 245.39,
+      "tooltip": "Twinfang Bite @ 245.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34622,
+      "color": "#3b82f6",
+      "endSec": 248.24,
+      "iconPath": "/i/003000/003717.png",
+      "label": "Swi",
+      "startSec": 247.24,
+      "tooltip": "Swiftskin's Coil @ 247.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 247.84,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 247.24,
+      "tooltip": "Twinblood Bite @ 247.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 248.54,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 247.94,
+      "tooltip": "Twinfang Bite @ 247.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34626,
+      "color": "#3b82f6",
+      "endSec": 250.79,
+      "iconPath": "/i/003000/003721.png",
+      "label": "Rea",
+      "startSec": 249.79,
+      "tooltip": "Reawaken @ 249.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 250.39,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 249.79,
+      "tooltip": "Twinblood Bite @ 249.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34627,
+      "color": "#3b82f6",
+      "endSec": 252.66,
+      "iconPath": "/i/003000/003722.png",
+      "label": "Fir",
+      "startSec": 251.66,
+      "tooltip": "First Generation @ 251.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34640,
+      "color": "#f59e0b",
+      "endSec": 252.26,
+      "iconPath": "/i/003000/003735.png",
+      "label": "Fir",
+      "startSec": 251.66,
+      "tooltip": "First Legacy @ 251.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34628,
+      "color": "#3b82f6",
+      "endSec": 254.36,
+      "iconPath": "/i/003000/003723.png",
+      "label": "Sec",
+      "startSec": 253.36,
+      "tooltip": "Second Generation @ 253.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34641,
+      "color": "#f59e0b",
+      "endSec": 253.96,
+      "iconPath": "/i/003000/003736.png",
+      "label": "Sec",
+      "startSec": 253.36,
+      "tooltip": "Second Legacy @ 253.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34629,
+      "color": "#3b82f6",
+      "endSec": 256.06,
+      "iconPath": "/i/003000/003724.png",
+      "label": "Thi",
+      "startSec": 255.06,
+      "tooltip": "Third Generation @ 255.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34642,
+      "color": "#f59e0b",
+      "endSec": 255.66,
+      "iconPath": "/i/003000/003737.png",
+      "label": "Thi",
+      "startSec": 255.06,
+      "tooltip": "Third Legacy @ 255.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34630,
+      "color": "#3b82f6",
+      "endSec": 257.76,
+      "iconPath": "/i/003000/003725.png",
+      "label": "Fou",
+      "startSec": 256.76,
+      "tooltip": "Fourth Generation @ 256.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34643,
+      "color": "#f59e0b",
+      "endSec": 257.37,
+      "iconPath": "/i/003000/003738.png",
+      "label": "Fou",
+      "startSec": 256.76,
+      "tooltip": "Fourth Legacy @ 256.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34631,
+      "color": "#3b82f6",
+      "endSec": 259.46,
+      "iconPath": "/i/003000/003726.png",
+      "label": "Our",
+      "startSec": 258.46,
+      "tooltip": "Ouroboros @ 258.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 262.01,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 261.01,
+      "tooltip": "Uncoiled Fury @ 261.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 261.62,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 261.01,
+      "tooltip": "Uncoiled Twinfang @ 261.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 262.31,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 261.71,
+      "tooltip": "Uncoiled Twinblood @ 261.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34633,
+      "color": "#3b82f6",
+      "endSec": 264.99,
+      "iconPath": "/i/003000/003728.png",
+      "label": "Unc",
+      "startSec": 263.99,
+      "tooltip": "Uncoiled Fury @ 264.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34644,
+      "color": "#f59e0b",
+      "endSec": 264.59,
+      "iconPath": "/i/003000/003739.png",
+      "label": "Unc",
+      "startSec": 263.99,
+      "tooltip": "Uncoiled Twinfang @ 264.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34645,
+      "color": "#f59e0b",
+      "endSec": 265.29,
+      "iconPath": "/i/003000/003740.png",
+      "label": "Unc",
+      "startSec": 264.69,
+      "tooltip": "Uncoiled Twinblood @ 264.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34610,
+      "color": "#3b82f6",
+      "endSec": 267.97,
+      "iconPath": "/i/003000/003705.png",
+      "label": "Fla",
+      "startSec": 266.97,
+      "tooltip": "Flanksting Strike @ 267.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 267.57,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 266.97,
+      "tooltip": "Death Rattle @ 267.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34607,
+      "color": "#3b82f6",
+      "endSec": 270.09,
+      "iconPath": "/i/003000/003702.png",
+      "label": "Rea",
+      "startSec": 269.09,
+      "tooltip": "Reaving Fangs @ 269.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34609,
+      "color": "#3b82f6",
+      "endSec": 272.22,
+      "iconPath": "/i/003000/003704.png",
+      "label": "Swi",
+      "startSec": 271.22,
+      "tooltip": "Swiftskin's Sting @ 271.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34613,
+      "color": "#3b82f6",
+      "endSec": 274.34,
+      "iconPath": "/i/003000/003708.png",
+      "label": "Hin",
+      "startSec": 273.34,
+      "tooltip": "Hindsbane Fang @ 273.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 273.94,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 273.34,
+      "tooltip": "Death Rattle @ 273.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34606,
+      "color": "#3b82f6",
+      "endSec": 276.47,
+      "iconPath": "/i/003000/003701.png",
+      "label": "Ste",
+      "startSec": 275.47,
+      "tooltip": "Steel Fangs @ 275.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34608,
+      "color": "#3b82f6",
+      "endSec": 278.59,
+      "iconPath": "/i/003000/003703.png",
+      "label": "Hun",
+      "startSec": 277.59,
+      "tooltip": "Hunter's Sting @ 277.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34610,
+      "color": "#3b82f6",
+      "endSec": 280.72,
+      "iconPath": "/i/003000/003705.png",
+      "label": "Fla",
+      "startSec": 279.72,
+      "tooltip": "Flanksting Strike @ 279.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34634,
+      "color": "#f59e0b",
+      "endSec": 280.32,
+      "iconPath": "/i/003000/003729.png",
+      "label": "Dea",
+      "startSec": 279.72,
+      "tooltip": "Death Rattle @ 279.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34626,
+      "color": "#3b82f6",
+      "endSec": 282.84,
+      "iconPath": "/i/003000/003721.png",
+      "label": "Rea",
+      "startSec": 281.84,
+      "tooltip": "Reawaken @ 281.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34627,
+      "color": "#3b82f6",
+      "endSec": 284.71,
+      "iconPath": "/i/003000/003722.png",
+      "label": "Fir",
+      "startSec": 283.71,
+      "tooltip": "First Generation @ 283.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34640,
+      "color": "#f59e0b",
+      "endSec": 284.31,
+      "iconPath": "/i/003000/003735.png",
+      "label": "Fir",
+      "startSec": 283.71,
+      "tooltip": "First Legacy @ 283.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34628,
+      "color": "#3b82f6",
+      "endSec": 286.41,
+      "iconPath": "/i/003000/003723.png",
+      "label": "Sec",
+      "startSec": 285.41,
+      "tooltip": "Second Generation @ 285.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34641,
+      "color": "#f59e0b",
+      "endSec": 286.01,
+      "iconPath": "/i/003000/003736.png",
+      "label": "Sec",
+      "startSec": 285.41,
+      "tooltip": "Second Legacy @ 285.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34629,
+      "color": "#3b82f6",
+      "endSec": 288.11,
+      "iconPath": "/i/003000/003724.png",
+      "label": "Thi",
+      "startSec": 287.11,
+      "tooltip": "Third Generation @ 287.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34642,
+      "color": "#f59e0b",
+      "endSec": 287.71,
+      "iconPath": "/i/003000/003737.png",
+      "label": "Thi",
+      "startSec": 287.11,
+      "tooltip": "Third Legacy @ 287.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34630,
+      "color": "#3b82f6",
+      "endSec": 289.81,
+      "iconPath": "/i/003000/003725.png",
+      "label": "Fou",
+      "startSec": 288.81,
+      "tooltip": "Fourth Generation @ 288.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34643,
+      "color": "#f59e0b",
+      "endSec": 289.41,
+      "iconPath": "/i/003000/003738.png",
+      "label": "Fou",
+      "startSec": 288.81,
+      "tooltip": "Fourth Legacy @ 288.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34631,
+      "color": "#3b82f6",
+      "endSec": 291.51,
+      "iconPath": "/i/003000/003726.png",
+      "label": "Our",
+      "startSec": 290.51,
+      "tooltip": "Ouroboros @ 290.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34620,
+      "color": "#3b82f6",
+      "endSec": 294.06,
+      "iconPath": "/i/003000/003715.png",
+      "label": "Vic",
+      "startSec": 293.06,
+      "tooltip": "Vicewinder @ 293.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34621,
+      "color": "#3b82f6",
+      "endSec": 296.61,
+      "iconPath": "/i/003000/003716.png",
+      "label": "Hun",
+      "startSec": 295.61,
+      "tooltip": "Hunter's Coil @ 295.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 296.21,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 295.61,
+      "tooltip": "Twinfang Bite @ 295.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 296.91,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 296.31,
+      "tooltip": "Twinblood Bite @ 296.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34622,
+      "color": "#3b82f6",
+      "endSec": 299.16,
+      "iconPath": "/i/003000/003717.png",
+      "label": "Swi",
+      "startSec": 298.16,
+      "tooltip": "Swiftskin's Coil @ 298.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 34636,
+      "color": "#f59e0b",
+      "endSec": 298.76,
+      "iconPath": "/i/003000/003731.png",
+      "label": "Twi",
+      "startSec": 298.16,
+      "tooltip": "Twinfang Bite @ 298.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 34637,
+      "color": "#f59e0b",
+      "endSec": 299.46,
+      "iconPath": "/i/003000/003732.png",
+      "label": "Twi",
+      "startSec": 298.86,
+      "tooltip": "Twinblood Bite @ 298.9s (idealized)",
+      "yOffset": -0.55
+    }
+  ],
+  "idealizedTrackCanonical": [],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 0,
+          "abilityName": "Tincture",
+          "children": [],
+          "kind": "tincture",
+          "lostPotency": 2262.18,
+          "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+          "timeSec": 0.0
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 316.69,
+      "summary": "Other \u2014 1 small located loss below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34626,
+      "abilityName": "Reawaken",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #6: cast Second Generation, canonical opens Reawaken (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34630,
+      "abilityName": "Fourth Generation",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #10: cast Vicewinder, canonical opens Fourth Generation (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 34631,
+      "abilityName": "Ouroboros",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #11: cast Hunter's Coil, canonical opens Ouroboros (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 34620,
+        "color": "#777777",
+        "endSec": 1.5,
+        "iconPath": "/i/003000/003715.png",
+        "label": "Vic",
+        "startSec": 1.0,
+        "tooltip": "Vicewinder  (GCD)  @  0:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34647,
+        "color": "#777777",
+        "endSec": 1.5,
+        "iconPath": "/i/003000/003742.png",
+        "label": "Ser",
+        "startSec": 1.0,
+        "tooltip": "Serpent's Ire  (oGCD)  @  0:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34621,
+        "color": "#777777",
+        "endSec": 3.78,
+        "iconPath": "/i/003000/003716.png",
+        "label": "Hun",
+        "startSec": 3.28,
+        "tooltip": "Hunter's Coil  (GCD)  @  0:03",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 3.78,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 3.28,
+        "tooltip": "Twinfang Bite  (oGCD)  @  0:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 4.48,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 3.98,
+        "tooltip": "Twinblood Bite  (oGCD)  @  0:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34622,
+        "color": "#777777",
+        "endSec": 6.06,
+        "iconPath": "/i/003000/003717.png",
+        "label": "Swi",
+        "startSec": 5.56,
+        "tooltip": "Swiftskin's Coil  (GCD)  @  0:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 6.06,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 5.56,
+        "tooltip": "Twinfang Bite  (oGCD)  @  0:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 6.76,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 6.26,
+        "tooltip": "Twinblood Bite  (oGCD)  @  0:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34626,
+        "color": "#777777",
+        "endSec": 8.34,
+        "iconPath": "/i/003000/003721.png",
+        "label": "Rea",
+        "startSec": 7.84,
+        "tooltip": "Reawaken  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34627,
+        "color": "#777777",
+        "endSec": 10.62,
+        "iconPath": "/i/003000/003722.png",
+        "label": "Fir",
+        "startSec": 10.12,
+        "tooltip": "First Generation  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34640,
+        "color": "#777777",
+        "endSec": 10.62,
+        "iconPath": "/i/003000/003735.png",
+        "label": "Fir",
+        "startSec": 10.12,
+        "tooltip": "First Legacy  (oGCD)  @  0:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34628,
+        "color": "#777777",
+        "endSec": 12.32,
+        "iconPath": "/i/003000/003723.png",
+        "label": "Sec",
+        "startSec": 11.82,
+        "tooltip": "Second Generation  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34641,
+        "color": "#777777",
+        "endSec": 12.32,
+        "iconPath": "/i/003000/003736.png",
+        "label": "Sec",
+        "startSec": 11.82,
+        "tooltip": "Second Legacy  (oGCD)  @  0:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34629,
+        "color": "#777777",
+        "endSec": 14.02,
+        "iconPath": "/i/003000/003724.png",
+        "label": "Thi",
+        "startSec": 13.52,
+        "tooltip": "Third Generation  (GCD)  @  0:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34642,
+        "color": "#777777",
+        "endSec": 14.02,
+        "iconPath": "/i/003000/003737.png",
+        "label": "Thi",
+        "startSec": 13.52,
+        "tooltip": "Third Legacy  (oGCD)  @  0:14",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34630,
+        "color": "#777777",
+        "endSec": 15.72,
+        "iconPath": "/i/003000/003725.png",
+        "label": "Fou",
+        "startSec": 15.22,
+        "tooltip": "Fourth Generation  (GCD)  @  0:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34643,
+        "color": "#777777",
+        "endSec": 15.72,
+        "iconPath": "/i/003000/003738.png",
+        "label": "Fou",
+        "startSec": 15.22,
+        "tooltip": "Fourth Legacy  (oGCD)  @  0:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34631,
+        "color": "#777777",
+        "endSec": 17.42,
+        "iconPath": "/i/003000/003726.png",
+        "label": "Our",
+        "startSec": 16.92,
+        "tooltip": "Ouroboros  (GCD)  @  0:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34620,
+        "color": "#777777",
+        "endSec": 19.12,
+        "iconPath": "/i/003000/003715.png",
+        "label": "Vic",
+        "startSec": 18.62,
+        "tooltip": "Vicewinder  (GCD)  @  0:19",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34621,
+        "color": "#777777",
+        "endSec": 21.4,
+        "iconPath": "/i/003000/003716.png",
+        "label": "Hun",
+        "startSec": 20.9,
+        "tooltip": "Hunter's Coil  (GCD)  @  0:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 21.4,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 20.9,
+        "tooltip": "Twinfang Bite  (oGCD)  @  0:21",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 22.1,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 21.6,
+        "tooltip": "Twinblood Bite  (oGCD)  @  0:22",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34622,
+        "color": "#777777",
+        "endSec": 23.68,
+        "iconPath": "/i/003000/003717.png",
+        "label": "Swi",
+        "startSec": 23.18,
+        "tooltip": "Swiftskin's Coil  (GCD)  @  0:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 23.68,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 23.18,
+        "tooltip": "Twinfang Bite  (oGCD)  @  0:23",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 24.38,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 23.88,
+        "tooltip": "Twinblood Bite  (oGCD)  @  0:24",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 25.96,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 25.46,
+        "tooltip": "Uncoiled Fury  (GCD)  @  0:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 25.96,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 25.46,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  0:25",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 26.66,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 26.16,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  0:26",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 28.24,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 27.74,
+        "tooltip": "Uncoiled Fury  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 28.24,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 27.74,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  0:28",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 28.94,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 28.44,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  0:28",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 30.52,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 30.02,
+        "tooltip": "Uncoiled Fury  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 30.52,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 30.02,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  0:30",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 31.22,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 30.72,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  0:31",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34606,
+        "color": "#777777",
+        "endSec": 32.8,
+        "iconPath": "/i/003000/003701.png",
+        "label": "Ste",
+        "startSec": 32.3,
+        "tooltip": "Steel Fangs  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34608,
+        "color": "#777777",
+        "endSec": 35.08,
+        "iconPath": "/i/003000/003703.png",
+        "label": "Hun",
+        "startSec": 34.58,
+        "tooltip": "Hunter's Sting  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34610,
+        "color": "#777777",
+        "endSec": 37.36,
+        "iconPath": "/i/003000/003705.png",
+        "label": "Fla",
+        "startSec": 36.86,
+        "tooltip": "Flanksting Strike  (GCD)  @  0:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 37.36,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 36.86,
+        "tooltip": "Death Rattle  (oGCD)  @  0:37",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34607,
+        "color": "#777777",
+        "endSec": 39.64,
+        "iconPath": "/i/003000/003702.png",
+        "label": "Rea",
+        "startSec": 39.14,
+        "tooltip": "Reaving Fangs  (GCD)  @  0:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34620,
+        "color": "#777777",
+        "endSec": 41.92,
+        "iconPath": "/i/003000/003715.png",
+        "label": "Vic",
+        "startSec": 41.42,
+        "tooltip": "Vicewinder  (GCD)  @  0:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34621,
+        "color": "#777777",
+        "endSec": 44.2,
+        "iconPath": "/i/003000/003716.png",
+        "label": "Hun",
+        "startSec": 43.7,
+        "tooltip": "Hunter's Coil  (GCD)  @  0:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 44.2,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 43.7,
+        "tooltip": "Twinfang Bite  (oGCD)  @  0:44",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 44.9,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 44.4,
+        "tooltip": "Twinblood Bite  (oGCD)  @  0:44",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34622,
+        "color": "#777777",
+        "endSec": 46.48,
+        "iconPath": "/i/003000/003717.png",
+        "label": "Swi",
+        "startSec": 45.98,
+        "tooltip": "Swiftskin's Coil  (GCD)  @  0:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 46.48,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 45.98,
+        "tooltip": "Twinfang Bite  (oGCD)  @  0:46",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 47.18,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 46.68,
+        "tooltip": "Twinblood Bite  (oGCD)  @  0:47",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 48.76,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 48.26,
+        "tooltip": "Uncoiled Fury  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 48.76,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 48.26,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  0:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 49.46,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 48.96,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  0:49",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34609,
+        "color": "#777777",
+        "endSec": 51.04,
+        "iconPath": "/i/003000/003704.png",
+        "label": "Swi",
+        "startSec": 50.54,
+        "tooltip": "Swiftskin's Sting  (GCD)  @  0:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34613,
+        "color": "#777777",
+        "endSec": 53.32,
+        "iconPath": "/i/003000/003708.png",
+        "label": "Hin",
+        "startSec": 52.82,
+        "tooltip": "Hindsbane Fang  (GCD)  @  0:53",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 53.32,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 52.82,
+        "tooltip": "Death Rattle  (oGCD)  @  0:53",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34626,
+        "color": "#777777",
+        "endSec": 55.6,
+        "iconPath": "/i/003000/003721.png",
+        "label": "Rea",
+        "startSec": 55.1,
+        "tooltip": "Reawaken  (GCD)  @  0:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34627,
+        "color": "#777777",
+        "endSec": 57.88,
+        "iconPath": "/i/003000/003722.png",
+        "label": "Fir",
+        "startSec": 57.38,
+        "tooltip": "First Generation  (GCD)  @  0:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34640,
+        "color": "#777777",
+        "endSec": 57.88,
+        "iconPath": "/i/003000/003735.png",
+        "label": "Fir",
+        "startSec": 57.38,
+        "tooltip": "First Legacy  (oGCD)  @  0:57",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34628,
+        "color": "#777777",
+        "endSec": 59.58,
+        "iconPath": "/i/003000/003723.png",
+        "label": "Sec",
+        "startSec": 59.08,
+        "tooltip": "Second Generation  (GCD)  @  0:59",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34641,
+        "color": "#777777",
+        "endSec": 59.58,
+        "iconPath": "/i/003000/003736.png",
+        "label": "Sec",
+        "startSec": 59.08,
+        "tooltip": "Second Legacy  (oGCD)  @  0:59",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34629,
+        "color": "#777777",
+        "endSec": 61.28,
+        "iconPath": "/i/003000/003724.png",
+        "label": "Thi",
+        "startSec": 60.78,
+        "tooltip": "Third Generation  (GCD)  @  1:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34642,
+        "color": "#777777",
+        "endSec": 61.28,
+        "iconPath": "/i/003000/003737.png",
+        "label": "Thi",
+        "startSec": 60.78,
+        "tooltip": "Third Legacy  (oGCD)  @  1:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34630,
+        "color": "#777777",
+        "endSec": 62.98,
+        "iconPath": "/i/003000/003725.png",
+        "label": "Fou",
+        "startSec": 62.48,
+        "tooltip": "Fourth Generation  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34643,
+        "color": "#777777",
+        "endSec": 62.98,
+        "iconPath": "/i/003000/003738.png",
+        "label": "Fou",
+        "startSec": 62.48,
+        "tooltip": "Fourth Legacy  (oGCD)  @  1:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34631,
+        "color": "#777777",
+        "endSec": 64.68,
+        "iconPath": "/i/003000/003726.png",
+        "label": "Our",
+        "startSec": 64.18,
+        "tooltip": "Ouroboros  (GCD)  @  1:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34606,
+        "color": "#777777",
+        "endSec": 66.38,
+        "iconPath": "/i/003000/003701.png",
+        "label": "Ste",
+        "startSec": 65.88,
+        "tooltip": "Steel Fangs  (GCD)  @  1:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34608,
+        "color": "#777777",
+        "endSec": 68.66,
+        "iconPath": "/i/003000/003703.png",
+        "label": "Hun",
+        "startSec": 68.16,
+        "tooltip": "Hunter's Sting  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34610,
+        "color": "#777777",
+        "endSec": 70.94,
+        "iconPath": "/i/003000/003705.png",
+        "label": "Fla",
+        "startSec": 70.44,
+        "tooltip": "Flanksting Strike  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 70.94,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 70.44,
+        "tooltip": "Death Rattle  (oGCD)  @  1:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34607,
+        "color": "#777777",
+        "endSec": 73.22,
+        "iconPath": "/i/003000/003702.png",
+        "label": "Rea",
+        "startSec": 72.72,
+        "tooltip": "Reaving Fangs  (GCD)  @  1:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34609,
+        "color": "#777777",
+        "endSec": 75.5,
+        "iconPath": "/i/003000/003704.png",
+        "label": "Swi",
+        "startSec": 75.0,
+        "tooltip": "Swiftskin's Sting  (GCD)  @  1:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34613,
+        "color": "#777777",
+        "endSec": 77.78,
+        "iconPath": "/i/003000/003708.png",
+        "label": "Hin",
+        "startSec": 77.28,
+        "tooltip": "Hindsbane Fang  (GCD)  @  1:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 77.78,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 77.28,
+        "tooltip": "Death Rattle  (oGCD)  @  1:17",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34606,
+        "color": "#777777",
+        "endSec": 80.06,
+        "iconPath": "/i/003000/003701.png",
+        "label": "Ste",
+        "startSec": 79.56,
+        "tooltip": "Steel Fangs  (GCD)  @  1:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34620,
+        "color": "#777777",
+        "endSec": 82.34,
+        "iconPath": "/i/003000/003715.png",
+        "label": "Vic",
+        "startSec": 81.84,
+        "tooltip": "Vicewinder  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34621,
+        "color": "#777777",
+        "endSec": 84.62,
+        "iconPath": "/i/003000/003716.png",
+        "label": "Hun",
+        "startSec": 84.12,
+        "tooltip": "Hunter's Coil  (GCD)  @  1:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 84.62,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 84.12,
+        "tooltip": "Twinfang Bite  (oGCD)  @  1:24",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 85.32,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 84.82,
+        "tooltip": "Twinblood Bite  (oGCD)  @  1:25",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34622,
+        "color": "#777777",
+        "endSec": 86.9,
+        "iconPath": "/i/003000/003717.png",
+        "label": "Swi",
+        "startSec": 86.4,
+        "tooltip": "Swiftskin's Coil  (GCD)  @  1:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 86.9,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 86.4,
+        "tooltip": "Twinfang Bite  (oGCD)  @  1:26",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 87.6,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 87.1,
+        "tooltip": "Twinblood Bite  (oGCD)  @  1:27",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 89.18,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 88.68,
+        "tooltip": "Uncoiled Fury  (GCD)  @  1:29",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 89.18,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 88.68,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  1:29",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 89.88,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 89.38,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  1:29",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34608,
+        "color": "#777777",
+        "endSec": 91.46,
+        "iconPath": "/i/003000/003703.png",
+        "label": "Hun",
+        "startSec": 90.96,
+        "tooltip": "Hunter's Sting  (GCD)  @  1:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34610,
+        "color": "#777777",
+        "endSec": 93.74,
+        "iconPath": "/i/003000/003705.png",
+        "label": "Fla",
+        "startSec": 93.24,
+        "tooltip": "Flanksting Strike  (GCD)  @  1:33",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 93.74,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 93.24,
+        "tooltip": "Death Rattle  (oGCD)  @  1:33",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34607,
+        "color": "#777777",
+        "endSec": 96.02,
+        "iconPath": "/i/003000/003702.png",
+        "label": "Rea",
+        "startSec": 95.52,
+        "tooltip": "Reaving Fangs  (GCD)  @  1:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34609,
+        "color": "#777777",
+        "endSec": 98.3,
+        "iconPath": "/i/003000/003704.png",
+        "label": "Swi",
+        "startSec": 97.8,
+        "tooltip": "Swiftskin's Sting  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34613,
+        "color": "#777777",
+        "endSec": 100.58,
+        "iconPath": "/i/003000/003708.png",
+        "label": "Hin",
+        "startSec": 100.08,
+        "tooltip": "Hindsbane Fang  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 100.58,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 100.08,
+        "tooltip": "Death Rattle  (oGCD)  @  1:40",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34626,
+        "color": "#777777",
+        "endSec": 102.86,
+        "iconPath": "/i/003000/003721.png",
+        "label": "Rea",
+        "startSec": 102.36,
+        "tooltip": "Reawaken  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34627,
+        "color": "#777777",
+        "endSec": 105.14,
+        "iconPath": "/i/003000/003722.png",
+        "label": "Fir",
+        "startSec": 104.64,
+        "tooltip": "First Generation  (GCD)  @  1:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34640,
+        "color": "#777777",
+        "endSec": 105.14,
+        "iconPath": "/i/003000/003735.png",
+        "label": "Fir",
+        "startSec": 104.64,
+        "tooltip": "First Legacy  (oGCD)  @  1:45",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34628,
+        "color": "#777777",
+        "endSec": 106.84,
+        "iconPath": "/i/003000/003723.png",
+        "label": "Sec",
+        "startSec": 106.34,
+        "tooltip": "Second Generation  (GCD)  @  1:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34641,
+        "color": "#777777",
+        "endSec": 106.84,
+        "iconPath": "/i/003000/003736.png",
+        "label": "Sec",
+        "startSec": 106.34,
+        "tooltip": "Second Legacy  (oGCD)  @  1:46",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34629,
+        "color": "#777777",
+        "endSec": 108.54,
+        "iconPath": "/i/003000/003724.png",
+        "label": "Thi",
+        "startSec": 108.04,
+        "tooltip": "Third Generation  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34642,
+        "color": "#777777",
+        "endSec": 108.54,
+        "iconPath": "/i/003000/003737.png",
+        "label": "Thi",
+        "startSec": 108.04,
+        "tooltip": "Third Legacy  (oGCD)  @  1:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34630,
+        "color": "#777777",
+        "endSec": 110.24,
+        "iconPath": "/i/003000/003725.png",
+        "label": "Fou",
+        "startSec": 109.74,
+        "tooltip": "Fourth Generation  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34643,
+        "color": "#777777",
+        "endSec": 110.24,
+        "iconPath": "/i/003000/003738.png",
+        "label": "Fou",
+        "startSec": 109.74,
+        "tooltip": "Fourth Legacy  (oGCD)  @  1:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34631,
+        "color": "#777777",
+        "endSec": 111.94,
+        "iconPath": "/i/003000/003726.png",
+        "label": "Our",
+        "startSec": 111.44,
+        "tooltip": "Ouroboros  (GCD)  @  1:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34606,
+        "color": "#777777",
+        "endSec": 113.64,
+        "iconPath": "/i/003000/003701.png",
+        "label": "Ste",
+        "startSec": 113.14,
+        "tooltip": "Steel Fangs  (GCD)  @  1:53",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34608,
+        "color": "#777777",
+        "endSec": 115.92,
+        "iconPath": "/i/003000/003703.png",
+        "label": "Hun",
+        "startSec": 115.42,
+        "tooltip": "Hunter's Sting  (GCD)  @  1:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34610,
+        "color": "#777777",
+        "endSec": 118.2,
+        "iconPath": "/i/003000/003705.png",
+        "label": "Fla",
+        "startSec": 117.7,
+        "tooltip": "Flanksting Strike  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 118.2,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 117.7,
+        "tooltip": "Death Rattle  (oGCD)  @  1:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34607,
+        "color": "#777777",
+        "endSec": 120.48,
+        "iconPath": "/i/003000/003702.png",
+        "label": "Rea",
+        "startSec": 119.98,
+        "tooltip": "Reaving Fangs  (GCD)  @  2:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34620,
+        "color": "#777777",
+        "endSec": 122.76,
+        "iconPath": "/i/003000/003715.png",
+        "label": "Vic",
+        "startSec": 122.26,
+        "tooltip": "Vicewinder  (GCD)  @  2:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34647,
+        "color": "#777777",
+        "endSec": 122.76,
+        "iconPath": "/i/003000/003742.png",
+        "label": "Ser",
+        "startSec": 122.26,
+        "tooltip": "Serpent's Ire  (oGCD)  @  2:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34621,
+        "color": "#777777",
+        "endSec": 125.04,
+        "iconPath": "/i/003000/003716.png",
+        "label": "Hun",
+        "startSec": 124.54,
+        "tooltip": "Hunter's Coil  (GCD)  @  2:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 125.04,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 124.54,
+        "tooltip": "Twinfang Bite  (oGCD)  @  2:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 125.74,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 125.24,
+        "tooltip": "Twinblood Bite  (oGCD)  @  2:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34622,
+        "color": "#777777",
+        "endSec": 127.32,
+        "iconPath": "/i/003000/003717.png",
+        "label": "Swi",
+        "startSec": 126.82,
+        "tooltip": "Swiftskin's Coil  (GCD)  @  2:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 127.32,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 126.82,
+        "tooltip": "Twinfang Bite  (oGCD)  @  2:07",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 128.02,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 127.52,
+        "tooltip": "Twinblood Bite  (oGCD)  @  2:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34626,
+        "color": "#777777",
+        "endSec": 129.6,
+        "iconPath": "/i/003000/003721.png",
+        "label": "Rea",
+        "startSec": 129.1,
+        "tooltip": "Reawaken  (GCD)  @  2:09",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34627,
+        "color": "#777777",
+        "endSec": 131.88,
+        "iconPath": "/i/003000/003722.png",
+        "label": "Fir",
+        "startSec": 131.38,
+        "tooltip": "First Generation  (GCD)  @  2:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34640,
+        "color": "#777777",
+        "endSec": 131.88,
+        "iconPath": "/i/003000/003735.png",
+        "label": "Fir",
+        "startSec": 131.38,
+        "tooltip": "First Legacy  (oGCD)  @  2:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34628,
+        "color": "#777777",
+        "endSec": 133.58,
+        "iconPath": "/i/003000/003723.png",
+        "label": "Sec",
+        "startSec": 133.08,
+        "tooltip": "Second Generation  (GCD)  @  2:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34641,
+        "color": "#777777",
+        "endSec": 133.58,
+        "iconPath": "/i/003000/003736.png",
+        "label": "Sec",
+        "startSec": 133.08,
+        "tooltip": "Second Legacy  (oGCD)  @  2:13",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34629,
+        "color": "#777777",
+        "endSec": 135.28,
+        "iconPath": "/i/003000/003724.png",
+        "label": "Thi",
+        "startSec": 134.78,
+        "tooltip": "Third Generation  (GCD)  @  2:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34642,
+        "color": "#777777",
+        "endSec": 135.28,
+        "iconPath": "/i/003000/003737.png",
+        "label": "Thi",
+        "startSec": 134.78,
+        "tooltip": "Third Legacy  (oGCD)  @  2:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34630,
+        "color": "#777777",
+        "endSec": 136.98,
+        "iconPath": "/i/003000/003725.png",
+        "label": "Fou",
+        "startSec": 136.48,
+        "tooltip": "Fourth Generation  (GCD)  @  2:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34643,
+        "color": "#777777",
+        "endSec": 136.98,
+        "iconPath": "/i/003000/003738.png",
+        "label": "Fou",
+        "startSec": 136.48,
+        "tooltip": "Fourth Legacy  (oGCD)  @  2:16",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34631,
+        "color": "#777777",
+        "endSec": 138.68,
+        "iconPath": "/i/003000/003726.png",
+        "label": "Our",
+        "startSec": 138.18,
+        "tooltip": "Ouroboros  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 140.38,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 139.88,
+        "tooltip": "Uncoiled Fury  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 140.38,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 139.88,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  2:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 141.08,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 140.58,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  2:21",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 142.66,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 142.16,
+        "tooltip": "Uncoiled Fury  (GCD)  @  2:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 142.66,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 142.16,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  2:22",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 143.36,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 142.86,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  2:23",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34609,
+        "color": "#777777",
+        "endSec": 144.94,
+        "iconPath": "/i/003000/003704.png",
+        "label": "Swi",
+        "startSec": 144.44,
+        "tooltip": "Swiftskin's Sting  (GCD)  @  2:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34613,
+        "color": "#777777",
+        "endSec": 147.22,
+        "iconPath": "/i/003000/003708.png",
+        "label": "Hin",
+        "startSec": 146.72,
+        "tooltip": "Hindsbane Fang  (GCD)  @  2:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 147.22,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 146.72,
+        "tooltip": "Death Rattle  (oGCD)  @  2:27",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34606,
+        "color": "#777777",
+        "endSec": 149.5,
+        "iconPath": "/i/003000/003701.png",
+        "label": "Ste",
+        "startSec": 149.0,
+        "tooltip": "Steel Fangs  (GCD)  @  2:29",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34608,
+        "color": "#777777",
+        "endSec": 151.78,
+        "iconPath": "/i/003000/003703.png",
+        "label": "Hun",
+        "startSec": 151.28,
+        "tooltip": "Hunter's Sting  (GCD)  @  2:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34610,
+        "color": "#777777",
+        "endSec": 154.06,
+        "iconPath": "/i/003000/003705.png",
+        "label": "Fla",
+        "startSec": 153.56,
+        "tooltip": "Flanksting Strike  (GCD)  @  2:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 154.06,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 153.56,
+        "tooltip": "Death Rattle  (oGCD)  @  2:34",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34607,
+        "color": "#777777",
+        "endSec": 156.34,
+        "iconPath": "/i/003000/003702.png",
+        "label": "Rea",
+        "startSec": 155.84,
+        "tooltip": "Reaving Fangs  (GCD)  @  2:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34609,
+        "color": "#777777",
+        "endSec": 158.62,
+        "iconPath": "/i/003000/003704.png",
+        "label": "Swi",
+        "startSec": 158.12,
+        "tooltip": "Swiftskin's Sting  (GCD)  @  2:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34613,
+        "color": "#777777",
+        "endSec": 160.9,
+        "iconPath": "/i/003000/003708.png",
+        "label": "Hin",
+        "startSec": 160.4,
+        "tooltip": "Hindsbane Fang  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 160.9,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 160.4,
+        "tooltip": "Death Rattle  (oGCD)  @  2:40",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34626,
+        "color": "#777777",
+        "endSec": 163.18,
+        "iconPath": "/i/003000/003721.png",
+        "label": "Rea",
+        "startSec": 162.68,
+        "tooltip": "Reawaken  (GCD)  @  2:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34627,
+        "color": "#777777",
+        "endSec": 165.46,
+        "iconPath": "/i/003000/003722.png",
+        "label": "Fir",
+        "startSec": 164.96,
+        "tooltip": "First Generation  (GCD)  @  2:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34640,
+        "color": "#777777",
+        "endSec": 165.46,
+        "iconPath": "/i/003000/003735.png",
+        "label": "Fir",
+        "startSec": 164.96,
+        "tooltip": "First Legacy  (oGCD)  @  2:45",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34628,
+        "color": "#777777",
+        "endSec": 167.16,
+        "iconPath": "/i/003000/003723.png",
+        "label": "Sec",
+        "startSec": 166.66,
+        "tooltip": "Second Generation  (GCD)  @  2:47",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34641,
+        "color": "#777777",
+        "endSec": 167.16,
+        "iconPath": "/i/003000/003736.png",
+        "label": "Sec",
+        "startSec": 166.66,
+        "tooltip": "Second Legacy  (oGCD)  @  2:47",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34629,
+        "color": "#777777",
+        "endSec": 168.86,
+        "iconPath": "/i/003000/003724.png",
+        "label": "Thi",
+        "startSec": 168.36,
+        "tooltip": "Third Generation  (GCD)  @  2:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34642,
+        "color": "#777777",
+        "endSec": 168.86,
+        "iconPath": "/i/003000/003737.png",
+        "label": "Thi",
+        "startSec": 168.36,
+        "tooltip": "Third Legacy  (oGCD)  @  2:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34630,
+        "color": "#777777",
+        "endSec": 170.56,
+        "iconPath": "/i/003000/003725.png",
+        "label": "Fou",
+        "startSec": 170.06,
+        "tooltip": "Fourth Generation  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34643,
+        "color": "#777777",
+        "endSec": 170.56,
+        "iconPath": "/i/003000/003738.png",
+        "label": "Fou",
+        "startSec": 170.06,
+        "tooltip": "Fourth Legacy  (oGCD)  @  2:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34631,
+        "color": "#777777",
+        "endSec": 172.26,
+        "iconPath": "/i/003000/003726.png",
+        "label": "Our",
+        "startSec": 171.76,
+        "tooltip": "Ouroboros  (GCD)  @  2:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34620,
+        "color": "#777777",
+        "endSec": 173.96,
+        "iconPath": "/i/003000/003715.png",
+        "label": "Vic",
+        "startSec": 173.46,
+        "tooltip": "Vicewinder  (GCD)  @  2:53",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34621,
+        "color": "#777777",
+        "endSec": 176.24,
+        "iconPath": "/i/003000/003716.png",
+        "label": "Hun",
+        "startSec": 175.74,
+        "tooltip": "Hunter's Coil  (GCD)  @  2:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 176.24,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 175.74,
+        "tooltip": "Twinfang Bite  (oGCD)  @  2:56",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 176.94,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 176.44,
+        "tooltip": "Twinblood Bite  (oGCD)  @  2:56",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34622,
+        "color": "#777777",
+        "endSec": 178.52,
+        "iconPath": "/i/003000/003717.png",
+        "label": "Swi",
+        "startSec": 178.02,
+        "tooltip": "Swiftskin's Coil  (GCD)  @  2:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 178.52,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 178.02,
+        "tooltip": "Twinfang Bite  (oGCD)  @  2:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 179.22,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 178.72,
+        "tooltip": "Twinblood Bite  (oGCD)  @  2:59",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 180.8,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 180.3,
+        "tooltip": "Uncoiled Fury  (GCD)  @  3:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 180.8,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 180.3,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  3:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 181.5,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 181.0,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  3:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34606,
+        "color": "#777777",
+        "endSec": 183.08,
+        "iconPath": "/i/003000/003701.png",
+        "label": "Ste",
+        "startSec": 182.58,
+        "tooltip": "Steel Fangs  (GCD)  @  3:03",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34608,
+        "color": "#777777",
+        "endSec": 185.36,
+        "iconPath": "/i/003000/003703.png",
+        "label": "Hun",
+        "startSec": 184.86,
+        "tooltip": "Hunter's Sting  (GCD)  @  3:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34610,
+        "color": "#777777",
+        "endSec": 187.64,
+        "iconPath": "/i/003000/003705.png",
+        "label": "Fla",
+        "startSec": 187.14,
+        "tooltip": "Flanksting Strike  (GCD)  @  3:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 187.64,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 187.14,
+        "tooltip": "Death Rattle  (oGCD)  @  3:07",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34607,
+        "color": "#777777",
+        "endSec": 189.92,
+        "iconPath": "/i/003000/003702.png",
+        "label": "Rea",
+        "startSec": 189.42,
+        "tooltip": "Reaving Fangs  (GCD)  @  3:09",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34609,
+        "color": "#777777",
+        "endSec": 192.2,
+        "iconPath": "/i/003000/003704.png",
+        "label": "Swi",
+        "startSec": 191.7,
+        "tooltip": "Swiftskin's Sting  (GCD)  @  3:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34613,
+        "color": "#777777",
+        "endSec": 194.48,
+        "iconPath": "/i/003000/003708.png",
+        "label": "Hin",
+        "startSec": 193.98,
+        "tooltip": "Hindsbane Fang  (GCD)  @  3:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 194.48,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 193.98,
+        "tooltip": "Death Rattle  (oGCD)  @  3:14",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34606,
+        "color": "#777777",
+        "endSec": 196.76,
+        "iconPath": "/i/003000/003701.png",
+        "label": "Ste",
+        "startSec": 196.26,
+        "tooltip": "Steel Fangs  (GCD)  @  3:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34608,
+        "color": "#777777",
+        "endSec": 199.04,
+        "iconPath": "/i/003000/003703.png",
+        "label": "Hun",
+        "startSec": 198.54,
+        "tooltip": "Hunter's Sting  (GCD)  @  3:19",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34610,
+        "color": "#777777",
+        "endSec": 201.32,
+        "iconPath": "/i/003000/003705.png",
+        "label": "Fla",
+        "startSec": 200.82,
+        "tooltip": "Flanksting Strike  (GCD)  @  3:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 201.32,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 200.82,
+        "tooltip": "Death Rattle  (oGCD)  @  3:21",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34620,
+        "color": "#777777",
+        "endSec": 203.6,
+        "iconPath": "/i/003000/003715.png",
+        "label": "Vic",
+        "startSec": 203.1,
+        "tooltip": "Vicewinder  (GCD)  @  3:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34621,
+        "color": "#777777",
+        "endSec": 205.88,
+        "iconPath": "/i/003000/003716.png",
+        "label": "Hun",
+        "startSec": 205.38,
+        "tooltip": "Hunter's Coil  (GCD)  @  3:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 205.88,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 205.38,
+        "tooltip": "Twinfang Bite  (oGCD)  @  3:25",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 206.58,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 206.08,
+        "tooltip": "Twinblood Bite  (oGCD)  @  3:26",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34622,
+        "color": "#777777",
+        "endSec": 208.16,
+        "iconPath": "/i/003000/003717.png",
+        "label": "Swi",
+        "startSec": 207.66,
+        "tooltip": "Swiftskin's Coil  (GCD)  @  3:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 208.16,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 207.66,
+        "tooltip": "Twinfang Bite  (oGCD)  @  3:28",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 208.86,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 208.36,
+        "tooltip": "Twinblood Bite  (oGCD)  @  3:28",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34626,
+        "color": "#777777",
+        "endSec": 210.44,
+        "iconPath": "/i/003000/003721.png",
+        "label": "Rea",
+        "startSec": 209.94,
+        "tooltip": "Reawaken  (GCD)  @  3:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34627,
+        "color": "#777777",
+        "endSec": 212.72,
+        "iconPath": "/i/003000/003722.png",
+        "label": "Fir",
+        "startSec": 212.22,
+        "tooltip": "First Generation  (GCD)  @  3:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34640,
+        "color": "#777777",
+        "endSec": 212.72,
+        "iconPath": "/i/003000/003735.png",
+        "label": "Fir",
+        "startSec": 212.22,
+        "tooltip": "First Legacy  (oGCD)  @  3:32",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34628,
+        "color": "#777777",
+        "endSec": 214.42,
+        "iconPath": "/i/003000/003723.png",
+        "label": "Sec",
+        "startSec": 213.92,
+        "tooltip": "Second Generation  (GCD)  @  3:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34641,
+        "color": "#777777",
+        "endSec": 214.42,
+        "iconPath": "/i/003000/003736.png",
+        "label": "Sec",
+        "startSec": 213.92,
+        "tooltip": "Second Legacy  (oGCD)  @  3:34",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34629,
+        "color": "#777777",
+        "endSec": 216.12,
+        "iconPath": "/i/003000/003724.png",
+        "label": "Thi",
+        "startSec": 215.62,
+        "tooltip": "Third Generation  (GCD)  @  3:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34642,
+        "color": "#777777",
+        "endSec": 216.12,
+        "iconPath": "/i/003000/003737.png",
+        "label": "Thi",
+        "startSec": 215.62,
+        "tooltip": "Third Legacy  (oGCD)  @  3:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34630,
+        "color": "#777777",
+        "endSec": 217.82,
+        "iconPath": "/i/003000/003725.png",
+        "label": "Fou",
+        "startSec": 217.32,
+        "tooltip": "Fourth Generation  (GCD)  @  3:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34643,
+        "color": "#777777",
+        "endSec": 217.82,
+        "iconPath": "/i/003000/003738.png",
+        "label": "Fou",
+        "startSec": 217.32,
+        "tooltip": "Fourth Legacy  (oGCD)  @  3:37",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34631,
+        "color": "#777777",
+        "endSec": 219.52,
+        "iconPath": "/i/003000/003726.png",
+        "label": "Our",
+        "startSec": 219.02,
+        "tooltip": "Ouroboros  (GCD)  @  3:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 221.22,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 220.72,
+        "tooltip": "Uncoiled Fury  (GCD)  @  3:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 221.22,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 220.72,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  3:41",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 221.92,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 221.42,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  3:41",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34607,
+        "color": "#777777",
+        "endSec": 223.5,
+        "iconPath": "/i/003000/003702.png",
+        "label": "Rea",
+        "startSec": 223.0,
+        "tooltip": "Reaving Fangs  (GCD)  @  3:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34609,
+        "color": "#777777",
+        "endSec": 225.78,
+        "iconPath": "/i/003000/003704.png",
+        "label": "Swi",
+        "startSec": 225.28,
+        "tooltip": "Swiftskin's Sting  (GCD)  @  3:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34613,
+        "color": "#777777",
+        "endSec": 228.06,
+        "iconPath": "/i/003000/003708.png",
+        "label": "Hin",
+        "startSec": 227.56,
+        "tooltip": "Hindsbane Fang  (GCD)  @  3:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 228.06,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 227.56,
+        "tooltip": "Death Rattle  (oGCD)  @  3:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34606,
+        "color": "#777777",
+        "endSec": 230.34,
+        "iconPath": "/i/003000/003701.png",
+        "label": "Ste",
+        "startSec": 229.84,
+        "tooltip": "Steel Fangs  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34608,
+        "color": "#777777",
+        "endSec": 232.62,
+        "iconPath": "/i/003000/003703.png",
+        "label": "Hun",
+        "startSec": 232.12,
+        "tooltip": "Hunter's Sting  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34610,
+        "color": "#777777",
+        "endSec": 234.9,
+        "iconPath": "/i/003000/003705.png",
+        "label": "Fla",
+        "startSec": 234.4,
+        "tooltip": "Flanksting Strike  (GCD)  @  3:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 234.9,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 234.4,
+        "tooltip": "Death Rattle  (oGCD)  @  3:54",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34607,
+        "color": "#777777",
+        "endSec": 237.18,
+        "iconPath": "/i/003000/003702.png",
+        "label": "Rea",
+        "startSec": 236.68,
+        "tooltip": "Reaving Fangs  (GCD)  @  3:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34609,
+        "color": "#777777",
+        "endSec": 239.46,
+        "iconPath": "/i/003000/003704.png",
+        "label": "Swi",
+        "startSec": 238.96,
+        "tooltip": "Swiftskin's Sting  (GCD)  @  3:59",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34620,
+        "color": "#777777",
+        "endSec": 241.74,
+        "iconPath": "/i/003000/003715.png",
+        "label": "Vic",
+        "startSec": 241.24,
+        "tooltip": "Vicewinder  (GCD)  @  4:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34621,
+        "color": "#777777",
+        "endSec": 244.02,
+        "iconPath": "/i/003000/003716.png",
+        "label": "Hun",
+        "startSec": 243.52,
+        "tooltip": "Hunter's Coil  (GCD)  @  4:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34647,
+        "color": "#777777",
+        "endSec": 244.02,
+        "iconPath": "/i/003000/003742.png",
+        "label": "Ser",
+        "startSec": 243.52,
+        "tooltip": "Serpent's Ire  (oGCD)  @  4:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 244.72,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 244.22,
+        "tooltip": "Twinfang Bite  (oGCD)  @  4:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34622,
+        "color": "#777777",
+        "endSec": 246.3,
+        "iconPath": "/i/003000/003717.png",
+        "label": "Swi",
+        "startSec": 245.8,
+        "tooltip": "Swiftskin's Coil  (GCD)  @  4:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 246.3,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 245.8,
+        "tooltip": "Twinblood Bite  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 247.0,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 246.5,
+        "tooltip": "Twinfang Bite  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34626,
+        "color": "#777777",
+        "endSec": 248.58,
+        "iconPath": "/i/003000/003721.png",
+        "label": "Rea",
+        "startSec": 248.08,
+        "tooltip": "Reawaken  (GCD)  @  4:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 248.58,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 248.08,
+        "tooltip": "Twinblood Bite  (oGCD)  @  4:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34627,
+        "color": "#777777",
+        "endSec": 250.86,
+        "iconPath": "/i/003000/003722.png",
+        "label": "Fir",
+        "startSec": 250.36,
+        "tooltip": "First Generation  (GCD)  @  4:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34640,
+        "color": "#777777",
+        "endSec": 250.86,
+        "iconPath": "/i/003000/003735.png",
+        "label": "Fir",
+        "startSec": 250.36,
+        "tooltip": "First Legacy  (oGCD)  @  4:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34628,
+        "color": "#777777",
+        "endSec": 252.56,
+        "iconPath": "/i/003000/003723.png",
+        "label": "Sec",
+        "startSec": 252.06,
+        "tooltip": "Second Generation  (GCD)  @  4:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34641,
+        "color": "#777777",
+        "endSec": 252.56,
+        "iconPath": "/i/003000/003736.png",
+        "label": "Sec",
+        "startSec": 252.06,
+        "tooltip": "Second Legacy  (oGCD)  @  4:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34629,
+        "color": "#777777",
+        "endSec": 254.26,
+        "iconPath": "/i/003000/003724.png",
+        "label": "Thi",
+        "startSec": 253.76,
+        "tooltip": "Third Generation  (GCD)  @  4:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34642,
+        "color": "#777777",
+        "endSec": 254.26,
+        "iconPath": "/i/003000/003737.png",
+        "label": "Thi",
+        "startSec": 253.76,
+        "tooltip": "Third Legacy  (oGCD)  @  4:14",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34630,
+        "color": "#777777",
+        "endSec": 255.96,
+        "iconPath": "/i/003000/003725.png",
+        "label": "Fou",
+        "startSec": 255.46,
+        "tooltip": "Fourth Generation  (GCD)  @  4:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34643,
+        "color": "#777777",
+        "endSec": 255.96,
+        "iconPath": "/i/003000/003738.png",
+        "label": "Fou",
+        "startSec": 255.46,
+        "tooltip": "Fourth Legacy  (oGCD)  @  4:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34631,
+        "color": "#777777",
+        "endSec": 257.66,
+        "iconPath": "/i/003000/003726.png",
+        "label": "Our",
+        "startSec": 257.16,
+        "tooltip": "Ouroboros  (GCD)  @  4:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 259.36,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 258.86,
+        "tooltip": "Uncoiled Fury  (GCD)  @  4:19",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 259.36,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 258.86,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  4:19",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 260.06,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 259.56,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  4:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 261.64,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 261.14,
+        "tooltip": "Uncoiled Fury  (GCD)  @  4:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 261.64,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 261.14,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  4:21",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 262.34,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 261.84,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  4:22",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34613,
+        "color": "#777777",
+        "endSec": 263.92,
+        "iconPath": "/i/003000/003708.png",
+        "label": "Hin",
+        "startSec": 263.42,
+        "tooltip": "Hindsbane Fang  (GCD)  @  4:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 263.92,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 263.42,
+        "tooltip": "Death Rattle  (oGCD)  @  4:23",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34606,
+        "color": "#777777",
+        "endSec": 266.2,
+        "iconPath": "/i/003000/003701.png",
+        "label": "Ste",
+        "startSec": 265.7,
+        "tooltip": "Steel Fangs  (GCD)  @  4:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34608,
+        "color": "#777777",
+        "endSec": 268.48,
+        "iconPath": "/i/003000/003703.png",
+        "label": "Hun",
+        "startSec": 267.98,
+        "tooltip": "Hunter's Sting  (GCD)  @  4:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34610,
+        "color": "#777777",
+        "endSec": 270.76,
+        "iconPath": "/i/003000/003705.png",
+        "label": "Fla",
+        "startSec": 270.26,
+        "tooltip": "Flanksting Strike  (GCD)  @  4:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 270.76,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 270.26,
+        "tooltip": "Death Rattle  (oGCD)  @  4:30",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34626,
+        "color": "#777777",
+        "endSec": 273.04,
+        "iconPath": "/i/003000/003721.png",
+        "label": "Rea",
+        "startSec": 272.54,
+        "tooltip": "Reawaken  (GCD)  @  4:33",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34627,
+        "color": "#777777",
+        "endSec": 275.32,
+        "iconPath": "/i/003000/003722.png",
+        "label": "Fir",
+        "startSec": 274.82,
+        "tooltip": "First Generation  (GCD)  @  4:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34640,
+        "color": "#777777",
+        "endSec": 275.32,
+        "iconPath": "/i/003000/003735.png",
+        "label": "Fir",
+        "startSec": 274.82,
+        "tooltip": "First Legacy  (oGCD)  @  4:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34628,
+        "color": "#777777",
+        "endSec": 277.02,
+        "iconPath": "/i/003000/003723.png",
+        "label": "Sec",
+        "startSec": 276.52,
+        "tooltip": "Second Generation  (GCD)  @  4:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34641,
+        "color": "#777777",
+        "endSec": 277.02,
+        "iconPath": "/i/003000/003736.png",
+        "label": "Sec",
+        "startSec": 276.52,
+        "tooltip": "Second Legacy  (oGCD)  @  4:37",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34629,
+        "color": "#777777",
+        "endSec": 278.72,
+        "iconPath": "/i/003000/003724.png",
+        "label": "Thi",
+        "startSec": 278.22,
+        "tooltip": "Third Generation  (GCD)  @  4:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34642,
+        "color": "#777777",
+        "endSec": 278.72,
+        "iconPath": "/i/003000/003737.png",
+        "label": "Thi",
+        "startSec": 278.22,
+        "tooltip": "Third Legacy  (oGCD)  @  4:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34630,
+        "color": "#777777",
+        "endSec": 280.42,
+        "iconPath": "/i/003000/003725.png",
+        "label": "Fou",
+        "startSec": 279.92,
+        "tooltip": "Fourth Generation  (GCD)  @  4:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34643,
+        "color": "#777777",
+        "endSec": 280.42,
+        "iconPath": "/i/003000/003738.png",
+        "label": "Fou",
+        "startSec": 279.92,
+        "tooltip": "Fourth Legacy  (oGCD)  @  4:40",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34631,
+        "color": "#777777",
+        "endSec": 282.12,
+        "iconPath": "/i/003000/003726.png",
+        "label": "Our",
+        "startSec": 281.62,
+        "tooltip": "Ouroboros  (GCD)  @  4:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34620,
+        "color": "#777777",
+        "endSec": 283.82,
+        "iconPath": "/i/003000/003715.png",
+        "label": "Vic",
+        "startSec": 283.32,
+        "tooltip": "Vicewinder  (GCD)  @  4:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34621,
+        "color": "#777777",
+        "endSec": 286.1,
+        "iconPath": "/i/003000/003716.png",
+        "label": "Hun",
+        "startSec": 285.6,
+        "tooltip": "Hunter's Coil  (GCD)  @  4:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 286.1,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 285.6,
+        "tooltip": "Twinfang Bite  (oGCD)  @  4:46",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 286.8,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 286.3,
+        "tooltip": "Twinblood Bite  (oGCD)  @  4:46",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34622,
+        "color": "#777777",
+        "endSec": 288.38,
+        "iconPath": "/i/003000/003717.png",
+        "label": "Swi",
+        "startSec": 287.88,
+        "tooltip": "Swiftskin's Coil  (GCD)  @  4:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34636,
+        "color": "#777777",
+        "endSec": 288.38,
+        "iconPath": "/i/003000/003731.png",
+        "label": "Twi",
+        "startSec": 287.88,
+        "tooltip": "Twinfang Bite  (oGCD)  @  4:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34637,
+        "color": "#777777",
+        "endSec": 289.08,
+        "iconPath": "/i/003000/003732.png",
+        "label": "Twi",
+        "startSec": 288.58,
+        "tooltip": "Twinblood Bite  (oGCD)  @  4:49",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34633,
+        "color": "#777777",
+        "endSec": 290.66,
+        "iconPath": "/i/003000/003728.png",
+        "label": "Unc",
+        "startSec": 290.16,
+        "tooltip": "Uncoiled Fury  (GCD)  @  4:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34644,
+        "color": "#777777",
+        "endSec": 290.66,
+        "iconPath": "/i/003000/003739.png",
+        "label": "Unc",
+        "startSec": 290.16,
+        "tooltip": "Uncoiled Twinfang  (oGCD)  @  4:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34645,
+        "color": "#777777",
+        "endSec": 291.36,
+        "iconPath": "/i/003000/003740.png",
+        "label": "Unc",
+        "startSec": 290.86,
+        "tooltip": "Uncoiled Twinblood  (oGCD)  @  4:51",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34607,
+        "color": "#777777",
+        "endSec": 292.94,
+        "iconPath": "/i/003000/003702.png",
+        "label": "Rea",
+        "startSec": 292.44,
+        "tooltip": "Reaving Fangs  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34609,
+        "color": "#777777",
+        "endSec": 295.22,
+        "iconPath": "/i/003000/003704.png",
+        "label": "Swi",
+        "startSec": 294.72,
+        "tooltip": "Swiftskin's Sting  (GCD)  @  4:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34613,
+        "color": "#777777",
+        "endSec": 297.5,
+        "iconPath": "/i/003000/003708.png",
+        "label": "Hin",
+        "startSec": 297.0,
+        "tooltip": "Hindsbane Fang  (GCD)  @  4:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 34634,
+        "color": "#777777",
+        "endSec": 297.5,
+        "iconPath": "/i/003000/003729.png",
+        "label": "Dea",
+        "startSec": 297.0,
+        "tooltip": "Death Rattle  (oGCD)  @  4:57",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 34606,
+        "color": "#777777",
+        "endSec": 299.78,
+        "iconPath": "/i/003000/003701.png",
+        "label": "Ste",
+        "startSec": 299.28,
+        "tooltip": "Steel Fangs  (GCD)  @  4:59",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 118580.0,
+    "efficiencyPct": 99.73,
+    "fightDurationSec": 300.0,
+    "idealizedPotency": 118896.69,
+    "killTimeSec": 300,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}
