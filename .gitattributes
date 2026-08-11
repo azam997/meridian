@@ -1,0 +1,29 @@
+# Normalize line endings: store text as LF in the repo and check out LF,
+# regardless of platform. Stops the LF<->CRLF churn/warnings on Windows.
+* text=auto eol=lf
+
+# Explicit text types (belt-and-braces for cross-platform consistency).
+*.py    text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.js    text eol=lf
+*.jsx   text eol=lf
+*.json  text eol=lf
+*.css   text eol=lf
+*.html  text eol=lf
+*.md    text eol=lf
+*.rs    text eol=lf
+*.toml  text eol=lf
+*.svg   text eol=lf
+*.lock  text eol=lf
+
+# Binary assets — never normalize.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.exe   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary

@@ -1,0 +1,6592 @@
+{
+  "abilityMeta": {
+    "15989": {
+      "iconPath": "/i/003000/003451.png",
+      "id": 15989,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Cascade"
+    },
+    "15990": {
+      "iconPath": "/i/003000/003452.png",
+      "id": 15990,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Fountain"
+    },
+    "15991": {
+      "iconPath": "/i/003000/003460.png",
+      "id": 15991,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Reverse Cascade"
+    },
+    "15992": {
+      "iconPath": "/i/003000/003464.png",
+      "id": 15992,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Fountainfall"
+    },
+    "15997": {
+      "iconPath": "/i/003000/003454.png",
+      "id": 15997,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Standard Step"
+    },
+    "15998": {
+      "iconPath": "/i/003000/003473.png",
+      "id": 15998,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Technical Step"
+    },
+    "15999": {
+      "iconPath": "/i/003000/003455.png",
+      "id": 15999,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Emboite"
+    },
+    "16005": {
+      "iconPath": "/i/003000/003476.png",
+      "id": 16005,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Saber Dance"
+    },
+    "16007": {
+      "iconPath": "/i/003000/003462.png",
+      "id": 16007,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Fan Dance"
+    },
+    "16009": {
+      "iconPath": "/i/003000/003472.png",
+      "id": 16009,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Fan Dance III"
+    },
+    "16011": {
+      "iconPath": "/i/003000/003471.png",
+      "id": 16011,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Devilment"
+    },
+    "16013": {
+      "iconPath": "/i/003000/003475.png",
+      "id": 16013,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Flourish"
+    },
+    "16192": {
+      "iconPath": "/i/003000/003459.png",
+      "id": 16192,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Double Standard Finish"
+    },
+    "25790": {
+      "iconPath": "/i/003000/003480.png",
+      "id": 25790,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Tillana"
+    },
+    "25791": {
+      "iconPath": "/i/003000/003481.png",
+      "id": 25791,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Fan Dance IV"
+    },
+    "25792": {
+      "iconPath": "/i/003000/003482.png",
+      "id": 25792,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Starfall Dance"
+    },
+    "33218": {
+      "iconPath": "/i/003000/003474.png",
+      "id": 33218,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Quadruple Technical Finish"
+    },
+    "36983": {
+      "iconPath": "/i/003000/003483.png",
+      "id": 36983,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Last Dance"
+    },
+    "36984": {
+      "iconPath": "/i/003000/003484.png",
+      "id": 36984,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Finishing Move"
+    },
+    "36985": {
+      "iconPath": "/i/003000/003485.png",
+      "id": 36985,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Dance of the Dawn"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "15989": 13,
+        "15990": 12,
+        "15991": 17,
+        "15992": 16,
+        "15997": 4,
+        "15998": 3,
+        "15999": 20,
+        "16005": 21,
+        "16007": 16,
+        "16009": 21,
+        "16011": 3,
+        "16013": 5,
+        "16192": 5,
+        "25790": 3,
+        "25791": 5,
+        "25792": 3,
+        "33218": 3,
+        "36983": 10,
+        "36984": 5,
+        "36985": 3
+      },
+      "totalCasts": 188
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": [
+        "Technical Finish"
+      ]
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 469.91,
+        "clipLostGcds": 5.16,
+        "clipLostPotency": 2424.74,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 4.64,
+        "idleLostPotency": 2180.38,
+        "totalClipSec": 12.9,
+        "totalIdleSec": 11.6,
+        "worstClips": [
+          [
+            239.0,
+            4.6,
+            4
+          ],
+          [
+            118.0,
+            3.6,
+            4
+          ],
+          [
+            57.5,
+            2.6,
+            3
+          ],
+          [
+            0.0,
+            2.1,
+            4
+          ]
+        ],
+        "worstIdle": [
+          [
+            155.5,
+            3.0
+          ],
+          [
+            216.0,
+            3.0
+          ],
+          [
+            276.5,
+            3.0
+          ],
+          [
+            118.0,
+            1.4
+          ],
+          [
+            239.0,
+            0.4
+          ],
+          [
+            0.0,
+            0.4
+          ],
+          [
+            57.5,
+            0.4
+          ]
+        ]
+      },
+      "downtimeSource": "fallback_heuristic"
+    },
+    "Drift": {
+      "downtimeSource": "fallback_heuristic",
+      "downtimeWindows": [],
+      "fightDurationSec": 300.0,
+      "findings": [
+        {
+          "abilityId": 15997,
+          "abilityName": "Standard Step",
+          "cappedSeconds": 39.0,
+          "casts": 4,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 1.0,
+          "lostPotency": 720.0,
+          "sharedConsumers": 5
+        },
+        {
+          "abilityId": 15998,
+          "abilityName": "Technical Step",
+          "cappedSeconds": 1.5,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16013,
+          "abilityName": "Flourish",
+          "cappedSeconds": 3.5,
+          "casts": 5,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16011,
+          "abilityName": "Devilment",
+          "cappedSeconds": 1.5,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 16192,
+          "expectedId": 15997,
+          "lostPotency": 0.0,
+          "position": 1,
+          "summary": "Opener slot #1: cast Double Standard Finish, canonical uses Standard Step (same potency)"
+        },
+        {
+          "actualId": 15998,
+          "expectedId": 15999,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Technical Step, canonical uses Emboite (same potency)"
+        },
+        {
+          "actualId": 15999,
+          "expectedId": 16000,
+          "lostPotency": 0.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Emboite, canonical uses Entrechat (same potency)"
+        },
+        {
+          "actualId": 15999,
+          "expectedId": 16192,
+          "lostPotency": 850.0,
+          "position": 4,
+          "summary": "Opener slot #4: cast Emboite (0p), canonical uses Double Standard Finish (850p) \u2014 -850p"
+        },
+        {
+          "actualId": 15999,
+          "expectedId": 15998,
+          "lostPotency": 0.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Emboite, canonical uses Technical Step (same potency)"
+        },
+        {
+          "actualId": 33218,
+          "expectedId": 16000,
+          "lostPotency": 0.0,
+          "position": 7,
+          "summary": "Opener slot #7: cast Quadruple Technical Finish, canonical uses Entrechat (same potency)"
+        },
+        {
+          "actualId": 25790,
+          "expectedId": 16001,
+          "lostPotency": 0.0,
+          "position": 8,
+          "summary": "Opener slot #8: cast Tillana, canonical uses Jete (same potency)"
+        },
+        {
+          "actualId": 36985,
+          "expectedId": 16002,
+          "lostPotency": 0.0,
+          "position": 9,
+          "summary": "Opener slot #9: cast Dance of the Dawn, canonical uses Pirouette (same potency)"
+        },
+        {
+          "actualId": 25792,
+          "expectedId": 33218,
+          "lostPotency": 700.0,
+          "position": 10,
+          "summary": "Opener slot #10: cast Starfall Dance (600p), canonical uses Quadruple Technical Finish (1300p) \u2014 -700p"
+        },
+        {
+          "actualId": 36983,
+          "expectedId": 36985,
+          "lostPotency": 460.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Last Dance (540p), canonical uses Dance of the Dawn (1000p) \u2014 -460p"
+        },
+        {
+          "actualId": 15992,
+          "expectedId": 25790,
+          "lostPotency": 260.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Fountainfall (340p), canonical uses Tillana (600p) \u2014 -260p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Procs": {
+      "lostPotency": 0.0,
+      "overwriteEvents": [],
+      "overwrites": 0,
+      "totalGrants": 59,
+      "totalUsed": 59,
+      "totalWasted": 0,
+      "utilizationPct": 100.0
+    },
+    "Scoring": {
+      "deliveredObserved": 72449.03,
+      "deliveredPotency": 72449.03,
+      "downtimeSource": "fallback_heuristic",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "15998": 1456.5,
+        "16011": 2202.62,
+        "16013": 1305.86
+      },
+      "featherBudget": 16,
+      "fightDurationSec": 300.0,
+      "idealizedLenient": 74478.37,
+      "idealizedMaster": 75650.79,
+      "idealizedObserved": 74012.88,
+      "idealizedPotency": 74478.37,
+      "idealizedStrict": 74478.37,
+      "masterBuffIntervals": [
+        [
+          7.0,
+          27.0,
+          1.05
+        ],
+        [
+          127.0,
+          147.0,
+          1.05
+        ],
+        [
+          247.0,
+          267.0,
+          1.05
+        ]
+      ],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "procBudget": 33,
+      "saberBudget": 24,
+      "simContext": {
+        "gcdBaseSec": 2.5,
+        "payload": {
+          "featherBudget": 16,
+          "openerStartSec": null,
+          "procBudget": 33,
+          "saberBudget": 24
+        }
+      },
+      "tinctureLoss": 1256.38,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 188"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Saber Dance",
+          21,
+          0
+        ],
+        [
+          "Fan Dance III",
+          21,
+          0
+        ],
+        [
+          "Emboite",
+          20,
+          0
+        ],
+        [
+          "Reverse Cascade",
+          17,
+          0
+        ],
+        [
+          "Fan Dance",
+          16,
+          0
+        ],
+        [
+          "Fountainfall",
+          16,
+          0
+        ],
+        [
+          "Cascade",
+          13,
+          0
+        ],
+        [
+          "Fountain",
+          12,
+          0
+        ],
+        [
+          "Last Dance",
+          10,
+          0
+        ],
+        [
+          "Flourish",
+          5,
+          0
+        ],
+        [
+          "Fan Dance IV",
+          5,
+          0
+        ],
+        [
+          "Double Standard Finish",
+          5,
+          0
+        ],
+        [
+          "Finishing Move",
+          5,
+          0
+        ],
+        [
+          "Standard Step",
+          4,
+          0
+        ],
+        [
+          "Devilment",
+          3,
+          0
+        ],
+        [
+          "Tillana",
+          3,
+          0
+        ],
+        [
+          "Starfall Dance",
+          3,
+          0
+        ],
+        [
+          "Quadruple Technical Finish",
+          3,
+          0
+        ],
+        [
+          "Dance of the Dawn",
+          3,
+          0
+        ],
+        [
+          "Technical Step",
+          3,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No burst-alignment opportunities flagged."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "[idle] 11.6s idle (4.6 GCDs) \u2248 -2180p",
+        "[clip] 12.9s GCD clipping from over-weaving (5.2 GCDs) \u2248 -2425p"
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 470p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          1,
+          239.0,
+          4.6,
+          4
+        ],
+        [
+          2,
+          118.0,
+          3.6,
+          4
+        ],
+        [
+          3,
+          57.5,
+          2.6,
+          3
+        ],
+        [
+          4,
+          0.0,
+          2.1,
+          4
+        ]
+      ]
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "[drift] Standard Step: 4 casts, drifted 39.0s \u2248 -720p (ref avg -0p)"
+      ],
+      "summaryLines": [
+        "Total drift cost: -720p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Standard Step",
+          4,
+          39.0,
+          720,
+          0,
+          "+720"
+        ],
+        [
+          "Technical Step",
+          3,
+          1.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Flourish",
+          5,
+          3.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Devilment",
+          3,
+          1.5,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #4: cast Emboite (0p), canonical uses Double Standard Finish (850p) \u2014 -850p",
+        "[opener] Opener slot #10: cast Starfall Dance (600p), canonical uses Quadruple Technical Finish (1300p) \u2014 -700p",
+        "[opener] Opener slot #11: cast Last Dance (540p), canonical uses Dance of the Dawn (1000p) \u2014 -460p",
+        "[opener] Opener slot #12: cast Fountainfall (340p), canonical uses Tillana (600p) \u2014 -260p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 2270p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          1,
+          "Standard Step",
+          "Double Standard Finish",
+          0
+        ],
+        [
+          2,
+          "Emboite",
+          "Technical Step",
+          0
+        ],
+        [
+          3,
+          "Entrechat",
+          "Emboite",
+          0
+        ],
+        [
+          4,
+          "Double Standard Finish",
+          "Emboite",
+          850
+        ],
+        [
+          5,
+          "Technical Step",
+          "Emboite",
+          0
+        ],
+        [
+          7,
+          "Entrechat",
+          "Quadruple Technical Finish",
+          0
+        ],
+        [
+          8,
+          "Jete",
+          "Tillana",
+          0
+        ],
+        [
+          9,
+          "Pirouette",
+          "Dance of the Dawn",
+          0
+        ],
+        [
+          10,
+          "Quadruple Technical Finish",
+          "Starfall Dance",
+          700
+        ],
+        [
+          11,
+          "Dance of the Dawn",
+          "Last Dance",
+          460
+        ],
+        [
+          12,
+          "Tillana",
+          "Fountainfall",
+          260
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Procs": {
+      "aspectName": "Procs",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 72449.03,
+    "downtimeSource": "fallback_heuristic",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 97.28,
+    "efficiencyPctLenient": 97.28,
+    "efficiencyPctMaster": 95.77,
+    "efficiencyPctObserved": 97.89,
+    "efficiencyPctStrict": 97.28,
+    "idealizedMaster": 75650.79,
+    "idealizedObserved": 74012.88,
+    "killTimeSec": 300,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Dancer"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 74478.37,
+    "yourIdealizedPotencyLenient": 74478.37,
+    "yourPotency": 72449.03
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 30.0,
+      "multiplier": 1.08,
+      "startSec": 0.0
+    },
+    {
+      "endSec": 302.0,
+      "multiplier": 1.08,
+      "startSec": 272.0
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 16192,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/003000/003459.png",
+      "label": "Dou",
+      "startSec": 0.0,
+      "tooltip": "Double Standard Finish @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15998,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/003000/003473.png",
+      "label": "Tec",
+      "startSec": 0.0,
+      "tooltip": "Technical Step @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16011,
+      "color": "#f59e0b",
+      "endSec": 0.6,
+      "iconPath": "/i/003000/003471.png",
+      "label": "Dev",
+      "startSec": 0.0,
+      "tooltip": "Devilment @ 0.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 2.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 1.0,
+      "tooltip": "Emboite @ 1.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16013,
+      "color": "#f59e0b",
+      "endSec": 1.6,
+      "iconPath": "/i/003000/003475.png",
+      "label": "Flo",
+      "startSec": 1.0,
+      "tooltip": "Flourish @ 1.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 3.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 2.0,
+      "tooltip": "Emboite @ 2.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25791,
+      "color": "#f59e0b",
+      "endSec": 2.6,
+      "iconPath": "/i/003000/003481.png",
+      "label": "Fan",
+      "startSec": 2.0,
+      "tooltip": "Fan Dance IV @ 2.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 4.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 3.0,
+      "tooltip": "Emboite @ 3.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 3.6,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 3.0,
+      "tooltip": "Fan Dance III @ 3.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 5.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 4.0,
+      "tooltip": "Emboite @ 4.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 4.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 4.0,
+      "tooltip": "Fan Dance @ 4.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 33218,
+      "color": "#3b82f6",
+      "endSec": 6.0,
+      "iconPath": "/i/003000/003474.png",
+      "label": "Qua",
+      "startSec": 5.0,
+      "tooltip": "Quadruple Technical Finish @ 5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 5.6,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 5.0,
+      "tooltip": "Fan Dance III @ 5.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25790,
+      "color": "#3b82f6",
+      "endSec": 8.5,
+      "iconPath": "/i/003000/003480.png",
+      "label": "Til",
+      "startSec": 7.5,
+      "tooltip": "Tillana @ 7.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36985,
+      "color": "#3b82f6",
+      "endSec": 11.0,
+      "iconPath": "/i/003000/003485.png",
+      "label": "Dan",
+      "startSec": 10.0,
+      "tooltip": "Dance of the Dawn @ 10.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25792,
+      "color": "#3b82f6",
+      "endSec": 13.5,
+      "iconPath": "/i/003000/003482.png",
+      "label": "Sta",
+      "startSec": 12.5,
+      "tooltip": "Starfall Dance @ 12.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 16.0,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 15.0,
+      "tooltip": "Last Dance @ 15.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 18.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 17.5,
+      "tooltip": "Fountainfall @ 17.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 21.0,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 20.0,
+      "tooltip": "Reverse Cascade @ 20.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 20.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 20.0,
+      "tooltip": "Fan Dance @ 20.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 21.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 20.7,
+      "tooltip": "Fan Dance III @ 20.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 23.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 22.5,
+      "tooltip": "Saber Dance @ 22.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 26.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 25.0,
+      "tooltip": "Cascade @ 25.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 28.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 27.5,
+      "tooltip": "Reverse Cascade @ 27.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36984,
+      "color": "#3b82f6",
+      "endSec": 31.0,
+      "iconPath": "/i/003000/003484.png",
+      "label": "Fin",
+      "startSec": 30.0,
+      "tooltip": "Finishing Move @ 30.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 33.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 32.5,
+      "tooltip": "Last Dance @ 32.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 36.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 35.0,
+      "tooltip": "Saber Dance @ 35.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 38.5,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 37.5,
+      "tooltip": "Fountain @ 37.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 41.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 40.0,
+      "tooltip": "Fountainfall @ 40.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 40.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 40.0,
+      "tooltip": "Fan Dance @ 40.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 41.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 40.7,
+      "tooltip": "Fan Dance III @ 40.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 43.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 42.5,
+      "tooltip": "Saber Dance @ 42.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 46.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 45.0,
+      "tooltip": "Cascade @ 45.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 48.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 47.5,
+      "tooltip": "Reverse Cascade @ 47.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 51.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 50.0,
+      "tooltip": "Fountain @ 50.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 53.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 52.5,
+      "tooltip": "Fountainfall @ 52.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 56.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 55.0,
+      "tooltip": "Saber Dance @ 55.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 58.5,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 57.5,
+      "tooltip": "Cascade @ 57.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 58.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 57.5,
+      "tooltip": "Fan Dance @ 57.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 58.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 58.2,
+      "tooltip": "Fan Dance III @ 58.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15997,
+      "color": "#3b82f6",
+      "endSec": 61.0,
+      "iconPath": "/i/003000/003454.png",
+      "label": "Sta",
+      "startSec": 60.0,
+      "tooltip": "Standard Step @ 60.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 62.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 61.0,
+      "tooltip": "Emboite @ 61.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16013,
+      "color": "#f59e0b",
+      "endSec": 61.6,
+      "iconPath": "/i/003000/003475.png",
+      "label": "Flo",
+      "startSec": 61.0,
+      "tooltip": "Flourish @ 61.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 63.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 62.0,
+      "tooltip": "Emboite @ 62.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25791,
+      "color": "#f59e0b",
+      "endSec": 62.6,
+      "iconPath": "/i/003000/003481.png",
+      "label": "Fan",
+      "startSec": 62.0,
+      "tooltip": "Fan Dance IV @ 62.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16192,
+      "color": "#3b82f6",
+      "endSec": 64.0,
+      "iconPath": "/i/003000/003459.png",
+      "label": "Dou",
+      "startSec": 63.0,
+      "tooltip": "Double Standard Finish @ 63.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 63.6,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 63.0,
+      "tooltip": "Fan Dance III @ 63.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 66.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 65.5,
+      "tooltip": "Last Dance @ 65.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 69.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 68.0,
+      "tooltip": "Fountainfall @ 68.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 71.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 70.5,
+      "tooltip": "Reverse Cascade @ 70.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 74.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 73.0,
+      "tooltip": "Saber Dance @ 73.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 76.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 75.5,
+      "tooltip": "Saber Dance @ 75.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 76.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 75.5,
+      "tooltip": "Fan Dance @ 75.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 76.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 76.2,
+      "tooltip": "Fan Dance III @ 76.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 79.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 78.0,
+      "tooltip": "Fountain @ 78.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 81.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 80.5,
+      "tooltip": "Fountainfall @ 80.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 84.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 83.0,
+      "tooltip": "Cascade @ 83.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 86.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 85.5,
+      "tooltip": "Reverse Cascade @ 85.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 89.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 88.0,
+      "tooltip": "Saber Dance @ 88.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36984,
+      "color": "#3b82f6",
+      "endSec": 91.5,
+      "iconPath": "/i/003000/003484.png",
+      "label": "Fin",
+      "startSec": 90.5,
+      "tooltip": "Finishing Move @ 90.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 94.0,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 93.0,
+      "tooltip": "Last Dance @ 93.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 96.5,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 95.5,
+      "tooltip": "Fountain @ 95.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 96.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 95.5,
+      "tooltip": "Fan Dance @ 95.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 96.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 96.2,
+      "tooltip": "Fan Dance III @ 96.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 99.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 98.0,
+      "tooltip": "Fountainfall @ 98.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 101.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 100.5,
+      "tooltip": "Saber Dance @ 100.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 104.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 103.0,
+      "tooltip": "Cascade @ 103.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 106.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 105.5,
+      "tooltip": "Reverse Cascade @ 105.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 109.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 108.0,
+      "tooltip": "Fountain @ 108.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 111.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 110.5,
+      "tooltip": "Fountainfall @ 110.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 114.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 113.0,
+      "tooltip": "Saber Dance @ 113.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 113.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 113.0,
+      "tooltip": "Fan Dance @ 113.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 114.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 113.7,
+      "tooltip": "Fan Dance III @ 113.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 116.5,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 115.5,
+      "tooltip": "Cascade @ 115.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 119.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 118.0,
+      "tooltip": "Fountain @ 118.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15997,
+      "color": "#3b82f6",
+      "endSec": 121.5,
+      "iconPath": "/i/003000/003454.png",
+      "label": "Sta",
+      "startSec": 120.5,
+      "tooltip": "Standard Step @ 120.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 122.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 121.5,
+      "tooltip": "Emboite @ 121.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 123.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 122.5,
+      "tooltip": "Emboite @ 122.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16192,
+      "color": "#3b82f6",
+      "endSec": 124.5,
+      "iconPath": "/i/003000/003459.png",
+      "label": "Dou",
+      "startSec": 123.5,
+      "tooltip": "Double Standard Finish @ 123.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 127.0,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 126.0,
+      "tooltip": "Last Dance @ 126.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16011,
+      "color": "#f59e0b",
+      "endSec": 126.6,
+      "iconPath": "/i/003000/003471.png",
+      "label": "Dev",
+      "startSec": 126.0,
+      "tooltip": "Devilment @ 126.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16013,
+      "color": "#f59e0b",
+      "endSec": 127.3,
+      "iconPath": "/i/003000/003475.png",
+      "label": "Flo",
+      "startSec": 126.7,
+      "tooltip": "Flourish @ 126.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15998,
+      "color": "#3b82f6",
+      "endSec": 129.5,
+      "iconPath": "/i/003000/003473.png",
+      "label": "Tec",
+      "startSec": 128.5,
+      "tooltip": "Technical Step @ 128.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25791,
+      "color": "#f59e0b",
+      "endSec": 129.1,
+      "iconPath": "/i/003000/003481.png",
+      "label": "Fan",
+      "startSec": 128.5,
+      "tooltip": "Fan Dance IV @ 128.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 130.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 129.5,
+      "tooltip": "Emboite @ 129.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 130.1,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 129.5,
+      "tooltip": "Fan Dance III @ 129.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 131.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 130.5,
+      "tooltip": "Emboite @ 130.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 132.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 131.5,
+      "tooltip": "Emboite @ 131.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 132.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 131.5,
+      "tooltip": "Fan Dance @ 131.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 133.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 132.5,
+      "tooltip": "Emboite @ 132.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 133.1,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 132.5,
+      "tooltip": "Fan Dance III @ 132.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 33218,
+      "color": "#3b82f6",
+      "endSec": 134.5,
+      "iconPath": "/i/003000/003474.png",
+      "label": "Qua",
+      "startSec": 133.5,
+      "tooltip": "Quadruple Technical Finish @ 133.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25790,
+      "color": "#3b82f6",
+      "endSec": 137.0,
+      "iconPath": "/i/003000/003480.png",
+      "label": "Til",
+      "startSec": 136.0,
+      "tooltip": "Tillana @ 136.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36985,
+      "color": "#3b82f6",
+      "endSec": 139.5,
+      "iconPath": "/i/003000/003485.png",
+      "label": "Dan",
+      "startSec": 138.5,
+      "tooltip": "Dance of the Dawn @ 138.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25792,
+      "color": "#3b82f6",
+      "endSec": 142.0,
+      "iconPath": "/i/003000/003482.png",
+      "label": "Sta",
+      "startSec": 141.0,
+      "tooltip": "Starfall Dance @ 141.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 144.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 143.5,
+      "tooltip": "Last Dance @ 143.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 147.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 146.0,
+      "tooltip": "Fountainfall @ 146.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 149.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 148.5,
+      "tooltip": "Reverse Cascade @ 148.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36984,
+      "color": "#3b82f6",
+      "endSec": 152.0,
+      "iconPath": "/i/003000/003484.png",
+      "label": "Fin",
+      "startSec": 151.0,
+      "tooltip": "Finishing Move @ 151.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 151.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 151.0,
+      "tooltip": "Fan Dance @ 151.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 152.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 151.7,
+      "tooltip": "Fan Dance III @ 151.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 154.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 153.5,
+      "tooltip": "Last Dance @ 153.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 157.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 156.0,
+      "tooltip": "Saber Dance @ 156.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 159.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 158.5,
+      "tooltip": "Saber Dance @ 158.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 162.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 161.0,
+      "tooltip": "Cascade @ 161.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 164.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 163.5,
+      "tooltip": "Reverse Cascade @ 163.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 167.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 166.0,
+      "tooltip": "Saber Dance @ 166.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 169.5,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 168.5,
+      "tooltip": "Fountain @ 168.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 172.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 171.0,
+      "tooltip": "Fountainfall @ 171.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 171.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 171.0,
+      "tooltip": "Fan Dance @ 171.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 172.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 171.7,
+      "tooltip": "Fan Dance III @ 171.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 174.5,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 173.5,
+      "tooltip": "Cascade @ 173.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 177.0,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 176.0,
+      "tooltip": "Reverse Cascade @ 176.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 179.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 178.5,
+      "tooltip": "Saber Dance @ 178.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15997,
+      "color": "#3b82f6",
+      "endSec": 182.0,
+      "iconPath": "/i/003000/003454.png",
+      "label": "Sta",
+      "startSec": 181.0,
+      "tooltip": "Standard Step @ 181.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 183.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 182.0,
+      "tooltip": "Emboite @ 182.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 184.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 183.0,
+      "tooltip": "Emboite @ 183.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16192,
+      "color": "#3b82f6",
+      "endSec": 185.0,
+      "iconPath": "/i/003000/003459.png",
+      "label": "Dou",
+      "startSec": 184.0,
+      "tooltip": "Double Standard Finish @ 184.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 187.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 186.5,
+      "tooltip": "Last Dance @ 186.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 190.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 189.0,
+      "tooltip": "Saber Dance @ 189.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16013,
+      "color": "#f59e0b",
+      "endSec": 189.6,
+      "iconPath": "/i/003000/003475.png",
+      "label": "Flo",
+      "startSec": 189.0,
+      "tooltip": "Flourish @ 189.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25791,
+      "color": "#f59e0b",
+      "endSec": 190.3,
+      "iconPath": "/i/003000/003481.png",
+      "label": "Fan",
+      "startSec": 189.7,
+      "tooltip": "Fan Dance IV @ 189.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 192.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 191.5,
+      "tooltip": "Fountainfall @ 191.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 192.1,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 191.5,
+      "tooltip": "Fan Dance III @ 191.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 192.8,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 192.2,
+      "tooltip": "Fan Dance @ 192.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 195.0,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 194.0,
+      "tooltip": "Reverse Cascade @ 194.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 194.6,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 194.0,
+      "tooltip": "Fan Dance III @ 194.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 197.5,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 196.5,
+      "tooltip": "Fountain @ 196.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 200.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 199.0,
+      "tooltip": "Fountainfall @ 199.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 202.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 201.5,
+      "tooltip": "Saber Dance @ 201.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 205.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 204.0,
+      "tooltip": "Cascade @ 204.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 207.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 206.5,
+      "tooltip": "Reverse Cascade @ 206.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 207.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 206.5,
+      "tooltip": "Fan Dance @ 206.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 207.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 207.2,
+      "tooltip": "Fan Dance III @ 207.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 210.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 209.0,
+      "tooltip": "Fountain @ 209.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36984,
+      "color": "#3b82f6",
+      "endSec": 212.5,
+      "iconPath": "/i/003000/003484.png",
+      "label": "Fin",
+      "startSec": 211.5,
+      "tooltip": "Finishing Move @ 211.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 215.0,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 214.0,
+      "tooltip": "Last Dance @ 214.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 217.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 216.5,
+      "tooltip": "Fountainfall @ 216.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 220.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 219.0,
+      "tooltip": "Saber Dance @ 219.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 222.5,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 221.5,
+      "tooltip": "Cascade @ 221.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 225.0,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 224.0,
+      "tooltip": "Reverse Cascade @ 224.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 227.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 226.5,
+      "tooltip": "Saber Dance @ 226.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 227.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 226.5,
+      "tooltip": "Fan Dance @ 226.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 227.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 227.2,
+      "tooltip": "Fan Dance III @ 227.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 230.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 229.0,
+      "tooltip": "Fountain @ 229.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 232.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 231.5,
+      "tooltip": "Fountainfall @ 231.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 235.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 234.0,
+      "tooltip": "Cascade @ 234.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 237.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 236.5,
+      "tooltip": "Reverse Cascade @ 236.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 240.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 239.0,
+      "tooltip": "Saber Dance @ 239.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15997,
+      "color": "#3b82f6",
+      "endSec": 242.5,
+      "iconPath": "/i/003000/003454.png",
+      "label": "Sta",
+      "startSec": 241.5,
+      "tooltip": "Standard Step @ 241.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 243.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 242.5,
+      "tooltip": "Emboite @ 242.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 244.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 243.5,
+      "tooltip": "Emboite @ 243.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16192,
+      "color": "#3b82f6",
+      "endSec": 245.5,
+      "iconPath": "/i/003000/003459.png",
+      "label": "Dou",
+      "startSec": 244.5,
+      "tooltip": "Double Standard Finish @ 244.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 245.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 244.5,
+      "tooltip": "Fan Dance @ 244.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 245.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 245.2,
+      "tooltip": "Fan Dance III @ 245.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 248.0,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 247.0,
+      "tooltip": "Last Dance @ 247.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15998,
+      "color": "#3b82f6",
+      "endSec": 250.5,
+      "iconPath": "/i/003000/003473.png",
+      "label": "Tec",
+      "startSec": 249.5,
+      "tooltip": "Technical Step @ 249.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 251.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 250.5,
+      "tooltip": "Emboite @ 250.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 252.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 251.5,
+      "tooltip": "Emboite @ 251.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 253.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 252.5,
+      "tooltip": "Emboite @ 252.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16011,
+      "color": "#f59e0b",
+      "endSec": 253.1,
+      "iconPath": "/i/003000/003471.png",
+      "label": "Dev",
+      "startSec": 252.5,
+      "tooltip": "Devilment @ 252.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 254.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 253.5,
+      "tooltip": "Emboite @ 253.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16013,
+      "color": "#f59e0b",
+      "endSec": 254.1,
+      "iconPath": "/i/003000/003475.png",
+      "label": "Flo",
+      "startSec": 253.5,
+      "tooltip": "Flourish @ 253.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 33218,
+      "color": "#3b82f6",
+      "endSec": 255.5,
+      "iconPath": "/i/003000/003474.png",
+      "label": "Qua",
+      "startSec": 254.5,
+      "tooltip": "Quadruple Technical Finish @ 254.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25791,
+      "color": "#f59e0b",
+      "endSec": 255.1,
+      "iconPath": "/i/003000/003481.png",
+      "label": "Fan",
+      "startSec": 254.5,
+      "tooltip": "Fan Dance IV @ 254.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 255.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 255.2,
+      "tooltip": "Fan Dance III @ 255.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25790,
+      "color": "#3b82f6",
+      "endSec": 258.0,
+      "iconPath": "/i/003000/003480.png",
+      "label": "Til",
+      "startSec": 257.0,
+      "tooltip": "Tillana @ 257.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36985,
+      "color": "#3b82f6",
+      "endSec": 260.5,
+      "iconPath": "/i/003000/003485.png",
+      "label": "Dan",
+      "startSec": 259.5,
+      "tooltip": "Dance of the Dawn @ 259.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25792,
+      "color": "#3b82f6",
+      "endSec": 263.0,
+      "iconPath": "/i/003000/003482.png",
+      "label": "Sta",
+      "startSec": 262.0,
+      "tooltip": "Starfall Dance @ 262.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 265.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 264.5,
+      "tooltip": "Last Dance @ 264.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 265.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 264.5,
+      "tooltip": "Fan Dance @ 264.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 265.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 265.2,
+      "tooltip": "Fan Dance III @ 265.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 268.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 267.0,
+      "tooltip": "Fountainfall @ 267.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 270.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 269.5,
+      "tooltip": "Reverse Cascade @ 269.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36984,
+      "color": "#3b82f6",
+      "endSec": 273.0,
+      "iconPath": "/i/003000/003484.png",
+      "label": "Fin",
+      "startSec": 272.0,
+      "tooltip": "Finishing Move @ 272.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 275.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 274.5,
+      "tooltip": "Last Dance @ 274.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 278.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 277.0,
+      "tooltip": "Saber Dance @ 277.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 280.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 279.5,
+      "tooltip": "Saber Dance @ 279.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 283.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 282.0,
+      "tooltip": "Fountain @ 282.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 282.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 282.0,
+      "tooltip": "Fan Dance @ 282.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 283.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 282.7,
+      "tooltip": "Fan Dance III @ 282.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 285.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 284.5,
+      "tooltip": "Fountainfall @ 284.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 288.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 287.0,
+      "tooltip": "Cascade @ 287.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 290.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 289.5,
+      "tooltip": "Reverse Cascade @ 289.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 293.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 292.0,
+      "tooltip": "Saber Dance @ 292.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 295.5,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 294.5,
+      "tooltip": "Fountain @ 294.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 298.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 297.0,
+      "tooltip": "Fountainfall @ 297.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 300.5,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 299.5,
+      "tooltip": "Cascade @ 299.5s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackCanonical": [
+    {
+      "abilityId": 16192,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/003000/003459.png",
+      "label": "Dou",
+      "startSec": 0.0,
+      "tooltip": "Double Standard Finish @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 0.0,
+      "tooltip": "Last Dance @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16013,
+      "color": "#f59e0b",
+      "endSec": 0.6,
+      "iconPath": "/i/003000/003475.png",
+      "label": "Flo",
+      "startSec": 0.0,
+      "tooltip": "Flourish @ 0.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25791,
+      "color": "#f59e0b",
+      "endSec": 1.3,
+      "iconPath": "/i/003000/003481.png",
+      "label": "Fan",
+      "startSec": 0.7,
+      "tooltip": "Fan Dance IV @ 0.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 2.5,
+      "tooltip": "Fountainfall @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 3.1,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 2.5,
+      "tooltip": "Fan Dance III @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 3.8,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 3.2,
+      "tooltip": "Fan Dance @ 3.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 6.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 5.0,
+      "tooltip": "Saber Dance @ 5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 5.6,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 5.0,
+      "tooltip": "Fan Dance III @ 5.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15998,
+      "color": "#3b82f6",
+      "endSec": 8.5,
+      "iconPath": "/i/003000/003473.png",
+      "label": "Tec",
+      "startSec": 7.5,
+      "tooltip": "Technical Step @ 7.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16011,
+      "color": "#f59e0b",
+      "endSec": 8.1,
+      "iconPath": "/i/003000/003471.png",
+      "label": "Dev",
+      "startSec": 7.5,
+      "tooltip": "Devilment @ 7.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 9.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 8.5,
+      "tooltip": "Emboite @ 8.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 10.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 9.5,
+      "tooltip": "Emboite @ 9.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 11.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 10.5,
+      "tooltip": "Emboite @ 10.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 12.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 11.5,
+      "tooltip": "Emboite @ 11.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 33218,
+      "color": "#3b82f6",
+      "endSec": 13.5,
+      "iconPath": "/i/003000/003474.png",
+      "label": "Qua",
+      "startSec": 12.5,
+      "tooltip": "Quadruple Technical Finish @ 12.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25790,
+      "color": "#3b82f6",
+      "endSec": 16.0,
+      "iconPath": "/i/003000/003480.png",
+      "label": "Til",
+      "startSec": 15.0,
+      "tooltip": "Tillana @ 15.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36985,
+      "color": "#3b82f6",
+      "endSec": 18.5,
+      "iconPath": "/i/003000/003485.png",
+      "label": "Dan",
+      "startSec": 17.5,
+      "tooltip": "Dance of the Dawn @ 17.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25792,
+      "color": "#3b82f6",
+      "endSec": 21.0,
+      "iconPath": "/i/003000/003482.png",
+      "label": "Sta",
+      "startSec": 20.0,
+      "tooltip": "Starfall Dance @ 20.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 20.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 20.0,
+      "tooltip": "Fan Dance @ 20.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 21.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 20.7,
+      "tooltip": "Fan Dance III @ 20.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 23.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 22.5,
+      "tooltip": "Last Dance @ 22.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 26.0,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 25.0,
+      "tooltip": "Reverse Cascade @ 25.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 28.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 27.5,
+      "tooltip": "Saber Dance @ 27.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36984,
+      "color": "#3b82f6",
+      "endSec": 31.0,
+      "iconPath": "/i/003000/003484.png",
+      "label": "Fin",
+      "startSec": 30.0,
+      "tooltip": "Finishing Move @ 30.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 33.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 32.5,
+      "tooltip": "Last Dance @ 32.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 36.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 35.0,
+      "tooltip": "Cascade @ 35.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 38.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 37.5,
+      "tooltip": "Reverse Cascade @ 37.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 41.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 40.0,
+      "tooltip": "Saber Dance @ 40.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 40.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 40.0,
+      "tooltip": "Fan Dance @ 40.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 41.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 40.7,
+      "tooltip": "Fan Dance III @ 40.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 43.5,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 42.5,
+      "tooltip": "Fountain @ 42.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 46.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 45.0,
+      "tooltip": "Fountainfall @ 45.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 48.5,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 47.5,
+      "tooltip": "Cascade @ 47.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 51.0,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 50.0,
+      "tooltip": "Reverse Cascade @ 50.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 53.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 52.5,
+      "tooltip": "Saber Dance @ 52.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 56.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 55.0,
+      "tooltip": "Fountain @ 55.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 58.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 57.5,
+      "tooltip": "Fountainfall @ 57.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 58.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 57.5,
+      "tooltip": "Fan Dance @ 57.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 58.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 58.2,
+      "tooltip": "Fan Dance III @ 58.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15997,
+      "color": "#3b82f6",
+      "endSec": 61.0,
+      "iconPath": "/i/003000/003454.png",
+      "label": "Sta",
+      "startSec": 60.0,
+      "tooltip": "Standard Step @ 60.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16013,
+      "color": "#f59e0b",
+      "endSec": 60.6,
+      "iconPath": "/i/003000/003475.png",
+      "label": "Flo",
+      "startSec": 60.0,
+      "tooltip": "Flourish @ 60.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 62.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 61.0,
+      "tooltip": "Emboite @ 61.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25791,
+      "color": "#f59e0b",
+      "endSec": 61.6,
+      "iconPath": "/i/003000/003481.png",
+      "label": "Fan",
+      "startSec": 61.0,
+      "tooltip": "Fan Dance IV @ 61.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 63.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 62.0,
+      "tooltip": "Emboite @ 62.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 62.6,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 62.0,
+      "tooltip": "Fan Dance III @ 62.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16192,
+      "color": "#3b82f6",
+      "endSec": 64.0,
+      "iconPath": "/i/003000/003459.png",
+      "label": "Dou",
+      "startSec": 63.0,
+      "tooltip": "Double Standard Finish @ 63.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 66.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 65.5,
+      "tooltip": "Last Dance @ 65.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 69.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 68.0,
+      "tooltip": "Fountainfall @ 68.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 71.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 70.5,
+      "tooltip": "Reverse Cascade @ 70.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 74.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 73.0,
+      "tooltip": "Saber Dance @ 73.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 76.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 75.5,
+      "tooltip": "Saber Dance @ 75.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 76.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 75.5,
+      "tooltip": "Fan Dance @ 75.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 76.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 76.2,
+      "tooltip": "Fan Dance III @ 76.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 79.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 78.0,
+      "tooltip": "Cascade @ 78.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 81.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 80.5,
+      "tooltip": "Reverse Cascade @ 80.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 84.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 83.0,
+      "tooltip": "Fountain @ 83.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 86.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 85.5,
+      "tooltip": "Fountainfall @ 85.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 89.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 88.0,
+      "tooltip": "Saber Dance @ 88.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36984,
+      "color": "#3b82f6",
+      "endSec": 91.5,
+      "iconPath": "/i/003000/003484.png",
+      "label": "Fin",
+      "startSec": 90.5,
+      "tooltip": "Finishing Move @ 90.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 94.0,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 93.0,
+      "tooltip": "Last Dance @ 93.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 96.5,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 95.5,
+      "tooltip": "Cascade @ 95.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 96.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 95.5,
+      "tooltip": "Fan Dance @ 95.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 96.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 96.2,
+      "tooltip": "Fan Dance III @ 96.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 99.0,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 98.0,
+      "tooltip": "Reverse Cascade @ 98.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 101.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 100.5,
+      "tooltip": "Saber Dance @ 100.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 104.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 103.0,
+      "tooltip": "Fountain @ 103.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 106.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 105.5,
+      "tooltip": "Fountainfall @ 105.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 109.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 108.0,
+      "tooltip": "Cascade @ 108.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 111.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 110.5,
+      "tooltip": "Reverse Cascade @ 110.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 114.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 113.0,
+      "tooltip": "Saber Dance @ 113.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 113.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 113.0,
+      "tooltip": "Fan Dance @ 113.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 114.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 113.7,
+      "tooltip": "Fan Dance III @ 113.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 116.5,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 115.5,
+      "tooltip": "Fountain @ 115.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 119.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 118.0,
+      "tooltip": "Cascade @ 118.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15997,
+      "color": "#3b82f6",
+      "endSec": 121.5,
+      "iconPath": "/i/003000/003454.png",
+      "label": "Sta",
+      "startSec": 120.5,
+      "tooltip": "Standard Step @ 120.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16013,
+      "color": "#f59e0b",
+      "endSec": 121.1,
+      "iconPath": "/i/003000/003475.png",
+      "label": "Flo",
+      "startSec": 120.5,
+      "tooltip": "Flourish @ 120.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 122.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 121.5,
+      "tooltip": "Emboite @ 121.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25791,
+      "color": "#f59e0b",
+      "endSec": 122.1,
+      "iconPath": "/i/003000/003481.png",
+      "label": "Fan",
+      "startSec": 121.5,
+      "tooltip": "Fan Dance IV @ 121.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 123.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 122.5,
+      "tooltip": "Emboite @ 122.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 123.1,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 122.5,
+      "tooltip": "Fan Dance III @ 122.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16192,
+      "color": "#3b82f6",
+      "endSec": 124.5,
+      "iconPath": "/i/003000/003459.png",
+      "label": "Dou",
+      "startSec": 123.5,
+      "tooltip": "Double Standard Finish @ 123.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 127.0,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 126.0,
+      "tooltip": "Last Dance @ 126.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15998,
+      "color": "#3b82f6",
+      "endSec": 129.5,
+      "iconPath": "/i/003000/003473.png",
+      "label": "Tec",
+      "startSec": 128.5,
+      "tooltip": "Technical Step @ 128.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16011,
+      "color": "#f59e0b",
+      "endSec": 129.1,
+      "iconPath": "/i/003000/003471.png",
+      "label": "Dev",
+      "startSec": 128.5,
+      "tooltip": "Devilment @ 128.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 130.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 129.5,
+      "tooltip": "Emboite @ 129.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 131.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 130.5,
+      "tooltip": "Emboite @ 130.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 132.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 131.5,
+      "tooltip": "Emboite @ 131.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 132.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 131.5,
+      "tooltip": "Fan Dance @ 131.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 133.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 132.5,
+      "tooltip": "Emboite @ 132.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 133.1,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 132.5,
+      "tooltip": "Fan Dance III @ 132.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 33218,
+      "color": "#3b82f6",
+      "endSec": 134.5,
+      "iconPath": "/i/003000/003474.png",
+      "label": "Qua",
+      "startSec": 133.5,
+      "tooltip": "Quadruple Technical Finish @ 133.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25790,
+      "color": "#3b82f6",
+      "endSec": 137.0,
+      "iconPath": "/i/003000/003480.png",
+      "label": "Til",
+      "startSec": 136.0,
+      "tooltip": "Tillana @ 136.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36985,
+      "color": "#3b82f6",
+      "endSec": 139.5,
+      "iconPath": "/i/003000/003485.png",
+      "label": "Dan",
+      "startSec": 138.5,
+      "tooltip": "Dance of the Dawn @ 138.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25792,
+      "color": "#3b82f6",
+      "endSec": 142.0,
+      "iconPath": "/i/003000/003482.png",
+      "label": "Sta",
+      "startSec": 141.0,
+      "tooltip": "Starfall Dance @ 141.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 144.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 143.5,
+      "tooltip": "Last Dance @ 143.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 147.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 146.0,
+      "tooltip": "Fountainfall @ 146.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 149.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 148.5,
+      "tooltip": "Reverse Cascade @ 148.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36984,
+      "color": "#3b82f6",
+      "endSec": 152.0,
+      "iconPath": "/i/003000/003484.png",
+      "label": "Fin",
+      "startSec": 151.0,
+      "tooltip": "Finishing Move @ 151.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 151.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 151.0,
+      "tooltip": "Fan Dance @ 151.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 152.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 151.7,
+      "tooltip": "Fan Dance III @ 151.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 154.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 153.5,
+      "tooltip": "Last Dance @ 153.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 157.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 156.0,
+      "tooltip": "Saber Dance @ 156.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 159.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 158.5,
+      "tooltip": "Saber Dance @ 158.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 162.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 161.0,
+      "tooltip": "Fountain @ 161.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 164.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 163.5,
+      "tooltip": "Fountainfall @ 163.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 167.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 166.0,
+      "tooltip": "Saber Dance @ 166.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 169.5,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 168.5,
+      "tooltip": "Cascade @ 168.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 172.0,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 171.0,
+      "tooltip": "Reverse Cascade @ 171.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 171.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 171.0,
+      "tooltip": "Fan Dance @ 171.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 172.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 171.7,
+      "tooltip": "Fan Dance III @ 171.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 174.5,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 173.5,
+      "tooltip": "Fountain @ 173.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 177.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 176.0,
+      "tooltip": "Fountainfall @ 176.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 179.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 178.5,
+      "tooltip": "Saber Dance @ 178.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15997,
+      "color": "#3b82f6",
+      "endSec": 182.0,
+      "iconPath": "/i/003000/003454.png",
+      "label": "Sta",
+      "startSec": 181.0,
+      "tooltip": "Standard Step @ 181.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16013,
+      "color": "#f59e0b",
+      "endSec": 181.6,
+      "iconPath": "/i/003000/003475.png",
+      "label": "Flo",
+      "startSec": 181.0,
+      "tooltip": "Flourish @ 181.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 183.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 182.0,
+      "tooltip": "Emboite @ 182.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25791,
+      "color": "#f59e0b",
+      "endSec": 182.6,
+      "iconPath": "/i/003000/003481.png",
+      "label": "Fan",
+      "startSec": 182.0,
+      "tooltip": "Fan Dance IV @ 182.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 184.0,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 183.0,
+      "tooltip": "Emboite @ 183.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 183.6,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 183.0,
+      "tooltip": "Fan Dance III @ 183.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16192,
+      "color": "#3b82f6",
+      "endSec": 185.0,
+      "iconPath": "/i/003000/003459.png",
+      "label": "Dou",
+      "startSec": 184.0,
+      "tooltip": "Double Standard Finish @ 184.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 187.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 186.5,
+      "tooltip": "Last Dance @ 186.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 190.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 189.0,
+      "tooltip": "Fountainfall @ 189.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 189.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 189.0,
+      "tooltip": "Fan Dance @ 189.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 190.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 189.7,
+      "tooltip": "Fan Dance III @ 189.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 192.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 191.5,
+      "tooltip": "Reverse Cascade @ 191.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 195.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 194.0,
+      "tooltip": "Saber Dance @ 194.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 197.5,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 196.5,
+      "tooltip": "Cascade @ 196.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 200.0,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 199.0,
+      "tooltip": "Reverse Cascade @ 199.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 202.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 201.5,
+      "tooltip": "Saber Dance @ 201.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 205.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 204.0,
+      "tooltip": "Fountain @ 204.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 207.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 206.5,
+      "tooltip": "Fountainfall @ 206.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 207.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 206.5,
+      "tooltip": "Fan Dance @ 206.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 207.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 207.2,
+      "tooltip": "Fan Dance III @ 207.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 210.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 209.0,
+      "tooltip": "Cascade @ 209.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36984,
+      "color": "#3b82f6",
+      "endSec": 212.5,
+      "iconPath": "/i/003000/003484.png",
+      "label": "Fin",
+      "startSec": 211.5,
+      "tooltip": "Finishing Move @ 211.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 215.0,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 214.0,
+      "tooltip": "Last Dance @ 214.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 217.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 216.5,
+      "tooltip": "Reverse Cascade @ 216.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 220.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 219.0,
+      "tooltip": "Saber Dance @ 219.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 222.5,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 221.5,
+      "tooltip": "Fountain @ 221.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 225.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 224.0,
+      "tooltip": "Fountainfall @ 224.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 227.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 226.5,
+      "tooltip": "Saber Dance @ 226.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 227.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 226.5,
+      "tooltip": "Fan Dance @ 226.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 227.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 227.2,
+      "tooltip": "Fan Dance III @ 227.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 230.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 229.0,
+      "tooltip": "Cascade @ 229.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 232.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 231.5,
+      "tooltip": "Reverse Cascade @ 231.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 235.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 234.0,
+      "tooltip": "Fountain @ 234.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 237.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 236.5,
+      "tooltip": "Fountainfall @ 236.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 240.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 239.0,
+      "tooltip": "Saber Dance @ 239.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15997,
+      "color": "#3b82f6",
+      "endSec": 242.5,
+      "iconPath": "/i/003000/003454.png",
+      "label": "Sta",
+      "startSec": 241.5,
+      "tooltip": "Standard Step @ 241.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16013,
+      "color": "#f59e0b",
+      "endSec": 242.1,
+      "iconPath": "/i/003000/003475.png",
+      "label": "Flo",
+      "startSec": 241.5,
+      "tooltip": "Flourish @ 241.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 243.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 242.5,
+      "tooltip": "Emboite @ 242.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25791,
+      "color": "#f59e0b",
+      "endSec": 243.1,
+      "iconPath": "/i/003000/003481.png",
+      "label": "Fan",
+      "startSec": 242.5,
+      "tooltip": "Fan Dance IV @ 242.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 244.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 243.5,
+      "tooltip": "Emboite @ 243.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 244.1,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 243.5,
+      "tooltip": "Fan Dance III @ 243.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16192,
+      "color": "#3b82f6",
+      "endSec": 245.5,
+      "iconPath": "/i/003000/003459.png",
+      "label": "Dou",
+      "startSec": 244.5,
+      "tooltip": "Double Standard Finish @ 244.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 245.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 244.5,
+      "tooltip": "Fan Dance @ 244.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 245.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 245.2,
+      "tooltip": "Fan Dance III @ 245.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 248.0,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 247.0,
+      "tooltip": "Last Dance @ 247.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15998,
+      "color": "#3b82f6",
+      "endSec": 250.5,
+      "iconPath": "/i/003000/003473.png",
+      "label": "Tec",
+      "startSec": 249.5,
+      "tooltip": "Technical Step @ 249.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16011,
+      "color": "#f59e0b",
+      "endSec": 250.1,
+      "iconPath": "/i/003000/003471.png",
+      "label": "Dev",
+      "startSec": 249.5,
+      "tooltip": "Devilment @ 249.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 251.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 250.5,
+      "tooltip": "Emboite @ 250.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 252.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 251.5,
+      "tooltip": "Emboite @ 251.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 253.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 252.5,
+      "tooltip": "Emboite @ 252.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15999,
+      "color": "#3b82f6",
+      "endSec": 254.5,
+      "iconPath": "/i/003000/003455.png",
+      "label": "Emb",
+      "startSec": 253.5,
+      "tooltip": "Emboite @ 253.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 33218,
+      "color": "#3b82f6",
+      "endSec": 255.5,
+      "iconPath": "/i/003000/003474.png",
+      "label": "Qua",
+      "startSec": 254.5,
+      "tooltip": "Quadruple Technical Finish @ 254.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25790,
+      "color": "#3b82f6",
+      "endSec": 258.0,
+      "iconPath": "/i/003000/003480.png",
+      "label": "Til",
+      "startSec": 257.0,
+      "tooltip": "Tillana @ 257.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36985,
+      "color": "#3b82f6",
+      "endSec": 260.5,
+      "iconPath": "/i/003000/003485.png",
+      "label": "Dan",
+      "startSec": 259.5,
+      "tooltip": "Dance of the Dawn @ 259.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25792,
+      "color": "#3b82f6",
+      "endSec": 263.0,
+      "iconPath": "/i/003000/003482.png",
+      "label": "Sta",
+      "startSec": 262.0,
+      "tooltip": "Starfall Dance @ 262.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 265.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 264.5,
+      "tooltip": "Last Dance @ 264.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 265.1,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 264.5,
+      "tooltip": "Fan Dance @ 264.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 265.8,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 265.2,
+      "tooltip": "Fan Dance III @ 265.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 268.0,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 267.0,
+      "tooltip": "Fountainfall @ 267.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 270.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 269.5,
+      "tooltip": "Reverse Cascade @ 269.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36984,
+      "color": "#3b82f6",
+      "endSec": 273.0,
+      "iconPath": "/i/003000/003484.png",
+      "label": "Fin",
+      "startSec": 272.0,
+      "tooltip": "Finishing Move @ 272.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36983,
+      "color": "#3b82f6",
+      "endSec": 275.5,
+      "iconPath": "/i/003000/003483.png",
+      "label": "Las",
+      "startSec": 274.5,
+      "tooltip": "Last Dance @ 274.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 278.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 277.0,
+      "tooltip": "Saber Dance @ 277.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 280.5,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 279.5,
+      "tooltip": "Saber Dance @ 279.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 283.0,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 282.0,
+      "tooltip": "Cascade @ 282.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16007,
+      "color": "#f59e0b",
+      "endSec": 282.6,
+      "iconPath": "/i/003000/003462.png",
+      "label": "Fan",
+      "startSec": 282.0,
+      "tooltip": "Fan Dance @ 282.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16009,
+      "color": "#f59e0b",
+      "endSec": 283.3,
+      "iconPath": "/i/003000/003472.png",
+      "label": "Fan",
+      "startSec": 282.7,
+      "tooltip": "Fan Dance III @ 282.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 285.5,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 284.5,
+      "tooltip": "Reverse Cascade @ 284.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 288.0,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 287.0,
+      "tooltip": "Fountain @ 287.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15992,
+      "color": "#3b82f6",
+      "endSec": 290.5,
+      "iconPath": "/i/003000/003464.png",
+      "label": "Fou",
+      "startSec": 289.5,
+      "tooltip": "Fountainfall @ 289.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16005,
+      "color": "#3b82f6",
+      "endSec": 293.0,
+      "iconPath": "/i/003000/003476.png",
+      "label": "Sab",
+      "startSec": 292.0,
+      "tooltip": "Saber Dance @ 292.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15989,
+      "color": "#3b82f6",
+      "endSec": 295.5,
+      "iconPath": "/i/003000/003451.png",
+      "label": "Cas",
+      "startSec": 294.5,
+      "tooltip": "Cascade @ 294.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15991,
+      "color": "#3b82f6",
+      "endSec": 298.0,
+      "iconPath": "/i/003000/003460.png",
+      "label": "Rev",
+      "startSec": 297.0,
+      "tooltip": "Reverse Cascade @ 297.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15990,
+      "color": "#3b82f6",
+      "endSec": 300.5,
+      "iconPath": "/i/003000/003452.png",
+      "label": "Fou",
+      "startSec": 299.5,
+      "tooltip": "Fountain @ 299.5s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 0,
+          "abilityName": "",
+          "children": [],
+          "kind": "clip",
+          "lostPotency": 2424.74,
+          "summary": "GCD clipping: 12.9s (5.2 GCDs) from over-weaving",
+          "timeSec": 239.0
+        },
+        {
+          "abilityId": 0,
+          "abilityName": "",
+          "children": [],
+          "kind": "idle",
+          "lostPotency": 2180.38,
+          "summary": "Time spent idle: 11.6s (4.6 GCDs)",
+          "timeSec": 155.5
+        },
+        {
+          "abilityId": 0,
+          "abilityName": "Tincture",
+          "children": [],
+          "kind": "tincture",
+          "lostPotency": 1256.38,
+          "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+          "timeSec": 0.0
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 2029.34,
+      "summary": "Other \u2014 3 small located losses below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16192,
+      "abilityName": "Double Standard Finish",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #4: cast Emboite, canonical opens Double Standard Finish (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 33218,
+      "abilityName": "Quadruple Technical Finish",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #10: cast Starfall Dance, canonical opens Quadruple Technical Finish (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 36985,
+      "abilityName": "Dance of the Dawn",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #11: cast Last Dance, canonical opens Dance of the Dawn (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25790,
+      "abilityName": "Tillana",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #12: cast Fountainfall, canonical opens Tillana (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 16192,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003459.png",
+        "label": "Dou",
+        "startSec": 0.0,
+        "tooltip": "Double Standard Finish  (GCD)  @  0:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15998,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003473.png",
+        "label": "Tec",
+        "startSec": 0.0,
+        "tooltip": "Technical Step  (GCD)  @  0:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16011,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003471.png",
+        "label": "Dev",
+        "startSec": 0.0,
+        "tooltip": "Devilment  (oGCD)  @  0:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 1.5,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 1.0,
+        "tooltip": "Emboite  (GCD)  @  0:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16013,
+        "color": "#777777",
+        "endSec": 1.5,
+        "iconPath": "/i/003000/003475.png",
+        "label": "Flo",
+        "startSec": 1.0,
+        "tooltip": "Flourish  (oGCD)  @  0:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 2.5,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 2.0,
+        "tooltip": "Emboite  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25791,
+        "color": "#777777",
+        "endSec": 2.5,
+        "iconPath": "/i/003000/003481.png",
+        "label": "Fan",
+        "startSec": 2.0,
+        "tooltip": "Fan Dance IV  (oGCD)  @  0:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 3.5,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 3.0,
+        "tooltip": "Emboite  (GCD)  @  0:03",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 3.5,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 3.0,
+        "tooltip": "Fan Dance III  (oGCD)  @  0:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 4.5,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 4.0,
+        "tooltip": "Emboite  (GCD)  @  0:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 4.5,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 4.0,
+        "tooltip": "Fan Dance  (oGCD)  @  0:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 33218,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003474.png",
+        "label": "Qua",
+        "startSec": 5.0,
+        "tooltip": "Quadruple Technical Finish  (GCD)  @  0:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 5.0,
+        "tooltip": "Fan Dance III  (oGCD)  @  0:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25790,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/003000/003480.png",
+        "label": "Til",
+        "startSec": 7.5,
+        "tooltip": "Tillana  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36985,
+        "color": "#777777",
+        "endSec": 10.5,
+        "iconPath": "/i/003000/003485.png",
+        "label": "Dan",
+        "startSec": 10.0,
+        "tooltip": "Dance of the Dawn  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25792,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/003000/003482.png",
+        "label": "Sta",
+        "startSec": 12.5,
+        "tooltip": "Starfall Dance  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36983,
+        "color": "#777777",
+        "endSec": 15.5,
+        "iconPath": "/i/003000/003483.png",
+        "label": "Las",
+        "startSec": 15.0,
+        "tooltip": "Last Dance  (GCD)  @  0:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 18.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 17.5,
+        "tooltip": "Fountainfall  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 20.5,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 20.0,
+        "tooltip": "Reverse Cascade  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 20.5,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 20.0,
+        "tooltip": "Fan Dance  (oGCD)  @  0:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 21.2,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 20.7,
+        "tooltip": "Fan Dance III  (oGCD)  @  0:21",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 23.0,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 22.5,
+        "tooltip": "Saber Dance  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 25.5,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 25.0,
+        "tooltip": "Cascade  (GCD)  @  0:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 28.0,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 27.5,
+        "tooltip": "Reverse Cascade  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36984,
+        "color": "#777777",
+        "endSec": 30.5,
+        "iconPath": "/i/003000/003484.png",
+        "label": "Fin",
+        "startSec": 30.0,
+        "tooltip": "Finishing Move  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36983,
+        "color": "#777777",
+        "endSec": 33.0,
+        "iconPath": "/i/003000/003483.png",
+        "label": "Las",
+        "startSec": 32.5,
+        "tooltip": "Last Dance  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 35.0,
+        "tooltip": "Saber Dance  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 37.5,
+        "tooltip": "Fountain  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 40.0,
+        "tooltip": "Fountainfall  (GCD)  @  0:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 40.0,
+        "tooltip": "Fan Dance  (oGCD)  @  0:40",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 41.2,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 40.7,
+        "tooltip": "Fan Dance III  (oGCD)  @  0:41",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 43.0,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 42.5,
+        "tooltip": "Saber Dance  (GCD)  @  0:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 45.5,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 45.0,
+        "tooltip": "Cascade  (GCD)  @  0:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 48.0,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 47.5,
+        "tooltip": "Reverse Cascade  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 50.5,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 50.0,
+        "tooltip": "Fountain  (GCD)  @  0:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 53.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 52.5,
+        "tooltip": "Fountainfall  (GCD)  @  0:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 55.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 55.0,
+        "tooltip": "Saber Dance  (GCD)  @  0:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 58.0,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 57.5,
+        "tooltip": "Cascade  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 58.0,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 57.5,
+        "tooltip": "Fan Dance  (oGCD)  @  0:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 58.7,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 58.2,
+        "tooltip": "Fan Dance III  (oGCD)  @  0:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15997,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/003000/003454.png",
+        "label": "Sta",
+        "startSec": 60.0,
+        "tooltip": "Standard Step  (GCD)  @  1:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 61.5,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 61.0,
+        "tooltip": "Emboite  (GCD)  @  1:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16013,
+        "color": "#777777",
+        "endSec": 61.5,
+        "iconPath": "/i/003000/003475.png",
+        "label": "Flo",
+        "startSec": 61.0,
+        "tooltip": "Flourish  (oGCD)  @  1:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 62.5,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 62.0,
+        "tooltip": "Emboite  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25791,
+        "color": "#777777",
+        "endSec": 62.5,
+        "iconPath": "/i/003000/003481.png",
+        "label": "Fan",
+        "startSec": 62.0,
+        "tooltip": "Fan Dance IV  (oGCD)  @  1:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16192,
+        "color": "#777777",
+        "endSec": 63.5,
+        "iconPath": "/i/003000/003459.png",
+        "label": "Dou",
+        "startSec": 63.0,
+        "tooltip": "Double Standard Finish  (GCD)  @  1:03",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 63.5,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 63.0,
+        "tooltip": "Fan Dance III  (oGCD)  @  1:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36983,
+        "color": "#777777",
+        "endSec": 66.0,
+        "iconPath": "/i/003000/003483.png",
+        "label": "Las",
+        "startSec": 65.5,
+        "tooltip": "Last Dance  (GCD)  @  1:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 68.5,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 68.0,
+        "tooltip": "Fountainfall  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 71.0,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 70.5,
+        "tooltip": "Reverse Cascade  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 73.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 73.0,
+        "tooltip": "Saber Dance  (GCD)  @  1:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 76.0,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 75.5,
+        "tooltip": "Saber Dance  (GCD)  @  1:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 76.0,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 75.5,
+        "tooltip": "Fan Dance  (oGCD)  @  1:16",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 76.7,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 76.2,
+        "tooltip": "Fan Dance III  (oGCD)  @  1:16",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 78.5,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 78.0,
+        "tooltip": "Fountain  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 81.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 80.5,
+        "tooltip": "Fountainfall  (GCD)  @  1:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 83.5,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 83.0,
+        "tooltip": "Cascade  (GCD)  @  1:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 86.0,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 85.5,
+        "tooltip": "Reverse Cascade  (GCD)  @  1:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 88.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 88.0,
+        "tooltip": "Saber Dance  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36984,
+        "color": "#777777",
+        "endSec": 91.0,
+        "iconPath": "/i/003000/003484.png",
+        "label": "Fin",
+        "startSec": 90.5,
+        "tooltip": "Finishing Move  (GCD)  @  1:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36983,
+        "color": "#777777",
+        "endSec": 93.5,
+        "iconPath": "/i/003000/003483.png",
+        "label": "Las",
+        "startSec": 93.0,
+        "tooltip": "Last Dance  (GCD)  @  1:33",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 96.0,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 95.5,
+        "tooltip": "Fountain  (GCD)  @  1:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 96.0,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 95.5,
+        "tooltip": "Fan Dance  (oGCD)  @  1:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 96.7,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 96.2,
+        "tooltip": "Fan Dance III  (oGCD)  @  1:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 98.5,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 98.0,
+        "tooltip": "Fountainfall  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 101.0,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 100.5,
+        "tooltip": "Saber Dance  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 103.5,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 103.0,
+        "tooltip": "Cascade  (GCD)  @  1:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 106.0,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 105.5,
+        "tooltip": "Reverse Cascade  (GCD)  @  1:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 108.5,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 108.0,
+        "tooltip": "Fountain  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 111.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 110.5,
+        "tooltip": "Fountainfall  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 113.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 113.0,
+        "tooltip": "Saber Dance  (GCD)  @  1:53",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 113.5,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 113.0,
+        "tooltip": "Fan Dance  (oGCD)  @  1:53",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 114.2,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 113.7,
+        "tooltip": "Fan Dance III  (oGCD)  @  1:54",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 116.0,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 115.5,
+        "tooltip": "Cascade  (GCD)  @  1:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 118.5,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 118.0,
+        "tooltip": "Reverse Cascade  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15998,
+        "color": "#777777",
+        "endSec": 121.0,
+        "iconPath": "/i/003000/003473.png",
+        "label": "Tec",
+        "startSec": 120.5,
+        "tooltip": "Technical Step  (GCD)  @  2:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16011,
+        "color": "#777777",
+        "endSec": 121.0,
+        "iconPath": "/i/003000/003471.png",
+        "label": "Dev",
+        "startSec": 120.5,
+        "tooltip": "Devilment  (oGCD)  @  2:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 122.0,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 121.5,
+        "tooltip": "Emboite  (GCD)  @  2:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16013,
+        "color": "#777777",
+        "endSec": 122.0,
+        "iconPath": "/i/003000/003475.png",
+        "label": "Flo",
+        "startSec": 121.5,
+        "tooltip": "Flourish  (oGCD)  @  2:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 122.5,
+        "tooltip": "Emboite  (GCD)  @  2:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25791,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/003000/003481.png",
+        "label": "Fan",
+        "startSec": 122.5,
+        "tooltip": "Fan Dance IV  (oGCD)  @  2:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 124.0,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 123.5,
+        "tooltip": "Emboite  (GCD)  @  2:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 124.0,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 123.5,
+        "tooltip": "Fan Dance III  (oGCD)  @  2:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 125.0,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 124.5,
+        "tooltip": "Emboite  (GCD)  @  2:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 33218,
+        "color": "#777777",
+        "endSec": 126.0,
+        "iconPath": "/i/003000/003474.png",
+        "label": "Qua",
+        "startSec": 125.5,
+        "tooltip": "Quadruple Technical Finish  (GCD)  @  2:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36984,
+        "color": "#777777",
+        "endSec": 128.5,
+        "iconPath": "/i/003000/003484.png",
+        "label": "Fin",
+        "startSec": 128.0,
+        "tooltip": "Finishing Move  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25790,
+        "color": "#777777",
+        "endSec": 131.0,
+        "iconPath": "/i/003000/003480.png",
+        "label": "Til",
+        "startSec": 130.5,
+        "tooltip": "Tillana  (GCD)  @  2:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36985,
+        "color": "#777777",
+        "endSec": 133.5,
+        "iconPath": "/i/003000/003485.png",
+        "label": "Dan",
+        "startSec": 133.0,
+        "tooltip": "Dance of the Dawn  (GCD)  @  2:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 133.5,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 133.0,
+        "tooltip": "Fan Dance  (oGCD)  @  2:13",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 134.2,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 133.7,
+        "tooltip": "Fan Dance III  (oGCD)  @  2:14",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25792,
+        "color": "#777777",
+        "endSec": 136.0,
+        "iconPath": "/i/003000/003482.png",
+        "label": "Sta",
+        "startSec": 135.5,
+        "tooltip": "Starfall Dance  (GCD)  @  2:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36983,
+        "color": "#777777",
+        "endSec": 138.5,
+        "iconPath": "/i/003000/003483.png",
+        "label": "Las",
+        "startSec": 138.0,
+        "tooltip": "Last Dance  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 141.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 140.5,
+        "tooltip": "Fountainfall  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 143.5,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 143.0,
+        "tooltip": "Reverse Cascade  (GCD)  @  2:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 146.0,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 145.5,
+        "tooltip": "Saber Dance  (GCD)  @  2:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 148.5,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 148.0,
+        "tooltip": "Fountain  (GCD)  @  2:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 151.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 150.5,
+        "tooltip": "Fountainfall  (GCD)  @  2:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 151.0,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 150.5,
+        "tooltip": "Fan Dance  (oGCD)  @  2:30",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 151.7,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 151.2,
+        "tooltip": "Fan Dance III  (oGCD)  @  2:31",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 153.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 153.0,
+        "tooltip": "Saber Dance  (GCD)  @  2:33",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 156.0,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 155.5,
+        "tooltip": "Cascade  (GCD)  @  2:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15997,
+        "color": "#777777",
+        "endSec": 158.5,
+        "iconPath": "/i/003000/003454.png",
+        "label": "Sta",
+        "startSec": 158.0,
+        "tooltip": "Standard Step  (GCD)  @  2:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 159.5,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 159.0,
+        "tooltip": "Emboite  (GCD)  @  2:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 160.5,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 160.0,
+        "tooltip": "Emboite  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16192,
+        "color": "#777777",
+        "endSec": 161.5,
+        "iconPath": "/i/003000/003459.png",
+        "label": "Dou",
+        "startSec": 161.0,
+        "tooltip": "Double Standard Finish  (GCD)  @  2:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36983,
+        "color": "#777777",
+        "endSec": 164.0,
+        "iconPath": "/i/003000/003483.png",
+        "label": "Las",
+        "startSec": 163.5,
+        "tooltip": "Last Dance  (GCD)  @  2:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 166.5,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 166.0,
+        "tooltip": "Reverse Cascade  (GCD)  @  2:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 169.0,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 168.5,
+        "tooltip": "Saber Dance  (GCD)  @  2:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 171.5,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 171.0,
+        "tooltip": "Fountain  (GCD)  @  2:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 171.5,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 171.0,
+        "tooltip": "Fan Dance  (oGCD)  @  2:51",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 172.2,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 171.7,
+        "tooltip": "Fan Dance III  (oGCD)  @  2:52",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 174.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 173.5,
+        "tooltip": "Fountainfall  (GCD)  @  2:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 176.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 176.0,
+        "tooltip": "Saber Dance  (GCD)  @  2:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 179.0,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 178.5,
+        "tooltip": "Cascade  (GCD)  @  2:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 181.5,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 181.0,
+        "tooltip": "Reverse Cascade  (GCD)  @  3:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 184.0,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 183.5,
+        "tooltip": "Fountain  (GCD)  @  3:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16013,
+        "color": "#777777",
+        "endSec": 184.0,
+        "iconPath": "/i/003000/003475.png",
+        "label": "Flo",
+        "startSec": 183.5,
+        "tooltip": "Flourish  (oGCD)  @  3:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25791,
+        "color": "#777777",
+        "endSec": 184.7,
+        "iconPath": "/i/003000/003481.png",
+        "label": "Fan",
+        "startSec": 184.2,
+        "tooltip": "Fan Dance IV  (oGCD)  @  3:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 186.5,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 186.0,
+        "tooltip": "Fountainfall  (GCD)  @  3:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 186.5,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 186.0,
+        "tooltip": "Fan Dance III  (oGCD)  @  3:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36984,
+        "color": "#777777",
+        "endSec": 189.0,
+        "iconPath": "/i/003000/003484.png",
+        "label": "Fin",
+        "startSec": 188.5,
+        "tooltip": "Finishing Move  (GCD)  @  3:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 189.0,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 188.5,
+        "tooltip": "Fan Dance  (oGCD)  @  3:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 189.7,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 189.2,
+        "tooltip": "Fan Dance III  (oGCD)  @  3:09",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36983,
+        "color": "#777777",
+        "endSec": 191.5,
+        "iconPath": "/i/003000/003483.png",
+        "label": "Las",
+        "startSec": 191.0,
+        "tooltip": "Last Dance  (GCD)  @  3:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 194.0,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 193.5,
+        "tooltip": "Reverse Cascade  (GCD)  @  3:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 196.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 196.0,
+        "tooltip": "Saber Dance  (GCD)  @  3:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 199.0,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 198.5,
+        "tooltip": "Cascade  (GCD)  @  3:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 201.5,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 201.0,
+        "tooltip": "Reverse Cascade  (GCD)  @  3:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 204.0,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 203.5,
+        "tooltip": "Saber Dance  (GCD)  @  3:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 206.5,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 206.0,
+        "tooltip": "Fountain  (GCD)  @  3:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 209.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 208.5,
+        "tooltip": "Fountainfall  (GCD)  @  3:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 209.0,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 208.5,
+        "tooltip": "Fan Dance  (oGCD)  @  3:28",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 209.7,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 209.2,
+        "tooltip": "Fan Dance III  (oGCD)  @  3:29",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 211.5,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 211.0,
+        "tooltip": "Cascade  (GCD)  @  3:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 214.0,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 213.5,
+        "tooltip": "Reverse Cascade  (GCD)  @  3:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 216.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 216.0,
+        "tooltip": "Saber Dance  (GCD)  @  3:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15997,
+        "color": "#777777",
+        "endSec": 219.0,
+        "iconPath": "/i/003000/003454.png",
+        "label": "Sta",
+        "startSec": 218.5,
+        "tooltip": "Standard Step  (GCD)  @  3:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 220.0,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 219.5,
+        "tooltip": "Emboite  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 221.0,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 220.5,
+        "tooltip": "Emboite  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16192,
+        "color": "#777777",
+        "endSec": 222.0,
+        "iconPath": "/i/003000/003459.png",
+        "label": "Dou",
+        "startSec": 221.5,
+        "tooltip": "Double Standard Finish  (GCD)  @  3:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36983,
+        "color": "#777777",
+        "endSec": 224.5,
+        "iconPath": "/i/003000/003483.png",
+        "label": "Las",
+        "startSec": 224.0,
+        "tooltip": "Last Dance  (GCD)  @  3:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 227.0,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 226.5,
+        "tooltip": "Saber Dance  (GCD)  @  3:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 227.0,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 226.5,
+        "tooltip": "Fan Dance  (oGCD)  @  3:46",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 227.7,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 227.2,
+        "tooltip": "Fan Dance III  (oGCD)  @  3:47",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 229.5,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 229.0,
+        "tooltip": "Fountain  (GCD)  @  3:49",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 232.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 231.5,
+        "tooltip": "Fountainfall  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 234.5,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 234.0,
+        "tooltip": "Cascade  (GCD)  @  3:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 237.0,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 236.5,
+        "tooltip": "Reverse Cascade  (GCD)  @  3:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 239.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 239.0,
+        "tooltip": "Saber Dance  (GCD)  @  3:59",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15998,
+        "color": "#777777",
+        "endSec": 242.0,
+        "iconPath": "/i/003000/003473.png",
+        "label": "Tec",
+        "startSec": 241.5,
+        "tooltip": "Technical Step  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16011,
+        "color": "#777777",
+        "endSec": 242.0,
+        "iconPath": "/i/003000/003471.png",
+        "label": "Dev",
+        "startSec": 241.5,
+        "tooltip": "Devilment  (oGCD)  @  4:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 243.0,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 242.5,
+        "tooltip": "Emboite  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 244.0,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 243.5,
+        "tooltip": "Emboite  (GCD)  @  4:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16013,
+        "color": "#777777",
+        "endSec": 244.0,
+        "iconPath": "/i/003000/003475.png",
+        "label": "Flo",
+        "startSec": 243.5,
+        "tooltip": "Flourish  (oGCD)  @  4:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 245.0,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 244.5,
+        "tooltip": "Emboite  (GCD)  @  4:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25791,
+        "color": "#777777",
+        "endSec": 245.0,
+        "iconPath": "/i/003000/003481.png",
+        "label": "Fan",
+        "startSec": 244.5,
+        "tooltip": "Fan Dance IV  (oGCD)  @  4:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 246.0,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 245.5,
+        "tooltip": "Emboite  (GCD)  @  4:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 246.0,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 245.5,
+        "tooltip": "Fan Dance III  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 33218,
+        "color": "#777777",
+        "endSec": 247.0,
+        "iconPath": "/i/003000/003474.png",
+        "label": "Qua",
+        "startSec": 246.5,
+        "tooltip": "Quadruple Technical Finish  (GCD)  @  4:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 247.0,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 246.5,
+        "tooltip": "Fan Dance  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 247.7,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 247.2,
+        "tooltip": "Fan Dance III  (oGCD)  @  4:07",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36984,
+        "color": "#777777",
+        "endSec": 249.5,
+        "iconPath": "/i/003000/003484.png",
+        "label": "Fin",
+        "startSec": 249.0,
+        "tooltip": "Finishing Move  (GCD)  @  4:09",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25790,
+        "color": "#777777",
+        "endSec": 252.0,
+        "iconPath": "/i/003000/003480.png",
+        "label": "Til",
+        "startSec": 251.5,
+        "tooltip": "Tillana  (GCD)  @  4:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36985,
+        "color": "#777777",
+        "endSec": 254.5,
+        "iconPath": "/i/003000/003485.png",
+        "label": "Dan",
+        "startSec": 254.0,
+        "tooltip": "Dance of the Dawn  (GCD)  @  4:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25792,
+        "color": "#777777",
+        "endSec": 257.0,
+        "iconPath": "/i/003000/003482.png",
+        "label": "Sta",
+        "startSec": 256.5,
+        "tooltip": "Starfall Dance  (GCD)  @  4:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36983,
+        "color": "#777777",
+        "endSec": 259.5,
+        "iconPath": "/i/003000/003483.png",
+        "label": "Las",
+        "startSec": 259.0,
+        "tooltip": "Last Dance  (GCD)  @  4:19",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 262.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 261.5,
+        "tooltip": "Fountainfall  (GCD)  @  4:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 264.5,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 264.0,
+        "tooltip": "Reverse Cascade  (GCD)  @  4:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 264.5,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 264.0,
+        "tooltip": "Fan Dance  (oGCD)  @  4:24",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 265.2,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 264.7,
+        "tooltip": "Fan Dance III  (oGCD)  @  4:25",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 267.0,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 266.5,
+        "tooltip": "Saber Dance  (GCD)  @  4:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 269.5,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 269.0,
+        "tooltip": "Fountain  (GCD)  @  4:29",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 272.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 271.5,
+        "tooltip": "Fountainfall  (GCD)  @  4:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 274.5,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 274.0,
+        "tooltip": "Cascade  (GCD)  @  4:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 277.0,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 276.5,
+        "tooltip": "Reverse Cascade  (GCD)  @  4:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15997,
+        "color": "#777777",
+        "endSec": 279.5,
+        "iconPath": "/i/003000/003454.png",
+        "label": "Sta",
+        "startSec": 279.0,
+        "tooltip": "Standard Step  (GCD)  @  4:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 280.5,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 280.0,
+        "tooltip": "Emboite  (GCD)  @  4:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15999,
+        "color": "#777777",
+        "endSec": 281.5,
+        "iconPath": "/i/003000/003455.png",
+        "label": "Emb",
+        "startSec": 281.0,
+        "tooltip": "Emboite  (GCD)  @  4:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16192,
+        "color": "#777777",
+        "endSec": 282.5,
+        "iconPath": "/i/003000/003459.png",
+        "label": "Dou",
+        "startSec": 282.0,
+        "tooltip": "Double Standard Finish  (GCD)  @  4:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16007,
+        "color": "#777777",
+        "endSec": 282.5,
+        "iconPath": "/i/003000/003462.png",
+        "label": "Fan",
+        "startSec": 282.0,
+        "tooltip": "Fan Dance  (oGCD)  @  4:42",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16009,
+        "color": "#777777",
+        "endSec": 283.2,
+        "iconPath": "/i/003000/003472.png",
+        "label": "Fan",
+        "startSec": 282.7,
+        "tooltip": "Fan Dance III  (oGCD)  @  4:43",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36983,
+        "color": "#777777",
+        "endSec": 285.0,
+        "iconPath": "/i/003000/003483.png",
+        "label": "Las",
+        "startSec": 284.5,
+        "tooltip": "Last Dance  (GCD)  @  4:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 287.5,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 287.0,
+        "tooltip": "Saber Dance  (GCD)  @  4:47",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16005,
+        "color": "#777777",
+        "endSec": 290.0,
+        "iconPath": "/i/003000/003476.png",
+        "label": "Sab",
+        "startSec": 289.5,
+        "tooltip": "Saber Dance  (GCD)  @  4:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15990,
+        "color": "#777777",
+        "endSec": 292.5,
+        "iconPath": "/i/003000/003452.png",
+        "label": "Fou",
+        "startSec": 292.0,
+        "tooltip": "Fountain  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15992,
+        "color": "#777777",
+        "endSec": 295.0,
+        "iconPath": "/i/003000/003464.png",
+        "label": "Fou",
+        "startSec": 294.5,
+        "tooltip": "Fountainfall  (GCD)  @  4:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15989,
+        "color": "#777777",
+        "endSec": 297.5,
+        "iconPath": "/i/003000/003451.png",
+        "label": "Cas",
+        "startSec": 297.0,
+        "tooltip": "Cascade  (GCD)  @  4:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15991,
+        "color": "#777777",
+        "endSec": 300.0,
+        "iconPath": "/i/003000/003460.png",
+        "label": "Rev",
+        "startSec": 299.5,
+        "tooltip": "Reverse Cascade  (GCD)  @  5:00",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 72449.03,
+    "efficiencyPct": 97.28,
+    "fightDurationSec": 300.0,
+    "idealizedPotency": 74478.37,
+    "killTimeSec": 300,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

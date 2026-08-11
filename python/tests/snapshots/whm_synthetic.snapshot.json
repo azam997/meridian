@@ -1,0 +1,3805 @@
+{
+  "abilityMeta": {
+    "136": {
+      "iconPath": "/i/002000/002626.png",
+      "id": 136,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Presence of Mind"
+    },
+    "16531": {
+      "iconPath": "/i/002000/002640.png",
+      "id": 16531,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Afflatus Solace"
+    },
+    "16532": {
+      "iconPath": "/i/002000/002641.png",
+      "id": 16532,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Dia"
+    },
+    "16535": {
+      "iconPath": "/i/002000/002644.png",
+      "id": 16535,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Afflatus Misery"
+    },
+    "25859": {
+      "iconPath": "/i/002000/002646.png",
+      "id": 25859,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Glare III"
+    },
+    "3571": {
+      "iconPath": "/i/002000/002634.png",
+      "id": 3571,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Assize"
+    },
+    "37009": {
+      "iconPath": "/i/002000/002126.png",
+      "id": 37009,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Glare IV"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "136": 2,
+        "16531": 15,
+        "16532": 13,
+        "16535": 5,
+        "25859": 110,
+        "3571": 1,
+        "37009": 6
+      },
+      "totalCasts": 152
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": []
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 376.65,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "fallback_heuristic"
+    },
+    "Drift": {
+      "downtimeSource": "fallback_heuristic",
+      "downtimeWindows": [],
+      "fightDurationSec": 360.0,
+      "findings": [
+        {
+          "abilityId": 3571,
+          "abilityName": "Assize",
+          "cappedSeconds": 320.0,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 8.0,
+          "lostPotency": 3200.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 136,
+          "abilityName": "Presence of Mind",
+          "cappedSeconds": 120.0,
+          "casts": 2,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 1.0,
+          "lostPotency": 1400.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 16532,
+          "expectedId": 25859,
+          "lostPotency": 265.0,
+          "position": 1,
+          "summary": "Opener slot #1: cast Dia (85p), canonical uses Glare III (350p) \u2014 -265p"
+        },
+        {
+          "actualId": 25859,
+          "expectedId": 16532,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Glare III, canonical uses Dia (same potency)"
+        },
+        {
+          "actualId": 37009,
+          "expectedId": 25859,
+          "lostPotency": 0.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Glare IV, canonical uses Glare III (same potency)"
+        },
+        {
+          "actualId": 37009,
+          "expectedId": 25859,
+          "lostPotency": 0.0,
+          "position": 4,
+          "summary": "Opener slot #4: cast Glare IV, canonical uses Glare III (same potency)"
+        },
+        {
+          "actualId": 37009,
+          "expectedId": 25859,
+          "lostPotency": 0.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Glare IV, canonical uses Glare III (same potency)"
+        },
+        {
+          "actualId": 25859,
+          "expectedId": 37009,
+          "lostPotency": 290.0,
+          "position": 7,
+          "summary": "Opener slot #7: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p"
+        },
+        {
+          "actualId": 25859,
+          "expectedId": 37009,
+          "lostPotency": 290.0,
+          "position": 8,
+          "summary": "Opener slot #8: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p"
+        },
+        {
+          "actualId": 25859,
+          "expectedId": 37009,
+          "lostPotency": 290.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p"
+        },
+        {
+          "actualId": 25859,
+          "expectedId": 16535,
+          "lostPotency": 1050.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Glare III (350p), canonical uses Afflatus Misery (1400p) \u2014 -1050p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Scoring": {
+      "deliveredObserved": 61144.17,
+      "deliveredPotency": 61144.17,
+      "downtimeSource": "fallback_heuristic",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "136": 1242.31
+      },
+      "entryBlood": 0,
+      "entryLilies": 0,
+      "fightDurationSec": 360.0,
+      "idealizedLenient": 67615.84,
+      "idealizedMaster": 66426.88,
+      "idealizedObserved": 66426.88,
+      "idealizedPotency": 67615.84,
+      "idealizedStrict": 67615.84,
+      "masterBuffIntervals": [],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.5,
+        "payload": null
+      },
+      "tinctureLoss": 1042.01,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 152"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Glare III",
+          110,
+          0
+        ],
+        [
+          "Afflatus Solace",
+          15,
+          0
+        ],
+        [
+          "Dia",
+          13,
+          0
+        ],
+        [
+          "Glare IV",
+          6,
+          0
+        ],
+        [
+          "Afflatus Misery",
+          5,
+          0
+        ],
+        [
+          "Presence of Mind",
+          2,
+          0
+        ],
+        [
+          "Assize",
+          1,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No raid-buff providers in this party \u2014 burst alignment N/A."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 377p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "[drift] Assize: 1 casts, drifted 320.0s \u2248 -3200p (ref avg -0p)",
+        "[drift] Presence of Mind: 2 casts, drifted 120.0s \u2248 -1400p (ref avg -0p)"
+      ],
+      "summaryLines": [
+        "Total drift cost: -4600p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Assize",
+          1,
+          320.0,
+          3200,
+          0,
+          "+3200"
+        ],
+        [
+          "Presence of Mind",
+          2,
+          120.0,
+          1400,
+          0,
+          "+1400"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #1: cast Dia (85p), canonical uses Glare III (350p) \u2014 -265p",
+        "[opener] Opener slot #7: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p",
+        "[opener] Opener slot #8: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p",
+        "[opener] Opener slot #11: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p",
+        "[opener] Opener slot #12: cast Glare III (350p), canonical uses Afflatus Misery (1400p) \u2014 -1050p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 2185p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          1,
+          "Glare III",
+          "Dia",
+          265
+        ],
+        [
+          2,
+          "Dia",
+          "Glare III",
+          0
+        ],
+        [
+          3,
+          "Glare III",
+          "Glare IV",
+          0
+        ],
+        [
+          4,
+          "Glare III",
+          "Glare IV",
+          0
+        ],
+        [
+          5,
+          "Glare III",
+          "Glare IV",
+          0
+        ],
+        [
+          7,
+          "Glare IV",
+          "Glare III",
+          290
+        ],
+        [
+          8,
+          "Glare IV",
+          "Glare III",
+          290
+        ],
+        [
+          11,
+          "Glare IV",
+          "Glare III",
+          290
+        ],
+        [
+          12,
+          "Afflatus Misery",
+          "Glare III",
+          1050
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 61144.17,
+    "downtimeSource": "fallback_heuristic",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 90.43,
+    "efficiencyPctLenient": 90.43,
+    "efficiencyPctMaster": 92.05,
+    "efficiencyPctObserved": 92.05,
+    "efficiencyPctStrict": 90.43,
+    "idealizedMaster": 66426.88,
+    "idealizedObserved": 66426.88,
+    "killTimeSec": 360,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "WhiteMage"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "rankSuppressed": true,
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 67615.84,
+    "yourIdealizedPotencyLenient": 67615.84,
+    "yourPotency": 61144.17
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 31.0,
+      "multiplier": 1.08,
+      "startSec": 1.0
+    },
+    {
+      "endSec": 313.0,
+      "multiplier": 1.08,
+      "startSec": 283.0
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": -0.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": -1.5,
+      "tooltip": "Glare III @ -1.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 2.0,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 1.0,
+      "tooltip": "Dia @ 1.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 136,
+      "color": "#f59e0b",
+      "endSec": 1.6,
+      "iconPath": "/i/002000/002626.png",
+      "label": "Pre",
+      "startSec": 1.0,
+      "tooltip": "Presence of Mind @ 1.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3571,
+      "color": "#f59e0b",
+      "endSec": 2.3,
+      "iconPath": "/i/002000/002634.png",
+      "label": "Ass",
+      "startSec": 1.7,
+      "tooltip": "Assize @ 1.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37009,
+      "color": "#3b82f6",
+      "endSec": 4.5,
+      "iconPath": "/i/002000/002126.png",
+      "label": "Gla",
+      "startSec": 3.5,
+      "tooltip": "Glare IV @ 3.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37009,
+      "color": "#3b82f6",
+      "endSec": 6.5,
+      "iconPath": "/i/002000/002126.png",
+      "label": "Gla",
+      "startSec": 5.5,
+      "tooltip": "Glare IV @ 5.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37009,
+      "color": "#3b82f6",
+      "endSec": 8.5,
+      "iconPath": "/i/002000/002126.png",
+      "label": "Gla",
+      "startSec": 7.5,
+      "tooltip": "Glare IV @ 7.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 10.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 9.5,
+      "tooltip": "Glare III @ 9.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 12.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 11.5,
+      "tooltip": "Glare III @ 11.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 14.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 13.5,
+      "tooltip": "Glare III @ 13.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 16.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 15.5,
+      "tooltip": "Glare III @ 15.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 18.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 17.5,
+      "tooltip": "Glare III @ 17.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 21.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 20.0,
+      "tooltip": "Glare III @ 20.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 23.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 22.5,
+      "tooltip": "Glare III @ 22.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 26.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 25.0,
+      "tooltip": "Glare III @ 25.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 28.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 27.5,
+      "tooltip": "Glare III @ 27.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 31.0,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 30.0,
+      "tooltip": "Dia @ 30.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 33.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 32.5,
+      "tooltip": "Glare III @ 32.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 36.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 35.0,
+      "tooltip": "Glare III @ 35.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 38.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 37.5,
+      "tooltip": "Glare III @ 37.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 41.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 40.0,
+      "tooltip": "Glare III @ 40.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 43.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 42.5,
+      "tooltip": "Glare III @ 42.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3571,
+      "color": "#f59e0b",
+      "endSec": 43.1,
+      "iconPath": "/i/002000/002634.png",
+      "label": "Ass",
+      "startSec": 42.5,
+      "tooltip": "Assize @ 42.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 46.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 45.0,
+      "tooltip": "Glare III @ 45.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 48.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 47.5,
+      "tooltip": "Glare III @ 47.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 51.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 50.0,
+      "tooltip": "Glare III @ 50.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 53.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 52.5,
+      "tooltip": "Glare III @ 52.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 56.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 55.0,
+      "tooltip": "Glare III @ 55.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 58.5,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 57.5,
+      "tooltip": "Dia @ 57.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 61.0,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 60.0,
+      "tooltip": "Afflatus Solace @ 60.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 63.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 62.5,
+      "tooltip": "Glare III @ 62.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 66.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 65.0,
+      "tooltip": "Glare III @ 65.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 68.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 67.5,
+      "tooltip": "Glare III @ 67.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 71.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 70.0,
+      "tooltip": "Glare III @ 70.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 73.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 72.5,
+      "tooltip": "Glare III @ 72.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 76.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 75.0,
+      "tooltip": "Glare III @ 75.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 78.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 77.5,
+      "tooltip": "Glare III @ 77.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 81.0,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 80.0,
+      "tooltip": "Afflatus Solace @ 80.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 83.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 82.5,
+      "tooltip": "Glare III @ 82.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3571,
+      "color": "#f59e0b",
+      "endSec": 83.1,
+      "iconPath": "/i/002000/002634.png",
+      "label": "Ass",
+      "startSec": 82.5,
+      "tooltip": "Assize @ 82.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 86.0,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 85.0,
+      "tooltip": "Dia @ 85.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 88.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 87.5,
+      "tooltip": "Glare III @ 87.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 91.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 90.0,
+      "tooltip": "Glare III @ 90.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 93.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 92.5,
+      "tooltip": "Glare III @ 92.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 96.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 95.0,
+      "tooltip": "Glare III @ 95.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 98.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 97.5,
+      "tooltip": "Glare III @ 97.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 101.0,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 100.0,
+      "tooltip": "Afflatus Solace @ 100.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16535,
+      "color": "#3b82f6",
+      "endSec": 103.5,
+      "iconPath": "/i/002000/002644.png",
+      "label": "Aff",
+      "startSec": 102.5,
+      "tooltip": "Afflatus Misery @ 102.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 106.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 105.0,
+      "tooltip": "Glare III @ 105.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 108.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 107.5,
+      "tooltip": "Glare III @ 107.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 111.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 110.0,
+      "tooltip": "Glare III @ 110.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 113.5,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 112.5,
+      "tooltip": "Dia @ 112.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 116.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 115.0,
+      "tooltip": "Glare III @ 115.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 118.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 117.5,
+      "tooltip": "Glare III @ 117.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 121.0,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 120.0,
+      "tooltip": "Afflatus Solace @ 120.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 123.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 122.5,
+      "tooltip": "Glare III @ 122.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 136,
+      "color": "#f59e0b",
+      "endSec": 123.1,
+      "iconPath": "/i/002000/002626.png",
+      "label": "Pre",
+      "startSec": 122.5,
+      "tooltip": "Presence of Mind @ 122.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37009,
+      "color": "#3b82f6",
+      "endSec": 126.0,
+      "iconPath": "/i/002000/002126.png",
+      "label": "Gla",
+      "startSec": 125.0,
+      "tooltip": "Glare IV @ 125.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3571,
+      "color": "#f59e0b",
+      "endSec": 125.6,
+      "iconPath": "/i/002000/002634.png",
+      "label": "Ass",
+      "startSec": 125.0,
+      "tooltip": "Assize @ 125.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37009,
+      "color": "#3b82f6",
+      "endSec": 128.0,
+      "iconPath": "/i/002000/002126.png",
+      "label": "Gla",
+      "startSec": 127.0,
+      "tooltip": "Glare IV @ 127.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37009,
+      "color": "#3b82f6",
+      "endSec": 130.0,
+      "iconPath": "/i/002000/002126.png",
+      "label": "Gla",
+      "startSec": 129.0,
+      "tooltip": "Glare IV @ 129.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 132.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 131.0,
+      "tooltip": "Glare III @ 131.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 134.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 133.0,
+      "tooltip": "Glare III @ 133.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 136.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 135.0,
+      "tooltip": "Glare III @ 135.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 138.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 137.0,
+      "tooltip": "Glare III @ 137.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 140.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 139.0,
+      "tooltip": "Glare III @ 139.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 142.5,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 141.5,
+      "tooltip": "Dia @ 141.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 145.0,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 144.0,
+      "tooltip": "Afflatus Solace @ 144.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 147.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 146.5,
+      "tooltip": "Glare III @ 146.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 150.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 149.0,
+      "tooltip": "Glare III @ 149.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 152.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 151.5,
+      "tooltip": "Glare III @ 151.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 155.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 154.0,
+      "tooltip": "Glare III @ 154.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 157.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 156.5,
+      "tooltip": "Glare III @ 156.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 160.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 159.0,
+      "tooltip": "Glare III @ 159.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 162.5,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 161.5,
+      "tooltip": "Afflatus Solace @ 161.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16535,
+      "color": "#3b82f6",
+      "endSec": 165.0,
+      "iconPath": "/i/002000/002644.png",
+      "label": "Aff",
+      "startSec": 164.0,
+      "tooltip": "Afflatus Misery @ 164.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 167.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 166.5,
+      "tooltip": "Glare III @ 166.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3571,
+      "color": "#f59e0b",
+      "endSec": 167.1,
+      "iconPath": "/i/002000/002634.png",
+      "label": "Ass",
+      "startSec": 166.5,
+      "tooltip": "Assize @ 166.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 170.0,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 169.0,
+      "tooltip": "Dia @ 169.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 172.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 171.5,
+      "tooltip": "Glare III @ 171.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 175.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 174.0,
+      "tooltip": "Glare III @ 174.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 177.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 176.5,
+      "tooltip": "Glare III @ 176.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 180.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 179.0,
+      "tooltip": "Glare III @ 179.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 182.5,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 181.5,
+      "tooltip": "Afflatus Solace @ 181.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 185.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 184.0,
+      "tooltip": "Glare III @ 184.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 187.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 186.5,
+      "tooltip": "Glare III @ 186.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 190.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 189.0,
+      "tooltip": "Glare III @ 189.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 192.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 191.5,
+      "tooltip": "Glare III @ 191.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 195.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 194.0,
+      "tooltip": "Glare III @ 194.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 197.5,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 196.5,
+      "tooltip": "Dia @ 196.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 200.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 199.0,
+      "tooltip": "Glare III @ 199.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 202.5,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 201.5,
+      "tooltip": "Afflatus Solace @ 201.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 205.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 204.0,
+      "tooltip": "Glare III @ 204.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 207.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 206.5,
+      "tooltip": "Glare III @ 206.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3571,
+      "color": "#f59e0b",
+      "endSec": 207.1,
+      "iconPath": "/i/002000/002634.png",
+      "label": "Ass",
+      "startSec": 206.5,
+      "tooltip": "Assize @ 206.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 210.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 209.0,
+      "tooltip": "Glare III @ 209.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 212.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 211.5,
+      "tooltip": "Glare III @ 211.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 215.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 214.0,
+      "tooltip": "Glare III @ 214.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 217.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 216.5,
+      "tooltip": "Glare III @ 216.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 220.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 219.0,
+      "tooltip": "Glare III @ 219.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 222.5,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 221.5,
+      "tooltip": "Afflatus Solace @ 221.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 225.0,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 224.0,
+      "tooltip": "Dia @ 224.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16535,
+      "color": "#3b82f6",
+      "endSec": 227.5,
+      "iconPath": "/i/002000/002644.png",
+      "label": "Aff",
+      "startSec": 226.5,
+      "tooltip": "Afflatus Misery @ 226.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 230.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 229.0,
+      "tooltip": "Glare III @ 229.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 232.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 231.5,
+      "tooltip": "Glare III @ 231.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 235.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 234.0,
+      "tooltip": "Glare III @ 234.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 237.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 236.5,
+      "tooltip": "Glare III @ 236.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 240.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 239.0,
+      "tooltip": "Glare III @ 239.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 242.5,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 241.5,
+      "tooltip": "Afflatus Solace @ 241.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 245.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 244.0,
+      "tooltip": "Glare III @ 244.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 247.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 246.5,
+      "tooltip": "Glare III @ 246.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3571,
+      "color": "#f59e0b",
+      "endSec": 247.1,
+      "iconPath": "/i/002000/002634.png",
+      "label": "Ass",
+      "startSec": 246.5,
+      "tooltip": "Assize @ 246.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 250.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 249.0,
+      "tooltip": "Glare III @ 249.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 136,
+      "color": "#f59e0b",
+      "endSec": 249.6,
+      "iconPath": "/i/002000/002626.png",
+      "label": "Pre",
+      "startSec": 249.0,
+      "tooltip": "Presence of Mind @ 249.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37009,
+      "color": "#3b82f6",
+      "endSec": 252.5,
+      "iconPath": "/i/002000/002126.png",
+      "label": "Gla",
+      "startSec": 251.5,
+      "tooltip": "Glare IV @ 251.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 254.5,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 253.5,
+      "tooltip": "Dia @ 253.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37009,
+      "color": "#3b82f6",
+      "endSec": 256.5,
+      "iconPath": "/i/002000/002126.png",
+      "label": "Gla",
+      "startSec": 255.5,
+      "tooltip": "Glare IV @ 255.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37009,
+      "color": "#3b82f6",
+      "endSec": 258.5,
+      "iconPath": "/i/002000/002126.png",
+      "label": "Gla",
+      "startSec": 257.5,
+      "tooltip": "Glare IV @ 257.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 260.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 259.5,
+      "tooltip": "Glare III @ 259.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 262.5,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 261.5,
+      "tooltip": "Afflatus Solace @ 261.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 264.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 263.5,
+      "tooltip": "Glare III @ 263.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 266.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 265.5,
+      "tooltip": "Glare III @ 265.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 269.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 268.0,
+      "tooltip": "Glare III @ 268.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 271.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 270.5,
+      "tooltip": "Glare III @ 270.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 274.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 273.0,
+      "tooltip": "Glare III @ 273.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 276.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 275.5,
+      "tooltip": "Glare III @ 275.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 279.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 278.0,
+      "tooltip": "Glare III @ 278.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 281.5,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 280.5,
+      "tooltip": "Afflatus Solace @ 280.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 284.0,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 283.0,
+      "tooltip": "Dia @ 283.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16535,
+      "color": "#3b82f6",
+      "endSec": 286.5,
+      "iconPath": "/i/002000/002644.png",
+      "label": "Aff",
+      "startSec": 285.5,
+      "tooltip": "Afflatus Misery @ 285.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 289.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 288.0,
+      "tooltip": "Glare III @ 288.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3571,
+      "color": "#f59e0b",
+      "endSec": 288.6,
+      "iconPath": "/i/002000/002634.png",
+      "label": "Ass",
+      "startSec": 288.0,
+      "tooltip": "Assize @ 288.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 291.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 290.5,
+      "tooltip": "Glare III @ 290.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 294.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 293.0,
+      "tooltip": "Glare III @ 293.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 296.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 295.5,
+      "tooltip": "Glare III @ 295.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 299.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 298.0,
+      "tooltip": "Glare III @ 298.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 301.5,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 300.5,
+      "tooltip": "Afflatus Solace @ 300.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 304.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 303.0,
+      "tooltip": "Glare III @ 303.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 306.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 305.5,
+      "tooltip": "Glare III @ 305.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 309.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 308.0,
+      "tooltip": "Glare III @ 308.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 311.5,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 310.5,
+      "tooltip": "Dia @ 310.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 314.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 313.0,
+      "tooltip": "Glare III @ 313.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 316.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 315.5,
+      "tooltip": "Glare III @ 315.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 319.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 318.0,
+      "tooltip": "Glare III @ 318.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 321.5,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 320.5,
+      "tooltip": "Afflatus Solace @ 320.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 324.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 323.0,
+      "tooltip": "Glare III @ 323.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 326.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 325.5,
+      "tooltip": "Glare III @ 325.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 329.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 328.0,
+      "tooltip": "Glare III @ 328.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3571,
+      "color": "#f59e0b",
+      "endSec": 328.6,
+      "iconPath": "/i/002000/002634.png",
+      "label": "Ass",
+      "startSec": 328.0,
+      "tooltip": "Assize @ 328.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 331.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 330.5,
+      "tooltip": "Glare III @ 330.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 334.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 333.0,
+      "tooltip": "Glare III @ 333.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 336.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 335.5,
+      "tooltip": "Glare III @ 335.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16532,
+      "color": "#3b82f6",
+      "endSec": 339.0,
+      "iconPath": "/i/002000/002641.png",
+      "label": "Dia",
+      "startSec": 338.0,
+      "tooltip": "Dia @ 338.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16531,
+      "color": "#3b82f6",
+      "endSec": 341.5,
+      "iconPath": "/i/002000/002640.png",
+      "label": "Aff",
+      "startSec": 340.5,
+      "tooltip": "Afflatus Solace @ 340.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16535,
+      "color": "#3b82f6",
+      "endSec": 344.0,
+      "iconPath": "/i/002000/002644.png",
+      "label": "Aff",
+      "startSec": 343.0,
+      "tooltip": "Afflatus Misery @ 343.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 346.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 345.5,
+      "tooltip": "Glare III @ 345.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 349.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 348.0,
+      "tooltip": "Glare III @ 348.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 351.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 350.5,
+      "tooltip": "Glare III @ 350.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 354.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 353.0,
+      "tooltip": "Glare III @ 353.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 356.5,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 355.5,
+      "tooltip": "Glare III @ 355.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25859,
+      "color": "#3b82f6",
+      "endSec": 359.0,
+      "iconPath": "/i/002000/002646.png",
+      "label": "Gla",
+      "startSec": 358.0,
+      "tooltip": "Glare III @ 358.0s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackCanonical": [],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 136,
+      "abilityName": "Presence of Mind",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 1242.31,
+      "summary": "Missed Presence of Mind \u2014 fit one around 4:09",
+      "timeSec": 249.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 1042.01,
+      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [],
+      "kind": "residual",
+      "lostPotency": 987.35,
+      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 3571,
+      "abilityName": "Assize",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 400.0,
+      "summary": "Missed Assize \u2014 fit one around 0:42",
+      "timeSec": 42.5
+    },
+    {
+      "abilityId": 3571,
+      "abilityName": "Assize",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 400.0,
+      "summary": "Missed Assize \u2014 fit one around 1:22",
+      "timeSec": 82.5
+    },
+    {
+      "abilityId": 3571,
+      "abilityName": "Assize",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 400.0,
+      "summary": "Missed Assize \u2014 fit one around 2:05",
+      "timeSec": 125.0
+    },
+    {
+      "abilityId": 3571,
+      "abilityName": "Assize",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 400.0,
+      "summary": "Missed Assize \u2014 fit one around 2:46",
+      "timeSec": 166.5
+    },
+    {
+      "abilityId": 3571,
+      "abilityName": "Assize",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 400.0,
+      "summary": "Missed Assize \u2014 fit one around 3:26",
+      "timeSec": 206.5
+    },
+    {
+      "abilityId": 3571,
+      "abilityName": "Assize",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 400.0,
+      "summary": "Missed Assize \u2014 fit one around 4:06",
+      "timeSec": 246.5
+    },
+    {
+      "abilityId": 3571,
+      "abilityName": "Assize",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 400.0,
+      "summary": "Missed Assize \u2014 fit one around 4:48",
+      "timeSec": 288.0
+    },
+    {
+      "abilityId": 3571,
+      "abilityName": "Assize",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 400.0,
+      "summary": "Missed Assize \u2014 fit one around 5:28",
+      "timeSec": 328.0
+    },
+    {
+      "abilityId": 25859,
+      "abilityName": "Glare III",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #1: cast Dia, canonical opens Glare III (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 37009,
+      "abilityName": "Glare IV",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #7: cast Glare III, canonical opens Glare IV (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 37009,
+      "abilityName": "Glare IV",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #8: cast Glare III, canonical opens Glare IV (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 37009,
+      "abilityName": "Glare IV",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #11: cast Glare III, canonical opens Glare IV (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16535,
+      "abilityName": "Afflatus Misery",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #12: cast Glare III, canonical opens Afflatus Misery (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": -1.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": -1.5,
+        "tooltip": "Glare III  (GCD)  @  -1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 1.5,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 1.0,
+        "tooltip": "Dia  (GCD)  @  0:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 4.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 3.5,
+        "tooltip": "Glare III  (GCD)  @  0:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 136,
+        "color": "#777777",
+        "endSec": 5.2,
+        "iconPath": "/i/002000/002626.png",
+        "label": "Pre",
+        "startSec": 4.7,
+        "tooltip": "Presence of Mind  (oGCD)  @  0:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3571,
+        "color": "#777777",
+        "endSec": 5.9,
+        "iconPath": "/i/002000/002634.png",
+        "label": "Ass",
+        "startSec": 5.4,
+        "tooltip": "Assize  (oGCD)  @  0:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 37009,
+        "color": "#777777",
+        "endSec": 6.0,
+        "iconPath": "/i/002000/002126.png",
+        "label": "Gla",
+        "startSec": 5.5,
+        "tooltip": "Glare IV  (GCD)  @  0:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37009,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/002000/002126.png",
+        "label": "Gla",
+        "startSec": 7.5,
+        "tooltip": "Glare IV  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37009,
+        "color": "#777777",
+        "endSec": 10.0,
+        "iconPath": "/i/002000/002126.png",
+        "label": "Gla",
+        "startSec": 9.5,
+        "tooltip": "Glare IV  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 12.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 11.5,
+        "tooltip": "Glare III  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 14.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 13.5,
+        "tooltip": "Glare III  (GCD)  @  0:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 16.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 15.5,
+        "tooltip": "Glare III  (GCD)  @  0:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 18.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 17.5,
+        "tooltip": "Glare III  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 20.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 19.5,
+        "tooltip": "Glare III  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 22.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 21.5,
+        "tooltip": "Glare III  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 24.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 24.0,
+        "tooltip": "Glare III  (GCD)  @  0:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 27.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 26.5,
+        "tooltip": "Glare III  (GCD)  @  0:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 29.5,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 29.0,
+        "tooltip": "Dia  (GCD)  @  0:29",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 32.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 31.5,
+        "tooltip": "Glare III  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 34.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 34.0,
+        "tooltip": "Glare III  (GCD)  @  0:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 37.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 36.5,
+        "tooltip": "Glare III  (GCD)  @  0:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 39.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 39.0,
+        "tooltip": "Glare III  (GCD)  @  0:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 42.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 41.5,
+        "tooltip": "Glare III  (GCD)  @  0:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 44.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 44.0,
+        "tooltip": "Glare III  (GCD)  @  0:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 47.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 46.5,
+        "tooltip": "Glare III  (GCD)  @  0:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 49.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 49.0,
+        "tooltip": "Glare III  (GCD)  @  0:49",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 52.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 51.5,
+        "tooltip": "Glare III  (GCD)  @  0:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 54.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 54.0,
+        "tooltip": "Glare III  (GCD)  @  0:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 57.0,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 56.5,
+        "tooltip": "Dia  (GCD)  @  0:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 59.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 59.0,
+        "tooltip": "Glare III  (GCD)  @  0:59",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 62.0,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 61.5,
+        "tooltip": "Afflatus Solace  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 64.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 64.0,
+        "tooltip": "Glare III  (GCD)  @  1:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 67.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 66.5,
+        "tooltip": "Glare III  (GCD)  @  1:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 69.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 69.0,
+        "tooltip": "Glare III  (GCD)  @  1:09",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 72.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 71.5,
+        "tooltip": "Glare III  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 74.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 74.0,
+        "tooltip": "Glare III  (GCD)  @  1:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 77.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 76.5,
+        "tooltip": "Glare III  (GCD)  @  1:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 79.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 79.0,
+        "tooltip": "Glare III  (GCD)  @  1:19",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 82.0,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 81.5,
+        "tooltip": "Afflatus Solace  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 84.5,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 84.0,
+        "tooltip": "Dia  (GCD)  @  1:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 87.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 86.5,
+        "tooltip": "Glare III  (GCD)  @  1:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 89.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 89.0,
+        "tooltip": "Glare III  (GCD)  @  1:29",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 92.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 91.5,
+        "tooltip": "Glare III  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 94.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 94.0,
+        "tooltip": "Glare III  (GCD)  @  1:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 97.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 96.5,
+        "tooltip": "Glare III  (GCD)  @  1:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 99.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 99.0,
+        "tooltip": "Glare III  (GCD)  @  1:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 102.0,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 101.5,
+        "tooltip": "Afflatus Solace  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16535,
+        "color": "#777777",
+        "endSec": 104.5,
+        "iconPath": "/i/002000/002644.png",
+        "label": "Aff",
+        "startSec": 104.0,
+        "tooltip": "Afflatus Misery  (GCD)  @  1:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 107.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 106.5,
+        "tooltip": "Glare III  (GCD)  @  1:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 109.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 109.0,
+        "tooltip": "Glare III  (GCD)  @  1:49",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 112.0,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 111.5,
+        "tooltip": "Dia  (GCD)  @  1:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 114.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 114.0,
+        "tooltip": "Glare III  (GCD)  @  1:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 117.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 116.5,
+        "tooltip": "Glare III  (GCD)  @  1:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 119.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 119.0,
+        "tooltip": "Glare III  (GCD)  @  1:59",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 122.0,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 121.5,
+        "tooltip": "Afflatus Solace  (GCD)  @  2:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 124.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 124.0,
+        "tooltip": "Glare III  (GCD)  @  2:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 127.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 126.5,
+        "tooltip": "Glare III  (GCD)  @  2:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 136,
+        "color": "#777777",
+        "endSec": 128.2,
+        "iconPath": "/i/002000/002626.png",
+        "label": "Pre",
+        "startSec": 127.7,
+        "tooltip": "Presence of Mind  (oGCD)  @  2:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 37009,
+        "color": "#777777",
+        "endSec": 129.0,
+        "iconPath": "/i/002000/002126.png",
+        "label": "Gla",
+        "startSec": 128.5,
+        "tooltip": "Glare IV  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37009,
+        "color": "#777777",
+        "endSec": 131.0,
+        "iconPath": "/i/002000/002126.png",
+        "label": "Gla",
+        "startSec": 130.5,
+        "tooltip": "Glare IV  (GCD)  @  2:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37009,
+        "color": "#777777",
+        "endSec": 133.0,
+        "iconPath": "/i/002000/002126.png",
+        "label": "Gla",
+        "startSec": 132.5,
+        "tooltip": "Glare IV  (GCD)  @  2:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 135.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 134.5,
+        "tooltip": "Glare III  (GCD)  @  2:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 137.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 136.5,
+        "tooltip": "Glare III  (GCD)  @  2:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 139.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 138.5,
+        "tooltip": "Glare III  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 141.0,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 140.5,
+        "tooltip": "Dia  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 143.0,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 142.5,
+        "tooltip": "Afflatus Solace  (GCD)  @  2:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 145.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 144.5,
+        "tooltip": "Glare III  (GCD)  @  2:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 147.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 147.0,
+        "tooltip": "Glare III  (GCD)  @  2:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 150.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 149.5,
+        "tooltip": "Glare III  (GCD)  @  2:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 152.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 152.0,
+        "tooltip": "Glare III  (GCD)  @  2:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 155.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 154.5,
+        "tooltip": "Glare III  (GCD)  @  2:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 157.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 157.0,
+        "tooltip": "Glare III  (GCD)  @  2:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 160.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 159.5,
+        "tooltip": "Glare III  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 162.5,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 162.0,
+        "tooltip": "Afflatus Solace  (GCD)  @  2:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16535,
+        "color": "#777777",
+        "endSec": 165.0,
+        "iconPath": "/i/002000/002644.png",
+        "label": "Aff",
+        "startSec": 164.5,
+        "tooltip": "Afflatus Misery  (GCD)  @  2:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 167.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 167.0,
+        "tooltip": "Glare III  (GCD)  @  2:47",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 170.0,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 169.5,
+        "tooltip": "Dia  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 172.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 172.0,
+        "tooltip": "Glare III  (GCD)  @  2:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 175.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 174.5,
+        "tooltip": "Glare III  (GCD)  @  2:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 177.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 177.0,
+        "tooltip": "Glare III  (GCD)  @  2:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 180.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 179.5,
+        "tooltip": "Glare III  (GCD)  @  3:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 182.5,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 182.0,
+        "tooltip": "Afflatus Solace  (GCD)  @  3:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 185.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 184.5,
+        "tooltip": "Glare III  (GCD)  @  3:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 187.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 187.0,
+        "tooltip": "Glare III  (GCD)  @  3:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 190.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 189.5,
+        "tooltip": "Glare III  (GCD)  @  3:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 192.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 192.0,
+        "tooltip": "Glare III  (GCD)  @  3:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 195.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 194.5,
+        "tooltip": "Glare III  (GCD)  @  3:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 197.5,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 197.0,
+        "tooltip": "Dia  (GCD)  @  3:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 200.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 199.5,
+        "tooltip": "Glare III  (GCD)  @  3:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 202.5,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 202.0,
+        "tooltip": "Afflatus Solace  (GCD)  @  3:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 205.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 204.5,
+        "tooltip": "Glare III  (GCD)  @  3:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 207.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 207.0,
+        "tooltip": "Glare III  (GCD)  @  3:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 210.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 209.5,
+        "tooltip": "Glare III  (GCD)  @  3:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 212.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 212.0,
+        "tooltip": "Glare III  (GCD)  @  3:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 215.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 214.5,
+        "tooltip": "Glare III  (GCD)  @  3:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 217.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 217.0,
+        "tooltip": "Glare III  (GCD)  @  3:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 220.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 219.5,
+        "tooltip": "Glare III  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 222.5,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 222.0,
+        "tooltip": "Afflatus Solace  (GCD)  @  3:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 225.0,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 224.5,
+        "tooltip": "Dia  (GCD)  @  3:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16535,
+        "color": "#777777",
+        "endSec": 227.5,
+        "iconPath": "/i/002000/002644.png",
+        "label": "Aff",
+        "startSec": 227.0,
+        "tooltip": "Afflatus Misery  (GCD)  @  3:47",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 230.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 229.5,
+        "tooltip": "Glare III  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 232.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 232.0,
+        "tooltip": "Glare III  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 235.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 234.5,
+        "tooltip": "Glare III  (GCD)  @  3:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 237.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 237.0,
+        "tooltip": "Glare III  (GCD)  @  3:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 240.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 239.5,
+        "tooltip": "Glare III  (GCD)  @  4:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 242.5,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 242.0,
+        "tooltip": "Afflatus Solace  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 245.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 244.5,
+        "tooltip": "Glare III  (GCD)  @  4:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 247.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 247.0,
+        "tooltip": "Glare III  (GCD)  @  4:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 250.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 249.5,
+        "tooltip": "Glare III  (GCD)  @  4:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 252.5,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 252.0,
+        "tooltip": "Dia  (GCD)  @  4:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 255.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 254.5,
+        "tooltip": "Glare III  (GCD)  @  4:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 257.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 257.0,
+        "tooltip": "Glare III  (GCD)  @  4:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 260.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 259.5,
+        "tooltip": "Glare III  (GCD)  @  4:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 262.5,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 262.0,
+        "tooltip": "Afflatus Solace  (GCD)  @  4:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 265.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 264.5,
+        "tooltip": "Glare III  (GCD)  @  4:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 267.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 267.0,
+        "tooltip": "Glare III  (GCD)  @  4:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 270.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 269.5,
+        "tooltip": "Glare III  (GCD)  @  4:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 272.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 272.0,
+        "tooltip": "Glare III  (GCD)  @  4:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 275.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 274.5,
+        "tooltip": "Glare III  (GCD)  @  4:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 277.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 277.0,
+        "tooltip": "Glare III  (GCD)  @  4:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 280.0,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 279.5,
+        "tooltip": "Dia  (GCD)  @  4:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 282.5,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 282.0,
+        "tooltip": "Afflatus Solace  (GCD)  @  4:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16535,
+        "color": "#777777",
+        "endSec": 285.0,
+        "iconPath": "/i/002000/002644.png",
+        "label": "Aff",
+        "startSec": 284.5,
+        "tooltip": "Afflatus Misery  (GCD)  @  4:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 287.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 287.0,
+        "tooltip": "Glare III  (GCD)  @  4:47",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 290.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 289.5,
+        "tooltip": "Glare III  (GCD)  @  4:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 292.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 292.0,
+        "tooltip": "Glare III  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 295.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 294.5,
+        "tooltip": "Glare III  (GCD)  @  4:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 297.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 297.0,
+        "tooltip": "Glare III  (GCD)  @  4:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 300.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 299.5,
+        "tooltip": "Glare III  (GCD)  @  5:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 302.5,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 302.0,
+        "tooltip": "Afflatus Solace  (GCD)  @  5:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 305.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 304.5,
+        "tooltip": "Glare III  (GCD)  @  5:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 307.5,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 307.0,
+        "tooltip": "Dia  (GCD)  @  5:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 310.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 309.5,
+        "tooltip": "Glare III  (GCD)  @  5:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 312.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 312.0,
+        "tooltip": "Glare III  (GCD)  @  5:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 315.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 314.5,
+        "tooltip": "Glare III  (GCD)  @  5:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 317.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 317.0,
+        "tooltip": "Glare III  (GCD)  @  5:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 320.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 319.5,
+        "tooltip": "Glare III  (GCD)  @  5:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 322.5,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 322.0,
+        "tooltip": "Afflatus Solace  (GCD)  @  5:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 325.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 324.5,
+        "tooltip": "Glare III  (GCD)  @  5:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 327.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 327.0,
+        "tooltip": "Glare III  (GCD)  @  5:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 330.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 329.5,
+        "tooltip": "Glare III  (GCD)  @  5:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 332.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 332.0,
+        "tooltip": "Glare III  (GCD)  @  5:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16532,
+        "color": "#777777",
+        "endSec": 335.0,
+        "iconPath": "/i/002000/002641.png",
+        "label": "Dia",
+        "startSec": 334.5,
+        "tooltip": "Dia  (GCD)  @  5:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 337.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 337.0,
+        "tooltip": "Glare III  (GCD)  @  5:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 340.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 339.5,
+        "tooltip": "Glare III  (GCD)  @  5:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16531,
+        "color": "#777777",
+        "endSec": 342.5,
+        "iconPath": "/i/002000/002640.png",
+        "label": "Aff",
+        "startSec": 342.0,
+        "tooltip": "Afflatus Solace  (GCD)  @  5:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16535,
+        "color": "#777777",
+        "endSec": 345.0,
+        "iconPath": "/i/002000/002644.png",
+        "label": "Aff",
+        "startSec": 344.5,
+        "tooltip": "Afflatus Misery  (GCD)  @  5:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 347.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 347.0,
+        "tooltip": "Glare III  (GCD)  @  5:47",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 350.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 349.5,
+        "tooltip": "Glare III  (GCD)  @  5:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 352.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 352.0,
+        "tooltip": "Glare III  (GCD)  @  5:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 355.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 354.5,
+        "tooltip": "Glare III  (GCD)  @  5:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 357.5,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 357.0,
+        "tooltip": "Glare III  (GCD)  @  5:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25859,
+        "color": "#777777",
+        "endSec": 360.0,
+        "iconPath": "/i/002000/002646.png",
+        "label": "Gla",
+        "startSec": 359.5,
+        "tooltip": "Glare III  (GCD)  @  6:00",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 61144.17,
+    "efficiencyPct": 90.43,
+    "fightDurationSec": 360.0,
+    "idealizedPotency": 67615.84,
+    "killTimeSec": 360,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

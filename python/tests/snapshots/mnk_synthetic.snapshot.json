@@ -1,0 +1,6675 @@
+{
+  "abilityMeta": {
+    "16476": {
+      "iconPath": "/i/002000/002547.png",
+      "id": 16476,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Six-sided Star"
+    },
+    "25766": {
+      "iconPath": "/i/002000/002978.png",
+      "id": 25766,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Riddle of Wind"
+    },
+    "25768": {
+      "iconPath": "/i/002000/002980.png",
+      "id": 25768,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Rising Phoenix"
+    },
+    "25769": {
+      "iconPath": "/i/002000/002981.png",
+      "id": 25769,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Phantom Rush"
+    },
+    "3547": {
+      "iconPath": "/i/002000/002535.png",
+      "id": 3547,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "the Forbidden Chakra"
+    },
+    "36945": {
+      "iconPath": "/i/002000/002982.png",
+      "id": 36945,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Leaping Opo"
+    },
+    "36946": {
+      "iconPath": "/i/002000/002983.png",
+      "id": 36946,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Rising Raptor"
+    },
+    "36947": {
+      "iconPath": "/i/002000/002984.png",
+      "id": 36947,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Pouncing Coeurl"
+    },
+    "36948": {
+      "iconPath": "/i/002000/002985.png",
+      "id": 36948,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Elixir Burst"
+    },
+    "36949": {
+      "iconPath": "/i/002000/002986.png",
+      "id": 36949,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Wind's Reply"
+    },
+    "36950": {
+      "iconPath": "/i/002000/002987.png",
+      "id": 36950,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Fire's Reply"
+    },
+    "4262": {
+      "iconPath": "/i/002000/002536.png",
+      "id": 4262,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Form Shift"
+    },
+    "61": {
+      "iconPath": "/i/000000/000213.png",
+      "id": 61,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Twin Snakes"
+    },
+    "66": {
+      "iconPath": "/i/000000/000204.png",
+      "id": 66,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Demolish"
+    },
+    "69": {
+      "iconPath": "/i/000000/000217.png",
+      "id": 69,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Perfect Balance"
+    },
+    "7395": {
+      "iconPath": "/i/002000/002541.png",
+      "id": 7395,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Riddle of Fire"
+    },
+    "7396": {
+      "iconPath": "/i/002000/002542.png",
+      "id": 7396,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Brotherhood"
+    },
+    "74": {
+      "iconPath": "/i/002000/002528.png",
+      "id": 74,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Dragon Kick"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "16476": 1,
+        "25766": 4,
+        "25768": 3,
+        "25769": 3,
+        "3547": 25,
+        "36945": 28,
+        "36946": 19,
+        "36947": 24,
+        "36948": 3,
+        "36949": 4,
+        "36950": 5,
+        "61": 19,
+        "66": 12,
+        "69": 9,
+        "7395": 5,
+        "7396": 3,
+        "74": 29
+      },
+      "totalCasts": 196
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": [
+        "Brotherhood"
+      ]
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 445.07,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.0,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "targetability"
+    },
+    "Drift": {
+      "downtimeSource": "targetability",
+      "downtimeWindows": [],
+      "fightDurationSec": 300.0,
+      "findings": [
+        {
+          "abilityId": 69,
+          "abilityName": "Perfect Balance",
+          "cappedSeconds": 4.5,
+          "casts": 9,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7395,
+          "abilityName": "Riddle of Fire",
+          "cappedSeconds": 0.5,
+          "casts": 5,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 25766,
+          "abilityName": "Riddle of Wind",
+          "cappedSeconds": 2.5,
+          "casts": 4,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7396,
+          "abilityName": "Brotherhood",
+          "cappedSeconds": 1.2,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 36950,
+          "expectedId": 36945,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Fire's Reply, canonical uses Leaping Opo (same potency)"
+        },
+        {
+          "actualId": 36949,
+          "expectedId": 74,
+          "lostPotency": 0.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Wind's Reply, canonical uses Dragon Kick (same potency)"
+        },
+        {
+          "actualId": 74,
+          "expectedId": 36948,
+          "lostPotency": 580.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Dragon Kick (320p), canonical uses Elixir Burst (900p) \u2014 -580p"
+        },
+        {
+          "actualId": 36945,
+          "expectedId": 74,
+          "lostPotency": 60.0,
+          "position": 6,
+          "summary": "Opener slot #6: cast Leaping Opo (260p), canonical uses Dragon Kick (320p) \u2014 -60p"
+        },
+        {
+          "actualId": 36948,
+          "expectedId": 36949,
+          "lostPotency": 140.0,
+          "position": 7,
+          "summary": "Opener slot #7: cast Elixir Burst (900p), canonical uses Wind's Reply (1040p) \u2014 -140p"
+        },
+        {
+          "actualId": 61,
+          "expectedId": 36950,
+          "lostPotency": 980.0,
+          "position": 8,
+          "summary": "Opener slot #8: cast Twin Snakes (420p), canonical uses Fire's Reply (1400p) \u2014 -980p"
+        },
+        {
+          "actualId": 66,
+          "expectedId": 36945,
+          "lostPotency": 0.0,
+          "position": 9,
+          "summary": "Opener slot #9: cast Demolish, canonical uses Leaping Opo (same potency)"
+        },
+        {
+          "actualId": 25768,
+          "expectedId": 36945,
+          "lostPotency": 0.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Rising Phoenix, canonical uses Leaping Opo (same potency)"
+        },
+        {
+          "actualId": 36945,
+          "expectedId": 74,
+          "lostPotency": 60.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Leaping Opo (260p), canonical uses Dragon Kick (320p) \u2014 -60p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Positionals": {
+      "detected": false,
+      "lostPotency": 0.0,
+      "missTimes": [],
+      "missed": 0,
+      "missedByAbility": {},
+      "misses": [],
+      "total": 0
+    },
+    "Scoring": {
+      "deliveredObserved": 104189.84,
+      "deliveredPotency": 104189.84,
+      "downtimeSource": "targetability",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "25766": 530.94,
+        "69": 711.86,
+        "7395": 2294.59,
+        "7396": 0.0
+      },
+      "fightDurationSec": 300.0,
+      "idealizedLenient": 107439.63,
+      "idealizedMaster": 107912.42,
+      "idealizedObserved": 106427.31,
+      "idealizedPotency": 107439.63,
+      "idealizedStrict": 107439.63,
+      "masterBuffIntervals": [
+        [
+          6.7,
+          26.7,
+          1.05
+        ],
+        [
+          126.7,
+          146.7,
+          1.05
+        ],
+        [
+          246.7,
+          266.7,
+          1.05
+        ]
+      ],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.0,
+        "payload": {
+          "tfcBudget": 25
+        }
+      },
+      "tfcBudget": 25,
+      "tinctureLoss": 1848.38,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 196"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Dragon Kick",
+          29,
+          0
+        ],
+        [
+          "Leaping Opo",
+          28,
+          0
+        ],
+        [
+          "the Forbidden Chakra",
+          25,
+          0
+        ],
+        [
+          "Pouncing Coeurl",
+          24,
+          0
+        ],
+        [
+          "Rising Raptor",
+          19,
+          0
+        ],
+        [
+          "Twin Snakes",
+          19,
+          0
+        ],
+        [
+          "Demolish",
+          12,
+          0
+        ],
+        [
+          "Perfect Balance",
+          9,
+          0
+        ],
+        [
+          "Riddle of Fire",
+          5,
+          0
+        ],
+        [
+          "Fire's Reply",
+          5,
+          0
+        ],
+        [
+          "Riddle of Wind",
+          4,
+          0
+        ],
+        [
+          "Wind's Reply",
+          4,
+          0
+        ],
+        [
+          "Brotherhood",
+          3,
+          0
+        ],
+        [
+          "Rising Phoenix",
+          3,
+          0
+        ],
+        [
+          "Phantom Rush",
+          3,
+          0
+        ],
+        [
+          "Elixir Burst",
+          3,
+          0
+        ],
+        [
+          "Six-sided Star",
+          1,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No burst-alignment opportunities flagged."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing \u2014 eff GCD 2.00s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.00s",
+        "Avg GCD potency: 445p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "No notable cooldown drift."
+      ],
+      "summaryLines": [
+        "Total drift cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Perfect Balance",
+          9,
+          4.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Riddle of Fire",
+          5,
+          0.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Riddle of Wind",
+          4,
+          2.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Brotherhood",
+          3,
+          1.2,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #5: cast Dragon Kick (320p), canonical uses Elixir Burst (900p) \u2014 -580p",
+        "[opener] Opener slot #6: cast Leaping Opo (260p), canonical uses Dragon Kick (320p) \u2014 -60p",
+        "[opener] Opener slot #7: cast Elixir Burst (900p), canonical uses Wind's Reply (1040p) \u2014 -140p",
+        "[opener] Opener slot #8: cast Twin Snakes (420p), canonical uses Fire's Reply (1400p) \u2014 -980p",
+        "[opener] Opener slot #12: cast Leaping Opo (260p), canonical uses Dragon Kick (320p) \u2014 -60p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 1820p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          2,
+          "Leaping Opo",
+          "Fire's Reply",
+          0
+        ],
+        [
+          3,
+          "Dragon Kick",
+          "Wind's Reply",
+          0
+        ],
+        [
+          5,
+          "Elixir Burst",
+          "Dragon Kick",
+          580
+        ],
+        [
+          6,
+          "Dragon Kick",
+          "Leaping Opo",
+          60
+        ],
+        [
+          7,
+          "Wind's Reply",
+          "Elixir Burst",
+          140
+        ],
+        [
+          8,
+          "Fire's Reply",
+          "Twin Snakes",
+          980
+        ],
+        [
+          9,
+          "Leaping Opo",
+          "Demolish",
+          0
+        ],
+        [
+          11,
+          "Leaping Opo",
+          "Rising Phoenix",
+          0
+        ],
+        [
+          12,
+          "Dragon Kick",
+          "Leaping Opo",
+          60
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Positionals": {
+      "aspectName": "Positionals",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 104189.84,
+    "downtimeSource": "targetability",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.0,
+    "efficiencyPct": 96.98,
+    "efficiencyPctLenient": 96.98,
+    "efficiencyPctMaster": 96.55,
+    "efficiencyPctObserved": 97.9,
+    "efficiencyPctStrict": 96.98,
+    "idealizedMaster": 107912.42,
+    "idealizedObserved": 106427.31,
+    "killTimeSec": 300,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Monk"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 107439.63,
+    "yourIdealizedPotencyLenient": 107439.63,
+    "yourPotency": 104189.84
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 30.0,
+      "multiplier": 1.08,
+      "startSec": 0.0
+    },
+    {
+      "endSec": 300.0,
+      "multiplier": 1.08,
+      "startSec": 270.0
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 4262,
+      "color": "#3b82f6",
+      "endSec": -0.5,
+      "iconPath": "/i/002000/002536.png",
+      "label": "For",
+      "startSec": -1.5,
+      "tooltip": "Form Shift @ -1.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 1.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 0.5,
+      "tooltip": "Dragon Kick @ 0.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7395,
+      "color": "#f59e0b",
+      "endSec": 1.1,
+      "iconPath": "/i/002000/002541.png",
+      "label": "Rid",
+      "startSec": 0.5,
+      "tooltip": "Riddle of Fire @ 0.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7396,
+      "color": "#f59e0b",
+      "endSec": 1.8,
+      "iconPath": "/i/002000/002542.png",
+      "label": "Bro",
+      "startSec": 1.2,
+      "tooltip": "Brotherhood @ 1.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36950,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/002000/002987.png",
+      "label": "Fir",
+      "startSec": 2.5,
+      "tooltip": "Fire's Reply @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 3.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 2.5,
+      "tooltip": "Perfect Balance @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 3.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 3.2,
+      "tooltip": "the Forbidden Chakra @ 3.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 5.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 4.5,
+      "tooltip": "Twin Snakes @ 4.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 5.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 4.5,
+      "tooltip": "the Forbidden Chakra @ 4.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25766,
+      "color": "#f59e0b",
+      "endSec": 5.8,
+      "iconPath": "/i/002000/002978.png",
+      "label": "Rid",
+      "startSec": 5.2,
+      "tooltip": "Riddle of Wind @ 5.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 7.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 6.5,
+      "tooltip": "Demolish @ 6.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 7.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 6.5,
+      "tooltip": "the Forbidden Chakra @ 6.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 9.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 8.5,
+      "tooltip": "Leaping Opo @ 8.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25768,
+      "color": "#3b82f6",
+      "endSec": 11.5,
+      "iconPath": "/i/002000/002980.png",
+      "label": "Ris",
+      "startSec": 10.5,
+      "tooltip": "Rising Phoenix @ 10.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36949,
+      "color": "#3b82f6",
+      "endSec": 13.5,
+      "iconPath": "/i/002000/002986.png",
+      "label": "Win",
+      "startSec": 12.5,
+      "tooltip": "Wind's Reply @ 12.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 13.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 12.5,
+      "tooltip": "Perfect Balance @ 12.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 13.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 13.2,
+      "tooltip": "the Forbidden Chakra @ 13.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 15.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 14.5,
+      "tooltip": "Dragon Kick @ 14.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 17.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 16.5,
+      "tooltip": "Leaping Opo @ 16.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 19.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 18.5,
+      "tooltip": "Dragon Kick @ 18.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36948,
+      "color": "#3b82f6",
+      "endSec": 21.5,
+      "iconPath": "/i/002000/002985.png",
+      "label": "Eli",
+      "startSec": 20.5,
+      "tooltip": "Elixir Burst @ 20.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 23.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 22.5,
+      "tooltip": "Leaping Opo @ 22.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 25.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 24.5,
+      "tooltip": "Rising Raptor @ 24.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 27.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 26.5,
+      "tooltip": "Pouncing Coeurl @ 26.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 29.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 28.5,
+      "tooltip": "Dragon Kick @ 28.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 31.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 30.5,
+      "tooltip": "Twin Snakes @ 30.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 33.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 32.5,
+      "tooltip": "Pouncing Coeurl @ 32.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 35.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 34.5,
+      "tooltip": "Leaping Opo @ 34.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 37.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 36.5,
+      "tooltip": "Rising Raptor @ 36.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 39.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 38.5,
+      "tooltip": "Demolish @ 38.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 41.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 40.5,
+      "tooltip": "Dragon Kick @ 40.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 43.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 42.5,
+      "tooltip": "Twin Snakes @ 42.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 45.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 44.5,
+      "tooltip": "Pouncing Coeurl @ 44.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 47.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 46.5,
+      "tooltip": "Leaping Opo @ 46.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 49.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 48.5,
+      "tooltip": "Rising Raptor @ 48.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 49.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 48.5,
+      "tooltip": "the Forbidden Chakra @ 48.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 51.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 50.5,
+      "tooltip": "Pouncing Coeurl @ 50.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 53.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 52.5,
+      "tooltip": "Dragon Kick @ 52.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 55.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 54.5,
+      "tooltip": "Twin Snakes @ 54.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 57.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 56.5,
+      "tooltip": "Demolish @ 56.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 57.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 56.5,
+      "tooltip": "Perfect Balance @ 56.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 59.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 58.5,
+      "tooltip": "Leaping Opo @ 58.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 61.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 60.5,
+      "tooltip": "Dragon Kick @ 60.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7395,
+      "color": "#f59e0b",
+      "endSec": 61.1,
+      "iconPath": "/i/002000/002541.png",
+      "label": "Rid",
+      "startSec": 60.5,
+      "tooltip": "Riddle of Fire @ 60.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 61.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 61.2,
+      "tooltip": "the Forbidden Chakra @ 61.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 63.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 62.5,
+      "tooltip": "Leaping Opo @ 62.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 63.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 62.5,
+      "tooltip": "the Forbidden Chakra @ 62.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 63.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 63.2,
+      "tooltip": "the Forbidden Chakra @ 63.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25769,
+      "color": "#3b82f6",
+      "endSec": 65.5,
+      "iconPath": "/i/002000/002981.png",
+      "label": "Pha",
+      "startSec": 64.5,
+      "tooltip": "Phantom Rush @ 64.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36950,
+      "color": "#3b82f6",
+      "endSec": 67.5,
+      "iconPath": "/i/002000/002987.png",
+      "label": "Fir",
+      "startSec": 66.5,
+      "tooltip": "Fire's Reply @ 66.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 69.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 68.5,
+      "tooltip": "Dragon Kick @ 68.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 71.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 70.5,
+      "tooltip": "Rising Raptor @ 70.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 73.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 72.5,
+      "tooltip": "Pouncing Coeurl @ 72.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 73.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 72.5,
+      "tooltip": "the Forbidden Chakra @ 72.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 75.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 74.5,
+      "tooltip": "Leaping Opo @ 74.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 77.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 76.5,
+      "tooltip": "Twin Snakes @ 76.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 79.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 78.5,
+      "tooltip": "Pouncing Coeurl @ 78.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 81.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 80.5,
+      "tooltip": "Dragon Kick @ 80.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 83.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 82.5,
+      "tooltip": "Rising Raptor @ 82.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 85.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 84.5,
+      "tooltip": "Demolish @ 84.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 87.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 86.5,
+      "tooltip": "Leaping Opo @ 86.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 89.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 88.5,
+      "tooltip": "Twin Snakes @ 88.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 91.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 90.5,
+      "tooltip": "Pouncing Coeurl @ 90.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 93.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 92.5,
+      "tooltip": "Dragon Kick @ 92.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 95.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 94.5,
+      "tooltip": "Rising Raptor @ 94.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 97.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 96.5,
+      "tooltip": "Pouncing Coeurl @ 96.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25766,
+      "color": "#f59e0b",
+      "endSec": 97.1,
+      "iconPath": "/i/002000/002978.png",
+      "label": "Rid",
+      "startSec": 96.5,
+      "tooltip": "Riddle of Wind @ 96.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36949,
+      "color": "#3b82f6",
+      "endSec": 99.5,
+      "iconPath": "/i/002000/002986.png",
+      "label": "Win",
+      "startSec": 98.5,
+      "tooltip": "Wind's Reply @ 98.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 101.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 100.5,
+      "tooltip": "Leaping Opo @ 100.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 103.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 102.5,
+      "tooltip": "Twin Snakes @ 102.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 105.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 104.5,
+      "tooltip": "Demolish @ 104.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 107.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 106.5,
+      "tooltip": "Dragon Kick @ 106.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 109.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 108.5,
+      "tooltip": "Rising Raptor @ 108.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 109.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 108.5,
+      "tooltip": "the Forbidden Chakra @ 108.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 111.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 110.5,
+      "tooltip": "Pouncing Coeurl @ 110.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 113.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 112.5,
+      "tooltip": "Leaping Opo @ 112.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 115.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 114.5,
+      "tooltip": "Twin Snakes @ 114.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 117.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 116.5,
+      "tooltip": "Pouncing Coeurl @ 116.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 119.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 118.5,
+      "tooltip": "Dragon Kick @ 118.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 121.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 120.5,
+      "tooltip": "Rising Raptor @ 120.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 121.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 120.5,
+      "tooltip": "the Forbidden Chakra @ 120.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7396,
+      "color": "#f59e0b",
+      "endSec": 121.8,
+      "iconPath": "/i/002000/002542.png",
+      "label": "Bro",
+      "startSec": 121.2,
+      "tooltip": "Brotherhood @ 121.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 123.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 122.5,
+      "tooltip": "Demolish @ 122.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 125.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 124.5,
+      "tooltip": "Leaping Opo @ 124.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 125.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 124.5,
+      "tooltip": "Perfect Balance @ 124.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 127.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 126.5,
+      "tooltip": "Dragon Kick @ 126.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7395,
+      "color": "#f59e0b",
+      "endSec": 127.1,
+      "iconPath": "/i/002000/002541.png",
+      "label": "Rid",
+      "startSec": 126.5,
+      "tooltip": "Riddle of Fire @ 126.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 127.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 127.2,
+      "tooltip": "the Forbidden Chakra @ 127.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 129.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 128.5,
+      "tooltip": "Leaping Opo @ 128.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 129.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 128.5,
+      "tooltip": "the Forbidden Chakra @ 128.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 131.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 130.5,
+      "tooltip": "Dragon Kick @ 130.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36948,
+      "color": "#3b82f6",
+      "endSec": 133.5,
+      "iconPath": "/i/002000/002985.png",
+      "label": "Eli",
+      "startSec": 132.5,
+      "tooltip": "Elixir Burst @ 132.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 133.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 132.5,
+      "tooltip": "Perfect Balance @ 132.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 133.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 133.2,
+      "tooltip": "the Forbidden Chakra @ 133.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 135.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 134.5,
+      "tooltip": "Twin Snakes @ 134.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 137.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 136.5,
+      "tooltip": "Pouncing Coeurl @ 136.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 139.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 138.5,
+      "tooltip": "Leaping Opo @ 138.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25768,
+      "color": "#3b82f6",
+      "endSec": 141.5,
+      "iconPath": "/i/002000/002980.png",
+      "label": "Ris",
+      "startSec": 140.5,
+      "tooltip": "Rising Phoenix @ 140.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 143.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 142.5,
+      "tooltip": "Dragon Kick @ 142.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36950,
+      "color": "#3b82f6",
+      "endSec": 145.5,
+      "iconPath": "/i/002000/002987.png",
+      "label": "Fir",
+      "startSec": 144.5,
+      "tooltip": "Fire's Reply @ 144.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 145.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 144.5,
+      "tooltip": "the Forbidden Chakra @ 144.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 147.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 146.5,
+      "tooltip": "Leaping Opo @ 146.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 149.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 148.5,
+      "tooltip": "Rising Raptor @ 148.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 151.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 150.5,
+      "tooltip": "Pouncing Coeurl @ 150.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 153.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 152.5,
+      "tooltip": "Dragon Kick @ 152.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 155.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 154.5,
+      "tooltip": "Twin Snakes @ 154.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 157.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 156.5,
+      "tooltip": "Demolish @ 156.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 159.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 158.5,
+      "tooltip": "Leaping Opo @ 158.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 161.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 160.5,
+      "tooltip": "Rising Raptor @ 160.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 163.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 162.5,
+      "tooltip": "Pouncing Coeurl @ 162.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 165.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 164.5,
+      "tooltip": "Dragon Kick @ 164.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 167.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 166.5,
+      "tooltip": "Twin Snakes @ 166.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 169.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 168.5,
+      "tooltip": "Pouncing Coeurl @ 168.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 171.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 170.5,
+      "tooltip": "Leaping Opo @ 170.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 173.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 172.5,
+      "tooltip": "Rising Raptor @ 172.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 175.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 174.5,
+      "tooltip": "Demolish @ 174.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 177.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 176.5,
+      "tooltip": "Dragon Kick @ 176.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 179.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 178.5,
+      "tooltip": "Twin Snakes @ 178.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 181.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 180.5,
+      "tooltip": "Pouncing Coeurl @ 180.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 181.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 180.5,
+      "tooltip": "the Forbidden Chakra @ 180.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 183.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 182.5,
+      "tooltip": "Leaping Opo @ 182.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 183.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 182.5,
+      "tooltip": "Perfect Balance @ 182.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 185.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 184.5,
+      "tooltip": "Dragon Kick @ 184.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 187.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 186.5,
+      "tooltip": "Leaping Opo @ 186.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7395,
+      "color": "#f59e0b",
+      "endSec": 187.1,
+      "iconPath": "/i/002000/002541.png",
+      "label": "Rid",
+      "startSec": 186.5,
+      "tooltip": "Riddle of Fire @ 186.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25766,
+      "color": "#f59e0b",
+      "endSec": 187.8,
+      "iconPath": "/i/002000/002978.png",
+      "label": "Rid",
+      "startSec": 187.2,
+      "tooltip": "Riddle of Wind @ 187.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 189.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 188.5,
+      "tooltip": "Dragon Kick @ 188.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 189.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 188.5,
+      "tooltip": "the Forbidden Chakra @ 188.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 189.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 189.2,
+      "tooltip": "the Forbidden Chakra @ 189.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25769,
+      "color": "#3b82f6",
+      "endSec": 191.5,
+      "iconPath": "/i/002000/002981.png",
+      "label": "Pha",
+      "startSec": 190.5,
+      "tooltip": "Phantom Rush @ 190.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 193.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 192.5,
+      "tooltip": "Leaping Opo @ 192.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 193.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 192.5,
+      "tooltip": "the Forbidden Chakra @ 192.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36950,
+      "color": "#3b82f6",
+      "endSec": 195.5,
+      "iconPath": "/i/002000/002987.png",
+      "label": "Fir",
+      "startSec": 194.5,
+      "tooltip": "Fire's Reply @ 194.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36949,
+      "color": "#3b82f6",
+      "endSec": 197.5,
+      "iconPath": "/i/002000/002986.png",
+      "label": "Win",
+      "startSec": 196.5,
+      "tooltip": "Wind's Reply @ 196.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 199.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 198.5,
+      "tooltip": "Dragon Kick @ 198.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 201.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 200.5,
+      "tooltip": "Rising Raptor @ 200.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 203.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 202.5,
+      "tooltip": "Pouncing Coeurl @ 202.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 205.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 204.5,
+      "tooltip": "Leaping Opo @ 204.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 205.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 204.5,
+      "tooltip": "the Forbidden Chakra @ 204.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 207.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 206.5,
+      "tooltip": "Twin Snakes @ 206.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 209.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 208.5,
+      "tooltip": "Demolish @ 208.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 211.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 210.5,
+      "tooltip": "Dragon Kick @ 210.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 213.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 212.5,
+      "tooltip": "Rising Raptor @ 212.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 215.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 214.5,
+      "tooltip": "Pouncing Coeurl @ 214.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 217.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 216.5,
+      "tooltip": "Leaping Opo @ 216.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 219.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 218.5,
+      "tooltip": "Twin Snakes @ 218.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 221.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 220.5,
+      "tooltip": "Pouncing Coeurl @ 220.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 223.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 222.5,
+      "tooltip": "Dragon Kick @ 222.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 225.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 224.5,
+      "tooltip": "Rising Raptor @ 224.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 227.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 226.5,
+      "tooltip": "Demolish @ 226.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 229.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 228.5,
+      "tooltip": "Leaping Opo @ 228.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 231.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 230.5,
+      "tooltip": "Twin Snakes @ 230.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 233.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 232.5,
+      "tooltip": "Pouncing Coeurl @ 232.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 235.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 234.5,
+      "tooltip": "Dragon Kick @ 234.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 237.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 236.5,
+      "tooltip": "Rising Raptor @ 236.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 239.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 238.5,
+      "tooltip": "Pouncing Coeurl @ 238.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 241.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 240.5,
+      "tooltip": "Leaping Opo @ 240.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 241.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 240.5,
+      "tooltip": "the Forbidden Chakra @ 240.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 243.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 242.5,
+      "tooltip": "Twin Snakes @ 242.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 245.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 244.5,
+      "tooltip": "Demolish @ 244.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 247.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 246.5,
+      "tooltip": "Dragon Kick @ 246.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7395,
+      "color": "#f59e0b",
+      "endSec": 247.1,
+      "iconPath": "/i/002000/002541.png",
+      "label": "Rid",
+      "startSec": 246.5,
+      "tooltip": "Riddle of Fire @ 246.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 247.8,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 247.2,
+      "tooltip": "Perfect Balance @ 247.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 249.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 248.5,
+      "tooltip": "Leaping Opo @ 248.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 249.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 248.5,
+      "tooltip": "the Forbidden Chakra @ 248.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7396,
+      "color": "#f59e0b",
+      "endSec": 249.8,
+      "iconPath": "/i/002000/002542.png",
+      "label": "Bro",
+      "startSec": 249.2,
+      "tooltip": "Brotherhood @ 249.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 251.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 250.5,
+      "tooltip": "Dragon Kick @ 250.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 251.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 250.5,
+      "tooltip": "the Forbidden Chakra @ 250.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 253.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 252.5,
+      "tooltip": "Leaping Opo @ 252.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 253.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 252.5,
+      "tooltip": "the Forbidden Chakra @ 252.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36948,
+      "color": "#3b82f6",
+      "endSec": 255.5,
+      "iconPath": "/i/002000/002985.png",
+      "label": "Eli",
+      "startSec": 254.5,
+      "tooltip": "Elixir Burst @ 254.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 255.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 254.5,
+      "tooltip": "Perfect Balance @ 254.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 257.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 256.5,
+      "tooltip": "Rising Raptor @ 256.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 259.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 258.5,
+      "tooltip": "Pouncing Coeurl @ 258.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 261.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 260.5,
+      "tooltip": "Dragon Kick @ 260.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25768,
+      "color": "#3b82f6",
+      "endSec": 263.5,
+      "iconPath": "/i/002000/002980.png",
+      "label": "Ris",
+      "startSec": 262.5,
+      "tooltip": "Rising Phoenix @ 262.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36950,
+      "color": "#3b82f6",
+      "endSec": 265.5,
+      "iconPath": "/i/002000/002987.png",
+      "label": "Fir",
+      "startSec": 264.5,
+      "tooltip": "Fire's Reply @ 264.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 265.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 264.5,
+      "tooltip": "the Forbidden Chakra @ 264.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 267.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 266.5,
+      "tooltip": "Leaping Opo @ 266.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 269.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 268.5,
+      "tooltip": "Twin Snakes @ 268.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 271.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 270.5,
+      "tooltip": "Pouncing Coeurl @ 270.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 273.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 272.5,
+      "tooltip": "Dragon Kick @ 272.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 275.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 274.5,
+      "tooltip": "Rising Raptor @ 274.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 277.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 276.5,
+      "tooltip": "Demolish @ 276.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 279.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 278.5,
+      "tooltip": "Leaping Opo @ 278.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25766,
+      "color": "#f59e0b",
+      "endSec": 279.1,
+      "iconPath": "/i/002000/002978.png",
+      "label": "Rid",
+      "startSec": 278.5,
+      "tooltip": "Riddle of Wind @ 278.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36949,
+      "color": "#3b82f6",
+      "endSec": 281.5,
+      "iconPath": "/i/002000/002986.png",
+      "label": "Win",
+      "startSec": 280.5,
+      "tooltip": "Wind's Reply @ 280.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 283.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 282.5,
+      "tooltip": "Twin Snakes @ 282.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 285.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 284.5,
+      "tooltip": "Pouncing Coeurl @ 284.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 287.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 286.5,
+      "tooltip": "Dragon Kick @ 286.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 289.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 288.5,
+      "tooltip": "Rising Raptor @ 288.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 289.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 288.5,
+      "tooltip": "Perfect Balance @ 288.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 291.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 290.5,
+      "tooltip": "Leaping Opo @ 290.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 293.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 292.5,
+      "tooltip": "Dragon Kick @ 292.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 295.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 294.5,
+      "tooltip": "Leaping Opo @ 294.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25769,
+      "color": "#3b82f6",
+      "endSec": 297.5,
+      "iconPath": "/i/002000/002981.png",
+      "label": "Pha",
+      "startSec": 296.5,
+      "tooltip": "Phantom Rush @ 296.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16476,
+      "color": "#3b82f6",
+      "endSec": 299.5,
+      "iconPath": "/i/002000/002547.png",
+      "label": "Six",
+      "startSec": 298.5,
+      "tooltip": "Six-sided Star @ 298.5s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackCanonical": [
+    {
+      "abilityId": 4262,
+      "color": "#3b82f6",
+      "endSec": -0.5,
+      "iconPath": "/i/002000/002536.png",
+      "label": "For",
+      "startSec": -1.5,
+      "tooltip": "Form Shift @ -1.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 1.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 0.5,
+      "tooltip": "Dragon Kick @ 0.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 1.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 0.5,
+      "tooltip": "the Forbidden Chakra @ 0.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 2.5,
+      "tooltip": "Twin Snakes @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 5.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 4.5,
+      "tooltip": "Demolish @ 4.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 7.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 6.5,
+      "tooltip": "Leaping Opo @ 6.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 9.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 8.5,
+      "tooltip": "Rising Raptor @ 8.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7395,
+      "color": "#f59e0b",
+      "endSec": 9.1,
+      "iconPath": "/i/002000/002541.png",
+      "label": "Rid",
+      "startSec": 8.5,
+      "tooltip": "Riddle of Fire @ 8.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7396,
+      "color": "#f59e0b",
+      "endSec": 9.8,
+      "iconPath": "/i/002000/002542.png",
+      "label": "Bro",
+      "startSec": 9.2,
+      "tooltip": "Brotherhood @ 9.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36950,
+      "color": "#3b82f6",
+      "endSec": 11.5,
+      "iconPath": "/i/002000/002987.png",
+      "label": "Fir",
+      "startSec": 10.5,
+      "tooltip": "Fire's Reply @ 10.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25766,
+      "color": "#f59e0b",
+      "endSec": 11.1,
+      "iconPath": "/i/002000/002978.png",
+      "label": "Rid",
+      "startSec": 10.5,
+      "tooltip": "Riddle of Wind @ 10.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 11.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 11.2,
+      "tooltip": "the Forbidden Chakra @ 11.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36949,
+      "color": "#3b82f6",
+      "endSec": 13.5,
+      "iconPath": "/i/002000/002986.png",
+      "label": "Win",
+      "startSec": 12.5,
+      "tooltip": "Wind's Reply @ 12.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 13.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 12.5,
+      "tooltip": "Perfect Balance @ 12.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 13.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 13.2,
+      "tooltip": "the Forbidden Chakra @ 13.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 15.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 14.5,
+      "tooltip": "Dragon Kick @ 14.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 15.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 14.5,
+      "tooltip": "the Forbidden Chakra @ 14.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 17.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 16.5,
+      "tooltip": "Leaping Opo @ 16.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 19.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 18.5,
+      "tooltip": "Dragon Kick @ 18.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36948,
+      "color": "#3b82f6",
+      "endSec": 21.5,
+      "iconPath": "/i/002000/002985.png",
+      "label": "Eli",
+      "startSec": 20.5,
+      "tooltip": "Elixir Burst @ 20.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 21.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 20.5,
+      "tooltip": "Perfect Balance @ 20.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 23.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 22.5,
+      "tooltip": "Twin Snakes @ 22.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 25.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 24.5,
+      "tooltip": "Pouncing Coeurl @ 24.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 25.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 24.5,
+      "tooltip": "the Forbidden Chakra @ 24.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 27.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 26.5,
+      "tooltip": "Leaping Opo @ 26.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25768,
+      "color": "#3b82f6",
+      "endSec": 29.5,
+      "iconPath": "/i/002000/002980.png",
+      "label": "Ris",
+      "startSec": 28.5,
+      "tooltip": "Rising Phoenix @ 28.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 31.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 30.5,
+      "tooltip": "Dragon Kick @ 30.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 33.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 32.5,
+      "tooltip": "Rising Raptor @ 32.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 35.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 34.5,
+      "tooltip": "Pouncing Coeurl @ 34.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 37.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 36.5,
+      "tooltip": "Leaping Opo @ 36.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 39.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 38.5,
+      "tooltip": "Twin Snakes @ 38.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 41.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 40.5,
+      "tooltip": "Demolish @ 40.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 43.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 42.5,
+      "tooltip": "Dragon Kick @ 42.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 45.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 44.5,
+      "tooltip": "Rising Raptor @ 44.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 47.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 46.5,
+      "tooltip": "Pouncing Coeurl @ 46.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 49.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 48.5,
+      "tooltip": "Leaping Opo @ 48.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 51.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 50.5,
+      "tooltip": "Twin Snakes @ 50.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 53.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 52.5,
+      "tooltip": "Pouncing Coeurl @ 52.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 55.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 54.5,
+      "tooltip": "Dragon Kick @ 54.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 57.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 56.5,
+      "tooltip": "Rising Raptor @ 56.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 59.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 58.5,
+      "tooltip": "Demolish @ 58.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 61.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 60.5,
+      "tooltip": "Leaping Opo @ 60.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 61.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 60.5,
+      "tooltip": "the Forbidden Chakra @ 60.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 63.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 62.5,
+      "tooltip": "Twin Snakes @ 62.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 65.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 64.5,
+      "tooltip": "Pouncing Coeurl @ 64.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 65.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 64.5,
+      "tooltip": "Perfect Balance @ 64.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 67.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 66.5,
+      "tooltip": "Dragon Kick @ 66.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 69.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 68.5,
+      "tooltip": "Leaping Opo @ 68.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 71.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 70.5,
+      "tooltip": "Dragon Kick @ 70.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25769,
+      "color": "#3b82f6",
+      "endSec": 73.5,
+      "iconPath": "/i/002000/002981.png",
+      "label": "Pha",
+      "startSec": 72.5,
+      "tooltip": "Phantom Rush @ 72.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 73.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 72.5,
+      "tooltip": "the Forbidden Chakra @ 72.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 75.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 74.5,
+      "tooltip": "Leaping Opo @ 74.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 77.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 76.5,
+      "tooltip": "Rising Raptor @ 76.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 79.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 78.5,
+      "tooltip": "Pouncing Coeurl @ 78.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 81.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 80.5,
+      "tooltip": "Dragon Kick @ 80.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 83.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 82.5,
+      "tooltip": "Twin Snakes @ 82.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 85.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 84.5,
+      "tooltip": "Demolish @ 84.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 85.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 84.5,
+      "tooltip": "the Forbidden Chakra @ 84.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 87.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 86.5,
+      "tooltip": "Leaping Opo @ 86.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 89.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 88.5,
+      "tooltip": "Rising Raptor @ 88.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 91.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 90.5,
+      "tooltip": "Pouncing Coeurl @ 90.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 93.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 92.5,
+      "tooltip": "Dragon Kick @ 92.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 95.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 94.5,
+      "tooltip": "Twin Snakes @ 94.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 97.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 96.5,
+      "tooltip": "Pouncing Coeurl @ 96.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 97.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 96.5,
+      "tooltip": "the Forbidden Chakra @ 96.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 99.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 98.5,
+      "tooltip": "Leaping Opo @ 98.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 101.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 100.5,
+      "tooltip": "Rising Raptor @ 100.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 103.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 102.5,
+      "tooltip": "Demolish @ 102.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 105.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 104.5,
+      "tooltip": "Dragon Kick @ 104.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 107.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 106.5,
+      "tooltip": "Twin Snakes @ 106.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 109.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 108.5,
+      "tooltip": "Pouncing Coeurl @ 108.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 109.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 108.5,
+      "tooltip": "the Forbidden Chakra @ 108.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 111.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 110.5,
+      "tooltip": "Leaping Opo @ 110.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 113.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 112.5,
+      "tooltip": "Rising Raptor @ 112.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 115.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 114.5,
+      "tooltip": "Pouncing Coeurl @ 114.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 117.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 116.5,
+      "tooltip": "Dragon Kick @ 116.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 119.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 118.5,
+      "tooltip": "Twin Snakes @ 118.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 121.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 120.5,
+      "tooltip": "Demolish @ 120.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 121.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 120.5,
+      "tooltip": "the Forbidden Chakra @ 120.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 123.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 122.5,
+      "tooltip": "Leaping Opo @ 122.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 125.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 124.5,
+      "tooltip": "Rising Raptor @ 124.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 127.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 126.5,
+      "tooltip": "Pouncing Coeurl @ 126.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 129.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 128.5,
+      "tooltip": "Dragon Kick @ 128.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7395,
+      "color": "#f59e0b",
+      "endSec": 129.1,
+      "iconPath": "/i/002000/002541.png",
+      "label": "Rid",
+      "startSec": 128.5,
+      "tooltip": "Riddle of Fire @ 128.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7396,
+      "color": "#f59e0b",
+      "endSec": 129.8,
+      "iconPath": "/i/002000/002542.png",
+      "label": "Bro",
+      "startSec": 129.2,
+      "tooltip": "Brotherhood @ 129.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36950,
+      "color": "#3b82f6",
+      "endSec": 131.5,
+      "iconPath": "/i/002000/002987.png",
+      "label": "Fir",
+      "startSec": 130.5,
+      "tooltip": "Fire's Reply @ 130.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25766,
+      "color": "#f59e0b",
+      "endSec": 131.1,
+      "iconPath": "/i/002000/002978.png",
+      "label": "Rid",
+      "startSec": 130.5,
+      "tooltip": "Riddle of Wind @ 130.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 131.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 131.2,
+      "tooltip": "the Forbidden Chakra @ 131.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36949,
+      "color": "#3b82f6",
+      "endSec": 133.5,
+      "iconPath": "/i/002000/002986.png",
+      "label": "Win",
+      "startSec": 132.5,
+      "tooltip": "Wind's Reply @ 132.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 133.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 132.5,
+      "tooltip": "Perfect Balance @ 132.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 133.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 133.2,
+      "tooltip": "the Forbidden Chakra @ 133.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 135.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 134.5,
+      "tooltip": "Leaping Opo @ 134.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 135.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 134.5,
+      "tooltip": "the Forbidden Chakra @ 134.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 137.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 136.5,
+      "tooltip": "Dragon Kick @ 136.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 139.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 138.5,
+      "tooltip": "Leaping Opo @ 138.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36948,
+      "color": "#3b82f6",
+      "endSec": 141.5,
+      "iconPath": "/i/002000/002985.png",
+      "label": "Eli",
+      "startSec": 140.5,
+      "tooltip": "Elixir Burst @ 140.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 141.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 140.5,
+      "tooltip": "Perfect Balance @ 140.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 143.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 142.5,
+      "tooltip": "Twin Snakes @ 142.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 145.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 144.5,
+      "tooltip": "Pouncing Coeurl @ 144.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 145.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 144.5,
+      "tooltip": "the Forbidden Chakra @ 144.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 147.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 146.5,
+      "tooltip": "Dragon Kick @ 146.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25768,
+      "color": "#3b82f6",
+      "endSec": 149.5,
+      "iconPath": "/i/002000/002980.png",
+      "label": "Ris",
+      "startSec": 148.5,
+      "tooltip": "Rising Phoenix @ 148.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 151.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 150.5,
+      "tooltip": "Leaping Opo @ 150.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 153.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 152.5,
+      "tooltip": "Rising Raptor @ 152.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 155.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 154.5,
+      "tooltip": "Demolish @ 154.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 157.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 156.5,
+      "tooltip": "Dragon Kick @ 156.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 159.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 158.5,
+      "tooltip": "Twin Snakes @ 158.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 161.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 160.5,
+      "tooltip": "Pouncing Coeurl @ 160.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 163.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 162.5,
+      "tooltip": "Leaping Opo @ 162.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 165.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 164.5,
+      "tooltip": "Rising Raptor @ 164.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 167.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 166.5,
+      "tooltip": "Pouncing Coeurl @ 166.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 169.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 168.5,
+      "tooltip": "Dragon Kick @ 168.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 171.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 170.5,
+      "tooltip": "Twin Snakes @ 170.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 173.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 172.5,
+      "tooltip": "Demolish @ 172.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 175.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 174.5,
+      "tooltip": "Leaping Opo @ 174.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 177.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 176.5,
+      "tooltip": "Rising Raptor @ 176.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 179.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 178.5,
+      "tooltip": "Pouncing Coeurl @ 178.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 181.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 180.5,
+      "tooltip": "Dragon Kick @ 180.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 181.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 180.5,
+      "tooltip": "the Forbidden Chakra @ 180.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 183.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 182.5,
+      "tooltip": "Twin Snakes @ 182.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 185.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 184.5,
+      "tooltip": "Pouncing Coeurl @ 184.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 185.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 184.5,
+      "tooltip": "Perfect Balance @ 184.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 187.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 186.5,
+      "tooltip": "Leaping Opo @ 186.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 189.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 188.5,
+      "tooltip": "Dragon Kick @ 188.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 191.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 190.5,
+      "tooltip": "Leaping Opo @ 190.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25769,
+      "color": "#3b82f6",
+      "endSec": 193.5,
+      "iconPath": "/i/002000/002981.png",
+      "label": "Pha",
+      "startSec": 192.5,
+      "tooltip": "Phantom Rush @ 192.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 193.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 192.5,
+      "tooltip": "the Forbidden Chakra @ 192.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 195.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 194.5,
+      "tooltip": "Dragon Kick @ 194.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 197.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 196.5,
+      "tooltip": "Rising Raptor @ 196.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 199.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 198.5,
+      "tooltip": "Demolish @ 198.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 201.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 200.5,
+      "tooltip": "Leaping Opo @ 200.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 203.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 202.5,
+      "tooltip": "Twin Snakes @ 202.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 205.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 204.5,
+      "tooltip": "Pouncing Coeurl @ 204.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 205.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 204.5,
+      "tooltip": "the Forbidden Chakra @ 204.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 207.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 206.5,
+      "tooltip": "Dragon Kick @ 206.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 209.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 208.5,
+      "tooltip": "Rising Raptor @ 208.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 211.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 210.5,
+      "tooltip": "Pouncing Coeurl @ 210.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 213.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 212.5,
+      "tooltip": "Leaping Opo @ 212.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 215.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 214.5,
+      "tooltip": "Twin Snakes @ 214.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 217.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 216.5,
+      "tooltip": "Demolish @ 216.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 217.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 216.5,
+      "tooltip": "the Forbidden Chakra @ 216.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 219.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 218.5,
+      "tooltip": "Dragon Kick @ 218.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 221.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 220.5,
+      "tooltip": "Rising Raptor @ 220.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 223.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 222.5,
+      "tooltip": "Pouncing Coeurl @ 222.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 225.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 224.5,
+      "tooltip": "Leaping Opo @ 224.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 227.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 226.5,
+      "tooltip": "Twin Snakes @ 226.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 229.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 228.5,
+      "tooltip": "Pouncing Coeurl @ 228.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 229.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 228.5,
+      "tooltip": "the Forbidden Chakra @ 228.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 231.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 230.5,
+      "tooltip": "Dragon Kick @ 230.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 233.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 232.5,
+      "tooltip": "Rising Raptor @ 232.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 235.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 234.5,
+      "tooltip": "Demolish @ 234.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 237.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 236.5,
+      "tooltip": "Leaping Opo @ 236.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 239.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 238.5,
+      "tooltip": "Twin Snakes @ 238.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 241.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 240.5,
+      "tooltip": "Pouncing Coeurl @ 240.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 241.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 240.5,
+      "tooltip": "the Forbidden Chakra @ 240.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 243.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 242.5,
+      "tooltip": "Dragon Kick @ 242.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 245.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 244.5,
+      "tooltip": "Rising Raptor @ 244.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 247.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 246.5,
+      "tooltip": "Pouncing Coeurl @ 246.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 249.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 248.5,
+      "tooltip": "Leaping Opo @ 248.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7395,
+      "color": "#f59e0b",
+      "endSec": 249.1,
+      "iconPath": "/i/002000/002541.png",
+      "label": "Rid",
+      "startSec": 248.5,
+      "tooltip": "Riddle of Fire @ 248.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7396,
+      "color": "#f59e0b",
+      "endSec": 249.8,
+      "iconPath": "/i/002000/002542.png",
+      "label": "Bro",
+      "startSec": 249.2,
+      "tooltip": "Brotherhood @ 249.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36950,
+      "color": "#3b82f6",
+      "endSec": 251.5,
+      "iconPath": "/i/002000/002987.png",
+      "label": "Fir",
+      "startSec": 250.5,
+      "tooltip": "Fire's Reply @ 250.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25766,
+      "color": "#f59e0b",
+      "endSec": 251.1,
+      "iconPath": "/i/002000/002978.png",
+      "label": "Rid",
+      "startSec": 250.5,
+      "tooltip": "Riddle of Wind @ 250.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 251.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 251.2,
+      "tooltip": "the Forbidden Chakra @ 251.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36949,
+      "color": "#3b82f6",
+      "endSec": 253.5,
+      "iconPath": "/i/002000/002986.png",
+      "label": "Win",
+      "startSec": 252.5,
+      "tooltip": "Wind's Reply @ 252.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 253.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 252.5,
+      "tooltip": "Perfect Balance @ 252.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 253.8,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 253.2,
+      "tooltip": "the Forbidden Chakra @ 253.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 255.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 254.5,
+      "tooltip": "Dragon Kick @ 254.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 255.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 254.5,
+      "tooltip": "the Forbidden Chakra @ 254.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 257.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 256.5,
+      "tooltip": "Leaping Opo @ 256.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 259.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 258.5,
+      "tooltip": "Dragon Kick @ 258.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36948,
+      "color": "#3b82f6",
+      "endSec": 261.5,
+      "iconPath": "/i/002000/002985.png",
+      "label": "Eli",
+      "startSec": 260.5,
+      "tooltip": "Elixir Burst @ 260.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 261.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 260.5,
+      "tooltip": "Perfect Balance @ 260.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 263.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 262.5,
+      "tooltip": "Twin Snakes @ 262.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 265.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 264.5,
+      "tooltip": "Demolish @ 264.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3547,
+      "color": "#f59e0b",
+      "endSec": 265.1,
+      "iconPath": "/i/002000/002535.png",
+      "label": "the",
+      "startSec": 264.5,
+      "tooltip": "the Forbidden Chakra @ 264.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 267.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 266.5,
+      "tooltip": "Leaping Opo @ 266.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25768,
+      "color": "#3b82f6",
+      "endSec": 269.5,
+      "iconPath": "/i/002000/002980.png",
+      "label": "Ris",
+      "startSec": 268.5,
+      "tooltip": "Rising Phoenix @ 268.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 271.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 270.5,
+      "tooltip": "Dragon Kick @ 270.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 273.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 272.5,
+      "tooltip": "Rising Raptor @ 272.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 275.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 274.5,
+      "tooltip": "Pouncing Coeurl @ 274.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 277.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 276.5,
+      "tooltip": "Leaping Opo @ 276.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 279.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 278.5,
+      "tooltip": "Twin Snakes @ 278.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 281.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 280.5,
+      "tooltip": "Pouncing Coeurl @ 280.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 283.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 282.5,
+      "tooltip": "Dragon Kick @ 282.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36946,
+      "color": "#3b82f6",
+      "endSec": 285.5,
+      "iconPath": "/i/002000/002983.png",
+      "label": "Ris",
+      "startSec": 284.5,
+      "tooltip": "Rising Raptor @ 284.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 66,
+      "color": "#3b82f6",
+      "endSec": 287.5,
+      "iconPath": "/i/000000/000204.png",
+      "label": "Dem",
+      "startSec": 286.5,
+      "tooltip": "Demolish @ 286.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 289.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 288.5,
+      "tooltip": "Leaping Opo @ 288.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 61,
+      "color": "#3b82f6",
+      "endSec": 291.5,
+      "iconPath": "/i/000000/000213.png",
+      "label": "Twi",
+      "startSec": 290.5,
+      "tooltip": "Twin Snakes @ 290.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36947,
+      "color": "#3b82f6",
+      "endSec": 293.5,
+      "iconPath": "/i/002000/002984.png",
+      "label": "Pou",
+      "startSec": 292.5,
+      "tooltip": "Pouncing Coeurl @ 292.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 69,
+      "color": "#f59e0b",
+      "endSec": 293.1,
+      "iconPath": "/i/000000/000217.png",
+      "label": "Per",
+      "startSec": 292.5,
+      "tooltip": "Perfect Balance @ 292.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 295.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 294.5,
+      "tooltip": "Dragon Kick @ 294.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36945,
+      "color": "#3b82f6",
+      "endSec": 297.5,
+      "iconPath": "/i/002000/002982.png",
+      "label": "Lea",
+      "startSec": 296.5,
+      "tooltip": "Leaping Opo @ 296.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 74,
+      "color": "#3b82f6",
+      "endSec": 299.5,
+      "iconPath": "/i/002000/002528.png",
+      "label": "Dra",
+      "startSec": 298.5,
+      "tooltip": "Dragon Kick @ 298.5s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 1848.38,
+      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [],
+      "kind": "residual",
+      "lostPotency": 1401.41,
+      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 36948,
+      "abilityName": "Elixir Burst",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #5: cast Dragon Kick, canonical opens Elixir Burst (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 74,
+      "abilityName": "Dragon Kick",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #6: cast Leaping Opo, canonical opens Dragon Kick (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 36949,
+      "abilityName": "Wind's Reply",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #7: cast Elixir Burst, canonical opens Wind's Reply (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 36950,
+      "abilityName": "Fire's Reply",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #8: cast Twin Snakes, canonical opens Fire's Reply (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 74,
+      "abilityName": "Dragon Kick",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #12: cast Leaping Opo, canonical opens Dragon Kick (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 1.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 0.5,
+        "tooltip": "Dragon Kick  (GCD)  @  0:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7395,
+        "color": "#777777",
+        "endSec": 1.0,
+        "iconPath": "/i/002000/002541.png",
+        "label": "Rid",
+        "startSec": 0.5,
+        "tooltip": "Riddle of Fire  (oGCD)  @  0:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7396,
+        "color": "#777777",
+        "endSec": 1.7,
+        "iconPath": "/i/002000/002542.png",
+        "label": "Bro",
+        "startSec": 1.2,
+        "tooltip": "Brotherhood  (oGCD)  @  0:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36950,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/002000/002987.png",
+        "label": "Fir",
+        "startSec": 2.5,
+        "tooltip": "Fire's Reply  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25766,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/002000/002978.png",
+        "label": "Rid",
+        "startSec": 2.5,
+        "tooltip": "Riddle of Wind  (oGCD)  @  0:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 3.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 3.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  0:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36949,
+        "color": "#777777",
+        "endSec": 5.0,
+        "iconPath": "/i/002000/002986.png",
+        "label": "Win",
+        "startSec": 4.5,
+        "tooltip": "Wind's Reply  (GCD)  @  0:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 69,
+        "color": "#777777",
+        "endSec": 5.0,
+        "iconPath": "/i/000000/000217.png",
+        "label": "Per",
+        "startSec": 4.5,
+        "tooltip": "Perfect Balance  (oGCD)  @  0:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 5.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 5.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  0:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 7.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 6.5,
+        "tooltip": "Leaping Opo  (GCD)  @  0:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 7.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 6.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  0:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 9.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 8.5,
+        "tooltip": "Dragon Kick  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 11.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 10.5,
+        "tooltip": "Leaping Opo  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36948,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/002000/002985.png",
+        "label": "Eli",
+        "startSec": 12.5,
+        "tooltip": "Elixir Burst  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 69,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/000000/000217.png",
+        "label": "Per",
+        "startSec": 12.5,
+        "tooltip": "Perfect Balance  (oGCD)  @  0:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 13.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 13.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  0:13",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 15.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 14.5,
+        "tooltip": "Twin Snakes  (GCD)  @  0:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 17.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 16.5,
+        "tooltip": "Demolish  (GCD)  @  0:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 19.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 18.5,
+        "tooltip": "Dragon Kick  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25768,
+        "color": "#777777",
+        "endSec": 21.0,
+        "iconPath": "/i/002000/002980.png",
+        "label": "Ris",
+        "startSec": 20.5,
+        "tooltip": "Rising Phoenix  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 23.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 22.5,
+        "tooltip": "Leaping Opo  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 25.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 24.5,
+        "tooltip": "Rising Raptor  (GCD)  @  0:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 27.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 26.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  0:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 29.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 28.5,
+        "tooltip": "Dragon Kick  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 31.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 30.5,
+        "tooltip": "Twin Snakes  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 33.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 32.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 35.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 34.5,
+        "tooltip": "Leaping Opo  (GCD)  @  0:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 37.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 36.5,
+        "tooltip": "Rising Raptor  (GCD)  @  0:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 39.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 38.5,
+        "tooltip": "Demolish  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 41.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 40.5,
+        "tooltip": "Dragon Kick  (GCD)  @  0:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 43.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 42.5,
+        "tooltip": "Twin Snakes  (GCD)  @  0:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 45.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 44.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  0:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 47.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 46.5,
+        "tooltip": "Leaping Opo  (GCD)  @  0:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 49.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 48.5,
+        "tooltip": "Rising Raptor  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 49.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 48.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  0:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 51.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 50.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  0:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 53.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 52.5,
+        "tooltip": "Dragon Kick  (GCD)  @  0:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 55.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 54.5,
+        "tooltip": "Twin Snakes  (GCD)  @  0:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 57.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 56.5,
+        "tooltip": "Demolish  (GCD)  @  0:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 69,
+        "color": "#777777",
+        "endSec": 57.0,
+        "iconPath": "/i/000000/000217.png",
+        "label": "Per",
+        "startSec": 56.5,
+        "tooltip": "Perfect Balance  (oGCD)  @  0:56",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 59.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 58.5,
+        "tooltip": "Leaping Opo  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 61.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 60.5,
+        "tooltip": "Dragon Kick  (GCD)  @  1:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7395,
+        "color": "#777777",
+        "endSec": 61.0,
+        "iconPath": "/i/002000/002541.png",
+        "label": "Rid",
+        "startSec": 60.5,
+        "tooltip": "Riddle of Fire  (oGCD)  @  1:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 61.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 61.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  1:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 62.5,
+        "tooltip": "Leaping Opo  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 62.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  1:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 63.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 63.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  1:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25769,
+        "color": "#777777",
+        "endSec": 65.0,
+        "iconPath": "/i/002000/002981.png",
+        "label": "Pha",
+        "startSec": 64.5,
+        "tooltip": "Phantom Rush  (GCD)  @  1:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36950,
+        "color": "#777777",
+        "endSec": 67.0,
+        "iconPath": "/i/002000/002987.png",
+        "label": "Fir",
+        "startSec": 66.5,
+        "tooltip": "Fire's Reply  (GCD)  @  1:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 69.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 68.5,
+        "tooltip": "Dragon Kick  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 71.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 70.5,
+        "tooltip": "Rising Raptor  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 73.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 72.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 73.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 72.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  1:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 75.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 74.5,
+        "tooltip": "Leaping Opo  (GCD)  @  1:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 77.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 76.5,
+        "tooltip": "Twin Snakes  (GCD)  @  1:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 79.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 78.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 81.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 80.5,
+        "tooltip": "Dragon Kick  (GCD)  @  1:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 83.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 82.5,
+        "tooltip": "Rising Raptor  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 85.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 84.5,
+        "tooltip": "Demolish  (GCD)  @  1:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 87.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 86.5,
+        "tooltip": "Leaping Opo  (GCD)  @  1:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 89.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 88.5,
+        "tooltip": "Twin Snakes  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 91.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 90.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  1:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 92.5,
+        "tooltip": "Dragon Kick  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25766,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/002000/002978.png",
+        "label": "Rid",
+        "startSec": 92.5,
+        "tooltip": "Riddle of Wind  (oGCD)  @  1:32",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36949,
+        "color": "#777777",
+        "endSec": 95.0,
+        "iconPath": "/i/002000/002986.png",
+        "label": "Win",
+        "startSec": 94.5,
+        "tooltip": "Wind's Reply  (GCD)  @  1:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 97.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 96.5,
+        "tooltip": "Rising Raptor  (GCD)  @  1:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 99.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 98.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 101.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 100.5,
+        "tooltip": "Leaping Opo  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 103.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 102.5,
+        "tooltip": "Twin Snakes  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 105.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 104.5,
+        "tooltip": "Demolish  (GCD)  @  1:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 107.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 106.5,
+        "tooltip": "Dragon Kick  (GCD)  @  1:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 109.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 108.5,
+        "tooltip": "Rising Raptor  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 109.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 108.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  1:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 111.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 110.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 113.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 112.5,
+        "tooltip": "Leaping Opo  (GCD)  @  1:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 115.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 114.5,
+        "tooltip": "Twin Snakes  (GCD)  @  1:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 117.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 116.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  1:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 69,
+        "color": "#777777",
+        "endSec": 117.0,
+        "iconPath": "/i/000000/000217.png",
+        "label": "Per",
+        "startSec": 116.5,
+        "tooltip": "Perfect Balance  (oGCD)  @  1:56",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 119.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 118.5,
+        "tooltip": "Dragon Kick  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 121.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 120.5,
+        "tooltip": "Leaping Opo  (GCD)  @  2:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7395,
+        "color": "#777777",
+        "endSec": 121.0,
+        "iconPath": "/i/002000/002541.png",
+        "label": "Rid",
+        "startSec": 120.5,
+        "tooltip": "Riddle of Fire  (oGCD)  @  2:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7396,
+        "color": "#777777",
+        "endSec": 121.7,
+        "iconPath": "/i/002000/002542.png",
+        "label": "Bro",
+        "startSec": 121.2,
+        "tooltip": "Brotherhood  (oGCD)  @  2:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 122.5,
+        "tooltip": "Dragon Kick  (GCD)  @  2:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 122.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  2:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 123.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 123.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  2:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36948,
+        "color": "#777777",
+        "endSec": 125.0,
+        "iconPath": "/i/002000/002985.png",
+        "label": "Eli",
+        "startSec": 124.5,
+        "tooltip": "Elixir Burst  (GCD)  @  2:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 69,
+        "color": "#777777",
+        "endSec": 125.0,
+        "iconPath": "/i/000000/000217.png",
+        "label": "Per",
+        "startSec": 124.5,
+        "tooltip": "Perfect Balance  (oGCD)  @  2:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 125.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 125.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  2:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 127.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 126.5,
+        "tooltip": "Rising Raptor  (GCD)  @  2:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 129.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 128.5,
+        "tooltip": "Demolish  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 131.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 130.5,
+        "tooltip": "Leaping Opo  (GCD)  @  2:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25768,
+        "color": "#777777",
+        "endSec": 133.0,
+        "iconPath": "/i/002000/002980.png",
+        "label": "Ris",
+        "startSec": 132.5,
+        "tooltip": "Rising Phoenix  (GCD)  @  2:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 133.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 132.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  2:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36950,
+        "color": "#777777",
+        "endSec": 135.0,
+        "iconPath": "/i/002000/002987.png",
+        "label": "Fir",
+        "startSec": 134.5,
+        "tooltip": "Fire's Reply  (GCD)  @  2:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 137.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 136.5,
+        "tooltip": "Dragon Kick  (GCD)  @  2:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 139.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 138.5,
+        "tooltip": "Twin Snakes  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 141.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 140.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 143.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 142.5,
+        "tooltip": "Leaping Opo  (GCD)  @  2:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 145.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 144.5,
+        "tooltip": "Rising Raptor  (GCD)  @  2:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 147.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 146.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  2:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 149.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 148.5,
+        "tooltip": "Dragon Kick  (GCD)  @  2:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 151.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 150.5,
+        "tooltip": "Twin Snakes  (GCD)  @  2:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 153.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 152.5,
+        "tooltip": "Demolish  (GCD)  @  2:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 155.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 154.5,
+        "tooltip": "Leaping Opo  (GCD)  @  2:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 157.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 156.5,
+        "tooltip": "Rising Raptor  (GCD)  @  2:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 159.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 158.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  2:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 161.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 160.5,
+        "tooltip": "Dragon Kick  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 163.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 162.5,
+        "tooltip": "Twin Snakes  (GCD)  @  2:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 165.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 164.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  2:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 167.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 166.5,
+        "tooltip": "Leaping Opo  (GCD)  @  2:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 169.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 168.5,
+        "tooltip": "Rising Raptor  (GCD)  @  2:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 169.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 168.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  2:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 171.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 170.5,
+        "tooltip": "Demolish  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 173.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 172.5,
+        "tooltip": "Dragon Kick  (GCD)  @  2:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 175.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 174.5,
+        "tooltip": "Twin Snakes  (GCD)  @  2:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 177.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 176.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  2:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 69,
+        "color": "#777777",
+        "endSec": 177.0,
+        "iconPath": "/i/000000/000217.png",
+        "label": "Per",
+        "startSec": 176.5,
+        "tooltip": "Perfect Balance  (oGCD)  @  2:56",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 179.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 178.5,
+        "tooltip": "Leaping Opo  (GCD)  @  2:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 181.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 180.5,
+        "tooltip": "Dragon Kick  (GCD)  @  3:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7395,
+        "color": "#777777",
+        "endSec": 181.0,
+        "iconPath": "/i/002000/002541.png",
+        "label": "Rid",
+        "startSec": 180.5,
+        "tooltip": "Riddle of Fire  (oGCD)  @  3:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 181.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 181.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  3:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 183.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 182.5,
+        "tooltip": "Leaping Opo  (GCD)  @  3:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25766,
+        "color": "#777777",
+        "endSec": 183.0,
+        "iconPath": "/i/002000/002978.png",
+        "label": "Rid",
+        "startSec": 182.5,
+        "tooltip": "Riddle of Wind  (oGCD)  @  3:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 183.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 183.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  3:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25769,
+        "color": "#777777",
+        "endSec": 185.0,
+        "iconPath": "/i/002000/002981.png",
+        "label": "Pha",
+        "startSec": 184.5,
+        "tooltip": "Phantom Rush  (GCD)  @  3:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 185.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 184.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  3:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36950,
+        "color": "#777777",
+        "endSec": 187.0,
+        "iconPath": "/i/002000/002987.png",
+        "label": "Fir",
+        "startSec": 186.5,
+        "tooltip": "Fire's Reply  (GCD)  @  3:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36949,
+        "color": "#777777",
+        "endSec": 189.0,
+        "iconPath": "/i/002000/002986.png",
+        "label": "Win",
+        "startSec": 188.5,
+        "tooltip": "Wind's Reply  (GCD)  @  3:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 191.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 190.5,
+        "tooltip": "Dragon Kick  (GCD)  @  3:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 193.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 192.5,
+        "tooltip": "Rising Raptor  (GCD)  @  3:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 193.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 192.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  3:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 195.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 194.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  3:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 197.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 196.5,
+        "tooltip": "Leaping Opo  (GCD)  @  3:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 199.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 198.5,
+        "tooltip": "Twin Snakes  (GCD)  @  3:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 201.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 200.5,
+        "tooltip": "Demolish  (GCD)  @  3:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 203.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 202.5,
+        "tooltip": "Dragon Kick  (GCD)  @  3:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 205.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 204.5,
+        "tooltip": "Rising Raptor  (GCD)  @  3:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 207.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 206.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  3:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 209.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 208.5,
+        "tooltip": "Leaping Opo  (GCD)  @  3:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 211.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 210.5,
+        "tooltip": "Twin Snakes  (GCD)  @  3:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 213.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 212.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  3:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 215.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 214.5,
+        "tooltip": "Dragon Kick  (GCD)  @  3:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 217.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 216.5,
+        "tooltip": "Rising Raptor  (GCD)  @  3:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 219.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 218.5,
+        "tooltip": "Demolish  (GCD)  @  3:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 221.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 220.5,
+        "tooltip": "Leaping Opo  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 223.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 222.5,
+        "tooltip": "Twin Snakes  (GCD)  @  3:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 225.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 224.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  3:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 227.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 226.5,
+        "tooltip": "Dragon Kick  (GCD)  @  3:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 229.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 228.5,
+        "tooltip": "Rising Raptor  (GCD)  @  3:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 229.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 228.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  3:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 231.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 230.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 233.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 232.5,
+        "tooltip": "Leaping Opo  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 235.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 234.5,
+        "tooltip": "Twin Snakes  (GCD)  @  3:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 237.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 236.5,
+        "tooltip": "Demolish  (GCD)  @  3:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 69,
+        "color": "#777777",
+        "endSec": 237.0,
+        "iconPath": "/i/000000/000217.png",
+        "label": "Per",
+        "startSec": 236.5,
+        "tooltip": "Perfect Balance  (oGCD)  @  3:56",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 239.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 238.5,
+        "tooltip": "Dragon Kick  (GCD)  @  3:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 241.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 240.5,
+        "tooltip": "Leaping Opo  (GCD)  @  4:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7395,
+        "color": "#777777",
+        "endSec": 241.0,
+        "iconPath": "/i/002000/002541.png",
+        "label": "Rid",
+        "startSec": 240.5,
+        "tooltip": "Riddle of Fire  (oGCD)  @  4:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7396,
+        "color": "#777777",
+        "endSec": 241.7,
+        "iconPath": "/i/002000/002542.png",
+        "label": "Bro",
+        "startSec": 241.2,
+        "tooltip": "Brotherhood  (oGCD)  @  4:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 243.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 242.5,
+        "tooltip": "Dragon Kick  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 243.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 242.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  4:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 243.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 243.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  4:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36948,
+        "color": "#777777",
+        "endSec": 245.0,
+        "iconPath": "/i/002000/002985.png",
+        "label": "Eli",
+        "startSec": 244.5,
+        "tooltip": "Elixir Burst  (GCD)  @  4:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 69,
+        "color": "#777777",
+        "endSec": 245.0,
+        "iconPath": "/i/000000/000217.png",
+        "label": "Per",
+        "startSec": 244.5,
+        "tooltip": "Perfect Balance  (oGCD)  @  4:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 245.7,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 245.2,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  4:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 247.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 246.5,
+        "tooltip": "Rising Raptor  (GCD)  @  4:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 249.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 248.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  4:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 251.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 250.5,
+        "tooltip": "Leaping Opo  (GCD)  @  4:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25768,
+        "color": "#777777",
+        "endSec": 253.0,
+        "iconPath": "/i/002000/002980.png",
+        "label": "Ris",
+        "startSec": 252.5,
+        "tooltip": "Rising Phoenix  (GCD)  @  4:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 253.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 252.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  4:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36950,
+        "color": "#777777",
+        "endSec": 255.0,
+        "iconPath": "/i/002000/002987.png",
+        "label": "Fir",
+        "startSec": 254.5,
+        "tooltip": "Fire's Reply  (GCD)  @  4:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 257.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 256.5,
+        "tooltip": "Dragon Kick  (GCD)  @  4:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 259.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 258.5,
+        "tooltip": "Twin Snakes  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 261.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 260.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  4:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 263.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 262.5,
+        "tooltip": "Leaping Opo  (GCD)  @  4:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 265.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 264.5,
+        "tooltip": "Rising Raptor  (GCD)  @  4:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 66,
+        "color": "#777777",
+        "endSec": 267.0,
+        "iconPath": "/i/000000/000204.png",
+        "label": "Dem",
+        "startSec": 266.5,
+        "tooltip": "Demolish  (GCD)  @  4:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 269.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 268.5,
+        "tooltip": "Dragon Kick  (GCD)  @  4:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 271.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 270.5,
+        "tooltip": "Twin Snakes  (GCD)  @  4:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 273.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 272.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  4:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25766,
+        "color": "#777777",
+        "endSec": 273.0,
+        "iconPath": "/i/002000/002978.png",
+        "label": "Rid",
+        "startSec": 272.5,
+        "tooltip": "Riddle of Wind  (oGCD)  @  4:32",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36949,
+        "color": "#777777",
+        "endSec": 275.0,
+        "iconPath": "/i/002000/002986.png",
+        "label": "Win",
+        "startSec": 274.5,
+        "tooltip": "Wind's Reply  (GCD)  @  4:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 277.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 276.5,
+        "tooltip": "Leaping Opo  (GCD)  @  4:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 279.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 278.5,
+        "tooltip": "Rising Raptor  (GCD)  @  4:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36947,
+        "color": "#777777",
+        "endSec": 281.0,
+        "iconPath": "/i/002000/002984.png",
+        "label": "Pou",
+        "startSec": 280.5,
+        "tooltip": "Pouncing Coeurl  (GCD)  @  4:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 283.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 282.5,
+        "tooltip": "Dragon Kick  (GCD)  @  4:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 61,
+        "color": "#777777",
+        "endSec": 285.0,
+        "iconPath": "/i/000000/000213.png",
+        "label": "Twi",
+        "startSec": 284.5,
+        "tooltip": "Twin Snakes  (GCD)  @  4:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 69,
+        "color": "#777777",
+        "endSec": 285.0,
+        "iconPath": "/i/000000/000217.png",
+        "label": "Per",
+        "startSec": 284.5,
+        "tooltip": "Perfect Balance  (oGCD)  @  4:44",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 287.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 286.5,
+        "tooltip": "Leaping Opo  (GCD)  @  4:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 289.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 288.5,
+        "tooltip": "Dragon Kick  (GCD)  @  4:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3547,
+        "color": "#777777",
+        "endSec": 289.0,
+        "iconPath": "/i/002000/002535.png",
+        "label": "the",
+        "startSec": 288.5,
+        "tooltip": "the Forbidden Chakra  (oGCD)  @  4:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36945,
+        "color": "#777777",
+        "endSec": 291.0,
+        "iconPath": "/i/002000/002982.png",
+        "label": "Lea",
+        "startSec": 290.5,
+        "tooltip": "Leaping Opo  (GCD)  @  4:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25769,
+        "color": "#777777",
+        "endSec": 293.0,
+        "iconPath": "/i/002000/002981.png",
+        "label": "Pha",
+        "startSec": 292.5,
+        "tooltip": "Phantom Rush  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 74,
+        "color": "#777777",
+        "endSec": 295.0,
+        "iconPath": "/i/002000/002528.png",
+        "label": "Dra",
+        "startSec": 294.5,
+        "tooltip": "Dragon Kick  (GCD)  @  4:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36946,
+        "color": "#777777",
+        "endSec": 297.0,
+        "iconPath": "/i/002000/002983.png",
+        "label": "Ris",
+        "startSec": 296.5,
+        "tooltip": "Rising Raptor  (GCD)  @  4:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16476,
+        "color": "#777777",
+        "endSec": 299.0,
+        "iconPath": "/i/002000/002547.png",
+        "label": "Six",
+        "startSec": 298.5,
+        "tooltip": "Six-sided Star  (GCD)  @  4:58",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 104189.84,
+    "efficiencyPct": 96.98,
+    "fightDurationSec": 300.0,
+    "idealizedPotency": 107439.63,
+    "killTimeSec": 300,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

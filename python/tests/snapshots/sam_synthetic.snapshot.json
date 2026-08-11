@@ -1,0 +1,2266 @@
+{
+  "abilityMeta": {
+    "16481": {
+      "iconPath": "/i/003000/003178.png",
+      "id": 16481,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Hissatsu: Senei"
+    },
+    "16482": {
+      "iconPath": "/i/003000/003179.png",
+      "id": 16482,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Ikishoten"
+    },
+    "16486": {
+      "iconPath": "/i/003000/003183.png",
+      "id": 16486,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Kaeshi: Setsugekka"
+    },
+    "16487": {
+      "iconPath": "/i/003000/003184.png",
+      "id": 16487,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Shoha"
+    },
+    "25781": {
+      "iconPath": "/i/003000/003187.png",
+      "id": 25781,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Ogi Namikiri"
+    },
+    "25782": {
+      "iconPath": "/i/003000/003188.png",
+      "id": 25782,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Kaeshi: Namikiri"
+    },
+    "36963": {
+      "iconPath": "/i/003000/003191.png",
+      "id": 36963,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Gyofu"
+    },
+    "36964": {
+      "iconPath": "/i/003000/003192.png",
+      "id": 36964,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Zanshin"
+    },
+    "36966": {
+      "iconPath": "/i/003000/003194.png",
+      "id": 36966,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Tendo Setsugekka"
+    },
+    "36968": {
+      "iconPath": "/i/003000/003196.png",
+      "id": 36968,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Tendo Kaeshi Setsugekka"
+    },
+    "7478": {
+      "iconPath": "/i/003000/003152.png",
+      "id": 7478,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Jinpu"
+    },
+    "7479": {
+      "iconPath": "/i/003000/003156.png",
+      "id": 7479,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Shifu"
+    },
+    "7480": {
+      "iconPath": "/i/003000/003166.png",
+      "id": 7480,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Yukikaze"
+    },
+    "7481": {
+      "iconPath": "/i/003000/003158.png",
+      "id": 7481,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Gekko"
+    },
+    "7482": {
+      "iconPath": "/i/003000/003164.png",
+      "id": 7482,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Kasha"
+    },
+    "7487": {
+      "iconPath": "/i/003000/003162.png",
+      "id": 7487,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Midare Setsugekka"
+    },
+    "7489": {
+      "iconPath": "/i/003000/003160.png",
+      "id": 7489,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Higanbana"
+    },
+    "7490": {
+      "iconPath": "/i/003000/003173.png",
+      "id": 7490,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Hissatsu: Shinten"
+    },
+    "7497": {
+      "iconPath": "/i/003000/003172.png",
+      "id": 7497,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Meditate"
+    },
+    "7499": {
+      "iconPath": "/i/003000/003167.png",
+      "id": 7499,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Meikyo Shisui"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "16481": 1,
+        "16486": 1,
+        "36963": 9,
+        "7478": 8,
+        "7479": 6,
+        "7481": 9,
+        "7482": 6,
+        "7487": 5,
+        "7490": 4
+      },
+      "totalCasts": 49
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": []
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 383.72,
+        "clipLostGcds": 1.2,
+        "clipLostPotency": 460.47,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 3.8,
+        "idleLostPotency": 1458.14,
+        "totalClipSec": 3.0,
+        "totalIdleSec": 9.5,
+        "worstClips": [
+          [
+            47.5,
+            0.6,
+            1
+          ],
+          [
+            60.0,
+            0.6,
+            1
+          ],
+          [
+            7.5,
+            0.6,
+            1
+          ],
+          [
+            77.5,
+            0.6,
+            1
+          ],
+          [
+            102.5,
+            0.6,
+            1
+          ]
+        ],
+        "worstIdle": [
+          [
+            77.5,
+            1.9
+          ],
+          [
+            102.5,
+            1.9
+          ],
+          [
+            7.5,
+            1.9
+          ],
+          [
+            47.5,
+            1.9
+          ],
+          [
+            60.0,
+            1.9
+          ]
+        ]
+      },
+      "downtimeSource": "fallback_heuristic"
+    },
+    "Drift": {
+      "downtimeSource": "fallback_heuristic",
+      "downtimeWindows": [
+        [
+          117.5,
+          360.0
+        ]
+      ],
+      "fightDurationSec": 360.0,
+      "findings": [
+        {
+          "abilityId": 7499,
+          "abilityName": "Meikyo Shisui",
+          "cappedSeconds": 117.5,
+          "casts": 0,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 2.0,
+          "lostPotency": 2600.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16482,
+          "abilityName": "Ikishoten",
+          "cappedSeconds": 117.5,
+          "casts": 0,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16481,
+          "abilityName": "Hissatsu: Senei",
+          "cappedSeconds": 57.5,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 7487,
+          "expectedId": 7482,
+          "lostPotency": 0.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Midare Setsugekka, canonical uses Kasha (same potency)"
+        },
+        {
+          "actualId": 16486,
+          "expectedId": 7480,
+          "lostPotency": 0.0,
+          "position": 6,
+          "summary": "Opener slot #6: cast Kaeshi: Setsugekka, canonical uses Yukikaze (same potency)"
+        },
+        {
+          "actualId": 36963,
+          "expectedId": 7487,
+          "lostPotency": 440.0,
+          "position": 7,
+          "summary": "Opener slot #7: cast Gyofu (240p), canonical uses Midare Setsugekka (680p) \u2014 -440p"
+        },
+        {
+          "actualId": 7478,
+          "expectedId": 16486,
+          "lostPotency": 380.0,
+          "position": 8,
+          "summary": "Opener slot #8: cast Jinpu (300p), canonical uses Kaeshi: Setsugekka (680p) \u2014 -380p"
+        },
+        {
+          "actualId": 7481,
+          "expectedId": 25781,
+          "lostPotency": 580.0,
+          "position": 9,
+          "summary": "Opener slot #9: cast Gekko (420p), canonical uses Ogi Namikiri (1000p) \u2014 -580p"
+        },
+        {
+          "actualId": 7479,
+          "expectedId": 25782,
+          "lostPotency": 700.0,
+          "position": 10,
+          "summary": "Opener slot #10: cast Shifu (300p), canonical uses Kaeshi: Namikiri (1000p) \u2014 -700p"
+        },
+        {
+          "actualId": 7482,
+          "expectedId": 36963,
+          "lostPotency": 0.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Kasha, canonical uses Gyofu (same potency)"
+        },
+        {
+          "actualId": 7481,
+          "expectedId": 7478,
+          "lostPotency": 0.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Gekko, canonical uses Jinpu (same potency)"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": [
+        {
+          "abilityId": 7482,
+          "abilityName": "Kasha",
+          "gauge": "kenki",
+          "lostPotency": 100.0,
+          "timeSec": 92.5,
+          "wasted": 10
+        },
+        {
+          "abilityId": 7481,
+          "abilityName": "Gekko",
+          "gauge": "kenki",
+          "lostPotency": 100.0,
+          "timeSec": 100.0,
+          "wasted": 10
+        },
+        {
+          "abilityId": 7482,
+          "abilityName": "Kasha",
+          "gauge": "kenki",
+          "lostPotency": 100.0,
+          "timeSec": 117.5,
+          "wasted": 10
+        },
+        {
+          "abilityId": 36963,
+          "abilityName": "Gyofu",
+          "gauge": "kenki",
+          "lostPotency": 50.0,
+          "timeSec": 95.0,
+          "wasted": 5
+        },
+        {
+          "abilityId": 7478,
+          "abilityName": "Jinpu",
+          "gauge": "kenki",
+          "lostPotency": 50.0,
+          "timeSec": 97.5,
+          "wasted": 5
+        }
+      ]
+    },
+    "Scoring": {
+      "deliveredObserved": 23537.45,
+      "deliveredPotency": 23537.45,
+      "downtimeSource": "fallback_heuristic",
+      "downtimeTierB": [],
+      "downtimeWindows": [
+        [
+          117.5,
+          360.0
+        ]
+      ],
+      "enablerNetValues": {
+        "16482": 3841.87,
+        "7499": 2777.07
+      },
+      "entryKenki": 0,
+      "entryMeditation": 0,
+      "fightDurationSec": 360.0,
+      "fugetsuUptimePct": 100.0,
+      "idealizedLenient": 53615.34,
+      "idealizedMaster": 53043.73,
+      "idealizedObserved": 53043.73,
+      "idealizedPotency": 53615.34,
+      "idealizedStrict": 53615.34,
+      "masterBuffIntervals": [],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.14,
+        "payload": [
+          0,
+          0,
+          0,
+          null
+        ]
+      },
+      "tengentsuKenki": 0,
+      "tinctureLoss": 552.87,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 1
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 49"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Gyofu",
+          9,
+          0
+        ],
+        [
+          "Gekko",
+          9,
+          0
+        ],
+        [
+          "Jinpu",
+          8,
+          0
+        ],
+        [
+          "Shifu",
+          6,
+          0
+        ],
+        [
+          "Kasha",
+          6,
+          0
+        ],
+        [
+          "Midare Setsugekka",
+          5,
+          0
+        ],
+        [
+          "Hissatsu: Shinten",
+          4,
+          0
+        ],
+        [
+          "Hissatsu: Senei",
+          1,
+          0
+        ],
+        [
+          "Kaeshi: Setsugekka",
+          1,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No raid-buff providers in this party \u2014 burst alignment N/A."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "[idle] 9.5s idle (3.8 GCDs) \u2248 -1458p",
+        "[clip] 3.0s GCD clipping from over-weaving (1.2 GCDs) \u2248 -460p"
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 384p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          1,
+          47.5,
+          0.6,
+          1
+        ],
+        [
+          2,
+          60.0,
+          0.6,
+          1
+        ],
+        [
+          3,
+          7.5,
+          0.6,
+          1
+        ],
+        [
+          4,
+          77.5,
+          0.6,
+          1
+        ],
+        [
+          5,
+          102.5,
+          0.6,
+          1
+        ]
+      ]
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "[drift] Meikyo Shisui: 0 casts, drifted 117.5s \u2248 -2600p (ref avg -0p)"
+      ],
+      "summaryLines": [
+        "Total drift cost: -2600p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Meikyo Shisui",
+          0,
+          117.5,
+          2600,
+          0,
+          "+2600"
+        ],
+        [
+          "Ikishoten",
+          0,
+          117.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Hissatsu: Senei",
+          1,
+          57.5,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #7: cast Gyofu (240p), canonical uses Midare Setsugekka (680p) \u2014 -440p",
+        "[opener] Opener slot #8: cast Jinpu (300p), canonical uses Kaeshi: Setsugekka (680p) \u2014 -380p",
+        "[opener] Opener slot #9: cast Gekko (420p), canonical uses Ogi Namikiri (1000p) \u2014 -580p",
+        "[opener] Opener slot #10: cast Shifu (300p), canonical uses Kaeshi: Namikiri (1000p) \u2014 -700p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 2100p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          5,
+          "Kasha",
+          "Midare Setsugekka",
+          0
+        ],
+        [
+          6,
+          "Yukikaze",
+          "Kaeshi: Setsugekka",
+          0
+        ],
+        [
+          7,
+          "Midare Setsugekka",
+          "Gyofu",
+          440
+        ],
+        [
+          8,
+          "Kaeshi: Setsugekka",
+          "Jinpu",
+          380
+        ],
+        [
+          9,
+          "Ogi Namikiri",
+          "Gekko",
+          580
+        ],
+        [
+          10,
+          "Kaeshi: Namikiri",
+          "Shifu",
+          700
+        ],
+        [
+          11,
+          "Gyofu",
+          "Kasha",
+          0
+        ],
+        [
+          12,
+          "Jinpu",
+          "Gekko",
+          0
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[overcap] Kenki overcap at 1:32 (Kasha, -100p)",
+        "[overcap] Kenki overcap at 1:40 (Gekko, -100p)",
+        "[overcap] Kenki overcap at 1:58 (Kasha, -100p)",
+        "[overcap] Kenki overcap at 1:35 (Gyofu, -50p)",
+        "[overcap] Kenki overcap at 1:38 (Jinpu, -50p)"
+      ],
+      "summaryLines": [
+        "Total overcap cost: -400p",
+        "  Kenki: -400p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "1:32",
+          "kenki",
+          "Kasha",
+          10,
+          100
+        ],
+        [
+          "1:40",
+          "kenki",
+          "Gekko",
+          10,
+          100
+        ],
+        [
+          "1:58",
+          "kenki",
+          "Kasha",
+          10,
+          100
+        ],
+        [
+          "1:35",
+          "kenki",
+          "Gyofu",
+          5,
+          50
+        ],
+        [
+          "1:38",
+          "kenki",
+          "Jinpu",
+          5,
+          50
+        ]
+      ]
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 23537.45,
+    "downtimeSource": "fallback_heuristic",
+    "downtimeTierA": [
+      {
+        "endSec": 360.0,
+        "startSec": 117.5
+      }
+    ],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 43.9,
+    "efficiencyPctLenient": 43.9,
+    "efficiencyPctMaster": 44.37,
+    "efficiencyPctObserved": 44.37,
+    "efficiencyPctStrict": 43.9,
+    "idealizedMaster": 53043.73,
+    "idealizedObserved": 53043.73,
+    "killTimeSec": 360,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Samurai"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 53615.34,
+    "yourIdealizedPotencyLenient": 53615.34,
+    "yourPotency": 23537.45
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 33.14,
+      "multiplier": 1.08,
+      "startSec": 3.14
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 7481,
+      "color": "#3b82f6",
+      "endSec": 2.0,
+      "iconPath": "/i/003000/003158.png",
+      "label": "Gek",
+      "startSec": 1.0,
+      "tooltip": "Gekko @ 1.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7489,
+      "color": "#3b82f6",
+      "endSec": 4.14,
+      "iconPath": "/i/003000/003160.png",
+      "label": "Hig",
+      "startSec": 3.14,
+      "tooltip": "Higanbana @ 3.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7481,
+      "color": "#3b82f6",
+      "endSec": 6.28,
+      "iconPath": "/i/003000/003158.png",
+      "label": "Gek",
+      "startSec": 5.28,
+      "tooltip": "Gekko @ 5.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16482,
+      "color": "#f59e0b",
+      "endSec": 5.88,
+      "iconPath": "/i/003000/003179.png",
+      "label": "Iki",
+      "startSec": 5.28,
+      "tooltip": "Ikishoten @ 5.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36964,
+      "color": "#f59e0b",
+      "endSec": 6.58,
+      "iconPath": "/i/003000/003192.png",
+      "label": "Zan",
+      "startSec": 5.98,
+      "tooltip": "Zanshin @ 6.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25781,
+      "color": "#3b82f6",
+      "endSec": 8.42,
+      "iconPath": "/i/003000/003187.png",
+      "label": "Ogi",
+      "startSec": 7.42,
+      "tooltip": "Ogi Namikiri @ 7.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25782,
+      "color": "#3b82f6",
+      "endSec": 10.56,
+      "iconPath": "/i/003000/003188.png",
+      "label": "Kae",
+      "startSec": 9.56,
+      "tooltip": "Kaeshi: Namikiri @ 9.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7482,
+      "color": "#3b82f6",
+      "endSec": 12.7,
+      "iconPath": "/i/003000/003164.png",
+      "label": "Kas",
+      "startSec": 11.7,
+      "tooltip": "Kasha @ 11.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16481,
+      "color": "#f59e0b",
+      "endSec": 12.3,
+      "iconPath": "/i/003000/003178.png",
+      "label": "His",
+      "startSec": 11.7,
+      "tooltip": "Hissatsu: Senei @ 11.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36963,
+      "color": "#3b82f6",
+      "endSec": 14.84,
+      "iconPath": "/i/003000/003191.png",
+      "label": "Gyo",
+      "startSec": 13.84,
+      "tooltip": "Gyofu @ 13.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7480,
+      "color": "#3b82f6",
+      "endSec": 16.98,
+      "iconPath": "/i/003000/003166.png",
+      "label": "Yuk",
+      "startSec": 15.98,
+      "tooltip": "Yukikaze @ 16.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36966,
+      "color": "#3b82f6",
+      "endSec": 19.12,
+      "iconPath": "/i/003000/003194.png",
+      "label": "Ten",
+      "startSec": 18.12,
+      "tooltip": "Tendo Setsugekka @ 18.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16487,
+      "color": "#f59e0b",
+      "endSec": 18.72,
+      "iconPath": "/i/003000/003184.png",
+      "label": "Sho",
+      "startSec": 18.12,
+      "tooltip": "Shoha @ 18.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7499,
+      "color": "#f59e0b",
+      "endSec": 19.42,
+      "iconPath": "/i/003000/003167.png",
+      "label": "Mei",
+      "startSec": 18.82,
+      "tooltip": "Meikyo Shisui @ 18.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36968,
+      "color": "#3b82f6",
+      "endSec": 21.26,
+      "iconPath": "/i/003000/003196.png",
+      "label": "Ten",
+      "startSec": 20.26,
+      "tooltip": "Tendo Kaeshi Setsugekka @ 20.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7481,
+      "color": "#3b82f6",
+      "endSec": 23.4,
+      "iconPath": "/i/003000/003158.png",
+      "label": "Gek",
+      "startSec": 22.4,
+      "tooltip": "Gekko @ 22.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7482,
+      "color": "#3b82f6",
+      "endSec": 25.54,
+      "iconPath": "/i/003000/003164.png",
+      "label": "Kas",
+      "startSec": 24.54,
+      "tooltip": "Kasha @ 24.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 25.14,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 24.54,
+      "tooltip": "Hissatsu: Shinten @ 24.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7480,
+      "color": "#3b82f6",
+      "endSec": 27.68,
+      "iconPath": "/i/003000/003166.png",
+      "label": "Yuk",
+      "startSec": 26.68,
+      "tooltip": "Yukikaze @ 26.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36966,
+      "color": "#3b82f6",
+      "endSec": 29.82,
+      "iconPath": "/i/003000/003194.png",
+      "label": "Ten",
+      "startSec": 28.82,
+      "tooltip": "Tendo Setsugekka @ 28.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36968,
+      "color": "#3b82f6",
+      "endSec": 31.96,
+      "iconPath": "/i/003000/003196.png",
+      "label": "Ten",
+      "startSec": 30.96,
+      "tooltip": "Tendo Kaeshi Setsugekka @ 31.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36963,
+      "color": "#3b82f6",
+      "endSec": 34.1,
+      "iconPath": "/i/003000/003191.png",
+      "label": "Gyo",
+      "startSec": 33.1,
+      "tooltip": "Gyofu @ 33.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 33.7,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 33.1,
+      "tooltip": "Hissatsu: Shinten @ 33.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7478,
+      "color": "#3b82f6",
+      "endSec": 36.24,
+      "iconPath": "/i/003000/003152.png",
+      "label": "Jin",
+      "startSec": 35.24,
+      "tooltip": "Jinpu @ 35.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7481,
+      "color": "#3b82f6",
+      "endSec": 38.38,
+      "iconPath": "/i/003000/003158.png",
+      "label": "Gek",
+      "startSec": 37.38,
+      "tooltip": "Gekko @ 37.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36963,
+      "color": "#3b82f6",
+      "endSec": 40.52,
+      "iconPath": "/i/003000/003191.png",
+      "label": "Gyo",
+      "startSec": 39.52,
+      "tooltip": "Gyofu @ 39.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7479,
+      "color": "#3b82f6",
+      "endSec": 42.66,
+      "iconPath": "/i/003000/003156.png",
+      "label": "Shi",
+      "startSec": 41.66,
+      "tooltip": "Shifu @ 41.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 42.26,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 41.66,
+      "tooltip": "Hissatsu: Shinten @ 41.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7482,
+      "color": "#3b82f6",
+      "endSec": 44.8,
+      "iconPath": "/i/003000/003164.png",
+      "label": "Kas",
+      "startSec": 43.8,
+      "tooltip": "Kasha @ 43.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36963,
+      "color": "#3b82f6",
+      "endSec": 46.94,
+      "iconPath": "/i/003000/003191.png",
+      "label": "Gyo",
+      "startSec": 45.94,
+      "tooltip": "Gyofu @ 45.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7480,
+      "color": "#3b82f6",
+      "endSec": 49.08,
+      "iconPath": "/i/003000/003166.png",
+      "label": "Yuk",
+      "startSec": 48.08,
+      "tooltip": "Yukikaze @ 48.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 48.68,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 48.08,
+      "tooltip": "Hissatsu: Shinten @ 48.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7487,
+      "color": "#3b82f6",
+      "endSec": 51.22,
+      "iconPath": "/i/003000/003162.png",
+      "label": "Mid",
+      "startSec": 50.22,
+      "tooltip": "Midare Setsugekka @ 50.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7499,
+      "color": "#f59e0b",
+      "endSec": 50.82,
+      "iconPath": "/i/003000/003167.png",
+      "label": "Mei",
+      "startSec": 50.22,
+      "tooltip": "Meikyo Shisui @ 50.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16486,
+      "color": "#3b82f6",
+      "endSec": 53.36,
+      "iconPath": "/i/003000/003183.png",
+      "label": "Kae",
+      "startSec": 52.36,
+      "tooltip": "Kaeshi: Setsugekka @ 52.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7481,
+      "color": "#3b82f6",
+      "endSec": 55.5,
+      "iconPath": "/i/003000/003158.png",
+      "label": "Gek",
+      "startSec": 54.5,
+      "tooltip": "Gekko @ 54.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 55.1,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 54.5,
+      "tooltip": "Hissatsu: Shinten @ 54.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7489,
+      "color": "#3b82f6",
+      "endSec": 57.64,
+      "iconPath": "/i/003000/003160.png",
+      "label": "Hig",
+      "startSec": 56.64,
+      "tooltip": "Higanbana @ 56.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16487,
+      "color": "#f59e0b",
+      "endSec": 57.24,
+      "iconPath": "/i/003000/003184.png",
+      "label": "Sho",
+      "startSec": 56.64,
+      "tooltip": "Shoha @ 56.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7481,
+      "color": "#3b82f6",
+      "endSec": 59.78,
+      "iconPath": "/i/003000/003158.png",
+      "label": "Gek",
+      "startSec": 58.78,
+      "tooltip": "Gekko @ 58.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7482,
+      "color": "#3b82f6",
+      "endSec": 61.92,
+      "iconPath": "/i/003000/003164.png",
+      "label": "Kas",
+      "startSec": 60.92,
+      "tooltip": "Kasha @ 60.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36963,
+      "color": "#3b82f6",
+      "endSec": 64.06,
+      "iconPath": "/i/003000/003191.png",
+      "label": "Gyo",
+      "startSec": 63.06,
+      "tooltip": "Gyofu @ 63.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 63.66,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 63.06,
+      "tooltip": "Hissatsu: Shinten @ 63.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7480,
+      "color": "#3b82f6",
+      "endSec": 66.2,
+      "iconPath": "/i/003000/003166.png",
+      "label": "Yuk",
+      "startSec": 65.2,
+      "tooltip": "Yukikaze @ 65.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36966,
+      "color": "#3b82f6",
+      "endSec": 68.34,
+      "iconPath": "/i/003000/003194.png",
+      "label": "Ten",
+      "startSec": 67.34,
+      "tooltip": "Tendo Setsugekka @ 67.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36968,
+      "color": "#3b82f6",
+      "endSec": 70.48,
+      "iconPath": "/i/003000/003196.png",
+      "label": "Ten",
+      "startSec": 69.48,
+      "tooltip": "Tendo Kaeshi Setsugekka @ 69.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36963,
+      "color": "#3b82f6",
+      "endSec": 72.62,
+      "iconPath": "/i/003000/003191.png",
+      "label": "Gyo",
+      "startSec": 71.62,
+      "tooltip": "Gyofu @ 71.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7478,
+      "color": "#3b82f6",
+      "endSec": 74.76,
+      "iconPath": "/i/003000/003152.png",
+      "label": "Jin",
+      "startSec": 73.76,
+      "tooltip": "Jinpu @ 73.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16481,
+      "color": "#f59e0b",
+      "endSec": 74.36,
+      "iconPath": "/i/003000/003178.png",
+      "label": "His",
+      "startSec": 73.76,
+      "tooltip": "Hissatsu: Senei @ 73.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7481,
+      "color": "#3b82f6",
+      "endSec": 76.9,
+      "iconPath": "/i/003000/003158.png",
+      "label": "Gek",
+      "startSec": 75.9,
+      "tooltip": "Gekko @ 75.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36963,
+      "color": "#3b82f6",
+      "endSec": 79.04,
+      "iconPath": "/i/003000/003191.png",
+      "label": "Gyo",
+      "startSec": 78.04,
+      "tooltip": "Gyofu @ 78.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7479,
+      "color": "#3b82f6",
+      "endSec": 81.18,
+      "iconPath": "/i/003000/003156.png",
+      "label": "Shi",
+      "startSec": 80.18,
+      "tooltip": "Shifu @ 80.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7482,
+      "color": "#3b82f6",
+      "endSec": 83.32,
+      "iconPath": "/i/003000/003164.png",
+      "label": "Kas",
+      "startSec": 82.32,
+      "tooltip": "Kasha @ 82.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 82.92,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 82.32,
+      "tooltip": "Hissatsu: Shinten @ 82.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36963,
+      "color": "#3b82f6",
+      "endSec": 85.46,
+      "iconPath": "/i/003000/003191.png",
+      "label": "Gyo",
+      "startSec": 84.46,
+      "tooltip": "Gyofu @ 84.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7480,
+      "color": "#3b82f6",
+      "endSec": 87.6,
+      "iconPath": "/i/003000/003166.png",
+      "label": "Yuk",
+      "startSec": 86.6,
+      "tooltip": "Yukikaze @ 86.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 87.2,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 86.6,
+      "tooltip": "Hissatsu: Shinten @ 86.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7487,
+      "color": "#3b82f6",
+      "endSec": 89.74,
+      "iconPath": "/i/003000/003162.png",
+      "label": "Mid",
+      "startSec": 88.74,
+      "tooltip": "Midare Setsugekka @ 88.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16486,
+      "color": "#3b82f6",
+      "endSec": 91.88,
+      "iconPath": "/i/003000/003183.png",
+      "label": "Kae",
+      "startSec": 90.88,
+      "tooltip": "Kaeshi: Setsugekka @ 90.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36963,
+      "color": "#3b82f6",
+      "endSec": 94.02,
+      "iconPath": "/i/003000/003191.png",
+      "label": "Gyo",
+      "startSec": 93.02,
+      "tooltip": "Gyofu @ 93.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7478,
+      "color": "#3b82f6",
+      "endSec": 96.16,
+      "iconPath": "/i/003000/003152.png",
+      "label": "Jin",
+      "startSec": 95.16,
+      "tooltip": "Jinpu @ 95.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7481,
+      "color": "#3b82f6",
+      "endSec": 98.3,
+      "iconPath": "/i/003000/003158.png",
+      "label": "Gek",
+      "startSec": 97.3,
+      "tooltip": "Gekko @ 97.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 97.9,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 97.3,
+      "tooltip": "Hissatsu: Shinten @ 97.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36963,
+      "color": "#3b82f6",
+      "endSec": 100.44,
+      "iconPath": "/i/003000/003191.png",
+      "label": "Gyo",
+      "startSec": 99.44,
+      "tooltip": "Gyofu @ 99.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7479,
+      "color": "#3b82f6",
+      "endSec": 102.58,
+      "iconPath": "/i/003000/003156.png",
+      "label": "Shi",
+      "startSec": 101.58,
+      "tooltip": "Shifu @ 101.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7482,
+      "color": "#3b82f6",
+      "endSec": 104.72,
+      "iconPath": "/i/003000/003164.png",
+      "label": "Kas",
+      "startSec": 103.72,
+      "tooltip": "Kasha @ 103.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 104.32,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 103.72,
+      "tooltip": "Hissatsu: Shinten @ 103.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7499,
+      "color": "#f59e0b",
+      "endSec": 105.02,
+      "iconPath": "/i/003000/003167.png",
+      "label": "Mei",
+      "startSec": 104.42,
+      "tooltip": "Meikyo Shisui @ 104.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7480,
+      "color": "#3b82f6",
+      "endSec": 106.86,
+      "iconPath": "/i/003000/003166.png",
+      "label": "Yuk",
+      "startSec": 105.86,
+      "tooltip": "Yukikaze @ 105.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36966,
+      "color": "#3b82f6",
+      "endSec": 109.0,
+      "iconPath": "/i/003000/003194.png",
+      "label": "Ten",
+      "startSec": 108.0,
+      "tooltip": "Tendo Setsugekka @ 108.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16487,
+      "color": "#f59e0b",
+      "endSec": 108.6,
+      "iconPath": "/i/003000/003184.png",
+      "label": "Sho",
+      "startSec": 108.0,
+      "tooltip": "Shoha @ 108.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36968,
+      "color": "#3b82f6",
+      "endSec": 111.14,
+      "iconPath": "/i/003000/003196.png",
+      "label": "Ten",
+      "startSec": 110.14,
+      "tooltip": "Tendo Kaeshi Setsugekka @ 110.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7481,
+      "color": "#3b82f6",
+      "endSec": 113.28,
+      "iconPath": "/i/003000/003158.png",
+      "label": "Gek",
+      "startSec": 112.28,
+      "tooltip": "Gekko @ 112.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7490,
+      "color": "#f59e0b",
+      "endSec": 112.88,
+      "iconPath": "/i/003000/003173.png",
+      "label": "His",
+      "startSec": 112.28,
+      "tooltip": "Hissatsu: Shinten @ 112.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7489,
+      "color": "#3b82f6",
+      "endSec": 115.42,
+      "iconPath": "/i/003000/003160.png",
+      "label": "Hig",
+      "startSec": 114.42,
+      "tooltip": "Higanbana @ 114.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7481,
+      "color": "#3b82f6",
+      "endSec": 117.56,
+      "iconPath": "/i/003000/003158.png",
+      "label": "Gek",
+      "startSec": 116.56,
+      "tooltip": "Gekko @ 116.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7497,
+      "color": "#f59e0b",
+      "endSec": 118.1,
+      "iconPath": "/i/003000/003172.png",
+      "label": "Med",
+      "startSec": 117.5,
+      "tooltip": "Meditate @ 117.5s (idealized)",
+      "yOffset": -0.55
+    }
+  ],
+  "idealizedTrackCanonical": [],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [],
+      "kind": "residual",
+      "lostPotency": 10789.35,
+      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 0,
+          "abilityName": "",
+          "children": [],
+          "kind": "cadence",
+          "lostPotency": 3444.0,
+          "summary": "Loose GCD pacing \u2014 the optimal line fit ~8 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
+          "timeSec": 0.0
+        },
+        {
+          "abilityId": 0,
+          "abilityName": "",
+          "children": [],
+          "kind": "idle",
+          "lostPotency": 1458.14,
+          "summary": "Time spent idle: 9.5s (3.8 GCDs)",
+          "timeSec": 77.5
+        },
+        {
+          "abilityId": 0,
+          "abilityName": "",
+          "children": [],
+          "kind": "clip",
+          "lostPotency": 460.47,
+          "summary": "GCD clipping: 3.0s (1.2 GCDs) from over-weaving",
+          "timeSec": 47.5
+        }
+      ],
+      "kind": "pacing",
+      "lostPotency": 5362.6,
+      "summary": "GCD uptime & pacing \u2014 idle gaps, loose GCD timing and over-weaving. These compound: a dropped or clipped GCD also shoves your next weave and burst window later.",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16482,
+      "abilityName": "Ikishoten",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 3841.87,
+      "summary": "Missed Ikishoten \u2014 fit one around 0:05",
+      "timeSec": 5.28
+    },
+    {
+      "abilityId": 7499,
+      "abilityName": "Meikyo Shisui",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 2777.07,
+      "summary": "Missed Meikyo Shisui \u2014 fit one around 0:19",
+      "timeSec": 18.82
+    },
+    {
+      "abilityId": 7499,
+      "abilityName": "Meikyo Shisui",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 2777.07,
+      "summary": "Missed Meikyo Shisui \u2014 fit one around 0:50",
+      "timeSec": 50.22
+    },
+    {
+      "abilityId": 7499,
+      "abilityName": "Meikyo Shisui",
+      "children": [],
+      "kind": "missed_enabler",
+      "lostPotency": 2777.07,
+      "summary": "Missed Meikyo Shisui \u2014 fit one around 1:44",
+      "timeSec": 104.42
+    },
+    {
+      "abilityId": 16481,
+      "abilityName": "Hissatsu: Senei",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 800.0,
+      "summary": "Missed Hissatsu: Senei \u2014 fit one around 1:14",
+      "timeSec": 73.76
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 552.87,
+      "summary": "Used 0 of 1 tinctures \u2014 fitting 1 more on cooldown recovers this",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 7482,
+      "abilityName": "Kasha",
+      "children": [
+        {
+          "abilityId": 7482,
+          "abilityName": "Kasha",
+          "children": [],
+          "kind": "overcap",
+          "lostPotency": 100.0,
+          "summary": "Kenki overcap at 1:32 \u2014 Kasha (wasted 10)",
+          "timeSec": 92.5
+        },
+        {
+          "abilityId": 7482,
+          "abilityName": "Kasha",
+          "children": [],
+          "kind": "overcap",
+          "lostPotency": 100.0,
+          "summary": "Kenki overcap at 1:58 \u2014 Kasha (wasted 10)",
+          "timeSec": 117.5
+        }
+      ],
+      "kind": "overcap",
+      "lostPotency": 200.0,
+      "summary": "Kasha overcap \u00d72 \u2014 first around 1:32",
+      "timeSec": 92.5
+    },
+    {
+      "abilityId": 7481,
+      "abilityName": "Gekko",
+      "children": [],
+      "kind": "overcap",
+      "lostPotency": 100.0,
+      "summary": "Kenki overcap at 1:40 \u2014 Gekko (wasted 10)",
+      "timeSec": 100.0
+    },
+    {
+      "abilityId": 36963,
+      "abilityName": "Gyofu",
+      "children": [],
+      "kind": "overcap",
+      "lostPotency": 50.0,
+      "summary": "Kenki overcap at 1:35 \u2014 Gyofu (wasted 5)",
+      "timeSec": 95.0
+    },
+    {
+      "abilityId": 7478,
+      "abilityName": "Jinpu",
+      "children": [],
+      "kind": "overcap",
+      "lostPotency": 50.0,
+      "summary": "Kenki overcap at 1:38 \u2014 Jinpu (wasted 5)",
+      "timeSec": 97.5
+    },
+    {
+      "abilityId": 7487,
+      "abilityName": "Midare Setsugekka",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #7: cast Gyofu, canonical opens Midare Setsugekka (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16486,
+      "abilityName": "Kaeshi: Setsugekka",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #8: cast Jinpu, canonical opens Kaeshi: Setsugekka (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25781,
+      "abilityName": "Ogi Namikiri",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #9: cast Gekko, canonical opens Ogi Namikiri (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25782,
+      "abilityName": "Kaeshi: Namikiri",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #10: cast Shifu, canonical opens Kaeshi: Namikiri (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 36963,
+        "color": "#777777",
+        "endSec": -2.0,
+        "iconPath": "/i/003000/003191.png",
+        "label": "Gyo",
+        "startSec": -2.5,
+        "tooltip": "Gyofu  (GCD)  @  -1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36963,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003191.png",
+        "label": "Gyo",
+        "startSec": 0.0,
+        "tooltip": "Gyofu  (GCD)  @  0:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7478,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/003000/003152.png",
+        "label": "Jin",
+        "startSec": 2.5,
+        "tooltip": "Jinpu  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7481,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003158.png",
+        "label": "Gek",
+        "startSec": 5.0,
+        "tooltip": "Gekko  (GCD)  @  0:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7479,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/003000/003156.png",
+        "label": "Shi",
+        "startSec": 7.5,
+        "tooltip": "Shifu  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16481,
+        "color": "#777777",
+        "endSec": 10.5,
+        "iconPath": "/i/003000/003178.png",
+        "label": "His",
+        "startSec": 10.0,
+        "tooltip": "Hissatsu: Senei  (oGCD)  @  0:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7487,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/003000/003162.png",
+        "label": "Mid",
+        "startSec": 12.5,
+        "tooltip": "Midare Setsugekka  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16486,
+        "color": "#777777",
+        "endSec": 15.5,
+        "iconPath": "/i/003000/003183.png",
+        "label": "Kae",
+        "startSec": 15.0,
+        "tooltip": "Kaeshi: Setsugekka  (GCD)  @  0:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36963,
+        "color": "#777777",
+        "endSec": 18.0,
+        "iconPath": "/i/003000/003191.png",
+        "label": "Gyo",
+        "startSec": 17.5,
+        "tooltip": "Gyofu  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7478,
+        "color": "#777777",
+        "endSec": 20.5,
+        "iconPath": "/i/003000/003152.png",
+        "label": "Jin",
+        "startSec": 20.0,
+        "tooltip": "Jinpu  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7481,
+        "color": "#777777",
+        "endSec": 23.0,
+        "iconPath": "/i/003000/003158.png",
+        "label": "Gek",
+        "startSec": 22.5,
+        "tooltip": "Gekko  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7479,
+        "color": "#777777",
+        "endSec": 25.5,
+        "iconPath": "/i/003000/003156.png",
+        "label": "Shi",
+        "startSec": 25.0,
+        "tooltip": "Shifu  (GCD)  @  0:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7482,
+        "color": "#777777",
+        "endSec": 28.0,
+        "iconPath": "/i/003000/003164.png",
+        "label": "Kas",
+        "startSec": 27.5,
+        "tooltip": "Kasha  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7481,
+        "color": "#777777",
+        "endSec": 30.5,
+        "iconPath": "/i/003000/003158.png",
+        "label": "Gek",
+        "startSec": 30.0,
+        "tooltip": "Gekko  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7482,
+        "color": "#777777",
+        "endSec": 33.0,
+        "iconPath": "/i/003000/003164.png",
+        "label": "Kas",
+        "startSec": 32.5,
+        "tooltip": "Kasha  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7487,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/003000/003162.png",
+        "label": "Mid",
+        "startSec": 35.0,
+        "tooltip": "Midare Setsugekka  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36963,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/003000/003191.png",
+        "label": "Gyo",
+        "startSec": 37.5,
+        "tooltip": "Gyofu  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7478,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/003000/003152.png",
+        "label": "Jin",
+        "startSec": 40.0,
+        "tooltip": "Jinpu  (GCD)  @  0:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7481,
+        "color": "#777777",
+        "endSec": 43.0,
+        "iconPath": "/i/003000/003158.png",
+        "label": "Gek",
+        "startSec": 42.5,
+        "tooltip": "Gekko  (GCD)  @  0:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7479,
+        "color": "#777777",
+        "endSec": 45.5,
+        "iconPath": "/i/003000/003156.png",
+        "label": "Shi",
+        "startSec": 45.0,
+        "tooltip": "Shifu  (GCD)  @  0:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7482,
+        "color": "#777777",
+        "endSec": 48.0,
+        "iconPath": "/i/003000/003164.png",
+        "label": "Kas",
+        "startSec": 47.5,
+        "tooltip": "Kasha  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7490,
+        "color": "#777777",
+        "endSec": 50.5,
+        "iconPath": "/i/003000/003173.png",
+        "label": "His",
+        "startSec": 50.0,
+        "tooltip": "Hissatsu: Shinten  (oGCD)  @  0:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36963,
+        "color": "#777777",
+        "endSec": 53.0,
+        "iconPath": "/i/003000/003191.png",
+        "label": "Gyo",
+        "startSec": 52.5,
+        "tooltip": "Gyofu  (GCD)  @  0:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7478,
+        "color": "#777777",
+        "endSec": 55.5,
+        "iconPath": "/i/003000/003152.png",
+        "label": "Jin",
+        "startSec": 55.0,
+        "tooltip": "Jinpu  (GCD)  @  0:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7481,
+        "color": "#777777",
+        "endSec": 58.0,
+        "iconPath": "/i/003000/003158.png",
+        "label": "Gek",
+        "startSec": 57.5,
+        "tooltip": "Gekko  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7487,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/003000/003162.png",
+        "label": "Mid",
+        "startSec": 60.0,
+        "tooltip": "Midare Setsugekka  (GCD)  @  1:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7490,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/003000/003173.png",
+        "label": "His",
+        "startSec": 62.5,
+        "tooltip": "Hissatsu: Shinten  (oGCD)  @  1:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36963,
+        "color": "#777777",
+        "endSec": 65.5,
+        "iconPath": "/i/003000/003191.png",
+        "label": "Gyo",
+        "startSec": 65.0,
+        "tooltip": "Gyofu  (GCD)  @  1:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7478,
+        "color": "#777777",
+        "endSec": 68.0,
+        "iconPath": "/i/003000/003152.png",
+        "label": "Jin",
+        "startSec": 67.5,
+        "tooltip": "Jinpu  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7481,
+        "color": "#777777",
+        "endSec": 70.5,
+        "iconPath": "/i/003000/003158.png",
+        "label": "Gek",
+        "startSec": 70.0,
+        "tooltip": "Gekko  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7479,
+        "color": "#777777",
+        "endSec": 73.0,
+        "iconPath": "/i/003000/003156.png",
+        "label": "Shi",
+        "startSec": 72.5,
+        "tooltip": "Shifu  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7482,
+        "color": "#777777",
+        "endSec": 75.5,
+        "iconPath": "/i/003000/003164.png",
+        "label": "Kas",
+        "startSec": 75.0,
+        "tooltip": "Kasha  (GCD)  @  1:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7487,
+        "color": "#777777",
+        "endSec": 78.0,
+        "iconPath": "/i/003000/003162.png",
+        "label": "Mid",
+        "startSec": 77.5,
+        "tooltip": "Midare Setsugekka  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7490,
+        "color": "#777777",
+        "endSec": 80.5,
+        "iconPath": "/i/003000/003173.png",
+        "label": "His",
+        "startSec": 80.0,
+        "tooltip": "Hissatsu: Shinten  (oGCD)  @  1:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36963,
+        "color": "#777777",
+        "endSec": 83.0,
+        "iconPath": "/i/003000/003191.png",
+        "label": "Gyo",
+        "startSec": 82.5,
+        "tooltip": "Gyofu  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7478,
+        "color": "#777777",
+        "endSec": 85.5,
+        "iconPath": "/i/003000/003152.png",
+        "label": "Jin",
+        "startSec": 85.0,
+        "tooltip": "Jinpu  (GCD)  @  1:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7481,
+        "color": "#777777",
+        "endSec": 88.0,
+        "iconPath": "/i/003000/003158.png",
+        "label": "Gek",
+        "startSec": 87.5,
+        "tooltip": "Gekko  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7479,
+        "color": "#777777",
+        "endSec": 90.5,
+        "iconPath": "/i/003000/003156.png",
+        "label": "Shi",
+        "startSec": 90.0,
+        "tooltip": "Shifu  (GCD)  @  1:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7482,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/003000/003164.png",
+        "label": "Kas",
+        "startSec": 92.5,
+        "tooltip": "Kasha  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36963,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/003000/003191.png",
+        "label": "Gyo",
+        "startSec": 95.0,
+        "tooltip": "Gyofu  (GCD)  @  1:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7478,
+        "color": "#777777",
+        "endSec": 98.0,
+        "iconPath": "/i/003000/003152.png",
+        "label": "Jin",
+        "startSec": 97.5,
+        "tooltip": "Jinpu  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7481,
+        "color": "#777777",
+        "endSec": 100.5,
+        "iconPath": "/i/003000/003158.png",
+        "label": "Gek",
+        "startSec": 100.0,
+        "tooltip": "Gekko  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7487,
+        "color": "#777777",
+        "endSec": 103.0,
+        "iconPath": "/i/003000/003162.png",
+        "label": "Mid",
+        "startSec": 102.5,
+        "tooltip": "Midare Setsugekka  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7490,
+        "color": "#777777",
+        "endSec": 105.5,
+        "iconPath": "/i/003000/003173.png",
+        "label": "His",
+        "startSec": 105.0,
+        "tooltip": "Hissatsu: Shinten  (oGCD)  @  1:45",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36963,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/003000/003191.png",
+        "label": "Gyo",
+        "startSec": 107.5,
+        "tooltip": "Gyofu  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7478,
+        "color": "#777777",
+        "endSec": 110.5,
+        "iconPath": "/i/003000/003152.png",
+        "label": "Jin",
+        "startSec": 110.0,
+        "tooltip": "Jinpu  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7481,
+        "color": "#777777",
+        "endSec": 113.0,
+        "iconPath": "/i/003000/003158.png",
+        "label": "Gek",
+        "startSec": 112.5,
+        "tooltip": "Gekko  (GCD)  @  1:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7479,
+        "color": "#777777",
+        "endSec": 115.5,
+        "iconPath": "/i/003000/003156.png",
+        "label": "Shi",
+        "startSec": 115.0,
+        "tooltip": "Shifu  (GCD)  @  1:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7482,
+        "color": "#777777",
+        "endSec": 118.0,
+        "iconPath": "/i/003000/003164.png",
+        "label": "Kas",
+        "startSec": 117.5,
+        "tooltip": "Kasha  (GCD)  @  1:58",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 23537.45,
+    "efficiencyPct": 43.9,
+    "fightDurationSec": 360.0,
+    "idealizedPotency": 53615.34,
+    "killTimeSec": 360,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

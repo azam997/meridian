@@ -1,0 +1,3336 @@
+{
+  "abilityMeta": {
+    "152": {
+      "iconPath": "/i/000000/000453.png",
+      "id": 152,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Fire III"
+    },
+    "154": {
+      "iconPath": "/i/000000/000456.png",
+      "id": 154,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Blizzard III"
+    },
+    "158": {
+      "iconPath": "/i/002000/002651.png",
+      "id": 158,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Manafont"
+    },
+    "16505": {
+      "iconPath": "/i/002000/002665.png",
+      "id": 16505,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Despair"
+    },
+    "16507": {
+      "iconPath": "/i/002000/002667.png",
+      "id": 16507,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Xenoglossy"
+    },
+    "25796": {
+      "iconPath": "/i/002000/002671.png",
+      "id": 25796,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Amplifier"
+    },
+    "25797": {
+      "iconPath": "/i/002000/002672.png",
+      "id": 25797,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Paradox"
+    },
+    "3573": {
+      "iconPath": "/i/002000/002656.png",
+      "id": 3573,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Ley Lines"
+    },
+    "3576": {
+      "iconPath": "/i/002000/002659.png",
+      "id": 3576,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Blizzard IV"
+    },
+    "3577": {
+      "iconPath": "/i/002000/002660.png",
+      "id": 3577,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Fire IV"
+    },
+    "36986": {
+      "iconPath": "/i/002000/002673.png",
+      "id": 36986,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "High Thunder"
+    },
+    "36989": {
+      "iconPath": "/i/002000/002151.png",
+      "id": 36989,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Flare Star"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "152": 5,
+        "154": 6,
+        "158": 3,
+        "16505": 9,
+        "16507": 12,
+        "25796": 3,
+        "25797": 14,
+        "3573": 4,
+        "3576": 6,
+        "3577": 54,
+        "36986": 11,
+        "36989": 9
+      },
+      "totalCasts": 136
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": []
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 386.75,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "fallback_heuristic"
+    },
+    "Drift": {
+      "downtimeSource": "fallback_heuristic",
+      "downtimeWindows": [],
+      "fightDurationSec": 300.0,
+      "findings": [
+        {
+          "abilityId": 158,
+          "abilityName": "Manafont",
+          "cappedSeconds": 29.87,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 3573,
+          "abilityName": "Ley Lines",
+          "cappedSeconds": 0.0,
+          "casts": 4,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 25796,
+          "abilityName": "Amplifier",
+          "cappedSeconds": 4.87,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 36986,
+          "expectedId": 152,
+          "lostPotency": 140.0,
+          "position": 1,
+          "summary": "Opener slot #1: cast High Thunder (150p), canonical uses Fire III (290p) \u2014 -140p"
+        },
+        {
+          "actualId": 25797,
+          "expectedId": 36986,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Paradox, canonical uses High Thunder (same potency)"
+        },
+        {
+          "actualId": 16507,
+          "expectedId": 3577,
+          "lostPotency": 0.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Xenoglossy, canonical uses Fire IV (same potency)"
+        },
+        {
+          "actualId": 3577,
+          "expectedId": 16507,
+          "lostPotency": 590.0,
+          "position": 8,
+          "summary": "Opener slot #8: cast Fire IV (300p), canonical uses Xenoglossy (890p) \u2014 -590p"
+        },
+        {
+          "actualId": 16505,
+          "expectedId": 3577,
+          "lostPotency": 0.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Despair, canonical uses Fire IV (same potency)"
+        },
+        {
+          "actualId": 25797,
+          "expectedId": 3577,
+          "lostPotency": 0.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Paradox, canonical uses Fire IV (same potency)"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Scoring": {
+      "deliveredObserved": 54910.0,
+      "deliveredPotency": 54910.0,
+      "downtimeSource": "fallback_heuristic",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "158": 0.0,
+        "25796": 436.62,
+        "3573": 528.48
+      },
+      "fightDurationSec": 300.0,
+      "idealizedLenient": 56714.84,
+      "idealizedMaster": 56224.45,
+      "idealizedObserved": 56224.45,
+      "idealizedPotency": 56714.84,
+      "idealizedStrict": 56714.84,
+      "masterBuffIntervals": [],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.5,
+        "payload": null
+      },
+      "tinctureLoss": 920.35,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 136"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Fire IV",
+          54,
+          0
+        ],
+        [
+          "Paradox",
+          14,
+          0
+        ],
+        [
+          "Xenoglossy",
+          12,
+          0
+        ],
+        [
+          "High Thunder",
+          11,
+          0
+        ],
+        [
+          "Despair",
+          9,
+          0
+        ],
+        [
+          "Flare Star",
+          9,
+          0
+        ],
+        [
+          "Blizzard III",
+          6,
+          0
+        ],
+        [
+          "Blizzard IV",
+          6,
+          0
+        ],
+        [
+          "Fire III",
+          5,
+          0
+        ],
+        [
+          "Ley Lines",
+          4,
+          0
+        ],
+        [
+          "Amplifier",
+          3,
+          0
+        ],
+        [
+          "Manafont",
+          3,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No raid-buff providers in this party \u2014 burst alignment N/A."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 387p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "No notable cooldown drift."
+      ],
+      "summaryLines": [
+        "Total drift cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Manafont",
+          3,
+          29.9,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Ley Lines",
+          4,
+          0.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Amplifier",
+          3,
+          4.9,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #1: cast High Thunder (150p), canonical uses Fire III (290p) \u2014 -140p",
+        "[opener] Opener slot #8: cast Fire IV (300p), canonical uses Xenoglossy (890p) \u2014 -590p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 730p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          1,
+          "Fire III",
+          "High Thunder",
+          140
+        ],
+        [
+          2,
+          "High Thunder",
+          "Paradox",
+          0
+        ],
+        [
+          3,
+          "Fire IV",
+          "Xenoglossy",
+          0
+        ],
+        [
+          8,
+          "Xenoglossy",
+          "Fire IV",
+          590
+        ],
+        [
+          11,
+          "Fire IV",
+          "Despair",
+          0
+        ],
+        [
+          12,
+          "Fire IV",
+          "Paradox",
+          0
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 54910.0,
+    "downtimeSource": "fallback_heuristic",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 96.82,
+    "efficiencyPctLenient": 96.82,
+    "efficiencyPctMaster": 97.66,
+    "efficiencyPctObserved": 97.66,
+    "efficiencyPctStrict": 96.82,
+    "idealizedMaster": 56224.45,
+    "idealizedObserved": 56224.45,
+    "killTimeSec": 300,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "BlackMage"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 56714.84,
+    "yourIdealizedPotencyLenient": 56714.84,
+    "yourPotency": 54910.0
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 30.0,
+      "multiplier": 1.08,
+      "startSec": 0.0
+    },
+    {
+      "endSec": 301.5,
+      "multiplier": 1.08,
+      "startSec": 271.5
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 152,
+      "color": "#3b82f6",
+      "endSec": -2.5,
+      "iconPath": "/i/000000/000453.png",
+      "label": "Fir",
+      "startSec": -3.5,
+      "tooltip": "Fire III @ -3.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 0.0,
+      "tooltip": "High Thunder @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3573,
+      "color": "#f59e0b",
+      "endSec": 0.6,
+      "iconPath": "/i/002000/002656.png",
+      "label": "Ley",
+      "startSec": 0.0,
+      "tooltip": "Ley Lines @ 0.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25796,
+      "color": "#f59e0b",
+      "endSec": 1.3,
+      "iconPath": "/i/002000/002671.png",
+      "label": "Amp",
+      "startSec": 0.7,
+      "tooltip": "Amplifier @ 0.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 2.5,
+      "tooltip": "Paradox @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 5.62,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 4.62,
+      "tooltip": "Xenoglossy @ 4.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 7.75,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 6.75,
+      "tooltip": "Fire IV @ 6.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 9.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 8.88,
+      "tooltip": "Fire IV @ 8.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 12.0,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 11.0,
+      "tooltip": "Fire IV @ 11.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 14.12,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 13.12,
+      "tooltip": "Fire IV @ 13.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 16.25,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 15.25,
+      "tooltip": "Fire IV @ 15.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 18.38,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 17.38,
+      "tooltip": "Fire IV @ 17.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36989,
+      "color": "#3b82f6",
+      "endSec": 20.5,
+      "iconPath": "/i/002000/002151.png",
+      "label": "Fla",
+      "startSec": 19.5,
+      "tooltip": "Flare Star @ 19.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16505,
+      "color": "#3b82f6",
+      "endSec": 22.62,
+      "iconPath": "/i/002000/002665.png",
+      "label": "Des",
+      "startSec": 21.62,
+      "tooltip": "Despair @ 21.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 158,
+      "color": "#f59e0b",
+      "endSec": 22.23,
+      "iconPath": "/i/002000/002651.png",
+      "label": "Man",
+      "startSec": 21.62,
+      "tooltip": "Manafont @ 21.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 25.12,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 24.12,
+      "tooltip": "Paradox @ 24.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 27.62,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 26.62,
+      "tooltip": "Fire IV @ 26.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3573,
+      "color": "#f59e0b",
+      "endSec": 27.23,
+      "iconPath": "/i/002000/002656.png",
+      "label": "Ley",
+      "startSec": 26.62,
+      "tooltip": "Ley Lines @ 26.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 30.12,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 29.12,
+      "tooltip": "High Thunder @ 29.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 32.25,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 31.25,
+      "tooltip": "Xenoglossy @ 31.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 34.38,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 33.38,
+      "tooltip": "Fire IV @ 33.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 36.5,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 35.5,
+      "tooltip": "Fire IV @ 35.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 38.62,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 37.62,
+      "tooltip": "Fire IV @ 37.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 40.75,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 39.75,
+      "tooltip": "Fire IV @ 39.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 42.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 41.88,
+      "tooltip": "Fire IV @ 41.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36989,
+      "color": "#3b82f6",
+      "endSec": 45.0,
+      "iconPath": "/i/002000/002151.png",
+      "label": "Fla",
+      "startSec": 44.0,
+      "tooltip": "Flare Star @ 44.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16505,
+      "color": "#3b82f6",
+      "endSec": 47.12,
+      "iconPath": "/i/002000/002665.png",
+      "label": "Des",
+      "startSec": 46.12,
+      "tooltip": "Despair @ 46.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 154,
+      "color": "#3b82f6",
+      "endSec": 49.25,
+      "iconPath": "/i/000000/000456.png",
+      "label": "Bli",
+      "startSec": 48.25,
+      "tooltip": "Blizzard III @ 48.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3576,
+      "color": "#3b82f6",
+      "endSec": 51.75,
+      "iconPath": "/i/002000/002659.png",
+      "label": "Bli",
+      "startSec": 50.75,
+      "tooltip": "Blizzard IV @ 50.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 54.25,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 53.25,
+      "tooltip": "Paradox @ 53.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 152,
+      "color": "#3b82f6",
+      "endSec": 56.75,
+      "iconPath": "/i/000000/000453.png",
+      "label": "Fir",
+      "startSec": 55.75,
+      "tooltip": "Fire III @ 55.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 59.25,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 58.25,
+      "tooltip": "High Thunder @ 58.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 61.75,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 60.75,
+      "tooltip": "Paradox @ 60.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 64.25,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 63.25,
+      "tooltip": "Xenoglossy @ 63.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 66.75,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 65.75,
+      "tooltip": "Fire IV @ 65.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 69.25,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 68.25,
+      "tooltip": "Fire IV @ 68.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 71.75,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 70.75,
+      "tooltip": "Fire IV @ 70.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 74.25,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 73.25,
+      "tooltip": "Fire IV @ 73.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 76.75,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 75.75,
+      "tooltip": "Fire IV @ 75.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 79.25,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 78.25,
+      "tooltip": "Fire IV @ 78.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36989,
+      "color": "#3b82f6",
+      "endSec": 81.75,
+      "iconPath": "/i/002000/002151.png",
+      "label": "Fla",
+      "startSec": 80.75,
+      "tooltip": "Flare Star @ 80.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16505,
+      "color": "#3b82f6",
+      "endSec": 84.25,
+      "iconPath": "/i/002000/002665.png",
+      "label": "Des",
+      "startSec": 83.25,
+      "tooltip": "Despair @ 83.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 154,
+      "color": "#3b82f6",
+      "endSec": 86.75,
+      "iconPath": "/i/000000/000456.png",
+      "label": "Bli",
+      "startSec": 85.75,
+      "tooltip": "Blizzard III @ 85.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 89.25,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 88.25,
+      "tooltip": "High Thunder @ 88.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3576,
+      "color": "#3b82f6",
+      "endSec": 91.75,
+      "iconPath": "/i/002000/002659.png",
+      "label": "Bli",
+      "startSec": 90.75,
+      "tooltip": "Blizzard IV @ 90.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 94.25,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 93.25,
+      "tooltip": "Paradox @ 93.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 152,
+      "color": "#3b82f6",
+      "endSec": 96.75,
+      "iconPath": "/i/000000/000453.png",
+      "label": "Fir",
+      "startSec": 95.75,
+      "tooltip": "Fire III @ 95.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 99.25,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 98.25,
+      "tooltip": "Paradox @ 98.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 101.75,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 100.75,
+      "tooltip": "Xenoglossy @ 100.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 104.25,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 103.25,
+      "tooltip": "Fire IV @ 103.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 106.75,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 105.75,
+      "tooltip": "Fire IV @ 105.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 109.25,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 108.25,
+      "tooltip": "Fire IV @ 108.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 111.75,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 110.75,
+      "tooltip": "Fire IV @ 110.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 114.25,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 113.25,
+      "tooltip": "Fire IV @ 113.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 116.75,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 115.75,
+      "tooltip": "High Thunder @ 115.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 119.25,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 118.25,
+      "tooltip": "Fire IV @ 118.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36989,
+      "color": "#3b82f6",
+      "endSec": 121.75,
+      "iconPath": "/i/002000/002151.png",
+      "label": "Fla",
+      "startSec": 120.75,
+      "tooltip": "Flare Star @ 120.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3573,
+      "color": "#f59e0b",
+      "endSec": 121.35,
+      "iconPath": "/i/002000/002656.png",
+      "label": "Ley",
+      "startSec": 120.75,
+      "tooltip": "Ley Lines @ 120.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 124.25,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 123.25,
+      "tooltip": "Xenoglossy @ 123.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25796,
+      "color": "#f59e0b",
+      "endSec": 123.85,
+      "iconPath": "/i/002000/002671.png",
+      "label": "Amp",
+      "startSec": 123.25,
+      "tooltip": "Amplifier @ 123.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 126.38,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 125.38,
+      "tooltip": "Xenoglossy @ 125.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16505,
+      "color": "#3b82f6",
+      "endSec": 128.5,
+      "iconPath": "/i/002000/002665.png",
+      "label": "Des",
+      "startSec": 127.5,
+      "tooltip": "Despair @ 127.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 158,
+      "color": "#f59e0b",
+      "endSec": 128.1,
+      "iconPath": "/i/002000/002651.png",
+      "label": "Man",
+      "startSec": 127.5,
+      "tooltip": "Manafont @ 127.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 130.62,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 129.62,
+      "tooltip": "Paradox @ 129.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 132.75,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 131.75,
+      "tooltip": "Fire IV @ 131.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 134.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 133.88,
+      "tooltip": "Fire IV @ 133.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 137.0,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 136.0,
+      "tooltip": "Fire IV @ 136.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 139.12,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 138.12,
+      "tooltip": "Fire IV @ 138.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 141.25,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 140.25,
+      "tooltip": "Fire IV @ 140.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 143.38,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 142.38,
+      "tooltip": "Fire IV @ 142.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 145.88,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 144.88,
+      "tooltip": "High Thunder @ 144.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36989,
+      "color": "#3b82f6",
+      "endSec": 148.38,
+      "iconPath": "/i/002000/002151.png",
+      "label": "Fla",
+      "startSec": 147.38,
+      "tooltip": "Flare Star @ 147.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16505,
+      "color": "#3b82f6",
+      "endSec": 150.88,
+      "iconPath": "/i/002000/002665.png",
+      "label": "Des",
+      "startSec": 149.88,
+      "tooltip": "Despair @ 149.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 153.38,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 152.38,
+      "tooltip": "Xenoglossy @ 152.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 154,
+      "color": "#3b82f6",
+      "endSec": 155.88,
+      "iconPath": "/i/000000/000456.png",
+      "label": "Bli",
+      "startSec": 154.88,
+      "tooltip": "Blizzard III @ 154.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3576,
+      "color": "#3b82f6",
+      "endSec": 158.38,
+      "iconPath": "/i/002000/002659.png",
+      "label": "Bli",
+      "startSec": 157.38,
+      "tooltip": "Blizzard IV @ 157.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 160.88,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 159.88,
+      "tooltip": "Paradox @ 159.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 152,
+      "color": "#3b82f6",
+      "endSec": 163.38,
+      "iconPath": "/i/000000/000453.png",
+      "label": "Fir",
+      "startSec": 162.38,
+      "tooltip": "Fire III @ 162.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 165.88,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 164.88,
+      "tooltip": "Paradox @ 164.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 168.38,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 167.38,
+      "tooltip": "Fire IV @ 167.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 170.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 169.88,
+      "tooltip": "Fire IV @ 169.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 173.38,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 172.38,
+      "tooltip": "High Thunder @ 172.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 175.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 174.88,
+      "tooltip": "Fire IV @ 174.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 178.38,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 177.38,
+      "tooltip": "Fire IV @ 177.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 180.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 179.88,
+      "tooltip": "Fire IV @ 179.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 183.38,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 182.38,
+      "tooltip": "Xenoglossy @ 182.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 185.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 184.88,
+      "tooltip": "Fire IV @ 184.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36989,
+      "color": "#3b82f6",
+      "endSec": 188.38,
+      "iconPath": "/i/002000/002151.png",
+      "label": "Fla",
+      "startSec": 187.38,
+      "tooltip": "Flare Star @ 187.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16505,
+      "color": "#3b82f6",
+      "endSec": 190.88,
+      "iconPath": "/i/002000/002665.png",
+      "label": "Des",
+      "startSec": 189.88,
+      "tooltip": "Despair @ 189.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 154,
+      "color": "#3b82f6",
+      "endSec": 193.38,
+      "iconPath": "/i/000000/000456.png",
+      "label": "Bli",
+      "startSec": 192.38,
+      "tooltip": "Blizzard III @ 192.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3576,
+      "color": "#3b82f6",
+      "endSec": 195.88,
+      "iconPath": "/i/002000/002659.png",
+      "label": "Bli",
+      "startSec": 194.88,
+      "tooltip": "Blizzard IV @ 194.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 198.38,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 197.38,
+      "tooltip": "Paradox @ 197.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 200.88,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 199.88,
+      "tooltip": "High Thunder @ 199.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 152,
+      "color": "#3b82f6",
+      "endSec": 203.38,
+      "iconPath": "/i/000000/000453.png",
+      "label": "Fir",
+      "startSec": 202.38,
+      "tooltip": "Fire III @ 202.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 205.88,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 204.88,
+      "tooltip": "Paradox @ 204.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 208.38,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 207.38,
+      "tooltip": "Fire IV @ 207.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 210.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 209.88,
+      "tooltip": "Fire IV @ 209.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 213.38,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 212.38,
+      "tooltip": "Xenoglossy @ 212.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 215.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 214.88,
+      "tooltip": "Fire IV @ 214.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 218.38,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 217.38,
+      "tooltip": "Fire IV @ 217.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 220.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 219.88,
+      "tooltip": "Fire IV @ 219.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 223.38,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 222.38,
+      "tooltip": "Fire IV @ 222.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36989,
+      "color": "#3b82f6",
+      "endSec": 225.88,
+      "iconPath": "/i/002000/002151.png",
+      "label": "Fla",
+      "startSec": 224.88,
+      "tooltip": "Flare Star @ 224.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 228.38,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 227.38,
+      "tooltip": "High Thunder @ 227.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16505,
+      "color": "#3b82f6",
+      "endSec": 230.88,
+      "iconPath": "/i/002000/002665.png",
+      "label": "Des",
+      "startSec": 229.88,
+      "tooltip": "Despair @ 229.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 158,
+      "color": "#f59e0b",
+      "endSec": 230.47,
+      "iconPath": "/i/002000/002651.png",
+      "label": "Man",
+      "startSec": 229.88,
+      "tooltip": "Manafont @ 229.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 233.38,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 232.38,
+      "tooltip": "Paradox @ 232.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 235.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 234.88,
+      "tooltip": "Fire IV @ 234.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 238.38,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 237.38,
+      "tooltip": "Fire IV @ 237.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 240.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 239.88,
+      "tooltip": "Fire IV @ 239.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 243.38,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 242.38,
+      "tooltip": "Xenoglossy @ 242.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3573,
+      "color": "#f59e0b",
+      "endSec": 242.97,
+      "iconPath": "/i/002000/002656.png",
+      "label": "Ley",
+      "startSec": 242.38,
+      "tooltip": "Ley Lines @ 242.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 245.88,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 244.88,
+      "tooltip": "Fire IV @ 244.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25796,
+      "color": "#f59e0b",
+      "endSec": 245.47,
+      "iconPath": "/i/002000/002671.png",
+      "label": "Amp",
+      "startSec": 244.88,
+      "tooltip": "Amplifier @ 244.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 248.0,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 247.0,
+      "tooltip": "Xenoglossy @ 247.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 250.12,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 249.12,
+      "tooltip": "Fire IV @ 249.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 252.25,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 251.25,
+      "tooltip": "Fire IV @ 251.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36989,
+      "color": "#3b82f6",
+      "endSec": 254.38,
+      "iconPath": "/i/002000/002151.png",
+      "label": "Fla",
+      "startSec": 253.38,
+      "tooltip": "Flare Star @ 253.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 256.5,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 255.5,
+      "tooltip": "High Thunder @ 255.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16505,
+      "color": "#3b82f6",
+      "endSec": 258.62,
+      "iconPath": "/i/002000/002665.png",
+      "label": "Des",
+      "startSec": 257.62,
+      "tooltip": "Despair @ 257.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 154,
+      "color": "#3b82f6",
+      "endSec": 260.75,
+      "iconPath": "/i/000000/000456.png",
+      "label": "Bli",
+      "startSec": 259.75,
+      "tooltip": "Blizzard III @ 259.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3576,
+      "color": "#3b82f6",
+      "endSec": 262.88,
+      "iconPath": "/i/002000/002659.png",
+      "label": "Bli",
+      "startSec": 261.88,
+      "tooltip": "Blizzard IV @ 261.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 265.0,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 264.0,
+      "tooltip": "Paradox @ 264.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 152,
+      "color": "#3b82f6",
+      "endSec": 267.5,
+      "iconPath": "/i/000000/000453.png",
+      "label": "Fir",
+      "startSec": 266.5,
+      "tooltip": "Fire III @ 266.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25797,
+      "color": "#3b82f6",
+      "endSec": 270.0,
+      "iconPath": "/i/002000/002672.png",
+      "label": "Par",
+      "startSec": 269.0,
+      "tooltip": "Paradox @ 269.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16507,
+      "color": "#3b82f6",
+      "endSec": 272.5,
+      "iconPath": "/i/002000/002667.png",
+      "label": "Xen",
+      "startSec": 271.5,
+      "tooltip": "Xenoglossy @ 271.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 275.0,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 274.0,
+      "tooltip": "Fire IV @ 274.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 277.5,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 276.5,
+      "tooltip": "Fire IV @ 276.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 280.0,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 279.0,
+      "tooltip": "Fire IV @ 279.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 282.5,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 281.5,
+      "tooltip": "Fire IV @ 281.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36986,
+      "color": "#3b82f6",
+      "endSec": 285.0,
+      "iconPath": "/i/002000/002673.png",
+      "label": "Hig",
+      "startSec": 284.0,
+      "tooltip": "High Thunder @ 284.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 287.5,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 286.5,
+      "tooltip": "Fire IV @ 286.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3577,
+      "color": "#3b82f6",
+      "endSec": 290.0,
+      "iconPath": "/i/002000/002660.png",
+      "label": "Fir",
+      "startSec": 289.0,
+      "tooltip": "Fire IV @ 289.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36989,
+      "color": "#3b82f6",
+      "endSec": 292.5,
+      "iconPath": "/i/002000/002151.png",
+      "label": "Fla",
+      "startSec": 291.5,
+      "tooltip": "Flare Star @ 291.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16505,
+      "color": "#3b82f6",
+      "endSec": 295.0,
+      "iconPath": "/i/002000/002665.png",
+      "label": "Des",
+      "startSec": 294.0,
+      "tooltip": "Despair @ 294.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 154,
+      "color": "#3b82f6",
+      "endSec": 297.5,
+      "iconPath": "/i/000000/000456.png",
+      "label": "Bli",
+      "startSec": 296.5,
+      "tooltip": "Blizzard III @ 296.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3576,
+      "color": "#3b82f6",
+      "endSec": 300.0,
+      "iconPath": "/i/002000/002659.png",
+      "label": "Bli",
+      "startSec": 299.0,
+      "tooltip": "Blizzard IV @ 299.0s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackCanonical": [],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 920.35,
+      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [],
+      "kind": "residual",
+      "lostPotency": 884.49,
+      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 152,
+      "abilityName": "Fire III",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #1: cast High Thunder, canonical opens Fire III (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16507,
+      "abilityName": "Xenoglossy",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #8: cast Fire IV, canonical opens Xenoglossy (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 0.0,
+        "tooltip": "High Thunder  (GCD)  @  0:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3573,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/002000/002656.png",
+        "label": "Ley",
+        "startSec": 0.0,
+        "tooltip": "Ley Lines  (oGCD)  @  0:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25796,
+        "color": "#777777",
+        "endSec": 1.2,
+        "iconPath": "/i/002000/002671.png",
+        "label": "Amp",
+        "startSec": 0.7,
+        "tooltip": "Amplifier  (oGCD)  @  0:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 2.5,
+        "tooltip": "Paradox  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 5.12,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 4.62,
+        "tooltip": "Xenoglossy  (GCD)  @  0:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 7.25,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 6.75,
+        "tooltip": "Fire IV  (GCD)  @  0:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 9.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 8.88,
+        "tooltip": "Fire IV  (GCD)  @  0:09",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 11.5,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 11.0,
+        "tooltip": "Fire IV  (GCD)  @  0:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 13.62,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 13.12,
+        "tooltip": "Fire IV  (GCD)  @  0:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 15.75,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 15.25,
+        "tooltip": "Fire IV  (GCD)  @  0:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 17.88,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 17.38,
+        "tooltip": "Fire IV  (GCD)  @  0:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36989,
+        "color": "#777777",
+        "endSec": 20.0,
+        "iconPath": "/i/002000/002151.png",
+        "label": "Fla",
+        "startSec": 19.5,
+        "tooltip": "Flare Star  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16505,
+        "color": "#777777",
+        "endSec": 22.12,
+        "iconPath": "/i/002000/002665.png",
+        "label": "Des",
+        "startSec": 21.62,
+        "tooltip": "Despair  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3573,
+        "color": "#777777",
+        "endSec": 22.12,
+        "iconPath": "/i/002000/002656.png",
+        "label": "Ley",
+        "startSec": 21.62,
+        "tooltip": "Ley Lines  (oGCD)  @  0:22",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 158,
+        "color": "#777777",
+        "endSec": 22.82,
+        "iconPath": "/i/002000/002651.png",
+        "label": "Man",
+        "startSec": 22.32,
+        "tooltip": "Manafont  (oGCD)  @  0:22",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 24.62,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 24.12,
+        "tooltip": "Paradox  (GCD)  @  0:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 26.75,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 26.25,
+        "tooltip": "Fire IV  (GCD)  @  0:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 28.88,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 28.38,
+        "tooltip": "High Thunder  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 31.0,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 30.5,
+        "tooltip": "Xenoglossy  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 33.12,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 32.62,
+        "tooltip": "Fire IV  (GCD)  @  0:33",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 35.25,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 34.75,
+        "tooltip": "Fire IV  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 37.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 36.88,
+        "tooltip": "Fire IV  (GCD)  @  0:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 39.5,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 39.0,
+        "tooltip": "Fire IV  (GCD)  @  0:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 41.62,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 41.12,
+        "tooltip": "Fire IV  (GCD)  @  0:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36989,
+        "color": "#777777",
+        "endSec": 43.75,
+        "iconPath": "/i/002000/002151.png",
+        "label": "Fla",
+        "startSec": 43.25,
+        "tooltip": "Flare Star  (GCD)  @  0:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16505,
+        "color": "#777777",
+        "endSec": 46.25,
+        "iconPath": "/i/002000/002665.png",
+        "label": "Des",
+        "startSec": 45.75,
+        "tooltip": "Despair  (GCD)  @  0:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 154,
+        "color": "#777777",
+        "endSec": 48.75,
+        "iconPath": "/i/000000/000456.png",
+        "label": "Bli",
+        "startSec": 48.25,
+        "tooltip": "Blizzard III  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3576,
+        "color": "#777777",
+        "endSec": 51.25,
+        "iconPath": "/i/002000/002659.png",
+        "label": "Bli",
+        "startSec": 50.75,
+        "tooltip": "Blizzard IV  (GCD)  @  0:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 53.75,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 53.25,
+        "tooltip": "Paradox  (GCD)  @  0:53",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 56.25,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 55.75,
+        "tooltip": "High Thunder  (GCD)  @  0:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 152,
+        "color": "#777777",
+        "endSec": 58.75,
+        "iconPath": "/i/000000/000453.png",
+        "label": "Fir",
+        "startSec": 58.25,
+        "tooltip": "Fire III  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 61.25,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 60.75,
+        "tooltip": "Paradox  (GCD)  @  1:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 63.75,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 63.25,
+        "tooltip": "Xenoglossy  (GCD)  @  1:03",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 66.25,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 65.75,
+        "tooltip": "Fire IV  (GCD)  @  1:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 68.75,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 68.25,
+        "tooltip": "Fire IV  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 71.25,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 70.75,
+        "tooltip": "Fire IV  (GCD)  @  1:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 73.75,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 73.25,
+        "tooltip": "Fire IV  (GCD)  @  1:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 76.25,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 75.75,
+        "tooltip": "Fire IV  (GCD)  @  1:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 78.75,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 78.25,
+        "tooltip": "Fire IV  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36989,
+        "color": "#777777",
+        "endSec": 81.25,
+        "iconPath": "/i/002000/002151.png",
+        "label": "Fla",
+        "startSec": 80.75,
+        "tooltip": "Flare Star  (GCD)  @  1:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 83.75,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 83.25,
+        "tooltip": "High Thunder  (GCD)  @  1:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16505,
+        "color": "#777777",
+        "endSec": 86.25,
+        "iconPath": "/i/002000/002665.png",
+        "label": "Des",
+        "startSec": 85.75,
+        "tooltip": "Despair  (GCD)  @  1:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 154,
+        "color": "#777777",
+        "endSec": 88.75,
+        "iconPath": "/i/000000/000456.png",
+        "label": "Bli",
+        "startSec": 88.25,
+        "tooltip": "Blizzard III  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3576,
+        "color": "#777777",
+        "endSec": 91.25,
+        "iconPath": "/i/002000/002659.png",
+        "label": "Bli",
+        "startSec": 90.75,
+        "tooltip": "Blizzard IV  (GCD)  @  1:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 93.75,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 93.25,
+        "tooltip": "Paradox  (GCD)  @  1:33",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 152,
+        "color": "#777777",
+        "endSec": 96.25,
+        "iconPath": "/i/000000/000453.png",
+        "label": "Fir",
+        "startSec": 95.75,
+        "tooltip": "Fire III  (GCD)  @  1:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 98.75,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 98.25,
+        "tooltip": "Paradox  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 101.25,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 100.75,
+        "tooltip": "Xenoglossy  (GCD)  @  1:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 103.75,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 103.25,
+        "tooltip": "Fire IV  (GCD)  @  1:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 106.25,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 105.75,
+        "tooltip": "Fire IV  (GCD)  @  1:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 108.75,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 108.25,
+        "tooltip": "Fire IV  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 111.25,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 110.75,
+        "tooltip": "High Thunder  (GCD)  @  1:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 113.75,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 113.25,
+        "tooltip": "Fire IV  (GCD)  @  1:53",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 116.25,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 115.75,
+        "tooltip": "Fire IV  (GCD)  @  1:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 118.75,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 118.25,
+        "tooltip": "Fire IV  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36989,
+        "color": "#777777",
+        "endSec": 121.25,
+        "iconPath": "/i/002000/002151.png",
+        "label": "Fla",
+        "startSec": 120.75,
+        "tooltip": "Flare Star  (GCD)  @  2:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3573,
+        "color": "#777777",
+        "endSec": 121.25,
+        "iconPath": "/i/002000/002656.png",
+        "label": "Ley",
+        "startSec": 120.75,
+        "tooltip": "Ley Lines  (oGCD)  @  2:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 123.75,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 123.25,
+        "tooltip": "Xenoglossy  (GCD)  @  2:03",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25796,
+        "color": "#777777",
+        "endSec": 123.75,
+        "iconPath": "/i/002000/002671.png",
+        "label": "Amp",
+        "startSec": 123.25,
+        "tooltip": "Amplifier  (oGCD)  @  2:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 125.88,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 125.38,
+        "tooltip": "Xenoglossy  (GCD)  @  2:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16505,
+        "color": "#777777",
+        "endSec": 128.0,
+        "iconPath": "/i/002000/002665.png",
+        "label": "Des",
+        "startSec": 127.5,
+        "tooltip": "Despair  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 158,
+        "color": "#777777",
+        "endSec": 128.0,
+        "iconPath": "/i/002000/002651.png",
+        "label": "Man",
+        "startSec": 127.5,
+        "tooltip": "Manafont  (oGCD)  @  2:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 130.12,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 129.62,
+        "tooltip": "Paradox  (GCD)  @  2:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 132.25,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 131.75,
+        "tooltip": "Fire IV  (GCD)  @  2:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 134.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 133.88,
+        "tooltip": "Fire IV  (GCD)  @  2:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 136.5,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 136.0,
+        "tooltip": "Fire IV  (GCD)  @  2:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 138.62,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 138.12,
+        "tooltip": "High Thunder  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 140.75,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 140.25,
+        "tooltip": "Fire IV  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 142.88,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 142.38,
+        "tooltip": "Fire IV  (GCD)  @  2:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 145.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 144.88,
+        "tooltip": "Fire IV  (GCD)  @  2:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36989,
+        "color": "#777777",
+        "endSec": 147.88,
+        "iconPath": "/i/002000/002151.png",
+        "label": "Fla",
+        "startSec": 147.38,
+        "tooltip": "Flare Star  (GCD)  @  2:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16505,
+        "color": "#777777",
+        "endSec": 150.38,
+        "iconPath": "/i/002000/002665.png",
+        "label": "Des",
+        "startSec": 149.88,
+        "tooltip": "Despair  (GCD)  @  2:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 152.88,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 152.38,
+        "tooltip": "Xenoglossy  (GCD)  @  2:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 154,
+        "color": "#777777",
+        "endSec": 155.38,
+        "iconPath": "/i/000000/000456.png",
+        "label": "Bli",
+        "startSec": 154.88,
+        "tooltip": "Blizzard III  (GCD)  @  2:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3576,
+        "color": "#777777",
+        "endSec": 157.88,
+        "iconPath": "/i/002000/002659.png",
+        "label": "Bli",
+        "startSec": 157.38,
+        "tooltip": "Blizzard IV  (GCD)  @  2:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 160.38,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 159.88,
+        "tooltip": "Paradox  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 152,
+        "color": "#777777",
+        "endSec": 162.88,
+        "iconPath": "/i/000000/000453.png",
+        "label": "Fir",
+        "startSec": 162.38,
+        "tooltip": "Fire III  (GCD)  @  2:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 165.38,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 164.88,
+        "tooltip": "Paradox  (GCD)  @  2:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 167.88,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 167.38,
+        "tooltip": "High Thunder  (GCD)  @  2:47",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 170.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 169.88,
+        "tooltip": "Fire IV  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 172.88,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 172.38,
+        "tooltip": "Fire IV  (GCD)  @  2:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 175.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 174.88,
+        "tooltip": "Fire IV  (GCD)  @  2:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 177.88,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 177.38,
+        "tooltip": "Fire IV  (GCD)  @  2:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 180.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 179.88,
+        "tooltip": "Fire IV  (GCD)  @  3:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 182.88,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 182.38,
+        "tooltip": "Xenoglossy  (GCD)  @  3:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 185.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 184.88,
+        "tooltip": "Fire IV  (GCD)  @  3:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36989,
+        "color": "#777777",
+        "endSec": 187.88,
+        "iconPath": "/i/002000/002151.png",
+        "label": "Fla",
+        "startSec": 187.38,
+        "tooltip": "Flare Star  (GCD)  @  3:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16505,
+        "color": "#777777",
+        "endSec": 190.38,
+        "iconPath": "/i/002000/002665.png",
+        "label": "Des",
+        "startSec": 189.88,
+        "tooltip": "Despair  (GCD)  @  3:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 154,
+        "color": "#777777",
+        "endSec": 192.88,
+        "iconPath": "/i/000000/000456.png",
+        "label": "Bli",
+        "startSec": 192.38,
+        "tooltip": "Blizzard III  (GCD)  @  3:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 195.38,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 194.88,
+        "tooltip": "High Thunder  (GCD)  @  3:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3576,
+        "color": "#777777",
+        "endSec": 197.88,
+        "iconPath": "/i/002000/002659.png",
+        "label": "Bli",
+        "startSec": 197.38,
+        "tooltip": "Blizzard IV  (GCD)  @  3:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 200.38,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 199.88,
+        "tooltip": "Paradox  (GCD)  @  3:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 152,
+        "color": "#777777",
+        "endSec": 202.88,
+        "iconPath": "/i/000000/000453.png",
+        "label": "Fir",
+        "startSec": 202.38,
+        "tooltip": "Fire III  (GCD)  @  3:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 205.38,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 204.88,
+        "tooltip": "Paradox  (GCD)  @  3:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 207.88,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 207.38,
+        "tooltip": "Fire IV  (GCD)  @  3:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 210.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 209.88,
+        "tooltip": "Fire IV  (GCD)  @  3:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 212.88,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 212.38,
+        "tooltip": "Xenoglossy  (GCD)  @  3:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 215.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 214.88,
+        "tooltip": "Fire IV  (GCD)  @  3:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 217.88,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 217.38,
+        "tooltip": "Fire IV  (GCD)  @  3:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 220.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 219.88,
+        "tooltip": "Fire IV  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 222.88,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 222.38,
+        "tooltip": "High Thunder  (GCD)  @  3:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 225.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 224.88,
+        "tooltip": "Fire IV  (GCD)  @  3:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36989,
+        "color": "#777777",
+        "endSec": 227.88,
+        "iconPath": "/i/002000/002151.png",
+        "label": "Fla",
+        "startSec": 227.38,
+        "tooltip": "Flare Star  (GCD)  @  3:47",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16505,
+        "color": "#777777",
+        "endSec": 230.38,
+        "iconPath": "/i/002000/002665.png",
+        "label": "Des",
+        "startSec": 229.88,
+        "tooltip": "Despair  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 158,
+        "color": "#777777",
+        "endSec": 230.38,
+        "iconPath": "/i/002000/002651.png",
+        "label": "Man",
+        "startSec": 229.88,
+        "tooltip": "Manafont  (oGCD)  @  3:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 232.88,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 232.38,
+        "tooltip": "Paradox  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 235.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 234.88,
+        "tooltip": "Fire IV  (GCD)  @  3:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 237.88,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 237.38,
+        "tooltip": "Fire IV  (GCD)  @  3:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 240.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 239.88,
+        "tooltip": "Fire IV  (GCD)  @  4:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 242.88,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 242.38,
+        "tooltip": "Xenoglossy  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3573,
+        "color": "#777777",
+        "endSec": 242.88,
+        "iconPath": "/i/002000/002656.png",
+        "label": "Ley",
+        "startSec": 242.38,
+        "tooltip": "Ley Lines  (oGCD)  @  4:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 245.38,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 244.88,
+        "tooltip": "Fire IV  (GCD)  @  4:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25796,
+        "color": "#777777",
+        "endSec": 245.38,
+        "iconPath": "/i/002000/002671.png",
+        "label": "Amp",
+        "startSec": 244.88,
+        "tooltip": "Amplifier  (oGCD)  @  4:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 247.5,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 247.0,
+        "tooltip": "Xenoglossy  (GCD)  @  4:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 249.62,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 249.12,
+        "tooltip": "Fire IV  (GCD)  @  4:09",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 251.75,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 251.25,
+        "tooltip": "High Thunder  (GCD)  @  4:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 253.88,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 253.38,
+        "tooltip": "Fire IV  (GCD)  @  4:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36989,
+        "color": "#777777",
+        "endSec": 256.0,
+        "iconPath": "/i/002000/002151.png",
+        "label": "Fla",
+        "startSec": 255.5,
+        "tooltip": "Flare Star  (GCD)  @  4:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16505,
+        "color": "#777777",
+        "endSec": 258.12,
+        "iconPath": "/i/002000/002665.png",
+        "label": "Des",
+        "startSec": 257.62,
+        "tooltip": "Despair  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 154,
+        "color": "#777777",
+        "endSec": 260.25,
+        "iconPath": "/i/000000/000456.png",
+        "label": "Bli",
+        "startSec": 259.75,
+        "tooltip": "Blizzard III  (GCD)  @  4:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3576,
+        "color": "#777777",
+        "endSec": 262.38,
+        "iconPath": "/i/002000/002659.png",
+        "label": "Bli",
+        "startSec": 261.88,
+        "tooltip": "Blizzard IV  (GCD)  @  4:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 264.5,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 264.0,
+        "tooltip": "Paradox  (GCD)  @  4:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 152,
+        "color": "#777777",
+        "endSec": 267.0,
+        "iconPath": "/i/000000/000453.png",
+        "label": "Fir",
+        "startSec": 266.5,
+        "tooltip": "Fire III  (GCD)  @  4:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25797,
+        "color": "#777777",
+        "endSec": 269.5,
+        "iconPath": "/i/002000/002672.png",
+        "label": "Par",
+        "startSec": 269.0,
+        "tooltip": "Paradox  (GCD)  @  4:29",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16507,
+        "color": "#777777",
+        "endSec": 272.0,
+        "iconPath": "/i/002000/002667.png",
+        "label": "Xen",
+        "startSec": 271.5,
+        "tooltip": "Xenoglossy  (GCD)  @  4:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 274.5,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 274.0,
+        "tooltip": "Fire IV  (GCD)  @  4:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 277.0,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 276.5,
+        "tooltip": "Fire IV  (GCD)  @  4:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36986,
+        "color": "#777777",
+        "endSec": 279.5,
+        "iconPath": "/i/002000/002673.png",
+        "label": "Hig",
+        "startSec": 279.0,
+        "tooltip": "High Thunder  (GCD)  @  4:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 282.0,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 281.5,
+        "tooltip": "Fire IV  (GCD)  @  4:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 284.5,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 284.0,
+        "tooltip": "Fire IV  (GCD)  @  4:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 287.0,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 286.5,
+        "tooltip": "Fire IV  (GCD)  @  4:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3577,
+        "color": "#777777",
+        "endSec": 289.5,
+        "iconPath": "/i/002000/002660.png",
+        "label": "Fir",
+        "startSec": 289.0,
+        "tooltip": "Fire IV  (GCD)  @  4:49",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36989,
+        "color": "#777777",
+        "endSec": 292.0,
+        "iconPath": "/i/002000/002151.png",
+        "label": "Fla",
+        "startSec": 291.5,
+        "tooltip": "Flare Star  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16505,
+        "color": "#777777",
+        "endSec": 294.5,
+        "iconPath": "/i/002000/002665.png",
+        "label": "Des",
+        "startSec": 294.0,
+        "tooltip": "Despair  (GCD)  @  4:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 154,
+        "color": "#777777",
+        "endSec": 297.0,
+        "iconPath": "/i/000000/000456.png",
+        "label": "Bli",
+        "startSec": 296.5,
+        "tooltip": "Blizzard III  (GCD)  @  4:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3576,
+        "color": "#777777",
+        "endSec": 299.5,
+        "iconPath": "/i/002000/002659.png",
+        "label": "Bli",
+        "startSec": 299.0,
+        "tooltip": "Blizzard IV  (GCD)  @  4:59",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 54910.0,
+    "efficiencyPct": 96.82,
+    "fightDurationSec": 300.0,
+    "idealizedPotency": 56714.84,
+    "killTimeSec": 300,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

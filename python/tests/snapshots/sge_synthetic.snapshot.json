@@ -1,0 +1,3676 @@
+{
+  "abilityMeta": {
+    "24290": {
+      "iconPath": "/i/003000/003658.png",
+      "id": 24290,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Eukrasia"
+    },
+    "24312": {
+      "iconPath": "/i/003000/003680.png",
+      "id": 24312,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Dosis III"
+    },
+    "24313": {
+      "iconPath": "/i/003000/003681.png",
+      "id": 24313,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Phlegma III"
+    },
+    "24314": {
+      "iconPath": "/i/003000/003682.png",
+      "id": 24314,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Eukrasian Dosis III"
+    },
+    "37033": {
+      "iconPath": "/i/003000/003688.png",
+      "id": 37033,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Psyche"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "24290": 13,
+        "24312": 117,
+        "24313": 10,
+        "24314": 13,
+        "37033": 1
+      },
+      "totalCasts": 154
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": []
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 404.6,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "fallback_heuristic"
+    },
+    "Drift": {
+      "downtimeSource": "fallback_heuristic",
+      "downtimeWindows": [],
+      "fightDurationSec": 360.0,
+      "findings": [
+        {
+          "abilityId": 37033,
+          "abilityName": "Psyche",
+          "cappedSeconds": 300.0,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 5.0,
+          "lostPotency": 3450.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 24313,
+          "abilityName": "Phlegma III",
+          "cappedSeconds": 4.5,
+          "casts": 10,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 24313,
+          "expectedId": 24312,
+          "lostPotency": 0.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Phlegma III, canonical uses Dosis III (same potency)"
+        },
+        {
+          "actualId": 24312,
+          "expectedId": 24313,
+          "lostPotency": 310.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Dosis III (380p), canonical uses Phlegma III (690p) \u2014 -310p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Scoring": {
+      "deliveredObserved": 63210.0,
+      "deliveredPotency": 63210.0,
+      "downtimeSource": "fallback_heuristic",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {},
+      "fightDurationSec": 360.0,
+      "idealizedLenient": 70762.92,
+      "idealizedMaster": 69692.55,
+      "idealizedObserved": 69692.55,
+      "idealizedPotency": 70762.92,
+      "idealizedStrict": 70762.92,
+      "masterBuffIntervals": [],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.5,
+        "payload": null
+      },
+      "tinctureLoss": 928.15,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 154"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Dosis III",
+          117,
+          0
+        ],
+        [
+          "Eukrasia",
+          13,
+          0
+        ],
+        [
+          "Eukrasian Dosis III",
+          13,
+          0
+        ],
+        [
+          "Phlegma III",
+          10,
+          0
+        ],
+        [
+          "Psyche",
+          1,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No raid-buff providers in this party \u2014 burst alignment N/A."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 405p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "[drift] Psyche: 1 casts, drifted 300.0s \u2248 -3450p (ref avg -0p)"
+      ],
+      "summaryLines": [
+        "Total drift cost: -3450p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Psyche",
+          1,
+          300.0,
+          3450,
+          0,
+          "+3450"
+        ],
+        [
+          "Phlegma III",
+          10,
+          4.5,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #5: cast Dosis III (380p), canonical uses Phlegma III (690p) \u2014 -310p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 310p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          3,
+          "Dosis III",
+          "Phlegma III",
+          0
+        ],
+        [
+          5,
+          "Phlegma III",
+          "Dosis III",
+          310
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 63210.0,
+    "downtimeSource": "fallback_heuristic",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 89.33,
+    "efficiencyPctLenient": 89.33,
+    "efficiencyPctMaster": 90.7,
+    "efficiencyPctObserved": 90.7,
+    "efficiencyPctStrict": 89.33,
+    "idealizedMaster": 69692.55,
+    "idealizedObserved": 69692.55,
+    "killTimeSec": 360,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Sage"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "rankSuppressed": true,
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 70762.92,
+    "yourIdealizedPotencyLenient": 70762.92,
+    "yourPotency": 63210.0
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 30.0,
+      "multiplier": 1.08,
+      "startSec": 0.0
+    },
+    {
+      "endSec": 331.0,
+      "multiplier": 1.08,
+      "startSec": 301.0
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": -0.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": -1.5,
+      "tooltip": "Dosis III @ -1.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 2.0,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 1.0,
+      "tooltip": "Eukrasia @ 1.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 3.0,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 2.0,
+      "tooltip": "Eukrasian Dosis III @ 2.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37033,
+      "color": "#f59e0b",
+      "endSec": 2.6,
+      "iconPath": "/i/003000/003688.png",
+      "label": "Psy",
+      "startSec": 2.0,
+      "tooltip": "Psyche @ 2.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 24313,
+      "color": "#3b82f6",
+      "endSec": 4.5,
+      "iconPath": "/i/003000/003681.png",
+      "label": "Phl",
+      "startSec": 3.5,
+      "tooltip": "Phlegma III @ 3.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24313,
+      "color": "#3b82f6",
+      "endSec": 7.0,
+      "iconPath": "/i/003000/003681.png",
+      "label": "Phl",
+      "startSec": 6.0,
+      "tooltip": "Phlegma III @ 6.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 9.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 8.5,
+      "tooltip": "Dosis III @ 8.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 12.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 11.0,
+      "tooltip": "Dosis III @ 11.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 14.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 13.5,
+      "tooltip": "Dosis III @ 13.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 17.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 16.0,
+      "tooltip": "Dosis III @ 16.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 19.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 18.5,
+      "tooltip": "Dosis III @ 18.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 22.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 21.0,
+      "tooltip": "Dosis III @ 21.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 24.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 23.5,
+      "tooltip": "Dosis III @ 23.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 27.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 26.0,
+      "tooltip": "Dosis III @ 26.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 29.5,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 28.5,
+      "tooltip": "Eukrasia @ 28.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 30.5,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 29.5,
+      "tooltip": "Eukrasian Dosis III @ 29.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 32.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 31.0,
+      "tooltip": "Dosis III @ 31.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 34.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 33.5,
+      "tooltip": "Dosis III @ 33.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 37.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 36.0,
+      "tooltip": "Dosis III @ 36.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 39.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 38.5,
+      "tooltip": "Dosis III @ 38.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 42.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 41.0,
+      "tooltip": "Dosis III @ 41.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24313,
+      "color": "#3b82f6",
+      "endSec": 44.5,
+      "iconPath": "/i/003000/003681.png",
+      "label": "Phl",
+      "startSec": 43.5,
+      "tooltip": "Phlegma III @ 43.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 47.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 46.0,
+      "tooltip": "Dosis III @ 46.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 49.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 48.5,
+      "tooltip": "Dosis III @ 48.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 52.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 51.0,
+      "tooltip": "Dosis III @ 51.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 54.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 53.5,
+      "tooltip": "Dosis III @ 53.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 57.0,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 56.0,
+      "tooltip": "Eukrasia @ 56.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 58.0,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 57.0,
+      "tooltip": "Eukrasian Dosis III @ 57.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 59.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 58.5,
+      "tooltip": "Dosis III @ 58.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 62.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 61.0,
+      "tooltip": "Dosis III @ 61.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 64.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 63.5,
+      "tooltip": "Dosis III @ 63.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37033,
+      "color": "#f59e0b",
+      "endSec": 64.1,
+      "iconPath": "/i/003000/003688.png",
+      "label": "Psy",
+      "startSec": 63.5,
+      "tooltip": "Psyche @ 63.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 67.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 66.0,
+      "tooltip": "Dosis III @ 66.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 69.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 68.5,
+      "tooltip": "Dosis III @ 68.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 72.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 71.0,
+      "tooltip": "Dosis III @ 71.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 74.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 73.5,
+      "tooltip": "Dosis III @ 73.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 77.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 76.0,
+      "tooltip": "Dosis III @ 76.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 79.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 78.5,
+      "tooltip": "Dosis III @ 78.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 82.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 81.0,
+      "tooltip": "Dosis III @ 81.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 84.5,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 83.5,
+      "tooltip": "Eukrasia @ 83.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 85.5,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 84.5,
+      "tooltip": "Eukrasian Dosis III @ 84.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24313,
+      "color": "#3b82f6",
+      "endSec": 87.0,
+      "iconPath": "/i/003000/003681.png",
+      "label": "Phl",
+      "startSec": 86.0,
+      "tooltip": "Phlegma III @ 86.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 89.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 88.5,
+      "tooltip": "Dosis III @ 88.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 92.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 91.0,
+      "tooltip": "Dosis III @ 91.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 94.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 93.5,
+      "tooltip": "Dosis III @ 93.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 97.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 96.0,
+      "tooltip": "Dosis III @ 96.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 99.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 98.5,
+      "tooltip": "Dosis III @ 98.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 102.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 101.0,
+      "tooltip": "Dosis III @ 101.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 104.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 103.5,
+      "tooltip": "Dosis III @ 103.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 107.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 106.0,
+      "tooltip": "Dosis III @ 106.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 109.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 108.5,
+      "tooltip": "Dosis III @ 108.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 112.0,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 111.0,
+      "tooltip": "Eukrasia @ 111.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 113.0,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 112.0,
+      "tooltip": "Eukrasian Dosis III @ 112.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 114.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 113.5,
+      "tooltip": "Dosis III @ 113.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 117.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 116.0,
+      "tooltip": "Dosis III @ 116.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 119.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 118.5,
+      "tooltip": "Dosis III @ 118.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 122.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 121.0,
+      "tooltip": "Dosis III @ 121.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24313,
+      "color": "#3b82f6",
+      "endSec": 124.5,
+      "iconPath": "/i/003000/003681.png",
+      "label": "Phl",
+      "startSec": 123.5,
+      "tooltip": "Phlegma III @ 123.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37033,
+      "color": "#f59e0b",
+      "endSec": 124.1,
+      "iconPath": "/i/003000/003688.png",
+      "label": "Psy",
+      "startSec": 123.5,
+      "tooltip": "Psyche @ 123.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 127.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 126.0,
+      "tooltip": "Dosis III @ 126.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 129.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 128.5,
+      "tooltip": "Dosis III @ 128.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 132.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 131.0,
+      "tooltip": "Dosis III @ 131.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 134.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 133.5,
+      "tooltip": "Dosis III @ 133.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 137.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 136.0,
+      "tooltip": "Dosis III @ 136.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 139.5,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 138.5,
+      "tooltip": "Eukrasia @ 138.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 140.5,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 139.5,
+      "tooltip": "Eukrasian Dosis III @ 139.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 142.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 141.0,
+      "tooltip": "Dosis III @ 141.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 144.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 143.5,
+      "tooltip": "Dosis III @ 143.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 147.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 146.0,
+      "tooltip": "Dosis III @ 146.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 149.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 148.5,
+      "tooltip": "Dosis III @ 148.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 152.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 151.0,
+      "tooltip": "Dosis III @ 151.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 154.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 153.5,
+      "tooltip": "Dosis III @ 153.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 157.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 156.0,
+      "tooltip": "Dosis III @ 156.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 159.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 158.5,
+      "tooltip": "Dosis III @ 158.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 162.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 161.0,
+      "tooltip": "Dosis III @ 161.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24313,
+      "color": "#3b82f6",
+      "endSec": 164.5,
+      "iconPath": "/i/003000/003681.png",
+      "label": "Phl",
+      "startSec": 163.5,
+      "tooltip": "Phlegma III @ 163.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 167.0,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 166.0,
+      "tooltip": "Eukrasia @ 166.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 168.0,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 167.0,
+      "tooltip": "Eukrasian Dosis III @ 167.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 169.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 168.5,
+      "tooltip": "Dosis III @ 168.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 172.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 171.0,
+      "tooltip": "Dosis III @ 171.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 174.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 173.5,
+      "tooltip": "Dosis III @ 173.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 177.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 176.0,
+      "tooltip": "Dosis III @ 176.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 179.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 178.5,
+      "tooltip": "Dosis III @ 178.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 182.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 181.0,
+      "tooltip": "Dosis III @ 181.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 184.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 183.5,
+      "tooltip": "Dosis III @ 183.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37033,
+      "color": "#f59e0b",
+      "endSec": 184.1,
+      "iconPath": "/i/003000/003688.png",
+      "label": "Psy",
+      "startSec": 183.5,
+      "tooltip": "Psyche @ 183.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 187.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 186.0,
+      "tooltip": "Dosis III @ 186.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 189.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 188.5,
+      "tooltip": "Dosis III @ 188.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 192.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 191.0,
+      "tooltip": "Dosis III @ 191.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 194.5,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 193.5,
+      "tooltip": "Eukrasia @ 193.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 195.5,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 194.5,
+      "tooltip": "Eukrasian Dosis III @ 194.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 197.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 196.0,
+      "tooltip": "Dosis III @ 196.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 199.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 198.5,
+      "tooltip": "Dosis III @ 198.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 202.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 201.0,
+      "tooltip": "Dosis III @ 201.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24313,
+      "color": "#3b82f6",
+      "endSec": 204.5,
+      "iconPath": "/i/003000/003681.png",
+      "label": "Phl",
+      "startSec": 203.5,
+      "tooltip": "Phlegma III @ 203.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 207.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 206.0,
+      "tooltip": "Dosis III @ 206.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 209.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 208.5,
+      "tooltip": "Dosis III @ 208.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 212.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 211.0,
+      "tooltip": "Dosis III @ 211.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 214.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 213.5,
+      "tooltip": "Dosis III @ 213.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 217.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 216.0,
+      "tooltip": "Dosis III @ 216.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 219.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 218.5,
+      "tooltip": "Dosis III @ 218.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 222.0,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 221.0,
+      "tooltip": "Eukrasia @ 221.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 223.0,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 222.0,
+      "tooltip": "Eukrasian Dosis III @ 222.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 224.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 223.5,
+      "tooltip": "Dosis III @ 223.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 227.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 226.0,
+      "tooltip": "Dosis III @ 226.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 229.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 228.5,
+      "tooltip": "Dosis III @ 228.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 232.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 231.0,
+      "tooltip": "Dosis III @ 231.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 234.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 233.5,
+      "tooltip": "Dosis III @ 233.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 237.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 236.0,
+      "tooltip": "Dosis III @ 236.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 239.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 238.5,
+      "tooltip": "Dosis III @ 238.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 242.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 241.0,
+      "tooltip": "Dosis III @ 241.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24313,
+      "color": "#3b82f6",
+      "endSec": 244.5,
+      "iconPath": "/i/003000/003681.png",
+      "label": "Phl",
+      "startSec": 243.5,
+      "tooltip": "Phlegma III @ 243.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37033,
+      "color": "#f59e0b",
+      "endSec": 244.1,
+      "iconPath": "/i/003000/003688.png",
+      "label": "Psy",
+      "startSec": 243.5,
+      "tooltip": "Psyche @ 243.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 247.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 246.0,
+      "tooltip": "Dosis III @ 246.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 249.5,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 248.5,
+      "tooltip": "Eukrasia @ 248.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 250.5,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 249.5,
+      "tooltip": "Eukrasian Dosis III @ 249.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 252.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 251.0,
+      "tooltip": "Dosis III @ 251.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 254.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 253.5,
+      "tooltip": "Dosis III @ 253.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 257.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 256.0,
+      "tooltip": "Dosis III @ 256.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 259.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 258.5,
+      "tooltip": "Dosis III @ 258.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 262.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 261.0,
+      "tooltip": "Dosis III @ 261.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 264.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 263.5,
+      "tooltip": "Dosis III @ 263.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 267.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 266.0,
+      "tooltip": "Dosis III @ 266.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 269.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 268.5,
+      "tooltip": "Dosis III @ 268.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 272.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 271.0,
+      "tooltip": "Dosis III @ 271.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 274.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 273.5,
+      "tooltip": "Dosis III @ 273.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 277.0,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 276.0,
+      "tooltip": "Eukrasia @ 276.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 278.0,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 277.0,
+      "tooltip": "Eukrasian Dosis III @ 277.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 279.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 278.5,
+      "tooltip": "Dosis III @ 278.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 282.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 281.0,
+      "tooltip": "Dosis III @ 281.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24313,
+      "color": "#3b82f6",
+      "endSec": 284.5,
+      "iconPath": "/i/003000/003681.png",
+      "label": "Phl",
+      "startSec": 283.5,
+      "tooltip": "Phlegma III @ 283.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 287.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 286.0,
+      "tooltip": "Dosis III @ 286.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 289.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 288.5,
+      "tooltip": "Dosis III @ 288.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 292.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 291.0,
+      "tooltip": "Dosis III @ 291.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 294.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 293.5,
+      "tooltip": "Dosis III @ 293.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 297.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 296.0,
+      "tooltip": "Dosis III @ 296.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 299.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 298.5,
+      "tooltip": "Dosis III @ 298.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 302.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 301.0,
+      "tooltip": "Dosis III @ 301.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 304.5,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 303.5,
+      "tooltip": "Eukrasia @ 303.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 305.5,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 304.5,
+      "tooltip": "Eukrasian Dosis III @ 304.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37033,
+      "color": "#f59e0b",
+      "endSec": 305.1,
+      "iconPath": "/i/003000/003688.png",
+      "label": "Psy",
+      "startSec": 304.5,
+      "tooltip": "Psyche @ 304.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 307.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 306.0,
+      "tooltip": "Dosis III @ 306.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 309.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 308.5,
+      "tooltip": "Dosis III @ 308.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 312.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 311.0,
+      "tooltip": "Dosis III @ 311.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 314.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 313.5,
+      "tooltip": "Dosis III @ 313.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 317.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 316.0,
+      "tooltip": "Dosis III @ 316.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 319.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 318.5,
+      "tooltip": "Dosis III @ 318.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 322.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 321.0,
+      "tooltip": "Dosis III @ 321.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24313,
+      "color": "#3b82f6",
+      "endSec": 324.5,
+      "iconPath": "/i/003000/003681.png",
+      "label": "Phl",
+      "startSec": 323.5,
+      "tooltip": "Phlegma III @ 323.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 327.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 326.0,
+      "tooltip": "Dosis III @ 326.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 329.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 328.5,
+      "tooltip": "Dosis III @ 328.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 332.0,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 331.0,
+      "tooltip": "Eukrasia @ 331.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 333.0,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 332.0,
+      "tooltip": "Eukrasian Dosis III @ 332.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 334.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 333.5,
+      "tooltip": "Dosis III @ 333.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 337.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 336.0,
+      "tooltip": "Dosis III @ 336.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 339.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 338.5,
+      "tooltip": "Dosis III @ 338.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 342.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 341.0,
+      "tooltip": "Dosis III @ 341.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 344.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 343.5,
+      "tooltip": "Dosis III @ 343.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 347.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 346.0,
+      "tooltip": "Dosis III @ 346.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 349.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 348.5,
+      "tooltip": "Dosis III @ 348.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 352.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 351.0,
+      "tooltip": "Dosis III @ 351.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 354.5,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 353.5,
+      "tooltip": "Dosis III @ 353.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24312,
+      "color": "#3b82f6",
+      "endSec": 357.0,
+      "iconPath": "/i/003000/003680.png",
+      "label": "Dos",
+      "startSec": 356.0,
+      "tooltip": "Dosis III @ 356.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24290,
+      "color": "#3b82f6",
+      "endSec": 359.5,
+      "iconPath": "/i/003000/003658.png",
+      "label": "Euk",
+      "startSec": 358.5,
+      "tooltip": "Eukrasia @ 358.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 24314,
+      "color": "#3b82f6",
+      "endSec": 360.5,
+      "iconPath": "/i/003000/003682.png",
+      "label": "Euk",
+      "startSec": 359.5,
+      "tooltip": "Eukrasian Dosis III @ 359.5s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackCanonical": [],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [],
+      "kind": "cadence",
+      "lostPotency": 2280.0,
+      "summary": "Loose GCD pacing \u2014 the optimal line fit ~6 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 928.15,
+      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [],
+      "kind": "residual",
+      "lostPotency": 894.77,
+      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 37033,
+      "abilityName": "Psyche",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 690.0,
+      "summary": "Missed Psyche \u2014 fit one around 1:04",
+      "timeSec": 63.5
+    },
+    {
+      "abilityId": 37033,
+      "abilityName": "Psyche",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 690.0,
+      "summary": "Missed Psyche \u2014 fit one around 2:04",
+      "timeSec": 123.5
+    },
+    {
+      "abilityId": 37033,
+      "abilityName": "Psyche",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 690.0,
+      "summary": "Missed Psyche \u2014 fit one around 3:04",
+      "timeSec": 183.5
+    },
+    {
+      "abilityId": 37033,
+      "abilityName": "Psyche",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 690.0,
+      "summary": "Missed Psyche \u2014 fit one around 4:04",
+      "timeSec": 243.5
+    },
+    {
+      "abilityId": 37033,
+      "abilityName": "Psyche",
+      "children": [],
+      "kind": "missed_cast",
+      "lostPotency": 690.0,
+      "summary": "Missed Psyche \u2014 fit one around 5:04",
+      "timeSec": 304.5
+    },
+    {
+      "abilityId": 24313,
+      "abilityName": "Phlegma III",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #5: cast Dosis III, canonical opens Phlegma III (ordering \u2014 no net loss unless it drops a cast)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": -1.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": -1.5,
+        "tooltip": "Dosis III  (GCD)  @  -1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 1.5,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 1.0,
+        "tooltip": "Eukrasia  (GCD)  @  0:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 2.5,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 2.0,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37033,
+        "color": "#777777",
+        "endSec": 2.5,
+        "iconPath": "/i/003000/003688.png",
+        "label": "Psy",
+        "startSec": 2.0,
+        "tooltip": "Psyche  (oGCD)  @  0:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 24313,
+        "color": "#777777",
+        "endSec": 5.0,
+        "iconPath": "/i/003000/003681.png",
+        "label": "Phl",
+        "startSec": 4.5,
+        "tooltip": "Phlegma III  (GCD)  @  0:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24313,
+        "color": "#777777",
+        "endSec": 7.5,
+        "iconPath": "/i/003000/003681.png",
+        "label": "Phl",
+        "startSec": 7.0,
+        "tooltip": "Phlegma III  (GCD)  @  0:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 10.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 9.5,
+        "tooltip": "Dosis III  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 12.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 12.0,
+        "tooltip": "Dosis III  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 15.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 14.5,
+        "tooltip": "Dosis III  (GCD)  @  0:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 17.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 17.0,
+        "tooltip": "Dosis III  (GCD)  @  0:17",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 20.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 19.5,
+        "tooltip": "Dosis III  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 22.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 22.0,
+        "tooltip": "Dosis III  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 25.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 24.5,
+        "tooltip": "Dosis III  (GCD)  @  0:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 27.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 27.0,
+        "tooltip": "Dosis III  (GCD)  @  0:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 30.0,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 29.5,
+        "tooltip": "Eukrasia  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 31.0,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 30.5,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 33.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 33.0,
+        "tooltip": "Dosis III  (GCD)  @  0:33",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 36.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 35.5,
+        "tooltip": "Dosis III  (GCD)  @  0:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 38.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 38.0,
+        "tooltip": "Dosis III  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 41.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 40.5,
+        "tooltip": "Dosis III  (GCD)  @  0:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 43.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 43.0,
+        "tooltip": "Dosis III  (GCD)  @  0:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24313,
+        "color": "#777777",
+        "endSec": 46.0,
+        "iconPath": "/i/003000/003681.png",
+        "label": "Phl",
+        "startSec": 45.5,
+        "tooltip": "Phlegma III  (GCD)  @  0:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 48.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 48.0,
+        "tooltip": "Dosis III  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 51.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 50.5,
+        "tooltip": "Dosis III  (GCD)  @  0:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 53.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 53.0,
+        "tooltip": "Dosis III  (GCD)  @  0:53",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 56.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 55.5,
+        "tooltip": "Dosis III  (GCD)  @  0:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 58.5,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 58.0,
+        "tooltip": "Eukrasia  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 59.5,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 59.0,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  0:59",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 62.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 61.5,
+        "tooltip": "Dosis III  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 64.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 64.0,
+        "tooltip": "Dosis III  (GCD)  @  1:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 67.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 66.5,
+        "tooltip": "Dosis III  (GCD)  @  1:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 69.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 69.0,
+        "tooltip": "Dosis III  (GCD)  @  1:09",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 72.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 71.5,
+        "tooltip": "Dosis III  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 74.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 74.0,
+        "tooltip": "Dosis III  (GCD)  @  1:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 77.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 76.5,
+        "tooltip": "Dosis III  (GCD)  @  1:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 79.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 79.0,
+        "tooltip": "Dosis III  (GCD)  @  1:19",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 82.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 81.5,
+        "tooltip": "Dosis III  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 84.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 84.0,
+        "tooltip": "Dosis III  (GCD)  @  1:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 87.0,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 86.5,
+        "tooltip": "Eukrasia  (GCD)  @  1:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 88.0,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 87.5,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24313,
+        "color": "#777777",
+        "endSec": 90.5,
+        "iconPath": "/i/003000/003681.png",
+        "label": "Phl",
+        "startSec": 90.0,
+        "tooltip": "Phlegma III  (GCD)  @  1:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 92.5,
+        "tooltip": "Dosis III  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 95.0,
+        "tooltip": "Dosis III  (GCD)  @  1:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 98.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 97.5,
+        "tooltip": "Dosis III  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 100.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 100.0,
+        "tooltip": "Dosis III  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 103.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 102.5,
+        "tooltip": "Dosis III  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 105.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 105.0,
+        "tooltip": "Dosis III  (GCD)  @  1:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 107.5,
+        "tooltip": "Dosis III  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 110.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 110.0,
+        "tooltip": "Dosis III  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 113.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 112.5,
+        "tooltip": "Dosis III  (GCD)  @  1:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 115.5,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 115.0,
+        "tooltip": "Eukrasia  (GCD)  @  1:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 116.5,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 116.0,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  1:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 119.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 118.5,
+        "tooltip": "Dosis III  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 121.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 121.0,
+        "tooltip": "Dosis III  (GCD)  @  2:01",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 124.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 123.5,
+        "tooltip": "Dosis III  (GCD)  @  2:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24313,
+        "color": "#777777",
+        "endSec": 126.5,
+        "iconPath": "/i/003000/003681.png",
+        "label": "Phl",
+        "startSec": 126.0,
+        "tooltip": "Phlegma III  (GCD)  @  2:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 129.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 128.5,
+        "tooltip": "Dosis III  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 131.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 131.0,
+        "tooltip": "Dosis III  (GCD)  @  2:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 134.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 133.5,
+        "tooltip": "Dosis III  (GCD)  @  2:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 136.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 136.0,
+        "tooltip": "Dosis III  (GCD)  @  2:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 139.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 138.5,
+        "tooltip": "Dosis III  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 141.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 141.0,
+        "tooltip": "Dosis III  (GCD)  @  2:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 144.0,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 143.5,
+        "tooltip": "Eukrasia  (GCD)  @  2:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 145.0,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 144.5,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  2:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 147.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 147.0,
+        "tooltip": "Dosis III  (GCD)  @  2:27",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 150.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 149.5,
+        "tooltip": "Dosis III  (GCD)  @  2:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 152.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 152.0,
+        "tooltip": "Dosis III  (GCD)  @  2:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 155.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 154.5,
+        "tooltip": "Dosis III  (GCD)  @  2:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 157.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 157.0,
+        "tooltip": "Dosis III  (GCD)  @  2:37",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 160.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 159.5,
+        "tooltip": "Dosis III  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 162.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 162.0,
+        "tooltip": "Dosis III  (GCD)  @  2:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 165.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 164.5,
+        "tooltip": "Dosis III  (GCD)  @  2:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24313,
+        "color": "#777777",
+        "endSec": 167.5,
+        "iconPath": "/i/003000/003681.png",
+        "label": "Phl",
+        "startSec": 167.0,
+        "tooltip": "Phlegma III  (GCD)  @  2:47",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 170.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 169.5,
+        "tooltip": "Dosis III  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 172.5,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 172.0,
+        "tooltip": "Eukrasia  (GCD)  @  2:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 173.5,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 173.0,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  2:53",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 176.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 175.5,
+        "tooltip": "Dosis III  (GCD)  @  2:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 178.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 178.0,
+        "tooltip": "Dosis III  (GCD)  @  2:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 181.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 180.5,
+        "tooltip": "Dosis III  (GCD)  @  3:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 183.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 183.0,
+        "tooltip": "Dosis III  (GCD)  @  3:03",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 186.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 185.5,
+        "tooltip": "Dosis III  (GCD)  @  3:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 188.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 188.0,
+        "tooltip": "Dosis III  (GCD)  @  3:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 191.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 190.5,
+        "tooltip": "Dosis III  (GCD)  @  3:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 193.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 193.0,
+        "tooltip": "Dosis III  (GCD)  @  3:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 196.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 195.5,
+        "tooltip": "Dosis III  (GCD)  @  3:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 198.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 198.0,
+        "tooltip": "Dosis III  (GCD)  @  3:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 201.0,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 200.5,
+        "tooltip": "Eukrasia  (GCD)  @  3:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 202.0,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 201.5,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  3:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 204.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 204.0,
+        "tooltip": "Dosis III  (GCD)  @  3:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24313,
+        "color": "#777777",
+        "endSec": 207.0,
+        "iconPath": "/i/003000/003681.png",
+        "label": "Phl",
+        "startSec": 206.5,
+        "tooltip": "Phlegma III  (GCD)  @  3:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 209.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 209.0,
+        "tooltip": "Dosis III  (GCD)  @  3:29",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 212.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 211.5,
+        "tooltip": "Dosis III  (GCD)  @  3:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 214.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 214.0,
+        "tooltip": "Dosis III  (GCD)  @  3:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 217.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 216.5,
+        "tooltip": "Dosis III  (GCD)  @  3:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 219.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 219.0,
+        "tooltip": "Dosis III  (GCD)  @  3:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 222.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 221.5,
+        "tooltip": "Dosis III  (GCD)  @  3:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 224.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 224.0,
+        "tooltip": "Dosis III  (GCD)  @  3:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 227.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 226.5,
+        "tooltip": "Dosis III  (GCD)  @  3:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 229.5,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 229.0,
+        "tooltip": "Eukrasia  (GCD)  @  3:49",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 230.5,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 230.0,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 233.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 232.5,
+        "tooltip": "Dosis III  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 235.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 235.0,
+        "tooltip": "Dosis III  (GCD)  @  3:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 238.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 237.5,
+        "tooltip": "Dosis III  (GCD)  @  3:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 240.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 240.0,
+        "tooltip": "Dosis III  (GCD)  @  4:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 243.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 242.5,
+        "tooltip": "Dosis III  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24313,
+        "color": "#777777",
+        "endSec": 245.5,
+        "iconPath": "/i/003000/003681.png",
+        "label": "Phl",
+        "startSec": 245.0,
+        "tooltip": "Phlegma III  (GCD)  @  4:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 248.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 247.5,
+        "tooltip": "Dosis III  (GCD)  @  4:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 250.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 250.0,
+        "tooltip": "Dosis III  (GCD)  @  4:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 253.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 252.5,
+        "tooltip": "Dosis III  (GCD)  @  4:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 255.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 255.0,
+        "tooltip": "Dosis III  (GCD)  @  4:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 258.0,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 257.5,
+        "tooltip": "Eukrasia  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 259.0,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 258.5,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 261.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 261.0,
+        "tooltip": "Dosis III  (GCD)  @  4:21",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 264.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 263.5,
+        "tooltip": "Dosis III  (GCD)  @  4:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 266.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 266.0,
+        "tooltip": "Dosis III  (GCD)  @  4:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 269.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 268.5,
+        "tooltip": "Dosis III  (GCD)  @  4:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 271.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 271.0,
+        "tooltip": "Dosis III  (GCD)  @  4:31",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 274.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 273.5,
+        "tooltip": "Dosis III  (GCD)  @  4:34",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 276.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 276.0,
+        "tooltip": "Dosis III  (GCD)  @  4:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 279.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 278.5,
+        "tooltip": "Dosis III  (GCD)  @  4:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 281.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 281.0,
+        "tooltip": "Dosis III  (GCD)  @  4:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 284.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 283.5,
+        "tooltip": "Dosis III  (GCD)  @  4:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 286.5,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 286.0,
+        "tooltip": "Eukrasia  (GCD)  @  4:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 287.5,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 287.0,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  4:47",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24313,
+        "color": "#777777",
+        "endSec": 290.0,
+        "iconPath": "/i/003000/003681.png",
+        "label": "Phl",
+        "startSec": 289.5,
+        "tooltip": "Phlegma III  (GCD)  @  4:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 292.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 292.0,
+        "tooltip": "Dosis III  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 295.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 294.5,
+        "tooltip": "Dosis III  (GCD)  @  4:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 297.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 297.0,
+        "tooltip": "Dosis III  (GCD)  @  4:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 300.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 299.5,
+        "tooltip": "Dosis III  (GCD)  @  5:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 302.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 302.0,
+        "tooltip": "Dosis III  (GCD)  @  5:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 305.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 304.5,
+        "tooltip": "Dosis III  (GCD)  @  5:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 307.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 307.0,
+        "tooltip": "Dosis III  (GCD)  @  5:07",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 310.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 309.5,
+        "tooltip": "Dosis III  (GCD)  @  5:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 312.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 312.0,
+        "tooltip": "Dosis III  (GCD)  @  5:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 315.0,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 314.5,
+        "tooltip": "Eukrasia  (GCD)  @  5:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 316.0,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 315.5,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  5:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 318.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 318.0,
+        "tooltip": "Dosis III  (GCD)  @  5:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 321.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 320.5,
+        "tooltip": "Dosis III  (GCD)  @  5:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 323.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 323.0,
+        "tooltip": "Dosis III  (GCD)  @  5:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24313,
+        "color": "#777777",
+        "endSec": 326.0,
+        "iconPath": "/i/003000/003681.png",
+        "label": "Phl",
+        "startSec": 325.5,
+        "tooltip": "Phlegma III  (GCD)  @  5:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 328.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 328.0,
+        "tooltip": "Dosis III  (GCD)  @  5:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 331.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 330.5,
+        "tooltip": "Dosis III  (GCD)  @  5:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 333.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 333.0,
+        "tooltip": "Dosis III  (GCD)  @  5:33",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 336.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 335.5,
+        "tooltip": "Dosis III  (GCD)  @  5:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 338.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 338.0,
+        "tooltip": "Dosis III  (GCD)  @  5:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 341.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 340.5,
+        "tooltip": "Dosis III  (GCD)  @  5:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24290,
+        "color": "#777777",
+        "endSec": 343.5,
+        "iconPath": "/i/003000/003658.png",
+        "label": "Euk",
+        "startSec": 343.0,
+        "tooltip": "Eukrasia  (GCD)  @  5:43",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24314,
+        "color": "#777777",
+        "endSec": 344.5,
+        "iconPath": "/i/003000/003682.png",
+        "label": "Euk",
+        "startSec": 344.0,
+        "tooltip": "Eukrasian Dosis III  (GCD)  @  5:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 347.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 346.5,
+        "tooltip": "Dosis III  (GCD)  @  5:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 349.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 349.0,
+        "tooltip": "Dosis III  (GCD)  @  5:49",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 352.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 351.5,
+        "tooltip": "Dosis III  (GCD)  @  5:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 354.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 354.0,
+        "tooltip": "Dosis III  (GCD)  @  5:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 357.0,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 356.5,
+        "tooltip": "Dosis III  (GCD)  @  5:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 24312,
+        "color": "#777777",
+        "endSec": 359.5,
+        "iconPath": "/i/003000/003680.png",
+        "label": "Dos",
+        "startSec": 359.0,
+        "tooltip": "Dosis III  (GCD)  @  5:59",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 63210.0,
+    "efficiencyPct": 89.33,
+    "fightDurationSec": 360.0,
+    "idealizedPotency": 70762.92,
+    "killTimeSec": 360,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}
