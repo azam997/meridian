@@ -28,8 +28,8 @@ export const whitemage: JobProfile = {
   panels: [],
   defensiveTimeline: true,
   // A healer's damage efficiency drops when the fight forces throughput healing
-  // (the sim ceiling is damage-optimal), so the sub-80% "trolling" easter egg is
-  // unfair here — reframe it as actionable mitigation advice.
+  // (the sim ceiling is damage-optimal), so a low reading isn't a rotation
+  // failure — surface actionable mitigation advice on the ring instead.
   lowEfficiencyNote:
     'Look for opportunities to increase mitigation if being required to heal too much.',
   castCountPanels: [

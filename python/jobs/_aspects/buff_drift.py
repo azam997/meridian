@@ -79,7 +79,7 @@ def compute_buff_drift(observed_windows: list,
             findings.append(BuffDriftFinding(
                 kind="missing", provider=prov.name, time_s=0.0,
                 summary=(f"{prov.name}: {len(starts)} uses observed vs "
-                         f"~{expected_bursts} on a 2-min cadence — a party "
+                         f"~{expected_bursts} on a 2-min cadence. A party "
                          f"burst was skipped or very late (context).")))
         # Drifted gaps between consecutive uses.
         for a, b in zip(starts, starts[1:]):
@@ -87,8 +87,8 @@ def compute_buff_drift(observed_windows: list,
                 findings.append(BuffDriftFinding(
                     kind="gap", provider=prov.name, time_s=a,
                     summary=(f"{prov.name} gap of {b - a:.0f}s "
-                             f"({_mmss(a)}→{_mmss(b)}) vs the ~120s cadence — "
-                             f"party buff drifted (context).")))
+                             f"({_mmss(a)}→{_mmss(b)}) vs the ~120s cadence. "
+                             f"Party buff drifted (context).")))
     return findings
 
 

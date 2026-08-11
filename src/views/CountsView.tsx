@@ -30,7 +30,7 @@ export const CountsView = ({ analysis }: Props) => {
   return (
     <div className="content">
       <div className="hero">
-        <h1>Cast counts</h1>
+        <h1>Cast Counts</h1>
         <p>
           {showRefs
             ? 'Your casts vs the median of your selected references. Useful for spotting missed cooldowns and rotation pattern drift.'

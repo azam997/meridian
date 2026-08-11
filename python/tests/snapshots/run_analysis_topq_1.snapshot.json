@@ -233,30 +233,40 @@
       "fightDurationSec": 628.28,
       "findings": [
         {
+          "abilityId": 36979,
+          "abilityName": "Double Check",
+          "cappedSeconds": 2.14,
+          "casts": 66,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 2.0,
+          "lostPotency": 360.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 36980,
+          "abilityName": "Checkmate",
+          "cappedSeconds": 1.47,
+          "casts": 66,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 1.0,
+          "lostPotency": 180.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 2878,
+          "abilityName": "Wildfire",
+          "cappedSeconds": 14.64,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
           "abilityId": 2876,
           "abilityName": "Reassemble",
           "cappedSeconds": 11.58,
           "casts": 12,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 16498,
-          "abilityName": "Drill",
-          "cappedSeconds": 3.39,
-          "casts": 33,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 16500,
-          "abilityName": "Air Anchor",
-          "cappedSeconds": 5.98,
-          "casts": 16,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -273,20 +283,10 @@
           "sharedConsumers": 0
         },
         {
-          "abilityId": 36979,
-          "abilityName": "Double Check",
-          "cappedSeconds": 2.14,
-          "casts": 66,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 36980,
-          "abilityName": "Checkmate",
-          "cappedSeconds": 1.47,
-          "casts": 66,
+          "abilityId": 16500,
+          "abilityName": "Air Anchor",
+          "cappedSeconds": 5.98,
+          "casts": 16,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -303,10 +303,10 @@
           "sharedConsumers": 0
         },
         {
-          "abilityId": 2878,
-          "abilityName": "Wildfire",
-          "cappedSeconds": 14.64,
-          "casts": 6,
+          "abilityId": 16498,
+          "abilityName": "Drill",
+          "cappedSeconds": 3.39,
+          "casts": 33,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -486,21 +486,21 @@
           "expectedId": 36981,
           "lostPotency": 420.0,
           "position": 7,
-          "summary": "Opener slot #7: cast Blazing Shot (240p), canonical uses Excavator (660p) \u2014 -420p"
+          "summary": "Opener slot #7: cast Blazing Shot (240p), canonical uses Excavator (660p), -420p"
         },
         {
           "actualId": 36978,
           "expectedId": 36982,
           "lostPotency": 660.0,
           "position": 8,
-          "summary": "Opener slot #8: cast Blazing Shot (240p), canonical uses Full Metal Field (900p) \u2014 -660p"
+          "summary": "Opener slot #8: cast Blazing Shot (240p), canonical uses Full Metal Field (900p), -660p"
         },
         {
           "actualId": 36978,
           "expectedId": 16498,
           "lostPotency": 420.0,
           "position": 9,
-          "summary": "Opener slot #9: cast Blazing Shot (240p), canonical uses Drill (660p) \u2014 -420p"
+          "summary": "Opener slot #9: cast Blazing Shot (240p), canonical uses Drill (660p), -420p"
         },
         {
           "actualId": 36978,
@@ -514,7 +514,7 @@
           "expectedId": 16500,
           "lostPotency": 420.0,
           "position": 11,
-          "summary": "Opener slot #11: cast Blazing Shot (240p), canonical uses Air Anchor (660p) \u2014 -420p"
+          "summary": "Opener slot #11: cast Blazing Shot (240p), canonical uses Air Anchor (660p), -420p"
         },
         {
           "actualId": 16498,
@@ -1645,10 +1645,10 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #7: cast Blazing Shot (240p), canonical uses Excavator (660p) \u2014 -420p",
-        "[opener] Opener slot #8: cast Blazing Shot (240p), canonical uses Full Metal Field (900p) \u2014 -660p",
-        "[opener] Opener slot #9: cast Blazing Shot (240p), canonical uses Drill (660p) \u2014 -420p",
-        "[opener] Opener slot #11: cast Blazing Shot (240p), canonical uses Air Anchor (660p) \u2014 -420p"
+        "[opener] Opener slot #7: cast Blazing Shot (240p), canonical uses Excavator (660p), -420p",
+        "[opener] Opener slot #8: cast Blazing Shot (240p), canonical uses Full Metal Field (900p), -660p",
+        "[opener] Opener slot #9: cast Blazing Shot (240p), canonical uses Drill (660p), -420p",
+        "[opener] Opener slot #11: cast Blazing Shot (240p), canonical uses Air Anchor (660p), -420p"
       ],
       "summaryLines": [
         "Your opener cost: 1920p"
@@ -1753,26 +1753,26 @@
       ],
       "findings": [
         "No reference runs to compare against.",
-        "Queen at 8s (60 bat) was cut off \u2014 no Crowned Collider fired (duration 42.5s).",
-        "Queen at 51s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 22.5s).",
-        "Queen at 74s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 37.5s).",
-        "Queen at 111s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 21.3s).",
-        "Queen at 132s (70 bat) was cut off \u2014 no Crowned Collider fired (duration 43.7s).",
-        "Queen at 176s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 20.6s).",
-        "Queen at 197s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 31.9s).",
-        "Queen at 229s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 23.7s).",
-        "Queen at 252s (70 bat) was cut off \u2014 no Crowned Collider fired (duration 41.3s).",
-        "Queen at 294s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 22.5s).",
-        "Queen at 316s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 43.1s).",
-        "Queen at 359s (60 bat) was cut off \u2014 no Crowned Collider fired (duration 21.2s).",
-        "Queen at 380s (60 bat) was cut off \u2014 no Crowned Collider fired (duration 41.5s).",
-        "Queen at 422s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 20.6s).",
-        "Queen at 443s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 35.4s).",
-        "Queen at 478s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 22.0s).",
-        "Queen at 500s (60 bat) was cut off \u2014 no Crowned Collider fired (duration 26.1s).",
-        "Queen at 526s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 27.4s).",
-        "Queen at 553s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 35.0s).",
-        "Queen at 588s (50 bat) was cut off \u2014 no Crowned Collider fired (duration 27.5s)."
+        "Queen at 8s (60 bat) was cut off: no Crowned Collider fired (duration 42.5s).",
+        "Queen at 51s (50 bat) was cut off: no Crowned Collider fired (duration 22.5s).",
+        "Queen at 74s (50 bat) was cut off: no Crowned Collider fired (duration 37.5s).",
+        "Queen at 111s (50 bat) was cut off: no Crowned Collider fired (duration 21.3s).",
+        "Queen at 132s (70 bat) was cut off: no Crowned Collider fired (duration 43.7s).",
+        "Queen at 176s (50 bat) was cut off: no Crowned Collider fired (duration 20.6s).",
+        "Queen at 197s (50 bat) was cut off: no Crowned Collider fired (duration 31.9s).",
+        "Queen at 229s (50 bat) was cut off: no Crowned Collider fired (duration 23.7s).",
+        "Queen at 252s (70 bat) was cut off: no Crowned Collider fired (duration 41.3s).",
+        "Queen at 294s (50 bat) was cut off: no Crowned Collider fired (duration 22.5s).",
+        "Queen at 316s (50 bat) was cut off: no Crowned Collider fired (duration 43.1s).",
+        "Queen at 359s (60 bat) was cut off: no Crowned Collider fired (duration 21.2s).",
+        "Queen at 380s (60 bat) was cut off: no Crowned Collider fired (duration 41.5s).",
+        "Queen at 422s (50 bat) was cut off: no Crowned Collider fired (duration 20.6s).",
+        "Queen at 443s (50 bat) was cut off: no Crowned Collider fired (duration 35.4s).",
+        "Queen at 478s (50 bat) was cut off: no Crowned Collider fired (duration 22.0s).",
+        "Queen at 500s (60 bat) was cut off: no Crowned Collider fired (duration 26.1s).",
+        "Queen at 526s (50 bat) was cut off: no Crowned Collider fired (duration 27.4s).",
+        "Queen at 553s (50 bat) was cut off: no Crowned Collider fired (duration 35.0s).",
+        "Queen at 588s (50 bat) was cut off: no Crowned Collider fired (duration 27.5s)."
       ],
       "summaryLines": [
         "Your queens: 21",
@@ -11877,7 +11877,8 @@
       "children": [],
       "kind": "tincture",
       "lostPotency": 3098.9,
-      "summary": "Used 0 of 3 tinctures \u2014 fitting 3 more on cooldown recovers this",
+      "prescription": "Pot again the moment it's back up. 3 more fit on cooldown.",
+      "summary": "Used 0 of 3 tinctures. Fitting 3 more on cooldown recovers this",
       "timeSec": 0.0
     },
     {
@@ -11890,6 +11891,7 @@
           "children": [],
           "kind": "idle",
           "lostPotency": 967.29,
+          "prescription": "Close the 2.5s gap at 6:29, your longest. 6.1s idle total (~2 GCDs).",
           "summary": "Time spent idle: 6.1s (2.5 GCDs)",
           "timeSec": 389.29
         },
@@ -11899,13 +11901,15 @@
           "children": [],
           "kind": "cadence",
           "lostPotency": 494.0,
-          "summary": "Loose GCD pacing \u2014 the optimal line fit ~2 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
+          "prescription": "Press the next GCD the moment it's ready. The optimal line fits ~2 more GCDs with no single gap to point at.",
+          "summary": "Loose GCD pacing: the optimal line fit ~2 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
           "timeSec": 0.0
         }
       ],
       "kind": "pacing",
       "lostPotency": 1461.3,
-      "summary": "GCD uptime & pacing \u2014 idle gaps and loose GCD timing. These compound: a dropped or clipped GCD also shoves your next weave and burst window later.",
+      "prescription": "Start with the biggest piece: close the 2.5s gap at 6:29, your longest. 6.1s idle total (~2 GCDs).",
+      "summary": "GCD uptime & pacing: idle gaps and loose GCD timing. These compound, since a dropped or clipped GCD also shoves your next weave and burst window later.",
       "timeSec": 389.29
     },
     {
@@ -11918,7 +11922,8 @@
           "children": [],
           "kind": "missed_cast",
           "lostPotency": 360.0,
-          "summary": "Missed Double Check \u00d72 \u2014 first around 2:05",
+          "prescription": "Fit 2 more Double Check. One belonged around 2:05, each worth ~180p.",
+          "summary": "Missed Double Check \u00d72, first around 2:05",
           "timeSec": 125.0
         },
         {
@@ -11927,13 +11932,42 @@
           "children": [],
           "kind": "missed_cast",
           "lostPotency": 180.0,
-          "summary": "Missed Checkmate \u2014 fit one around 5:56",
+          "prescription": "Weave one more Checkmate around 5:56. Worth ~180p and it displaces no GCD.",
+          "summary": "Missed Checkmate, fit one around 5:56",
           "timeSec": 355.5
+        }
+      ],
+      "countGaps": [
+        {
+          "name": "Blazing Shot",
+          "sim": 90,
+          "you": 85
+        },
+        {
+          "name": "Double Check",
+          "sim": 68,
+          "you": 66
+        },
+        {
+          "name": "Heated Split Shot",
+          "sim": 41,
+          "you": 40
+        },
+        {
+          "name": "Checkmate",
+          "sim": 67,
+          "you": 66
+        },
+        {
+          "name": "Drill",
+          "sim": 32,
+          "you": 33
         }
       ],
       "kind": "residual",
       "lostPotency": 182.38,
-      "summary": "Other \u2014 2 small located losses below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "prescription": "Biggest count gaps: Blazing Shot and Double Check. The sim fits more of them. Your extra Drill casts came out of those slots; each extra is worth less than what it displaced.",
+      "summary": "Spacing & sequencing: 2 small located losses below the listing threshold",
       "timeSec": 0.0
     },
     {
@@ -11942,7 +11976,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #7: cast Blazing Shot, canonical opens Excavator (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #7: cast Blazing Shot, canonical opens Excavator (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -11951,7 +11985,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #8: cast Blazing Shot, canonical opens Full Metal Field (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #8: cast Blazing Shot, canonical opens Full Metal Field (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -11960,7 +11994,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #9: cast Blazing Shot, canonical opens Drill (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #9: cast Blazing Shot, canonical opens Drill (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -11969,7 +12003,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #11: cast Blazing Shot, canonical opens Air Anchor (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #11: cast Blazing Shot, canonical opens Air Anchor (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import {
   Activity,
+  ChevronRight,
   Clock,
   Crosshair,
   Layers,
   Lightbulb,
   MessageSquare,
   RefreshCw,
+  Zap,
 } from 'lucide-react';
 import { AbilityIcon } from '../components/AbilityIcon';
 import { DistroChart } from '../components/DistroChart';
@@ -24,11 +27,15 @@ import {
   adjustRun,
   multiTargetWindowId,
   rankAgainst,
+  refEffAdjusted,
   repriceImprovements,
   type MtMode,
 } from '../state/multiTargetModes';
+import { loadUiPrefs, saveUiPrefs } from '../state/uiPrefs';
 import { DowntimePanel } from './DowntimePanel';
-import { categorizeImprovements, tagBadge } from './findings';
+import {
+  categorizeImprovements, kindImpliesCategory, recurrenceNote, tagBadge,
+} from './findings';
 import { ImprovementRow } from './ImprovementRow';
 import { JobPanels } from './jobPanels';
 import { PhasePanel } from './PhasePanel';
@@ -45,8 +52,7 @@ import {
 /** Parse-style colour tiers for the efficiency hero, high → low. Scaled to the
  *  compressed range efficiency actually lives in (delivered ÷ sim is rarely
  *  below ~90 even on a rough pull) rather than raw 0–100, so the colours
- *  separate real performance. First bin the value clears wins. Below 80 trips
- *  the red "trolling" easter egg. */
+ *  separate real performance. First bin the value clears wins. */
 const EFFICIENCY_TIERS: ReadonlyArray<readonly [number, string]> = [
   [99.75, '#e5cc80'], // gold   — ~perfect
   [99, '#e268a8'],    // pink   — 99–99.74
@@ -54,10 +60,9 @@ const EFFICIENCY_TIERS: ReadonlyArray<readonly [number, string]> = [
   [96.5, '#a335ee'],  // purple — 96.5–97.99
   [94, '#3d9bfd'],    // blue   — 94–96.49
   [92, '#1eff00'],    // green  — 92–93.99
-  [80, '#9aa0a6'],    // gray   — 80–91.99 (a ~5-parse 90% lands here)
-  [0, '#ff3b3b'],     // red    — sub-80 easter egg
+  [0, '#9aa0a6'],     // gray   — everything below (a ~5-parse 90% lands here)
 ];
-const EFFICIENCY_FLOOR = 80;   // below this is the "trolling" easter egg
+const EFFICIENCY_FLOOR = 80;   // ring-fill remap knee + healer low-efficiency note gate
 const efficiencyColor = (pct: number): string =>
   (EFFICIENCY_TIERS.find(([min]) => pct >= min) ?? EFFICIENCY_TIERS[EFFICIENCY_TIERS.length - 1])[1];
 
@@ -96,7 +101,9 @@ type Props = {
   onReportAnomaly: () => void;
 };
 
-const fmtPotency = (p: number) => fmtNum(p);
+// Whole potency in the headline — hundredths imply precision the sim doesn't
+// have. Full precision stays in hover hints where already present.
+const fmtPotency = (p: number) => fmtNum(Math.round(p));
 
 export const DashboardView = ({
   analysis: a, setView, job, onRerun, onJumpToTime, deniedWindows, onToggleWindow,
@@ -127,7 +134,17 @@ export const DashboardView = ({
   const drift = driftState?.findings ?? [];
   // Unified Potential Improvements — a located, ranked decomposition of the
   // recoverable gap, already reconciled to sum to it on the backend.
-  const improvements = a.improvements ?? [];
+  // When the inline deep pass shipped a restructured (`examined`) list —
+  // measured root causes moved out of the Spacing & sequencing residual, same
+  // wire shape, same conserved total — the panel renders from it by default;
+  // the footer toggle flips back to the original decomposition. Everything
+  // downstream (denial filter → reprice → categorize) applies verbatim.
+  const examined = a.examined;
+  const [showExamined, setShowExamined] = useState(true);
+  const examinedActive = !!examined && showExamined;
+  const improvements = examinedActive
+    ? examined.improvements
+    : (a.improvements ?? []);
 
   // Phase 1 multi-target disclaimer. When the backend flags this pull as
   // multi-target (>= 2 enemies targetable for a sustained span), the
@@ -188,23 +205,12 @@ export const DashboardView = ({
   // regrade every reference on the same basis as you — which is what makes
   // "top-10s over 100%" literally visible under the player cap.
   const refsAdjusted = mtMode !== 'maximal' && mtWindows.length > 0;
-  const refEffAdj = (i: number): number =>
-    adjustRun(
-      {
-        delivered: a.refs[i].deliveredPotency,
-        idealized: a.refs[i].idealizedPotency,
-        credited: a.refs[i].multiTargetCredited ?? true,
-      },
-      mtWindows, deniedWindows, mtMode, i,
-    ).eff;
   const simBacked = h.yourIdealizedPotency > 0;
-  // Sub-floor efficiency trips the easter egg (red + a ribbing message) — except
-  // for jobs that supply a `lowEfficiencyNote` (healers, whose damage efficiency
-  // legitimately drops when the fight forces healing GCDs), which surface that
-  // constructive note instead of the ribbing.
+  // Sub-floor efficiency on a healer surfaces the job's `lowEfficiencyNote`
+  // (damage efficiency legitimately drops when the fight forces healing GCDs);
+  // every other job keeps the standard ring label.
   const belowFloor = simBacked && adjEff < EFFICIENCY_FLOOR;
   const lowEfficiencyNote = getJobProfile(job).lowEfficiencyNote;
-  const trolling = belowFloor && !lowEfficiencyNote;
   // A missed-squeeze card whose window the user denied isn't a missed
   // opportunity (the squeeze wasn't possible), so hide it — the ceiling already
   // dropped above to match. The grouped multi-target card is then repriced to
@@ -215,15 +221,27 @@ export const DashboardView = ({
     ),
     mtWindows, deniedWindows, mtMode,
   );
+  // Zero-priced notes are pulled out of the category sections and collapse
+  // into one dashed summary row under the panel; only priced cards feed the
+  // sections (their subtotals were never affected — notes carry 0).
+  const noteImprovements = shownImprovements.filter((im) => im.lostPotency <= 0);
+  const pricedImprovements = shownImprovements.filter((im) => im.lostPotency > 0);
   // Category sections for the panel — computed AFTER repricing + denial
   // filtering so the per-category subtotals agree with the cards. With fewer
   // than two non-empty categories the panel renders flat (headers on a
   // one-bucket list are noise; also keeps the clean-run path unchanged).
   const improvementCats = categorizeImprovements(
-    shownImprovements,
+    pricedImprovements,
     getJobProfile(job).improvementCategories,
   );
   const showImpCategories = improvementCats.length >= 2;
+  // Panel-wide cost scale: the magnitude bar fills against the largest single
+  // loss; rows under ~5% of the total dim their cost text. Severity lives on
+  // the stripe + bar — the cost value itself stays neutral.
+  const costScale = {
+    max: pricedImprovements.reduce((m, im) => Math.max(m, im.lostPotency), 0),
+    total: pricedImprovements.reduce((s, im) => s + im.lostPotency, 0),
+  };
 
   // The measured loss budget the cards attribute: idealized_strict − delivered.
   // Anchors the panel so the itemized cards read as a decomposition, not a pile
@@ -305,7 +323,7 @@ export const DashboardView = ({
   // comparison ranks runs. Under a non-maximal crediting mode each ref is
   // regraded on the mode's basis (may exceed 100% — warned on the card).
   const refEfficiencies = a.refs
-    .map((r, i) => (refsAdjusted ? refEffAdj(i) : r.efficiencyPct))
+    .map((_r, i) => refEffAdjusted(a.refs, i, mtWindows, deniedWindows, mtMode))
     .filter((e) => e > 0);
   const refAvgEff = refsAdjusted && refEfficiencies.length > 0
     ? refEfficiencies.reduce((x, y) => x + y, 0) / refEfficiencies.length
@@ -318,6 +336,38 @@ export const DashboardView = ({
     ? rankAgainst(adjEff, refEfficiencies)
     : { percentile: h.percentile, rank: h.rank.you, total: h.rank.total, beat: h.beat.count };
 
+  // Persisted expand/collapse for the reference strip + the notes row.
+  // Loaded per mount (the view unmounts on navigation) — cheap and correct.
+  const [prefs, setPrefs] = useState(loadUiPrefs);
+  const toggleRefStrip = () => {
+    const next = !prefs.refStripExpanded;
+    saveUiPrefs({ refStripExpanded: next });
+    setPrefs((p) => ({ ...p, refStripExpanded: next }));
+  };
+  const toggleNotes = () => {
+    const next = !prefs.openerNotesExpanded;
+    saveUiPrefs({ openerNotesExpanded: next });
+    setPrefs((p) => ({ ...p, openerNotesExpanded: next }));
+  };
+
+  // Chip counts follow the panel (post-denial, post-reprice), so the hero and
+  // the improvements list always agree. The diffuse rows aren't "fixable".
+  const fixableCount = pricedImprovements.filter(
+    (im) => im.kind !== 'residual' && im.kind !== 'residual_tail',
+  ).length;
+  const allNotesOpener = noteImprovements.every((im) => im.kind === 'opener');
+  const refStats =
+    refEfficiencies.length > 0
+      ? {
+          n: refEfficiencies.length,
+          min: Math.min(...refEfficiencies),
+          max: Math.max(...refEfficiencies),
+          median: [...refEfficiencies].sort((a, b) => a - b)[
+            Math.floor(refEfficiencies.length / 2)
+          ],
+        }
+      : null;
+
   return (
     <div className="content">
       <div className="row" style={{ justifyContent: 'flex-end', marginBottom: 4 }}>
@@ -326,26 +376,49 @@ export const DashboardView = ({
           Re-run analysis
         </button>
       </div>
-      {/* High-level overview: percentile rank, efficiency spread, and downtime
-          breakdown free-flowing in one fluid grid (column count follows the
-          window width). */}
-      <div className="overview-grid">
+      {/* Hero group: the ring owns the score AND the gap (in the fight's
+          units); the references demote to a one-line context strip below it —
+          one comparison, expandable back to the full card. */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {simBacked ? (
           <StatRing
             pct={efficiencyRingFill(adjEff)}
             value={adjEff.toFixed(2)}
             label={
-              trolling
-                ? 'Trolling detected — sub-80% efficiency. Just how many times did you die?'
-                : belowFloor && lowEfficiencyNote
-                  ? lowEfficiencyNote
-                  : h.healLocksApplied
-                    ? 'Efficiency vs the honest ceiling — mit-plan heals locked in'
-                    : 'Efficiency compared to the Sim'
+              belowFloor && lowEfficiencyNote
+                ? lowEfficiencyNote
+                : h.healLocksApplied
+                  ? 'Efficiency vs the honest ceiling — mit-plan heals locked in'
+                  : 'Efficiency compared to the Sim'
             }
             color={efficiencyColor(adjEff)}
             size={168}
-          />
+          >
+            {recoverable > 0 && (
+              <div className="hero-gap-line">
+                {/* Only the numerals sit in the mono .num spans — a mono space
+                    inside the span renders wider than the surrounding sans and
+                    reads as a typo. */}
+                <span className="num">{fmtNum(Math.round(recoverable))}p</span>
+                {' '}lost compared against the simulated ceiling at{' '}
+                {fmtClock(h.killTimeSec)}.
+              </div>
+            )}
+            {(fixableCount > 0 || noteImprovements.length > 0) && (
+              <div className="hero-chips">
+                {fixableCount > 0 && (
+                  <span className="hero-chip fixable">
+                    {fixableCount} fixable issue{fixableCount === 1 ? '' : 's'}
+                  </span>
+                )}
+                {noteImprovements.length > 0 && (
+                  <span className="hero-chip notes">
+                    {noteImprovements.length} note{noteImprovements.length === 1 ? '' : 's'}
+                  </span>
+                )}
+              </div>
+            )}
+          </StatRing>
         ) : h.isProgPull ? (
           <StatRing
             pct={Math.max(0, 100 - (h.fightPercentage ?? 100))}
@@ -368,11 +441,36 @@ export const DashboardView = ({
             into heal windows for score, so ranking against their unlocked
             efficiencies would punish honest healing. Same for prog (wipe)
             pulls — kill refs aren't a fair yardstick for a truncated wipe. */}
-        {refEfficiencies.length > 0 && !vsRefsHidden && (
+        {refStats && !vsRefsHidden && !prefs.refStripExpanded && (
+          <div className="ref-strip">
+            <span className="ref-strip-label">Reference context</span>
+            <DistroChart
+              compact
+              yourValue={adjEff}
+              refs={refEfficiencies}
+              formatLabel={(v) => `${v.toFixed(1)}%`}
+            />
+            <span className="ref-strip-stats">
+              {refStats.n} refs · {refStats.min.toFixed(1)}–{refStats.max.toFixed(1)}%
+              {' '}· median {refStats.median.toFixed(1)}%
+            </span>
+            <button className="ref-strip-toggle" onClick={toggleRefStrip}>
+              Compare ›
+            </button>
+          </div>
+        )}
+        {refStats && !vsRefsHidden && prefs.refStripExpanded && (
           <div className="card">
             <div className="card-head">
               <Activity size={14} />
               <h2>Efficiency vs references</h2>
+              <button
+                className="ref-strip-toggle"
+                style={{ marginLeft: 'auto' }}
+                onClick={toggleRefStrip}
+              >
+                ‹ Collapse
+              </button>
             </div>
             <div className="card-body">
               {simBacked && (
@@ -426,7 +524,7 @@ export const DashboardView = ({
               </div>
               <div style={{ marginTop: 8 }}>
                 <button className="btn ghost sm" onClick={onReportAnomaly}>
-                  <MessageSquare size={12} /> Submit feedback
+                  <MessageSquare size={12} /> Submit Feedback
                 </button>
               </div>
             </div>
@@ -498,8 +596,7 @@ export const DashboardView = ({
         </div>
       )}
 
-      <div className="section-title">Headline</div>
-      <div className="kpis card-grid">
+      <div className="kpis card-grid" style={{ marginTop: 18 }}>
         <KPI
           label="Your potency"
           value={fmtPotency(h.yourPotency)}
@@ -630,27 +727,26 @@ export const DashboardView = ({
               .join(', ')}. Dead time is no longer counted as idle — see the Death cards in Potential improvements.`}
           />
         )}
+        {/* The two buff cards are named by ACTOR — your alignment to the buffs
+            you got, vs what the party's buff timing cost you. The party card
+            leads with the gap (the number explicitly not your fault). */}
         {showBuffLens && (
           <>
             <KPI
-              label="Raid-buff alignment Observed"
+              label="Your buff alignment"
               value={h.efficiencyPctObserved.toFixed(1)}
               unit="%"
-              tone="good"
-              hint="given the buffs you got — the fair, player-accountable number"
+              sub="given the buffs you got — on you"
+              hint="Scored against the ceiling under the buffs that actually landed — the fair, player-accountable number"
             />
             <KPI
-              label="Raid-buff alignment vs party-perfect buffs"
-              value={h.efficiencyPctMaster.toFixed(1)}
-              unit="%"
-              delta={
-                showBuffLensGap
-                  ? {
-                      dir: 'down',
-                      text: `−${buffLensDelta.toFixed(1)}% from party buff timing`,
-                    }
-                  : { dir: 'up', text: 'party buffs landed on cadence' }
+              label="Party buff timing"
+              value={
+                buffLensDelta < 0.05 ? '0.0' : `−${buffLensDelta.toFixed(1)}`
               }
+              unit="%"
+              tone={showBuffLensGap ? '' : 'good'}
+              sub={`${h.efficiencyPctMaster.toFixed(1)}% vs perfect cadence — not on you`}
               hint={`Master ceiling assumes party buffs on a perfect 2-minute cadence (simulated ${fmtPotency(h.idealizedMaster)}p). The gap is the party's buff timing — context, not your fault.`}
             />
           </>
@@ -676,8 +772,7 @@ export const DashboardView = ({
         </div>
       )}
 
-      <div className="section-title">Where the potency went</div>
-      <div className="stack">
+      <div className="stack" style={{ marginTop: 18 }}>
         {/* Situational ceiling squeezes the sim assumed (Flamethrower today),
             shipped from the backend as data. The user confirms which were
             actually possible; denials drop off the ceiling above. One generic
@@ -772,9 +867,6 @@ export const DashboardView = ({
           <div className="card-head">
             <Lightbulb size={14} />
             <h2>Potential improvements</h2>
-            <span className="sub" style={{ marginLeft: 'auto' }}>
-              Click to view on the timeline
-            </span>
           </div>
           <div className="card-body">
             {multiTargetDisclaimed ? (
@@ -804,11 +896,20 @@ export const DashboardView = ({
                 ) : showImpCategories ? (
                   improvementCats.map((cat) => {
                     const CatIcon = cat.def.icon;
+                    const recur = recurrenceNote(cat.cards);
                     return (
                       <div key={cat.def.id} className="imp-cat">
                         <div className="imp-cat-head">
                           <CatIcon size={13} />
                           <span>{cat.def.label}</span>
+                          {recur && (
+                            <span
+                              className="recur"
+                              title="Each slip pushes every later window."
+                            >
+                              {recur}
+                            </span>
+                          )}
                           {cat.subtotal > 0 && (
                             <span className="sum">
                               −{fmtNum(Math.round(cat.subtotal))}p
@@ -822,6 +923,11 @@ export const DashboardView = ({
                               im={im}
                               meta={a.abilityMeta}
                               onJump={onJumpToTime}
+                              scale={costScale}
+                              hidePill={kindImpliesCategory(
+                                im.kind, cat.def.id,
+                                getJobProfile(job).improvementCategories,
+                              )}
                             />
                           ))}
                         </div>
@@ -830,20 +936,123 @@ export const DashboardView = ({
                   })
                 ) : (
                   <div className="findings">
-                    {shownImprovements.map((im, i) => (
+                    {pricedImprovements.map((im, i) => (
                       <ImprovementRow
                         key={i}
                         im={im}
                         meta={a.abilityMeta}
                         onJump={onJumpToTime}
+                        scale={costScale}
                       />
                     ))}
+                  </div>
+                )}
+                {/* Zero-priced notes collapse into one dashed summary row —
+                    ordering observations, not losses; expand for the detail. */}
+                {noteImprovements.length > 0 && (
+                  <>
+                    <div
+                      className="notes-collapse"
+                      role="button"
+                      tabIndex={0}
+                      onClick={toggleNotes}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          toggleNotes();
+                        }
+                      }}
+                      title={prefs.openerNotesExpanded ? 'Collapse notes' : 'Expand notes'}
+                    >
+                      <ChevronRight
+                        size={13}
+                        className={`chev${prefs.openerNotesExpanded ? ' open' : ''}`}
+                      />
+                      {noteImprovements.length}{' '}
+                      {allNotesOpener ? 'opener-ordering note' : 'note'}
+                      {noteImprovements.length === 1 ? '' : 's'} · no potency impact
+                      <span className="notes-collapse-tag">notes</span>
+                    </div>
+                    {prefs.openerNotesExpanded && (
+                      <div className="findings" style={{ marginTop: 8 }}>
+                        {noteImprovements.map((im, i) => (
+                          <ImprovementRow
+                            key={i}
+                            im={im}
+                            meta={a.abilityMeta}
+                            onJump={onJumpToTime}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )}
+                {/* Examination footer — the deep pass runs inline with the
+                    analysis (counterfactual re-sims measure each problem's
+                    downstream cost and re-attribute the diffuse residual into
+                    concrete root causes; per-job packs via Job.advice_probes,
+                    MCH first). When it moved mass, say what moved and offer
+                    the original decomposition. */}
+                {examined && shownImprovements.length > 0 && (
+                  <div className="deep-advice-cta">
+                    <p className="mut">
+                      {examined.notes[0] ??
+                        'The panel shows measured root causes from re-simulating your own casts.'}
+                      {examined.notes.length > 1 && (
+                        <span
+                          className="info-dot"
+                          title={examined.notes.slice(1).join(' ')}
+                        >
+                          i
+                        </span>
+                      )}
+                    </p>
+                    <button
+                      className="cta-link"
+                      onClick={() => setShowExamined((v) => !v)}
+                    >
+                      {showExamined
+                        ? 'View original decomposition ›'
+                        : 'View examined root causes ›'}
+                    </button>
                   </div>
                 )}
               </>
             )}
           </div>
         </div>
+
+        {/* Buff-window timing — a SEPARATE currency from the strict panel
+            above: burst tools that landed just outside the party's OBSERVED
+            buff windows, priced against the observed-lens headroom. Its own
+            card so the two budgets can never read as one sum. */}
+        {a.buffAlignment && a.buffAlignment.cards.length > 0 && !multiTargetDisclaimed && (
+          <div className="card">
+            <div className="card-head">
+              <Zap size={14} />
+              <h2>Buff-window timing</h2>
+            </div>
+            <div className="card-body">
+              <p className="mut" style={{ fontSize: 12.5, margin: '0 0 10px' }}>
+                Measured in a different currency: against the ceiling under the
+                buffs your party actually gave you
+                (~{fmtNum(Math.round(a.buffAlignment.budget))}p of headroom).
+                Separate from the {fmtNum(Math.round(recoverable))}p strict gap
+                above — the two don't add.
+              </p>
+              <div className="findings">
+                {a.buffAlignment.cards.map((im, i) => (
+                  <ImprovementRow
+                    key={i}
+                    im={im}
+                    meta={a.abilityMeta}
+                    onJump={onJumpToTime}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
 
         {drift.length > 0 && (
           <div className="card">
@@ -866,7 +1075,12 @@ export const DashboardView = ({
                     <th>Ability</th>
                     <th className="r">Casts</th>
                     <th className="r">Drift</th>
-                    <th className="r">Lost (p)</th>
+                    <th
+                      className="r"
+                      title="Priced from the sim: drift only costs potency once a use no longer fits before the kill."
+                    >
+                      Lost (p)
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -888,7 +1102,11 @@ export const DashboardView = ({
                         </td>
                         <td className="r num">{d.casts}</td>
                         <td className="r num">{d.cappedSeconds.toFixed(1)}s</td>
-                        <td className="r num delta-neg">−{fmtNum(d.lostPotency)}</td>
+                        {d.lostPotency > 0 ? (
+                          <td className="r num delta-neg">−{fmtNum(d.lostPotency)}</td>
+                        ) : (
+                          <td className="r num mut">0</td>
+                        )}
                       </tr>
                     );
                   })}

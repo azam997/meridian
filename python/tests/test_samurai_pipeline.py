@@ -184,21 +184,17 @@ def test_sam_headline_has_efficiency(response: dict) -> None:
 
 
 def test_sam_drift_finds_ikishoten(response: dict) -> None:
-    """SAM has no simulator, so Drift uses the fallback cast-gap heuristic.
-    Ikishoten (120s recast) sits ready ~117.5s in this fixture — DriftAspect
-    detects the drift (cappedSeconds > 100), but because that's *under* a
-    full recast, no WHOLE cast was lost, so the quantized cost is 0p (you
-    can't lose a fractional cast). We assert on Ikishoten rather than Senei
-    because the starter SAM data table reuses ID 16481 for both Senei and
-    Yukikaze (flagged 'needs verification' in samurai/data.py), so Yukikaze
-    casts would suppress the Senei drift count."""
+    """Ikishoten (120s recast) sits ready ~117.5s in this fixture — DriftAspect
+    detects the drift (cappedSeconds > 100). SAM is sim-backed, so the table's
+    Lost (p) is SIM-PRICED (`_reprice_drift_from_sim`): the fixture never
+    casts Ikishoten while the ideal line fits several, so the deficit prices
+    at the sim-derived enabler value (> 0) — the capped-time heuristic's
+    quantized 0 is superseded. We assert on Ikishoten because the fixture
+    never casts it, so its full-fight drift is unambiguous."""
     print()
-    print("Test: SAM Drift finds Ikishoten cooldown waste (quantized cost)")
+    print("Test: SAM Drift finds Ikishoten cooldown waste (sim-priced)")
     drift = response.get("aspectStates", {}).get("Drift", {})
     findings = drift.get("findings") or []
-    # (The starter-data id collision noted here originally is fixed — Senei is
-    # 16481, Yukikaze 7480 — but we still assert on Ikishoten: the fixture never
-    # casts it, so its full-fight drift is unambiguous.)
     iki_finding = next((f for f in findings if f.get("abilityId") == 16482), None)
     _check("Ikishoten drift finding present", iki_finding is not None,
            f"got findings for {[f.get('abilityId') for f in findings]}")
@@ -206,9 +202,11 @@ def test_sam_drift_finds_ikishoten(response: dict) -> None:
         _check("Ikishoten capped_seconds > 100 (drift detected)",
                iki_finding.get("cappedSeconds", 0) > 100,
                f"got {iki_finding.get('cappedSeconds')}")
-        _check("Ikishoten lost_potency == 0 (sub-recast drift, no whole cast lost)",
-               iki_finding.get("lostPotency", -1) == 0,
-               f"got {iki_finding.get('lostPotency')}")
+        _check("Ikishoten lost casts + potency sim-priced (uses genuinely lost)",
+               iki_finding.get("lostCasts", 0) >= 1
+               and iki_finding.get("lostPotency", 0) > 0,
+               f"got casts={iki_finding.get('lostCasts')} "
+               f"p={iki_finding.get('lostPotency')}")
 
 
 def test_sam_overcap_findings_per_gauge(response: dict) -> None:

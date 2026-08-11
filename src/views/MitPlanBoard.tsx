@@ -342,6 +342,7 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
           {result.lanes.map((lane) => (
             <div key={lane.slot} className="mpb-col"
                  style={{ width: colWidth(lane.slot), height: bodyH }}>
+              <div className="mpb-col-inner" style={{ width: colWidth(lane.slot) }}>
               {casts.filter((c) => c.slot === lane.slot).map((c) => {
                 const top = yOf(c.rows[0]) + 4;
                 const height =
@@ -395,6 +396,7 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
                   <span>×{g.count}</span>
                 </div>
               ))}
+              </div>
             </div>
           ))}
           {/* the inline detail card, directly under the clicked row */}

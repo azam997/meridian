@@ -191,16 +191,6 @@
           "sharedConsumers": 0
         },
         {
-          "abilityId": 7395,
-          "abilityName": "Riddle of Fire",
-          "cappedSeconds": 0.5,
-          "casts": 5,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
-          "sharedConsumers": 0
-        },
-        {
           "abilityId": 25766,
           "abilityName": "Riddle of Wind",
           "cappedSeconds": 2.5,
@@ -215,6 +205,16 @@
           "abilityName": "Brotherhood",
           "cappedSeconds": 1.2,
           "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7395,
+          "abilityName": "Riddle of Fire",
+          "cappedSeconds": 0.5,
+          "casts": 5,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -243,28 +243,28 @@
           "expectedId": 36948,
           "lostPotency": 580.0,
           "position": 5,
-          "summary": "Opener slot #5: cast Dragon Kick (320p), canonical uses Elixir Burst (900p) \u2014 -580p"
+          "summary": "Opener slot #5: cast Dragon Kick (320p), canonical uses Elixir Burst (900p), -580p"
         },
         {
           "actualId": 36945,
           "expectedId": 74,
           "lostPotency": 60.0,
           "position": 6,
-          "summary": "Opener slot #6: cast Leaping Opo (260p), canonical uses Dragon Kick (320p) \u2014 -60p"
+          "summary": "Opener slot #6: cast Leaping Opo (260p), canonical uses Dragon Kick (320p), -60p"
         },
         {
           "actualId": 36948,
           "expectedId": 36949,
           "lostPotency": 140.0,
           "position": 7,
-          "summary": "Opener slot #7: cast Elixir Burst (900p), canonical uses Wind's Reply (1040p) \u2014 -140p"
+          "summary": "Opener slot #7: cast Elixir Burst (900p), canonical uses Wind's Reply (1040p), -140p"
         },
         {
           "actualId": 61,
           "expectedId": 36950,
           "lostPotency": 980.0,
           "position": 8,
-          "summary": "Opener slot #8: cast Twin Snakes (420p), canonical uses Fire's Reply (1400p) \u2014 -980p"
+          "summary": "Opener slot #8: cast Twin Snakes (420p), canonical uses Fire's Reply (1400p), -980p"
         },
         {
           "actualId": 66,
@@ -285,7 +285,7 @@
           "expectedId": 74,
           "lostPotency": 60.0,
           "position": 12,
-          "summary": "Opener slot #12: cast Leaping Opo (260p), canonical uses Dragon Kick (320p) \u2014 -60p"
+          "summary": "Opener slot #12: cast Leaping Opo (260p), canonical uses Dragon Kick (320p), -60p"
         }
       ]
     },
@@ -494,7 +494,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.00s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.00s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.00s",
@@ -564,11 +564,11 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #5: cast Dragon Kick (320p), canonical uses Elixir Burst (900p) \u2014 -580p",
-        "[opener] Opener slot #6: cast Leaping Opo (260p), canonical uses Dragon Kick (320p) \u2014 -60p",
-        "[opener] Opener slot #7: cast Elixir Burst (900p), canonical uses Wind's Reply (1040p) \u2014 -140p",
-        "[opener] Opener slot #8: cast Twin Snakes (420p), canonical uses Fire's Reply (1400p) \u2014 -980p",
-        "[opener] Opener slot #12: cast Leaping Opo (260p), canonical uses Dragon Kick (320p) \u2014 -60p"
+        "[opener] Opener slot #5: cast Dragon Kick (320p), canonical uses Elixir Burst (900p), -580p",
+        "[opener] Opener slot #6: cast Leaping Opo (260p), canonical uses Dragon Kick (320p), -60p",
+        "[opener] Opener slot #7: cast Elixir Burst (900p), canonical uses Wind's Reply (1040p), -140p",
+        "[opener] Opener slot #8: cast Twin Snakes (420p), canonical uses Fire's Reply (1400p), -980p",
+        "[opener] Opener slot #12: cast Leaping Opo (260p), canonical uses Dragon Kick (320p), -60p"
       ],
       "summaryLines": [
         "Your opener cost: 1820p"
@@ -4641,16 +4641,40 @@
       "children": [],
       "kind": "tincture",
       "lostPotency": 1848.38,
-      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+      "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
       "timeSec": 0.0
     },
     {
       "abilityId": 0,
       "abilityName": "",
       "children": [],
+      "countGaps": [
+        {
+          "name": "Leaping Opo",
+          "sim": 30,
+          "you": 28
+        },
+        {
+          "name": "Dragon Kick",
+          "sim": 30,
+          "you": 29
+        },
+        {
+          "name": "Pouncing Coeurl",
+          "sim": 22,
+          "you": 24
+        },
+        {
+          "name": "Demolish",
+          "sim": 11,
+          "you": 12
+        }
+      ],
       "kind": "residual",
       "lostPotency": 1401.41,
-      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "prescription": "Biggest count gaps: Leaping Opo and Dragon Kick. The sim fits more of them. Your extra Pouncing Coeurl casts came out of those slots; each extra is worth less than what it displaced.",
+      "summary": "Spacing & sequencing",
       "timeSec": 0.0
     },
     {
@@ -4659,7 +4683,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #5: cast Dragon Kick, canonical opens Elixir Burst (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #5: cast Dragon Kick, canonical opens Elixir Burst (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4668,7 +4692,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #6: cast Leaping Opo, canonical opens Dragon Kick (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #6: cast Leaping Opo, canonical opens Dragon Kick (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4677,7 +4701,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #7: cast Elixir Burst, canonical opens Wind's Reply (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #7: cast Elixir Burst, canonical opens Wind's Reply (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4686,7 +4710,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #8: cast Twin Snakes, canonical opens Fire's Reply (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #8: cast Twin Snakes, canonical opens Fire's Reply (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4695,7 +4719,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #12: cast Leaping Opo, canonical opens Dragon Kick (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #12: cast Leaping Opo, canonical opens Dragon Kick (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

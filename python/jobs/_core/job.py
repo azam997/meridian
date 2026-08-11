@@ -12,7 +12,7 @@ hard-coded `if job == "Machinist"` branch anywhere.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Callable, Literal, Optional, Protocol
+from typing import Any, Callable, Literal, Optional, Protocol
 
 from .aspect import Aspect
 
@@ -391,6 +391,16 @@ class Job:
     # cards for losses the generic missed-cast diff can't see (e.g. RPR Death's
     # Design downtime / positional misses) without the sidecar importing the job.
     improvement_contributors: Optional[Callable[..., list]] = None
+    # Optional: the job's deep-advice pack (`jobs._core.advice.AdvicePack`),
+    # run INLINE by run_analysis's response build. Carries the probe callable
+    # (`(ctx, cards, progress) -> (list[ProbeItem], list[RootCause])` —
+    # ProbeItems enrich existing cards in place; RootCauses are candidates the
+    # cascade re-attribution prices into concrete cards) plus the job's
+    # `gauge_text` glossary (allowlist copy for state-delta evidence lines).
+    # Registering a pack also opts the job into the counterfactual cascade
+    # (prefix-replay re-sims); jobs without one keep the analytic-only pass.
+    # A bare callable is accepted and wrapped (tests / minimal jobs).
+    advice_probes: Optional[Any] = None
 
 
 _REGISTRY: dict[str, Job] = {}

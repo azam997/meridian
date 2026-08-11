@@ -688,7 +688,19 @@ def run_rotation(model: RotationModel, fight_duration_s: float,
     state.downtime_windows = downtime
     _locks_init(model, state)
     model.prepull(state, params)
+    return continue_rotation(model, state, fight_duration_s, downtime, params)
 
+
+def continue_rotation(model: RotationModel, state: SimStateBase,
+                      fight_duration_s: float,
+                      downtime_windows: list[tuple[float, float]] | None,
+                      params: SimParamsBase,
+                      ) -> tuple[list[tuple[float, int]], int]:
+    """Resume the greedy loop from an arbitrary `state` (e.g. one reconstructed
+    by `replay.replay_state`) and play to fight end. `run_rotation` is
+    init+prepull+this — the loop itself, unchanged. The state must already carry
+    `fight_duration_s` / `downtime_windows`."""
+    downtime = downtime_windows or []
     locks = bool(model.locked_gcd_windows)
     iters = 0
     while state.t < fight_duration_s and iters < _MAX_ITERS:

@@ -290,7 +290,7 @@ class ClippingAspect:
             )
         if not finding_lines:
             finding_lines.append(
-                f"Clean GCD pacing — eff GCD {f.effective_gcd_s:.2f}s, "
+                f"Clean GCD pacing: eff GCD {f.effective_gcd_s:.2f}s, "
                 f"no notable idle time or clipping."
             )
 

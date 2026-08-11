@@ -63,8 +63,14 @@ const KIND_META: Record<string, KindMeta> = {
   pacing:          { label: 'GCD uptime & pacing', badge: 'PAC' },
   cadence:         { label: 'Loose pacing',       badge: 'PAC' },
   burst:           { label: 'Burst resource',     badge: 'BST' },
-  residual_tail:   { label: 'Diffuse remainder',  badge: 'OTH' },
-  residual:        { label: 'Other',              badge: 'OTH' },
+  residual_tail:   { label: 'Diffuse',            badge: 'DIF' },
+  residual:        { label: 'Diffuse',            badge: 'DIF' },
+  // Examined root causes (deep-advice cascade — mass measured OUT of the
+  // residual by counterfactual re-sims; see contract ExaminedImprovements)
+  cascade_lost_use: { label: 'Lost use (root cause)', badge: 'CSC' },
+  cascade_burst:    { label: 'Burst compromised',     badge: 'CSC' },
+  cascade_pacing:   { label: 'Compounded pacing',     badge: 'CSC' },
+  buff_window:     { label: 'Buff window',        badge: 'BUF' },
   flamethrower:    { label: 'Flamethrower window', badge: 'FLM' },
   tincture:        { label: 'Tincture',            badge: 'TIN' },
   surging_tempest: { label: 'Surging Tempest',    badge: 'SRG' },
@@ -113,13 +119,55 @@ const CATEGORY_DEFS: readonly ImprovementCategoryDef[] = [
   { id: 'upkeep',    label: 'Buff upkeep',             icon: RefreshCw },
   { id: 'resource',  label: 'Resource & procs',        icon: Battery },
   { id: 'mechanics', label: 'Targeting & positionals', icon: Crosshair },
-  { id: 'other',     label: 'Other',                   icon: MoreHorizontal },
+  { id: 'other',     label: 'Diffuse',                 icon: MoreHorizontal },
 ];
+
+/** True when a row's kind pill would only restate its category header —
+ *  the generic kind→category mapping (or a job override's `kinds` claim)
+ *  resolved it into that section, so the section name already carries the
+ *  classification ("COMPOUNDED PACING" under "GCD uptime & pacing"). Rows a
+ *  section claimed by ABILITY keep their pill — the section name doesn't say
+ *  what kind of loss they are. */
+export function kindImpliesCategory(
+  kind: string,
+  catId: string,
+  overrides?: readonly ImprovementCategoryOverride[],
+): boolean {
+  for (const o of overrides ?? []) {
+    if (o.kinds?.includes(kind)) return o.id === catId;
+  }
+  if (kind === 'residual' || kind === 'residual_tail') return catId === 'other';
+  return (KIND_CATEGORY[kind] ?? 'other') === catId;
+}
+
+/** Category-level recurrence note: when several sequencing slips in one
+ *  section exist, name the pattern no single row can ("3 slips, all
+ *  resource-holding — battery ×2, heat ×1"). Null when nothing recurs. */
+export function recurrenceNote(cards: Improvement[]): string | null {
+  const slips = cards.filter((c) => c.kind === 'cascade_pacing');
+  if (slips.length < 2) return null;
+  const counts = new Map<string, number>();
+  for (const c of slips) {
+    for (const r of c.resources ?? []) {
+      counts.set(r.label, (counts.get(r.label) ?? 0) + 1);
+    }
+  }
+  if (counts.size === 0) return `${slips.length} sequencing slips`;
+  const held = [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([label, n]) => `${label.toLowerCase()} ×${n}`)
+    .join(', ');
+  const allHolding = slips.every((c) => (c.resources?.length ?? 0) > 0);
+  return `${slips.length} slips${allHolding ? ', all resource-holding' : ''} — ${held}`;
+}
 
 /** Generic kind → category id. Kinds absent here (a future job's novel kind)
  *  land in `other`. */
 const KIND_CATEGORY: Record<string, string> = {
   death: 'deaths',
+  // Defensive only — buff_window cards ship under `buffAlignment` and never
+  // enter categorizeImprovements; mapped in case that ever changes.
+  buff_window: 'burst',
   pacing: 'uptime',
   idle: 'uptime',
   clip: 'uptime',
@@ -147,6 +195,11 @@ const KIND_CATEGORY: Record<string, string> = {
   residual: 'other',
   residual_tail: 'other',
   opener: 'other',
+  // Examined root causes are CONCRETE cards (the mass moved out of Diffuse),
+  // so they deliberately do NOT get the residual's forced-`other` treatment.
+  cascade_lost_use: 'missed',
+  cascade_burst: 'burst',
+  cascade_pacing: 'uptime',
 };
 
 /** Sharper per-kind Lucide glyph for the card icon cell when a card carries no

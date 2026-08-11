@@ -267,8 +267,8 @@
           "cappedSeconds": 210.0,
           "casts": 3,
           "cdrOverflowSeconds": 0.0,
-          "lostCasts": 7.0,
-          "lostPotency": 7000.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
           "sharedConsumers": 2
         },
         {
@@ -282,20 +282,20 @@
           "sharedConsumers": 8
         },
         {
-          "abilityId": 34674,
-          "abilityName": "Striking Muse",
-          "cappedSeconds": 5.7,
-          "casts": 7,
+          "abilityId": 34675,
+          "abilityName": "Starry Muse",
+          "cappedSeconds": 6.15,
+          "casts": 3,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
           "sharedConsumers": 0
         },
         {
-          "abilityId": 34675,
-          "abilityName": "Starry Muse",
-          "cappedSeconds": 6.15,
-          "casts": 3,
+          "abilityId": 34674,
+          "abilityName": "Striking Muse",
+          "cappedSeconds": 5.7,
+          "casts": 7,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -310,7 +310,7 @@
           "expectedId": 34688,
           "lostPotency": 510.0,
           "position": 1,
-          "summary": "Opener slot #1: cast Fire in Red (490p), canonical uses Rainbow Drip (1000p) \u2014 -510p"
+          "summary": "Opener slot #1: cast Fire in Red (490p), canonical uses Rainbow Drip (1000p), -510p"
         },
         {
           "actualId": 34681,
@@ -359,14 +359,14 @@
           "expectedId": 34653,
           "lostPotency": 280.0,
           "position": 8,
-          "summary": "Opener slot #8: cast Hammer Brush (580p), canonical uses Blizzard in Cyan (860p) \u2014 -280p"
+          "summary": "Opener slot #8: cast Hammer Brush (580p), canonical uses Blizzard in Cyan (860p), -280p"
         },
         {
           "actualId": 34680,
           "expectedId": 34654,
           "lostPotency": 300.0,
           "position": 9,
-          "summary": "Opener slot #9: cast Polishing Hammer (600p), canonical uses Stone in Yellow (900p) \u2014 -300p"
+          "summary": "Opener slot #9: cast Polishing Hammer (600p), canonical uses Stone in Yellow (900p), -300p"
         },
         {
           "actualId": 34688,
@@ -380,35 +380,35 @@
           "expectedId": 34663,
           "lostPotency": 940.0,
           "position": 11,
-          "summary": "Opener slot #11: cast Wing Motif (0p), canonical uses Comet in Black (940p) \u2014 -940p"
+          "summary": "Opener slot #11: cast Wing Motif (0p), canonical uses Comet in Black (940p), -940p"
         },
         {
           "actualId": 34666,
           "expectedId": 34671,
           "lostPotency": 800.0,
           "position": 12,
-          "summary": "Opener slot #12: cast Claw Motif (0p), canonical uses Winged Muse (800p) \u2014 -800p"
+          "summary": "Opener slot #12: cast Claw Motif (0p), canonical uses Winged Muse (800p), -800p"
         },
         {
           "actualId": 34668,
           "expectedId": 34676,
           "lostPotency": 1000.0,
           "position": 13,
-          "summary": "Opener slot #13: cast Hammer Motif (0p), canonical uses Mog of the Ages (1000p) \u2014 -1000p"
+          "summary": "Opener slot #13: cast Hammer Motif (0p), canonical uses Mog of the Ages (1000p), -1000p"
         },
         {
           "actualId": 34678,
           "expectedId": 34681,
           "lostPotency": 540.0,
           "position": 14,
-          "summary": "Opener slot #14: cast Hammer Stamp (560p), canonical uses Star Prism (1100p) \u2014 -540p"
+          "summary": "Opener slot #14: cast Hammer Stamp (560p), canonical uses Star Prism (1100p), -540p"
         },
         {
           "actualId": 34667,
           "expectedId": 34688,
           "lostPotency": 1000.0,
           "position": 17,
-          "summary": "Opener slot #17: cast Maw Motif (0p), canonical uses Rainbow Drip (1000p) \u2014 -1000p"
+          "summary": "Opener slot #17: cast Maw Motif (0p), canonical uses Rainbow Drip (1000p), -1000p"
         }
       ]
     },
@@ -659,7 +659,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.50s",
@@ -729,14 +729,14 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #1: cast Fire in Red (490p), canonical uses Rainbow Drip (1000p) \u2014 -510p",
-        "[opener] Opener slot #8: cast Hammer Brush (580p), canonical uses Blizzard in Cyan (860p) \u2014 -280p",
-        "[opener] Opener slot #9: cast Polishing Hammer (600p), canonical uses Stone in Yellow (900p) \u2014 -300p",
-        "[opener] Opener slot #11: cast Wing Motif (0p), canonical uses Comet in Black (940p) \u2014 -940p",
-        "[opener] Opener slot #12: cast Claw Motif (0p), canonical uses Winged Muse (800p) \u2014 -800p",
-        "[opener] Opener slot #13: cast Hammer Motif (0p), canonical uses Mog of the Ages (1000p) \u2014 -1000p",
-        "[opener] Opener slot #14: cast Hammer Stamp (560p), canonical uses Star Prism (1100p) \u2014 -540p",
-        "[opener] Opener slot #17: cast Maw Motif (0p), canonical uses Rainbow Drip (1000p) \u2014 -1000p"
+        "[opener] Opener slot #1: cast Fire in Red (490p), canonical uses Rainbow Drip (1000p), -510p",
+        "[opener] Opener slot #8: cast Hammer Brush (580p), canonical uses Blizzard in Cyan (860p), -280p",
+        "[opener] Opener slot #9: cast Polishing Hammer (600p), canonical uses Stone in Yellow (900p), -300p",
+        "[opener] Opener slot #11: cast Wing Motif (0p), canonical uses Comet in Black (940p), -940p",
+        "[opener] Opener slot #12: cast Claw Motif (0p), canonical uses Winged Muse (800p), -800p",
+        "[opener] Opener slot #13: cast Hammer Motif (0p), canonical uses Mog of the Ages (1000p), -1000p",
+        "[opener] Opener slot #14: cast Hammer Stamp (560p), canonical uses Star Prism (1100p), -540p",
+        "[opener] Opener slot #17: cast Maw Motif (0p), canonical uses Rainbow Drip (1000p), -1000p"
       ],
       "summaryLines": [
         "Your opener cost: 5370p"
@@ -4157,16 +4157,35 @@
       "children": [],
       "kind": "tincture",
       "lostPotency": 1887.57,
-      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+      "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
       "timeSec": 0.0
     },
     {
       "abilityId": 0,
       "abilityName": "",
       "children": [],
+      "countGaps": [
+        {
+          "name": "Holy in White",
+          "sim": 4,
+          "you": 3
+        },
+        {
+          "name": "Water in Blue",
+          "sim": 12,
+          "you": 13
+        },
+        {
+          "name": "action -1000049",
+          "sim": 0,
+          "you": 2
+        }
+      ],
       "kind": "residual",
       "lostPotency": 965.6,
-      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "prescription": "Biggest count gaps: Holy in White. The sim fits more of them. Your extra Water in Blue casts came out of those slots; each extra is worth less than what it displaced.",
+      "summary": "Spacing & sequencing",
       "timeSec": 0.0
     },
     {
@@ -4175,7 +4194,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #1: cast Fire in Red, canonical opens Rainbow Drip (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #1: cast Fire in Red, canonical opens Rainbow Drip (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4184,7 +4203,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #8: cast Hammer Brush, canonical opens Blizzard in Cyan (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #8: cast Hammer Brush, canonical opens Blizzard in Cyan (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4193,7 +4212,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #9: cast Polishing Hammer, canonical opens Stone in Yellow (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #9: cast Polishing Hammer, canonical opens Stone in Yellow (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4202,7 +4221,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #11: cast Wing Motif, canonical opens Comet in Black (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #11: cast Wing Motif, canonical opens Comet in Black (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4211,7 +4230,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #12: cast Claw Motif, canonical opens Winged Muse (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #12: cast Claw Motif, canonical opens Winged Muse (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4220,7 +4239,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #13: cast Hammer Motif, canonical opens Mog of the Ages (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #13: cast Hammer Motif, canonical opens Mog of the Ages (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4229,7 +4248,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #14: cast Hammer Stamp, canonical opens Star Prism (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #14: cast Hammer Stamp, canonical opens Star Prism (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4238,7 +4257,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #17: cast Maw Motif, canonical opens Rainbow Drip (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #17: cast Maw Motif, canonical opens Rainbow Drip (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

@@ -142,20 +142,20 @@
           "sharedConsumers": 0
         },
         {
-          "abilityId": 3573,
-          "abilityName": "Ley Lines",
-          "cappedSeconds": 0.0,
-          "casts": 4,
+          "abilityId": 25796,
+          "abilityName": "Amplifier",
+          "cappedSeconds": 4.87,
+          "casts": 3,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
           "sharedConsumers": 0
         },
         {
-          "abilityId": 25796,
-          "abilityName": "Amplifier",
-          "cappedSeconds": 4.87,
-          "casts": 3,
+          "abilityId": 3573,
+          "abilityName": "Ley Lines",
+          "cappedSeconds": 0.0,
+          "casts": 4,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -170,7 +170,7 @@
           "expectedId": 152,
           "lostPotency": 140.0,
           "position": 1,
-          "summary": "Opener slot #1: cast High Thunder (150p), canonical uses Fire III (290p) \u2014 -140p"
+          "summary": "Opener slot #1: cast High Thunder (150p), canonical uses Fire III (290p), -140p"
         },
         {
           "actualId": 25797,
@@ -191,7 +191,7 @@
           "expectedId": 16507,
           "lostPotency": 590.0,
           "position": 8,
-          "summary": "Opener slot #8: cast Fire IV (300p), canonical uses Xenoglossy (890p) \u2014 -590p"
+          "summary": "Opener slot #8: cast Fire IV (300p), canonical uses Xenoglossy (890p), -590p"
         },
         {
           "actualId": 16505,
@@ -360,7 +360,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.50s",
@@ -422,8 +422,8 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #1: cast High Thunder (150p), canonical uses Fire III (290p) \u2014 -140p",
-        "[opener] Opener slot #8: cast Fire IV (300p), canonical uses Xenoglossy (890p) \u2014 -590p"
+        "[opener] Opener slot #1: cast High Thunder (150p), canonical uses Fire III (290p), -140p",
+        "[opener] Opener slot #8: cast Fire IV (300p), canonical uses Xenoglossy (890p), -590p"
       ],
       "summaryLines": [
         "Your opener cost: 730p"
@@ -1929,7 +1929,8 @@
       "children": [],
       "kind": "tincture",
       "lostPotency": 920.35,
-      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+      "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
       "timeSec": 0.0
     },
     {
@@ -1938,7 +1939,8 @@
       "children": [],
       "kind": "residual",
       "lostPotency": 884.49,
-      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "prescription": "No single cast is at fault here. The cost is real, spread across many small choices: resource timing, burst spacing, filler picks.",
+      "summary": "Spacing & sequencing",
       "timeSec": 0.0
     },
     {
@@ -1947,7 +1949,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #1: cast High Thunder, canonical opens Fire III (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #1: cast High Thunder, canonical opens Fire III (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -1956,7 +1958,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #8: cast Fire IV, canonical opens Xenoglossy (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #8: cast Fire IV, canonical opens Xenoglossy (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

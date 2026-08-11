@@ -8,6 +8,7 @@ import type {
   Catalog,
   CastEvent,
   CharacterPullsResult,
+  Improvement,
   MitAssignment,
   MitMechanic,
   MitPlanLane,
@@ -121,6 +122,16 @@ function buildIdealizedTrack(): CastEvent[] {
   swap(30, 16498); // Drill instead of filler
   return out;
 }
+
+// Shared roster for the ref-warm progress tasks + the theorizer's mock refs.
+const REF_NAMES = [
+  'Aymeric de Borel', 'Yshtola Rhul', 'Estinien Wyrmblood',
+  'Alphinaud Leveilleur', 'Alisaie Leveilleur', 'Thancred Waters',
+  'Urianger Augurelt', 'Lyna', "G'raha Tia", 'Krile Mayer Baldesion',
+];
+// Mock reference kill times (s), clustered around the 632s average the
+// prefetch mock reports — the theorizer's slider ticks + ref lane metas.
+const REF_KILL_TIMES = REF_NAMES.map((_, i) => 616 + i * 4 - (i % 3) * 2);
 
 // --- Encounter/pull fixtures (Pulls screen + mock runAnalysis) ---------------
 
@@ -261,6 +272,201 @@ const MOCK_PULL_ROWS: PullRow[] = [
 ];
 
 // --- Sidecar implementation ------------------------------------------------
+
+// The Potential Improvements cards runAnalysis ships — a module const so the
+// mock `examined` restructure derives from the SAME list (conservation
+// eyeballs correctly in `npm run dev`).
+const MOCK_IMPROVEMENTS: Improvement[] = [
+  {
+    kind: 'death',
+    abilityId: 0,
+    abilityName: '',
+    timeSec: 52,
+    lostPotency: 3200,
+    summary: 'Died at 0:52: 14s recovering, ~6 GCDs lost',
+  },
+  {
+    kind: 'tincture',
+    abilityId: 0,
+    abilityName: 'Tincture',
+    timeSec: 242,
+    lostPotency: 540,
+    summary: 'Used 1 of 2 tinctures. Fitting 1 more on cooldown recovers this',
+  },
+  {
+    kind: 'missed_cast',
+    abilityId: 17209,
+    abilityName: 'Hypercharge',
+    timeSec: 62,
+    lostPotency: 1180,
+    summary: 'Missed Hypercharge, fit one around 1:02 (~-1180p)',
+    prescription:
+      'Weave one more Hypercharge around 1:02. Worth ~1180p and it displaces no GCD.',
+  },
+  {
+    // The grouped multi-target card (children match the headline windows
+    // by timeSec) so the crediting modes' repricing renders in dev.
+    kind: 'multitarget',
+    abilityId: 0,
+    abilityName: '',
+    timeSec: 95,
+    lostPotency: 700,
+    summary:
+      'Multi-target: you hit fewer targets than the optimal AoE line across 2 windows. Spread damage to every enemy in these windows',
+    children: [
+      { kind: 'multi_target', abilityId: 0, abilityName: '', timeSec: 95, lostPotency: 400, summary: '1:35–2:30: hit fewer than 2 targets, ~400p of cleave left on the table' },
+      { kind: 'multi_target', abilityId: 0, abilityName: '', timeSec: 305, lostPotency: 300, summary: '5:05–6:00: hit fewer than 2 targets, ~300p of cleave left on the table' },
+    ],
+  },
+  {
+    kind: 'opener',
+    abilityId: 36982,
+    abilityName: 'Full Metal Field',
+    timeSec: 18,
+    lostPotency: 660,
+    summary:
+      'Opener slot #8: cast Blazing Shot (240p), canonical uses Full Metal Field (900p), -660p',
+  },
+  {
+    kind: 'idle',
+    abilityId: 0,
+    abilityName: '',
+    timeSec: 45,
+    lostPotency: 590,
+    summary: 'Time spent idle: 3.5s (1.4 GCDs)',
+    prescription:
+      'Close the 1.9s gap at 0:45, your longest. 3.5s idle total (~1 GCDs).',
+    children: [
+      { kind: 'idle', abilityId: 0, abilityName: '', timeSec: 45, lostPotency: 320, summary: 'Idle 1.9s at 0:45' },
+      { kind: 'idle', abilityId: 0, abilityName: '', timeSec: 71, lostPotency: 180, summary: 'Idle 1.1s at 1:11' },
+      { kind: 'idle', abilityId: 0, abilityName: '', timeSec: 58, lostPotency: 90, summary: 'Idle 0.5s at 0:58' },
+    ],
+  },
+  {
+    kind: 'missed_cast',
+    abilityId: 16498,
+    abilityName: 'Drill',
+    timeSec: 33,
+    lostPotency: 340,
+    summary: 'Missed Drill, fit one around 0:33 (~-340p)',
+    prescription:
+      'Fit one more Drill around 0:33. Worth ~340p over the filler that backfills it.',
+  },
+  {
+    kind: 'hypercharge',
+    abilityId: 17209,
+    abilityName: 'Hypercharge',
+    timeSec: 64,
+    lostPotency: 262,
+    summary: 'Hypercharge fired 3 of 5 Blazing Shots',
+  },
+  {
+    kind: 'residual',
+    abilityId: 0,
+    abilityName: '',
+    timeSec: 0,
+    lostPotency: 840,
+    summary: 'Spacing & sequencing: 3 small located losses below the listing threshold',
+    prescription:
+      'No single cast is at fault here. The cost is real, spread across many small choices: resource timing, burst spacing, filler picks.',
+    countGaps: [
+      { name: 'Heated Clean Shot', you: 35, sim: 36 },
+      { name: 'Automaton Queen', you: 13, sim: 14 },
+      { name: 'Drill', you: 29, sim: 28 },
+    ],
+    children: [
+      { kind: 'overcap', abilityId: 0, abilityName: '', timeSec: 80, lostPotency: 120, summary: 'Heat overcap at 1:20: Blazing Shot (wasted 5)' },
+      { kind: 'missed_cast', abilityId: 36979, abilityName: 'Double Check', timeSec: 64, lostPotency: 180, summary: 'Missed Double Check, fit one around 1:04' },
+      { kind: 'align', abilityId: 0, abilityName: '', timeSec: 38, lostPotency: 90, summary: 'Reassemble misaligned at 0:38' },
+    ],
+  },
+  {
+    kind: 'align',
+    abilityId: 0,
+    abilityName: '',
+    timeSec: 27,
+    lostPotency: 180,
+    summary: 'Wildfire at 0:27 could shift into the burst window (~-180p)',
+  },
+  {
+    kind: 'clip',
+    abilityId: 0,
+    abilityName: '',
+    timeSec: 62,
+    lostPotency: 160,
+    summary: 'GCD clipping: 0.9s (0.4 GCDs) from over-weaving',
+    children: [
+      { kind: 'clip', abilityId: 0, abilityName: '', timeSec: 62, lostPotency: 95, summary: 'Clipped 0.55s, 3 oGCDs weaved at 1:02' },
+      { kind: 'clip', abilityId: 0, abilityName: '', timeSec: 41, lostPotency: 65, summary: 'Clipped 0.38s, 3 oGCDs weaved at 0:41' },
+    ],
+  },
+];
+
+function buildMockExamined() {
+  // 540p moves out of the 840p residual into three root causes (150 + 210 +
+  // 180) — same conservation discipline as the real backend: mass only ever
+  // leaves the residual, and the top-level total is unchanged.
+  const cards: Improvement[] = MOCK_IMPROVEMENTS.map((c) =>
+    c.kind === 'residual'
+      ? { ...c, lostPotency: c.lostPotency - 540, summary: 'Spacing & sequencing: what the examination could not attribute' }
+      : { ...c });
+  cards.push({
+    kind: 'cascade_lost_use',
+    abilityId: 16498,
+    abilityName: 'Drill',
+    timeSec: 33,
+    lostPotency: 150,
+    summary: 'Drill sat idle 14s in total, 1 use lost',
+    prescription:
+      'Press Drill the moment it lights up. Your biggest slip starts at 0:33, 4.1s late. Late presses stack until a whole use (~660p) falls off the end of the fight.',
+    evidence: [
+      { k: 'Drill', v: '26 / 28', note: 'casts vs the sim\'s line' },
+      { k: 'Idle', v: '14s', note: '≈ 0.7 full recasts of idle time' },
+    ],
+  });
+  cards.push({
+    kind: 'cascade_pacing',
+    abilityId: 0,
+    abilityName: '',
+    timeSec: 120,
+    lostPotency: 210,
+    summary: 'Battery and Heat held from 2:00 to 2:02',
+    prescription:
+      'Use excess Battery and Heat right away here.',
+    evidence: [
+      { k: 'Battery', v: '100 over ideal', note: 'a Queen was ready and waiting' },
+      { k: 'Heat', v: '50 over ideal', note: 'Hypercharge came later than the gauge allowed' },
+    ],
+    resources: [
+      { label: 'Battery', short: 'BAT' },
+      { label: 'Heat', short: 'HEAT' },
+    ],
+  });
+  cards.push({
+    kind: 'cascade_pacing',
+    abilityId: 0,
+    abilityName: '',
+    timeSec: 161,
+    lostPotency: 180,
+    summary: 'Heat held from 2:41 to 2:45',
+    prescription:
+      'Use excess Heat right away here.',
+    evidence: [
+      { k: 'Heat', v: '50 over ideal', note: 'Hypercharge came later than the gauge allowed' },
+    ],
+    resources: [{ label: 'Heat', short: 'HEAT' }],
+  });
+  cards.sort((a, b) => b.lostPotency - a.lostPotency);
+  return {
+    improvements: cards,
+    recoverable: MOCK_IMPROVEMENTS.reduce((s, c) => s + c.lostPotency, 0),
+    basis: 'strict' as const,
+    notes: [
+      '540p of the diffuse loss resolved into 3 root causes.',
+      'Cascade weights scaled ×0.62 to fit the residual budget.',
+    ],
+  };
+}
 
 export const mockSidecar: Sidecar = {
   // Browser preview is always "signed in" so the app boots straight to Setup.
@@ -436,11 +642,6 @@ export const mockSidecar: Sidecar = {
   ): Promise<PrefetchResult> {
     // Mirror runAnalysis' ref-download phase: a 10-task fetch behind a
     // 6-worker pool so the blocking warm popup exercises the same task-bar UI.
-    const REF_NAMES = [
-      'Aymeric de Borel', 'Yshtola Rhul', 'Estinien Wyrmblood',
-      'Alphinaud Leveilleur', 'Alisaie Leveilleur', 'Thancred Waters',
-      'Urianger Augurelt', 'Lyna', "G'raha Tia", 'Krile Mayer Baldesion',
-    ];
     const tasks: ProgressTask[] = REF_NAMES.map((label) => ({ label, state: 'pending' }));
     const emit = (): void => {
       const doneN = tasks.filter((t) => t.state === 'done' || t.state === 'failed').length;
@@ -464,7 +665,11 @@ export const mockSidecar: Sidecar = {
     };
     await Promise.all(Array.from({ length: POOL }, worker));
     onProgress?.(100, 'Ready');
-    return { spec, encounterId, count: tasks.length, fromCache: false, avgKillSec: 632 };
+    return {
+      spec, encounterId, count: tasks.length, fromCache: false, avgKillSec: 632,
+      refKillTimesSec: [...REF_KILL_TIMES],
+      refPartyJobs: ['Bard', 'Dragoon', 'Ninja', 'Scholar'],
+    };
   },
 
   async listRankings(): Promise<RankingEntry[]> {
@@ -621,119 +826,31 @@ export const mockSidecar: Sidecar = {
       // Unified, located, ranked suggestions (as the backend emits post-
       // grouping). Times fall within the synthetic ~90s track so the
       // click-to-timeline jump lands on a real cast in `npm run dev`.
-      improvements: [
-        {
-          kind: 'death',
-          abilityId: 0,
-          abilityName: '',
-          timeSec: 52,
-          lostPotency: 3200,
-          summary: 'Died at 0:52 — 14s recovering, ~6 GCDs lost',
-        },
-        {
-          kind: 'tincture',
-          abilityId: 0,
-          abilityName: 'Tincture',
-          timeSec: 242,
-          lostPotency: 540,
-          summary: 'Used 1 of 2 tinctures — fitting 1 more on cooldown recovers this',
-        },
-        {
-          kind: 'missed_cast',
-          abilityId: 17209,
-          abilityName: 'Hypercharge',
-          timeSec: 62,
-          lostPotency: 1180,
-          summary: 'Missed Hypercharge — fit one around 1:02 (~-1180p)',
-        },
-        {
-          // The grouped multi-target card (children match the headline windows
-          // by timeSec) so the crediting modes' repricing renders in dev.
-          kind: 'multitarget',
-          abilityId: 0,
-          abilityName: '',
-          timeSec: 95,
-          lostPotency: 700,
-          summary:
-            'Multi-target: you hit fewer targets than the optimal AoE line across 2 windows — spread damage to every enemy in these windows',
-          children: [
-            { kind: 'multi_target', abilityId: 0, abilityName: '', timeSec: 95, lostPotency: 400, summary: '1:35–2:30: hit fewer than 2 targets — ~400p of cleave left on the table' },
-            { kind: 'multi_target', abilityId: 0, abilityName: '', timeSec: 305, lostPotency: 300, summary: '5:05–6:00: hit fewer than 2 targets — ~300p of cleave left on the table' },
-          ],
-        },
-        {
-          kind: 'opener',
-          abilityId: 36982,
-          abilityName: 'Full Metal Field',
-          timeSec: 18,
-          lostPotency: 660,
-          summary:
-            'Opener slot #8: cast Blazing Shot (240p), canonical uses Full Metal Field (900p) — -660p',
-        },
-        {
-          kind: 'idle',
-          abilityId: 0,
-          abilityName: '',
-          timeSec: 45,
-          lostPotency: 590,
-          summary: 'Time spent idle: 3.5s (1.4 GCDs)',
-          children: [
-            { kind: 'idle', abilityId: 0, abilityName: '', timeSec: 45, lostPotency: 320, summary: 'Idle 1.9s at 0:45' },
-            { kind: 'idle', abilityId: 0, abilityName: '', timeSec: 71, lostPotency: 180, summary: 'Idle 1.1s at 1:11' },
-            { kind: 'idle', abilityId: 0, abilityName: '', timeSec: 58, lostPotency: 90, summary: 'Idle 0.5s at 0:58' },
-          ],
-        },
-        {
-          kind: 'missed_cast',
-          abilityId: 16498,
-          abilityName: 'Drill',
-          timeSec: 33,
-          lostPotency: 340,
-          summary: 'Missed Drill — fit one around 0:33 (~-340p)',
-        },
-        {
-          kind: 'hypercharge',
-          abilityId: 17209,
-          abilityName: 'Hypercharge',
-          timeSec: 64,
-          lostPotency: 262,
-          summary: 'Hypercharge at 1:04 fired 3/5 Blazing Shots (short 2)',
-        },
-        {
-          kind: 'residual',
-          abilityId: 0,
-          abilityName: '',
-          timeSec: 0,
-          lostPotency: 300,
-          summary:
-            'Other — 3 small located losses below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)',
-          children: [
-            { kind: 'overcap', abilityId: 0, abilityName: '', timeSec: 80, lostPotency: 120, summary: 'Heat overcap at 1:20 — Blazing Shot (wasted 5)' },
-            { kind: 'missed_cast', abilityId: 36979, abilityName: 'Double Check', timeSec: 64, lostPotency: 180, summary: 'Missed Double Check — fit one around 1:04' },
-            { kind: 'align', abilityId: 0, abilityName: '', timeSec: 38, lostPotency: 90, summary: 'Reassemble misaligned at 0:38' },
-          ],
-        },
-        {
-          kind: 'align',
-          abilityId: 0,
-          abilityName: '',
-          timeSec: 27,
-          lostPotency: 180,
-          summary: 'Wildfire at 0:27 could shift into the burst window (~-180p)',
-        },
-        {
-          kind: 'clip',
-          abilityId: 0,
-          abilityName: '',
-          timeSec: 62,
-          lostPotency: 160,
-          summary: 'GCD clipping: 0.9s (0.4 GCDs) from over-weaving',
-          children: [
-            { kind: 'clip', abilityId: 0, abilityName: '', timeSec: 62, lostPotency: 95, summary: 'Clipped 0.55s — 3 oGCDs weaved at 1:02' },
-            { kind: 'clip', abilityId: 0, abilityName: '', timeSec: 41, lostPotency: 65, summary: 'Clipped 0.38s — 3 oGCDs weaved at 0:41' },
-          ],
-        },
-      ],
+      // (Literal lives in MOCK_IMPROVEMENTS so the inline `examined`
+      // restructure below derives from the same cards.)
+      improvements: MOCK_IMPROVEMENTS.map((c) => ({ ...c })),
+      // The inline deep pass's restructure: 150p measured out of the 300p
+      // residual into one cascade root cause (Drill drift) — same
+      // conservation discipline as the real backend (top-level sum unchanged,
+      // residual keeps its 60p+ floor).
+      examined: buildMockExamined(),
+      // Separate-currency buff-window cards (observed lens) — exercises the
+      // "Buff-window timing" card + its two-currencies explainer in dev.
+      buffAlignment: {
+        budget: 950,
+        cards: [
+          {
+            kind: 'buff_window',
+            abilityId: 16498,
+            abilityName: 'Drill',
+            timeSec: 118,
+            lostPotency: 74,
+            summary:
+              "Drill at 1:58 landed just before Battle Litany's window at 2:01. Holding ~3s gains ~74p",
+            prescription: 'Hold Drill ~3s for the buff window.',
+          },
+        ],
+      },
       // Idealized comparison lane for the Timeline (reuses the synthetic track
       // shape so the lane renders in dev).
       idealizedTrack: buildIdealizedTrack(),
@@ -1096,6 +1213,7 @@ export const mockSidecar: Sidecar = {
     await delay(150);
     const empty = {
       targetKillSec, idealizedPotency: 0, timeline: [] as CastEvent[],
+      timelineCanonical: [] as CastEvent[], refs: [] as TheorizeResult['refs'],
       downtimeWindows: [], buffWindows: [], tinctureWindows: [], samples: [],
       abilityMeta: {}, downtimeSource: 'none' as const, refCount: 0,
       refKillTimeSec: 0, refAvgKillSec: 0, refPartyJobs: [],
@@ -1122,6 +1240,33 @@ export const mockSidecar: Sidecar = {
       targetKillSec,
       idealizedPotency: idealAt(targetKillSec),
       timeline: buildIdealizedTrack(),
+      // Canonical = "burst held for the 2-min window": oGCDs pushed 3s later
+      // so the Burst-usage toggle visibly re-lays the lane in dev.
+      timelineCanonical: partyJobs.length
+        ? buildIdealizedTrack().map((c) =>
+            c.yOffset < 0
+              ? { ...c, startSec: c.startSec + 3, endSec: c.endSec + 3 }
+              : c)
+        : [],
+      // The reference kills as lanes: efficiency descending from #1 so the
+      // sorted rail + the "kill m:ss" metas read like the shipped backend.
+      refs: hasRefs
+        ? REF_NAMES.map((name, i) => {
+            const kill = REF_KILL_TIMES[i];
+            const idealized = idealAt(kill);
+            const eff = 100 - i * 0.35;
+            return {
+              label: `#${i + 1} ${name}`,
+              fightDurationSec: kill,
+              deliveredPotency: Math.round((idealized * eff) / 100),
+              idealizedPotency: idealized,
+              efficiencyPct: Math.round(eff * 100) / 100,
+              killTimeSec: Math.round(kill),
+              abilitiesTrack: buildAbilitiesTrack(),
+              tinctureWindows: [{ startSec: 1, endSec: 31, multiplier: 1.082 }],
+            };
+          })
+        : [],
       downtimeWindows: hasRefs ? [{ startSec: 40, endSec: 46 }] : [],
       buffWindows: partyJobs.length
         ? [

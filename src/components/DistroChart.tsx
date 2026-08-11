@@ -5,6 +5,9 @@ type Props = {
    *  potency (e.g. 38500 → "38.5k"). Pass a percent formatter when the
    *  values are efficiency percentages. */
   formatLabel?: (v: number) => string;
+  /** Compact one-line variant for the collapsed reference strip: 14px track,
+   *  smaller dots, no median/you text labels (per-dot tooltips remain). */
+  compact?: boolean;
 };
 
 const defaultFormat = (v: number) => `${(v / 1000).toFixed(1)}k`;
@@ -14,7 +17,7 @@ const defaultFormat = (v: number) => `${(v / 1000).toFixed(1)}k`;
  *  strip fills its container at any width while the markers stay perfectly
  *  round (an SVG with preserveAspectRatio="none" stretched them into ovals on
  *  wide screens). */
-export const DistroChart = ({ yourValue, refs, formatLabel = defaultFormat }: Props) => {
+export const DistroChart = ({ yourValue, refs, formatLabel = defaultFormat, compact }: Props) => {
   const min = Math.min(...refs, yourValue);
   const max = Math.max(...refs, yourValue);
   const span = max - min || 1;
@@ -24,7 +27,7 @@ export const DistroChart = ({ yourValue, refs, formatLabel = defaultFormat }: Pr
   const median = sorted[Math.floor(sorted.length / 2)];
 
   return (
-    <div className="distro">
+    <div className={`distro${compact ? ' compact' : ''}`}>
       <div className="distro-track">
         <div className="distro-axis" />
         {refs.map((v, i) => (
@@ -33,10 +36,16 @@ export const DistroChart = ({ yourValue, refs, formatLabel = defaultFormat }: Pr
           </span>
         ))}
         <div className="distro-median" style={{ left: `${pos(median)}%` }}>
-          <span className="distro-label distro-label-top">median {formatLabel(median)}</span>
+          {!compact && (
+            <span className="distro-label distro-label-top">median {formatLabel(median)}</span>
+          )}
         </div>
         <span className="distro-dot you" style={{ left: `${pos(yourValue)}%` }}>
-          <span className="distro-label distro-label-bottom">you {formatLabel(yourValue)}</span>
+          {compact ? (
+            <span className="distro-tip">you {formatLabel(yourValue)}</span>
+          ) : (
+            <span className="distro-label distro-label-bottom">you {formatLabel(yourValue)}</span>
+          )}
         </span>
       </div>
     </div>

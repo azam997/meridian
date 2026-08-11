@@ -254,16 +254,6 @@
       "fightDurationSec": 360.0,
       "findings": [
         {
-          "abilityId": 36992,
-          "abilityName": "Summon Solar Bahamut",
-          "cappedSeconds": 3.8,
-          "casts": 3,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
-          "sharedConsumers": 3
-        },
-        {
           "abilityId": 16508,
           "abilityName": "Energy Drain",
           "cappedSeconds": 8.8,
@@ -272,6 +262,16 @@
           "lostCasts": 0.0,
           "lostPotency": 0.0,
           "sharedConsumers": 0
+        },
+        {
+          "abilityId": 36992,
+          "abilityName": "Summon Solar Bahamut",
+          "cappedSeconds": 3.8,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 3
         },
         {
           "abilityId": 25801,
@@ -320,42 +320,42 @@
           "expectedId": 36998,
           "lostPotency": 700.0,
           "position": 8,
-          "summary": "Opener slot #8: cast Summon Garuda II (800p), canonical uses Enkindle Solar Bahamut (1500p) \u2014 -700p"
+          "summary": "Opener slot #8: cast Summon Garuda II (800p), canonical uses Enkindle Solar Bahamut (1500p), -700p"
         },
         {
           "actualId": 25825,
           "expectedId": 36994,
           "lostPotency": 360.0,
           "position": 9,
-          "summary": "Opener slot #9: cast Emerald Rite (280p), canonical uses Umbral Impulse (640p) \u2014 -360p"
+          "summary": "Opener slot #9: cast Emerald Rite (280p), canonical uses Umbral Impulse (640p), -360p"
         },
         {
           "actualId": 25825,
           "expectedId": 36996,
           "lostPotency": 720.0,
           "position": 10,
-          "summary": "Opener slot #10: cast Emerald Rite (280p), canonical uses Sunflare (1000p) \u2014 -720p"
+          "summary": "Opener slot #10: cast Emerald Rite (280p), canonical uses Sunflare (1000p), -720p"
         },
         {
           "actualId": 25825,
           "expectedId": 36990,
           "lostPotency": 220.0,
           "position": 11,
-          "summary": "Opener slot #11: cast Emerald Rite (280p), canonical uses Necrotize (500p) \u2014 -220p"
+          "summary": "Opener slot #11: cast Emerald Rite (280p), canonical uses Necrotize (500p), -220p"
         },
         {
           "actualId": 25825,
           "expectedId": 36994,
           "lostPotency": 360.0,
           "position": 12,
-          "summary": "Opener slot #12: cast Emerald Rite (280p), canonical uses Umbral Impulse (640p) \u2014 -360p"
+          "summary": "Opener slot #12: cast Emerald Rite (280p), canonical uses Umbral Impulse (640p), -360p"
         },
         {
           "actualId": 25837,
           "expectedId": 36991,
           "lostPotency": 30.0,
           "position": 13,
-          "summary": "Opener slot #13: cast Slipstream (670p), canonical uses Searing Flash (700p) \u2014 -30p"
+          "summary": "Opener slot #13: cast Slipstream (670p), canonical uses Searing Flash (700p), -30p"
         },
         {
           "actualId": 25838,
@@ -376,7 +376,7 @@
           "expectedId": 25840,
           "lostPotency": 180.0,
           "position": 16,
-          "summary": "Opener slot #16: cast Ruby Rite (620p), canonical uses Summon Garuda II (800p) \u2014 -180p"
+          "summary": "Opener slot #16: cast Ruby Rite (620p), canonical uses Summon Garuda II (800p), -180p"
         },
         {
           "actualId": 25835,
@@ -418,28 +418,28 @@
           "expectedId": 25838,
           "lostPotency": 460.0,
           "position": 22,
-          "summary": "Opener slot #22: cast Topaz Rite (340p), canonical uses Summon Ifrit II (800p) \u2014 -460p"
+          "summary": "Opener slot #22: cast Topaz Rite (340p), canonical uses Summon Ifrit II (800p), -460p"
         },
         {
           "actualId": 25824,
           "expectedId": 25835,
           "lostPotency": 220.0,
           "position": 23,
-          "summary": "Opener slot #23: cast Topaz Rite (340p), canonical uses Crimson Cyclone (560p) \u2014 -220p"
+          "summary": "Opener slot #23: cast Topaz Rite (340p), canonical uses Crimson Cyclone (560p), -220p"
         },
         {
           "actualId": 7426,
           "expectedId": 25823,
           "lostPotency": 100.0,
           "position": 24,
-          "summary": "Opener slot #24: cast Ruin IV (520p), canonical uses Ruby Rite (620p) \u2014 -100p"
+          "summary": "Opener slot #24: cast Ruin IV (520p), canonical uses Ruby Rite (620p), -100p"
         },
         {
           "actualId": 3579,
           "expectedId": 25823,
           "lostPotency": 220.0,
           "position": 25,
-          "summary": "Opener slot #25: cast Ruin III (400p), canonical uses Ruby Rite (620p) \u2014 -220p"
+          "summary": "Opener slot #25: cast Ruin III (400p), canonical uses Ruby Rite (620p), -220p"
         },
         {
           "actualId": 7427,
@@ -453,7 +453,7 @@
           "expectedId": 25839,
           "lostPotency": 300.0,
           "position": 27,
-          "summary": "Opener slot #27: cast Astral Impulse (500p), canonical uses Summon Titan II (800p) \u2014 -300p"
+          "summary": "Opener slot #27: cast Astral Impulse (500p), canonical uses Summon Titan II (800p), -300p"
         },
         {
           "actualId": 25820,
@@ -502,7 +502,7 @@
           "expectedId": 25824,
           "lostPotency": 60.0,
           "position": 34,
-          "summary": "Opener slot #34: cast Emerald Rite (280p), canonical uses Topaz Rite (340p) \u2014 -60p"
+          "summary": "Opener slot #34: cast Emerald Rite (280p), canonical uses Topaz Rite (340p), -60p"
         },
         {
           "actualId": 25825,
@@ -756,7 +756,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.50s",
@@ -818,19 +818,19 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #8: cast Summon Garuda II (800p), canonical uses Enkindle Solar Bahamut (1500p) \u2014 -700p",
-        "[opener] Opener slot #9: cast Emerald Rite (280p), canonical uses Umbral Impulse (640p) \u2014 -360p",
-        "[opener] Opener slot #10: cast Emerald Rite (280p), canonical uses Sunflare (1000p) \u2014 -720p",
-        "[opener] Opener slot #11: cast Emerald Rite (280p), canonical uses Necrotize (500p) \u2014 -220p",
-        "[opener] Opener slot #12: cast Emerald Rite (280p), canonical uses Umbral Impulse (640p) \u2014 -360p",
-        "[opener] Opener slot #13: cast Slipstream (670p), canonical uses Searing Flash (700p) \u2014 -30p",
-        "[opener] Opener slot #16: cast Ruby Rite (620p), canonical uses Summon Garuda II (800p) \u2014 -180p",
-        "[opener] Opener slot #22: cast Topaz Rite (340p), canonical uses Summon Ifrit II (800p) \u2014 -460p",
-        "[opener] Opener slot #23: cast Topaz Rite (340p), canonical uses Crimson Cyclone (560p) \u2014 -220p",
-        "[opener] Opener slot #24: cast Ruin IV (520p), canonical uses Ruby Rite (620p) \u2014 -100p",
-        "[opener] Opener slot #25: cast Ruin III (400p), canonical uses Ruby Rite (620p) \u2014 -220p",
-        "[opener] Opener slot #27: cast Astral Impulse (500p), canonical uses Summon Titan II (800p) \u2014 -300p",
-        "[opener] Opener slot #34: cast Emerald Rite (280p), canonical uses Topaz Rite (340p) \u2014 -60p"
+        "[opener] Opener slot #8: cast Summon Garuda II (800p), canonical uses Enkindle Solar Bahamut (1500p), -700p",
+        "[opener] Opener slot #9: cast Emerald Rite (280p), canonical uses Umbral Impulse (640p), -360p",
+        "[opener] Opener slot #10: cast Emerald Rite (280p), canonical uses Sunflare (1000p), -720p",
+        "[opener] Opener slot #11: cast Emerald Rite (280p), canonical uses Necrotize (500p), -220p",
+        "[opener] Opener slot #12: cast Emerald Rite (280p), canonical uses Umbral Impulse (640p), -360p",
+        "[opener] Opener slot #13: cast Slipstream (670p), canonical uses Searing Flash (700p), -30p",
+        "[opener] Opener slot #16: cast Ruby Rite (620p), canonical uses Summon Garuda II (800p), -180p",
+        "[opener] Opener slot #22: cast Topaz Rite (340p), canonical uses Summon Ifrit II (800p), -460p",
+        "[opener] Opener slot #23: cast Topaz Rite (340p), canonical uses Crimson Cyclone (560p), -220p",
+        "[opener] Opener slot #24: cast Ruin IV (520p), canonical uses Ruby Rite (620p), -100p",
+        "[opener] Opener slot #25: cast Ruin III (400p), canonical uses Ruby Rite (620p), -220p",
+        "[opener] Opener slot #27: cast Astral Impulse (500p), canonical uses Summon Titan II (800p), -300p",
+        "[opener] Opener slot #34: cast Emerald Rite (280p), canonical uses Topaz Rite (340p), -60p"
       ],
       "summaryLines": [
         "Your opener cost: 3930p"
@@ -5307,13 +5307,22 @@
           "children": [],
           "kind": "tincture",
           "lostPotency": 1808.21,
-          "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+          "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+          "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
           "timeSec": 0.0
+        }
+      ],
+      "countGaps": [
+        {
+          "name": "action -1000049",
+          "sim": 0,
+          "you": 2
         }
       ],
       "kind": "residual",
       "lostPotency": 1135.22,
-      "summary": "Other \u2014 1 small located loss below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "prescription": "No ability ran behind the sim's counts. The diffuse cost is burst spacing and GCD timing, not which buttons you pressed.",
+      "summary": "Spacing & sequencing: 1 small located loss below the listing threshold",
       "timeSec": 0.0
     },
     {
@@ -5322,7 +5331,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #8: cast Summon Garuda II, canonical opens Enkindle Solar Bahamut (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #8: cast Summon Garuda II, canonical opens Enkindle Solar Bahamut (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5331,7 +5340,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #9: cast Emerald Rite, canonical opens Umbral Impulse (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #9: cast Emerald Rite, canonical opens Umbral Impulse (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5340,7 +5349,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #10: cast Emerald Rite, canonical opens Sunflare (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #10: cast Emerald Rite, canonical opens Sunflare (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5349,7 +5358,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #11: cast Emerald Rite, canonical opens Necrotize (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #11: cast Emerald Rite, canonical opens Necrotize (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5358,7 +5367,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #12: cast Emerald Rite, canonical opens Umbral Impulse (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #12: cast Emerald Rite, canonical opens Umbral Impulse (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5367,7 +5376,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #13: cast Slipstream, canonical opens Searing Flash (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #13: cast Slipstream, canonical opens Searing Flash (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5376,7 +5385,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #16: cast Ruby Rite, canonical opens Summon Garuda II (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #16: cast Ruby Rite, canonical opens Summon Garuda II (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5385,7 +5394,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #22: cast Topaz Rite, canonical opens Summon Ifrit II (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #22: cast Topaz Rite, canonical opens Summon Ifrit II (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5394,7 +5403,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #23: cast Topaz Rite, canonical opens Crimson Cyclone (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #23: cast Topaz Rite, canonical opens Crimson Cyclone (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5403,7 +5412,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #24: cast Ruin IV, canonical opens Ruby Rite (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #24: cast Ruin IV, canonical opens Ruby Rite (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5412,7 +5421,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #25: cast Ruin III, canonical opens Ruby Rite (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #25: cast Ruin III, canonical opens Ruby Rite (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5421,7 +5430,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #27: cast Astral Impulse, canonical opens Summon Titan II (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #27: cast Astral Impulse, canonical opens Summon Titan II (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -5430,7 +5439,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #34: cast Emerald Rite, canonical opens Topaz Rite (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #34: cast Emerald Rite, canonical opens Topaz Rite (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

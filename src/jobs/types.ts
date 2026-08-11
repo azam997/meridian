@@ -71,11 +71,11 @@ export type JobProfile = {
    *  data-driven path is the backend `isDefensive` flag on abilityMeta (sourced
    *  from the shared role actions ∪ `JobData.defensive_ids`). Rarely needed. */
   nonRotationalNames?: readonly string[];
-  /** Replaces the sub-floor "trolling" easter-egg message on the efficiency
-   *  ring when set. Healers HEAL — low *damage* efficiency is expected when the
-   *  fight demands throughput healing (the ceiling is damage-optimal and assumes
-   *  none), so ribbing it is wrong; a healer surfaces a constructive mitigation
-   *  note instead. Off (default) = the easter egg, for DPS/tanks. */
+  /** Note shown on the efficiency ring when a pull lands below the efficiency
+   *  floor. Healers HEAL — low *damage* efficiency is expected when the fight
+   *  demands throughput healing (the ceiling is damage-optimal and assumes
+   *  none), so they surface a constructive mitigation note there. Unset
+   *  (default, DPS/tanks) = the standard ring label. */
   lowEfficiencyNote?: string;
 };
 

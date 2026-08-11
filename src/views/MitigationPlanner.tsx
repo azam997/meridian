@@ -1,9 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
-  ClipboardList, Clock, HeartPulse, ListChecks, Loader2, Play, Shield,
-  ShieldCheck, Sparkles, Swords, Target, Users,
+  ChevronDown, ClipboardList, Clock, ListChecks, Loader2, Play,
+  ShieldCheck, Sparkles, TriangleAlert, Users,
 } from 'lucide-react';
-import { jobColor, jobIcon } from '../components/jobs';
+import {
+  DPS_JOBS, REGEN_HEALERS, SHIELD_HEALERS, TANK_JOBS, jobColor, jobIcon,
+} from '../components/jobs';
+import { EncounterPicker } from '../components/EncounterPicker';
+import { JobTile } from '../components/JobTile';
 import { TimelineShell, type FilterState } from '../components/timeline/TimelineShell';
 import { TimelineCast } from '../components/timeline/TimelineCast';
 import { clampBubbleLeft, useTimelineScale } from '../components/timeline/scale';
@@ -31,15 +35,6 @@ type Props = {
   onAnalyze?: (comp: MitCompSelection, compAdjusted: boolean,
                usePfPlan: boolean) => void;
 };
-
-const SHIELD_HEALERS = ['Sage', 'Scholar'] as const;
-const REGEN_HEALERS = ['White Mage', 'Astrologian'] as const;
-const TANK_JOBS = ['Paladin', 'Warrior', 'Dark Knight', 'Gunbreaker'] as const;
-const DPS_JOBS = [
-  'Monk', 'Dragoon', 'Ninja', 'Samurai', 'Reaper', 'Viper',
-  'Bard', 'Machinist', 'Dancer',
-  'Black Mage', 'Summoner', 'Red Mage', 'Pictomancer',
-] as const;
 
 const MP_HELP =
   'Each lane is one party slot; icons are planned casts, the bar under an icon ' +
@@ -216,6 +211,13 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
   const isPullRoute = !!(pullContext?.reportCode && pullContext?.fightId
     && pullContext?.encounterId);
   const [pullSeeding, setPullSeeding] = useState(isPullRoute);
+  // Party-strip UI state: which slot's job popover is open, and the two ends
+  // of an in-flight drag-swap. All ephemeral.
+  const [openSlot, setOpenSlot] = useState<string | null>(null);
+  const [dragSlot, setDragSlot] = useState<string | null>(null);
+  const [overSlot, setOverSlot] = useState<string | null>(null);
+  // The collapsed notices row's disclosure.
+  const [noticesOpen, setNoticesOpen] = useState(false);
 
   useEffect(() => {
     let alive = true;
@@ -332,283 +334,404 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
   const canAnalyze = !!onAnalyze && !!result && !!pullContext
     && encounterId === pullContext.encounterId;
 
-  const duoTile = (j: string, on: boolean, set: (j: string) => void) => {
-    const icon = jobIcon(j);
+  // "Swap who casts" is a PF-plan concept: role-generic mits (Feint/Addle/
+  // Reprisal) resolve to comp jobs in slot order, so a swap reassigns who
+  // casts them without moving the ability placement. Until a plan is on
+  // screen with the PF source active there is nothing to reassign — the drag
+  // affordance (and its hint) stays off the page.
+  const swapLive = usePf && !!result;
+
+  // The eight party slots, derived per render from the existing comp state.
+  // Setters map straight onto it, so compKey/runKey/dirty work unchanged.
+  type Slot = {
+    id: string; label: string; job: string;
+    legal: readonly string[]; set: (j: string) => void;
+    healer?: boolean;
+  };
+  const slots: Slot[] = [
+    { id: 'T1', label: 'T1', job: tanks[0], legal: TANK_JOBS,
+      set: (j) => setTanks([j, tanks[1]]) },
+    { id: 'T2', label: 'T2', job: tanks[1], legal: TANK_JOBS,
+      set: (j) => setTanks([tanks[0], j]) },
+    { id: 'H1', label: 'H1 · shield', job: shieldHealer, legal: SHIELD_HEALERS,
+      set: setShieldHealer, healer: true },
+    { id: 'H2', label: 'H2 · regen', job: regenHealer, legal: REGEN_HEALERS,
+      set: setRegenHealer, healer: true },
+    ...dps.map((d, i): Slot => ({
+      id: `D${i + 1}`, label: `D${i + 1}`, job: d, legal: DPS_JOBS,
+      set: (j) => setDps(dps.map((x, k) => (k === i ? j : x))),
+    })),
+  ];
+
+  // Drag one card onto another to swap who casts — tank↔tank and dps↔dps only
+  // (the healer slots have disjoint legal jobs, so a swap is never legal).
+  // Role-generic mits (Feint/Addle/Reprisal) resolve to comp jobs in slot
+  // order, so a swap just reassigns who casts them — the ability placement
+  // (which mechanic, when) is unchanged.
+  const swapSlots = (a: string, b: string) => {
+    if (a === b || a[0] !== b[0]) return;
+    if (a[0] === 'T') {
+      setTanks((t) => [t[1], t[0]]);
+    } else if (a[0] === 'D') {
+      const i = Number(a[1]) - 1;
+      const k = Number(b[1]) - 1;
+      setDps((d) => { const n = [...d]; [n[i], n[k]] = [n[k], n[i]]; return n; });
+    }
+  };
+
+  // The job popover closes on click-outside and Escape (not mouseleave — it
+  // holds a list the user scans).
+  useEffect(() => {
+    if (openSlot === null) return;
+    const onDown = (e: MouseEvent) => {
+      const t = e.target as Element | null;
+      if (!t?.closest('.slot-wrap')) setOpenSlot(null);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpenSlot(null);
+    };
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [openSlot]);
+
+  const slotCard = (slot: Slot) => {
+    const isOver = overSlot === slot.id && dragSlot !== null && dragSlot !== slot.id;
     return (
-      <button
-        key={j}
-        className={'btn job-tile ' + (on ? 'primary' : '')}
-        onClick={() => set(j)}
-      >
-        {icon ? (
-          <img src={icon} alt="" width={22} height={22} draggable={false} className="job-tile-icon" />
-        ) : (
-          <span className="job-tile-icon" style={{ background: jobColor(j) }} />
+      <div className="slot-wrap" key={slot.id}>
+        <button
+          className={'slot-card' + (slot.healer ? ' healer' : '')
+            + (isOver ? ' drag-over' : '')
+            + (dragSlot === slot.id ? ' dragging' : '')}
+          draggable={swapLive && !slot.healer}
+          onClick={() => setOpenSlot((o) => (o === slot.id ? null : slot.id))}
+          onDragStart={(e) => {
+            e.dataTransfer.setData('text/plain', slot.id);
+            e.dataTransfer.effectAllowed = 'move';
+            setDragSlot(slot.id);
+            setOpenSlot(null);
+          }}
+          onDragEnd={() => { setDragSlot(null); setOverSlot(null); }}
+          onDragOver={(e) => {
+            // preventDefault marks the card a valid drop target (Chromium
+            // requires it) — same-role cards only, so a tank can never land
+            // on a dps slot.
+            if (!dragSlot || dragSlot === slot.id || dragSlot[0] !== slot.id[0]) return;
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            setOverSlot(slot.id);
+          }}
+          onDragLeave={() => setOverSlot((o) => (o === slot.id ? null : o))}
+          onDrop={(e) => {
+            e.preventDefault();
+            const from = e.dataTransfer.getData('text/plain') || dragSlot;
+            if (from) swapSlots(from, slot.id);
+            setDragSlot(null);
+            setOverSlot(null);
+          }}
+        >
+          <JobTile job={slot.job} size={24} iconInset={2} />
+          <span className="slot-lines">
+            <span className="slot-id mono">{slot.label}</span>
+            <span className="slot-name">{slot.job}</span>
+          </span>
+        </button>
+        {openSlot === slot.id && (
+          <div className="slot-pop">
+            {slot.legal.map((j) => (
+              <button
+                key={j}
+                className={'slot-pop-opt' + (j === slot.job ? ' on' : '')}
+                onClick={() => { slot.set(j); setOpenSlot(null); }}
+              >
+                <JobTile job={j} size={20} iconInset={2} />
+                {j}
+              </button>
+            ))}
+          </div>
         )}
-        <span className="job-tile-label">{j}</span>
-      </button>
+      </div>
     );
   };
 
-  const jobSelect = (value: string, options: readonly string[], onChange: (j: string) => void, key: string) => (
-    <select key={key} className="select mp-job-select" value={value} onChange={(e) => onChange(e.target.value)}>
-      {options.map((j) => (
-        <option key={j} value={j}>{j}</option>
-      ))}
-    </select>
-  );
-
-  // PF plan only: role-generic mits (Feint/Addle/Reprisal) resolve to comp jobs
-  // in slot order, so swapping two same-row slots just reassigns who casts them
-  // — the ability placement (which mechanic, when) is unchanged.
-  const swapDps = (i: number) =>
-    setDps((d) => { const n = [...d]; [n[i], n[i + 1]] = [n[i + 1], n[i]]; return n; });
-  const swapBtnStyle = { padding: '3px 9px', fontSize: 11.5, minWidth: 0 } as const;
-
   const s = result?.summary;
 
+  // One collapsed row for everything the planner wants to flag, counted by
+  // category (backend strings print verbatim in the expanded details).
+  const notices = result ? [...compWarnings, ...result.warnings] : [];
+  const noticeSummary = (() => {
+    let skipped = 0, unmatched = 0, pf = 0, other = 0;
+    for (const w of result?.warnings ?? []) {
+      if (w.startsWith('PF plan: no mechanic matched')) unmatched += 1;
+      else if (w.startsWith('PF plan:')) pf += 1;
+      else if (w.includes('skipped:')) skipped += 1;
+      else other += 1;
+    }
+    const parts: string[] = [];
+    if (skipped) parts.push(`${skipped} log${skipped === 1 ? '' : 's'} skipped`);
+    if (unmatched) parts.push(`${unmatched} mechanic${unmatched === 1 ? '' : 's'} unmatched`);
+    if (pf) parts.push(`${pf} PF plan notice${pf === 1 ? '' : 's'}`);
+    if (compWarnings.length) {
+      parts.push(`${compWarnings.length} party notice${compWarnings.length === 1 ? '' : 's'}`);
+    }
+    if (other && parts.length) parts.push(`${other} other`);
+    const head = `${notices.length} notice${notices.length === 1 ? '' : 's'}`;
+    // All-uncategorizable → just the count; a breakdown that restates it is noise.
+    return parts.length ? `${head}: ${parts.join(', ')}` : head;
+  })();
+
+  // The encounter hint: where the selection sits within its category.
+  const activeCat = activeEnc?.category ?? 'savage';
+  const catEncounters = encounters.filter((e) => (e.category ?? 'savage') === activeCat);
+  const catIdx = catEncounters.findIndex((e) => e.id === encounterId);
+  const catNoun = activeCat === 'ultimate'
+    ? (catEncounters.length === 1 ? 'ultimate' : 'ultimates')
+    : (catEncounters.length === 1 ? 'savage encounter' : 'savage encounters');
+  const encHint = catIdx >= 0
+    ? `${catIdx + 1} of ${catEncounters.length} ${catNoun} in the catalog`
+    : undefined;
+
   return (
-    <div className="content">
-      <div className="card ktt-card">
-        <div className="card-head">
-          <HeartPulse size={14} />
-          <h2>Healing / Mitigation</h2>
-          <span className="sub" style={{ marginLeft: 'auto' }}>
-            A shareable mitigation plan for your healer duo
-          </span>
-        </div>
-        <div className="card-body">
-          {pullSeeding ? (
-            <div className="mp-seeding">
-              <Loader2 size={22} className="mp-seeding-spin" />
-              <div className="mp-seeding-lbl">
-                {progress?.stage ?? 'Reading your pull’s party…'}
-              </div>
-              <div className="mp-seeding-track">
-                <div
-                  className="ktt-progress-bar"
-                  style={{ width: `${progress?.pct ?? 6}%` }}
-                />
-              </div>
-              <span className="ktt-hint mp-seeding-hint">
-                Reading the party you ran with so the plan matches your pull.
-              </span>
-            </div>
-          ) : (<>
-          <p className="mut" style={{ fontSize: 12.5, margin: '0 0 14px' }}>
-            Pick an encounter and your healer duo — the planner measures every
-            forced hit (raidwides, busters, bleeds) across the encounter’s top
-            kill logs, then schedules party mitigation, healer cooldowns, and
-            shields so the damage is handled with as few healing GCDs as
-            possible. No character or prior analysis required.
+    <div className="content wide">
+      <div className="page-title-row">
+        <div>
+          <h1>Heal / Mit planner</h1>
+          <p className="page-meta">
+            A shareable mitigation plan for your healer duo, scheduled across
+            the encounter's top kill logs.
           </p>
+        </div>
+      </div>
 
-          <div className="ktt-form">
-            <div className="ktt-field-block">
-              <span className="field-label">
-                <Target size={12} /> Encounter
-              </span>
-              <select
-                className="select"
-                value={encounterId}
-                onChange={(e) => setEncounterId(Number(e.target.value))}
-              >
-                {encounters.length === 0 && <option value={0}>Loading…</option>}
-                {encounters.map((e) => (
-                  <option key={e.id} value={e.id}>{e.name}</option>
-                ))}
-              </select>
+      {pullSeeding ? (
+        <div className="setup-panel planner">
+          <div className="mp-seeding">
+            <Loader2 size={22} className="mp-seeding-spin" />
+            <div className="mp-seeding-lbl">
+              {progress?.stage ?? 'Reading your pull’s party…'}
             </div>
+            <div className="mp-seeding-track">
+              <div
+                className="ktt-progress-bar"
+                style={{ width: `${progress?.pct ?? 6}%` }}
+              />
+            </div>
+            <span className="ktt-hint mp-seeding-hint">
+              Reading the party you ran with so the plan matches your pull.
+            </span>
+          </div>
+        </div>
+      ) : (<>
+        <div className="setup-panel planner">
+          <div className="setup-row">
+            <span className="setup-label">Encounter</span>
+            <div className="setup-controls">
+              <EncounterPicker
+                encounters={encounters}
+                encounterId={encounterId}
+                onPick={setEncounterId}
+                hint={encHint}
+              />
+            </div>
+          </div>
 
-            {pfAvailable && (
-              <div className="ktt-field-block">
-                <span className="field-label">
-                  <ClipboardList size={12} /> Mit plan source
-                </span>
-                <div className="job-grid mp-duo">
+          {pfAvailable && (
+            <div className="setup-row">
+              <span className="setup-label">Plan source</span>
+              <div className="setup-controls">
+                <div className="seg-tabs">
                   <button
-                    className={'btn job-tile ' + (!usePfPlan ? 'primary' : '')}
-                    onClick={() => setUsePfPlan(false)}
-                  >
-                    <span className="job-tile-label">Sim Plan (BETA)</span>
-                  </button>
-                  <button
-                    className={'btn job-tile ' + (usePfPlan ? 'primary' : '')}
+                    className={'seg-tab' + (usePfPlan ? ' on' : '')}
                     onClick={() => setUsePfPlan(true)}
                   >
-                    <span className="job-tile-label">Use PF mit plan</span>
+                    PF mit plan
+                  </button>
+                  <button
+                    className={'seg-tab' + (!usePfPlan ? ' on' : '')}
+                    onClick={() => setUsePfPlan(false)}
+                  >
+                    Sim plan <span className="seg-suffix">BETA</span>
                   </button>
                 </div>
-                <span className="ktt-hint">
-                  The premade party-finder plan for this ultimate pins which mit
-                  covers each mechanic; the sim still schedules the timing.
+                <span className="setup-hint" style={{ maxWidth: 520 }}>
+                  The premade party-finder plan pins which mit covers each
+                  mechanic; the sim still schedules the timing.
                 </span>
               </div>
-            )}
+            </div>
+          )}
 
-            <div className="ktt-field-block">
-              <span className="field-label">
-                <Shield size={12} /> Shield healer
-              </span>
-              <div className="job-grid mp-duo">
-                {SHIELD_HEALERS.map((j) => duoTile(j, shieldHealer === j, setShieldHealer))}
+          <div className="setup-row">
+            <span className="setup-label">Party</span>
+            <div className="setup-controls party">
+              {compSource === 'pull' && (
+                <span className="slot-comp-note">
+                  {compAdjusted
+                    ? "Comp adjusted away from your pull's, the analysis will use the adjusted plan."
+                    : 'Party comp read from your pull.'}
+                </span>
+              )}
+              <div className="slot-strip">
+                <div className="slot-group tanks">
+                  <span className="slot-group-caption">Tanks</span>
+                  <div className="slot-cards">{slots.slice(0, 2).map(slotCard)}</div>
+                </div>
+                <div className="slot-group healers">
+                  <span className="slot-group-caption">Healers</span>
+                  <div className="slot-cards">{slots.slice(2, 4).map(slotCard)}</div>
+                </div>
+                <div className="slot-group dps">
+                  <span className="slot-group-caption">DPS</span>
+                  <div className="slot-cards">{slots.slice(4).map(slotCard)}</div>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div className="ktt-field-block">
-              <span className="field-label">
-                <Sparkles size={12} /> Regen healer
-              </span>
-              <div className="job-grid mp-duo">
-                {REGEN_HEALERS.map((j) => duoTile(j, regenHealer === j, setRegenHealer))}
-              </div>
-            </div>
-
-            <div className="ktt-field-block">
-              <span className="field-label">
-                <Swords size={12} /> Rest of the party
-              </span>
-              <div className="mp-comp">
-                {jobSelect(tanks[0], TANK_JOBS, (j) => setTanks([j, tanks[1]]), 't1')}
-                {jobSelect(tanks[1], TANK_JOBS, (j) => setTanks([tanks[0], j]), 't2')}
-                {dps.map((d, i) =>
-                  jobSelect(d, DPS_JOBS, (j) => setDps(dps.map((x, k) => (k === i ? j : x))), `d${i}`),
+          <div className="setup-footer">
+            <span className="setup-footer-hint">
+              {swapLive
+                ? 'Click a slot to change the job · drag a card onto another to swap who casts'
+                : 'Click a slot to change the job'}
+            </span>
+            {(dirty || loading) && (
+              <span className="setup-footer-run">
+                {dirty && lastRunKey !== null && !loading && (
+                  <span className="setup-dirty">Party changed. Re-plan to apply.</span>
                 )}
+                <button className="btn primary" disabled={!canRun} onClick={() => void run()}>
+                  <Play size={13} />
+                  {loading ? 'Planning…' : lastRunKey ? 'Re-plan' : 'Build plan'}
+                </button>
+              </span>
+            )}
+          </div>
+        </div>
+
+        {canAnalyze && (
+          <div className="ktt-run-row" style={{ marginTop: 14 }}>
+            <button
+              className="btn primary ktt-run"
+              disabled={loading || dirty}
+              title={dirty ? 'Re-plan first so the plan matches these selections' : undefined}
+              onClick={() => onAnalyze!(
+                { shieldHealer, regenHealer, tanks, dps }, compAdjusted, usePf)}
+            >
+              <Sparkles size={13} />
+              Analyze my pull
+            </button>
+            <span className="ktt-hint">
+              Runs the standard analysis with these planned heals locked
+              into your damage ceiling — the honest maximum for a healer.
+            </span>
+          </div>
+        )}
+      </>)}
+
+      {loading && progress && !pullSeeding && (
+        <div className="ktt-progress">
+          <div className="ktt-progress-track">
+            <div className="ktt-progress-bar" style={{ width: `${progress.pct}%` }} />
+          </div>
+          <span className="ktt-progress-lbl mut">{progress.stage}</span>
+        </div>
+      )}
+
+      {error && (
+        <div className="ktt-error" role="alert">
+          {error}
+        </div>
+      )}
+
+      {result && s && (
+        <div className="ktt-result">
+          <div className="mp-summary">
+            <div className="mp-summary-main">
+              <ShieldCheck size={16} />
+              <div>
+                <div className="mp-summary-title">
+                  {result.encounterName} · {s.mechanicCount} forced mechanics
+                </div>
+                <div className="mut mp-summary-sub">
+                  {s.raidwideCount} raidwides · {s.tankbusterCount} busters ·{' '}
+                  {s.bleedCount + s.multiHitCount} bleeds/trains — from{' '}
+                  {result.refCount} top kills (median {fmtClock(result.modelKillSec)})
+                  {result.avoidableCount > 0 && `, ${result.avoidableCount} avoidable instances excluded`}
+                </div>
               </div>
-              <span className="ktt-hint">2 tanks + 4 DPS — their Reprisal, Feint, Addle and 90s mits are scheduled into the plan</span>
-              {usePf && (
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, alignItems: 'center', marginTop: 8 }}>
-                  <span className="ktt-hint" style={{ margin: 0 }}>Swap who casts:</span>
-                  <button type="button" className="btn" style={swapBtnStyle}
-                    onClick={() => setTanks([tanks[1], tanks[0]])}>
-                    {tanks[0]} ⇄ {tanks[1]}
-                  </button>
-                  {[0, 1, 2].map((i) => (
-                    <button key={i} type="button" className="btn" style={swapBtnStyle}
-                      onClick={() => swapDps(i)}>
-                      {dps[i]} ⇄ {dps[i + 1]}
-                    </button>
+            </div>
+            <div className="mp-pills">
+              {result.pfPlanApplied && (
+                <span
+                  className="mp-pill covered"
+                  title="Locked to the premade party-finder plan for this ultimate — healer mits are the plan's; the sim scheduled the timing"
+                >
+                  <ClipboardList size={11} /> PF plan
+                </span>
+              )}
+              <span className="mp-pill covered">{s.coveredCount} covered</span>
+              {s.tightCount > 0 && <span className="mp-pill tight">{s.tightCount} tight</span>}
+              {s.uncoveredCount > 0 && <span className="mp-pill uncovered">{s.uncoveredCount} uncovered</span>}
+              <span
+                className="mp-pill mut"
+                title={`${s.gcdHealCount} healing GCDs (~${fmtDuration(s.gcdHealTimeSec)} of cast time, ~${Math.round(s.gcdHealPotencyLost)} potency) — everything else is oGCD, so the duo's damage rotation is untouched`}
+              >
+                <Users size={11} /> {s.gcdHealCount} GCD heals
+              </span>
+            </div>
+          </div>
+          {notices.length > 0 && (
+            <div className="mp-notices">
+              <button
+                className="mp-notices-head"
+                aria-expanded={noticesOpen}
+                onClick={() => setNoticesOpen((o) => !o)}
+              >
+                <TriangleAlert size={14} />
+                <span className="mp-notices-sum">{noticeSummary}</span>
+                <span style={{ flex: 1 }} />
+                <span className="mp-notices-toggle">
+                  {noticesOpen ? 'Hide details' : 'Show details'}
+                </span>
+                <ChevronDown
+                  size={12}
+                  className={'mp-notices-chev' + (noticesOpen ? ' open' : '')}
+                />
+              </button>
+              {noticesOpen && (
+                <div className="mp-notices-body">
+                  {notices.map((w, i) => (
+                    <div key={i}>{w}</div>
                   ))}
                 </div>
               )}
             </div>
-
-            {(dirty || loading) && (
-              <div className="ktt-run-row">
-                <button className="btn primary ktt-run" disabled={!canRun} onClick={() => void run()}>
-                  <Play size={13} />
-                  {loading ? 'Planning…' : lastRunKey ? 'Re-plan' : 'Build plan'}
-                </button>
-              </div>
-            )}
-
-            {canAnalyze && (
-              <div className="ktt-run-row">
-                <button
-                  className="btn primary ktt-run"
-                  disabled={loading || dirty}
-                  title={dirty ? 'Re-plan first so the plan matches these selections' : undefined}
-                  onClick={() => onAnalyze!(
-                    { shieldHealer, regenHealer, tanks, dps }, compAdjusted, usePf)}
-                >
-                  <Sparkles size={13} />
-                  Analyze my pull
-                </button>
-                <span className="ktt-hint">
-                  Runs the standard analysis with these planned heals locked
-                  into your damage ceiling — the honest maximum for a healer.
-                </span>
-              </div>
-            )}
+          )}
+          <div className="mp-section">
+            <div className="mp-section-head">
+              <ListChecks size={14} />
+              <h3>Mitigation Plan</h3>
+              <span className="sub mut">
+                who covers what, top to bottom — click a row for details
+              </span>
+            </div>
+            <MitPlanBoard result={result} />
           </div>
-          </>)}
-
-          {loading && progress && !pullSeeding && (
-            <div className="ktt-progress">
-              <div className="ktt-progress-track">
-                <div className="ktt-progress-bar" style={{ width: `${progress.pct}%` }} />
-              </div>
-              <span className="ktt-progress-lbl mut">{progress.stage}</span>
+          <div className="mp-section mp-section-timeline">
+            <div className="mp-section-head">
+              <Clock size={14} />
+              <h3>Mitigation Timeline</h3>
+              <span className="sub mut">
+                the same plan on the fight’s clock
+              </span>
             </div>
-          )}
-
-          {error && (
-            <div className="ktt-error" role="alert">
-              {error}
-            </div>
-          )}
-
-          {result && s && (
-            <div className="ktt-result">
-              <div className="mp-summary">
-                <div className="mp-summary-main">
-                  <ShieldCheck size={16} />
-                  <div>
-                    <div className="mp-summary-title">
-                      {result.encounterName} · {s.mechanicCount} forced mechanics
-                    </div>
-                    <div className="mut mp-summary-sub">
-                      {s.raidwideCount} raidwides · {s.tankbusterCount} busters ·{' '}
-                      {s.bleedCount + s.multiHitCount} bleeds/trains — from{' '}
-                      {result.refCount} top kills (median {fmtClock(result.modelKillSec)})
-                      {result.avoidableCount > 0 && `, ${result.avoidableCount} avoidable instances excluded`}
-                    </div>
-                  </div>
-                </div>
-                <div className="mp-pills">
-                  {result.pfPlanApplied && (
-                    <span
-                      className="mp-pill covered"
-                      title="Locked to the premade party-finder plan for this ultimate — healer mits are the plan's; the sim scheduled the timing"
-                    >
-                      <ClipboardList size={11} /> PF plan
-                    </span>
-                  )}
-                  <span className="mp-pill covered">{s.coveredCount} covered</span>
-                  {s.tightCount > 0 && <span className="mp-pill tight">{s.tightCount} tight</span>}
-                  {s.uncoveredCount > 0 && <span className="mp-pill uncovered">{s.uncoveredCount} uncovered</span>}
-                  <span
-                    className="mp-pill mut"
-                    title={`${s.gcdHealCount} healing GCDs (~${fmtDuration(s.gcdHealTimeSec)} of cast time, ~${Math.round(s.gcdHealPotencyLost)} potency) — everything else is oGCD, so the duo's damage rotation is untouched`}
-                  >
-                    <Users size={11} /> {s.gcdHealCount} GCD heals
-                  </span>
-                </div>
-              </div>
-              {(compSource === 'pull' || compWarnings.length > 0) && (
-                <div className="mp-warnings mut">
-                  {compSource === 'pull' && !compAdjusted && 'Party comp read from your pull. '}
-                  {compSource === 'pull' && compAdjusted && 'Comp adjusted away from your pull’s — the analysis will use the adjusted plan. '}
-                  {compWarnings.join(' ')}
-                </div>
-              )}
-              {result.warnings.length > 0 && (
-                <div className="mp-warnings mut">{result.warnings.join(' ')}</div>
-              )}
-              <div className="mp-section">
-                <div className="mp-section-head">
-                  <ListChecks size={14} />
-                  <h3>Mitigation Plan</h3>
-                  <span className="sub mut">
-                    who covers what, top to bottom — click a row for details
-                  </span>
-                </div>
-                <MitPlanBoard result={result} />
-              </div>
-              <div className="mp-section mp-section-timeline">
-                <div className="mp-section-head">
-                  <Clock size={14} />
-                  <h3>Mitigation Timeline</h3>
-                  <span className="sub mut">
-                    the same plan on the fight’s clock
-                  </span>
-                </div>
-                <MitPlanTimeline result={result} />
-              </div>
-            </div>
-          )}
+            <MitPlanTimeline result={result} />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

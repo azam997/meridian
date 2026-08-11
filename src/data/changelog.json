@@ -1,5 +1,34 @@
 [
   {
+    "version": "1.0.0",
+    "date": "2026-08-10",
+    "summary": "Full UI revamp, full rework of improvement cards to give direct feedback, and misc bugfixes.",
+    "sections": [
+      {
+        "heading": "UI revamp",
+        "items": [
+          "**Top Pulls** and the **Heal/Mit Planner** have new setup panels with a job rail and party strip.",
+          "The **Kill Time Theorizer** was rebuilt around the full timeline, with reference lanes you can pin.",
+          "The timeline highlights differences from the ideal rotation more clearly."
+        ]
+      },
+      {
+        "heading": "Improvement cards",
+        "items": [
+          "Every card now tells you directly what to change, with the evidence behind it.",
+          "A new examined view walks through your pull and names the root cause of each loss.",
+          "Buff alignment gets its own list, separate from the main breakdown."
+        ]
+      },
+      {
+        "heading": "Bugfixes",
+        "items": [
+          "Reference rotations can no longer score above 100%."
+        ]
+      }
+    ]
+  },
+  {
     "version": "0.9.0",
     "date": "2026-08-09",
     "summary": "UI Refresh and refactor to help user experience when selecting pulls to analyze."

@@ -83,8 +83,8 @@ def detect_lifesurge_misalign(
                 findings.append(LifeSurgeFinding(
                     kind="lifesurge_misalign",
                     time_s=t,
-                    summary=(f"Life Surge at {_mmss(t)} crit {name} ({actual_pot}p) "
-                             f"— prefer Heavens' Thrust / Drakesbane (460p)"),
+                    summary=(f"Life Surge at {_mmss(t)} crit {name} ({actual_pot}p). "
+                             f"Prefer Heavens' Thrust / Drakesbane (460p)"),
                     lost_potency=cost,
                 ))
             break

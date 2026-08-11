@@ -130,8 +130,8 @@ class PositionalAspect:
         findings: list[str] = []
         if st.get("detected") and st.get("missed", 0) > 0:
             findings.append(
-                f"[positional] {st['missed']} of {st['total']} positionals missed "
-                f"— ~{st.get('lost_potency', 0):.0f}p")
+                f"[positional] {st['missed']} of {st['total']} positionals missed, "
+                f"~{st.get('lost_potency', 0):.0f}p")
         return AspectComparison(aspect_name=self.name, findings=findings)
 
 
@@ -169,11 +169,11 @@ def improvements_from_positionals(state: dict) -> list:
             children.append(Improvement(
                 kind="positional", ability_id=aid, ability_name=name,
                 time_s=t, lost_potency=p,
-                summary=f"{_mmss(t)} — {name} missed its {direction} positional "
-                        f"(−{p:.0f}p): reposition or use True North"))
+                summary=f"{_mmss(t)}: {name} missed its {direction} positional "
+                        f"(−{p:.0f}p). Reposition or use True North"))
     return [Improvement(
         kind="positional", ability_id=lead_id, ability_name=lead_name,
         time_s=miss_times[0], lost_potency=float(state["lost_potency"]),
-        summary=f"Missed {state.get('missed', 0)} positionals — hit rear on "
+        summary=f"Missed {state.get('missed', 0)} positionals. Hit rear on "
                 f"Demolish & flank on Pouncing Coeurl",
         children=children)]

@@ -12,6 +12,11 @@ Run from python/ (needs FFLogs creds in ~/.fflogs_efficiency_analyzer/config.jso
     python scripts/validate_job_ceiling.py "Paladin" --enc 104 --top 10
     python scripts/validate_job_ceiling.py "Paladin" --decompose Rudeus
 
+Efficiency here is the PRE-witness-guard value: production floors
+`idealized_strict` at the executed line (`ceiling_witness_gap`, see
+ScoringAspectBase.analyze), which would blind this gate — so the sweep subtracts
+the gap back out and marks guarded rows `[witness +Np]`.
+
 `--decompose <name-substring>` localizes WHY a pull is over 100%: it compares the
 player's cast stream to the idealized sim (GCD/oGCD counts, raw table potency,
 opener/ender timing, and any player casts that fall inside a downtime window —
@@ -90,13 +95,21 @@ def sweep(job, encounters, top):
                 mr = analyze_pull(job, client, code, fid, ranking_name=nm, label=nm)
                 st = mr.aspects["Scoring"].state
                 dl, idl = st["delivered_potency"], st["idealized_strict"]
+                # De-guard: production floors idealized_strict at the executed
+                # line (the witness guard, ScoringAspectBase.analyze), so the
+                # RAW search ceiling — this gate's actual signal — is idl minus
+                # the emitted shortfall. Guarded rows are marked [witness].
+                wgap = float(st.get("ceiling_witness_gap") or 0.0)
+                idl_raw = idl - wgap
                 dur = st["fight_duration_s"]
-                eff = 100 * dl / idl if idl > 0 else 0
+                eff = 100 * dl / idl_raw if idl_raw > 0 else 0
                 effs.append(eff)
                 all_eff.append(eff)
                 if eff > 100.5:
                     over += 1
                 flag = "  <-- OVER" if eff > 100.5 else ""
+                if wgap > 0:
+                    flag += f"  [witness +{wgap:.0f}p]"
                 print(f"{i:>2} {nm[:18]:<18}{dur:6.0f}{eff:8.2f}{dl/dur:6.0f}  "
                       f"{st['downtime_source'][:4]}{flag}")
             except Exception as e:  # noqa: BLE001
@@ -130,7 +143,10 @@ def decompose(job, encounters, substr):
             mr = analyze_pull(job, client, code, fid, ranking_name=nm, label=nm)
             st = mr.aspects["Scoring"].state
             dur, dt = st["fight_duration_s"], st["downtime_windows"]
-            eff = 100 * st["delivered_potency"] / st["idealized_strict"]
+            # De-guard (see sweep): decompose against the RAW search ceiling.
+            idl_raw = (st["idealized_strict"]
+                       - float(st.get("ceiling_witness_gap") or 0.0))
+            eff = 100 * st["delivered_potency"] / idl_raw
             sim = [(t, a) for t, a in sim_model.simulate(dur, dt).timeline if t >= 0]
             pc = [(t, a) for t, a in mr.norm_casts if t >= 0]
             pot = jd.potencies.get

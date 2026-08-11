@@ -2,7 +2,7 @@
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "bundle": {
     "windows": {
-      "signCommand": "signtool sign /fd sha256 /tr http://timestamp.digicert.com /td sha256 /sha1 REPLACE-WITH-CERT-THUMBPRINT %1"
+      "signCommand": "artifact-signing-cli -e https://REPLACE-REGION.codesigning.azure.net -a REPLACE-ACCOUNT-NAME -c REPLACE-PROFILE-NAME -d Meridian %1"
     }
   }
 }

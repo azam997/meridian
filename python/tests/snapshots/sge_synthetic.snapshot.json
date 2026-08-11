@@ -111,7 +111,7 @@
           "expectedId": 24313,
           "lostPotency": 310.0,
           "position": 5,
-          "summary": "Opener slot #5: cast Dosis III (380p), canonical uses Phlegma III (690p) \u2014 -310p"
+          "summary": "Opener slot #5: cast Dosis III (380p), canonical uses Phlegma III (690p), -310p"
         }
       ]
     },
@@ -227,7 +227,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.50s",
@@ -281,7 +281,7 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #5: cast Dosis III (380p), canonical uses Phlegma III (690p) \u2014 -310p"
+        "[opener] Opener slot #5: cast Dosis III (380p), canonical uses Phlegma III (690p), -310p"
       ],
       "summaryLines": [
         "Your opener cost: 310p"
@@ -2044,7 +2044,8 @@
       "children": [],
       "kind": "cadence",
       "lostPotency": 2280.0,
-      "summary": "Loose GCD pacing \u2014 the optimal line fit ~6 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
+      "prescription": "Press the next GCD the moment it's ready. The optimal line fits ~6 more GCDs with no single gap to point at.",
+      "summary": "Loose GCD pacing: the optimal line fit ~6 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
       "timeSec": 0.0
     },
     {
@@ -2053,16 +2054,40 @@
       "children": [],
       "kind": "tincture",
       "lostPotency": 928.15,
-      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+      "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
       "timeSec": 0.0
     },
     {
       "abilityId": 0,
       "abilityName": "",
       "children": [],
+      "countGaps": [
+        {
+          "name": "Psyche",
+          "sim": 6,
+          "you": 1
+        },
+        {
+          "name": "Dosis III",
+          "sim": 120,
+          "you": 116
+        },
+        {
+          "name": "Eukrasia",
+          "sim": 14,
+          "you": 13
+        },
+        {
+          "name": "Eukrasian Dosis III",
+          "sim": 14,
+          "you": 13
+        }
+      ],
       "kind": "residual",
       "lostPotency": 894.77,
-      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "prescription": "Biggest count gaps: Psyche and Dosis III. The sim fits more of them.",
+      "summary": "Spacing & sequencing",
       "timeSec": 0.0
     },
     {
@@ -2071,7 +2096,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 690.0,
-      "summary": "Missed Psyche \u2014 fit one around 1:04",
+      "prescription": "Weave it after Dosis III at 1:04. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Psyche, fit one around 1:04",
       "timeSec": 63.5
     },
     {
@@ -2080,7 +2106,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 690.0,
-      "summary": "Missed Psyche \u2014 fit one around 2:04",
+      "prescription": "Weave it after Dosis III at 2:04. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Psyche, fit one around 2:04",
       "timeSec": 123.5
     },
     {
@@ -2089,7 +2116,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 690.0,
-      "summary": "Missed Psyche \u2014 fit one around 3:04",
+      "prescription": "Weave it after Dosis III at 3:03. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Psyche, fit one around 3:04",
       "timeSec": 183.5
     },
     {
@@ -2098,7 +2126,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 690.0,
-      "summary": "Missed Psyche \u2014 fit one around 4:04",
+      "prescription": "Weave it after Dosis III at 4:02. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Psyche, fit one around 4:04",
       "timeSec": 243.5
     },
     {
@@ -2107,7 +2136,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 690.0,
-      "summary": "Missed Psyche \u2014 fit one around 5:04",
+      "prescription": "Weave it after Dosis III at 5:04. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Psyche, fit one around 5:04",
       "timeSec": 304.5
     },
     {
@@ -2116,7 +2146,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #5: cast Dosis III, canonical opens Phlegma III (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #5: cast Dosis III, canonical opens Phlegma III (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

@@ -73,7 +73,10 @@ export type Req =
   | { id: string; kind: 'export_feedback_bundle'; category: FeedbackCategory;
       description?: string; analysisContext?: Record<string, unknown> }
   | { id: string; kind: 'prefetch_refs'; spec: string; encounterId: number; refsBucket: RefsBucket }
-  | { id: string; kind: 'list_rankings'; spec: string; encounterId: number }
+  | { id: string; kind: 'list_rankings'; spec: string; encounterId: number;
+      /** Bust the rankings session + disk caches before fetching (the Top
+       *  Pulls "Refresh rankings" button). */
+      forceRefresh?: boolean }
   | {
       id: string;
       kind: 'run_analysis';
@@ -402,6 +405,12 @@ export type PrefetchResult = {
   /** Average kill time (s) across the warmed reference logs — surfaced by the
    *  Kill Time Theorizer as a benchmark for choosing a target. 0 when none. */
   avgKillSec: number;
+  /** Each warmed reference's kill time (s) — the theorizer's slider tick marks
+   *  (the refs cluster visibly around the achievable kill-time range). */
+  refKillTimesSec: number[];
+  /** The top reference's party comp (FFLogs job names) — lets the theorizer's
+   *  "Top references ran …" provenance render before the first run. */
+  refPartyJobs: string[];
 };
 
 // --- Analysis result -------------------------------------------------------
@@ -866,6 +875,11 @@ export type ScoringState = {
    *  it to render the buff-aware Idealized Timeline lane; the frontend doesn't
    *  read it directly. Empty when no providers were present. */
   masterBuffIntervals?: [number, number, number][];
+  /** OBSERVED party-buff windows — `(start, end, mult, providerLabel)` per
+   *  buff application actually seen in the log. The Timeline renders these as
+   *  background bands (drift only means something relative to when the
+   *  party's buffs were up). Empty when no providers were present. */
+  observedBuffWindows?: [number, number, number, string][];
   fightDurationSec: number;
 };
 
@@ -1058,6 +1072,20 @@ export type Improvement = {
    *  priced contributor the UI reveals in an expandable dropdown. Absent/empty
    *  for leaf cards. */
   children?: Improvement[];
+  /** Short imperative advice — what to change next pull, templated backend-side
+   *  from the numbers the sim already has. Absent when no rule exists for the
+   *  kind; the UI then renders nothing in the desc slot (never filler copy). */
+  prescription?: string;
+  /** Labelled evidence rows from the deep pass — KEY / mono value / prose
+   *  note ("BATTERY / 100 over ideal / a Queen was ready and waiting").
+   *  Rendered as a 3-column grid under the prescription. ≤3 rows. */
+  evidence?: { k: string; v: string; note: string }[];
+  /** Cast-vs-sim count diff behind the diffuse card, as bar data: your count
+   *  is the fill, the sim's a tick. Deficits first, surpluses trail. */
+  countGaps?: { name: string; you: number; sim: number }[];
+  /** Gauges the deep pass implicated (sequencing slips): drives the BAT/HEAT
+   *  icon tiles and the category-level recurrence note. */
+  resources?: { label: string; short: string }[];
 };
 
 // --- Top-level Analysis response -------------------------------------------
@@ -1070,6 +1098,18 @@ export type AnalysisResult = {
    *  Spans every loss category (sim-diff missed casts + clip/overcap/align/
    *  opener; drift stands in for jobs without a simulator). */
   improvements: Improvement[];
+  /** Buff-window timing cards — a SEPARATE currency from `improvements`:
+   *  burst tools delivered just outside the party's OBSERVED buff windows,
+   *  priced from the observed-lens budget (idealizedObserved −
+   *  deliveredObserved). The strict panel's budget is buff-agnostic by
+   *  construction, so these live under their own key and MUST NOT be summed
+   *  with the strict recoverable gap anywhere in the UI. Absent when the pull
+   *  had no such casts (or no buff data / no budget). */
+  buffAlignment?: { budget: number; cards: Improvement[] };
+  /** The deep pass's restructured panel (measured root causes; conserved
+   *  total). Absent when the job registers no advice pack or the cascade
+   *  found nothing worth moving — the panel then renders `improvements`. */
+  examined?: ExaminedImprovements;
   /** Where the sim would pot on the idealized lane — best placement by potency
    *  density. Drawn on the Sim lane (its own pot timing). [] when no tincture. */
   idealizedTinctureWindows?: TinctureWindow[];
@@ -1185,6 +1225,26 @@ export type TheorizeSample = {
   idealizedPotency: number;
 };
 
+/** The deep pass's restructured card list — the panel re-rendered from
+ *  measured root causes. Built INLINE by run_analysis: the player's casts are
+ *  replayed through the job's own sim model and counterfactuals re-simulated
+ *  per segment (jobs/_core/sim/counterfactual.py), so mass measured out of
+ *  the "Spacing & sequencing" residual moves into concrete `cascade_*` cards.
+ *  The top-level sum equals the original panel's sum EXACTLY (conservation is
+ *  asserted backend-side), and it is the same strict currency — never mix
+ *  with `buffAlignment`. */
+export type ExaminedImprovements = {
+  /** Full replacement card list, exact `Improvement` wire shape (new cards
+   *  may carry `details` evidence lines). Feed it through the same
+   *  denial-filter → reprice → categorize pipeline as the original list. */
+  improvements: Improvement[];
+  /** The budget the list sums to (the original panel's top-level sum). */
+  recoverable: number;
+  basis: 'strict' | 'multiTarget';
+  /** Human lines describing the restructure ("Measured 840p of …"). */
+  notes: string[];
+};
+
 /** Result of `theorize_kill_time` — the sim's ideal output + cast timeline for a
  *  hypothetical kill time, under the pull's (clipped) downtime and a chosen
  *  party comp's raid buffs. `unsupported` is true for jobs without a simulator
@@ -1195,6 +1255,13 @@ export type TheorizeResult = {
   idealizedPotency: number;
   /** The ideal rotation's cast lane for the target (a single timeline lane). */
   timeline: CastEvent[];
+  /** Canonical variant of the ideal (burst held for the standard 2-min
+   *  windows). Empty when no comp is selected (no buff windows to hold for) or
+   *  the sim has no canonical mode — the Burst-usage toggle hides then. */
+  timelineCanonical: CastEvent[];
+  /** The reference kills as full timeline lanes (same shape as an analysis'
+   *  `refs`, tracks included) — stacked below the ideal lane. */
+  refs: RunSummary[];
   /** Observed downtime clipped to the target — drawn as bands on the lane. */
   downtimeWindows: DowntimeTierAWindow[];
   /** Modeled raid-buff windows for the chosen comp — drawn as bands. */
@@ -1203,7 +1270,8 @@ export type TheorizeResult = {
   tinctureWindows: TinctureWindow[];
   /** Ideal potency across the ~7s band (1s grid, incl. the target). */
   samples: TheorizeSample[];
-  /** Metadata for any ability id in `timeline` (self-contained). */
+  /** Metadata for any ability id in `timeline`, `timelineCanonical`, or the
+   *  refs' tracks (self-contained). */
   abilityMeta: Record<number, AbilityMetaJson>;
   /** Where the downtime came from: "references" (derived from this encounter's
    *  top logs), "none" (no refs available — pure uptime), or "explicit". */
@@ -1463,8 +1531,10 @@ export interface Sidecar {
                   meta?: ProgressMeta) => void
   ): Promise<PrefetchResult>;
   /** Top-ranked players for a (job, encounter) — the Research tab's list.
-   *  Cheap after a refs warm: both read the same cached rankings blob. */
-  listRankings(spec: string, encounterId: number): Promise<RankingEntry[]>;
+   *  Cheap after a refs warm: both read the same cached rankings blob.
+   *  `forceRefresh` refetches past the caches (the Refresh rankings button). */
+  listRankings(spec: string, encounterId: number,
+               forceRefresh?: boolean): Promise<RankingEntry[]>;
   runAnalysis(
     reportCode: string,
     fightId: number,

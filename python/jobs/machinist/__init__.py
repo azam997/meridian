@@ -180,7 +180,7 @@ class QueenAspect:
             if is_last and near_kill:
                 continue
             findings.append(
-                f"Queen at {int(q.time_s)}s ({q.battery} bat) was cut off — "
+                f"Queen at {int(q.time_s)}s ({q.battery} bat) was cut off: "
                 f"no Crowned Collider fired (duration {q.duration_s:.1f}s)."
             )
 
@@ -932,11 +932,13 @@ def _register_self():
     if _registered:
         return
     from jobs._core.job import Job as _Job
+    from jobs.machinist.advice import PACK as _advice_pack
     _register(_Job(
         name="Machinist",
         data=JOB_DATA,
         aspects=_build_aspects(),
         simulator=_build_simulator(),
         bundle_extra_streams=_bundle_extra_streams,
+        advice_probes=_advice_pack,
     ))
     _registered = True

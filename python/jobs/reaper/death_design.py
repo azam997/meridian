@@ -182,8 +182,8 @@ class DeathsDesignAspect:
         findings: list[str] = []
         if cov < 99.0:
             findings.append(
-                f"[deaths-design] Death's Design uptime {cov:.1f}% — "
-                f"refresh Shadow of Death before it falls off")
+                f"[deaths-design] Death's Design uptime {cov:.1f}%. "
+                f"Refresh Shadow of Death before it falls off")
         return AspectComparison(aspect_name=self.name, findings=findings)
 
 
@@ -214,11 +214,11 @@ def improvements_from_deaths_design(state: dict) -> list[Improvement]:
                 ability_name="Death's Design", time_s=float(s),
                 lost_potency=float(wl),
                 summary=f"{_mmss(s)}–{_mmss(e)}: Death's Design down "
-                        f"{e - s:.0f}s — recast Shadow of Death before it "
+                        f"{e - s:.0f}s. Recast Shadow of Death before it "
                         f"expires"))
     return [Improvement(
         kind="deaths_design", ability_id=rd.SHADOW_OF_DEATH,
         ability_name="Death's Design", time_s=t0, lost_potency=lost,
-        summary=f"Death's Design dropped to {cov:.1f}% uptime — "
-                f"the 10% amp was missing from {_mmss(t0)}",
+        summary=f"Death's Design dropped to {cov:.1f}% uptime. "
+                f"The 10% amp was missing from {_mmss(t0)}",
         children=children)]

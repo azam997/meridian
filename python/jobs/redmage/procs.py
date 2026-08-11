@@ -134,7 +134,7 @@ class ProcsAspect:
         findings: list[str] = []
         if wasted >= 2:
             findings.append(
-                f"[proc] Proc utilization {util:.0f}% — {wasted} Verfire/Verstone "
+                f"[proc] Proc utilization {util:.0f}%: {wasted} Verfire/Verstone "
                 f"proc{'s' if wasted != 1 else ''} wasted (overwritten or expired)")
         return AspectComparison(aspect_name=self.name, findings=findings)
 
@@ -165,7 +165,7 @@ def improvements_from_procs(state: dict) -> list[Improvement]:
                 kind="proc", ability_id=int(m.get("consumer_id", 0) or 0),
                 ability_name=consumer, time_s=t,
                 lost_potency=float(m.get("lost_potency", 0.0) or 0.0),
-                summary=f"{_mmss(t)} — overwrote {status}: spend {consumer} "
+                summary=f"{_mmss(t)} overwrote {status}: spend {consumer} "
                         f"before granting a new proc of that color"))
     # With children the card is expandable; with exactly one overwrite it jumps
     # straight there — carrying that overwrite's ACTUAL consumer so the
@@ -183,6 +183,6 @@ def improvements_from_procs(state: dict) -> list[Improvement]:
         kind="proc", ability_id=lead_id, ability_name=lead_name,
         time_s=t0, lost_potency=lost,
         summary=f"{wasted} proc{'s' if wasted != 1 else ''} wasted "
-                f"(utilization {util:.0f}%) — spend Verfire/Verstone before "
+                f"(utilization {util:.0f}%). Spend Verfire/Verstone before "
                 f"re-procing the same color{expired_note}",
         children=children)]

@@ -108,7 +108,7 @@
           "casts": 2,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 1.0,
-          "lostPotency": 1400.0,
+          "lostPotency": 1242.3,
           "sharedConsumers": 0
         }
       ]
@@ -120,7 +120,7 @@
           "expectedId": 25859,
           "lostPotency": 265.0,
           "position": 1,
-          "summary": "Opener slot #1: cast Dia (85p), canonical uses Glare III (350p) \u2014 -265p"
+          "summary": "Opener slot #1: cast Dia (85p), canonical uses Glare III (350p), -265p"
         },
         {
           "actualId": 25859,
@@ -155,28 +155,28 @@
           "expectedId": 37009,
           "lostPotency": 290.0,
           "position": 7,
-          "summary": "Opener slot #7: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p"
+          "summary": "Opener slot #7: cast Glare III (350p), canonical uses Glare IV (640p), -290p"
         },
         {
           "actualId": 25859,
           "expectedId": 37009,
           "lostPotency": 290.0,
           "position": 8,
-          "summary": "Opener slot #8: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p"
+          "summary": "Opener slot #8: cast Glare III (350p), canonical uses Glare IV (640p), -290p"
         },
         {
           "actualId": 25859,
           "expectedId": 37009,
           "lostPotency": 290.0,
           "position": 11,
-          "summary": "Opener slot #11: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p"
+          "summary": "Opener slot #11: cast Glare III (350p), canonical uses Glare IV (640p), -290p"
         },
         {
           "actualId": 25859,
           "expectedId": 16535,
           "lostPotency": 1050.0,
           "position": 12,
-          "summary": "Opener slot #12: cast Glare III (350p), canonical uses Afflatus Misery (1400p) \u2014 -1050p"
+          "summary": "Opener slot #12: cast Glare III (350p), canonical uses Afflatus Misery (1400p), -1050p"
         }
       ]
     },
@@ -306,7 +306,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.50s",
@@ -361,11 +361,11 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #1: cast Dia (85p), canonical uses Glare III (350p) \u2014 -265p",
-        "[opener] Opener slot #7: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p",
-        "[opener] Opener slot #8: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p",
-        "[opener] Opener slot #11: cast Glare III (350p), canonical uses Glare IV (640p) \u2014 -290p",
-        "[opener] Opener slot #12: cast Glare III (350p), canonical uses Afflatus Misery (1400p) \u2014 -1050p"
+        "[opener] Opener slot #1: cast Dia (85p), canonical uses Glare III (350p), -265p",
+        "[opener] Opener slot #7: cast Glare III (350p), canonical uses Glare IV (640p), -290p",
+        "[opener] Opener slot #8: cast Glare III (350p), canonical uses Glare IV (640p), -290p",
+        "[opener] Opener slot #11: cast Glare III (350p), canonical uses Glare IV (640p), -290p",
+        "[opener] Opener slot #12: cast Glare III (350p), canonical uses Afflatus Misery (1400p), -1050p"
       ],
       "summaryLines": [
         "Your opener cost: 2185p"
@@ -2130,7 +2130,8 @@
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 1242.31,
-      "summary": "Missed Presence of Mind \u2014 fit one around 4:09",
+      "prescription": "Weave it after Glare III at 4:10. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Presence of Mind, fit one around 4:09",
       "timeSec": 249.0
     },
     {
@@ -2139,16 +2140,18 @@
       "children": [],
       "kind": "tincture",
       "lostPotency": 1042.01,
-      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+      "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
       "timeSec": 0.0
     },
     {
-      "abilityId": 0,
-      "abilityName": "",
+      "abilityId": 37009,
+      "abilityName": "Glare IV",
       "children": [],
-      "kind": "residual",
-      "lostPotency": 987.35,
-      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "kind": "residual_tail",
+      "lostPotency": 870.0,
+      "prescription": "Spend gauge and procs the moment they're ready. Banked resource is a cast you never get back.",
+      "summary": "Resource & filler mix: the sim lands 3 more Glare IV (~870p over the filler that replaced them)",
       "timeSec": 0.0
     },
     {
@@ -2157,7 +2160,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 400.0,
-      "summary": "Missed Assize \u2014 fit one around 0:42",
+      "prescription": "Weave it after Glare III at 0:42. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Assize, fit one around 0:42",
       "timeSec": 42.5
     },
     {
@@ -2166,7 +2170,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 400.0,
-      "summary": "Missed Assize \u2014 fit one around 1:22",
+      "prescription": "Weave it after Afflatus Solace at 1:22. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Assize, fit one around 1:22",
       "timeSec": 82.5
     },
     {
@@ -2175,7 +2180,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 400.0,
-      "summary": "Missed Assize \u2014 fit one around 2:05",
+      "prescription": "Weave it after Glare III at 2:04. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Assize, fit one around 2:05",
       "timeSec": 125.0
     },
     {
@@ -2184,7 +2190,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 400.0,
-      "summary": "Missed Assize \u2014 fit one around 2:46",
+      "prescription": "Weave it after Glare III at 2:47. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Assize, fit one around 2:46",
       "timeSec": 166.5
     },
     {
@@ -2193,7 +2200,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 400.0,
-      "summary": "Missed Assize \u2014 fit one around 3:26",
+      "prescription": "Weave it after Glare III at 3:27. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Assize, fit one around 3:26",
       "timeSec": 206.5
     },
     {
@@ -2202,7 +2210,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 400.0,
-      "summary": "Missed Assize \u2014 fit one around 4:06",
+      "prescription": "Weave it after Glare III at 4:07. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Assize, fit one around 4:06",
       "timeSec": 246.5
     },
     {
@@ -2211,7 +2220,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 400.0,
-      "summary": "Missed Assize \u2014 fit one around 4:48",
+      "prescription": "Weave it after Glare III at 4:47. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Assize, fit one around 4:48",
       "timeSec": 288.0
     },
     {
@@ -2220,8 +2230,41 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 400.0,
-      "summary": "Missed Assize \u2014 fit one around 5:28",
+      "prescription": "Weave it after Glare III at 5:27. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Assize, fit one around 5:28",
       "timeSec": 328.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [],
+      "countGaps": [
+        {
+          "name": "Assize",
+          "sim": 9,
+          "you": 1
+        },
+        {
+          "name": "Glare IV",
+          "sim": 9,
+          "you": 6
+        },
+        {
+          "name": "Presence of Mind",
+          "sim": 3,
+          "you": 2
+        },
+        {
+          "name": "Glare III",
+          "sim": 106,
+          "you": 109
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 117.4,
+      "prescription": "Biggest count gaps: Assize and Glare IV. The sim fits more of them. Your extra Glare III casts came out of those slots; each extra is worth less than what it displaced.",
+      "summary": "Spacing & sequencing",
+      "timeSec": 0.0
     },
     {
       "abilityId": 25859,
@@ -2229,7 +2272,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #1: cast Dia, canonical opens Glare III (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #1: cast Dia, canonical opens Glare III (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2238,7 +2281,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #7: cast Glare III, canonical opens Glare IV (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #7: cast Glare III, canonical opens Glare IV (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2247,7 +2290,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #8: cast Glare III, canonical opens Glare IV (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #8: cast Glare III, canonical opens Glare IV (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2256,7 +2299,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #11: cast Glare III, canonical opens Glare IV (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #11: cast Glare III, canonical opens Glare IV (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2265,7 +2308,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #12: cast Glare III, canonical opens Afflatus Misery (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #12: cast Glare III, canonical opens Afflatus Misery (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

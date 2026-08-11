@@ -27,7 +27,9 @@ import { RefsLoadingModal } from './components/RefsLoadingModal';
 import { Splash } from './components/Splash';
 import { WhatsNewModal } from './components/WhatsNewModal';
 import { APP_VERSION } from './data/changelog';
-import type { AuthStatus, MitCompSelection, ProgressTask } from './sidecar/contract';
+import type {
+  AuthStatus, MitCompSelection, ProgressTask,
+} from './sidecar/contract';
 import { onAuthExpired } from './sidecar/authExpired';
 import { PullsView } from './views/PullsView';
 import { ResearchView } from './views/ResearchView';
@@ -41,6 +43,7 @@ import { SettingsView } from './views/SettingsView';
 import { FeedbackView, type FeedbackPrefill } from './views/FeedbackView';
 import { VersionHistoryView } from './views/VersionHistoryView';
 import { logEvent } from './log';
+import { GENERAL_FEEDBACK_ENTRY } from './featureFlags';
 
 import { sidecar } from './sidecar';
 import { clearUserCharactersCache, listUserCharactersCached } from './sidecar/sessionCache';
@@ -74,7 +77,7 @@ type NavEntry = {
 const NAV: NavEntry[] = [
   { id: 'dashboard', label: 'Analysis',    Icon: Gauge },
   { id: 'timeline',  label: 'Timeline',    Icon: BarChart3 },
-  { id: 'counts',    label: 'Cast counts', Icon: Layers },
+  { id: 'counts',    label: 'Cast Counts', Icon: Layers },
 ];
 
 // Captured once at startup: the last session's job, used ONLY to prioritize
@@ -607,21 +610,21 @@ const App = () => {
               onClick={() => setView('mitigation')}
             >
               <HeartPulse className="icon" size={16} />
-              <span>Mit planner</span>
+              <span>Heal/Mit Planner</span>
             </div>
             <div
               className={'nav-item ' + (view === 'research' ? 'active' : '')}
               onClick={() => setView('research')}
             >
               <Trophy className="icon" size={16} />
-              <span>Research</span>
+              <span>Top Pulls</span>
             </div>
             <div
               className={'nav-item ' + (view === 'theorizer' ? 'active' : '')}
               onClick={() => setView('theorizer')}
             >
               <FlaskConical className="icon" size={16} />
-              <span>Kill time theorizer</span>
+              <span>Kill Time Theorizer</span>
             </div>
           </div>
 
@@ -634,19 +637,21 @@ const App = () => {
               <Cog className="icon" size={16} />
               <span>Settings</span>
             </div>
-            <div
-              className={'nav-item ' + (view === 'feedback' ? 'active' : '')}
-              onClick={() => openFeedback(null)}
-            >
-              <MessageSquare className="icon" size={16} />
-              <span>Submit feedback</span>
-            </div>
+            {GENERAL_FEEDBACK_ENTRY && (
+              <div
+                className={'nav-item ' + (view === 'feedback' ? 'active' : '')}
+                onClick={() => openFeedback(null)}
+              >
+                <MessageSquare className="icon" size={16} />
+                <span>Submit Feedback</span>
+              </div>
+            )}
             <div
               className={'nav-item ' + (view === 'changelog' ? 'active' : '')}
               onClick={() => setView('changelog')}
             >
               <History className="icon" size={16} />
-              <span>Version history</span>
+              <span>Version History</span>
             </div>
           </div>
         </div>
@@ -680,9 +685,9 @@ const App = () => {
             externalError={analysisError}
             clearExternalError={() => setAnalysisError(null)}
             onCharacterPicked={onCharacterPicked}
-            onReportError={(msg) =>
-              openFeedback({ category: 'bug', summary: msg })
-            }
+            onReportError={GENERAL_FEEDBACK_ENTRY
+              ? (msg) => openFeedback({ category: 'bug', summary: msg })
+              : undefined}
           />
         )}
         {view === 'dashboard' && stage === 'loading' && (

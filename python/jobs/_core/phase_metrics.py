@@ -278,7 +278,7 @@ def detect_deviations(
                             f"clears {'bank' if not hi else 'hold'} ~{med:.0f}. "
                             + ("Consider spending more into this phase's damage."
                                if hi else
-                               "They carry more resource into the next burst — "
+                               "They carry more resource into the next burst, so "
                                "you may be spending too early.")
                         ),
                     })
@@ -316,7 +316,7 @@ def detect_deviations(
                 "ref_value": round(a.pot_pct * 100),
                 "text": (
                     f"{round(a.pot_pct * 100)}% of the top clears pop a tincture in "
-                    f"{pname} and you didn't — you had the whole phase to fit it."
+                    f"{pname} and you didn't. You had the whole phase to fit it."
                 ),
             })
 
@@ -331,7 +331,7 @@ def detect_deviations(
                     "ref_value": round(a.gcd_rate["median"], 3),
                     "text": (
                         f"Your GCD pace in {pname} ({m.gcd_casts} GCDs) trails the "
-                        f"top clears — likely dropped uptime or extra movement."
+                        f"top clears, likely dropped uptime or extra movement."
                     ),
                 })
 

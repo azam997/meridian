@@ -189,8 +189,8 @@ class SurgingTempestAspect:
         findings: list[str] = []
         if cov < 99.0:
             findings.append(
-                f"[surging-tempest] Surging Tempest uptime {cov:.1f}% — "
-                f"refresh Storm's Eye before it falls off")
+                f"[surging-tempest] Surging Tempest uptime {cov:.1f}%. "
+                f"Refresh Storm's Eye before it falls off")
         return AspectComparison(aspect_name=self.name, findings=findings)
 
 
@@ -221,11 +221,11 @@ def improvements_from_surging_tempest(state: dict) -> list[Improvement]:
                 ability_name="Surging Tempest", time_s=float(s),
                 lost_potency=float(wl),
                 summary=f"{_mmss(s)}–{_mmss(e)}: Surging Tempest down "
-                        f"{e - s:.0f}s — refresh with Storm's Eye before it "
+                        f"{e - s:.0f}s. Refresh with Storm's Eye before it "
                         f"expires"))
     return [Improvement(
         kind="surging_tempest", ability_id=wd.STORMS_EYE,
         ability_name="Surging Tempest", time_s=t0, lost_potency=lost,
-        summary=f"Surging Tempest dropped to {cov:.1f}% uptime — "
-                f"the 10% amp was missing from {_mmss(t0)}",
+        summary=f"Surging Tempest dropped to {cov:.1f}% uptime. "
+                f"The 10% amp was missing from {_mmss(t0)}",
         children=children)]

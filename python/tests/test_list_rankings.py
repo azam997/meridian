@@ -115,6 +115,38 @@ def _check_fetch_failure_returns_empty() -> None:
     assert rows == [], rows
 
 
+def _check_force_refresh() -> None:
+    class _Invalidating(_FakeRankingsClient):
+        def __init__(self):
+            super().__init__()
+            self.invalidations: list[dict] = []
+
+        def invalidate_rankings(self, **kwargs):
+            self.invalidations.append(kwargs)
+
+    # forceRefresh busts the cache key that the fetch below will use — the
+    # invalidation args mirror the get_rankings call exactly.
+    client = _Invalidating()
+    rows = _with_client(client, lambda: m.list_rankings(
+        {"spec": "Samurai", "encounterId": 103, "forceRefresh": True}))
+    assert rows and client.calls, rows
+    assert client.invalidations == [{
+        "encounter_id": 103, "class_name": "Samurai", "spec_name": "Samurai",
+        "difficulty": m.encounter_difficulty(103),
+    }], client.invalidations
+
+    # A client without the invalidation hook (bare test stubs) is fine.
+    rows = _with_client(_FakeRankingsClient(), lambda: m.list_rankings(
+        {"spec": "Samurai", "encounterId": 103, "forceRefresh": True}))
+    assert rows, rows
+
+    # No flag → no invalidation.
+    client2 = _Invalidating()
+    _with_client(client2, lambda: m.list_rankings(
+        {"spec": "Samurai", "encounterId": 103}))
+    assert client2.invalidations == [], client2.invalidations
+
+
 # --- run_analysis playerName threading ---------------------------------------
 
 def _check_player_name_splits_cache() -> None:
@@ -169,6 +201,10 @@ def test_list_rankings_fetch_failure_returns_empty():
     _check_fetch_failure_returns_empty()
 
 
+def test_list_rankings_force_refresh():
+    _check_force_refresh()
+
+
 def test_run_analysis_player_name_splits_cache():
     _check_player_name_splits_cache()
 
@@ -177,6 +213,7 @@ def main() -> None:
     _check_extraction()
     _check_limit()
     _check_fetch_failure_returns_empty()
+    _check_force_refresh()
     _check_player_name_splits_cache()
     print("test_list_rankings: OK")
 

@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 type Props = {
   /** 0–100, drives the ring fill. */
   pct: number;
@@ -7,6 +9,9 @@ type Props = {
   eyebrow?: string;
   label: string;
   subtext?: string;
+  /** Extra meta-column content below the label/subtext (the hero's gap line
+   *  and chip row live here). */
+  children?: ReactNode;
   /** Ring + center-value color. Falls back to a tri-color keyed off `pct`. */
   color?: string;
   /** Ring diameter in px (geometry + center font scale with it). */
@@ -15,7 +20,7 @@ type Props = {
 
 /** A labelled progress ring. Generic — used for the headline efficiency hero
  *  (coloured by parse tier) and the percentile fallback for sim-less jobs. */
-export const StatRing = ({ pct, value, eyebrow, label, subtext, color, size = 120 }: Props) => {
+export const StatRing = ({ pct, value, eyebrow, label, subtext, children, color, size = 120 }: Props) => {
   const sw = size * 0.066;             // stroke width (~8 at 120)
   const r = (size - sw) / 2 - 1;       // radius that fits the stroke inside the box
   const cx = size / 2;
@@ -73,6 +78,7 @@ export const StatRing = ({ pct, value, eyebrow, label, subtext, color, size = 12
             {subtext}
           </div>
         )}
+        {children}
       </div>
     </div>
   );

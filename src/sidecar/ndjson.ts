@@ -374,8 +374,10 @@ export const ndjsonSidecar: Sidecar = {
   prefetchRefs: (spec, encounterId, refsBucket: RefsBucket, onProgress) =>
     call<PrefetchResult>('prefetch_refs', { spec, encounterId, refsBucket }, onProgress),
 
-  listRankings: (spec, encounterId) =>
-    call<RankingEntry[]>('list_rankings', { spec, encounterId }),
+  listRankings: (spec, encounterId, forceRefresh) =>
+    // An undefined forceRefresh is dropped by JSON.stringify — the wire shape
+    // is unchanged for normal fetches.
+    call<RankingEntry[]>('list_rankings', { spec, encounterId, forceRefresh }),
 
   runAnalysis: (reportCode, fightId, spec, encounterId, refsBucket: RefsBucket, playerName, onProgress, comp, usePfMitPlan) =>
     call<AnalysisResult>(

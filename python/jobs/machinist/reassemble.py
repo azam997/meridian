@@ -86,8 +86,8 @@ def detect_reassemble_misalign(
                 findings.append(ReassembleFinding(
                     kind="reassemble_misalign",
                     time_s=t,
-                    summary=(f"Reassemble at {_mmss(t)} buffed Full Metal Field "
-                             f"— already crit-DH; ~{_REASSEMBLE_VALUE:.0f}p wasted"),
+                    summary=(f"Reassemble at {_mmss(t)} buffed Full Metal Field, "
+                             f"already crit-DH; ~{_REASSEMBLE_VALUE:.0f}p wasted"),
                     lost_potency=_REASSEMBLE_VALUE,
                 ))
             else:
@@ -98,7 +98,7 @@ def detect_reassemble_misalign(
                     kind="reassemble_misalign",
                     time_s=t,
                     summary=(f"Reassemble at {_mmss(t)} buffed {name} "
-                             f"({actual_pot}p) — prefer Drill/AA/CS/Excavator (660p)"),
+                             f"({actual_pot}p). Prefer Drill/AA/CS/Excavator (660p)"),
                     lost_potency=cost,
                 ))
             break

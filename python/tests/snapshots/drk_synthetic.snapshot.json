@@ -156,30 +156,10 @@
       "fightDurationSec": 360.0,
       "findings": [
         {
-          "abilityId": 7390,
-          "abilityName": "Delirium",
-          "cappedSeconds": 2.5,
-          "casts": 6,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 16472,
-          "abilityName": "Living Shadow",
-          "cappedSeconds": 0.0,
-          "casts": 3,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 3639,
-          "abilityName": "Salted Earth",
-          "cappedSeconds": 5.0,
-          "casts": 4,
+          "abilityId": 25757,
+          "abilityName": "Shadowbringer",
+          "cappedSeconds": 7.5,
+          "casts": 7,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -196,10 +176,30 @@
           "sharedConsumers": 0
         },
         {
-          "abilityId": 25757,
-          "abilityName": "Shadowbringer",
-          "cappedSeconds": 7.5,
-          "casts": 7,
+          "abilityId": 3639,
+          "abilityName": "Salted Earth",
+          "cappedSeconds": 5.0,
+          "casts": 4,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7390,
+          "abilityName": "Delirium",
+          "cappedSeconds": 2.5,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16472,
+          "abilityName": "Living Shadow",
+          "cappedSeconds": 0.0,
+          "casts": 3,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -242,14 +242,14 @@
           "expectedId": 36930,
           "lostPotency": 440.0,
           "position": 6,
-          "summary": "Opener slot #6: cast Syphon Strike (380p), canonical uses Torcleaver (820p) \u2014 -440p"
+          "summary": "Opener slot #6: cast Syphon Strike (380p), canonical uses Torcleaver (820p), -440p"
         },
         {
           "actualId": 3632,
           "expectedId": 36932,
           "lostPotency": 520.0,
           "position": 7,
-          "summary": "Opener slot #7: cast Souleater (480p), canonical uses Disesteem (1000p) \u2014 -520p"
+          "summary": "Opener slot #7: cast Souleater (480p), canonical uses Disesteem (1000p), -520p"
         }
       ]
     },
@@ -424,7 +424,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.50s",
@@ -502,8 +502,8 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #6: cast Syphon Strike (380p), canonical uses Torcleaver (820p) \u2014 -440p",
-        "[opener] Opener slot #7: cast Souleater (480p), canonical uses Disesteem (1000p) \u2014 -520p"
+        "[opener] Opener slot #6: cast Syphon Strike (380p), canonical uses Torcleaver (820p), -440p",
+        "[opener] Opener slot #7: cast Souleater (480p), canonical uses Disesteem (1000p), -520p"
       ],
       "summaryLines": [
         "Your opener cost: 960p"
@@ -2623,13 +2623,47 @@
           "children": [],
           "kind": "tincture",
           "lostPotency": 2158.67,
-          "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+          "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+          "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
           "timeSec": 0.0
         }
       ],
+      "countGaps": [
+        {
+          "name": "Edge of Shadow",
+          "sim": 24,
+          "you": 23
+        },
+        {
+          "name": "Syphon Strike",
+          "sim": 36,
+          "you": 35
+        },
+        {
+          "name": "Bloodspiller",
+          "sim": 16,
+          "you": 17
+        },
+        {
+          "name": "action -1000049",
+          "sim": 0,
+          "you": 2
+        }
+      ],
       "kind": "residual",
-      "lostPotency": 1801.47,
-      "summary": "Other \u2014 1 small located loss below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "lostPotency": 1341.5,
+      "prescription": "Biggest count gaps: Edge of Shadow and Syphon Strike. The sim fits more of them. Your extra Bloodspiller casts came out of those slots; each extra is worth less than what it displaced.",
+      "summary": "Spacing & sequencing: 1 small located loss below the listing threshold",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16470,
+      "abilityName": "Edge of Shadow",
+      "children": [],
+      "kind": "residual_tail",
+      "lostPotency": 460.0,
+      "prescription": "Weave damaging oGCDs on cooldown. They displace no GCD.",
+      "summary": "Damaging oGCDs the sim fit: 1 more Edge of Shadow (~460p; they displace no GCD)",
       "timeSec": 0.0
     },
     {
@@ -2638,7 +2672,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #6: cast Syphon Strike, canonical opens Torcleaver (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #6: cast Syphon Strike, canonical opens Torcleaver (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2647,7 +2681,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #7: cast Souleater, canonical opens Disesteem (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #7: cast Souleater, canonical opens Disesteem (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

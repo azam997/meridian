@@ -9,7 +9,7 @@ import { APP_VERSION, CHANGELOG, fmtReleaseDate } from '../data/changelog';
 export const VersionHistoryView = () => (
   <div className="content narrow">
     <div className="hero">
-      <h1>Version history</h1>
+      <h1>Version History</h1>
       <p>
         What changed in each Meridian release, newest first. You are running
         v{APP_VERSION}.

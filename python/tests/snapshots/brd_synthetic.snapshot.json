@@ -198,19 +198,9 @@
       "fightDurationSec": 360.0,
       "findings": [
         {
-          "abilityId": 3558,
-          "abilityName": "Empyreal Arrow",
-          "cappedSeconds": 17.4,
-          "casts": 23,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 1.0,
-          "lostPotency": 260.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 3559,
-          "abilityName": "the Wanderer's Minuet",
-          "cappedSeconds": 5.3,
+          "abilityId": 116,
+          "abilityName": "Army's Paeon",
+          "cappedSeconds": 91.2,
           "casts": 3,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
@@ -228,10 +218,30 @@
           "sharedConsumers": 0
         },
         {
-          "abilityId": 116,
-          "abilityName": "Army's Paeon",
-          "cappedSeconds": 91.2,
-          "casts": 3,
+          "abilityId": 25785,
+          "abilityName": "Radiant Finale",
+          "cappedSeconds": 27.9,
+          "casts": 4,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 3558,
+          "abilityName": "Empyreal Arrow",
+          "cappedSeconds": 17.4,
+          "casts": 23,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 3562,
+          "abilityName": "Sidewinder",
+          "cappedSeconds": 11.9,
+          "casts": 6,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -241,16 +251,6 @@
           "abilityId": 107,
           "abilityName": "Barrage",
           "cappedSeconds": 8.1,
-          "casts": 3,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 101,
-          "abilityName": "Raging Strikes",
-          "cappedSeconds": 3.2,
           "casts": 3,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
@@ -268,20 +268,20 @@
           "sharedConsumers": 0
         },
         {
-          "abilityId": 25785,
-          "abilityName": "Radiant Finale",
-          "cappedSeconds": 27.9,
-          "casts": 4,
+          "abilityId": 3559,
+          "abilityName": "the Wanderer's Minuet",
+          "cappedSeconds": 5.3,
+          "casts": 3,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
           "sharedConsumers": 0
         },
         {
-          "abilityId": 3562,
-          "abilityName": "Sidewinder",
-          "cappedSeconds": 11.9,
-          "casts": 6,
+          "abilityId": 101,
+          "abilityName": "Raging Strikes",
+          "cappedSeconds": 3.2,
+          "casts": 3,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -324,14 +324,14 @@
           "expectedId": 36976,
           "lostPotency": 360.0,
           "position": 8,
-          "summary": "Opener slot #8: cast Refulgent Arrow (280p), canonical uses Resonant Arrow (640p) \u2014 -360p"
+          "summary": "Opener slot #8: cast Refulgent Arrow (280p), canonical uses Resonant Arrow (640p), -360p"
         },
         {
           "actualId": 7409,
           "expectedId": 36977,
           "lostPotency": 820.0,
           "position": 9,
-          "summary": "Opener slot #9: cast Refulgent Arrow (280p), canonical uses Radiant Encore (1100p) \u2014 -820p"
+          "summary": "Opener slot #9: cast Refulgent Arrow (280p), canonical uses Radiant Encore (1100p), -820p"
         },
         {
           "actualId": 7409,
@@ -345,7 +345,7 @@
           "expectedId": 7409,
           "lostPotency": 60.0,
           "position": 12,
-          "summary": "Opener slot #12: cast Burst Shot (220p), canonical uses Refulgent Arrow (280p) \u2014 -60p"
+          "summary": "Opener slot #12: cast Burst Shot (220p), canonical uses Refulgent Arrow (280p), -60p"
         }
       ]
     },
@@ -567,7 +567,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.50s",
@@ -677,9 +677,9 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #8: cast Refulgent Arrow (280p), canonical uses Resonant Arrow (640p) \u2014 -360p",
-        "[opener] Opener slot #9: cast Refulgent Arrow (280p), canonical uses Radiant Encore (1100p) \u2014 -820p",
-        "[opener] Opener slot #12: cast Burst Shot (220p), canonical uses Refulgent Arrow (280p) \u2014 -60p"
+        "[opener] Opener slot #8: cast Refulgent Arrow (280p), canonical uses Resonant Arrow (640p), -360p",
+        "[opener] Opener slot #9: cast Refulgent Arrow (280p), canonical uses Radiant Encore (1100p), -820p",
+        "[opener] Opener slot #12: cast Burst Shot (220p), canonical uses Refulgent Arrow (280p), -60p"
       ],
       "summaryLines": [
         "Your opener cost: 1240p"
@@ -6062,13 +6062,32 @@
           "children": [],
           "kind": "tincture",
           "lostPotency": 1651.18,
-          "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+          "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+          "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
           "timeSec": 0.0
+        }
+      ],
+      "countGaps": [
+        {
+          "name": "Iron Jaws",
+          "sim": 9,
+          "you": 8
+        },
+        {
+          "name": "Burst Shot",
+          "sim": 85,
+          "you": 86
+        },
+        {
+          "name": "action -1000049",
+          "sim": 0,
+          "you": 2
         }
       ],
       "kind": "residual",
       "lostPotency": 543.76,
-      "summary": "Other \u2014 1 small located loss below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "prescription": "Biggest count gaps: Iron Jaws. The sim fits more of them. Your extra Burst Shot casts came out of those slots; each extra is worth less than what it displaced.",
+      "summary": "Spacing & sequencing: 1 small located loss below the listing threshold",
       "timeSec": 0.0
     },
     {
@@ -6077,7 +6096,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #8: cast Refulgent Arrow, canonical opens Resonant Arrow (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #8: cast Refulgent Arrow, canonical opens Resonant Arrow (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -6086,7 +6105,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #9: cast Refulgent Arrow, canonical opens Radiant Encore (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #9: cast Refulgent Arrow, canonical opens Radiant Encore (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -6095,7 +6114,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #12: cast Burst Shot, canonical opens Refulgent Arrow (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #12: cast Burst Shot, canonical opens Refulgent Arrow (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

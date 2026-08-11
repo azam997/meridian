@@ -933,11 +933,22 @@ def list_rankings(req: dict) -> list[dict]:
     Same rankings blob _build_refs consumes (session+disk cached, so this and a
     'Top 10' refs warm share one network trip), but surfacing the per-entry
     identity (name + reportCode + fightId) the refs pipeline discards, so the
-    UI can run a normal analysis with a ranked player as the subject."""
+    UI can run a normal analysis with a ranked player as the subject.
+
+    `forceRefresh` busts the rankings session + disk caches before fetching
+    (the "Refresh rankings" button). It deliberately does NOT touch the
+    analyzed-refs cache (`_refs_cache`) or the frontend's warm state — the ten
+    reference lanes inside an analysis keep their build until restart even if
+    the refreshed list differs."""
     client = _client()
     job: str = req["spec"]
     encounter_id: int = req["encounterId"]
     limit = int(req.get("limit", 10))
+    if req.get("forceRefresh"):
+        inv = getattr(client, "invalidate_rankings", None)
+        if inv is not None:
+            inv(encounter_id=encounter_id, class_name=job, spec_name=job,
+                difficulty=encounter_difficulty(encounter_id))
     try:
         rankings = client.get_rankings(
             encounter_id=encounter_id, class_name=job, spec_name=job,
@@ -1117,6 +1128,55 @@ def run_analysis(req: dict, req_id: str) -> dict:
                    "encounterId": encounter_id, "bucket": refs_bucket,
                    "durationS": round(time.monotonic() - t0, 2)})
     return out
+
+
+def _run_deep_pass(job: str, you: ModuleResult, cards: list[dict],
+                   idealized: list[tuple[float, int]]) -> dict | None:
+    """The deep-advice pass, run INLINE by `_build_response`: probe items are
+    merged straight into `cards` (prescriptions upgraded, evidence details
+    attached), and the counterfactual cascade's restructured card list comes
+    back as the `examined` payload (None when the job registers no
+    `AdvicePack`, the sims can't run, or nothing is worth moving). Any failure
+    degrades to the un-enriched cards — never a response error."""
+    from jobs import _JOB_PACKAGES
+    from jobs._core.advice import AdviceContext
+    from sidecar.advice import compute_advice_v2, resolve_pack
+
+    st = _scoring_state(you)
+    sim_module = (_JOB_PACKAGES.get(job) or "") + ".simulator"
+    gcd_ids = frozenset(
+        aid for aid in {a for _t, a in you.norm_casts}
+        if (m := get_metadata(aid)) is not None and not m.is_ogcd)
+    pack = resolve_pack(job)
+    runner = None
+    if pack is not None:
+        try:
+            from jobs._core.sim.counterfactual import Runner
+            runner = Runner(sim_module, float(you.fight_duration_s),
+                            list(you.downtime_windows or ()),
+                            _user_sim_context(you), list(you.norm_casts),
+                            gcd_ids=gcd_ids)
+        except Exception:
+            traceback.print_exc(file=sys.stderr)
+            runner = None
+    ctx = AdviceContext(
+        job=job,
+        data=get_job(job).data,
+        norm_casts=list(you.norm_casts),
+        idealized=list(idealized or ()),
+        fight_duration_s=float(you.fight_duration_s),
+        downtime_windows=list(you.downtime_windows or ()),
+        death_windows=list(getattr(you, "death_windows", ()) or ()),
+        clipping_state=(you.aspects.get("Clipping") or _Empty()).state,
+        scoring_state=st,
+        enabler_values=dict(st.get("enabler_net_values") or {}),
+        sim_context=_user_sim_context(you),
+        sim_module=sim_module,
+        runner=runner,
+        gcd_ids=gcd_ids,
+        gauge_text=dict(pack.gauge_text) if pack is not None else {})
+    out = compute_advice_v2(ctx, cards, progress=None)
+    return out.get("examined") or None
 
 
 def _pf_pinned_plan(encounter_id: int, use_pf: bool):
@@ -1328,7 +1388,9 @@ def prefetch_refs(req: dict, req_id: str) -> dict:
         _emit({"id": req_id, "progress": {"stage": "Loaded from cache", "pct": 100}})
         return {"spec": job, "encounterId": encounter_id,
                 "count": len(cached), "fromCache": True,
-                "avgKillSec": _avg_kill_s(cached)}
+                "avgKillSec": _avg_kill_s(cached),
+                "refKillTimesSec": _ref_kill_times(cached),
+                "refPartyJobs": _ref_party_jobs(cached)}
 
     def progress(pct: int, stage: str, tasks: list[dict] | None = None) -> None:
         msg: dict[str, Any] = {"stage": stage, "pct": pct}
@@ -1346,7 +1408,25 @@ def prefetch_refs(req: dict, req_id: str) -> dict:
                    "durationS": round(time.monotonic() - t0, 2)})
     return {"spec": job, "encounterId": encounter_id,
             "count": len(refs), "fromCache": False,
-            "avgKillSec": _avg_kill_s(refs)}
+            "avgKillSec": _avg_kill_s(refs),
+            "refKillTimesSec": _ref_kill_times(refs),
+            "refPartyJobs": _ref_party_jobs(refs)}
+
+
+def _ref_kill_times(refs: list[ModuleResult]) -> list[float]:
+    """Each reference kill's duration — the theorizer's slider tick marks
+    ("what kill time should I even ask for": the refs cluster visibly around
+    the achievable range)."""
+    return [float(r.fight_duration_s) for r in refs if r.fight_duration_s]
+
+
+def _ref_party_jobs(refs: list[ModuleResult]) -> list[str]:
+    """The top reference's party comp — lets the theorizer's "Top references
+    ran …" provenance + "use this comp" render before the first run (the
+    theorize response's closest-to-target comp takes over after)."""
+    if not refs:
+        return []
+    return list(getattr(refs[0], "party_jobs", ()) or ())
 
 
 def _get_refs(client, job: str, encounter_id: int, bucket: str,
@@ -1585,6 +1665,18 @@ def _inject_tier_b(job: str, you: ModuleResult,
     sim.prime([(duration, tuple(coalesced), None, c) for c in ctxs])
     lenient = max(sim.simulate(duration, tuple(coalesced), sim_context=c).delivered_potency
                   for c in ctxs)
+    # Witness floor, mirroring the strict guard in ScoringAspectBase.analyze
+    # (delivered only — see the currency note there): the executed line is a
+    # feasible point for the lenient optimum too, and the lenient beam shares
+    # the strict one's off-anchor under-search risk — without the floor a
+    # witness-guarded strict pair could sit ABOVE the lenient ceiling and
+    # lenient efficiency read >100%. A mit-plan-locked healer ceiling stays
+    # exceedable (framed >100%).
+    if not state.get("heal_locks_applied"):
+        witness = float(state.get("delivered_potency") or 0.0)
+        if witness > lenient:
+            state["ceiling_witness_gap_lenient"] = witness - lenient
+            lenient = witness
     state["idealized_lenient"] = lenient
 
 
@@ -2105,13 +2197,68 @@ def _scoring_state(mr: ModuleResult) -> dict:
     return (mr.aspects.get("Scoring") or _Empty()).state
 
 
-# The ceiling invariant: idealized ≥ delivered by construction (see
+def _reprice_drift_from_sim(you: ModuleResult,
+                            idealized: list[tuple[float, int]],
+                            data) -> None:
+    """Sim-backed jobs: re-price the Drift table's lost casts/potency from the
+    sim count diff, on the SAME basis as the missed-cast cards (enabler net
+    value / full oGCD / GCD net of filler). Drift only costs potency once a
+    use no longer fits before the kill — capped seconds stay as the factual
+    observation, but a Reassemble that drifted 14s while every use still fit
+    now reads 0, matching the panel by construction. Sim-less jobs keep the
+    heuristic capped-time pricing (their only signal)."""
+    import dataclasses as _dc
+    from collections import Counter as _Counter
+    ar = you.aspects.get("Drift")
+    if ar is None or not idealized:
+        return
+    findings = (ar.state or {}).get("findings") or []
+    if not findings:
+        return
+    pc = _Counter(a for t, a in you.norm_casts if t >= 0)
+    ic = _Counter(a for t, a in idealized if t >= 0)
+    enabler = _scoring_state(you).get("enabler_net_values") or {}
+    out = []
+    for f in findings:
+        aid = int(getattr(f, "ability_id", 0) or 0)
+        deficit = max(0, ic.get(aid, 0) - pc.get(aid, 0))
+        base = float(data.potencies.get(aid, 0) or 0)
+        if base <= 0:
+            per = float(enabler.get(aid, 0.0) or 0.0)
+        else:
+            m = get_metadata(aid)
+            is_ogcd = m is not None and m.is_ogcd
+            per = base if is_ogcd else max(
+                0.0, base - float(data.filler_gcd_potency or 0))
+        out.append(_dc.replace(
+            f, lost_casts=float(deficit),
+            lost_potency=round(deficit * per, 1)))
+    out.sort(key=lambda f: (-f.lost_potency, -f.capped_seconds))
+    ar.state["findings"] = out
+
+
+def _improvements_disclaimed(you: ModuleResult) -> bool:
+    """Whether the sim-diff improvements are suppressed for this pull: a
+    substantially multi-target pull whose splash was NOT credited — the
+    single-target numbers understate and the cards would mislead. Shared by
+    `_build_response` and the deep pass so the two can never diverge."""
+    from jobs._core.downtime_sources import is_multi_target_pull
+    is_mt = is_multi_target_pull(list(getattr(you, "multi_target_windows", ())))
+    credited = bool(_scoring_state(you).get("multi_target_credited"))
+    return is_mt and not credited
+
+
+# The ceiling invariant: idealized ≥ delivered by construction (the witness
+# guard in ScoringAspectBase.analyze + _inject_tier_b's lenient floor, plus
 # _inject_melee_downtime / _credit_multi_target_run / _buff_scenarios_for), so
-# efficiency should never exceed 100%. Anything genuinely over is a modeling
-# bug worth a detailed `ceiling_anomaly` log event; the dashboard nudge
-# (`ceilingAnomaly` on the headline) uses a slightly higher bar so hairline
-# float noise doesn't nag users. The calibration gates (validate_job_ceiling.py)
-# flag at 100.5 — the log threshold is deliberately tighter, a log line is free.
+# efficiency should never exceed 100% outside the framed heal-locked case.
+# Anything genuinely over — or any fired witness guard (`witnessGapPotency` in
+# the entry: the pre-guard search shortfall) — is a modeling signal worth a
+# detailed `ceiling_anomaly` log event; the dashboard nudge (`ceilingAnomaly`
+# on the headline) uses a slightly higher bar so hairline float noise doesn't
+# nag users. The calibration gates (validate_job_ceiling.py) flag at 100.5 on
+# the DE-GUARDED (raw search) efficiency — the log threshold is deliberately
+# tighter, a log line is free.
 _CEILING_LOG_PCT = 100.0
 _CEILING_NUDGE_PCT = 100.05
 
@@ -2511,16 +2658,25 @@ def _stamp_ceiling_anomaly(out: dict, you: ModuleResult,
                 continue
             delivered, idealized, eff = _efficiency_for(mr)
             ideal_lenient, eff_lenient = _lenient_efficiency_for(mr)
-            if max(eff, eff_lenient) <= _CEILING_LOG_PCT:
+            # A fired witness guard means the displayed pair is already floored
+            # at the executed line (≤100%) — but the pre-guard shortfall is the
+            # same ceiling-looseness signal this watchdog exists for, so log it.
+            st = _scoring_state(mr)
+            witness_gap = (float(st.get("ceiling_witness_gap") or 0.0)
+                           + float(st.get("ceiling_witness_gap_lenient") or 0.0))
+            if max(eff, eff_lenient) <= _CEILING_LOG_PCT and witness_gap <= 0.0:
                 continue
-            entries.append({
+            entry = {
                 "who": who, "label": mr.label,
                 "effPct": eff, "effLenientPct": eff_lenient,
                 "deliveredPotency": delivered,
                 "idealizedPotency": idealized,
                 "idealizedPotencyLenient": ideal_lenient,
                 "killTimeSec": int(mr.fight_duration_s),
-            })
+            }
+            if witness_gap > 0.0:
+                entry["witnessGapPotency"] = round(witness_gap, 1)
+            entries.append(entry)
         if not entries:
             return
 
@@ -2844,14 +3000,33 @@ def _build_improvements(job: str, you: ModuleResult,
         # Group the causally-linked pacing cards (idle / over-weaving / loose
         # pacing) into one "GCD uptime & pacing" umbrella so related losses read
         # together instead of scattered; ordering stays by potency total. Distinct
-        # major cards (overcap, missed cooldowns, tincture) and the "Other" residual
+        # major cards (overcap, missed cooldowns, tincture) and the residual
         # are left standalone. Presentation-only — totals are unchanged.
         priced = imp.group_families(priced)
+        # Decompose the attributable part of the residual into named
+        # `residual_tail` siblings (per-ability count diff vs the strict
+        # idealized). Conserves the top-level sum: bucket potency is moved out
+        # of the residual card, never added on top of it.
+        priced = imp.split_residual(
+            priced,
+            player_tl=[(t, a) for t, a in you.norm_casts if t >= 0],
+            ideal_tl=idealized,
+            data=get_job(job).data)
 
     # Top-level response keys are emitted verbatim (not camelized by _emit),
     # so camelize the dataclass list here: time_s -> timeSec, etc. Priced
-    # (ranked, incl. residual) first; zero-priced diagnostics trail.
-    return _camelize(priced + diagnostics)
+    # (ranked, incl. residual) first; zero-priced diagnostics trail. Cards
+    # without a prescription drop the key entirely (never `null` on the wire).
+    return _strip_unset_prescriptions(_camelize(priced + diagnostics))
+
+
+def _strip_unset_prescriptions(cards: list[dict]) -> list[dict]:
+    for c in cards:
+        if c.get("prescription") is None:
+            c.pop("prescription", None)
+        if c.get("children"):
+            _strip_unset_prescriptions(c["children"])
+    return cards
 
 
 # Display durations for the idealized lane (cosmetic — the lane is a visual
@@ -3058,20 +3233,57 @@ def _build_response(job: str, you: ModuleResult, refs: list[ModuleResult],
     # understatement and we do. Either way the sim-diff improvements are
     # single-target-based and would mis-rank losses on a multi-target pull, so
     # they're suppressed whenever the pull is substantially multi-target.
-    from jobs._core.downtime_sources import is_multi_target_pull
     mt_state = _scoring_state(you)
-    is_mt = is_multi_target_pull(list(getattr(you, "multi_target_windows", ())))
     credited = bool(mt_state.get("multi_target_credited"))
-    disclaimed = is_mt and not credited
+    disclaimed = _improvements_disclaimed(you)
     # Suppress the sim-diff improvements only while the pull is DISCLAIMED — then
     # the numbers are the understated single-target ones and the cards would
     # double-mislead. Once splash is credited the efficiency is fair and the
     # rotation really is single-target + incidental splash (which the sim
     # models), so the missed-cast / clip / overcap cards are valid and shown.
+    # Sim-priced drift table (see _reprice_drift_from_sim). Skipped while
+    # disclaimed — the ST sim diff would mislead there, same as the cards.
+    if idealized and not disclaimed:
+        _reprice_drift_from_sim(you, idealized, get_job(job).data)
     improvements = [] if disclaimed else _build_improvements(job, you, idealized)
+    # The deep pass, inline: probe prescriptions/details merged into the cards
+    # above, and the counterfactual cascade's restructured list (measured root
+    # causes moved out of the residual, total conserved) as `examined`. Fast
+    # enough to always run — the cascade itself only runs for jobs with an
+    # AdvicePack (MCH); everyone else gets the analytic enrichment only.
+    examined = None
+    if improvements:
+        try:
+            examined = _run_deep_pass(job, you, improvements, idealized)
+        except Exception:
+            traceback.print_exc(file=sys.stderr)
     # Ensure icons resolve for every ability a suggestion references.
     for im in improvements:
         _ensure_ability_meta(ability_meta, int(im.get("abilityId", 0) or 0))
+    for im in (examined or {}).get("improvements", []):
+        _ensure_ability_meta(ability_meta, int(im.get("abilityId", 0) or 0))
+    # Buff-window timing — a SEPARATE currency from the strict panel: casts
+    # that landed just outside the party's OBSERVED buff windows, priced from
+    # the observed-lens budget (idealized_observed − delivered_observed). The
+    # strict `improvements` budget is buff-agnostic by construction, so these
+    # cards ship under their own key and the two lists must never sum.
+    # Absent-key pattern keeps buffless pulls byte-identical.
+    buff_alignment: dict | None = None
+    if not disclaimed:
+        from jobs._core import improvements as _impb
+        _obs_budget = max(0.0, float(mt_state.get("idealized_observed") or 0.0)
+                               - float(mt_state.get("delivered_observed") or 0.0))
+        _bw_cards = _impb.buff_window_improvements(
+            list(you.norm_casts),
+            mt_state.get("observed_buff_windows") or [],
+            get_job(job).data, _obs_budget)
+        if _bw_cards:
+            buff_alignment = {
+                "budget": round(_obs_budget, 1),
+                "cards": _strip_unset_prescriptions(_camelize(_bw_cards)),
+            }
+            for im in buff_alignment["cards"]:
+                _ensure_ability_meta(ability_meta, int(im.get("abilityId", 0) or 0))
     # Idealized comparison lane for the Timeline (empty when no simulator).
     # Buff-aware (canonical master windows) so burst aligns to the real opener
     # window, unlike the strict `idealized` the improvements panel diffs against.
@@ -3297,6 +3509,15 @@ def _build_response(job: str, you: ModuleResult, refs: list[ModuleResult],
         },
         "abilityMeta": ability_meta,
     }
+    # Separate-currency buff-window cards (see above) — absent unless present.
+    if buff_alignment is not None:
+        response["buffAlignment"] = buff_alignment
+    # Deep-pass restructure (absent-key pattern: only when the cascade found
+    # mass worth re-attributing). Same strict currency as `improvements`, same
+    # conserved top-level total — the UI renders the panel from this list by
+    # default, with a toggle back to the original decomposition.
+    if examined is not None:
+        response["examined"] = examined
 
     # Boss phase segments (phasic analysis). Emitted ONLY when the fight carries
     # phases (ultimates and multi-phase encounters); absent for single-phase
@@ -3359,24 +3580,27 @@ def _avg_kill_s(refs: list[ModuleResult]) -> float:
 
 
 def _encounter_downtime(job: str, encounter_id: int, target: float,
-                        progress) -> tuple[list[tuple[float, float]], dict]:
+                        progress
+                        ) -> tuple[list[tuple[float, float]], dict,
+                                   list[ModuleResult]]:
     """An encounter's fight constraints (downtime) derived from the reference
     logs — the closest-by-duration top ref — so the theorizer needs no character
     or analyzed pull. Reuses `_get_refs`: a warmed matrix entry returns instantly,
     a cold one is built (streaming progress) and cached for next time. Also yields
-    a representative party comp (that ref's) + the refs' average kill time.
-    Returns `(windows, info)`."""
+    a representative party comp (that ref's) + the refs' average kill time, and
+    the analyzed refs themselves (the theorizer's reference lanes).
+    Returns `(windows, info, refs)`."""
     info = {"source": "none", "count": 0, "killSec": 0.0, "killAvgSec": 0.0,
             "partyJobs": []}
     if not encounter_id:
-        return [], info
+        return [], info, []
     try:
         refs = _get_refs(_client(), job, encounter_id, "Top 10", progress)
     except Exception:
         traceback.print_exc(file=sys.stderr)
-        return [], info
+        return [], info, []
     if not refs:
-        return [], info
+        return [], info, []
     # The ref whose kill time is nearest the theorized target — its phase
     # structure best matches the kill we're modeling. Clipping handles the rest.
     best = min(refs, key=lambda r: abs(r.fight_duration_s - target))
@@ -3387,7 +3611,7 @@ def _encounter_downtime(job: str, encounter_id: int, target: float,
         "killAvgSec": _avg_kill_s(refs),
         "partyJobs": list(getattr(best, "party_jobs", ()) or ()),
     }
-    return list(best.downtime_windows), info
+    return list(best.downtime_windows), info, refs
 
 
 def theorize_kill_time(req: dict, req_id: str) -> dict:
@@ -3433,9 +3657,10 @@ def theorize_kill_time(req: dict, req_id: str) -> dict:
                        for w in req["downtimeWindows"]]
         ref_info = {"source": "explicit", "count": 0, "killSec": 0.0,
                     "partyJobs": []}
+        refs = []
     else:
         progress(8, "Loading reference fight data…")
-        observed_dt, ref_info = _encounter_downtime(
+        observed_dt, ref_info, refs = _encounter_downtime(
             job, int(req.get("encounterId") or 0), target, progress)
 
     progress(92, "Computing ideal rotation…")
@@ -3473,6 +3698,25 @@ def theorize_kill_time(req: dict, req_id: str) -> dict:
     ability_meta: dict[int, dict] = {}
     timeline = _serialize_idealized_track(list(res.timeline), ability_meta)
 
+    # Canonical ("hold burst for the standard 2-min windows") variant of the same
+    # ideal — only meaningful when a party comp gives the sim buff windows to
+    # hold FOR; empty otherwise, and the UI hides its toggle. Mirrors the
+    # run_analysis gating (_idealized_canonical_timeline).
+    timeline_canonical: list[dict] = []
+    if center_buffs and getattr(sim, "simulate_canonical", None) is not None:
+        cres = sim.simulate_canonical(target, tuple(center_dt),
+                                      buff_intervals=center_buffs)
+        timeline_canonical = _serialize_idealized_track(
+            list(cres.timeline), ability_meta)
+
+    # The reference kills as full timeline lanes (RunSummary shape, same as
+    # run_analysis' `refs`). They were already fetched + analyzed for the
+    # downtime derivation — serializing them is free and lets the theorizer
+    # stack the ideal line against every reference kill. Seeds ability_meta
+    # with the ref tracks' ids so the response stays self-contained.
+    refs_out = [_run_summary(r, include_track=True, ability_meta=ability_meta)
+                for r in refs]
+
     # In-sim tincture placement on the ideal lane (mirrors _build_response) — read
     # off the pot markers the sim placed in the timeline.
     from jobs._core.tincture import spec_for_job, tincture_windows_from_timeline
@@ -3488,6 +3732,8 @@ def theorize_kill_time(req: dict, req_id: str) -> dict:
         "targetKillSec": target,
         "idealizedPotency": round(res.delivered_potency, 1),
         "timeline": timeline,
+        "timelineCanonical": timeline_canonical,
+        "refs": refs_out,
         "downtimeWindows": [{"startSec": float(s), "endSec": float(e)}
                             for s, e in center_dt],
         "buffWindows": [{"startSec": float(s), "endSec": float(e),

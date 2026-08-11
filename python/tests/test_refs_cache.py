@@ -4,8 +4,9 @@ Hermetic — no network, no FFLogs client. Exercises:
   - `sidecar.main._get_refs`: caches a built ref list and collapses concurrent
     same-key callers to a single build; serves later calls from cache.
   - `sidecar.dev_cache.DevDiskCacheClient`: write-then-read round trip, cross-
-    instance ("relaunch") persistence, distinct keys, `None` caching, and
-    attribute passthrough.
+    instance ("relaunch") persistence, distinct keys, `None` caching, attribute
+    passthrough, and rankings invalidation (the Refresh rankings path — also
+    covered on `SessionCachedClient` alone and composed over the disk layer).
   - `sidecar.main.get_catalog`: shape + supported-jobs-only contents.
 
 Runs under pytest (from python/) and standalone (`python tests/test_refs_cache.py`).
@@ -26,6 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import sidecar.main as m  # noqa: E402
+from jobs._core.cached_client import SessionCachedClient  # noqa: E402
 from sidecar.dev_cache import DevDiskCacheClient  # noqa: E402
 
 
@@ -232,6 +234,50 @@ def _check_dev_cache_gzip_and_legacy(cache_dir: Path) -> None:
     assert inner.calls == before, "legacy file should be a hit, not a re-fetch"
 
 
+def _check_dev_cache_invalidate_rankings(cache_dir: Path) -> None:
+    inner = _FakeClient()
+    c = DevDiskCacheClient(inner, cache_dir)
+    r1 = c.get_rankings(103, "Machinist", "Machinist")
+    assert c.get_rankings(103, "Machinist", "Machinist") == r1
+    assert inner.calls == 1
+    c.invalidate_rankings(103, "Machinist", "Machinist")
+    r2 = c.get_rankings(103, "Machinist", "Machinist")
+    assert inner.calls == 2 and r2 != r1, "invalidation should force a re-fetch"
+    # Other keys survive an invalidation.
+    c.get_rankings(104, "Machinist", "Machinist")
+    assert inner.calls == 3
+    c.invalidate_rankings(103, "Machinist", "Machinist")
+    c.get_rankings(104, "Machinist", "Machinist")
+    assert inner.calls == 3, "other keys must survive an invalidation"
+    # Invalidating a never-cached key is a no-op, not an error.
+    c.invalidate_rankings(999, "Bard", "Bard")
+
+
+def _check_session_invalidate_rankings() -> None:
+    # Bare inner (no invalidate_rankings of its own) — the getattr guard makes
+    # the forward a no-op instead of an AttributeError.
+    inner = _FakeClient()
+    c = SessionCachedClient(inner)
+    r1 = c.get_rankings(103, "Machinist", "Machinist")
+    assert c.get_rankings(103, "Machinist", "Machinist") == r1
+    assert inner.calls == 1
+    c.invalidate_rankings(103, "Machinist", "Machinist")
+    r2 = c.get_rankings(103, "Machinist", "Machinist")
+    assert inner.calls == 2 and r2 != r1, "session entry should be dropped"
+
+
+def _check_session_invalidate_forwards(cache_dir: Path) -> None:
+    # The composed prod stack: session over disk. One invalidation must clear
+    # BOTH layers, or the session refetch would re-read the stale disk file.
+    inner = _FakeClient()
+    c = SessionCachedClient(DevDiskCacheClient(inner, cache_dir))
+    r1 = c.get_rankings(103, "Machinist", "Machinist")
+    assert inner.calls == 1
+    c.invalidate_rankings(103, "Machinist", "Machinist")
+    r2 = c.get_rankings(103, "Machinist", "Machinist")
+    assert inner.calls == 2 and r2 != r1, "disk layer should be busted too"
+
+
 # --- get_catalog ------------------------------------------------------------
 
 def _check_catalog() -> None:
@@ -310,6 +356,18 @@ def test_dev_disk_cache_gzip_and_legacy(tmp_path):
     _check_dev_cache_gzip_and_legacy(tmp_path)
 
 
+def test_dev_disk_cache_invalidate_rankings(tmp_path):
+    _check_dev_cache_invalidate_rankings(tmp_path)
+
+
+def test_session_cache_invalidate_rankings():
+    _check_session_invalidate_rankings()
+
+
+def test_session_cache_invalidate_forwards_to_disk(tmp_path):
+    _check_session_invalidate_forwards(tmp_path)
+
+
 def test_get_catalog_shape():
     _check_catalog()
 
@@ -323,6 +381,9 @@ def main() -> None:
         _check_dev_cache_ttl(Path(d) / "ttl")
         _check_dev_cache_eviction(Path(d) / "evict")
         _check_dev_cache_gzip_and_legacy(Path(d) / "gz")
+        _check_dev_cache_invalidate_rankings(Path(d) / "inv")
+        _check_session_invalidate_forwards(Path(d) / "sinv")
+    _check_session_invalidate_rankings()
     _check_catalog()
     print("test_refs_cache: OK")
 

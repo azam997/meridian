@@ -118,6 +118,22 @@ class SessionCachedClient:
                 self._rankings_cache.popitem(last=False)
         return fresh
 
+    def invalidate_rankings(self, encounter_id: int, class_name: str,
+                            spec_name: str, difficulty: int = 101,
+                            metric: str = "rdps", page: int = 1) -> None:
+        """Force the next `get_rankings` for this key to hit the network (the
+        Top Pulls "Refresh rankings" path). Inner (disk) first, session second:
+        popping session first would let a concurrent `get_rankings` repopulate
+        it from the still-stale disk file."""
+        inner_inv = getattr(self._inner, "invalidate_rankings", None)
+        if inner_inv is not None:
+            inner_inv(encounter_id=encounter_id, class_name=class_name,
+                      spec_name=spec_name, difficulty=difficulty,
+                      metric=metric, page=page)
+        key = (encounter_id, class_name, spec_name, difficulty, metric, page)
+        with self._rankings_lock:
+            self._rankings_cache.pop(key, None)
+
     @staticmethod
     def _lru_get_or_fetch(cache: "OrderedDict[tuple, Any]", lock: threading.Lock,
                           cap: int, key: tuple, fetch: Any) -> Any:

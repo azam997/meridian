@@ -141,7 +141,7 @@ export const FeedbackView = ({ prefill, state }: Props) => {
   return (
     <div className="content narrow">
       <div className="hero">
-        <h1>Submit feedback</h1>
+        <h1>Submit Feedback</h1>
         <p>
           Meridian never phones home — reports are sent by you, as a GitHub
           issue with a diagnostics file attached. The file holds the app's

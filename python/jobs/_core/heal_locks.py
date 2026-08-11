@@ -383,7 +383,7 @@ def improvements_from_heal_gcds(you) -> list:
         children.append(Improvement(
             kind="extra_heal_gcds", ability_id=int(aid), ability_name=name,
             time_s=float(t), lost_potency=per,
-            summary=f"{name} at {_mmss(float(t))} — a damage GCD the plan didn't need",
+            summary=f"{name} at {_mmss(float(t))}, a damage GCD the plan didn't need",
         ))
     n = len(children)
     first = children[0]
@@ -391,7 +391,7 @@ def improvements_from_heal_gcds(you) -> list:
         kind="extra_heal_gcds", ability_id=first.ability_id,
         ability_name=first.ability_name, time_s=first.time_s,
         lost_potency=n * per,
-        summary=(f"Healing GCDs beyond the honest budget ×{n} — the ceiling "
+        summary=(f"Healing GCDs beyond the honest budget ×{n}. The ceiling "
                  f"already credits the {credited} heal GCD"
                  f"{'s' if credited != 1 else ''} this pull needed; these were "
                  f"cast with no mechanic to cover."),

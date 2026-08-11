@@ -1,3 +1,4 @@
+import type { MouseEvent as ReactMouseEvent } from 'react';
 import { AbilityIcon } from '../AbilityIcon';
 import { GCD_TOP, ICON_SIZE, OGCD_TOP, type TimelineScale } from './scale';
 import type { AbilityMetaJson, CastEvent } from '../../sidecar/contract';
@@ -10,7 +11,9 @@ type Props = {
    *  on diff/focus/faded/paired/in-downtime). Defaults to plain `cast`. */
   className?: string;
   title?: string;
-  onMouseEnter?: () => void;
+  /** Receives the event so callers can anchor a bubble to the hovered icon's
+   *  real on-screen position (the multi-target hover on any lane). */
+  onMouseEnter?: (e: ReactMouseEvent<HTMLDivElement>) => void;
   onMouseLeave?: () => void;
   size?: number;
   /** Override the band top (px). Defaults to the oGCD/GCD band from `yOffset`;

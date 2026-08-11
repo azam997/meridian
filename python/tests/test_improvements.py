@@ -161,7 +161,7 @@ def test_hypercharge_underfill_priced_from_sim_value() -> None:
                abs(im.time_s - 220.0) < 0.01, f"got {im.time_s}")
         _check("kind is hypercharge", im.kind == "hypercharge", im.kind)
         _check("summary names the shot count",
-               "3/5" in im.summary, f"got {im.summary!r}")
+               "3 of 5" in im.summary, f"got {im.summary!r}")
 
     # No enabler value (sim-less) → nothing priced.
     _check("no sim value → no cards",

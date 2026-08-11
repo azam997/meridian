@@ -110,6 +110,30 @@ export const adjustRun = (
   return { delivered: d, idealized: c, eff: c > 0 ? (d / c) * 100 : 0 };
 };
 
+/** One reference's efficiency under the crediting mode + overrides — the
+ *  backend number verbatim under 'maximal' (or with no windows), else the
+ *  client regrade via `adjustRun`. The ONE place this logic lives, so the
+ *  Dashboard's distro chart and the Timeline's sorted ref lanes always agree. */
+export const refEffAdjusted = (
+  refs: AnalysisResult['refs'],
+  i: number,
+  windows: MultiTargetWindow[],
+  denied: Set<string>,
+  mode: MtMode,
+): number => {
+  const r = refs[i];
+  if (!r) return 0;
+  if (mode === 'maximal' || windows.length === 0) return r.efficiencyPct;
+  return adjustRun(
+    {
+      delivered: r.deliveredPotency,
+      idealized: r.idealizedPotency,
+      credited: r.multiTargetCredited ?? true,
+    },
+    windows, denied, mode, i,
+  ).eff;
+};
+
 /** Rank/percentile of `youEff` against the (recomputed) ref efficiencies —
  *  mirrors sidecar/main.py::_headline so the "Nth percentile · rank …" line
  *  stays consistent when a cap mode reshuffles the field. */

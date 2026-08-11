@@ -297,7 +297,7 @@
           "expectedId": 34626,
           "lostPotency": 70.0,
           "position": 6,
-          "summary": "Opener slot #6: cast Second Generation (680p), canonical uses Reawaken (750p) \u2014 -70p"
+          "summary": "Opener slot #6: cast Second Generation (680p), canonical uses Reawaken (750p), -70p"
         },
         {
           "actualId": 34629,
@@ -325,14 +325,14 @@
           "expectedId": 34630,
           "lostPotency": 140.0,
           "position": 10,
-          "summary": "Opener slot #10: cast Vicewinder (540p), canonical uses Fourth Generation (680p) \u2014 -140p"
+          "summary": "Opener slot #10: cast Vicewinder (540p), canonical uses Fourth Generation (680p), -140p"
         },
         {
           "actualId": 34621,
           "expectedId": 34631,
           "lostPotency": 470.0,
           "position": 11,
-          "summary": "Opener slot #11: cast Hunter's Coil (680p), canonical uses Ouroboros (1150p) \u2014 -470p"
+          "summary": "Opener slot #11: cast Hunter's Coil (680p), canonical uses Ouroboros (1150p), -470p"
         },
         {
           "actualId": 34622,
@@ -563,7 +563,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.28s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.28s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.28s",
@@ -609,9 +609,9 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #6: cast Second Generation (680p), canonical uses Reawaken (750p) \u2014 -70p",
-        "[opener] Opener slot #10: cast Vicewinder (540p), canonical uses Fourth Generation (680p) \u2014 -140p",
-        "[opener] Opener slot #11: cast Hunter's Coil (680p), canonical uses Ouroboros (1150p) \u2014 -470p"
+        "[opener] Opener slot #6: cast Second Generation (680p), canonical uses Reawaken (750p), -70p",
+        "[opener] Opener slot #10: cast Vicewinder (540p), canonical uses Fourth Generation (680p), -140p",
+        "[opener] Opener slot #11: cast Hunter's Coil (680p), canonical uses Ouroboros (1150p), -470p"
       ],
       "summaryLines": [
         "Your opener cost: 680p"
@@ -3257,13 +3257,27 @@
           "children": [],
           "kind": "tincture",
           "lostPotency": 2262.18,
-          "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+          "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+          "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
           "timeSec": 0.0
+        }
+      ],
+      "countGaps": [
+        {
+          "name": "Uncoiled Fury",
+          "sim": 11,
+          "you": 12
+        },
+        {
+          "name": "Hindsbane Fang",
+          "sim": 8,
+          "you": 9
         }
       ],
       "kind": "residual",
       "lostPotency": 316.69,
-      "summary": "Other \u2014 1 small located loss below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "prescription": "No ability ran behind the sim's counts. The diffuse cost is burst spacing and GCD timing, not which buttons you pressed.",
+      "summary": "Spacing & sequencing: 1 small located loss below the listing threshold",
       "timeSec": 0.0
     },
     {
@@ -3272,7 +3286,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #6: cast Second Generation, canonical opens Reawaken (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #6: cast Second Generation, canonical opens Reawaken (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -3281,7 +3295,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #10: cast Vicewinder, canonical opens Fourth Generation (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #10: cast Vicewinder, canonical opens Fourth Generation (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -3290,7 +3304,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #11: cast Hunter's Coil, canonical opens Ouroboros (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #11: cast Hunter's Coil, canonical opens Ouroboros (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

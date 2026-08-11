@@ -675,6 +675,39 @@ class ScoringAspectBase:
         # overlay-sweep + `idealized_untinctured` max() that papered over the >100%
         # asymmetry are gone. See jobs._core.tincture.merge_tincture_markers.
 
+        # Witness guard on the strict pair: `delivered` IS the player's executed
+        # line valued by the very scorer the ceiling maximizes — a real, executed
+        # rotation is a feasible candidate for the optimum, so it is a valid
+        # lower bound on the true ceiling (the same construction as the sidecar's
+        # `_buff_scenarios_for` max and `_inject_melee_downtime`'s delivered
+        # floor). When the search under-sequences at some sweep cadence (measured
+        # live: MCH's off-2.50 sub-GCD band runs drop an Air Anchor / Drill that
+        # the 40/60s-multiple-of-2.5 cooldown grid re-slots drift-free at 2.50),
+        # no band point dominates the real line and strict efficiency reads
+        # >100%; this max closes it exactly, so strict efficiency stays ≤100% BY
+        # CONSTRUCTION for every job. Strictly `delivered` — NOT
+        # `delivered + tincture_loss`: the pot-timing loss is valued as an
+        # OVERLAY on the delivered scorer, a different currency from the
+        # ceiling's in-timeline pot markers (`place_optimal_pots` +
+        # cast-snapshot scoring), and on budget/pet jobs (BRD/SMN/DRK/VPR) the
+        # overlay credits more than the marker — adding it makes the witness
+        # overshoot a genuinely-dominating ceiling. The pre-guard shortfall is
+        # emitted as `ceiling_witness_gap` — the calibration gate
+        # (validate_job_ceiling.py) de-guards with it and the sidecar watchdog
+        # logs it, so the guard corrects the DISPLAYED number without hiding
+        # the model-looseness signal. A mit-plan-locked healer ceiling is
+        # EXPECTED to be exceedable (the healing tax is the honest maximum; the
+        # dashboard frames >100% explicitly), so a locked run keeps its raw
+        # ceiling.
+        ceiling_witness_gap = 0.0
+        from jobs._core.gcd_speed import unwrap_ceiling_context
+        from jobs._core.heal_locks import HealLockContext
+        _, _guard_payload = unwrap_ceiling_context(sim_ctx)
+        if not isinstance(_guard_payload, HealLockContext):
+            if delivered > idealized_strict:
+                ceiling_witness_gap = delivered - idealized_strict
+                idealized_strict = delivered
+
         enabler_values = self.fns.enabler_net_values(
             fight_duration_s, downtime_windows, sim_context=sim_ctx)
 
@@ -711,6 +744,11 @@ class ScoringAspectBase:
         # Savage, so the contract snapshot stays byte-identical).
         if phase_delivered:
             state["phase_delivered"] = phase_delivered
+        # Additive, present only when the witness guard closed a search shortfall
+        # (key absent on every normally-dominated pull → contract snapshot
+        # byte-identical).
+        if ceiling_witness_gap > 0.0:
+            state["ceiling_witness_gap"] = ceiling_witness_gap
         # The gcd-wrapped sim_context is authoritative for the sidecar's lenient /
         # Timeline recompute (`_user_sim_context`). Only override when non-None so a
         # no-op pull stays byte-identical (no stray `sim_context: null` key); an active

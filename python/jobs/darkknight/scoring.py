@@ -162,13 +162,13 @@ def improvements_from_darkside(state: dict) -> list[Improvement]:
                 kind="darkside", ability_id=dd.EDGE_OF_SHADOW,
                 ability_name="Darkside", time_s=float(s),
                 lost_potency=float(wl),
-                summary=f"{_mmss(s)}–{_mmss(e)}: Darkside down {e - s:.0f}s — "
-                        f"spend Edge of Shadow sooner to keep the 10% amp up"))
+                summary=f"{_mmss(s)}–{_mmss(e)}: Darkside down {e - s:.0f}s. "
+                        f"Spend Edge of Shadow sooner to keep the 10% amp up"))
     return [Improvement(
         kind="darkside", ability_id=dd.EDGE_OF_SHADOW,
         ability_name="Darkside", time_s=t0, lost_potency=lost,
-        summary=f"Darkside dropped to {cov:.1f}% uptime — "
-                f"the 10% amp was missing from {_mmss(t0)}",
+        summary=f"Darkside dropped to {cov:.1f}% uptime. "
+                f"The 10% amp was missing from {_mmss(t0)}",
         children=children)]
 
 

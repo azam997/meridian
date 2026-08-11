@@ -1,10 +1,14 @@
 import { useRef, useState, type CSSProperties, type ReactNode, type Ref } from 'react';
-import { Filter, HelpCircle, Minus, Pin, ZoomIn } from 'lucide-react';
+import { Filter, Flag, HelpCircle, Minus, Pin, ZoomIn } from 'lucide-react';
 import { currentZoom } from '../../state/zoom';
 import { fmtTick, type TimelineScale } from './scale';
 
 /** GCD / oGCD band visibility + (when there are ref lanes) the refs toggle. */
 export type FilterState = { gcd: boolean; ogcd: boolean; refs: boolean };
+
+/** Height (px) of the optional flag band above the axis — mirrored into the
+ *  `--tl-flag-h` custom property that drives every sticky offset. */
+const FLAG_BAND_H = 20;
 
 /** An extra labeled axis tick (e.g. the theorizer's target kill-time marker). */
 export type AxisMark = { sec: number; label: string; className?: string };
@@ -19,9 +23,22 @@ type Props = {
   hasRefs: boolean;
   /** Left-aligned extra toolbar controls (Highlight / Burst-usage toggles). */
   toolbarExtra?: ReactNode;
+  /** A viewport-fixed band between the toolbar and the scroll container (the
+   *  Timeline page's whole-pull diff overview ruler). Unlike the axis it does
+   *  NOT scroll with the strip. */
+  belowToolbar?: ReactNode;
   helpText: string;
   /** Extra labeled axis ticks drawn on top of the regular grid ticks. */
   axisMarks?: AxisMark[];
+  /** Cast flags (POT / buff ×N / death chips) for the flag band — a sticky row
+   *  of its own between the toolbar and the axis, so flags never collide with
+   *  tick labels. Passing this (even empty) mounts the band; the shell adds
+   *  the pre-pull pin chip in the gutter cell. */
+  flags?: ReactNode;
+  /** Label-gutter width (px). The theorizer widens it to hold two-line lane
+   *  labels + the band captions; everything offset-dependent follows via the
+   *  `--tl-label-w` custom property. */
+  labelWidth?: number;
   /** Behind-casts overlay content (multi-target / raid-buff zones). The shell
    *  adds the pre-pull shade + the pinned-time line around it. */
   backOverlay?: ReactNode;
@@ -38,6 +55,11 @@ type Props = {
   /** Embedded mode (the theorizer card) constrains height instead of filling
    *  the timeline tab. */
   embedded?: boolean;
+  /** At least one of this consumer's comparison lanes is pinned right now
+   *  (`.tl-row.pinned` on the lane) — adds `.tl-pinned` to the grid for the
+   *  pinned-mode layering rules. Each lane's pin is the consumer's own toggle,
+   *  rendered in its label. */
+  pinnedLanes?: boolean;
 };
 
 /** The shared timeline chrome: toolbar (zoom / filter / help + an extra slot),
@@ -52,17 +74,22 @@ export const TimelineShell = ({
   setFilter,
   hasRefs,
   toolbarExtra,
+  belowToolbar,
   helpText,
   axisMarks,
+  flags,
+  labelWidth = 140,
   backOverlay,
   lanes,
   frontOverlay,
   bubble,
   scrollRef,
   embedded,
+  pinnedLanes,
 }: Props) => {
   const [filterOpen, setFilterOpen] = useState(false);
   const [pinnedSec, setPinnedSec] = useState<number | null>(null);
+  const hasFlagBand = flags !== undefined;
 
   // Crosshair is updated imperatively on mousemove so hundreds of casts don't
   // re-render on every pointer tick.
@@ -73,7 +100,16 @@ export const TimelineShell = ({
   const { xOf, secOf, stripWidth, prezoneSec } = scale;
   // Overlay bands (downtime + death + cursor) live in absolutely-positioned
   // layers spanning every lane. `left`/`width` match the strip column.
-  const overlayStyle: CSSProperties = { left: 140, width: stripWidth };
+  const overlayStyle: CSSProperties = { left: labelWidth, width: stripWidth };
+  // Geometry the stylesheet derives every sticky offset from (axis top,
+  // overlay tops, pinned-lane tops, ruler/sort-note indents).
+  const shellVars = {
+    '--tl-label-w': `${labelWidth}px`,
+    '--tl-flag-h': `${hasFlagBand ? FLAG_BAND_H : 0}px`,
+  } as CSSProperties;
+  // The band owns pre-pull flagging, so the axis drops its negative ticks —
+  // a flag next to a tick label is exactly the collision the band exists to avoid.
+  const axisTicks = hasFlagBand ? scale.ticks.filter((s) => s >= 0) : scale.ticks;
 
   // --- Crosshair (imperative) ----------------------------------------------
   const moveCursor = (clientX: number) => {
@@ -105,7 +141,7 @@ export const TimelineShell = ({
     // Clicking a cast / marker (or the bubble) shouldn't drop a pin.
     if (
       (e.target as HTMLElement).closest(
-        '.cast, .diff-bubble, .tl-ghost, .tl-idle, .tl-clip, .tl-band, .tl-phase-band, .tl-death-flag, .tl-mt-flag, .tl-buff-flag',
+        '.cast, .diff-bubble, .tl-ghost, .tl-idle, .tl-clip, .tl-band, .tl-phase-band, .tl-flag',
       )
     )
       return;
@@ -119,7 +155,7 @@ export const TimelineShell = ({
   };
 
   return (
-    <div className={`timeline-shell${embedded ? ' embedded' : ''}`}>
+    <div className={`timeline-shell${embedded ? ' embedded' : ''}`} style={shellVars}>
       <div className="timeline-toolbar">
         {toolbarExtra}
         <div className="row" style={{ marginLeft: 'auto', gap: 6 }}>
@@ -177,6 +213,7 @@ export const TimelineShell = ({
           </button>
         </div>
       </div>
+      {belowToolbar}
       <div
         className="timeline-scroll"
         ref={scrollRef}
@@ -184,7 +221,7 @@ export const TimelineShell = ({
         onMouseLeave={hideCursor}
         onClick={onStripClick}
       >
-        <div className="timeline">
+        <div className={`timeline${pinnedLanes ? ' tl-pinned' : ''}`}>
           {/* Behind-casts overlay: pre-pull shade, caller zones, pinned-time line.
               Downtime bands live in the FRONT overlay so they can be hovered (the
               strips would otherwise capture the pointer over the band). */}
@@ -199,13 +236,36 @@ export const TimelineShell = ({
             {pinnedSec != null && <div className="tl-pin-line" style={{ left: xOf(pinnedSec) }} />}
           </div>
 
-          <div />
+          {/* Flag band: cast flags in their own sticky row so they never fight
+              the tick labels for space. The gutter cell carries the pre-pull
+              pin; the strip cell carries the caller's chips. */}
+          {hasFlagBand && (
+            <>
+              <div className="tl-flag-corner">
+                {prezoneSec > 0 && (
+                  <span className="tl-prepull-chip" title="Pre-pull casts start here">
+                    <Flag size={9} /> {fmtTick(-prezoneSec)}
+                  </span>
+                )}
+              </div>
+              <div
+                className="tl-flagband"
+                style={{ width: stripWidth, minWidth: '100%', position: 'sticky' }}
+              >
+                {flags}
+              </div>
+            </>
+          )}
+
+          {/* Corner cell (axis row × label gutter): sticky + opaque so scrolling
+              lane labels never surface in the band above the pinned labels. */}
+          <div className="tl-corner" />
           <div
             className="tl-axis"
             ref={axisRef}
             style={{ width: stripWidth, minWidth: '100%', position: 'sticky' }}
           >
-            {scale.ticks.map((s) => (
+            {axisTicks.map((s) => (
               <div
                 key={s}
                 className={`tick${s === 0 && prezoneSec > 0 ? ' pull' : ''}`}

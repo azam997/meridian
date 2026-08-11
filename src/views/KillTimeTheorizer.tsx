@@ -1,13 +1,17 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Clock, FlaskConical, Play, Swords, Target, Users } from 'lucide-react';
-import { jobColor, jobIcon } from '../components/jobs';
+import { useEffect, useMemo, useState, type MouseEvent as ReactMouseEvent } from 'react';
+import { ChevronDown, Pin, Play, Users } from 'lucide-react';
+import { groupJobsByRole } from '../components/jobs';
+import { JobTile } from '../components/JobTile';
+import { EncounterPicker } from '../components/EncounterPicker';
 import { TimelineShell, type FilterState } from '../components/timeline/TimelineShell';
 import { TimelineCast } from '../components/timeline/TimelineCast';
 import { clampBubbleLeft, useTimelineScale } from '../components/timeline/scale';
 import { fmtClock, fmtDuration, fmtNum } from '../format';
 import { sidecar } from '../sidecar';
+import { nonRotationalNames } from '../jobs';
 import type {
   AbilityMetaJson,
+  CastEvent,
   Catalog,
   TheorizeResult,
 } from '../sidecar/contract';
@@ -30,6 +34,8 @@ const DEFAULT_KILL_SEC = 480; // 8:00 — neutral starting point when nothing se
 const KT_SLIDER_MIN = 60;
 const KT_SLIDER_MAX = 900;
 const KT_SLIDER_STEP = 5;
+// Reference lanes rendered before the "Show N more references" disclosure.
+const REFS_COLLAPSED = 4;
 
 /** Parse "mm:ss" or a plain seconds count into seconds; null when unparseable. */
 function parseClock(raw: string): number | null {
@@ -41,40 +47,106 @@ function parseClock(raw: string): number | null {
   return null;
 }
 
-/** FFLogs job names are spaceless ("RedMage", "BlackMage"); space them for the
- *  comp chips so they read naturally. */
+/** FFLogs job names are spaceless ("RedMage", "BlackMage"); space them so they
+ *  read naturally and match the JOB_META keys. */
 const prettyJob = (j: string): string => j.replace(/([a-z])([A-Z])/g, '$1 $2');
 
-// --- Ideal-rotation timeline ------------------------------------------------
+// --- Rotation timeline ------------------------------------------------------
 
 const THEORIZE_HELP =
-  'Hover casts, downtime bands, and raid-buff windows for details.\n' +
+  'Hover casts, downtime bands, and raid-buff flags for details.\n' +
   'oGCDs ride the upper band, GCDs the lower.\n' +
+  'Reference lanes stack below the ideal line, in ranking order (top 10 by rDPS).\n' +
   'Click empty track to pin a time; click again to clear.\n' +
   'Gridlines mark the axis ticks.';
 
-/** Which window the pointer is over (drives the info bubble). */
-type ThHover = { kind: 'down' | 'buff'; idx: number };
+/** Which window the pointer is over (drives the info bubble). `scrollTop` is
+ *  the strip's vertical scroll captured at enter time — the bubble overlay
+ *  scrolls with the grid while the flag band / axis stay stuck, so a bubble
+ *  parked near the top of the plot adds it to stay in view. */
+type ThHover = { kind: 'down' | 'buff'; idx: number; scrollTop: number };
 
-/** The theorized ideal rotation, rendered with the full Timeline-page chrome
- *  (zoom / filter / crosshair / pin / hover bubbles) via the shared
- *  `TimelineShell` — a complete replica of the Timeline view, with a single
- *  "Ideal rotation" lane plus this view's raid-buff windows behind the casts. */
+/** Vertical scroll of the surrounding strip at hover time. */
+const scrollTopOf = (e: ReactMouseEvent): number =>
+  e.currentTarget.closest('.timeline-scroll')?.scrollTop ?? 0;
+
+/** Resolve a cast's display name: prefer the metadata map, else the tooltip's
+ *  leading token (how name-only casts arrive). Mirrors TimelineView. */
+function castDisplayName(c: CastEvent, abilityMeta: Record<number, AbilityMetaJson>): string {
+  if (c.abilityId != null) {
+    const n = abilityMeta[c.abilityId]?.name;
+    if (n) return n;
+  }
+  return c.tooltip?.split('  ')[0]?.trim() ?? '';
+}
+
+/** A cast belongs on the rotation lanes unless it's defensive/utility — the
+ *  backend `isDefensive` flag, or the shared name fallback for unresolved
+ *  casts. Mirrors TimelineView's ref-lane filtering. */
+const isRotational = (
+  c: CastEvent,
+  abilityMeta: Record<number, AbilityMetaJson>,
+  nonRotNames: Set<string>,
+): boolean => {
+  if (c.abilityId != null) {
+    const m = abilityMeta[c.abilityId];
+    if (m?.isDefensive) return false;
+    if (m) return true;
+  }
+  return !nonRotNames.has(castDisplayName(c, abilityMeta));
+};
+
+/** The theorized rotation with the full Timeline-page chrome: the ideal lane on
+ *  top (pinned by default), every reference kill stacked below it, the flag
+ *  band (POT + raid-buff chips), and the Burst-usage toggle — the same shell
+ *  the Timeline page uses. */
 const TheorizedTimeline = ({
   result,
   abilityMeta,
+  job,
 }: {
   result: TheorizeResult;
   abilityMeta: Record<number, AbilityMetaJson>;
+  job: string;
 }) => {
   const [zoom, setZoom] = useState(1);
   const [filter, setFilter] = useState<FilterState>({ gcd: true, ogcd: true, refs: true });
   const [hover, setHover] = useState<ThHover | null>(null);
+  const [burstMode, setBurstMode] = useState<'sim' | 'canonical'>('sim');
+  const [showAllRefs, setShowAllRefs] = useState(false);
+  // The ideal lane's pin toggle (in its label): pinned parks it under the axis
+  // while the reference lanes scroll. Default pinned.
+  const [pinIdeal, setPinIdeal] = useState(true);
 
-  const casts = result.timeline;
-  // Single lane; extend the strip to at least the target kill time so its axis
-  // marker is always reachable even past the last cast.
-  const laneCasts = useMemo(() => [casts], [casts]);
+  const canonical = result.timelineCanonical ?? [];
+  const hasCanonical = canonical.length > 0;
+  const casts = burstMode === 'canonical' && hasCanonical ? canonical : result.timeline;
+
+  // Reference lanes: rotational casts only, in the backend's ranking order
+  // (top 10 by rDPS — the lane rank matches the FFLogs ranking).
+  const nonRotNames = useMemo(() => nonRotationalNames(job), [job]);
+  const refLanes = useMemo(
+    () =>
+      (result.refs ?? [])
+        .map((r) => ({
+          name: (r.label ?? '').replace(/^#\d+\s*/, ''),
+          eff: r.efficiencyPct,
+          kill: r.killTimeSec,
+          track: (r.abilitiesTrack ?? []).filter((c) => isRotational(c, abilityMeta, nonRotNames)),
+          pots: r.tinctureWindows ?? [],
+        }))
+        .filter((r) => r.track.length > 0),
+    [result.refs, abilityMeta, nonRotNames],
+  );
+  const visibleRefs = showAllRefs ? refLanes : refLanes.slice(0, REFS_COLLAPSED);
+  const hiddenRefs = refLanes.length - visibleRefs.length;
+
+  // Scale over EVERY ref lane (not just the visible ones) so disclosing the
+  // rest never re-scales the strip.
+  const laneCasts = useMemo(
+    () => [casts, ...refLanes.map((r) => r.track)],
+    [casts, refLanes],
+  );
   const scale = useTimelineScale(zoom, laneCasts, result.targetKillSec);
   const { xOf, pxPerSec, stripWidth, stripStyle } = scale;
   const bandVisible = (isOgcd: boolean) => (isOgcd ? filter.ogcd : filter.gcd);
@@ -88,8 +160,62 @@ const TheorizedTimeline = ({
     { sec: result.targetKillSec, label: fmtClock(result.targetKillSec), className: 'target' },
   ];
 
-  // Raid-buff windows — an accent wash behind the casts (like the Timeline's
-  // multi-target zones) so burst visibly aligns into them.
+  // Burst usage — Simulated (throughput-optimal) vs Canonical (standard 2-min
+  // burst timing). Same control as the Timeline page; only shown when a comp
+  // gives the sim buff windows to hold for.
+  const toolbarExtra = hasCanonical ? (
+    <div className="row" style={{ gap: 8, alignItems: 'center' }}>
+      <span className="mut" style={{ fontSize: 11.5 }}>Burst usage</span>
+      <div className="segctrl">
+        <button
+          className={burstMode === 'sim' ? 'on' : ''}
+          onClick={() => setBurstMode('sim')}
+          title="The simulator tends to estimate immediate burst usage generates more potency than during buff use — especially in a weak party buff scenario."
+        >
+          Simulated
+        </button>
+        <button
+          className={burstMode === 'canonical' ? 'on' : ''}
+          onClick={() => setBurstMode('canonical')}
+          title="Force the simulator to use standard opener burst timing."
+        >
+          Canonical
+        </button>
+      </div>
+    </div>
+  ) : undefined;
+
+  // Flag band: POT chips at each ideal tincture window + raid-buff chips at
+  // each modeled window start. The zone fills stay behind the casts.
+  const flags = (
+    <>
+      {pots.map((w, i) => (
+        <div
+          key={`pot${i}`}
+          className="tl-flag pot"
+          style={{ left: xOf(w.startSec) }}
+          title={`Tincture ×${w.multiplier.toFixed(3)} (${fmtClock(w.startSec)}–${fmtClock(w.endSec)})`}
+        >
+          pot
+        </div>
+      ))}
+      {buffs.map((w, i) => (
+        <div
+          key={`bf${i}`}
+          className={`tl-flag buff${hover?.kind === 'buff' && hover.idx === i ? ' on' : ''}`}
+          style={{ left: xOf(w.startSec) }}
+          onMouseEnter={(e) => setHover({ kind: 'buff', idx: i, scrollTop: scrollTopOf(e) })}
+          onMouseLeave={() => setHover(null)}
+        >
+          <Users size={9} />
+          <span>×{w.multiplier.toFixed(2)}</span>
+        </div>
+      ))}
+    </>
+  );
+
+  // Raid-buff windows — an accent wash behind the casts so burst visibly
+  // aligns into them.
   const backOverlay = buffs.map((w, i) => (
     <div
       key={`buff${i}`}
@@ -98,40 +224,150 @@ const TheorizedTimeline = ({
     />
   ));
 
+  const renderCasts = (track: CastEvent[], keyPfx: string) =>
+    track.map((c, i) => {
+      if (!bandVisible(c.yOffset < 0)) return null;
+      const meta = c.abilityId != null ? abilityMeta[c.abilityId] : undefined;
+      return (
+        <TimelineCast
+          key={`${keyPfx}${i}`}
+          cast={c}
+          meta={meta}
+          scale={scale}
+          title={`${meta?.name ?? c.tooltip} @ ${c.startSec.toFixed(1)}s`}
+        />
+      );
+    });
+
   const lanes = (
-    <div className="tl-row ideal">
-      <div className="label">
-        <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-          Ideal rotation
-        </span>
-        <span className="badge">Sim</span>
+    <>
+      <div className={`tl-row ideal${pinIdeal ? ' pinned' : ''}`}>
+        <div className="label">
+          <div className="lbl-lines">
+            <span className="lbl-name">
+              {burstMode === 'canonical' && hasCanonical ? 'Ideal (canonical)' : 'Ideal rotation'}
+            </span>
+            <span className="lbl-meta">
+              <span className="badge">Sim</span>
+              <span className="meta-txt">
+                {fmtClock(result.targetKillSec)} · {fmtNum(Math.round(result.idealizedPotency))}p
+              </span>
+            </span>
+            {refLanes.length > 0 && (
+              <button
+                className={`tl-lane-pin${pinIdeal ? ' on' : ''}`}
+                aria-pressed={pinIdeal}
+                title="Keep this lane parked under the axis while the reference lanes scroll"
+                onClick={() => setPinIdeal((v) => !v)}
+              >
+                <Pin size={9} />
+                {pinIdeal ? 'Pinned' : 'Pin'}
+              </button>
+            )}
+          </div>
+          <span className="band-lbl ogcd">oGCD</span>
+          <span className="band-lbl gcd">GCD</span>
+        </div>
+        <div className="strip" style={stripStyle}>
+          {/* Pinned strips are opaque (they park over scrolling refs), so the
+              overlay bands can't show through — re-render the context bands
+              inside the strip, exactly like the Timeline page's stripTints.
+              Gated on the pin toggle: unpinned, the real bands show through. */}
+          {pinIdeal && refLanes.length > 0 && (
+            <>
+              {scale.prezoneSec > 0 && (
+                <div className="tl-strip-tint prezone" style={{ left: 0, width: xOf(0) }} />
+              )}
+              {buffs.map((w, i) => (
+                <div
+                  key={`tb${i}`}
+                  className="tl-strip-tint buff"
+                  style={{ left: xOf(w.startSec), width: (w.endSec - w.startSec) * pxPerSec }}
+                />
+              ))}
+              {downtime.map((w, i) => (
+                <div
+                  key={`td${i}`}
+                  className={`tl-strip-tint down down-a${hover?.kind === 'down' && hover.idx === i ? ' on' : ''}`}
+                  style={{ left: xOf(w.startSec), width: (w.endSec - w.startSec) * pxPerSec }}
+                  onMouseEnter={(e) => setHover({ kind: 'down', idx: i, scrollTop: scrollTopOf(e) })}
+                  onMouseLeave={() => setHover(null)}
+                />
+              ))}
+            </>
+          )}
+          {pots.map((w, i) => (
+            <div
+              key={`pot${i}`}
+              className="tl-pot ideal"
+              title={`Tincture ×${w.multiplier.toFixed(3)}`}
+              style={{ left: xOf(w.startSec), width: (w.endSec - w.startSec) * pxPerSec }}
+            >
+              <span className="lbl">pot</span>
+            </div>
+          ))}
+          {renderCasts(casts, 'c')}
+        </div>
       </div>
-      <div className="strip" style={stripStyle}>
-        {pots.map((w, i) => (
-          <div
-            key={`pot${i}`}
-            className="tl-pot ideal"
-            title={`Tincture ×${w.multiplier.toFixed(3)}`}
-            style={{ left: xOf(w.startSec), width: (w.endSec - w.startSec) * pxPerSec }}
-          >
-            <span className="lbl">pot</span>
+
+      {refLanes.length > 0 && filter.refs && (
+        <div className="tl-row ref-divider">
+          <div className="label">{refLanes.length} references</div>
+          <div className="strip">
+            <span className="sort-note">top 10 by rDPS ↓</span>
+          </div>
+        </div>
+      )}
+      {filter.refs &&
+        visibleRefs.map((r, ri) => (
+          <div className="tl-row ref" key={`ref${ri}`}>
+            <div className="label" title={r.name}>
+              <div className="lbl-lines">
+                <span className="lbl-name mono">
+                  #{ri + 1} {r.eff > 0 ? `${r.eff.toFixed(1)}%` : ''}
+                </span>
+                <span className="lbl-meta">
+                  <span className="badge">Ref</span>
+                  <span className="meta-txt">kill {fmtClock(r.kill)}</span>
+                </span>
+              </div>
+              <span className="band-lbl ogcd">oGCD</span>
+              <span className="band-lbl gcd">GCD</span>
+            </div>
+            <div className="strip" style={stripStyle}>
+              {r.pots.map((w, i) => (
+                <div
+                  key={`rp${i}`}
+                  className="tl-pot ref"
+                  title={`Tincture ×${w.multiplier.toFixed(3)}`}
+                  style={{ left: xOf(w.startSec), width: (w.endSec - w.startSec) * pxPerSec }}
+                >
+                  <span className="lbl">pot</span>
+                </div>
+              ))}
+              {renderCasts(r.track, `r${ri}`)}
+            </div>
           </div>
         ))}
-        {casts.map((c, i) => {
-          if (!bandVisible(c.yOffset < 0)) return null;
-          const meta = c.abilityId != null ? abilityMeta[c.abilityId] : undefined;
-          return (
-            <TimelineCast
-              key={i}
-              cast={c}
-              meta={meta}
-              scale={scale}
-              title={`${meta?.name ?? c.tooltip} @ ${c.startSec.toFixed(1)}s`}
-            />
-          );
-        })}
-      </div>
-    </div>
+      {filter.refs && refLanes.length > REFS_COLLAPSED && (
+        <div className="tl-row refs-footer">
+          <div className="label" />
+          <div className="strip">
+            <span className="refs-footer-inner">
+              <button className="refs-more" onClick={() => setShowAllRefs((v) => !v)}>
+                {showAllRefs
+                  ? 'Show fewer references'
+                  : `Show ${hiddenRefs} more reference${hiddenRefs === 1 ? '' : 's'}`}
+                <ChevronDown size={11} className={showAllRefs ? 'flip' : undefined} />
+              </button>
+              <span className="refs-count mut">
+                {visibleRefs.length} of {refLanes.length} shown
+              </span>
+            </span>
+          </div>
+        </div>
+      )}
+    </>
   );
 
   const frontOverlay = (
@@ -142,34 +378,23 @@ const TheorizedTimeline = ({
           key={`dt${i}`}
           className={`tl-band tier-a${hover?.kind === 'down' && hover.idx === i ? ' on' : ''}`}
           style={{ left: xOf(w.startSec), width: (w.endSec - w.startSec) * pxPerSec }}
-          onMouseEnter={() => setHover({ kind: 'down', idx: i })}
+          onMouseEnter={(e) => setHover({ kind: 'down', idx: i, scrollTop: scrollTopOf(e) })}
           onMouseLeave={() => setHover(null)}
         />
-      ))}
-      {/* Raid-buff flags — a small hoverable chip at each window's start (the
-          zone fill is the back layer), mirroring the Timeline's multi-target flags. */}
-      {buffs.map((w, i) => (
-        <div key={`bf${i}`} className="tl-mt-mark" style={{ left: xOf(w.startSec) }}>
-          <div
-            className={`tl-buff-flag${hover?.kind === 'buff' && hover.idx === i ? ' on' : ''}`}
-            onMouseEnter={() => setHover({ kind: 'buff', idx: i })}
-            onMouseLeave={() => setHover(null)}
-          >
-            <Users size={10} />
-            <span>×{w.multiplier.toFixed(2)}</span>
-          </div>
-        </div>
       ))}
     </>
   );
 
   const bubble = (() => {
     if (!hover) return null;
+    // The bubble overlay scrolls with the grid; parking near the top of the
+    // VIEW means adding the scroll captured at hover time.
+    const bubTop = 30 + hover.scrollTop;
     if (hover.kind === 'down') {
       const w = downtime[hover.idx];
       if (!w) return null;
       return (
-        <div className="diff-bubble" style={{ left: clampBubbleLeft(xOf((w.startSec + w.endSec) / 2), stripWidth), top: 30 }}>
+        <div className="diff-bubble" style={{ left: clampBubbleLeft(xOf((w.startSec + w.endSec) / 2), stripWidth), top: bubTop }}>
           <div className="bub-head"><div><div className="bub-kind">Boss untargetable</div></div></div>
           <div className="bub-body">
             No enemy targetable from {fmtClock(w.startSec)} to {fmtClock(w.endSec)} ({fmtDuration(w.endSec - w.startSec)}).
@@ -181,7 +406,7 @@ const TheorizedTimeline = ({
     const w = buffs[hover.idx];
     if (!w) return null;
     return (
-      <div className="diff-bubble" style={{ left: clampBubbleLeft(xOf((w.startSec + w.endSec) / 2), stripWidth), top: 30 }}>
+      <div className="diff-bubble" style={{ left: clampBubbleLeft(xOf((w.startSec + w.endSec) / 2), stripWidth), top: bubTop }}>
         <div className="bub-head"><div><div className="bub-kind">Raid buffs ×{w.multiplier.toFixed(3)}</div></div></div>
         <div className="bub-body">
           {fmtClock(w.startSec)}–{fmtClock(w.endSec)} ({fmtDuration(w.endSec - w.startSec)}). Burst aligned into this
@@ -198,40 +423,41 @@ const TheorizedTimeline = ({
       setZoom={setZoom}
       filter={filter}
       setFilter={setFilter}
-      hasRefs={false}
+      hasRefs={refLanes.length > 0}
+      toolbarExtra={toolbarExtra}
       helpText={THEORIZE_HELP}
       axisMarks={axisMarks}
+      flags={flags}
+      labelWidth={200}
       backOverlay={backOverlay}
       lanes={lanes}
       frontOverlay={frontOverlay}
       bubble={bubble}
       embedded
+      pinnedLanes={pinIdeal && refLanes.length > 0}
     />
   );
 };
 
-// --- Spread sparkline ------------------------------------------------------
+// --- Spread bars ------------------------------------------------------------
 
-/** A tiny ideal-potency-vs-killtime curve across the sampled band. */
-const SpreadSparkline = ({ samples }: { samples: TheorizeResult['samples'] }) => {
+/** Ideal output across the sampled kill-time band, as a tiny bar row. */
+const SpreadBars = ({ samples }: { samples: TheorizeResult['samples'] }) => {
   if (samples.length < 2) return null;
-  const W = 132;
-  const H = 34;
-  const pad = 3;
   const ps = samples.map((s) => s.idealizedPotency);
   const lo = Math.min(...ps);
   const hi = Math.max(...ps);
   const span = hi - lo || 1;
-  const x = (i: number) => pad + (i / (samples.length - 1)) * (W - 2 * pad);
-  const y = (p: number) => H - pad - ((p - lo) / span) * (H - 2 * pad);
-  const pts = samples.map((s, i) => `${x(i).toFixed(1)},${y(s.idealizedPotency).toFixed(1)}`).join(' ');
   return (
-    <svg className="ktt-spark" width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-      <polyline points={pts} fill="none" stroke="var(--accent)" strokeWidth={1.5} />
+    <div className="ktt-bars" aria-hidden>
       {samples.map((s, i) => (
-        <circle key={i} cx={x(i)} cy={y(s.idealizedPotency)} r={1.6} fill="var(--accent)" />
+        <span
+          key={i}
+          style={{ height: 6 + ((s.idealizedPotency - lo) / span) * 26 }}
+          title={`${fmtClock(s.killSec)}: ${fmtNum(Math.round(s.idealizedPotency))}p`}
+        />
       ))}
-    </svg>
+    </div>
   );
 };
 
@@ -247,15 +473,20 @@ export const KillTimeTheorizer = ({ defaultJob, defaultEncounterId, defaultKillS
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [result, setResult] = useState<TheorizeResult | null>(null);
   // The input signature of the last successful run. When the current inputs drift
-  // from it, the result is stale and the Re-run button reappears.
+  // from it, the result is stale and the Run button reappears.
   const [lastRunKey, setLastRunKey] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState<{ pct: number; stage: string } | null>(null);
   const [error, setError] = useState<string | null>(null);
-  // Top-10 average kill time for the chosen (job, encounter), fetched ahead of a
-  // run so it can anchor the kill-time control as a tooltip. Keyed by the combo
-  // so it's only used when it matches the current selection (no reset needed).
-  const [refAvg, setRefAvg] = useState<{ key: string; sec: number } | null>(null);
+  // Reference facts for the chosen (job, encounter), fetched ahead of a run:
+  // per-ref kill times (the slider's tick marks) + the top comp (the
+  // provenance line), so both render before the first run. Keyed by the combo
+  // so a stale fetch for a different selection is ignored.
+  const [refInfo, setRefInfo] = useState<{
+    key: string;
+    ticks: number[];
+    comp: string[];
+  } | null>(null);
 
   // Catalog drives the job + encounter pickers (no character needed). Once it
   // lands, snap the job/encounter to valid choices (keeping passed defaults).
@@ -279,10 +510,8 @@ export const KillTimeTheorizer = ({ defaultJob, defaultEncounterId, defaultKillS
     };
   }, []);
 
-  // Pull the chosen (job, encounter)'s top-10 average kill time for the kill-time
-  // tooltip. Reuses the warm reference cache (instant when warmed on launch), so
-  // it's available before the user runs. Tagged with the combo key so a stale
-  // result for a different selection is ignored downstream.
+  // Warm the (job, encounter) reference set and keep its kill times + top comp
+  // for the slider ticks and the comp provenance. Instant when already warmed.
   useEffect(() => {
     if (!job || !encounterId) return;
     const key = `${job}|${encounterId}`;
@@ -290,7 +519,9 @@ export const KillTimeTheorizer = ({ defaultJob, defaultEncounterId, defaultKillS
     sidecar
       .prefetchRefs(job, encounterId, 'Top 10')
       .then((r) => {
-        if (alive) setRefAvg({ key, sec: r.avgKillSec || 0 });
+        if (alive) {
+          setRefInfo({ key, ticks: r.refKillTimesSec ?? [], comp: r.refPartyJobs ?? [] });
+        }
       })
       .catch(() => {});
     return () => {
@@ -301,6 +532,18 @@ export const KillTimeTheorizer = ({ defaultJob, defaultEncounterId, defaultKillS
   const providers = useMemo(() => catalog?.buffProviders ?? [], [catalog]);
   const encounters = useMemo(() => catalog?.encounters ?? [], [catalog]);
   const simJobs = useMemo(() => catalog?.simBackedJobs ?? [], [catalog]);
+  const roleGroups = useMemo(() => groupJobsByRole(simJobs), [simJobs]);
+
+  // Buff providers grouped by role for the tile strip. JOB_META keys are the
+  // spaced display names, so group by the pretty name and keep the raw FFLogs
+  // name (what the backend expects) alongside.
+  const providerGroups = useMemo(() => {
+    const rawByPretty = new Map(providers.map((p) => [prettyJob(p), p]));
+    return groupJobsByRole([...rawByPretty.keys()]).map((g) => ({
+      role: g.role,
+      jobs: g.jobs.map((pretty) => ({ pretty, raw: rawByPretty.get(pretty) ?? pretty })),
+    }));
+  }, [providers]);
 
   const target = parseClock(raw);
   const targetValid = target != null && target >= 30 && target <= 1800;
@@ -308,7 +551,7 @@ export const KillTimeTheorizer = ({ defaultJob, defaultEncounterId, defaultKillS
 
   // Signature of the inputs that define a result. When it differs from the last
   // run (or there's been no run), the displayed result is stale → show the
-  // Start/Re-run button; once a run matches the inputs, the button hides.
+  // Run button; once a run matches the inputs, the button hides.
   const runKey = `${job}|${encounterId}|${target}|${[...selected].sort().join(',')}`;
   const dirty = lastRunKey === null || lastRunKey !== runKey;
 
@@ -319,11 +562,11 @@ export const KillTimeTheorizer = ({ defaultJob, defaultEncounterId, defaultKillS
     Math.max(KT_SLIDER_MIN, target ?? DEFAULT_KILL_SEC),
   );
 
-  // Top-10 average kill time to anchor the kill-time control — only when the
-  // proactive fetch matches the current (job, encounter). Surfaced as a tooltip.
-  const refAvgSec = refAvg && refAvg.key === `${job}|${encounterId}` ? refAvg.sec : 0;
-  const avgTip =
-    refAvgSec > 0 ? `Top 10 reference average kill time: ${fmtClock(refAvgSec)}` : undefined;
+  // Reference kill times for the current combo — the slider's tick marks.
+  const refTicks =
+    refInfo && refInfo.key === `${job}|${encounterId}`
+      ? refInfo.ticks.filter((t) => t >= KT_SLIDER_MIN && t <= KT_SLIDER_MAX)
+      : [];
 
   const mergedMeta = useMemo(() => result?.abilityMeta ?? {}, [result]);
 
@@ -372,94 +615,92 @@ export const KillTimeTheorizer = ({ defaultJob, defaultEncounterId, defaultKillS
     : 0;
 
   // The top references' comp (providers only) — offered as a one-click fill.
-  const refProviders = useMemo(
-    () => (result?.refPartyJobs ?? []).filter((j) => providers.includes(j)),
-    [result, providers],
-  );
+  // After a run, the theorize response's closest-to-target comp wins; before
+  // one, the prefetched top-ref comp fills in.
+  const refProviders = useMemo(() => {
+    const src =
+      result?.refPartyJobs ??
+      (refInfo && refInfo.key === `${job}|${encounterId}` ? refInfo.comp : []);
+    return src.filter((j) => providers.includes(j));
+  }, [result, refInfo, job, encounterId, providers]);
 
   return (
-    <div className="content">
-      <div className="card ktt-card">
-        <div className="card-head">
-          <FlaskConical size={14} />
-          <h2>Kill time theorizer</h2>
-          <span className="sub" style={{ marginLeft: 'auto' }}>
-            Ideal rotation for a hypothetical kill time
-          </span>
-        </div>
-        <div className="card-body">
-          <p className="mut" style={{ fontSize: 12.5, margin: '0 0 14px' }}>
-            Pick a job, encounter, kill time, and party buffs, then run — the sim
-            builds the best possible rotation and output for that kill, using the
-            fight’s real downtime (derived from this encounter’s top reference
-            logs). No character or prior analysis required.
+    <div className="content wide ktt-page">
+      <div className="page-title-row">
+        <div>
+          <h1>Kill time theorizer</h1>
+          <p className="page-meta">
+            The best possible rotation for a hypothetical kill, built on the fight's real
+            downtime from its top reference logs. No character or prior analysis required.
           </p>
+        </div>
+        <div className="ktt-head-right">
+          {dirty && lastRunKey != null && <span className="setup-dirty">Inputs changed</span>}
+          {(dirty || loading) && (
+            <button className="btn primary" disabled={!canRun} onClick={() => void run()}>
+              <Play size={13} />
+              {loading ? 'Running…' : 'Run sim'}
+            </button>
+          )}
+        </div>
+      </div>
 
-          <div className="ktt-form">
-            {/* Job — a responsive grid that expands (wraps to more rows) as more
-                jobs gain simulator support. */}
-            <div className="ktt-field-block">
-              <span className="field-label">
-                <Swords size={12} /> Job
-              </span>
-              <div className="job-grid">
-                {simJobs.length === 0 ? (
-                  <span className="mut" style={{ fontSize: 12 }}>Loading jobs…</span>
-                ) : (
-                  simJobs.map((j) => {
-                    const icon = jobIcon(j);
-                    return (
-                      <button
-                        key={j}
-                        className={'btn job-tile ' + (job === j ? 'primary' : '')}
-                        onClick={() => setJob(j)}
-                      >
-                        {icon ? (
-                          <img src={icon} alt="" width={22} height={22} draggable={false} className="job-tile-icon" />
-                        ) : (
-                          <span className="job-tile-icon" style={{ background: jobColor(j) }} />
-                        )}
-                        <span className="job-tile-label">{j}</span>
-                      </button>
-                    );
-                  })
-                )}
-              </div>
-            </div>
-
-            {/* Encounter — vertical stack (label over a full-width select). */}
-            <div className="ktt-field-block">
-              <span className="field-label">
-                <Target size={12} /> Encounter
-              </span>
-              <select
-                className="select"
-                value={encounterId}
-                onChange={(e) => setEncounterId(Number(e.target.value))}
-              >
-                {encounters.length === 0 && <option value={0}>Loading…</option>}
-                {encounters.map((e) => (
-                  <option key={e.id} value={e.id}>{e.name}</option>
+      <div className="setup-panel">
+        <div className="setup-row">
+          <span className="setup-label">Job</span>
+          <div className="setup-controls">
+            {roleGroups.length === 0 ? (
+              <span className="mut" style={{ fontSize: 12 }}>Loading jobs…</span>
+            ) : (
+              <div className="job-rail">
+                {roleGroups.map((g) => (
+                  <div className="job-rail-group" key={g.role}>
+                    {g.jobs.map((j) =>
+                      j === job ? (
+                        <button className="job-pill" key={j} onClick={() => setJob(j)}>
+                          <JobTile job={j} size={26} iconInset={2} />
+                          <span>{j}</span>
+                        </button>
+                      ) : (
+                        <button className="job-cell" key={j} title={j} onClick={() => setJob(j)}>
+                          <JobTile job={j} size={34} />
+                        </button>
+                      ),
+                    )}
+                  </div>
                 ))}
-              </select>
-            </div>
+              </div>
+            )}
+          </div>
+        </div>
 
-            {/* Kill time — the centerpiece: a large input paired with a slider. */}
-            <div className="ktt-field-block">
-              <span className="field-label" title={avgTip}>
-                <Clock size={12} /> Kill time
-              </span>
-              <div className="ktt-killtime" title={avgTip}>
-                <input
-                  className={`ktt-input ktt-killtime-input${!targetValid && raw ? ' invalid' : ''}`}
-                  value={raw}
-                  onChange={(e) => setRaw(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' && canRun && dirty) void run();
-                  }}
-                  inputMode="numeric"
-                  spellCheck={false}
-                />
+        <div className="setup-row">
+          <span className="setup-label">Encounter</span>
+          <div className="setup-controls">
+            <EncounterPicker
+              encounters={encounters}
+              encounterId={encounterId}
+              onPick={setEncounterId}
+            />
+          </div>
+        </div>
+
+        <div className="setup-row">
+          <span className="setup-label">Kill time</span>
+          <div className="setup-controls">
+            <div className="ktt-killtime">
+              <input
+                className={`ktt-input ktt-killtime-input${!targetValid && raw ? ' invalid' : ''}`}
+                value={raw}
+                onChange={(e) => setRaw(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && canRun && dirty) void run();
+                }}
+                inputMode="numeric"
+                spellCheck={false}
+              />
+              <span className="ktt-slider-end mono">{fmtClock(KT_SLIDER_MIN)}</span>
+              <div className="ktt-slider-wrap">
                 <input
                   type="range"
                   className="ktt-slider"
@@ -470,37 +711,58 @@ export const KillTimeTheorizer = ({ defaultJob, defaultEncounterId, defaultKillS
                   onChange={(e) => setRaw(fmtClock(Number(e.target.value)))}
                   aria-label="Kill time"
                 />
+                <div className="ktt-slider-ticks">
+                  {refTicks.map((t, i) => (
+                    <span
+                      key={i}
+                      title={fmtClock(t)}
+                      style={{
+                        left: `${((t - KT_SLIDER_MIN) / (KT_SLIDER_MAX - KT_SLIDER_MIN)) * 100}%`,
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
-              <span className="ktt-hint">
-                m:ss · drag or type · {fmtClock(KT_SLIDER_MIN)}–{fmtClock(KT_SLIDER_MAX)} · evaluates ±{RANGE_SEC / 2}s
-              </span>
+              <span className="ktt-slider-end mono">{fmtClock(KT_SLIDER_MAX)}</span>
             </div>
+            <span className="setup-hint">
+              {refTicks.length > 0
+                ? `ticks are the ${refTicks.length} reference kills · evaluates ±${RANGE_SEC / 2}s`
+                : `m:ss · drag or type · evaluates ±${RANGE_SEC / 2}s`}
+            </span>
+          </div>
+        </div>
 
-            {/* Party buffs. */}
-            <div className="ktt-field-block">
-              <span className="field-label">
-                <Users size={12} /> Party buffs
-              </span>
-              <div className="ktt-chips">
-                {providers.length === 0 ? (
-                  <span className="mut" style={{ fontSize: 12 }}>Loading providers…</span>
-                ) : (
-                  providers.map((p) => (
-                    <button
-                      key={p}
-                      className={`ktt-chip${selected.has(p) ? ' on' : ''}`}
-                      onClick={() => toggle(p)}
-                      type="button"
-                    >
-                      {prettyJob(p)}
-                    </button>
-                  ))
-                )}
+        <div className="setup-row">
+          <span className="setup-label">Party buffs</span>
+          <div className="setup-controls">
+            {providerGroups.length === 0 ? (
+              <span className="mut" style={{ fontSize: 12 }}>Loading providers…</span>
+            ) : (
+              <div className="job-rail buffs">
+                {providerGroups.map((g) => (
+                  <div className="job-rail-group" key={g.role}>
+                    {g.jobs.map(({ pretty, raw: rawName }) => (
+                      <button
+                        key={rawName}
+                        className={`job-cell buff${selected.has(rawName) ? ' on' : ''}`}
+                        title={pretty}
+                        onClick={() => toggle(rawName)}
+                        type="button"
+                      >
+                        <JobTile job={pretty} size={32} />
+                      </button>
+                    ))}
+                  </div>
+                ))}
               </div>
-              {refProviders.length > 0 && (
-                <div className="ktt-refcomp mut">
-                  Top references ran {refProviders.map(prettyJob).join(' · ')}
-                  {' '}
+            )}
+            {refProviders.length > 0 && (
+              <>
+                <span className="enc-tabs-rule" />
+                <span className="ktt-refcomp mut">
+                  Top references ran{' '}
+                  <strong>{refProviders.map(prettyJob).join(' · ')}</strong>{' '}
                   <button
                     className="ktt-linkbtn"
                     type="button"
@@ -508,66 +770,73 @@ export const KillTimeTheorizer = ({ defaultJob, defaultEncounterId, defaultKillS
                   >
                     use this comp
                   </button>
-                </div>
-              )}
-            </div>
-
-            {/* Run / Re-run — below all the parameters. */}
-            {(dirty || loading) && (
-              <div className="ktt-run-row">
-                <button className="btn primary ktt-run" disabled={!canRun} onClick={() => void run()}>
-                  <Play size={13} />
-                  {loading ? 'Running…' : lastRunKey ? 'Re-run analysis' : 'Start analysis'}
-                </button>
-              </div>
+                </span>
+              </>
             )}
           </div>
-
-          {loading && progress && (
-            <div className="ktt-progress">
-              <div className="ktt-progress-track">
-                <div className="ktt-progress-bar" style={{ width: `${progress.pct}%` }} />
-              </div>
-              <span className="ktt-progress-lbl mut">{progress.stage}</span>
-            </div>
-          )}
-
-          {error && (
-            <div className="ktt-error" role="alert">
-              {error}
-            </div>
-          )}
-
-          {result && !result.unsupported && (
-            <div className="ktt-result">
-              <div className="ktt-summary">
-                <div className="ktt-headline">
-                  <div className="ktt-big">
-                    {fmtNum(Math.round(result.idealizedPotency))}
-                    <span className="ktt-unit">p</span>
-                  </div>
-                  <div className="ktt-sub">
-                    ideal output @ {fmtClock(result.targetKillSec)}
-                    {selected.size > 0 ? ` · ${selected.size}-buff comp` : ' · no raid buffs'}
-                  </div>
-                  <div className="ktt-note mut">
-                    {result.downtimeSource === 'references'
-                      ? `Downtime from ${result.refCount} top ${job} log${result.refCount === 1 ? '' : 's'} (closest kill ${fmtClock(result.refKillTimeSec)}).`
-                      : 'No reference downtime for this encounter — modeling pure uptime.'}
-                  </div>
-                </div>
-                <div className="ktt-spread">
-                  <SpreadSparkline samples={result.samples} />
-                  <div className="ktt-spread-lbl mut">
-                    {fmtNum(Math.round(spreadLo))}–{fmtNum(Math.round(spreadHi))}p across ±{RANGE_SEC / 2}s
-                  </div>
-                </div>
-              </div>
-              <TheorizedTimeline result={result} abilityMeta={mergedMeta} />
-            </div>
-          )}
         </div>
       </div>
+
+      {loading && progress && (
+        <div className="ktt-progress">
+          <div className="ktt-progress-track">
+            <div className="ktt-progress-bar" style={{ width: `${progress.pct}%` }} />
+          </div>
+          <span className="ktt-progress-lbl mut">{progress.stage}</span>
+        </div>
+      )}
+
+      {error && (
+        <div className="ktt-error" role="alert">
+          {error}
+        </div>
+      )}
+
+      {result && !result.unsupported && (
+        <>
+          <div className="ktt-strip">
+            <div className="ktt-big">
+              {fmtNum(Math.round(result.idealizedPotency))}
+              <span className="ktt-unit">p</span>
+            </div>
+            <div className="ktt-strip-caption">
+              <div className="ktt-sub">
+                ideal output @ {fmtClock(result.targetKillSec)}
+                {selected.size > 0 ? ` · ${selected.size}-buff comp` : ' · no raid buffs'}
+              </div>
+              <div className="ktt-note mut">
+                {result.downtimeSource === 'references'
+                  ? `Downtime derived from ${result.refCount} top ${job} log${result.refCount === 1 ? '' : 's'} · closest reference kill ${fmtClock(result.refKillTimeSec)}`
+                  : 'No reference downtime for this encounter · modeling pure uptime'}
+              </div>
+            </div>
+            <div className="ktt-spread">
+              <SpreadBars samples={result.samples} />
+              <span className="ktt-spread-lbl mut">
+                {fmtNum(Math.round(spreadLo))}–{fmtNum(Math.round(spreadHi))}p across ±{RANGE_SEC / 2}s
+              </span>
+            </div>
+            <div className="ktt-pills">
+              {result.downtimeSource === 'references' && (
+                <span className="ktt-pill">{result.refCount} references</span>
+              )}
+              <span className="ktt-pill">
+                {result.downtimeWindows.length} downtime window{result.downtimeWindows.length === 1 ? '' : 's'}
+              </span>
+            </div>
+          </div>
+
+          <div className="ktt-rotation-head">
+            <span className="ktt-rotation-title">Rotation</span>
+            <span className="ktt-rotation-sub mut">
+              the ideal line against every reference kill · same timeline as Analysis
+            </span>
+          </div>
+          <div className="ktt-rotation">
+            <TheorizedTimeline result={result} abilityMeta={mergedMeta} job={job} />
+          </div>
+        </>
+      )}
     </div>
   );
 };

@@ -4,6 +4,7 @@
 
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { logEvent } from '../log';
+import { GENERAL_FEEDBACK_ENTRY } from '../featureFlags';
 
 type Props = { children: ReactNode };
 type State = { error: Error | null };
@@ -32,9 +33,10 @@ export class ErrorBoundary extends Component<Props, State> {
         <div className="card" style={{ maxWidth: 460, textAlign: 'center', padding: 24 }}>
           <h2>Something went wrong</h2>
           <p className="mut" style={{ margin: '12px 0 20px' }}>
-            The view crashed unexpectedly. The error was recorded in the app's
-            event log — if it keeps happening, please send it our way via
-            Submit Feedback after reloading.
+            The view crashed unexpectedly. The error was recorded in the
+            app's event log.
+            {GENERAL_FEEDBACK_ENTRY &&
+              ' If it keeps happening, please send it our way via Submit Feedback after reloading.'}
           </p>
           <button className="btn" onClick={() => window.location.reload()}>
             Reload

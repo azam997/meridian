@@ -68,6 +68,7 @@ def main() -> int:
     print("Test: Machinist returns a well-formed result")
     r = _ideal("Machinist", 400.0)
     for key in ("targetKillSec", "idealizedPotency", "timeline",
+                "timelineCanonical", "refs",
                 "downtimeWindows", "buffWindows", "tinctureWindows",
                 "samples", "abilityMeta", "downtimeSource", "refCount",
                 "refKillTimeSec", "refPartyJobs"):
@@ -77,6 +78,10 @@ def main() -> int:
     _check("not flagged unsupported", not r.get("unsupported"))
     _check("explicit-downtime override → downtimeSource 'explicit'",
            r["downtimeSource"] == "explicit", str(r["downtimeSource"]))
+    _check("refs empty on the explicit-downtime (offline) path",
+           r["refs"] == [], str(r["refs"])[:80])
+    _check("timelineCanonical empty without raid buffs (nothing to hold for)",
+           r["timelineCanonical"] == [], str(len(r["timelineCanonical"])))
 
     print()
     print("Test: the ~7s spread is sampled around the target")
@@ -104,11 +109,19 @@ def main() -> int:
     print()
     print("Test: a buff-bringing comp raises the ceiling")
     no_buff = _ideal("Machinist", 400.0, party=[])["idealizedPotency"]
-    buffed = _ideal("Machinist", 400.0,
-                    party=["Bard", "Dragoon", "Ninja"])["idealizedPotency"]
+    buffed_r = _ideal("Machinist", 400.0, party=["Bard", "Dragoon", "Ninja"])
+    buffed = buffed_r["idealizedPotency"]
     _check("buffed > no-buff", buffed > no_buff, f"{buffed} vs {no_buff}")
     _check("buffWindows present when comp given",
            len(_ideal("Machinist", 400.0, party=["Bard"])["buffWindows"]) > 0)
+
+    print()
+    print("Test: canonical burst lane present when a comp gives buff windows")
+    _check("timelineCanonical non-empty with comp",
+           len(buffed_r["timelineCanonical"]) > 0)
+    _check("canonical casts covered by abilityMeta",
+           all((not c["abilityId"]) or c["abilityId"] in buffed_r["abilityMeta"]
+               for c in buffed_r["timelineCanonical"]))
 
     print()
     print("Test: the target is clamped to [30, 1800]")

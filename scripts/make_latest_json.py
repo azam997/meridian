@@ -13,9 +13,15 @@ Release notes come from `src/data/changelog.json` — the SAME file the app
 bundles for its "What's new" popup and Version history tab, so a release is
 written once. This script renders that entry to markdown (`release-notes.md`,
 for `gh release create --notes-file`) and puts its one-line `summary` in the
-feed's `notes` (what the in-app update pill shows as its tooltip).
+feed's `notes` (what the in-app update pill shows as its tooltip). The body
+ends with a footer linking the release's tagged source on the public repo.
 
-Usage (from the repo root, after `npm run release`):
+It also enforces the PUBLIC-SOURCE GATE — builds must never contain code that
+isn't public. The manifest is refused unless the working tree is clean, the
+last `scripts/export_public.py` run recorded exactly this HEAD + version, and
+the `v<version>` tag is live on the public source repo.
+
+Usage (from the repo root, after `scripts/export_public.py` + `npm run release`):
     python scripts/make_latest_json.py
     python scripts/make_latest_json.py --print-notes   # preview, no build needed
 Then upload the files it prints to the GitHub release:
@@ -28,6 +34,7 @@ import argparse
 import datetime as dt
 import json
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -38,6 +45,9 @@ BUNDLE_DIR = ROOT / "src-tauri" / "target" / "release" / "bundle" / "nsis"
 
 # Must match the release repo the updater endpoint in tauri.conf.json points at.
 RELEASES_REPO = "azam997/meridian-releases"
+# The public source repo export_public.py pushes snapshots + release tags to.
+PUBLIC_SOURCE_REPO = "azam997/meridian"
+EXPORT_STATE = ROOT / "scripts" / "last_public_export.json"
 
 
 def render_markdown(entry: dict) -> str:
@@ -58,6 +68,53 @@ def render_markdown(entry: dict) -> str:
         if block:
             parts.append("\n\n".join(block))
     return "\n\n".join(parts) + "\n"
+
+
+def verify_public_source(version: str) -> list[str]:
+    """The "builds never ship unpublished code" gate. Returns the list of
+    problems (empty = clear to release): the working tree must be clean, the
+    last export_public.py run must have recorded exactly this HEAD + version,
+    and the release tag must be live on the public repo."""
+    def git(*args: str) -> subprocess.CompletedProcess:
+        return subprocess.run(["git", *args], cwd=ROOT,
+                              capture_output=True, text=True)
+
+    problems: list[str] = []
+    status = git("status", "--porcelain")
+    if status.returncode != 0:
+        problems.append("`git status` failed — cannot verify the tree is clean")
+    elif status.stdout.strip():
+        problems.append("working tree is dirty — the build may contain "
+                        "unpublished code; commit, re-run "
+                        "scripts/export_public.py, and rebuild")
+    if not EXPORT_STATE.exists():
+        problems.append(f"no export record at "
+                        f"{EXPORT_STATE.relative_to(ROOT)} — run "
+                        "scripts/export_public.py")
+        return problems
+    state = json.loads(EXPORT_STATE.read_text(encoding="utf-8"))
+    if state.get("version") != version:
+        problems.append(f"last public export was v{state.get('version')} but "
+                        f"this build is v{version} — re-run "
+                        "scripts/export_public.py")
+    if state.get("private_head") != git("rev-parse", "HEAD").stdout.strip():
+        problems.append("HEAD has moved since the last public export — "
+                        "re-run scripts/export_public.py (and rebuild if the "
+                        "build predates it)")
+    if problems:
+        return problems
+    remote = git("ls-remote", f"https://github.com/{PUBLIC_SOURCE_REPO}.git",
+                 f"refs/tags/v{version}")
+    if remote.returncode != 0:
+        problems.append(f"could not reach the public repo to verify the "
+                        f"v{version} tag")
+    elif not remote.stdout.strip():
+        problems.append(f"tag v{version} is missing from the public repo — "
+                        "re-run scripts/export_public.py")
+    elif remote.stdout.split()[0] != state.get("tag_commit"):
+        problems.append(f"public tag v{version} does not point at the "
+                        "recorded snapshot — re-run scripts/export_public.py")
+    return problems
 
 
 def load_entry(version: str) -> dict | None:
@@ -85,6 +142,15 @@ def main() -> int:
     conf = json.loads(TAURI_CONF.read_text(encoding="utf-8"))
     version = conf["version"]
 
+    if not args.print_notes:
+        problems = verify_public_source(version)
+        if problems:
+            print("!! public-source gate: a release can only be built from "
+                  "source that is already public:", file=sys.stderr)
+            for p in problems:
+                print(f"   - {p}", file=sys.stderr)
+            return 1
+
     entry = load_entry(version)
     if args.notes:
         body = args.notes
@@ -97,6 +163,9 @@ def main() -> int:
     else:
         body = render_markdown(entry)
         summary = entry["summary"].strip()
+
+    body = (body.rstrip() + "\n\n---\n\nSource code for this release: "
+            f"https://github.com/{PUBLIC_SOURCE_REPO}/tree/v{version}\n")
 
     if args.print_notes:
         print(body, end="")

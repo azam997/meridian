@@ -242,8 +242,8 @@
           "cappedSeconds": 117.5,
           "casts": 0,
           "cdrOverflowSeconds": 0.0,
-          "lostCasts": 2.0,
-          "lostPotency": 2600.0,
+          "lostCasts": 3.0,
+          "lostPotency": 8331.2,
           "sharedConsumers": 0
         },
         {
@@ -252,8 +252,8 @@
           "cappedSeconds": 117.5,
           "casts": 0,
           "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
+          "lostCasts": 1.0,
+          "lostPotency": 3841.9,
           "sharedConsumers": 0
         },
         {
@@ -262,8 +262,8 @@
           "cappedSeconds": 57.5,
           "casts": 1,
           "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
+          "lostCasts": 1.0,
+          "lostPotency": 800.0,
           "sharedConsumers": 0
         }
       ]
@@ -289,28 +289,28 @@
           "expectedId": 7487,
           "lostPotency": 440.0,
           "position": 7,
-          "summary": "Opener slot #7: cast Gyofu (240p), canonical uses Midare Setsugekka (680p) \u2014 -440p"
+          "summary": "Opener slot #7: cast Gyofu (240p), canonical uses Midare Setsugekka (680p), -440p"
         },
         {
           "actualId": 7478,
           "expectedId": 16486,
           "lostPotency": 380.0,
           "position": 8,
-          "summary": "Opener slot #8: cast Jinpu (300p), canonical uses Kaeshi: Setsugekka (680p) \u2014 -380p"
+          "summary": "Opener slot #8: cast Jinpu (300p), canonical uses Kaeshi: Setsugekka (680p), -380p"
         },
         {
           "actualId": 7481,
           "expectedId": 25781,
           "lostPotency": 580.0,
           "position": 9,
-          "summary": "Opener slot #9: cast Gekko (420p), canonical uses Ogi Namikiri (1000p) \u2014 -580p"
+          "summary": "Opener slot #9: cast Gekko (420p), canonical uses Ogi Namikiri (1000p), -580p"
         },
         {
           "actualId": 7479,
           "expectedId": 25782,
           "lostPotency": 700.0,
           "position": 10,
-          "summary": "Opener slot #10: cast Shifu (300p), canonical uses Kaeshi: Namikiri (1000p) \u2014 -700p"
+          "summary": "Opener slot #10: cast Shifu (300p), canonical uses Kaeshi: Namikiri (1000p), -700p"
         },
         {
           "actualId": 7482,
@@ -612,10 +612,10 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #7: cast Gyofu (240p), canonical uses Midare Setsugekka (680p) \u2014 -440p",
-        "[opener] Opener slot #8: cast Jinpu (300p), canonical uses Kaeshi: Setsugekka (680p) \u2014 -380p",
-        "[opener] Opener slot #9: cast Gekko (420p), canonical uses Ogi Namikiri (1000p) \u2014 -580p",
-        "[opener] Opener slot #10: cast Shifu (300p), canonical uses Kaeshi: Namikiri (1000p) \u2014 -700p"
+        "[opener] Opener slot #7: cast Gyofu (240p), canonical uses Midare Setsugekka (680p), -440p",
+        "[opener] Opener slot #8: cast Jinpu (300p), canonical uses Kaeshi: Setsugekka (680p), -380p",
+        "[opener] Opener slot #9: cast Gekko (420p), canonical uses Ogi Namikiri (1000p), -580p",
+        "[opener] Opener slot #10: cast Shifu (300p), canonical uses Kaeshi: Namikiri (1000p), -700p"
       ],
       "summaryLines": [
         "Your opener cost: 2100p"
@@ -1569,12 +1569,13 @@
   "idealizedTrackStrict": [],
   "improvements": [
     {
-      "abilityId": 0,
-      "abilityName": "",
+      "abilityId": 36966,
+      "abilityName": "Tendo Setsugekka",
       "children": [],
-      "kind": "residual",
-      "lostPotency": 10789.35,
-      "summary": "Other \u2014 small losses scattered across the fight, none big enough to tie to a single cast (resource/burst spacing, ability choice & sequencing)",
+      "kind": "residual_tail",
+      "lostPotency": 6417.0,
+      "prescription": "Spend gauge and procs the moment they're ready. Banked resource is a cast you never get back.",
+      "summary": "Resource & filler mix: the sim lands 11 more high-value GCDs than you (most: Tendo Setsugekka \u00d74), ~6417p over the filler that replaced them",
       "timeSec": 0.0
     },
     {
@@ -1587,7 +1588,8 @@
           "children": [],
           "kind": "cadence",
           "lostPotency": 3444.0,
-          "summary": "Loose GCD pacing \u2014 the optimal line fit ~8 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
+          "prescription": "Press the next GCD the moment it's ready. The optimal line fits ~8 more GCDs with no single gap to point at.",
+          "summary": "Loose GCD pacing: the optimal line fit ~8 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
           "timeSec": 0.0
         },
         {
@@ -1596,6 +1598,7 @@
           "children": [],
           "kind": "idle",
           "lostPotency": 1458.14,
+          "prescription": "Close the 1.9s gap at 1:18, your longest. 9.5s idle total (~4 GCDs).",
           "summary": "Time spent idle: 9.5s (3.8 GCDs)",
           "timeSec": 77.5
         },
@@ -1605,13 +1608,25 @@
           "children": [],
           "kind": "clip",
           "lostPotency": 460.47,
+          "prescription": "Trim a weave at 0:48. 1 oGCD pushed the next GCD 0.60s late.",
           "summary": "GCD clipping: 3.0s (1.2 GCDs) from over-weaving",
           "timeSec": 47.5
         }
       ],
       "kind": "pacing",
       "lostPotency": 5362.6,
-      "summary": "GCD uptime & pacing \u2014 idle gaps, loose GCD timing and over-weaving. These compound: a dropped or clipped GCD also shoves your next weave and burst window later.",
+      "prescription": "Start with the biggest piece: press the next GCD the moment it's ready. The optimal line fits ~8 more GCDs with no single gap to point at.",
+      "summary": "GCD uptime & pacing: idle gaps, loose GCD timing and over-weaving. These compound, since a dropped or clipped GCD also shoves your next weave and burst window later.",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16487,
+      "abilityName": "Shoha",
+      "children": [],
+      "kind": "residual_tail",
+      "lostPotency": 4312.3,
+      "prescription": "Weave damaging oGCDs on cooldown. They displace no GCD.",
+      "summary": "Damaging oGCDs the sim fit: 11 more weaves (~4312p; they displace no GCD)",
       "timeSec": 0.0
     },
     {
@@ -1620,7 +1635,8 @@
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 3841.87,
-      "summary": "Missed Ikishoten \u2014 fit one around 0:05",
+      "prescription": "Weave it after Gekko at 0:05. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Ikishoten, fit one around 0:05",
       "timeSec": 5.28
     },
     {
@@ -1629,7 +1645,8 @@
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 2777.07,
-      "summary": "Missed Meikyo Shisui \u2014 fit one around 0:19",
+      "prescription": "Weave it after Jinpu at 0:20. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Meikyo Shisui, fit one around 0:19",
       "timeSec": 18.82
     },
     {
@@ -1638,7 +1655,8 @@
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 2777.07,
-      "summary": "Missed Meikyo Shisui \u2014 fit one around 0:50",
+      "prescription": "Weave it after Hissatsu: Shinten at 0:50. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Meikyo Shisui, fit one around 0:50",
       "timeSec": 50.22
     },
     {
@@ -1647,7 +1665,8 @@
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 2777.07,
-      "summary": "Missed Meikyo Shisui \u2014 fit one around 1:44",
+      "prescription": "Weave it after Hissatsu: Shinten at 1:45. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Meikyo Shisui, fit one around 1:44",
       "timeSec": 104.42
     },
     {
@@ -1656,7 +1675,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 800.0,
-      "summary": "Missed Hissatsu: Senei \u2014 fit one around 1:14",
+      "prescription": "Weave it after Kasha at 1:15. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Hissatsu: Senei, fit one around 1:14",
       "timeSec": 73.76
     },
     {
@@ -1665,7 +1685,8 @@
       "children": [],
       "kind": "tincture",
       "lostPotency": 552.87,
-      "summary": "Used 0 of 1 tinctures \u2014 fitting 1 more on cooldown recovers this",
+      "prescription": "Pot again the moment it's back up. 1 more fit on cooldown.",
+      "summary": "Used 0 of 1 tinctures. Fitting 1 more on cooldown recovers this",
       "timeSec": 0.0
     },
     {
@@ -1678,7 +1699,8 @@
           "children": [],
           "kind": "overcap",
           "lostPotency": 100.0,
-          "summary": "Kenki overcap at 1:32 \u2014 Kasha (wasted 10)",
+          "prescription": "Spend kenki before 1:32. Kasha wasted 10.",
+          "summary": "Kenki overcap at 1:32: Kasha (wasted 10)",
           "timeSec": 92.5
         },
         {
@@ -1687,13 +1709,15 @@
           "children": [],
           "kind": "overcap",
           "lostPotency": 100.0,
-          "summary": "Kenki overcap at 1:58 \u2014 Kasha (wasted 10)",
+          "prescription": "Spend kenki before 1:58. Kasha wasted 10.",
+          "summary": "Kenki overcap at 1:58: Kasha (wasted 10)",
           "timeSec": 117.5
         }
       ],
       "kind": "overcap",
       "lostPotency": 200.0,
-      "summary": "Kasha overcap \u00d72 \u2014 first around 1:32",
+      "prescription": "Spend kenki before 1:32. Kasha wasted 10.",
+      "summary": "Kasha overcap \u00d72, first around 1:32",
       "timeSec": 92.5
     },
     {
@@ -1702,8 +1726,46 @@
       "children": [],
       "kind": "overcap",
       "lostPotency": 100.0,
-      "summary": "Kenki overcap at 1:40 \u2014 Gekko (wasted 10)",
+      "prescription": "Spend kenki before 1:40. Gekko wasted 10.",
+      "summary": "Kenki overcap at 1:40: Gekko (wasted 10)",
       "timeSec": 100.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [],
+      "countGaps": [
+        {
+          "name": "Tendo Kaeshi Setsugekka",
+          "sim": 4,
+          "you": 0
+        },
+        {
+          "name": "Tendo Setsugekka",
+          "sim": 4,
+          "you": 0
+        },
+        {
+          "name": "Yukikaze",
+          "sim": 6,
+          "you": 0
+        },
+        {
+          "name": "Shoha",
+          "sim": 3,
+          "you": 0
+        },
+        {
+          "name": "Midare Setsugekka",
+          "sim": 2,
+          "you": 5
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 60.1,
+      "prescription": "Biggest count gaps: Tendo Kaeshi Setsugekka and Tendo Setsugekka. The sim fits more of them. Your extra Midare Setsugekka casts came out of those slots; each extra is worth less than what it displaced.",
+      "summary": "Spacing & sequencing",
+      "timeSec": 0.0
     },
     {
       "abilityId": 36963,
@@ -1711,7 +1773,8 @@
       "children": [],
       "kind": "overcap",
       "lostPotency": 50.0,
-      "summary": "Kenki overcap at 1:35 \u2014 Gyofu (wasted 5)",
+      "prescription": "Spend kenki before 1:35. Gyofu wasted 5.",
+      "summary": "Kenki overcap at 1:35: Gyofu (wasted 5)",
       "timeSec": 95.0
     },
     {
@@ -1720,7 +1783,8 @@
       "children": [],
       "kind": "overcap",
       "lostPotency": 50.0,
-      "summary": "Kenki overcap at 1:38 \u2014 Jinpu (wasted 5)",
+      "prescription": "Spend kenki before 1:38. Jinpu wasted 5.",
+      "summary": "Kenki overcap at 1:38: Jinpu (wasted 5)",
       "timeSec": 97.5
     },
     {
@@ -1729,7 +1793,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #7: cast Gyofu, canonical opens Midare Setsugekka (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #7: cast Gyofu, canonical opens Midare Setsugekka (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -1738,7 +1802,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #8: cast Jinpu, canonical opens Kaeshi: Setsugekka (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #8: cast Jinpu, canonical opens Kaeshi: Setsugekka (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -1747,7 +1811,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #9: cast Gekko, canonical opens Ogi Namikiri (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #9: cast Gekko, canonical opens Ogi Namikiri (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -1756,7 +1820,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #10: cast Shifu, canonical opens Kaeshi: Namikiri (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #10: cast Shifu, canonical opens Kaeshi: Namikiri (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

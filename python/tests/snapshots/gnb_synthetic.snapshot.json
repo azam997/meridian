@@ -202,26 +202,6 @@
           "casts": 12,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 1.0,
-          "lostPotency": 1200.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 16138,
-          "abilityName": "No Mercy",
-          "cappedSeconds": 0.0,
-          "casts": 6,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 16164,
-          "abilityName": "Bloodfest",
-          "cappedSeconds": 0.7,
-          "casts": 6,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
           "lostPotency": 0.0,
           "sharedConsumers": 0
         },
@@ -229,6 +209,16 @@
           "abilityId": 25760,
           "abilityName": "Double Down",
           "cappedSeconds": 32.5,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16159,
+          "abilityName": "Bow Shock",
+          "cappedSeconds": 5.7,
           "casts": 6,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
@@ -246,9 +236,19 @@
           "sharedConsumers": 0
         },
         {
-          "abilityId": 16159,
-          "abilityName": "Bow Shock",
-          "cappedSeconds": 5.7,
+          "abilityId": 16164,
+          "abilityName": "Bloodfest",
+          "cappedSeconds": 0.7,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16138,
+          "abilityName": "No Mercy",
+          "cappedSeconds": 0.0,
           "casts": 6,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
@@ -292,28 +292,28 @@
           "expectedId": 25760,
           "lostPotency": 700.0,
           "position": 9,
-          "summary": "Opener slot #9: cast Keen Edge (300p), canonical uses Double Down (1000p) \u2014 -700p"
+          "summary": "Opener slot #9: cast Keen Edge (300p), canonical uses Double Down (1000p), -700p"
         },
         {
           "actualId": 16139,
           "expectedId": 36937,
           "lostPotency": 420.0,
           "position": 10,
-          "summary": "Opener slot #10: cast Brutal Shell (380p), canonical uses Reign of Beasts (800p) \u2014 -420p"
+          "summary": "Opener slot #10: cast Brutal Shell (380p), canonical uses Reign of Beasts (800p), -420p"
         },
         {
           "actualId": 16145,
           "expectedId": 36938,
           "lostPotency": 440.0,
           "position": 11,
-          "summary": "Opener slot #11: cast Solid Barrel (460p), canonical uses Noble Blood (900p) \u2014 -440p"
+          "summary": "Opener slot #11: cast Solid Barrel (460p), canonical uses Noble Blood (900p), -440p"
         },
         {
           "actualId": 16137,
           "expectedId": 36939,
           "lostPotency": 700.0,
           "position": 12,
-          "summary": "Opener slot #12: cast Keen Edge (300p), canonical uses Lion Heart (1000p) \u2014 -700p"
+          "summary": "Opener slot #12: cast Keen Edge (300p), canonical uses Lion Heart (1000p), -700p"
         }
       ]
     },
@@ -559,7 +559,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.50s",
@@ -645,10 +645,10 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #9: cast Keen Edge (300p), canonical uses Double Down (1000p) \u2014 -700p",
-        "[opener] Opener slot #10: cast Brutal Shell (380p), canonical uses Reign of Beasts (800p) \u2014 -420p",
-        "[opener] Opener slot #11: cast Solid Barrel (460p), canonical uses Noble Blood (900p) \u2014 -440p",
-        "[opener] Opener slot #12: cast Keen Edge (300p), canonical uses Lion Heart (1000p) \u2014 -700p"
+        "[opener] Opener slot #9: cast Keen Edge (300p), canonical uses Double Down (1000p), -700p",
+        "[opener] Opener slot #10: cast Brutal Shell (380p), canonical uses Reign of Beasts (800p), -420p",
+        "[opener] Opener slot #11: cast Solid Barrel (460p), canonical uses Noble Blood (900p), -440p",
+        "[opener] Opener slot #12: cast Keen Edge (300p), canonical uses Lion Heart (1000p), -700p"
       ],
       "summaryLines": [
         "Your opener cost: 2260p"
@@ -3105,7 +3105,8 @@
       "children": [],
       "kind": "tincture",
       "lostPotency": 1858.42,
-      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+      "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
       "timeSec": 0.0
     },
     {
@@ -3114,7 +3115,8 @@
       "children": [],
       "kind": "overcap",
       "lostPotency": 1260.0,
-      "summary": "Cartridges overcap at 2:31 \u2014 Bloodfest (wasted 3)",
+      "prescription": "Spend cartridges before 2:31. Bloodfest wasted 3.",
+      "summary": "Cartridges overcap at 2:31: Bloodfest (wasted 3)",
       "timeSec": 150.7
     },
     {
@@ -3123,7 +3125,8 @@
       "children": [],
       "kind": "overcap",
       "lostPotency": 840.0,
-      "summary": "Cartridges overcap at 3:31 \u2014 Bloodfest (wasted 2)",
+      "prescription": "Spend cartridges before 3:31. Bloodfest wasted 2.",
+      "summary": "Cartridges overcap at 3:31: Bloodfest (wasted 2)",
       "timeSec": 210.7
     },
     {
@@ -3132,7 +3135,8 @@
       "children": [],
       "kind": "overcap",
       "lostPotency": 840.0,
-      "summary": "Cartridges overcap at 4:31 \u2014 Bloodfest (wasted 2)",
+      "prescription": "Spend cartridges before 4:31. Bloodfest wasted 2.",
+      "summary": "Cartridges overcap at 4:31: Bloodfest (wasted 2)",
       "timeSec": 270.7
     },
     {
@@ -3141,8 +3145,19 @@
       "children": [],
       "kind": "overcap",
       "lostPotency": 840.0,
-      "summary": "Cartridges overcap at 5:31 \u2014 Bloodfest (wasted 2)",
+      "prescription": "Spend cartridges before 5:31. Bloodfest wasted 2.",
+      "summary": "Cartridges overcap at 5:31: Bloodfest (wasted 2)",
       "timeSec": 330.7
+    },
+    {
+      "abilityId": 25759,
+      "abilityName": "Hypervelocity",
+      "children": [],
+      "kind": "residual_tail",
+      "lostPotency": 284.2,
+      "prescription": "Weave damaging oGCDs on cooldown. They displace no GCD.",
+      "summary": "Damaging oGCDs the sim fit: 11 more weaves (~284p; they displace no GCD)",
+      "timeSec": 0.0
     },
     {
       "abilityId": 0,
@@ -3154,7 +3169,8 @@
           "children": [],
           "kind": "overcap",
           "lostPotency": 420.0,
-          "summary": "Cartridges overcap at 0:32 \u2014 Solid Barrel (wasted 1)",
+          "prescription": "Spend cartridges before 0:32. Solid Barrel wasted 1.",
+          "summary": "Cartridges overcap at 0:32: Solid Barrel (wasted 1)",
           "timeSec": 32.5
         },
         {
@@ -3163,13 +3179,42 @@
           "children": [],
           "kind": "overcap",
           "lostPotency": 420.0,
-          "summary": "Cartridges overcap at 1:31 \u2014 Bloodfest (wasted 1)",
+          "prescription": "Spend cartridges before 1:31. Bloodfest wasted 1.",
+          "summary": "Cartridges overcap at 1:31: Bloodfest (wasted 1)",
           "timeSec": 90.7
         }
       ],
+      "countGaps": [
+        {
+          "name": "Burst Strike",
+          "sim": 13,
+          "you": 5
+        },
+        {
+          "name": "Hypervelocity",
+          "sim": 13,
+          "you": 5
+        },
+        {
+          "name": "Wicked Talon",
+          "sim": 13,
+          "you": 12
+        },
+        {
+          "name": "Savage Claw",
+          "sim": 13,
+          "you": 12
+        },
+        {
+          "name": "Solid Barrel",
+          "sim": 20,
+          "you": 24
+        }
+      ],
       "kind": "residual",
-      "lostPotency": 362.13,
-      "summary": "Other \u2014 2 small located losses below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "lostPotency": 77.9,
+      "prescription": "Biggest count gaps: Burst Strike and Hypervelocity. The sim fits more of them. Your extra Solid Barrel casts came out of those slots; each extra is worth less than what it displaced.",
+      "summary": "Spacing & sequencing: 2 small located losses below the listing threshold",
       "timeSec": 0.0
     },
     {
@@ -3178,7 +3223,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #9: cast Keen Edge, canonical opens Double Down (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #9: cast Keen Edge, canonical opens Double Down (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -3187,7 +3232,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #10: cast Brutal Shell, canonical opens Reign of Beasts (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #10: cast Brutal Shell, canonical opens Reign of Beasts (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -3196,7 +3241,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #11: cast Solid Barrel, canonical opens Noble Blood (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #11: cast Solid Barrel, canonical opens Noble Blood (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -3205,7 +3250,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #12: cast Keen Edge, canonical opens Lion Heart (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #12: cast Keen Edge, canonical opens Lion Heart (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

@@ -1,15 +1,18 @@
-// Research — browse an encounter's top-10 ranked players for a job and load
+// Top Pulls — browse an encounter's top-10 ranked players for a job and load
 // one into the normal analysis flow (dashboard / timeline / cast counts), with
 // the ranked player as the analyzed subject.
 //
 // Character-independent, like the Kill Time Theorizer: the catalog drives the
-// job/encounter pickers, and the rankings come from the new list_rankings
-// sidecar request (the same cached blob the "Top 10" refs warm reads, so the
-// list and the reference lanes are literally the same ten players).
+// setup panel (category tabs + encounter chips, role-grouped job rail), and
+// the rankings come from the list_rankings sidecar request (the same cached
+// blob the "Top 10" refs warm reads, so the list and the reference lanes are
+// literally the same ten players).
 
 import { useEffect, useState } from 'react';
-import { Medal, Swords, Target, Trophy } from 'lucide-react';
-import { jobColor, jobIcon } from '../components/jobs';
+import { RefreshCw } from 'lucide-react';
+import { EncounterPicker } from '../components/EncounterPicker';
+import { JobTile } from '../components/JobTile';
+import { groupJobsByRole } from '../components/jobs';
 import { fmtClock, fmtNum } from '../format';
 import { sidecar } from '../sidecar';
 import { refsWarmer } from '../state/refsPrefetch';
@@ -26,6 +29,17 @@ type Props = {
   onRunAnalysis: (snapshot: Partial<AppState>) => void;
 };
 
+/** Median kill time (ms) of the visible rows; null when none carry one. */
+const medianKillMs = (list: RankingEntry[]): number | null => {
+  const ds = list
+    .map((r) => r.durationMs)
+    .filter((d): d is number => d != null)
+    .sort((a, b) => a - b);
+  if (ds.length === 0) return null;
+  const mid = Math.floor(ds.length / 2);
+  return ds.length % 2 ? ds[mid] : (ds[mid - 1] + ds[mid]) / 2;
+};
+
 export const ResearchView = ({ defaultJob, defaultEncounterId, onRunAnalysis }: Props) => {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [job, setJob] = useState<string>(defaultJob ?? '');
@@ -37,6 +51,7 @@ export const ResearchView = ({ defaultJob, defaultEncounterId, onRunAnalysis }: 
   const [fetchError, setFetchError] = useState<{ key: string; msg: string } | null>(null);
   const [catalogError, setCatalogError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
 
   // Catalog drives the job + encounter pickers (no character needed). Once it
   // lands, snap the job/encounter to valid choices (keeping passed defaults).
@@ -124,126 +139,187 @@ export const ResearchView = ({ defaultJob, defaultEncounterId, onRunAnalysis }: 
     });
   };
 
+  // Refetch past the session + disk caches. The current list stays mounted
+  // (the spinning button is the feedback); the combo-key discipline discards
+  // the response if the selection changed mid-flight anyway.
+  const refresh = async () => {
+    if (refreshing || !job || !encounterId) return;
+    const key = comboKey;
+    setRefreshing(true);
+    try {
+      const fresh = await sidecar.listRankings(job, encounterId, true);
+      setRows({ key, list: fresh });
+      setFetchError((fe) => (fe && fe.key === key ? null : fe));
+    } catch (e) {
+      setFetchError({
+        key,
+        msg: `Could not load rankings: ${e instanceof Error ? e.message : String(e)}`,
+      });
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
+  const roleGroups = groupJobsByRole(jobs);
+  const meta = [job, encounterName, 'top 10 by rdps'].filter(Boolean).join(' · ');
+  const medMs = list ? medianKillMs(list) : null;
+  const amounts = (list ?? [])
+    .map((r) => r.amount)
+    .filter((a): a is number => a != null);
+  const amtMin = amounts.length ? Math.min(...amounts) : 0;
+  const amtMax = amounts.length ? Math.max(...amounts) : 0;
+  // Relative bar across the visible ten: the worst row still shows 42%.
+  const barPct = (a: number) =>
+    amtMax === amtMin ? 100 : 42 + (58 * (a - amtMin)) / (amtMax - amtMin);
+
   return (
-    <div className="content narrow">
-      <div className="card">
-        <div className="card-head">
-          <Trophy size={14} />
-          <h2>Research</h2>
-          <span className="sub" style={{ marginLeft: 'auto' }}>
-            Study the top parses
-          </span>
+    <div className="content wide">
+      <div className="page-title-row">
+        <div>
+          <h1>Top pulls</h1>
+          <p className="page-meta">{meta}</p>
         </div>
-        <div className="card-body">
-          <p className="mut" style={{ fontSize: 12.5, margin: '0 0 14px' }}>
-            Pick a job and encounter to browse its top-ranked players, then load
-            one — the full analysis (dashboard, timeline, cast counts) runs on
-            their pull, exactly as it does for your own. No character required.
-          </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-            <div>
-              <span className="field-label">
-                <Swords size={12} /> Job
-              </span>
-              <div className="job-grid">
-                {jobs.length === 0 ? (
-                  <span className="mut" style={{ fontSize: 12 }}>Loading jobs…</span>
-                ) : (
-                  jobs.map((j) => {
-                    const icon = jobIcon(j);
-                    return (
-                      <button
-                        key={j}
-                        className={'btn job-tile ' + (job === j ? 'primary' : '')}
-                        onClick={() => setJob(j)}
-                      >
-                        {icon ? (
-                          <img src={icon} alt="" width={22} height={22} draggable={false} className="job-tile-icon" />
-                        ) : (
-                          <span className="job-tile-icon" style={{ background: jobColor(j) }} />
-                        )}
-                        <span className="job-tile-label">{j}</span>
-                      </button>
-                    );
-                  })
-                )}
-              </div>
-            </div>
-            <div>
-              <span className="field-label">
-                <Target size={12} /> Encounter
-              </span>
-              <select
-                className="select"
-                style={{ maxWidth: 420 }}
-                value={encounterId}
-                onChange={(e) => setEncounterId(Number(e.target.value))}
-              >
-                {encounters.length === 0 && <option value={0}>Loading…</option>}
-                {encounters.map((e) => (
-                  <option key={e.id} value={e.id}>{e.name}</option>
+        <button
+          className="btn"
+          disabled={refreshing || busy || !job || !encounterId}
+          onClick={() => void refresh()}
+        >
+          <RefreshCw size={13} className={refreshing ? 'spin' : undefined} />
+          Refresh rankings
+        </button>
+      </div>
+
+      <div className="setup-panel">
+        <div className="setup-row">
+          <span className="setup-label">Encounter</span>
+          <div className="setup-controls">
+            <EncounterPicker
+              encounters={encounters}
+              encounterId={encounterId}
+              onPick={setEncounterId}
+            />
+          </div>
+        </div>
+        <div className="setup-row">
+          <span className="setup-label">Job</span>
+          <div className="setup-controls">
+            {roleGroups.length === 0 ? (
+              <span className="mut" style={{ fontSize: 12 }}>Loading jobs…</span>
+            ) : (
+              <div className="job-rail">
+                {roleGroups.map((g) => (
+                  <div className="job-rail-group" key={g.role}>
+                    {g.jobs.map((j) =>
+                      j === job ? (
+                        <button className="job-pill" key={j} onClick={() => setJob(j)}>
+                          <JobTile job={j} size={26} iconInset={2} />
+                          <span>{j}</span>
+                        </button>
+                      ) : (
+                        <button
+                          className="job-cell"
+                          key={j}
+                          title={j}
+                          onClick={() => setJob(j)}
+                        >
+                          <JobTile job={j} size={34} />
+                        </button>
+                      ),
+                    )}
+                  </div>
                 ))}
-              </select>
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
 
-      <div className="card" style={{ marginTop: 14 }}>
-        <div className="card-head">
-          <Medal size={14} />
-          <h2>Top 10 — {job || '…'}</h2>
-          <span className="sub" style={{ marginLeft: 'auto' }}>
-            click a player to load their pull
+      <div className="rank-head">
+        <span className="rank-head-title">Top 10</span>
+        <span className="rank-head-sub">
+          click a player to load their pull into the full analysis
+        </span>
+        {medMs != null && (
+          <span className="rank-head-median">
+            median kill {fmtClock(medMs / 1000)}
           </span>
-        </div>
-        <div className="card-body" style={{ padding: 0 }}>
-          {error ? (
-            <div className="mut" style={{ padding: 14, fontSize: 12, color: 'var(--bad)' }}>
-              {error}
+        )}
+      </div>
+
+      <div className="rank-rows">
+        {error ? (
+          <div className="mut" style={{ padding: 14, fontSize: 12, color: 'var(--bad)' }}>
+            {error}
+          </div>
+        ) : loading || list === null ? (
+          Array.from({ length: 10 }, (_, i) => (
+            <div className="rank-row skeleton" aria-hidden="true" key={i}>
+              <span className="sk-line" style={{ width: 22 }} />
+              <span>
+                <span className="sk-line" style={{ width: 150, marginBottom: 7 }} />
+                <span className="sk-line" style={{ width: 96 }} />
+              </span>
+              <span className="sk-line" />
+              <span className="sk-line" style={{ height: 30, borderRadius: 8 }} />
             </div>
-          ) : loading || list === null ? (
-            <div className="mut" style={{ padding: 14, fontSize: 12 }}>
-              Loading top parses…
-            </div>
-          ) : list.length === 0 ? (
-            <div className="mut" style={{ padding: 14, fontSize: 12 }}>
-              No rankings found for this job and encounter.
-            </div>
-          ) : (
-            list.map((r) => (
-              <button
-                key={`${r.reportCode}:${r.fightId}:${r.rank}`}
-                className="recent-pull"
-                disabled={busy}
-                onClick={() => void load(r)}
-              >
-                <span
-                  className="mut"
-                  style={{ width: 26, fontVariantNumeric: 'tabular-nums', flexShrink: 0 }}
-                >
-                  #{r.rank}
+          ))
+        ) : list.length === 0 ? (
+          <div className="mut" style={{ padding: 14, fontSize: 12 }}>
+            No rankings found for this job and encounter.
+          </div>
+        ) : (
+          list.map((r) => (
+            <div
+              key={`${r.reportCode}:${r.fightId}:${r.rank}`}
+              className={'rank-row' + (busy ? ' busy' : '')}
+              role="button"
+              tabIndex={0}
+              onClick={() => void load(r)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault();
+                  void load(r);
+                }
+              }}
+            >
+              <span className="rank-num mono">#{r.rank}</span>
+              <span style={{ minWidth: 0 }}>
+                <span className="rank-name">{r.name}</span>
+                <span className="rank-sub">
+                  {[r.server, r.durationMs ? `kill ${fmtClock(r.durationMs / 1000)}` : null]
+                    .filter(Boolean)
+                    .join(' · ')}
                 </span>
-                <div style={{ flex: 1, textAlign: 'left', minWidth: 0 }}>
-                  <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                    {r.name}
-                  </div>
-                  <div className="mut" style={{ fontSize: 11, marginTop: 2 }}>
-                    {[r.server, r.durationMs ? `kill ${fmtClock(r.durationMs / 1000)}` : null]
-                      .filter(Boolean)
-                      .join(' · ')}
-                  </div>
-                </div>
-                {r.amount != null && (
-                  <span className="tag accent">
-                    <span className="pip" />
-                    {fmtNum(r.amount, 0)} rdps
+              </span>
+              {r.amount != null ? (
+                <span className="rank-metric">
+                  <span className="rank-metric-head">
+                    <span>rdps</span>
+                    <span className="rank-metric-val mono">{fmtNum(r.amount, 0)}</span>
                   </span>
-                )}
+                  <span className="rank-metric-bar">
+                    <span
+                      className="rank-metric-fill"
+                      style={{ width: `${barPct(r.amount)}%` }}
+                    />
+                  </span>
+                </span>
+              ) : (
+                <span />
+              )}
+              <button
+                className="btn"
+                disabled={busy}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  void load(r);
+                }}
+              >
+                Analyze
               </button>
-            ))
-          )}
-        </div>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

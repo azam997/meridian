@@ -8,10 +8,13 @@ export type KPIProps = {
   tone?: 'accent' | 'good' | 'warn' | '';
   hint?: string;
   delta?: { dir: 'up' | 'down'; text: string };
+  /** Neutral muted sub-line (no arrow, no direction color) — for context text
+   *  where green/red would misread as a judgement. Renders below any delta. */
+  sub?: string;
   sparkData?: number[];
 };
 
-export const KPI = ({ label, value, unit, tone, hint, delta, sparkData }: KPIProps) => (
+export const KPI = ({ label, value, unit, tone, hint, delta, sub, sparkData }: KPIProps) => (
   <div className={`kpi ${tone || ''}`}>
     <div className="label">
       {label}
@@ -31,6 +34,7 @@ export const KPI = ({ label, value, unit, tone, hint, delta, sparkData }: KPIPro
         {delta.text}
       </div>
     )}
+    {sub && <div className="delta mut">{sub}</div>}
     {sparkData && <Spark data={sparkData} className="spark" />}
   </div>
 );

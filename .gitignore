@@ -44,3 +44,6 @@ python/dist/
 # Claude Code local settings / state
 .claude/settings.local.json
 .claude/scheduled_tasks.lock
+
+# Public-source export record (export_public.py -> make_latest_json.py gate)
+scripts/last_public_export.json

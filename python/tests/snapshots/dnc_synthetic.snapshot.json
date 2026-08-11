@@ -253,25 +253,25 @@
           "cappedSeconds": 39.0,
           "casts": 4,
           "cdrOverflowSeconds": 0.0,
-          "lostCasts": 1.0,
-          "lostPotency": 720.0,
-          "sharedConsumers": 5
-        },
-        {
-          "abilityId": 15998,
-          "abilityName": "Technical Step",
-          "cappedSeconds": 1.5,
-          "casts": 3,
-          "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
-          "sharedConsumers": 0
+          "sharedConsumers": 5
         },
         {
           "abilityId": 16013,
           "abilityName": "Flourish",
           "cappedSeconds": 3.5,
           "casts": 5,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 15998,
+          "abilityName": "Technical Step",
+          "cappedSeconds": 1.5,
+          "casts": 3,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 0.0,
           "lostPotency": 0.0,
@@ -317,7 +317,7 @@
           "expectedId": 16192,
           "lostPotency": 850.0,
           "position": 4,
-          "summary": "Opener slot #4: cast Emboite (0p), canonical uses Double Standard Finish (850p) \u2014 -850p"
+          "summary": "Opener slot #4: cast Emboite (0p), canonical uses Double Standard Finish (850p), -850p"
         },
         {
           "actualId": 15999,
@@ -352,21 +352,21 @@
           "expectedId": 33218,
           "lostPotency": 700.0,
           "position": 10,
-          "summary": "Opener slot #10: cast Starfall Dance (600p), canonical uses Quadruple Technical Finish (1300p) \u2014 -700p"
+          "summary": "Opener slot #10: cast Starfall Dance (600p), canonical uses Quadruple Technical Finish (1300p), -700p"
         },
         {
           "actualId": 36983,
           "expectedId": 36985,
           "lostPotency": 460.0,
           "position": 11,
-          "summary": "Opener slot #11: cast Last Dance (540p), canonical uses Dance of the Dawn (1000p) \u2014 -460p"
+          "summary": "Opener slot #11: cast Last Dance (540p), canonical uses Dance of the Dawn (1000p), -460p"
         },
         {
           "actualId": 15992,
           "expectedId": 25790,
           "lostPotency": 260.0,
           "position": 12,
-          "summary": "Opener slot #12: cast Fountainfall (340p), canonical uses Tillana (600p) \u2014 -260p"
+          "summary": "Opener slot #12: cast Fountainfall (340p), canonical uses Tillana (600p), -260p"
         }
       ]
     },
@@ -690,10 +690,10 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #4: cast Emboite (0p), canonical uses Double Standard Finish (850p) \u2014 -850p",
-        "[opener] Opener slot #10: cast Starfall Dance (600p), canonical uses Quadruple Technical Finish (1300p) \u2014 -700p",
-        "[opener] Opener slot #11: cast Last Dance (540p), canonical uses Dance of the Dawn (1000p) \u2014 -460p",
-        "[opener] Opener slot #12: cast Fountainfall (340p), canonical uses Tillana (600p) \u2014 -260p"
+        "[opener] Opener slot #4: cast Emboite (0p), canonical uses Double Standard Finish (850p), -850p",
+        "[opener] Opener slot #10: cast Starfall Dance (600p), canonical uses Quadruple Technical Finish (1300p), -700p",
+        "[opener] Opener slot #11: cast Last Dance (540p), canonical uses Dance of the Dawn (1000p), -460p",
+        "[opener] Opener slot #12: cast Fountainfall (340p), canonical uses Tillana (600p), -260p"
       ],
       "summaryLines": [
         "Your opener cost: 2270p"
@@ -4632,6 +4632,7 @@
           "children": [],
           "kind": "clip",
           "lostPotency": 2424.74,
+          "prescription": "Trim a weave at 3:59. 4 oGCDs pushed the next GCD 4.60s late.",
           "summary": "GCD clipping: 12.9s (5.2 GCDs) from over-weaving",
           "timeSec": 239.0
         },
@@ -4641,6 +4642,7 @@
           "children": [],
           "kind": "idle",
           "lostPotency": 2180.38,
+          "prescription": "Close the 3.0s gap at 2:36, your longest. 11.6s idle total (~5 GCDs).",
           "summary": "Time spent idle: 11.6s (4.6 GCDs)",
           "timeSec": 155.5
         },
@@ -4650,13 +4652,37 @@
           "children": [],
           "kind": "tincture",
           "lostPotency": 1256.38,
-          "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+          "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+          "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
           "timeSec": 0.0
+        }
+      ],
+      "countGaps": [
+        {
+          "name": "Last Dance",
+          "sim": 11,
+          "you": 10
+        },
+        {
+          "name": "Fountain",
+          "sim": 13,
+          "you": 12
+        },
+        {
+          "name": "Fountainfall",
+          "sim": 15,
+          "you": 16
+        },
+        {
+          "name": "Reverse Cascade",
+          "sim": 16,
+          "you": 17
         }
       ],
       "kind": "residual",
       "lostPotency": 2029.34,
-      "summary": "Other \u2014 3 small located losses below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "prescription": "Biggest count gaps: Last Dance and Fountain. The sim fits more of them. Your extra Fountainfall casts came out of those slots; each extra is worth less than what it displaced.",
+      "summary": "Spacing & sequencing: 3 small located losses below the listing threshold",
       "timeSec": 0.0
     },
     {
@@ -4665,7 +4691,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #4: cast Emboite, canonical opens Double Standard Finish (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #4: cast Emboite, canonical opens Double Standard Finish (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4674,7 +4700,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #10: cast Starfall Dance, canonical opens Quadruple Technical Finish (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #10: cast Starfall Dance, canonical opens Quadruple Technical Finish (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4683,7 +4709,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #11: cast Last Dance, canonical opens Dance of the Dawn (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #11: cast Last Dance, canonical opens Dance of the Dawn (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -4692,7 +4718,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #12: cast Fountainfall, canonical opens Tillana (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #12: cast Fountainfall, canonical opens Tillana (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

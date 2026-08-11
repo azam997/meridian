@@ -219,13 +219,23 @@
       "fightDurationSec": 122.5,
       "findings": [
         {
+          "abilityId": 7521,
+          "abilityName": "Manafication",
+          "cappedSeconds": 49.0,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 1.0,
+          "lostPotency": 2795.4,
+          "sharedConsumers": 0
+        },
+        {
           "abilityId": 7517,
           "abilityName": "Fleche",
           "cappedSeconds": 97.5,
           "casts": 1,
           "cdrOverflowSeconds": 0.0,
-          "lostCasts": 3.0,
-          "lostPotency": 1440.0,
+          "lostCasts": 4.0,
+          "lostPotency": 1920.0,
           "sharedConsumers": 0
         },
         {
@@ -234,28 +244,8 @@
           "cappedSeconds": 91.0,
           "casts": 1,
           "cdrOverflowSeconds": 0.0,
-          "lostCasts": 2.0,
-          "lostPotency": 840.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 7518,
-          "abilityName": "Acceleration",
-          "cappedSeconds": 67.5,
-          "casts": 1,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 1.0,
-          "lostPotency": 250.0,
-          "sharedConsumers": 0
-        },
-        {
-          "abilityId": 7521,
-          "abilityName": "Manafication",
-          "cappedSeconds": 49.0,
-          "casts": 1,
-          "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
+          "lostCasts": 3.0,
+          "lostPotency": 1260.0,
           "sharedConsumers": 0
         },
         {
@@ -264,8 +254,18 @@
           "cappedSeconds": 48.5,
           "casts": 1,
           "cdrOverflowSeconds": 0.0,
-          "lostCasts": 0.0,
-          "lostPotency": 0.0,
+          "lostCasts": 1.0,
+          "lostPotency": 794.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7518,
+          "abilityName": "Acceleration",
+          "cappedSeconds": 67.5,
+          "casts": 1,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 3.0,
+          "lostPotency": 569.5,
           "sharedConsumers": 0
         }
       ]
@@ -291,49 +291,49 @@
           "expectedId": 7528,
           "lostPotency": 20.0,
           "position": 6,
-          "summary": "Opener slot #6: cast Jolt III (360p), canonical uses Enchanted Zwerchhau (380p) \u2014 -20p"
+          "summary": "Opener slot #6: cast Jolt III (360p), canonical uses Enchanted Zwerchhau (380p), -20p"
         },
         {
           "actualId": 25856,
           "expectedId": 7529,
           "lostPotency": 120.0,
           "position": 7,
-          "summary": "Opener slot #7: cast Veraero III (440p), canonical uses Enchanted Redoublement (560p) \u2014 -120p"
+          "summary": "Opener slot #7: cast Veraero III (440p), canonical uses Enchanted Redoublement (560p), -120p"
         },
         {
           "actualId": 25855,
           "expectedId": 7526,
           "lostPotency": 210.0,
           "position": 8,
-          "summary": "Opener slot #8: cast Verthunder III (440p), canonical uses Verholy (650p) \u2014 -210p"
+          "summary": "Opener slot #8: cast Verthunder III (440p), canonical uses Verholy (650p), -210p"
         },
         {
           "actualId": 37004,
           "expectedId": 16530,
           "lostPotency": 390.0,
           "position": 9,
-          "summary": "Opener slot #9: cast Jolt III (360p), canonical uses Scorch (750p) \u2014 -390p"
+          "summary": "Opener slot #9: cast Jolt III (360p), canonical uses Scorch (750p), -390p"
         },
         {
           "actualId": 25856,
           "expectedId": 25858,
           "lostPotency": 410.0,
           "position": 10,
-          "summary": "Opener slot #10: cast Veraero III (440p), canonical uses Resolution (850p) \u2014 -410p"
+          "summary": "Opener slot #10: cast Veraero III (440p), canonical uses Resolution (850p), -410p"
         },
         {
           "actualId": 25855,
           "expectedId": 37006,
           "lostPotency": 160.0,
           "position": 11,
-          "summary": "Opener slot #11: cast Verthunder III (440p), canonical uses Grand Impact (600p) \u2014 -160p"
+          "summary": "Opener slot #11: cast Verthunder III (440p), canonical uses Grand Impact (600p), -160p"
         },
         {
           "actualId": 37004,
           "expectedId": 7510,
           "lostPotency": 20.0,
           "position": 12,
-          "summary": "Opener slot #12: cast Jolt III (360p), canonical uses Verfire (380p) \u2014 -20p"
+          "summary": "Opener slot #12: cast Jolt III (360p), canonical uses Verfire (380p), -20p"
         }
       ]
     },
@@ -646,13 +646,13 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #6: cast Jolt III (360p), canonical uses Enchanted Zwerchhau (380p) \u2014 -20p",
-        "[opener] Opener slot #7: cast Veraero III (440p), canonical uses Enchanted Redoublement (560p) \u2014 -120p",
-        "[opener] Opener slot #8: cast Verthunder III (440p), canonical uses Verholy (650p) \u2014 -210p",
-        "[opener] Opener slot #9: cast Jolt III (360p), canonical uses Scorch (750p) \u2014 -390p",
-        "[opener] Opener slot #10: cast Veraero III (440p), canonical uses Resolution (850p) \u2014 -410p",
-        "[opener] Opener slot #11: cast Verthunder III (440p), canonical uses Grand Impact (600p) \u2014 -160p",
-        "[opener] Opener slot #12: cast Jolt III (360p), canonical uses Verfire (380p) \u2014 -20p"
+        "[opener] Opener slot #6: cast Jolt III (360p), canonical uses Enchanted Zwerchhau (380p), -20p",
+        "[opener] Opener slot #7: cast Veraero III (440p), canonical uses Enchanted Redoublement (560p), -120p",
+        "[opener] Opener slot #8: cast Verthunder III (440p), canonical uses Verholy (650p), -210p",
+        "[opener] Opener slot #9: cast Jolt III (360p), canonical uses Scorch (750p), -390p",
+        "[opener] Opener slot #10: cast Veraero III (440p), canonical uses Resolution (850p), -410p",
+        "[opener] Opener slot #11: cast Verthunder III (440p), canonical uses Grand Impact (600p), -160p",
+        "[opener] Opener slot #12: cast Jolt III (360p), canonical uses Verfire (380p), -20p"
       ],
       "summaryLines": [
         "Your opener cost: 1330p"
@@ -2552,68 +2552,34 @@
   "idealizedTrackStrict": [],
   "improvements": [
     {
-      "abilityId": 0,
-      "abilityName": "",
-      "children": [
-        {
-          "abilityId": 7506,
-          "abilityName": "Corps-a-corps",
-          "children": [],
-          "kind": "missed_cast",
-          "lostPotency": 130.0,
-          "summary": "Missed Corps-a-corps \u2014 fit one around 0:10",
-          "timeSec": 10.2
-        },
-        {
-          "abilityId": 7506,
-          "abilityName": "Corps-a-corps",
-          "children": [],
-          "kind": "missed_cast",
-          "lostPotency": 130.0,
-          "summary": "Missed Corps-a-corps \u2014 fit one around 0:11",
-          "timeSec": 10.9
-        },
-        {
-          "abilityId": 7506,
-          "abilityName": "Corps-a-corps",
-          "children": [],
-          "kind": "missed_cast",
-          "lostPotency": 130.0,
-          "summary": "Missed Corps-a-corps \u2014 fit one around 0:46",
-          "timeSec": 45.9
-        },
-        {
-          "abilityId": 7506,
-          "abilityName": "Corps-a-corps",
-          "children": [],
-          "kind": "missed_cast",
-          "lostPotency": 130.0,
-          "summary": "Missed Corps-a-corps \u2014 fit one around 1:21",
-          "timeSec": 81.1
-        },
-        {
-          "abilityId": 7506,
-          "abilityName": "Corps-a-corps",
-          "children": [],
-          "kind": "missed_cast",
-          "lostPotency": 130.0,
-          "summary": "Missed Corps-a-corps \u2014 fit one around 1:59",
-          "timeSec": 118.6
-        }
-      ],
-      "kind": "residual",
-      "lostPotency": 4430.5,
-      "summary": "Other \u2014 5 small located losses below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
-      "timeSec": 0.0
-    },
-    {
       "abilityId": 7521,
       "abilityName": "Manafication",
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 2795.38,
-      "summary": "Missed Manafication \u2014 fit one around 1:53",
+      "prescription": "Weave it after Veraero III at 1:52. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Manafication, fit one around 1:53",
       "timeSec": 113.1
+    },
+    {
+      "abilityId": 37007,
+      "abilityName": "Prefulgence",
+      "children": [],
+      "kind": "residual_tail",
+      "lostPotency": 2352.1,
+      "prescription": "Weave damaging oGCDs on cooldown. They displace no GCD.",
+      "summary": "Damaging oGCDs the sim fit: 4 more weaves (~2352p; they displace no GCD)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25858,
+      "abilityName": "Resolution",
+      "children": [],
+      "kind": "residual_tail",
+      "lostPotency": 2018.4,
+      "prescription": "Spend gauge and procs the moment they're ready. Banked resource is a cast you never get back.",
+      "summary": "Resource & filler mix: the sim lands 13 more high-value GCDs than you (most: Resolution \u00d72), ~2018p over the filler that replaced them",
+      "timeSec": 0.0
     },
     {
       "abilityId": 0,
@@ -2625,6 +2591,7 @@
           "children": [],
           "kind": "idle",
           "lostPotency": 878.0,
+          "prescription": "Close the 5.0s gap at 0:48, your longest. 5.0s idle total (~2 GCDs).",
           "summary": "Time spent idle: 5.0s (2.0 GCDs)",
           "timeSec": 47.5
         },
@@ -2634,13 +2601,15 @@
           "children": [],
           "kind": "cadence",
           "lostPotency": 380.0,
-          "summary": "Loose GCD pacing \u2014 the optimal line fit ~1 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
+          "prescription": "Press the next GCD the moment it's ready. The optimal line fits ~1 more GCDs with no single gap to point at.",
+          "summary": "Loose GCD pacing: the optimal line fit ~1 more GCDs than you (slightly-late casts spread across the fight, with no single gap)",
           "timeSec": 0.0
         }
       ],
       "kind": "pacing",
       "lostPotency": 1258.0,
-      "summary": "GCD uptime & pacing \u2014 idle gaps and loose GCD timing. These compound: a dropped or clipped GCD also shoves your next weave and burst window later.",
+      "prescription": "Start with the biggest piece: close the 5.0s gap at 0:48, your longest. 5.0s idle total (~2 GCDs).",
+      "summary": "GCD uptime & pacing: idle gaps and loose GCD timing. These compound, since a dropped or clipped GCD also shoves your next weave and burst window later.",
       "timeSec": 47.5
     },
     {
@@ -2653,7 +2622,8 @@
           "children": [],
           "kind": "missed_cast",
           "lostPotency": 180.0,
-          "summary": "Missed Engagement \u2014 fit one around 0:08",
+          "prescription": "Weave one more Engagement around 0:08. Worth ~180p and it displaces no GCD.",
+          "summary": "Missed Engagement, fit one around 0:08",
           "timeSec": 7.7
         },
         {
@@ -2662,7 +2632,8 @@
           "children": [],
           "kind": "missed_cast",
           "lostPotency": 180.0,
-          "summary": "Missed Engagement \u2014 fit one around 0:08",
+          "prescription": "Weave one more Engagement around 0:08. Worth ~180p and it displaces no GCD.",
+          "summary": "Missed Engagement, fit one around 0:08",
           "timeSec": 8.4
         },
         {
@@ -2671,7 +2642,8 @@
           "children": [],
           "kind": "missed_cast",
           "lostPotency": 180.0,
-          "summary": "Missed Engagement \u2014 fit one around 0:45",
+          "prescription": "Weave one more Engagement around 0:45. Worth ~180p and it displaces no GCD.",
+          "summary": "Missed Engagement, fit one around 0:45",
           "timeSec": 45.2
         },
         {
@@ -2680,7 +2652,8 @@
           "children": [],
           "kind": "missed_cast",
           "lostPotency": 180.0,
-          "summary": "Missed Engagement \u2014 fit one around 1:20",
+          "prescription": "Weave one more Engagement around 1:20. Worth ~180p and it displaces no GCD.",
+          "summary": "Missed Engagement, fit one around 1:20",
           "timeSec": 80.4
         },
         {
@@ -2689,13 +2662,15 @@
           "children": [],
           "kind": "missed_cast",
           "lostPotency": 180.0,
-          "summary": "Missed Engagement \u2014 fit one around 1:58",
+          "prescription": "Weave one more Engagement around 1:58. Worth ~180p and it displaces no GCD.",
+          "summary": "Missed Engagement, fit one around 1:58",
           "timeSec": 117.8
         }
       ],
       "kind": "missed_cast",
       "lostPotency": 900.0,
-      "summary": "Missed Engagement \u00d75 \u2014 first around 0:08",
+      "prescription": "Weave it after Veraero III at 0:08. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Engagement \u00d75, first around 0:08",
       "timeSec": 7.7
     },
     {
@@ -2704,7 +2679,8 @@
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 793.98,
-      "summary": "Missed Embolden \u2014 fit one around 2:01",
+      "prescription": "Weave it after Jolt III at 1:58. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Embolden, fit one around 2:01",
       "timeSec": 120.8
     },
     {
@@ -2713,7 +2689,8 @@
       "children": [],
       "kind": "tincture",
       "lostPotency": 495.67,
-      "summary": "Used 0 of 1 tinctures \u2014 fitting 1 more on cooldown recovers this",
+      "prescription": "Pot again the moment it's back up. 1 more fit on cooldown.",
+      "summary": "Used 0 of 1 tinctures. Fitting 1 more on cooldown recovers this",
       "timeSec": 30.0
     },
     {
@@ -2722,7 +2699,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 480.0,
-      "summary": "Missed Fleche \u2014 fit one around 0:33",
+      "prescription": "Weave it after Verthunder III at 0:32. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Fleche, fit one around 0:33",
       "timeSec": 32.7
     },
     {
@@ -2731,7 +2709,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 480.0,
-      "summary": "Missed Fleche \u2014 fit one around 0:58",
+      "prescription": "Weave it after Scorch at 0:58. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Fleche, fit one around 0:58",
       "timeSec": 57.9
     },
     {
@@ -2740,7 +2719,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 480.0,
-      "summary": "Missed Fleche \u2014 fit one around 1:23",
+      "prescription": "Weave it after Jolt III at 1:22. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Fleche, fit one around 1:23",
       "timeSec": 82.9
     },
     {
@@ -2749,7 +2729,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 480.0,
-      "summary": "Missed Fleche \u2014 fit one around 1:48",
+      "prescription": "Weave it after Veraero III at 1:48. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Fleche, fit one around 1:48",
       "timeSec": 108.1
     },
     {
@@ -2758,7 +2739,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 420.0,
-      "summary": "Missed Contre Sixte \u2014 fit one around 0:06",
+      "prescription": "Weave it after Fleche at 0:06. That 1.50s opening is already in your rotation.",
+      "summary": "Missed Contre Sixte, fit one around 0:06",
       "timeSec": 6.2
     },
     {
@@ -2767,7 +2749,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 420.0,
-      "summary": "Missed Contre Sixte \u2014 fit one around 0:43",
+      "prescription": "Weave it after Jolt III at 0:42. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Contre Sixte, fit one around 0:43",
       "timeSec": 42.7
     },
     {
@@ -2776,7 +2759,8 @@
       "children": [],
       "kind": "missed_cast",
       "lostPotency": 420.0,
-      "summary": "Missed Contre Sixte \u2014 fit one around 1:57",
+      "prescription": "Weave it after Jolt III at 1:58. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Contre Sixte, fit one around 1:57",
       "timeSec": 117.1
     },
     {
@@ -2785,7 +2769,8 @@
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 189.85,
-      "summary": "Missed Acceleration \u2014 fit one around 0:05",
+      "prescription": "Weave it after Jolt III at 0:05. That 1.00s opening is already in your rotation.",
+      "summary": "Missed Acceleration, fit one around 0:05",
       "timeSec": 4.7
     },
     {
@@ -2794,7 +2779,8 @@
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 189.85,
-      "summary": "Missed Acceleration \u2014 fit one around 1:00",
+      "prescription": "Weave it after Resolution at 1:00. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Acceleration, fit one around 1:00",
       "timeSec": 60.4
     },
     {
@@ -2803,8 +2789,97 @@
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 189.85,
-      "summary": "Missed Acceleration \u2014 fit one around 1:56",
+      "prescription": "Weave it after Jolt III at 1:58. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Acceleration, fit one around 1:56",
       "timeSec": 116.3
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 7506,
+          "abilityName": "Corps-a-corps",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 130.0,
+          "prescription": "Weave one more Corps-a-corps around 0:10. Worth ~130p and it displaces no GCD.",
+          "summary": "Missed Corps-a-corps, fit one around 0:10",
+          "timeSec": 10.2
+        },
+        {
+          "abilityId": 7506,
+          "abilityName": "Corps-a-corps",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 130.0,
+          "prescription": "Weave one more Corps-a-corps around 0:11. Worth ~130p and it displaces no GCD.",
+          "summary": "Missed Corps-a-corps, fit one around 0:11",
+          "timeSec": 10.9
+        },
+        {
+          "abilityId": 7506,
+          "abilityName": "Corps-a-corps",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 130.0,
+          "prescription": "Weave one more Corps-a-corps around 0:46. Worth ~130p and it displaces no GCD.",
+          "summary": "Missed Corps-a-corps, fit one around 0:46",
+          "timeSec": 45.9
+        },
+        {
+          "abilityId": 7506,
+          "abilityName": "Corps-a-corps",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 130.0,
+          "prescription": "Weave one more Corps-a-corps around 1:21. Worth ~130p and it displaces no GCD.",
+          "summary": "Missed Corps-a-corps, fit one around 1:21",
+          "timeSec": 81.1
+        },
+        {
+          "abilityId": 7506,
+          "abilityName": "Corps-a-corps",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 130.0,
+          "prescription": "Weave one more Corps-a-corps around 1:59. Worth ~130p and it displaces no GCD.",
+          "summary": "Missed Corps-a-corps, fit one around 1:59",
+          "timeSec": 118.6
+        }
+      ],
+      "countGaps": [
+        {
+          "name": "Prefulgence",
+          "sim": 2,
+          "you": 0
+        },
+        {
+          "name": "Fleche",
+          "sim": 5,
+          "you": 1
+        },
+        {
+          "name": "Vice of Thorns",
+          "sim": 2,
+          "you": 0
+        },
+        {
+          "name": "Grand Impact",
+          "sim": 3,
+          "you": 0
+        },
+        {
+          "name": "Veraero III",
+          "sim": 8,
+          "you": 20
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 60.0,
+      "prescription": "Biggest count gaps: Prefulgence and Fleche. The sim fits more of them. Your extra Veraero III casts came out of those slots; each extra is worth less than what it displaced.",
+      "summary": "Spacing & sequencing: 5 small located losses below the listing threshold",
+      "timeSec": 0.0
     },
     {
       "abilityId": 25856,
@@ -2816,7 +2891,8 @@
           "children": [],
           "kind": "overcap",
           "lostPotency": 12.0,
-          "summary": "White_mana overcap at 1:48 \u2014 Veraero III (wasted 3)",
+          "prescription": "Spend white_mana before 1:48. Veraero III wasted 3.",
+          "summary": "White_mana overcap at 1:48: Veraero III (wasted 3)",
           "timeSec": 107.5
         },
         {
@@ -2825,7 +2901,8 @@
           "children": [],
           "kind": "overcap",
           "lostPotency": 24.0,
-          "summary": "White_mana overcap at 1:50 \u2014 Veraero III (wasted 6)",
+          "prescription": "Spend white_mana before 1:50. Veraero III wasted 6.",
+          "summary": "White_mana overcap at 1:50: Veraero III (wasted 6)",
           "timeSec": 110.0
         },
         {
@@ -2834,13 +2911,15 @@
           "children": [],
           "kind": "overcap",
           "lostPotency": 24.0,
-          "summary": "White_mana overcap at 1:52 \u2014 Veraero III (wasted 6)",
+          "prescription": "Spend white_mana before 1:52. Veraero III wasted 6.",
+          "summary": "White_mana overcap at 1:52: Veraero III (wasted 6)",
           "timeSec": 112.5
         }
       ],
       "kind": "overcap",
       "lostPotency": 60.0,
-      "summary": "Veraero III overcap \u00d73 \u2014 first around 1:48",
+      "prescription": "Spend white_mana before 1:48. Veraero III wasted 3.",
+      "summary": "Veraero III overcap \u00d73, first around 1:48",
       "timeSec": 107.5
     },
     {
@@ -2849,7 +2928,8 @@
       "children": [],
       "kind": "overcap",
       "lostPotency": 20.0,
-      "summary": "White_mana overcap at 1:55 \u2014 Verstone (wasted 5)",
+      "prescription": "Spend white_mana before 1:55. Verstone wasted 5.",
+      "summary": "White_mana overcap at 1:55: Verstone (wasted 5)",
       "timeSec": 115.0
     },
     {
@@ -2858,7 +2938,8 @@
       "children": [],
       "kind": "overcap",
       "lostPotency": 8.0,
-      "summary": "White_mana overcap at 1:58 \u2014 Jolt III (wasted 2)",
+      "prescription": "Spend white_mana before 1:58. Jolt III wasted 2.",
+      "summary": "White_mana overcap at 1:58: Jolt III (wasted 2)",
       "timeSec": 117.5
     },
     {
@@ -2867,7 +2948,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #6: cast Jolt III, canonical opens Enchanted Zwerchhau (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #6: cast Jolt III, canonical opens Enchanted Zwerchhau (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2876,7 +2957,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #7: cast Veraero III, canonical opens Enchanted Redoublement (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #7: cast Veraero III, canonical opens Enchanted Redoublement (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2885,7 +2966,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #8: cast Verthunder III, canonical opens Verholy (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #8: cast Verthunder III, canonical opens Verholy (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2894,7 +2975,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #9: cast Jolt III, canonical opens Scorch (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #9: cast Jolt III, canonical opens Scorch (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2903,7 +2984,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #10: cast Veraero III, canonical opens Resolution (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #10: cast Veraero III, canonical opens Resolution (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2912,7 +2993,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #11: cast Verthunder III, canonical opens Grand Impact (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #11: cast Verthunder III, canonical opens Grand Impact (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -2921,7 +3002,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #12: cast Jolt III, canonical opens Verfire (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #12: cast Jolt III, canonical opens Verfire (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

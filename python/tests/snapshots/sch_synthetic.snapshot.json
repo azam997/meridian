@@ -92,7 +92,7 @@
           "casts": 1,
           "cdrOverflowSeconds": 0.0,
           "lostCasts": 2.0,
-          "lostPotency": 1400.0,
+          "lostPotency": 1438.3,
           "sharedConsumers": 0
         },
         {
@@ -114,7 +114,7 @@
           "expectedId": 25865,
           "lostPotency": 320.0,
           "position": 1,
-          "summary": "Opener slot #1: cast Biolysis (0p), canonical uses Broil IV (320p) \u2014 -320p"
+          "summary": "Opener slot #1: cast Biolysis (0p), canonical uses Broil IV (320p), -320p"
         },
         {
           "actualId": 25865,
@@ -128,7 +128,7 @@
           "expectedId": 25865,
           "lostPotency": 320.0,
           "position": 12,
-          "summary": "Opener slot #12: cast Biolysis (0p), canonical uses Broil IV (320p) \u2014 -320p"
+          "summary": "Opener slot #12: cast Biolysis (0p), canonical uses Broil IV (320p), -320p"
         }
       ]
     },
@@ -267,7 +267,7 @@
         "oGCDs"
       ],
       "findings": [
-        "Clean GCD pacing \u2014 eff GCD 2.50s, no notable idle time or clipping."
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
       ],
       "summaryLines": [
         "Effective GCD: 2.50s",
@@ -321,8 +321,8 @@
         "Lost (p)"
       ],
       "findings": [
-        "[opener] Opener slot #1: cast Biolysis (0p), canonical uses Broil IV (320p) \u2014 -320p",
-        "[opener] Opener slot #12: cast Biolysis (0p), canonical uses Broil IV (320p) \u2014 -320p"
+        "[opener] Opener slot #1: cast Biolysis (0p), canonical uses Broil IV (320p), -320p",
+        "[opener] Opener slot #12: cast Biolysis (0p), canonical uses Broil IV (320p), -320p"
       ],
       "summaryLines": [
         "Your opener cost: 640p"
@@ -3942,7 +3942,8 @@
       "children": [],
       "kind": "tincture",
       "lostPotency": 868.86,
-      "summary": "Used 0 of 2 tinctures \u2014 fitting 2 more on cooldown recovers this",
+      "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+      "summary": "Used 0 of 2 tinctures. Fitting 2 more on cooldown recovers this",
       "timeSec": 0.0
     },
     {
@@ -3951,7 +3952,8 @@
       "children": [],
       "kind": "missed_enabler",
       "lostPotency": 719.15,
-      "summary": "Missed Chain Stratagem \u2014 fit one around 2:01",
+      "prescription": "Weave it after Broil IV at 2:01. That 2.50s opening is already in your rotation.",
+      "summary": "Missed Chain Stratagem, fit one around 2:01",
       "timeSec": 121.0
     },
     {
@@ -3964,13 +3966,22 @@
           "children": [],
           "kind": "missed_enabler",
           "lostPotency": 719.15,
-          "summary": "Missed Chain Stratagem \u2014 fit one around 4:01",
+          "prescription": "Keep Chain Stratagem on cooldown. The sim's line fits one here.",
+          "summary": "Missed Chain Stratagem, fit one around 4:01",
           "timeSec": 241.0
+        }
+      ],
+      "countGaps": [
+        {
+          "name": "Chain Stratagem",
+          "sim": 3,
+          "you": 1
         }
       ],
       "kind": "residual",
       "lostPotency": 142.68,
-      "summary": "Other \u2014 1 small located loss below the listing threshold, plus small losses scattered across the fight (resource/burst spacing & sequencing)",
+      "prescription": "Biggest count gaps: Chain Stratagem. The sim fits more of them.",
+      "summary": "Spacing & sequencing: 1 small located loss below the listing threshold",
       "timeSec": 0.0
     },
     {
@@ -3979,7 +3990,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #1: cast Biolysis, canonical opens Broil IV (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #1: cast Biolysis, canonical opens Broil IV (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     },
     {
@@ -3988,7 +3999,7 @@
       "children": [],
       "kind": "opener",
       "lostPotency": 0.0,
-      "summary": "Opener slot #12: cast Biolysis, canonical opens Broil IV (ordering \u2014 no net loss unless it drops a cast)",
+      "summary": "Opener slot #12: cast Biolysis, canonical opens Broil IV (ordering only, no net loss unless it drops a cast)",
       "timeSec": 0.0
     }
   ],

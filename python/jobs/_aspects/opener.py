@@ -73,7 +73,7 @@ def compute_opener(norm_casts: list[tuple[float, int]],
         lost = max(0.0, float(expected_p - actual_p))
         if lost > 0:
             summary = (f"Opener slot #{i+1}: cast {actual_name} ({actual_p}p), "
-                       f"canonical uses {expected_name} ({expected_p}p) — "
+                       f"canonical uses {expected_name} ({expected_p}p), "
                        f"-{lost:.0f}p")
         else:
             summary = (f"Opener slot #{i+1}: cast {actual_name}, "

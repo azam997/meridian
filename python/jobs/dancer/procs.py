@@ -142,7 +142,7 @@ class ProcsAspect:
         findings: list[str] = []
         if wasted >= 2:
             findings.append(
-                f"[proc] Proc utilization {util:.0f}% — {wasted} "
+                f"[proc] Proc utilization {util:.0f}%: {wasted} "
                 f"Silken/Fan Dance proc{'s' if wasted != 1 else ''} wasted "
                 f"(overwritten or expired)")
         return AspectComparison(aspect_name=self.name, findings=findings)
@@ -171,7 +171,7 @@ def improvements_from_procs(state: dict) -> list[Improvement]:
                 kind="proc", ability_id=int(m.get("consumer_id", 0) or 0),
                 ability_name=consumer, time_s=t,
                 lost_potency=float(m.get("lost_potency", 0.0) or 0.0),
-                summary=f"{_mmss(t)} — overwrote {status}: use {consumer} first"))
+                summary=f"{_mmss(t)} overwrote {status}: use {consumer} first"))
     # With children the card is expandable; with exactly one overwrite it jumps
     # straight there — carrying that overwrite's ACTUAL consumer so the
     # timeline's ability-aware highlight targets the right proc; all-expiry
@@ -188,6 +188,6 @@ def improvements_from_procs(state: dict) -> list[Improvement]:
         kind="proc", ability_id=lead_id, ability_name=lead_name,
         time_s=t0, lost_potency=lost,
         summary=f"{wasted} proc{'s' if wasted != 1 else ''} wasted "
-                f"(utilization {util:.0f}%) — spend Reverse Cascade / Fountainfall / "
+                f"(utilization {util:.0f}%). Spend Reverse Cascade / Fountainfall / "
                 f"Fan Dance III before re-procing{expired_note}",
         children=children)]

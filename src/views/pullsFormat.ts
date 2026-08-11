@@ -55,6 +55,18 @@ export function groupRowsByDate(rows: PullRow[], now: number = Date.now()): Pull
 export const encounterShortName = (name: string): string =>
   name.replace(/\s*\([^)]*\)\s*$/, '');
 
+/** Split a catalog encounter name into chip label + mono short code:
+ *  "Lindwurm II (M12S P2)" -> { label: "Lindwurm II", code: "M12S P2" }.
+ *  A code that just restates the category tab ("Dancing Mad (Ultimate)")
+ *  is dropped — the tab already says it. */
+export function splitEncounterName(name: string): { label: string; code?: string } {
+  const m = name.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+  if (!m || !m[1]) return { label: name };
+  const code = m[2].trim();
+  if (/^(savage|ultimate)$/i.test(code)) return { label: m[1] };
+  return { label: m[1], code };
+}
+
 /** The row's second line: "Machinist · kill 8:12 · 36.6k dps" or
  *  "Machinist · wipe 13:45 · reached P4 · 39% left". Parts degrade when the
  *  data is absent (pasted kills have no dps; unphased wipes no phase). */

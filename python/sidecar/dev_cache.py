@@ -300,6 +300,21 @@ class DevDiskCacheClient:
                 metric=metric, page=page),
         )
 
+    def invalidate_rankings(self, encounter_id: int, class_name: str,
+                            spec_name: str, difficulty: int = 101,
+                            metric: str = "rdps", page: int = 1) -> None:
+        """Drop one rankings entry (the Top Pulls "Refresh rankings" path) so
+        the next `get_rankings` refetches instead of serving the TTL'd file.
+        Key parts must mirror `get_rankings` exactly — the digest hashes them."""
+        parts = ("get_rankings", encounter_id, class_name, spec_name,
+                 difficulty, metric, page)
+        path = self._path_for(parts)
+        try:
+            with self._lock_for(path):
+                path.unlink(missing_ok=True)
+        except Exception:
+            pass   # best-effort, like every other disk op here
+
     def set_cache_cap(self, max_bytes: int | None) -> None:
         """Live-update the size cap (the Settings slider) and trim to it
         immediately. None ⇒ unbounded."""

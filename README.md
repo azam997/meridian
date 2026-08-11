@@ -66,8 +66,8 @@ can instead use client-credentials: create a v2 API client at
 
 ## Feedback
 
-Use **Submit Feedback** inside the app — it bundles diagnostics and prefills a GitHub
-issue on the [releases repo](https://github.com/azam997/meridian-releases/issues).
+File bugs and suggestions as issues on the
+[releases repo](https://github.com/azam997/meridian-releases/issues).
 
 ## License
 
@@ -77,5 +77,6 @@ service — you must publish your source under the same license.
 
 ---
 
-This repository is published as a source snapshot from a private working repo, so it
-carries a single commit rather than full history.
+This repository is published as source snapshots from a private working repo: one
+commit per export rather than full development history. Each release is tagged
+(`v<version>`), so the exact source of every released build stays available here.
