@@ -41,9 +41,18 @@ class CeilingContext:
 
     Keeps the GCD axis orthogonal to each job's existing context — a job wraps its old
     payload in `.payload` and reads its effective GCD off `.gcd_base_s`, without the two
-    concerns polluting each other."""
+    concerns polluting each other.
+
+    `demonstrated` is the player's normalized cast stream (a `((t, ability_id), ...)`
+    tuple), present ONLY for a job opted into the replay-seeded ceiling leg
+    (`ScoringAspectBase.replay_seeded_ceiling`): it rides the hashable context so the
+    perfect-sim caches and pool dispatch key on it — two pulls with equal rounded
+    duration/downtime/gear would otherwise collide and serve each other's seeded
+    ceiling. Only ever set alongside `gcd_base_s`, so `__bool__` stays two-field.
+    Stripped at the wire boundary (`sidecar/main.py::_serialize_aspect_state`)."""
     gcd_base_s: Optional[float] = None
     payload: Any = None
+    demonstrated: Optional[tuple] = None
 
     def __bool__(self) -> bool:
         return self.gcd_base_s is not None or bool(self.payload)
@@ -193,9 +202,26 @@ def demonstrated_cadence(
             if t >= 0.0 and is_gcd(a) and not _in(t, haste))
     if n < min_gcds:
         return None
-    off_total = sum(min(fight_duration_s, e) - max(0.0, s)
-                    for s, e in [*downtime, *haste] if e > 0.0 and s < fight_duration_s)
-    uptime = fight_duration_s - max(0.0, off_total)
+    # UNION the two window lists before subtracting: a haste window inside a
+    # downtime window (or overlapping windows generally) must be removed once,
+    # not twice — double-subtraction shrank the uptime, read the demonstrated
+    # cadence fast, and inflated the strict ceiling on every anchor job.
+    clamped = sorted((max(0.0, s), min(fight_duration_s, e))
+                     for s, e in [*downtime, *haste]
+                     if e > 0.0 and s < fight_duration_s)
+    off_total = 0.0
+    cur_s: float | None = None
+    cur_e = 0.0
+    for s, e in clamped:
+        if cur_s is None or s > cur_e:
+            if cur_s is not None:
+                off_total += cur_e - cur_s
+            cur_s, cur_e = s, e
+        else:
+            cur_e = max(cur_e, e)
+    if cur_s is not None:
+        off_total += cur_e - cur_s
+    uptime = fight_duration_s - off_total
     return uptime / n if uptime > 0 else None
 
 

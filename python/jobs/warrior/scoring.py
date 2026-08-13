@@ -14,11 +14,11 @@ WAR's two bespoke damage pieces:
     A dropped/late Surging Tempest costs efficiency; at 100% uptime the x1.10
     cancels in the ratio (preserving the efficiency <= 100% guard).
   * **Guaranteed crit-DH** — Inner Chaos and Primal Rend always land a guaranteed
-    critical direct hit, and the free Fell Cleaves cast inside an Inner Release
-    window do too. These are priced with a flat crit-DH multiplier (like MCH
-    Reassemble / Full Metal Field). The Inner Release windows are derived from the
-    timeline's own Inner Release casts, so the treatment is symmetric on delivered
-    + idealized.
+    critical direct hit, and the 3 free Fell Cleaves an Inner Release grants do
+    too. These are priced with a flat crit-DH multiplier (like MCH Reassemble /
+    Full Metal Field). The free casts are STACK-counted from the timeline's own
+    Inner Release casts (`_ir_credited_indices`), so the treatment is symmetric
+    on delivered + idealized.
 """
 from __future__ import annotations
 
@@ -39,19 +39,25 @@ def _full_st_intervals(duration_s: float) -> list[tuple[float, float, float]]:
     return [(-10.0, duration_s + 1.0, wd.SURGING_TEMPEST_MULT)]
 
 
-def _inner_release_windows(
-    timeline: list[tuple[float, int]],
-) -> list[tuple[float, float]]:
-    """Inner Release windows derived from the IR casts in the timeline:
-    `[(t, t + INNER_RELEASE_WINDOW_S)]`. A free Fell Cleave inside one is a
-    guaranteed crit-DH (the 3 free weaponskills); used symmetrically on delivered
-    + idealized. Inner Chaos / Primal Rend are crit-DH regardless of the window."""
-    return [(t, t + wd.INNER_RELEASE_WINDOW_S)
-            for t, aid in timeline if aid == wd.INNER_RELEASE]
-
-
-def _in_windows(t: float, windows: list[tuple[float, float]]) -> bool:
-    return any(s <= t < e for s, e in windows)
+def _ir_credited_indices(timeline: list[tuple[float, int]]) -> set[int]:
+    """Indices (into `timeline`) of the FREE Inner Release Fell Cleaves /
+    Decimates: each IR cast arms 3 stacks for 15s; the next 3 FC/Decimate casts
+    inside the buff consume them and land guaranteed crit-DH. STACK-counted,
+    not window-boxed — the optimal line interleaves Inner Chaos first, which
+    pushes the 3rd free cast past any fixed window (the old 8s box dropped its
+    crit-DH on BOTH lenses, ~600p per Inner Release). Used symmetrically on
+    delivered + idealized; Inner Chaos / Primal Rend are crit-DH regardless."""
+    credited: set[int] = set()
+    stacks = 0
+    until = float("-inf")
+    for i, (t, aid) in enumerate(timeline):
+        if aid == wd.INNER_RELEASE:
+            stacks = wd.INNER_RELEASE_STACKS
+            until = t + wd.INNER_RELEASE_BUFF_S
+        elif aid in (wd.FELL_CLEAVE, wd.DECIMATE) and stacks > 0 and t < until:
+            credited.add(i)
+            stacks -= 1
+    return credited
 
 
 def score_delivered_potency(
@@ -77,22 +83,21 @@ def score_delivered_potency(
     # Fold the sim's in-timeline tincture pot marker into the per-cast multiplier; a
     # no-op for the player's delivered timeline (no marker).
     buff_intervals = merge_tincture_markers(timeline, buff_intervals, _TINCTURE_SPEC)
-    ir_windows = _inner_release_windows(timeline)
+    ir_credited = _ir_credited_indices(timeline)
     crit_dh = wd.GUARANTEED_CRIT_DH_MULT
     st = st_intervals or None
     bi = buff_intervals or None
     n_of = target_fn or (lambda _t, _a: 1)
     total = 0.0
-    for t, aid in timeline:
+    for i, (t, aid) in enumerate(timeline):
         base = potency_for(aid, n_of(t, aid), wd.JOB_DATA)
         if base <= 0:
             continue
         m = 1.0
         if aid in wd.ALWAYS_CRIT_DH_IDS:
             m *= crit_dh
-        elif aid in (wd.FELL_CLEAVE, wd.DECIMATE) and _in_windows(t, ir_windows):
-            # Decimate is the AoE Fell Cleave — also a guaranteed crit-DH when
-            # cast as a free Inner Release weaponskill.
+        elif i in ir_credited:
+            # A free Inner Release Fell Cleave / Decimate (stack-counted).
             m *= crit_dh
         if st:
             m *= multiplier_at(t, st)

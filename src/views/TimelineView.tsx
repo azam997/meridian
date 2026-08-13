@@ -301,7 +301,7 @@ type Hover =
   | { kind: 'gap-ghost' | 'gap-ideal'; idx: number }
   | { kind: 'you'; idx: number }
   | { kind: 'idle' | 'clip'; idx: number }
-  | { kind: 'downA' | 'downB' | 'downBHigh' | 'death' | 'mt' | 'phase'; idx: number }
+  | { kind: 'downA' | 'downB' | 'downBHigh' | 'ranged' | 'death' | 'mt' | 'phase'; idx: number }
   // Multi-target cast hover carries its data inline (it's per-cast on every
   // lane, so there's no single index to look up). `topPx` is the bubble's
   // overlay-coordinate top, measured from the hovered icon's real on-screen
@@ -502,6 +502,12 @@ export const TimelineView = ({
   // stretches the idealized lane skips. Rendered firmly over the lighter
   // suspected hatch so the confidence gradient reads at a glance.
   const downtimeBHigh = analysis.headline.downtimeTierBHigh ?? [];
+  // Consensus ranged-filler windows (Tier-B's sibling): forced melee
+  // disconnects the ref pool bridged with the job's ranged filler (RPR Harpe)
+  // instead of going idle. Lenient-ceiling pardon only — drawn like the Tier-B
+  // zones so the forced-disconnect story is visible on the strip. Empty for
+  // every job without a `ranged_filler_id`.
+  const rangedW = analysis.headline.rangedWindows ?? [];
   // Boss phase segments (phased fights only — ultimates). Empty on Savage, so
   // the phase track simply doesn't render there.
   const phases = analysis.phases ?? [];
@@ -863,7 +869,7 @@ export const TimelineView = ({
         left: clampLeft(xOf((w.startSec + w.endSec) / 2)),
         top: 30 + hoverScrollTop,
         head: 'Suspected downtime (consensus)',
-        body: `${fmtDur(w.endSec - w.startSec)} (${fmtAxisTick(w.startSec)}–${fmtAxisTick(w.endSec)}) where at least ${w.nIdle}/${w.nTotal} reference players were also idle. Ambiguous — the ideal still casts here (and improvements may nudge), since it's not near-unanimous. Excluded under lenient scoring; strict still counts it as your time.`,
+        body: `${fmtDur(w.endSec - w.startSec)} (${fmtAxisTick(w.startSec)}–${fmtAxisTick(w.endSec)}): at least ${w.nIdle}/${w.nTotal} top parses were also idle here. Short of unanimous, so it still counts as your time and the ideal keeps casting through it; the efficiency with forced stops excluded pardons it.`,
         cost: 0,
       };
     }
@@ -875,6 +881,22 @@ export const TimelineView = ({
         top: 30 + hoverScrollTop,
         head: 'Forced downtime (high confidence)',
         body: `${fmtDur(w.endSec - w.startSec)} (${fmtAxisTick(w.startSec)}–${fmtAxisTick(w.endSec)}) where ${w.nIdle}/${w.nTotal} of the top parses were idle — near-unanimous, so this is treated as genuinely forced: the ideal skips it and it isn't scored against you. The window is trimmed to where the pool agrees, so edge squeezes stay yours.`,
+        cost: 0,
+      };
+    }
+    if (hover.kind === 'ranged') {
+      const w = rangedW[hover.idx];
+      if (!w) return null;
+      // Copy rule: explain once, sharply, in game lingo. No strict/lenient
+      // vocabulary, no over-explaining (owner wording, 2026-08-13).
+      const creditTail = analysis.headline.meleeDowntime
+        ? ' Your ceiling was credited where you disengaged (see the downtime panel).'
+        : '';
+      return {
+        left: clampLeft(xOf((w.startSec + w.endSec) / 2)),
+        top: 30 + hoverScrollTop,
+        head: 'Forced out of melee',
+        body: `${fmtDur(w.endSec - w.startSec)} (${fmtAxisTick(w.startSec)}–${fmtAxisTick(w.endSec)}): forced to leave melee range; using ranged filler. ${w.nCasting}/${w.nTotal} top parses did the same.${creditTail}`,
         cost: 0,
       };
     }
@@ -1138,6 +1160,15 @@ export const TimelineView = ({
           className={`tl-strip-tint down down-bh${hover?.kind === 'downBHigh' && hover.idx === i ? ' on' : ''}`}
           style={{ left: xOf(w.startSec), width: (w.endSec - w.startSec) * pxPerSec }}
           onMouseEnter={(e) => setHover({ kind: 'downBHigh', idx: i, scrollTop: scrollTopOf(e) })}
+          onMouseLeave={() => setHover(null)}
+        />
+      ))}
+      {rangedW.map((w, i) => (
+        <div
+          key={`dtrf${i}`}
+          className={`tl-strip-tint down down-rf${hover?.kind === 'ranged' && hover.idx === i ? ' on' : ''}`}
+          style={{ left: xOf(w.startSec), width: (w.endSec - w.startSec) * pxPerSec }}
+          onMouseEnter={(e) => setHover({ kind: 'ranged', idx: i, scrollTop: scrollTopOf(e) })}
           onMouseLeave={() => setHover(null)}
         />
       ))}
@@ -1442,6 +1473,18 @@ export const TimelineView = ({
           className={`tl-band tier-b-high${hover?.kind === 'downBHigh' && hover.idx === i ? ' on' : ''}`}
           style={{ left: xOf(w.startSec), width: (w.endSec - w.startSec) * pxPerSec }}
           onMouseEnter={(e) => setHover({ kind: 'downBHigh', idx: i, scrollTop: scrollTopOf(e) })}
+          onMouseLeave={() => setHover(null)}
+        />
+      ))}
+      {/* Consensus ranged-filler windows: never overlap the downtime bands
+          (Tier A and Tier B are subtracted at detection), so stacking order
+          against them is moot. */}
+      {rangedW.map((w, i) => (
+        <div
+          key={`rf${i}`}
+          className={`tl-band ranged-filler${hover?.kind === 'ranged' && hover.idx === i ? ' on' : ''}`}
+          style={{ left: xOf(w.startSec), width: (w.endSec - w.startSec) * pxPerSec }}
+          onMouseEnter={(e) => setHover({ kind: 'ranged', idx: i, scrollTop: scrollTopOf(e) })}
           onMouseLeave={() => setHover(null)}
         />
       ))}

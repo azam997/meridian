@@ -68,11 +68,13 @@ def _register_self() -> None:
     global _registered
     if _registered:
         return
+    from jobs.whitemage.advice import PACK as _advice_pack
     register(Job(
         name="White Mage",
         data=JOB_DATA,
         aspects=_build_aspects(),
         simulator=_build_simulator(),
         improvement_contributors=_improvement_contributors,
+        advice_probes=_advice_pack,
     ))
     _registered = True

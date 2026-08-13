@@ -84,6 +84,8 @@ ADLOQUIUM          = 185     # is_gcd shield heal (2.0s cast)
 SUCCOR             = 186     # is_gcd AoE shield heal (2.0s cast)
 CONCITATION        = 37013   # is_gcd AoE shield heal (Succor upgrade); the LOCKED heal (mitplan)
 PHYSICK            = 190     # is_gcd single-target heal
+RESURRECTION       = 173     # is_gcd raise, 8s hardcast (Arcanist action — same id
+                             # as SMN's; verified vs jobs/_core/ability_metadata.py)
 # ... and the oGCD heal/mit + fairy kit
 LUSTRATE           = 189     # Aetherflow oGCD heal
 INDOMITABILITY     = 3583    # Aetherflow oGCD AoE heal
@@ -154,7 +156,7 @@ OGCD_IDS: frozenset[int] = frozenset({
 # recast; Chain Stratagem is the 120s burst anchor.
 COOLDOWNS: dict[int, tuple[float, int]] = {
     CHAIN_STRATAGEM: (120.0, 1),
-    AETHERFLOW:       (60.0, 1),
+    AETHERFLOW:      (AETHERFLOW_CD_S, 1),   # single source (was a second 60.0)
 }
 
 # Per-cast value used by the cooldown-drift detector (lost potential if skipped).
@@ -206,6 +208,11 @@ DEFENSIVE_IDS: frozenset[int] = frozenset({
 COSTED_HEAL_GCD_IDS: frozenset[int] = frozenset({
     ADLOQUIUM, SUCCOR, CONCITATION, PHYSICK,
 })
+
+# Resurrection GCDs — the heal-lock rez pardon (jobs/_core/heal_locks): an
+# uptime Resurrection locks its own GCD(s) into the ceiling and opens a
+# recovery window for the costed heals that follow. Never in COSTED_HEAL_GCD_IDS.
+REZ_GCD_IDS: frozenset[int] = frozenset({RESURRECTION})
 
 # --- Burst-alignment abilities ----------------------------------------------
 BURST_ABILITIES: frozenset[int] = frozenset({

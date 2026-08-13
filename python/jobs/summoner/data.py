@@ -335,6 +335,17 @@ PRIMAL_RITES: dict[int, tuple[int, int]] = {
 }
 PRIMAL_SUMMONS: tuple[int, ...] = (SUMMON_GARUDA_II, SUMMON_IFRIT_II, SUMMON_TITAN_II)
 
+# Net value of one primal phase over the Ruin III filler it displaces (the
+# summon burst + rites + favor package, minus the displaced filler GCDs) —
+# the same net-over-filler numbers the simulator's beam prune credits
+# (`simulator._PRUNE_GEM_P`). Used by the deep-advice pack to rank wasted-gem
+# causes; additive only, changes no existing value.
+PRIMAL_PHASE_VALUE_P: dict[int, int] = {
+    SUMMON_IFRIT_II:  1000,
+    SUMMON_TITAN_II:  800,
+    SUMMON_GARUDA_II: 600,
+}
+
 # Aetherflow gauge (drift/overcap detector + entry gauge). Closed cast-visible
 # economy: Energy Drain/Siphon is the only generator and both are in the cast
 # stream, so the deepest-deficit entry measurement needs no window cap.
@@ -353,42 +364,25 @@ AETHERFLOW_GAUGE = GaugeModel(
 # Lightwyrm window with Searing Light + pot + Energy Drain + Enkindle + Sunflare
 # + Searing Flash + Necrotize weaved between Umbral Impulses, then Garuda ->
 # Ifrit -> Titan gem phases.
+# GCD sequence ONLY (the house convention — jobs/_core/job.py: "first ~12
+# in-fight GCDs in canonical order"): the OpenerAspect diffs this against the
+# player's GCD stream, so interleaving the weaved oGCDs (Searing Light / Energy
+# Drain / Enkindle / Sunflare / Necrotize / Mountain Buster / Searing Flash)
+# compared two different alphabets. The oGCD weave order lives in the probe
+# notes above, not in this tuple.
 CANONICAL_OPENER: tuple[int, ...] = (
     RUIN_III,
     SUMMON_SOLAR_BAHAMUT,
     UMBRAL_IMPULSE,
-    SEARING_LIGHT,
     UMBRAL_IMPULSE,
-    ENERGY_DRAIN,
     UMBRAL_IMPULSE,
-    ENKINDLE_SOLAR_BAHAMUT,
     UMBRAL_IMPULSE,
-    SUNFLARE,
-    NECROTIZE,
     UMBRAL_IMPULSE,
-    SEARING_FLASH,
     UMBRAL_IMPULSE,
-    NECROTIZE,
     SUMMON_GARUDA_II,
     EMERALD_RITE,
     EMERALD_RITE,
     SLIPSTREAM,
-    EMERALD_RITE,
-    EMERALD_RITE,
-    SUMMON_IFRIT_II,
-    CRIMSON_CYCLONE,
-    RUBY_RITE,
-    RUBY_RITE,
-    CRIMSON_STRIKE,
-    SUMMON_TITAN_II,
-    TOPAZ_RITE,
-    MOUNTAIN_BUSTER,
-    TOPAZ_RITE,
-    MOUNTAIN_BUSTER,
-    TOPAZ_RITE,
-    MOUNTAIN_BUSTER,
-    TOPAZ_RITE,
-    MOUNTAIN_BUSTER,
 )
 
 # --- Burst-alignment abilities ---------------------------------------------------

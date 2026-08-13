@@ -75,10 +75,11 @@ def score_delivered_potency(
     casts = sorted(timeline, key=lambda x: x[0])
 
     # Both sides open Formless (the universal pre-pull Form Shift — the sim's
-    # prepull arms it too, so the assumption cancels in the ratio).
+    # prepull arms it too, so the assumption cancels in the ratio). Clocked
+    # from the -1.5s press, mirroring the sim's prepull exactly.
     form = _NO_FORM
     form_end = float("-inf")
-    formless_end = md.FORMLESS_DURATION_S
+    formless_end = -1.5 + md.FORMLESS_DURATION_S
     pb_left = 0
     pb_end = float("-inf")
     opo_fury = raptor_fury = coeurl_fury = 0
@@ -206,16 +207,18 @@ class MonkScoringAspect(ScoringAspectBase):
                 actor: dict[str, Any], report: dict[str, Any], norm_casts) -> Any:
         n = sum(1 for t, aid in norm_casts
                 if t >= 0 and aid in (md.THE_FORBIDDEN_CHAKRA, md.ENLIGHTENMENT))
-        return _MnkCtx(MonkCtx(tfc_budget=n) if n > 0 else None)
+        # n == 0 is a measurement (the ceiling spends what the player got),
+        # NOT absence — never collapse it onto the rate-based default.
+        return _MnkCtx(MonkCtx(tfc_budget=n))
 
     def sim_context(self, ctx: Any) -> Any:
-        return ctx.ctx or None
+        return ctx.ctx
 
     def score_delivered(self, ctx, in_fight_casts, buff_intervals=None) -> float:
         return score_delivered_potency(in_fight_casts, buff_intervals=buff_intervals)
 
     def extra_state(self, ctx: Any) -> dict:
         return {
-            "sim_context": ctx.ctx or None,
-            "tfcBudget": ctx.ctx.tfc_budget if ctx.ctx else 0,
+            "sim_context": ctx.ctx,
+            "tfcBudget": ctx.ctx.tfc_budget if ctx.ctx is not None else 0,
         }

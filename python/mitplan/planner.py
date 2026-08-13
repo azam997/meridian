@@ -57,6 +57,15 @@ ROLE_KEYS = ("tank", "healer", "dps")
 _ACTION_BY_JOB_ID: dict[tuple[str, int], MitAction] = {
     (a.job, a.action_id): a for a in ACTIONS
 }
+_ACTION_BY_JOB_NAME: dict[tuple[str, str], MitAction] = {
+    (a.job, a.name): a for a in ACTIONS
+}
+
+# Prerequisite chains (`MitAction.requires`): the dependent may be cast this
+# many seconds BEFORE its enabler and still count as the same weave window —
+# the derived per-class cast leads (shield 4s vs mit 2s) would otherwise
+# order a same-mechanic Temperance -> Divine Caress pair "backwards".
+REQUIRES_CO_WEAVE_TOL_S = 6.0
 
 
 # --- feasibility structures ---------------------------------------------------
@@ -88,16 +97,20 @@ class ActionTimeline:
 
 
 class ResourcePool:
-    """Token bucket (Addersgall/Aetherflow/Lily): starts full, continuous
-    regen, one token per cast. Shared across a healer's tagged actions."""
+    """Token bucket (Addersgall/Aetherflow/Lily): continuous regen, one token
+    per cast, shared across a healer's tagged actions. `start` is the stock at
+    pull start — Addersgall/Aetherflow enter full, LILIES enter at zero (they
+    accrue in combat only, so no lily heal can exist before ~20s)."""
 
-    def __init__(self, capacity: int, regen_s: float) -> None:
+    def __init__(self, capacity: int, regen_s: float,
+                 start: int | None = None) -> None:
         self.capacity = capacity
         self.regen_s = regen_s
+        self.start = capacity if start is None else start
         self.casts: list[float] = []
 
     def _ok(self, casts: list[float]) -> bool:
-        tokens = float(self.capacity)
+        tokens = float(self.start)
         prev = 0.0
         for t in sorted(casts):
             tokens = min(self.capacity, tokens + max(0.0, t - prev) / self.regen_s)
@@ -136,6 +149,9 @@ class Assignment:
     # one. Carryovers credit their mit% here but never their shield (assumed
     # consumed by the mechanic they were cast for), and render dimmed.
     is_carryover: bool = False
+    # The HoT's real span when shorter than duration_s (Shake It Off: 15s of
+    # ticks under a 30s barrier). 0 -> duration_s; only the sweep reads it.
+    hot_window_s: float = 0.0
 
 
 @dataclass
@@ -209,8 +225,8 @@ class _Ctx:
             return None
         key = (slot, a.resource)
         if key not in self.pools:
-            cap, regen = RESOURCE_POOLS[a.resource]
-            self.pools[key] = ResourcePool(cap, regen)
+            cap, regen, start = RESOURCE_POOLS[a.resource]
+            self.pools[key] = ResourcePool(cap, regen, start)
         return self.pools[key]
 
     def shield_hp(self, a: MitAction, target_role: str) -> float:
@@ -246,6 +262,14 @@ def _lead_for(a: MitAction) -> float:
     return LEAD_MIT_S
 
 
+def cast_lead_for(a: MitAction) -> float:
+    """Public alias for the derived-cast lead: how many seconds before a
+    mechanic's first hit the planner schedules this action. The sidecar ships it
+    per palette action so the UI's availability preview shares one timing
+    policy with the planner."""
+    return _lead_for(a)
+
+
 def _covered_hits(a: MitAction, cast_at: float, hit_times: list[float]) -> list[float]:
     if a.duration_s <= 0:
         return hit_times[:1] if hit_times else []
@@ -262,23 +286,41 @@ def _cast_at_for(a: MitAction, first_hit: float) -> float:
     return max(0.0, cast_at)
 
 
+def _requires_ok(ctx: "_Ctx", slot: str, a: MitAction, cast_at: float) -> bool:
+    """Prerequisite chain (Divine Caress needs Temperance): a cast is legal
+    only within [-co-weave tol, requires_within_s] of a same-slot cast of the
+    enabling action. Reads the timelines without creating them."""
+    if not a.requires:
+        return True
+    partner = _ACTION_BY_JOB_NAME.get((a.job, a.requires))
+    if partner is None:
+        return False
+    tl = ctx.timelines.get((slot, partner.action_id))
+    if tl is None or not tl.casts:
+        return False
+    return any(-REQUIRES_CO_WEAVE_TOL_S <= cast_at - u <= a.requires_within_s
+               for u in tl.casts)
+
+
 def _build_assignment(ctx: _Ctx, slot: str, job: str, a: MitAction,
                       mech: Mechanic, cast_at: float,
                       covers: list[float]) -> Assignment:
     """One non-suggestion cast, effects resolved against this mechanic's school
     + the target role. Shared by the greedy tier loop and the pinned (PF-plan)
     pass so both produce byte-identical Assignments."""
+    hot_window = a.regen_window_s if a.regen_window_s > 0 else a.duration_s
     return Assignment(
         slot=slot, job=job, action_id=a.action_id, name=a.name,
         cast_at_s=cast_at, duration_s=a.duration_s,
         target=("tank" if a.target == Target.SINGLE else a.target.value),
         mit_pct=eff_mit(a, mech.school),
         shield_amount=ctx.shield_hp(
-            a, "tank" if a.target == Target.SINGLE else "dps"),
+            a, "tank" if a.target in (Target.SINGLE, Target.SELF) else "dps"),
         heal_amount=ctx.heal_hp(
-            a, "tank" if a.target == Target.SINGLE else "dps"),
-        hot_hps=(ctx.regen_total_hp(a) / a.duration_s
-                 if a.duration_s > 0 else 0.0),
+            a, "tank" if a.target in (Target.SINGLE, Target.SELF) else "dps"),
+        hot_hps=(ctx.regen_total_hp(a) / hot_window
+                 if hot_window > 0 else 0.0),
+        hot_window_s=hot_window,
         is_gcd=a.is_gcd, cast_time_s=a.cast_time_s,
         is_suggestion=False, covers=covers,
     )
@@ -291,9 +333,22 @@ def _predicted_for(mech: Mechanic, assigns: list[Assignment],
     by_action = {(a.slot, a.action_id): a for a in assigns}
     shields: dict[str, float] = {r: 0.0 for r in ROLE_KEYS}
     for a in assigns:
+        if a.shield_amount <= 0:
+            continue    # carryovers/suggestion markers carry no barrier
+        act = _ACTION_BY_JOB_ID.get((a.job, a.action_id))
         role_scope = ROLE_KEYS if a.target in ("party", "enemy") else ("tank",)
         for r in role_scope:
-            shields[r] += a.shield_amount
+            amt = a.shield_amount
+            # Party %-max-HP barriers (Shake It Off, Tempera Grassa) scale off
+            # each TARGET's own max HP — a tank's barrier is tank-sized, not
+            # the dps-sized number the display carries. Divine Veil alone is
+            # caster-sized (shield_hp already handled it). Safe to resize
+            # directly: no shield rider amps a %-max-HP barrier.
+            if (act is not None and act.shield_pct_maxhp > 0
+                    and a.target in ("party", "enemy")
+                    and act.name != "Divine Veil"):
+                amt = act.shield_pct_maxhp * ctx.role_hp.get(r, 0.0)
+            shields[r] += amt
     out = {r: 0.0 for r in ROLE_KEYS}
     remaining = dict(shields)
     for hit in mech.hits:
@@ -358,28 +413,29 @@ def _norm(name: str) -> str:
     return " ".join((name or "").split()).lower()
 
 
-def _select_instances(cands: list[Mechanic], entry, warnings: list[str]
-                      ) -> list[Mechanic]:
+def _select_instances(cands: list[Mechanic], entry, warnings: list[str],
+                      prefix: str = "PF plan") -> list[Mechanic]:
     """Which matched mechanic(s) a premade entry applies to. `cands` is sorted
     by time. `occurrence` (index) / `at_sec` (nearest time) disambiguate a
     recurring mechanic; with neither and several matches we broadcast + warn."""
     if entry.occurrence is not None:
         if 0 <= entry.occurrence < len(cands):
             return [cands[entry.occurrence]]
-        warnings.append(f"PF plan: {entry.label!r} occurrence "
+        warnings.append(f"{prefix}: {entry.label!r} occurrence "
                         f"#{entry.occurrence} not found ({len(cands)} matched).")
         return []
     if entry.at_sec is not None:
         return [min(cands, key=lambda m: abs(m.time_s - entry.at_sec))]
     if len(cands) > 1:
-        warnings.append(f"PF plan: {entry.label!r} matched {len(cands)} "
+        warnings.append(f"{prefix}: {entry.label!r} matched {len(cands)} "
                         "mechanics — applied to all (add an occurrence/at_sec "
                         "to target one).")
     return list(cands)
 
 
 def _resolve_pinned(pinned, plan_mechs: list[PlanMechanic],
-                    slots: list[tuple[str, str]], warnings: list[str]
+                    slots: list[tuple[str, str]], warnings: list[str],
+                    prefix: str = "PF plan", exclusive: bool = False
                     ) -> dict[str, list[tuple]]:
     """Map a premade plan's entries to placement specs per `Mechanic.id`. Duck-
     typed over `mitplan.premade.PremadePlan` (planner stays JSON-agnostic). Two
@@ -391,10 +447,20 @@ def _resolve_pinned(pinned, plan_mechs: list[PlanMechanic],
     "Apply matches, warn on rest": a mit whose job/role isn't in this comp is
     skipped SILENTLY (a sheet lists every healer + a party mit per role; only the
     pull's jobs apply). We warn ONCE per analyzed-healer slot (H1/H2) the plan
-    never covers — that healer's mechanics then fall back to the auto plan."""
+    never covers — that healer's mechanics then fall back to the auto plan.
+
+    `exclusive` (user-authored plans): the plan is the user's own draft, so an
+    off-comp mit going missing must be LOUD (per-mit warning instead of the
+    silent sheet-convention skip), and the H1/H2 "uses the auto plan" warning is
+    skipped — there is no auto fallback in exclusive mode.
+
+    Returns (mits_by_mech_id, heals_by_mech_id): the second maps mechanic ids
+    to the entry's authored GCD top-up heals as (slot, job, MitAction, count) —
+    only meaningful for user plans; PF files never author heals today."""
     out: dict[str, list[tuple]] = {}
+    heals_out: dict[str, list[tuple]] = {}
     if pinned is None:
-        return out
+        return out, heals_out
     job_to_slot = {job: slot for slot, job in slots}
     comp_jobs = {job for _, job in slots}
     by_boss: dict[int, list[Mechanic]] = {}
@@ -418,20 +484,26 @@ def _resolve_pinned(pinned, plan_mechs: list[PlanMechanic],
         else:
             cands = []
         if not cands:
-            warnings.append(f"PF plan: no mechanic matched {entry.label!r}.")
+            warnings.append(f"{prefix}: no mechanic matched {entry.label!r}.")
             continue
-        targets = _select_instances(cands, entry, warnings)
+        targets = _select_instances(cands, entry, warnings, prefix)
         for sel, action_id in entry.mits:
             if sel.startswith("@"):                     # role-generic party mit
                 role = sel[1:]
                 if not any(j in comp_jobs and (j, action_id) in _ACTION_BY_JOB_ID
                            for j in ROLE_JOBS.get(role, ())):
+                    if exclusive:
+                        warnings.append(f"{prefix}: no {role} job in this comp "
+                                        f"brings #{action_id} ({entry.label!r}).")
                     continue   # no comp job of this role brings it — skip
                 for m in targets:
                     out.setdefault(m.id, []).append(("role", role, action_id))
             else:                                        # specific job (healers)
                 slot = job_to_slot.get(sel)
                 if slot is None:
+                    if exclusive:
+                        warnings.append(f"{prefix}: {sel} is not in this comp "
+                                        f"({entry.label!r}).")
                     continue   # job not in this comp — silently skipped
                 a = _ACTION_BY_JOB_ID.get((sel, action_id))
                 if a is None:
@@ -439,13 +511,31 @@ def _resolve_pinned(pinned, plan_mechs: list[PlanMechanic],
                 covered_slots.add(slot)
                 for m in targets:
                     out.setdefault(m.id, []).append(("job", slot, a))
+        for job, action_id, count in getattr(entry, "heals", ()):
+            slot = job_to_slot.get(job)
+            if slot not in ("H1", "H2"):
+                if exclusive:
+                    warnings.append(f"{prefix}: {job} is not a healer in this "
+                                    f"comp — heal dropped ({entry.label!r}).")
+                continue
+            a = _ACTION_BY_JOB_ID.get((job, action_id))
+            if (a is None or not a.is_gcd or a.heal_potency <= 0
+                    or a.is_mit or a.is_shield):
+                # Shields (EDiag/Adloquium) are mits — they ride the mits
+                # path, not the heal incrementer.
+                if exclusive:
+                    warnings.append(f"{prefix}: #{action_id} is not a GCD heal "
+                                    f"— dropped ({entry.label!r}).")
+                continue
+            for m in targets:
+                heals_out.setdefault(m.id, []).append((slot, job, a, count))
 
-    if entries:
+    if entries and not exclusive:
         for slot, job in slots:
             if slot in ("H1", "H2") and slot not in covered_slots:
-                warnings.append(f"PF plan: no {job} ({slot}) assignments — that "
+                warnings.append(f"{prefix}: no {job} ({slot}) assignments — that "
                                 "healer's mitigation uses the auto plan.")
-    return out
+    return out, heals_out
 
 
 # --- the planner ---------------------------------------------------------------
@@ -453,7 +543,7 @@ def _resolve_pinned(pinned, plan_mechs: list[PlanMechanic],
 def _run_sweep(plan_mechs: list["PlanMechanic"], chrono: list[int], ctx: "_Ctx",
                model: DamageModel, party_hps: float, tank_extra_hps: float,
                aoe_rows: list[MitAction], regen_healer: str,
-               amp_windows: tuple = ()
+               amp_windows: tuple = (), flat_windows: tuple = ()
                ) -> tuple[dict[int, dict[str, float]], dict[int, list["GcdHeal"]]]:
     """Chronological HP sweep + AoE GCD-heal budgeting, as a pure evaluator. It
     snapshots and restores the H2 pool it consumes and RETURNS results instead of
@@ -465,7 +555,14 @@ def _run_sweep(plan_mechs: list["PlanMechanic"], chrono: list[int], ctx: "_Ctx",
     `amp_windows` are (slot, scope, mult, start, end, role_scope) healing-buff
     windows (WHM Temperance +heal%, SGE Physis/Krasis heal-received, …) applied as
     multipliers on the healing the sweep does: caster windows scale heals OWNED by
-    their slot, receiver windows scale all incoming heals to the buffed roles."""
+    their slot, receiver windows scale all incoming heals to the buffed roles.
+
+    `flat_windows` are (slot, bonus_hp, host_names, start, end) flat heal RIDERS
+    (WHM Plenary's Confession): each qualifying host GCD heal credited inside the
+    window heals bonus_hp more. Pair-gated by construction — no host cast in the
+    window, no credit. GcdHeal.heal_amount stays the BASE amount; both the flat
+    bonus and the % windows are applied at credit time, symmetrically for the
+    sweep's own inserted heals and a user plan's authored ones."""
     pool_snap = {k: list(p.casts) for k, p in ctx.pools.items()}
     gcd_by_idx: dict[int, list[GcdHeal]] = {
         i: list(plan_mechs[i].gcd_heals) for i in range(len(plan_mechs))}
@@ -479,6 +576,13 @@ def _run_sweep(plan_mechs: list["PlanMechanic"], chrono: list[int], ctx: "_Ctx",
             if scope == "receiver" or (scope == "caster" and owner_slot == slot):
                 m *= (1.0 + mult)
         return m
+
+    def flat_bonus(t: float, heal_name: str) -> float:
+        b = 0.0
+        for (_slot, bonus_hp, hosts, start, end) in flat_windows:
+            if heal_name in hosts and start <= t <= end:
+                b += bonus_hp
+        return b
 
     def _walk(insert: bool) -> None:
         hp = {r: ctx.role_hp[r] for r in ROLE_KEYS}
@@ -525,12 +629,15 @@ def _run_sweep(plan_mechs: list["PlanMechanic"], chrono: list[int], ctx: "_Ctx",
                         if row is None:
                             break
                         # inserts are the regen-healer's (H2) party GCD heals: a
-                        # caster window on H2 and a party receiver window enlarge
-                        # each cast, so fewer are needed. Scale at the MECHANIC
-                        # time (the heal is FOR this mechanic) — the synthetic
-                        # pre-cast time can fall just outside the buff window.
-                        per_cast = ((ctx.heal_hp(row, "dps")
+                        # caster window on H2, a party receiver window and a flat
+                        # rider (Plenary) enlarge each cast, so fewer are needed.
+                        # Scale at the MECHANIC time (the heal is FOR this
+                        # mechanic) — the synthetic pre-cast time can fall just
+                        # outside the buff window. heal_amount stores the BASE;
+                        # the credit loop below re-applies the same scaling.
+                        base_cast = (ctx.heal_hp(row, "dps")
                                      + ctx.regen_total_hp(row))
+                        per_cast = ((base_cast + flat_bonus(t, row.name))
                                     * heal_scale(t, "dps", "H2"))
                         if heals and heals[-1].action_id == row.action_id:
                             heals[-1].count += 1
@@ -540,16 +647,25 @@ def _run_sweep(plan_mechs: list["PlanMechanic"], chrono: list[int], ctx: "_Ctx",
                                 action_id=row.action_id, name=row.name,
                                 cast_at_s=cast_at, count=1,
                                 cast_time_s=max(row.cast_time_s, 2.5),
-                                heal_amount=per_cast,
+                                heal_amount=base_cast,
                             ))
                         remaining -= per_cast
                         casts_left -= 1
                         cast_no += 1
                 gcd_by_idx[i] = heals
             for gh in gcd_by_idx[i]:
-                for r in ROLE_KEYS:
+                # Single-target GCD heals (authored tank top-ups) heal the
+                # tank alone; party heals credit everyone. Heal-buff windows
+                # and flat riders (Plenary's Confession) apply at credit time,
+                # identically for inserted and authored heals.
+                row = _ACTION_BY_JOB_ID.get((gh.job, gh.action_id))
+                gh_roles = (("tank",) if row is not None
+                            and row.target is Target.SINGLE else ROLE_KEYS)
+                per = gh.heal_amount + flat_bonus(t, gh.name)
+                for r in gh_roles:
                     hp[r] = min(ctx.role_hp[r],
-                                hp[r] + gh.count * gh.heal_amount)
+                                hp[r] + gh.count * per
+                                * heal_scale(t, r, gh.slot))
             for r in ROLE_KEYS:
                 hp[r] = max(0.0, hp[r] - pm.predicted.get(r, 0.0))
             if pm.mech.kind == "hpSet":
@@ -560,11 +676,20 @@ def _run_sweep(plan_mechs: list["PlanMechanic"], chrono: list[int], ctx: "_Ctx",
             for r in ROLE_KEYS:
                 burst = 0.0
                 for a in pm.assignments:
-                    if (a.is_suggestion or a.is_carryover
-                            or a.target not in ("party", "enemy")):
+                    if a.is_suggestion or a.is_carryover:
                         continue
+                    # Party-wide heals credit everyone; single-target and
+                    # self heals (healer ST tools, tank self-sustain) credit
+                    # the TANK — the buster top-up they exist for.
+                    if a.target in ("party", "enemy"):
+                        pass
+                    elif a.target in ("self", "tank") and r == "tank":
+                        pass
+                    else:
+                        continue
+                    window = a.hot_window_s if a.hot_window_s > 0 else a.duration_s
                     base = (a.heal_amount
-                            + a.hot_hps * min(a.duration_s, max(0.0, next_gap)))
+                            + a.hot_hps * min(window, max(0.0, next_gap)))
                     burst += base * heal_scale(t, r, a.slot)
                 hp[r] = min(ctx.role_hp[r], hp[r] + burst)
             hp_by_idx[i] = dict(hp)
@@ -715,6 +840,8 @@ def _topup_ogcd(plan_mechs: list["PlanMechanic"],
                 pool = ctx.pool(slot, a)
                 if pool is not None and not pool.can_add(cast_at):
                     continue
+                if not _requires_ok(ctx, slot, a, cast_at):
+                    continue
                 undo = _apply_add(plan_mechs, i, slot, job, a, cast_at,
                                   covers, ctx, all_casts)
                 trial = cost()
@@ -748,6 +875,20 @@ def apply_shield_amp(ctx: "_Ctx", owner_slot: str, owner_job: str,
         partner.shield_amount *= (1.0 + amp.shield_mult)
         return amp
     return None
+
+
+def _amp_rider_marker(slot: str, job: str, amp: MitAction, cast_at: float,
+                      covers: list[float]) -> Assignment:
+    """The visible 'rider fired' suggestion chip next to an amped shield
+    (Zoe/Recitation). Display-only: zero value slots — the amp already rode
+    the partner's barrier. Shared by the greedy and the pinned pre-pass so
+    riders render identically in auto, PF and user plans."""
+    return Assignment(
+        slot=slot, job=job, action_id=amp.action_id, name=amp.name,
+        cast_at_s=cast_at, duration_s=amp.duration_s, target="party",
+        mit_pct=0.0, shield_amount=0.0, heal_amount=0.0, hot_hps=0.0,
+        is_gcd=False, cast_time_s=0.0, is_suggestion=True,
+        covers=list(covers))
 
 
 def _apply_windowed_shield_amps(plan_mechs: list["PlanMechanic"],
@@ -800,32 +941,73 @@ def _apply_windowed_shield_amps(plan_mechs: list["PlanMechanic"],
 def _amp_window(slot: str, act: MitAction, cast_at: float) -> tuple:
     role_scope = (ROLE_KEYS if (act.heal_mult_scope == "caster"
                                 or act.target == Target.PARTY) else ("tank",))
+    span = (act.heal_mult_window_s if act.heal_mult_window_s > 0
+            else act.duration_s)
     return (slot, act.heal_mult_scope, act.heal_mult, cast_at,
-            cast_at + act.duration_s, role_scope)
+            cast_at + span, role_scope)
+
+
+def _flat_window(slot: str, act: MitAction, cast_at: float,
+                 ctx: "_Ctx") -> tuple:
+    """A flat heal-rider window (Plenary's Confession): (slot, bonus HP per
+    qualifying host cast, host names, start, end)."""
+    return (slot, act.heal_flat_potency * ctx.hp_per_potency(act.job),
+            frozenset(act.heal_flat_partners), cast_at,
+            cast_at + act.duration_s)
 
 
 def _build_amp_windows(plan_mechs: list["PlanMechanic"],
                        duo_slots: list[tuple[str, str]], ctx: "_Ctx",
-                       need: dict[int, float] | None = None) -> tuple:
-    """Heal-buff windows the sweep scales healing inside (WHM Temperance +heal%,
-    SGE Physis/Krasis heal-received…). Two sources: (a) amps already placed as
-    assignments (Temperance's 10% mit / Protraction's max-HP shield carry the amp);
-    (b) pure heal_mult amps (Philosophia/Physis/Krasis — no mit/shield, so the mit
-    greedy never schedules them) placed on the mechanics with the greatest costed
-    GCD-heal NEED (from a baseline amp-free sweep) — that is where a healing buff
-    actually pays off — cooldown-gated by a LOCAL timeline independent of the mit
-    timelines. Falls back to severity when no `need` map is supplied."""
-    windows: list[tuple] = []
+                       need: dict[int, float] | None = None,
+                       auto_place: bool = True,
+                       base_gcd: dict[int, list["GcdHeal"]] | None = None
+                       ) -> tuple[tuple, tuple]:
+    """-> (heal% windows, flat-rider windows) the sweep scales healing inside
+    (WHM Temperance +heal%, SGE Physis/Krasis heal-received, WHM Plenary's
+    Confession rider…). Two sources: (a) amps already placed as assignments
+    (Temperance's 10% mit carries the amp; a user plan's pinned Plenary carries
+    the rider); (b) with `auto_place`, pure amps (Philosophia/Krasis/Plenary —
+    no mit/shield, so the mit greedy never schedules them) placed on the
+    mechanics with the greatest costed GCD-heal NEED (from a baseline amp-free
+    sweep) — that is where a healing buff actually pays off — cooldown-gated by
+    a LOCAL timeline seeded with any placed casts. Every auto placement also
+    appends a dimmed SUGGESTED cast on its mechanic, so the button shows up in
+    the lanes, the cards and the mit sheet — never an invisible buff. User
+    plans pass auto_place=False: only source (a), nothing they didn't place.
+    Falls back to severity when no `need` map is supplied.
+
+    FLAT riders are strictly pair-gated, so their auto placement additionally
+    requires a payoff: a mechanic qualifies only when the baseline sweep
+    (`base_gcd`) actually inserts one of the rider's host heals there — a
+    Plenary with no Medica III / Rapture in its window would be a button with
+    no effect. `_prune_flat_rider_markers` re-checks against the FINAL sweep,
+    so a host heal that later disappears (amp windows / pass-2.5 top-up
+    shrinking the bill) takes its suggestion with it."""
+    mult_windows: list[tuple] = []
+    flat_windows: list[tuple] = []
+    placed_casts: dict[tuple[str, int], list[float]] = {}
     for pm in plan_mechs:
         for a in pm.assignments:
             if a.is_carryover:
                 continue
+            placed_casts.setdefault((a.slot, a.action_id), []).append(a.cast_at_s)
             act = _ACTION_BY_JOB_ID.get((a.job, a.action_id))
-            if act is not None and act.heal_mult > 0:
-                windows.append(_amp_window(a.slot, act, a.cast_at_s))
+            if act is None:
+                continue
+            if act.heal_mult > 0:
+                mult_windows.append(_amp_window(a.slot, act, a.cast_at_s))
+            if act.heal_flat_potency > 0:
+                flat_windows.append(_flat_window(a.slot, act, a.cast_at_s, ctx))
+    if not auto_place:
+        return tuple(mult_windows), tuple(flat_windows)
     order = list(range(len(plan_mechs)))
-    order = [i for i in order if plan_mechs[i].mech.kind != "hpSet" and any(
-        float(plan_mechs[i].mech.unmitigated.get(r) or 0.0) > 0 for r in ROLE_KEYS)]
+    # No amp on hpSets (nothing to heal through), invulned mechanics (the
+    # invuln IS the plan there) or zero-damage rows.
+    order = [i for i in order
+             if plan_mechs[i].mech.kind != "hpSet"
+             and not plan_mechs[i].invulned
+             and any(float(plan_mechs[i].mech.unmitigated.get(r) or 0.0) > 0
+                     for r in ROLE_KEYS)]
     order.sort(key=lambda i: (
         -(need.get(i, 0.0) if need else 0.0),
         -_severity(plan_mechs[i].mech, ctx.role_hp),
@@ -833,23 +1015,93 @@ def _build_amp_windows(plan_mechs: list["PlanMechanic"],
     local: dict[tuple[str, int], list[float]] = {}
     for slot, job in duo_slots:
         for act in actions_for_job(job):
-            if act.heal_mult <= 0 or act.is_mit or act.is_shield:
+            if act.is_mit or act.is_shield:
                 continue
+            if act.heal_mult <= 0 and act.heal_flat_potency <= 0:
+                continue
+            flat_only = act.heal_flat_potency > 0 and act.heal_mult <= 0
             for i in order:
-                hit_times = _mech_hit_times(plan_mechs[i].mech)
+                pm = plan_mechs[i]
+                hit_times = _mech_hit_times(pm.mech)
                 if not hit_times:
                     continue
+                if flat_only and not any(
+                        g.count > 0 and g.name in act.heal_flat_partners
+                        for g in (base_gcd or {}).get(i, ())):
+                    continue    # pair-gated rider with nothing to ride here
                 cast_at = max(0.0, hit_times[0] - LEAD_MIT_S)
-                casts = local.setdefault((slot, act.action_id), [])
+                casts = local.setdefault(
+                    (slot, act.action_id),
+                    list(placed_casts.get((slot, act.action_id), [])))
                 if act.cooldown_s <= 0 or all(
                         abs(cast_at - c) >= act.cooldown_s for c in casts):
                     casts.append(cast_at)
-                    windows.append(_amp_window(slot, act, cast_at))
-    return tuple(windows)
+                    if act.heal_mult > 0:
+                        mult_windows.append(_amp_window(slot, act, cast_at))
+                    if act.heal_flat_potency > 0:
+                        flat_windows.append(_flat_window(slot, act, cast_at, ctx))
+                    # The visible half of the auto placement: a suggested cast
+                    # on the mechanic the window serves.
+                    pm.assignments.append(Assignment(
+                        slot=slot, job=act.job, action_id=act.action_id,
+                        name=act.name, cast_at_s=cast_at,
+                        duration_s=act.duration_s,
+                        target=("tank" if act.target in (Target.SINGLE,
+                                                         Target.SELF)
+                                else act.target.value),
+                        mit_pct=0.0, shield_amount=0.0, heal_amount=0.0,
+                        hot_hps=0.0, is_gcd=False, cast_time_s=0.0,
+                        is_suggestion=True,
+                        covers=_covered_hits(act, cast_at, hit_times)))
+    return tuple(mult_windows), tuple(flat_windows)
+
+
+def _flat_rider_payoff(a: Assignment, act: MitAction,
+                       plan_mechs: list["PlanMechanic"]) -> bool:
+    """True when at least one qualifying host heal is credited inside this
+    flat-rider cast's window in the FINAL plan (mirrors the sweep's
+    flat_bonus coverage test: heals are credited at their mechanic's time)."""
+    start, end = a.cast_at_s, a.cast_at_s + act.duration_s
+    return any(
+        start <= pm.mech.time_s <= end
+        and any(g.count > 0 and g.name in act.heal_flat_partners
+                for g in pm.gcd_heals)
+        for pm in plan_mechs)
+
+
+def _prune_flat_rider_markers(plan_mechs: list["PlanMechanic"]) -> None:
+    """Drop auto-suggested flat-rider casts (Plenary) whose window holds no
+    qualifying host heal in the FINAL sweep — the pair never happened, so the
+    suggestion would be a button with no payoff. Numerically free: a flat
+    window with no host cast inside credited exactly nothing, so removing the
+    chip changes no HP, status or price. User-pinned riders (is_suggestion
+    False) are plan content and are never touched — exclusive mode warns on
+    them instead."""
+    for pm in plan_mechs:
+        pm.assignments[:] = [
+            a for a in pm.assignments
+            if not (a.is_suggestion
+                    and (act := _ACTION_BY_JOB_ID.get((a.job, a.action_id)))
+                    is not None
+                    and act.heal_flat_potency > 0 and act.heal_mult <= 0
+                    and not _flat_rider_payoff(a, act, plan_mechs))]
 
 
 def plan(model: DamageModel, shield_healer: str, regen_healer: str,
-         tanks: list[str], dps: list[str], pinned=None) -> Plan:
+         tanks: list[str], dps: list[str], pinned=None,
+         pinned_exclusive: bool = False) -> Plan:
+    """Build the mitigation plan. `pinned` is a premade/user plan (duck-typed
+    `PremadePlan`); with `pinned_exclusive=True` (user-authored plans) the
+    generator passes are ALL disabled — the plan is exactly the pinned casts,
+    with cooldowns/charges/pools as the only hard constraints — while the HP
+    sweep, amps, statuses and summary still run. Every exclusive gate is a pure
+    skip: `pinned_exclusive=False` is byte-identical to the historic path.
+
+    Exclusive mode also treats GCD healing as plan content: the sweep never
+    auto-inserts heals — the user's authored per-gap heals (PinnedEntry.heals)
+    are priced instead, so statuses reflect exactly the mitigation AND healing
+    the plan commits to (plus the healers' passive oGCD recovery)."""
+    _pfx = "Your plan" if pinned_exclusive else "PF plan"
     slots: list[tuple[str, str]] = [
         ("T1", tanks[0]), ("T2", tanks[1]),
         ("H1", shield_healer), ("H2", regen_healer),
@@ -886,7 +1138,9 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
 
     # Premade ("PF") plan: mechanic id -> the (slot, job, action) mits it pins.
     # Empty (byte-identical to the auto-plan) unless a premade plan was passed.
-    pinned_by_mech_id = _resolve_pinned(pinned, plan_mechs, slots, warnings)
+    pinned_by_mech_id, pinned_heals_by_mech_id = _resolve_pinned(
+        pinned, plan_mechs, slots, warnings,
+        prefix=_pfx, exclusive=pinned_exclusive)
 
     def _goal_fraction_for(pm: PlanMechanic) -> float:
         base = _goal_fraction(pm.mech)
@@ -898,11 +1152,20 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
             return max(base, SURVIVAL_ONLY_FRACTION)
         return base
 
+    # Every cast placed anywhere below, for cross-mechanic carryover credit —
+    # declared before the invuln pass so an invuln's duration can genuinely
+    # blanket a neighboring mechanic's tank hits.
+    all_casts: list[tuple[str, str, MitAction, float, bool]] = []
+
     # ---- invuln-first pass (severity order): a buster whose target tank has
     # an invuln available is planned as the invuln — healer tools and party
     # mitigation stay banked for raid damage. The 240–420s recasts self-limit
-    # this to roughly two uses per tank per fight.
-    for idx in order:
+    # this to roughly two uses per tank per fight. In exclusive (user-plan)
+    # mode the pass is skipped outright — invulns appear only where authored.
+    # An invuln is priced as what it is: a 100% self-mit over its REAL
+    # duration (covers clamped), so the per-hit scorer handles shared party
+    # damage, a train's uncovered tail, and multi-mechanic spans honestly.
+    for idx in (() if pinned_exclusive else order):
         pm = plan_mechs[idx]
         mech = pm.mech
         if mech.kind != "tankbuster":
@@ -934,10 +1197,11 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
         pm.assignments.append(Assignment(
             slot=tank_slot, job=tank_job, action_id=inv.action_id,
             name=inv.name, cast_at_s=cast_at, duration_s=inv.duration_s,
-            target="self", mit_pct=0.0, shield_amount=0.0, heal_amount=0.0,
+            target="self", mit_pct=1.0, shield_amount=0.0, heal_amount=0.0,
             hot_hps=0.0, is_gcd=False, cast_time_s=0.0, is_suggestion=True,
-            covers=list(hit_times),
+            covers=_covered_hits(inv, cast_at, hit_times),
         ))
+        all_casts.append((tank_slot, tank_job, inv, cast_at, True))
         pm.invulned = True
         pm.invuln_post_hp1 = inv.post_hp1
         pm.notes.append(f"{inv.name} — party tools saved for raid damage.")
@@ -952,8 +1216,6 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
     # draining every DPS/tank button before a healer ever presses one. Only the
     # DPS-costing healer GCD shields stay a separate, last-resort tier.
     tier_order = ((Tier.PARTY_OTHER, Tier.HEALER_OGCD), (Tier.HEALER_GCD,))
-    # Every cast placed so far, for cross-mechanic carryover credit.
-    all_casts: list[tuple[str, str, MitAction, float, bool]] = []
 
     # PF pre-pass (time order): reserve the plan's pinned mits BEFORE the
     # severity-order greedy below, so the auto plan for un-pinned mechanics never
@@ -968,7 +1230,12 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
         if not hit_times:
             continue
         first_hit = hit_times[0]
-        for spec in pinned_by_mech_id[mech.id]:
+        # Prerequisite providers first (Temperance before Divine Caress), so a
+        # same-mechanic enabler+dependent pair works regardless of drop order.
+        specs = sorted(pinned_by_mech_id[mech.id],
+                       key=lambda s: 1 if (s[0] == "job" and s[2].requires)
+                       else 0)
+        for spec in specs:
             aid = spec[2].action_id if spec[0] == "job" else spec[2]
             if any(x.action_id == aid and not x.is_carryover
                    for x in pm.assignments):
@@ -985,7 +1252,48 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
                     for s, job in slots
                     if job in ROLE_JOBS.get(role, ())
                     and (job, action_id) in _ACTION_BY_JOB_ID]
+            # A pinned invuln (Hallowed Ground, Holmgang…) gets the invuln
+            # treatment on a tank buster — cast just before the hit, priced as
+            # a 100% self-mit over its real duration. Anywhere else it has no
+            # modeled effect, so it is dropped loudly instead of silently
+            # doing nothing. PF files never pin invulns today; this branch
+            # serves user plans.
+            if candidates_sa and candidates_sa[0][1].tier is Tier.INVULN:
+                if mech.kind != "tankbuster":
+                    warnings.append(
+                        f"{_pfx}: {candidates_sa[0][1].name} on {mech.name} "
+                        "has no modeled effect outside a tank buster. Skipped.")
+                    continue
+                placed = False
+                for slot, a in candidates_sa:
+                    cast_at = max(0.0, first_hit - 1.0)
+                    tl = ctx.timeline(slot, a)
+                    if not tl.can_add(cast_at):
+                        continue
+                    tl.add(cast_at)
+                    pm.assignments.append(Assignment(
+                        slot=slot, job=a.job, action_id=a.action_id,
+                        name=a.name, cast_at_s=cast_at,
+                        duration_s=a.duration_s, target="self", mit_pct=1.0,
+                        shield_amount=0.0, heal_amount=0.0, hot_hps=0.0,
+                        is_gcd=False, cast_time_s=0.0, is_suggestion=False,
+                        covers=_covered_hits(a, cast_at, hit_times)))
+                    all_casts.append((slot, a.job, a, cast_at, False))
+                    pm.invulned = True
+                    pm.invuln_post_hp1 = a.post_hp1
+                    if a.post_hp1:
+                        pm.notes.append("Heal the tank back up right after."
+                                        if a.name != "Living Dead"
+                                        else "Heal the tank to FULL within 8s.")
+                    placed = True
+                    break
+                if not placed:
+                    warnings.append(f"{_pfx}: {candidates_sa[0][1].name} for "
+                                    f"{mech.name} is unavailable (cooldown) — "
+                                    "skipped.")
+                continue
             placed = False
+            requires_blocked = False
             for slot, a in candidates_sa:
                 cast_at = _cast_at_for(a, first_hit)
                 covers = _covered_hits(a, cast_at, hit_times)
@@ -997,6 +1305,9 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
                 pool = ctx.pool(slot, a)
                 if pool is not None and not pool.can_add(cast_at):
                     continue
+                if not _requires_ok(ctx, slot, a, cast_at):
+                    requires_blocked = True
+                    continue
                 tl.add(cast_at)
                 if pool is not None:
                     pool.add(cast_at)
@@ -1005,15 +1316,72 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
                 pm.assignments.append(pinned_asn)
                 # A pinned party shield (EP II / Concitation) still gets its
                 # healer's Zoe/Recitation rider folded in — otherwise PF mode
-                # silently drops the +50%/crit the auto plan credits.
+                # silently drops the +50%/crit the auto plan credits. The
+                # marker chip renders the fold, same as the auto plan.
                 if a.is_gcd and pinned_asn.shield_amount > 0:
-                    apply_shield_amp(ctx, slot, a.job, pinned_asn, cast_at)
+                    amp = apply_shield_amp(ctx, slot, a.job, pinned_asn, cast_at)
+                    if amp is not None:
+                        pm.assignments.append(_amp_rider_marker(
+                            slot, a.job, amp, cast_at, pinned_asn.covers))
                 all_casts.append((slot, a.job, a, cast_at, False))
                 placed = True
                 break
             if not placed and candidates_sa:
-                warnings.append(f"PF plan: {candidates_sa[0][1].name} for "
-                                f"{mech.name} is unavailable (cooldown) — skipped.")
+                a0 = candidates_sa[0][1]
+                if requires_blocked and a0.requires:
+                    warnings.append(
+                        f"{_pfx}: {a0.name} for {mech.name} needs "
+                        f"{a0.requires} within {int(a0.requires_within_s)}s "
+                        "before it. Skipped.")
+                else:
+                    warnings.append(f"{_pfx}: {a0.name} for {mech.name} is "
+                                    "unavailable (cooldown) — skipped.")
+
+    # Exclusive (user-plan) mode: the authored per-gap GCD heals become the
+    # plan's gcd_heals up front. The sweep initializes from them and — with an
+    # empty insert list below — prices them as FIXED heals instead of deciding
+    # its own, so statuses reflect exactly the healing the plan commits to.
+    # Timing mirrors the sweep's own synthetic pre-casts (before the hit), so
+    # the analysis heal-locks derive identical windows.
+    if pinned_exclusive:
+        # plan_mechs is time-ordered, so resource pools (the lily bucket —
+        # which starts EMPTY) are consumed chronologically: authored heals get
+        # the same feasibility the mits above got, instead of a free pass.
+        for pm in plan_mechs:
+            specs = pinned_heals_by_mech_id.get(pm.mech.id)
+            if not specs:
+                continue
+            t = pm.mech.time_s
+            ghs: list[GcdHeal] = []
+            cast_no = 0
+            for slot, job, a, count in specs:
+                cast_no += count
+                cast_at = max(0.0, t - LEAD_SHIELD_S - cast_no * 2.5)
+                kept = count
+                pool = ctx.pool(slot, a)
+                if pool is not None:
+                    kept = 0
+                    for _ in range(count):
+                        if not pool.can_add(cast_at):
+                            break
+                        pool.add(cast_at)
+                        kept += 1
+                    if kept < count:
+                        warnings.append(
+                            f"{_pfx}: only {kept} of {count} {a.name} fit the "
+                            f"{a.resource} gauge before {pm.mech.name}. "
+                            "Trimmed.")
+                    if kept == 0:
+                        continue
+                ghs.append(GcdHeal(
+                    slot=slot, job=job, action_id=a.action_id, name=a.name,
+                    cast_at_s=cast_at,
+                    count=kept, cast_time_s=max(a.cast_time_s, 2.5),
+                    heal_amount=(ctx.heal_hp(
+                        a, "tank" if a.target is Target.SINGLE else "dps")
+                        + ctx.regen_total_hp(a)),
+                ))
+            pm.gcd_heals = ghs
 
     for idx in order:
         pm = plan_mechs[idx]
@@ -1024,19 +1392,18 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
             pm.predicted = {r: 0.0 for r in ROLE_KEYS}
             pm.stop_reason = "hp_set"
             continue
-        if pm.invulned:
-            pm.predicted = {r: 0.0 for r in ROLE_KEYS}
-            pm.stop_reason = "invulned"
-            continue
         hit_times = _mech_hit_times(mech)
         first_hit, last_hit = hit_times[0], hit_times[-1]
         goal = {r: _goal_fraction_for(pm) * ctx.role_hp.get(r, 0.0)
                 for r in ROLE_KEYS}
 
         # Inherit earlier casts whose duration blankets this mechanic's hits —
-        # their mitigation is real here; their shields count as spent.
+        # their mitigation is real here; their shields count as spent. An
+        # invuln carries as the tank-only 100% mit it is, so a 10s Hallowed
+        # Ground genuinely covers a neighboring mechanic's tank hits.
         for slot, job, a, cast_at, suggested in all_casts:
-            if not a.is_mit:
+            inv_cast = a.tier is Tier.INVULN
+            if not a.is_mit and not inv_cast:
                 continue
             covers = _covered_hits(a, cast_at, hit_times)
             if not covers:
@@ -1049,7 +1416,8 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
                 cast_at_s=cast_at, duration_s=a.duration_s,
                 target=("tank" if a.target in (Target.SINGLE, Target.SELF)
                         else a.target.value),
-                mit_pct=eff_mit(a, mech.school), shield_amount=0.0,
+                mit_pct=(1.0 if inv_cast else eff_mit(a, mech.school)),
+                shield_amount=0.0,
                 heal_amount=0.0, hot_hps=0.0, is_gcd=a.is_gcd,
                 cast_time_s=a.cast_time_s, is_suggestion=suggested,
                 covers=covers, is_carryover=True,
@@ -1072,7 +1440,13 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
 
         # A pinned mechanic's healer mitigation is fixed by the plan — only party
         # mitigation may auto-fill; an un-pinned mechanic uses the full order.
-        active_tiers = ((Tier.PARTY_OTHER,),) if is_pinned else tier_order
+        # Exclusive (user-plan) mode: NO greedy tier runs at all — the plan is
+        # exactly what the user placed. An invulned mechanic likewise banks
+        # every tool (the invuln-first policy); its residual party damage is
+        # priced honestly and falls to the HP sweep.
+        active_tiers = (() if pinned_exclusive or pm.invulned
+                        else ((Tier.PARTY_OTHER,),) if is_pinned
+                        else tier_order)
         for group in active_tiers:
             while (not _met(pred)
                    and len([a for a in pm.assignments if not a.is_suggestion])
@@ -1119,6 +1493,8 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
                     pool = ctx.pool(slot, a)
                     if pool is not None and not pool.can_add(cast_at):
                         continue
+                    if not _requires_ok(ctx, slot, a, cast_at):
+                        continue    # prerequisite (Divine Grace) not up here
                     trial = _build_assignment(ctx, slot, job, a, mech,
                                               cast_at, covers)
                     new_pred = _predicted_for(mech, pm.assignments + [trial], ctx)
@@ -1148,13 +1524,8 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
                 if a.is_gcd and best_trial.shield_amount > 0:
                     amp = apply_shield_amp(ctx, slot, job, best_trial, cast_at)
                     if amp is not None:
-                        pm.assignments.append(Assignment(
-                            slot=slot, job=job, action_id=amp.action_id,
-                            name=amp.name, cast_at_s=cast_at,
-                            duration_s=amp.duration_s, target="party",
-                            mit_pct=0.0, shield_amount=0.0, heal_amount=0.0,
-                            hot_hps=0.0, is_gcd=False, cast_time_s=0.0,
-                            is_suggestion=True, covers=list(best_trial.covers)))
+                        pm.assignments.append(_amp_rider_marker(
+                            slot, job, amp, cast_at, best_trial.covers))
                         best_pred = _predicted_for(mech, pm.assignments, ctx)
                 all_casts.append((slot, job, a, cast_at, False))
                 pred = best_pred
@@ -1163,12 +1534,16 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
                 break
         if not pm.stop_reason:
             pm.stop_reason = (
-                "pinned" if is_pinned
+                "user" if pinned_exclusive
+                else "pinned" if is_pinned
                 else "cap" if len(pm.assignments) >= MAX_ASSIGN_PER_MECHANIC
                 else "exhausted")
 
         # Tank-buster suggestions: personals on the target tank's own timeline.
-        if mech.kind == "tankbuster":
+        # Skipped in exclusive (user-plan) mode — nothing is suggested there —
+        # and under an invuln (personals on an invulnerable tank are noise).
+        if (mech.kind == "tankbuster" and not pinned_exclusive
+                and not pm.invulned):
             tank_slot, tank_job = slots[buster_ordinal[mech.id] % 2]
             added = 0
             for a in actions_for_job(tank_job):
@@ -1218,6 +1593,10 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
             pm.notes.append("Swap the suggested tank to match your own "
                             "swap plan.")
 
+        if pm.invulned:
+            # The invuln itself is priced per hit by _predicted_for (100%
+            # tank mit over its duration) — only the flow-control label here.
+            pm.stop_reason = "invulned"
         pm.predicted = pred
         pm.assignments.sort(key=lambda a: (a.cast_at_s, a.slot, a.action_id))
 
@@ -1228,6 +1607,12 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
     for slot, job in duo_slots:
         for a in actions_for_job(job):
             if not a.recovery:
+                continue
+            # Schedulable mit/shield tools (Kerachole, Sacred Soil, Divine
+            # Caress…) credit their healing at placement time in the sweep —
+            # keeping them in the always-on budget too would double-count.
+            # Only pure recovery tools the greedy never places smear here.
+            if a.is_mit or a.is_shield:
                 continue
             eff_cd = a.cooldown_s
             if a.resource and eff_cd <= 0:
@@ -1244,7 +1629,10 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
 
     # Insertable AoE GCD heals, cheapest DPS cost first (WHM lilies are free
     # via Misery but bounded by the lily bucket; Medica III is the overflow).
-    aoe_rows = sorted(
+    # Exclusive (user-plan) mode inserts NOTHING: the empty list disables the
+    # sweep's insertion walk, so the pre-seeded authored heals are priced as
+    # fixed inputs instead.
+    aoe_rows = [] if pinned_exclusive else sorted(
         (a for a in actions_for_job(regen_healer)
          if a.tier is Tier.HEALER_GCD and a.target == Target.PARTY
          and a.heal_potency > 0),
@@ -1260,23 +1648,35 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
     _apply_windowed_shield_amps(
         plan_mechs, [("H1", shield_healer), ("H2", regen_healer)], ctx)
 
-    # Heal-buff windows (+heal% amps) the sweep scales healing inside. Place the
-    # pure-window amps where healing is actually needed: run a baseline amp-free
-    # sweep, price each mechanic's costed GCD-heal bill, and reserve the amps onto
-    # the neediest mechanics.
-    _base_args = (chrono, ctx, model, party_hps, tank_extra_hps,
-                  aoe_rows, regen_healer, ())
-    _, _base_gcd = _run_sweep(plan_mechs, *_base_args)
-    _need = {i: sum(g.count * _gcd_potency(g) for g in _base_gcd.get(i, ()))
-             for i in range(len(plan_mechs))}
-    amp_windows = _build_amp_windows(
-        plan_mechs, [("H1", shield_healer), ("H2", regen_healer)], ctx, _need)
+    # Heal-buff windows (+heal% amps, flat riders) the sweep scales healing
+    # inside. Place the pure-window amps where healing is actually needed: run
+    # a baseline amp-free sweep, price each mechanic's costed GCD-heal bill,
+    # and reserve the amps onto the neediest mechanics (each also rendered as
+    # a suggested cast). Exclusive mode auto-places nothing — but amps the
+    # USER pinned (Temperance's +20%, Plenary's Confession rider) still form
+    # their windows, so an authored plan's healing is scaled by the buffs the
+    # plan itself contains.
+    if pinned_exclusive:
+        amp_windows, flat_windows = _build_amp_windows(
+            plan_mechs, [("H1", shield_healer), ("H2", regen_healer)], ctx,
+            auto_place=False)
+    else:
+        _base_args = (chrono, ctx, model, party_hps, tank_extra_hps,
+                      aoe_rows, regen_healer, (), ())
+        _, _base_gcd = _run_sweep(plan_mechs, *_base_args)
+        _need = {i: sum(g.count * _gcd_potency(g) for g in _base_gcd.get(i, ()))
+                 for i in range(len(plan_mechs))}
+        amp_windows, flat_windows = _build_amp_windows(
+            plan_mechs, [("H1", shield_healer), ("H2", regen_healer)], ctx,
+            _need, base_gcd=_base_gcd)
     sweep_args = (chrono, ctx, model, party_hps, tank_extra_hps,
-                  aoe_rows, regen_healer, amp_windows)
+                  aoe_rows, regen_healer, amp_windows, flat_windows)
     # pass 2.5: spend spare free oGCD mitigation to shrink the costed GCD-heal
     # bill before pass 3 commits it — "exhaust oGCD before dipping into GCD".
-    _topup_ogcd(plan_mechs, candidates, ctx, all_casts, sweep_args,
-                frozenset(pinned_by_mech_id))
+    # Exclusive (user-plan) mode adds nothing the user didn't place.
+    if not pinned_exclusive:
+        _topup_ogcd(plan_mechs, candidates, ctx, all_casts, sweep_args,
+                    frozenset(pinned_by_mech_id))
     hp_by_idx, gcd_by_idx = _run_sweep(plan_mechs, *sweep_args)
     for i, pm in enumerate(plan_mechs):
         pm.gcd_heals = gcd_by_idx[i]
@@ -1284,6 +1684,22 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
         # Re-sort: the pass-2.5 top-up appends after the greedy's per-mechanic
         # sort, so fold any added casts back into cast-time order for the lanes.
         pm.assignments.sort(key=lambda a: (a.cast_at_s, a.slot, a.action_id))
+    # A pair-gated rider whose window ended up with no host heal in the FINAL
+    # sweep is a button with no payoff: drop auto suggestions outright, and in
+    # exclusive mode tell the user their pinned rider pairs with nothing.
+    _prune_flat_rider_markers(plan_mechs)
+    if pinned_exclusive:
+        for pm in plan_mechs:
+            for a in pm.assignments:
+                act = _ACTION_BY_JOB_ID.get((a.job, a.action_id))
+                if (act is None or a.is_suggestion or a.is_carryover
+                        or act.heal_flat_potency <= 0 or act.heal_mult > 0):
+                    continue
+                if not _flat_rider_payoff(a, act, plan_mechs):
+                    warnings.append(
+                        f"{_pfx}: {act.name} on {pm.mech.name} pairs with no "
+                        f"{' / '.join(act.heal_flat_partners)} in its window. "
+                        "No bonus healing credited.")
 
     # ---- pass 4: statuses + summary -----------------------------------------
     covered = tight = uncovered = 0
@@ -1304,10 +1720,22 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
         for r in ROLE_KEYS:
             if float(mech.unmitigated.get(r) or 0.0) <= 0:
                 continue
+            if r == "tank" and pm.invulned and pm.invuln_post_hp1:
+                # Holmgang/Living Dead/Superbolide leave the tank at ~1 HP BY
+                # DESIGN — that clamp is the plan, not a failure. (Hallowed
+                # Ground keeps real HP, so its tank number stays counted.)
+                continue
             hp_frac = pm.hp_after.get(r, 0.0) / max(1.0, ctx.role_hp[r])
             worst = min(worst, hp_frac)
-        has_invuln = any(a.is_suggestion and a.mit_pct == 0 and a.shield_amount == 0
-                         for a in pm.assignments)
+        # STRICT invuln detection: only a suggested cast whose library row is
+        # actually an invuln forces "covered". The zero-value pattern alone
+        # also matches the Zoe/Recitation rider markers and regen-only
+        # suggestions (Aurora), which must never mask a low-HP mechanic.
+        has_invuln = any(
+            a.is_suggestion
+            and (act := _ACTION_BY_JOB_ID.get((a.job, a.action_id))) is not None
+            and act.tier is Tier.INVULN
+            for a in pm.assignments)
         if worst >= 0.25 or has_invuln:
             pm.status = "covered"
             covered += 1
@@ -1321,6 +1749,9 @@ def plan(model: DamageModel, shield_healer: str, regen_healer: str,
                       "exhausted": "every applicable cooldown already spent",
                       "goal_met": "recovery debt, not mitigation",
                       "pinned": "PF plan mitigation set — heal the residual",
+                      "user": "your plan leaves a gap here",
+                      "invulned": "the invuln covers the tank; the party "
+                                  "still takes this",
                       }.get(pm.stop_reason, "insufficient tools")
             pm.notes.append(f"Uncovered: {reason}.")
         for a in pm.assignments:

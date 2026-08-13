@@ -19,6 +19,8 @@ def build_damage_model(client: Any, encounter_id: int, progress=None):
 
 
 def plan(model, shield_healer: str, regen_healer: str,
-         tanks: list[str], dps: list[str], pinned=None):
+         tanks: list[str], dps: list[str], pinned=None,
+         pinned_exclusive: bool = False):
     from .planner import plan as _plan
-    return _plan(model, shield_healer, regen_healer, tanks, dps, pinned=pinned)
+    return _plan(model, shield_healer, regen_healer, tanks, dps, pinned=pinned,
+                 pinned_exclusive=pinned_exclusive)

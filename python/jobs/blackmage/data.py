@@ -175,13 +175,19 @@ POTENCIES: dict[int, int] = {
 # 40p/tick for 24s (wiki-verified 7.51).
 AOE_POTENCIES: dict[int, int] = {
     FLARE:            168,   # 240, -30%
-    FLARE_STAR:       175,   # 500, -65% (always cleaves)
     FOUL:             450,   # 600, -25% (7.2)
     HIGH_FIRE_II:     100,   # full-to-all
     FIRE_II:           80,   # full-to-all (pre-82)
     HIGH_BLIZZARD_II: 100,   # full-to-all
     BLIZZARD_II:       80,   # full-to-all (pre-82)
     FREEZE:           120,   # full-to-all
+}
+
+# Flare Star ALWAYS cleaves — the single-target rotation casts it, so it's
+# free splash (the distinct map keeps the sidecar's per-cast splash dots
+# rendering; scoring reads both maps identically via `potency_for`).
+SPLASH_POTENCIES: dict[int, int] = {
+    FLARE_STAR:       175,   # 500, -65%
 }
 
 # DoT tick potencies + durations. High Thunder is the level-100 DoT; scored per
@@ -335,6 +341,7 @@ JOB_DATA: JobData = JobData(
     patch_version=PATCH_VERSION,
     potencies=POTENCIES,
     aoe_potencies=AOE_POTENCIES,
+    splash_potencies=SPLASH_POTENCIES,
     cooldowns=COOLDOWNS,
     cooldown_value_p=COOLDOWN_VALUE_P,
     gauges=(),                          # MP / Enochian live in the simulator, not as overcap gauges

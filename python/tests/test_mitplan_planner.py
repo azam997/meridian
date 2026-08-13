@@ -446,6 +446,39 @@ def _sera():
     return next(a for a in actions_for_job("Scholar") if a.name == "Seraphism")
 
 
+def test_flat_riders_only_suggested_with_a_payoff():
+    # Plenary's Confession is PAIR-GATED: a suggested Plenary must have at
+    # least one qualifying host heal (Medica III / Afflatus Rapture) credited
+    # inside its window — a rider with nothing to ride never renders.
+    from mitplan.library import actions_for_job
+    plenary = next(a for a in actions_for_job("White Mage")
+                   if a.name == "Plenary Indulgence")
+
+    def rider_ok(p) -> None:
+        for pm in p.mechanics:
+            for a in pm.assignments:
+                if a.name != "Plenary Indulgence" or not a.is_suggestion:
+                    continue
+                start, end = a.cast_at_s, a.cast_at_s + plenary.duration_s
+                assert any(
+                    start <= pm2.mech.time_s <= end
+                    and any(g.count > 0 and g.name in plenary.heal_flat_partners
+                            for g in pm2.gcd_heals)
+                    for pm2 in p.mechanics), (pm.mech.id, a)
+
+    # A single comfortably-covered raidwide needs no GCD heals — so no
+    # Plenary suggestion may appear anywhere.
+    p1 = run([mech("41#0", 40.0)])
+    assert not any(pm.gcd_heals for pm in p1.mechanics)
+    assert not any(a.name == "Plenary Indulgence"
+                   for pm in p1.mechanics for a in pm.assignments)
+    # A starved chain forces inserted heals; any Plenary that appears must
+    # ride one (and the invariant holds vacuously if none appears).
+    p2 = run([mech(f"42#{i}", 30.0 + 8.0 * i, tank=330_000,
+                   healer=330_000, dps=330_000) for i in range(8)])
+    rider_ok(p2)
+
+
 def test_determinism():
     mechanics = [mech(f"8#{i}", 15.0 + 21.0 * i,
                       kind="tankbuster" if i % 3 == 2 else "raidwide",

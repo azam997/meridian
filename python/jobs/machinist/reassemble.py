@@ -32,9 +32,8 @@ _FMF_ID: int = 36982
 _VALID_REASSEMBLE_TARGETS: frozenset[int] = frozenset({16498, 16500, 25788, 36981})
 
 # Reassemble's effective value when correctly used. ~30% crit-DH uplift
-# on a 660p tool ≈ 200p. The same number lives in machinist/data.py as
-# COOLDOWN_VALUE_P[2876]; duplicated here for cost accounting.
-_REASSEMBLE_VALUE: float = 200.0
+# on a 660p tool ≈ 200p. Read from the single source in machinist/data.py.
+_REASSEMBLE_VALUE: float = float(md.COOLDOWN_VALUE_P[2876])
 
 
 @dataclass

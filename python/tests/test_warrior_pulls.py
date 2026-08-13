@@ -128,7 +128,9 @@ def test_pull_invariants(name: str) -> None:
     assert delivered > 0, f"{name}: delivered={delivered}"
     pps = delivered / fix["duration_s"]
     assert 120 <= pps <= 550, f"{name}: p/sec {pps:.1f} out of band"
-    ideal = st["idealized_potency"]
+    # De-guarded: production floors idealized_strict at delivered (the witness
+    # guard), which would blind this gate - the RAW search ceiling is the signal.
+    ideal = st["idealized_potency"] - float(st.get("ceiling_witness_gap") or 0.0)
     ratio = delivered / ideal if ideal > 0 else 0
     # Live top-10 calibration sweep (scripts/validate_job_ceiling.py "Warrior",
     # whole tier, 50 pulls): mean 94.7%, max 98.2%, ZERO over 100.5% — the <=100%

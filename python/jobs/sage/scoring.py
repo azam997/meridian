@@ -196,7 +196,8 @@ class SageScoringAspect(ScoringAspectBase):
             report, norm_casts, fight_duration_s,
             costed_ids=gd.COSTED_HEAL_GCD_IDS,
             locked_heal_id=gd.EUKRASIAN_PROGNOSIS_II,
-            filler_potency=float(gd.POTENCIES[gd.DOSIS_III]))
+            filler_potency=float(gd.POTENCIES[gd.DOSIS_III]),
+            rez_ids=gd.REZ_GCD_IDS)
         return _SgeCtx(heal_locks=budget.locks, heal_lock_state=budget.state)
 
     def sim_context(self, ctx: Any) -> Any:

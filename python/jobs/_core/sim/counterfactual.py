@@ -128,6 +128,10 @@ def _snapshot(state) -> dict:
         if isinstance(val, bool):
             gauges[name] = float(val)
         elif isinstance(val, (int, float)):
+            # Sentinel clocks (e.g. MCH `wf_cast_t = -1e9`) are engine plumbing,
+            # not gauges — leaking one puts `-1000000000.0` in the evidence.
+            if abs(float(val)) >= 1e8:
+                continue
             gauges[name] = round(float(val), 3)
     return {
         "t": round(float(state.t), 2),
@@ -167,8 +171,12 @@ def state_delta(sim_module: str, fight_duration_s: float,
         "ideal": _snapshot(ideal),
         "idealSegmentTimeline": [(round(t, 2), a) for t, a in ideal_tl
                                  if float(t0) <= t <= float(t1)],
+        # Stable time-only sort — same-timestamp cast ORDER is state-bearing
+        # (replay._ordered_casts protects exactly this invariant), so the
+        # evidence must not lexicographically reorder what the replay ran.
         "playerSegmentCasts": [(round(float(t), 2), int(a)) for t, a in
-                               sorted(casts) if float(t0) <= t <= float(t1)],
+                               sorted(casts, key=lambda c: c[0])
+                               if float(t0) <= t <= float(t1)],
     }
 
 

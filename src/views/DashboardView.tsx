@@ -1037,8 +1037,8 @@ export const DashboardView = ({
                 Measured in a different currency: against the ceiling under the
                 buffs your party actually gave you
                 (~{fmtNum(Math.round(a.buffAlignment.budget))}p of headroom).
-                Separate from the {fmtNum(Math.round(recoverable))}p strict gap
-                above — the two don't add.
+                Separate from the {fmtNum(Math.round(recoverable))}p recoverable
+                gap above; the two don't add.
               </p>
               <div className="findings">
                 {a.buffAlignment.cards.map((im, i) => (

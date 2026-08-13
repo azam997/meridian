@@ -144,15 +144,21 @@ def _st_coverage(client, code: str, fight: dict[str, Any], actor: dict[str, Any]
     # Per-window buckets (uncovered windows are disjoint, so each cast lands in
     # at most one) — `uncovered_lost` parallels `uncovered_windows` and feeds
     # the improvement card's per-window children. Additive: the historic keys
-    # keep their exact shape/meaning.
+    # keep their exact shape/meaning. The amp prices each cast at its DELIVERED
+    # value: guaranteed-crit-DH casts (Inner Chaos / Primal Rend / free Inner
+    # Release Fell Cleaves) carry the crit-DH multiplier, so an uncovered Inner
+    # Chaos prices at ~191p, not the raw-table 94p.
+    from jobs.warrior.scoring import _ir_credited_indices
+    in_fight = [(t, aid) for t, aid in norm_casts if t >= 0]
+    credited = _ir_credited_indices(in_fight)
     lost = 0.0
     uncovered_lost = [0.0] * len(uncovered)
-    for t, aid in norm_casts:
-        if t < 0:
-            continue
+    for j, (t, aid) in enumerate(in_fight):
         for i, (s, e) in enumerate(uncovered):
             if s <= t < e:
                 amp = wd.POTENCIES.get(aid, 0) * (wd.SURGING_TEMPEST_MULT - 1.0)
+                if aid in wd.ALWAYS_CRIT_DH_IDS or j in credited:
+                    amp *= wd.GUARANTEED_CRIT_DH_MULT
                 lost += amp
                 uncovered_lost[i] += amp
                 break

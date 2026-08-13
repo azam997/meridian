@@ -273,6 +273,17 @@ CLIP_EXCLUSIONS: frozenset[int] = frozenset({
     ENCHANTED_RIPOSTE_M, ENCHANTED_ZWERCHHAU_M, ENCHANTED_REDOUBLEMENT_M,
 })
 
+# --- Per-ability GCD recast (multiple of the 2.5 s global) -------------------
+# The enchanted melee chain's true recasts (1.5 / 1.5 / 2.2), for the pacing
+# consumers (clipping.py / downtime_sources.py) that price per-ability cadence —
+# CLIP_EXCLUSIONS alone only suppressed false clips, it didn't fix the pacing.
+GCD_RECAST_MULT: dict[int, float] = {
+    ENCHANTED_RIPOSTE: 0.6, ENCHANTED_ZWERCHHAU: 0.6,
+    ENCHANTED_REDOUBLEMENT: 0.88,
+    ENCHANTED_RIPOSTE_M: 0.6, ENCHANTED_ZWERCHHAU_M: 0.6,
+    ENCHANTED_REDOUBLEMENT_M: 0.88,
+}
+
 # --- Drift-detection exclusions --------------------------------------------
 # The gap-closers are in COOLDOWNS so the sim can fire them for damage, but they
 # double as movement tools — holding one isn't drift, so suppress those findings.
@@ -311,13 +322,15 @@ DEFENSIVE_IDS: frozenset[int] = frozenset({MAGICK_BARRIER})
 
 # --- JOB_DATA bundle --------------------------------------------------------
 
-# --- AoE potencies (the cleaving burst the ST rotation already casts) -------
+# --- Free-splash potencies (the cleaving burst the ST rotation already casts) --
 # ability_id -> per-extra-target potency. RDM's filler/melee combo has dedicated
 # AoE buttons (Veraero/Verthunder II, Enchanted Moulinet) deferred for now; what
 # the ST rotation ALREADY casts and cleaves is the finisher chain + Contre Sixte,
 # wiki-verified at 55% falloff (x0.45) — Contre Sixte is full-to-all. These scale
-# on delivered + ceiling via `aoe_potency.potency_for`.
-AOE_POTENCIES: dict[int, int] = {
+# on delivered + ceiling via `aoe_potency.potency_for`. Filed as SPLASH (the
+# free-splash map, jobs/_core/job.py) so the sidecar's per-cast splash dots
+# render on multi-target pulls — they vanished while these sat in aoe_potencies.
+SPLASH_POTENCIES: dict[int, int] = {
     GRAND_IMPACT: 270,   # 600 x 0.45
     VERFLARE:     292,   # 650 x 0.45
     VERHOLY:      292,   # 650 x 0.45
@@ -352,6 +365,7 @@ JOB_DATA: JobData = JobData(
     canonical_opener=CANONICAL_OPENER,
     defensive_ids=DEFENSIVE_IDS,
     clip_exclusions=CLIP_EXCLUSIONS,
+    gcd_recast_mult=GCD_RECAST_MULT,
     drift_exclusions=DRIFT_EXCLUSIONS,
     rng_proc_ids=RNG_PROC_IDS,
     filler_quality_gcds=FILLER_QUALITY_GCDS,
@@ -360,7 +374,7 @@ JOB_DATA: JobData = JobData(
     charge_sharing={},                  # gap-closers aren't drift-tracked (mobility)
     raid_buffs={},                      # Embolden modeled via buff_windows (job-agnostic)
     role_policy=CASTER_HEALER,
-    aoe_potencies=AOE_POTENCIES,
+    splash_potencies=SPLASH_POTENCIES,
 
     # A dropped tool backfills with a filler spell (~Jolt III / Verfire 360-380);
     # price a miss at opportunity cost above that.

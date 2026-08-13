@@ -62,7 +62,6 @@ class HardcastGCD:
     """
     gcd_recast_s: float = 2.5
     cast_times: dict[int, float] = field(default_factory=dict)
-    slidecast_s: float = 0.5
     instant_weaves: int = 2
     hardcast_weaves: int = 1
 

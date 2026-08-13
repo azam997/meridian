@@ -10,6 +10,9 @@ import type {
   CharacterPullsResult,
   Improvement,
   MitAssignment,
+  MitLibraryAction,
+  MitLibraryHealOption,
+  MitLibraryResult,
   MitMechanic,
   MitPlanLane,
   MitPlanResult,
@@ -122,6 +125,78 @@ function buildIdealizedTrack(): CastEvent[] {
   swap(30, 16498); // Drill instead of filler
   return out;
 }
+
+// --- Mit-plan editor fixtures (getMitLibrary + the userMitPlan echo) ---------
+
+const MOCK_MIT_NAMES: Record<number, string> = {
+  24298: 'Kerachole', 16536: 'Temperance', 7535: 'Reprisal', 7549: 'Feint',
+  7560: 'Addle', 7405: 'Troubadour', 16889: 'Tactician', 16012: 'Shield Samba',
+  3585: 'Sacred Soil', 7531: 'Rampart', 30: 'Hallowed Ground',
+  3540: 'Divine Veil', 37010: 'Medica III', 16534: 'Afflatus Rapture',
+};
+
+const MOCK_HEAL_OPTIONS: Record<string, MitLibraryHealOption[]> = {
+  'White Mage': [
+    { actionId: 37010, name: 'Medica III', healPotency: 400,
+      gcdCostPotency: 350, castTimeSec: 2, target: 'party' },
+    { actionId: 16534, name: 'Afflatus Rapture', healPotency: 400,
+      gcdCostPotency: 0, castTimeSec: 2.5, target: 'party' },
+    { actionId: 16531, name: 'Afflatus Solace', healPotency: 800,
+      gcdCostPotency: 0, castTimeSec: 2.5, target: 'single' },
+  ],
+};
+
+const mkLibAction = (
+  actionId: number, name: string, over: Partial<MitLibraryAction> = {},
+): MitLibraryAction => ({
+  actionId, name, cooldownSec: 90, charges: 1, durationSec: 15,
+  castLeadSec: 2, minCastSec: 0, target: 'party', tier: 'party_other',
+  isGcd: false, stackGroup: null, resource: null,
+  mitAll: 0.1, mitPhys: 0, mitMagic: 0,
+  shieldPotency: 0, shieldPctMaxhp: 0, healPotency: 0,
+  healMult: 0, healFlatPotency: 0,
+  requiresActionId: null, requiresWithinSec: 0,
+  ...over,
+});
+
+// A small per-job palette — enough to exercise drag/drop, stack groups,
+// charges and the addersgall pool in `npm run dev`.
+const MOCK_MIT_LIBRARY: Record<string, MitLibraryAction[]> = {
+  Paladin: [
+    mkLibAction(7535, 'Reprisal', { cooldownSec: 60, target: 'enemy', stackGroup: 'reprisal' }),
+    mkLibAction(3540, 'Divine Veil', { mitAll: 0, shieldPctMaxhp: 0.1, durationSec: 30, castLeadSec: 4 }),
+    mkLibAction(7531, 'Rampart', { mitAll: 0.2, durationSec: 20, target: 'self', tier: 'tank_suggestion' }),
+    mkLibAction(30, 'Hallowed Ground', { mitAll: 0, durationSec: 10, cooldownSec: 420, target: 'self', tier: 'invuln' }),
+  ],
+  'Dark Knight': [
+    mkLibAction(7535, 'Reprisal', { cooldownSec: 60, target: 'enemy', stackGroup: 'reprisal' }),
+    mkLibAction(7531, 'Rampart', { mitAll: 0.2, durationSec: 20, target: 'self', tier: 'tank_suggestion' }),
+  ],
+  Sage: [
+    mkLibAction(24298, 'Kerachole', { cooldownSec: 30, tier: 'healer_ogcd', resource: 'addersgall' }),
+  ],
+  Scholar: [
+    mkLibAction(3585, 'Sacred Soil', { cooldownSec: 30, tier: 'healer_ogcd', resource: 'aetherflow' }),
+  ],
+  'White Mage': [
+    mkLibAction(16536, 'Temperance', { cooldownSec: 120, durationSec: 20, tier: 'healer_ogcd' }),
+  ],
+  Astrologian: [
+    mkLibAction(16553, 'Collective Unconscious', { cooldownSec: 60, durationSec: 18, tier: 'healer_ogcd' }),
+  ],
+  Samurai: [
+    mkLibAction(7549, 'Feint', { mitAll: 0, mitPhys: 0.1, mitMagic: 0.05, target: 'enemy', stackGroup: 'feint' }),
+  ],
+  Dragoon: [
+    mkLibAction(7549, 'Feint', { mitAll: 0, mitPhys: 0.1, mitMagic: 0.05, target: 'enemy', stackGroup: 'feint' }),
+  ],
+  Bard: [
+    mkLibAction(7405, 'Troubadour', { mitAll: 0.15, stackGroup: 'ranged_mit' }),
+  ],
+  Pictomancer: [
+    mkLibAction(7560, 'Addle', { mitAll: 0, mitMagic: 0.1, mitPhys: 0.05, target: 'enemy', stackGroup: 'addle' }),
+  ],
+};
 
 // Shared roster for the ref-warm progress tasks + the theorizer's mock refs.
 const REF_NAMES = [
@@ -1309,7 +1384,8 @@ export const mockSidecar: Sidecar = {
       castAtSec: number, over: Partial<MitAssignment> = {},
     ): MitAssignment => ({
       slot, job, actionId, name, castAtSec, durationSec: 15, target: 'party',
-      mitPct: 0.1, shieldAmount: 0, healAmount: 0, hotHps: 0, isGcd: false,
+      mitPct: 0.1, shieldAmount: 0, healAmount: 0, hotHps: 0, hotWindowSec: 0,
+      isGcd: false,
       castTimeSec: 0, isSuggestion: false, covers: [], isCarryover: false,
       ...over,
     });
@@ -1387,6 +1463,51 @@ export const mockSidecar: Sidecar = {
         status: 'covered', notes: [],
       },
     ];
+    // Custom-plan echo: replace the canned assignments with ones synthesized
+    // from the user plan so drops render faithfully in `npm run dev`. HP /
+    // predicted numbers stay canned — the mock only needs to draw the board.
+    const userPlan = args.userMitPlan;
+    if (userPlan) {
+      const compOrder = [tanks[0], tanks[1], shieldHealer, regenHealer, ...dps];
+      const slotNames = ['T1', 'T2', 'H1', 'H2', 'D1', 'D2', 'D3', 'D4'];
+      const roleJobs: Record<string, string[]> = {
+        tank: ['Paladin', 'Warrior', 'Dark Knight', 'Gunbreaker'],
+        melee: ['Monk', 'Dragoon', 'Ninja', 'Samurai', 'Reaper', 'Viper'],
+        ranged: ['Bard', 'Machinist', 'Dancer'],
+        caster: ['Black Mage', 'Summoner', 'Red Mage', 'Pictomancer'],
+      };
+      for (const m of mechanics) {
+        if (m.kind === 'hpSet') continue;
+        m.assignments = [];
+        m.gcdHeals = [];
+        m.notes = [];
+      }
+      for (const entry of userPlan.assignments) {
+        const m = mechanics.find((x) => entry.boss_ability_id != null
+          && x.bossAbilityIds.includes(entry.boss_ability_id));
+        if (!m) continue;
+        for (const h of entry.gcd_heals ?? []) {
+          m.gcdHeals.push({
+            slot: h.job === shieldHealer ? 'H1' : 'H2', job: h.job ?? '',
+            actionId: h.action_id,
+            name: MOCK_MIT_NAMES[h.action_id] ?? `#${h.action_id}`,
+            castAtSec: Math.max(0, m.timeSec - 6), count: h.count,
+            castTimeSec: 2.5, healAmount: 21_000,
+          });
+        }
+        for (const mit of entry.mits) {
+          const job = mit.job
+            ?? roleJobs[mit.role ?? '']?.find((j) => compOrder.includes(j));
+          const idx = job ? compOrder.indexOf(job) : -1;
+          if (!job || idx < 0) continue;
+          m.assignments.push(mkAssign(
+            slotNames[idx], job, mit.action_id,
+            MOCK_MIT_NAMES[mit.action_id] ?? `#${mit.action_id}`,
+            Math.max(0, m.timeSec - 2),
+            { covers: [m.hits[0]?.timeSec ?? m.timeSec] }));
+        }
+      }
+    }
     const lanes: MitPlanLane[] = ['T1', 'T2', 'H1', 'H2', 'D1', 'D2', 'D3', 'D4'].map((slot, i) => {
       const jobs = [tanks[0], tanks[1], shieldHealer, regenHealer, ...dps];
       const casts: CastEvent[] = [];
@@ -1442,7 +1563,54 @@ export const mockSidecar: Sidecar = {
       compSource: args.reportCode ? 'pull'
         : (args.shieldHealer ? 'request' : 'defaults'),
       // Dev-only: echo the PF-plan toggle (id 1085 is the mock's ultimate).
-      pfPlanApplied: !!args.usePfMitPlan && encounterId === 1085,
+      pfPlanApplied: !!args.usePfMitPlan && encounterId === 1085 && !userPlan,
+      userPlanApplied: !!userPlan,
+    };
+  },
+
+  async getMitLibrary(args): Promise<MitLibraryResult> {
+    await delay(120);
+    const {
+      shieldHealer = 'Sage', regenHealer = 'White Mage',
+      tanks = ['Paladin', 'Dark Knight'],
+      dps = ['Samurai', 'Dragoon', 'Bard', 'Pictomancer'],
+    } = args;
+    const slotsOrder: [string, string][] = [
+      ['T1', tanks[0]], ['T2', tanks[1]],
+      ['H1', shieldHealer], ['H2', regenHealer],
+      ['D1', dps[0]], ['D2', dps[1]], ['D3', dps[2]], ['D4', dps[3]],
+    ];
+    const abilityMeta: Record<number, AbilityMetaJson> = {};
+    const slots = slotsOrder.map(([slot, job]) => {
+      const actions = MOCK_MIT_LIBRARY[job] ?? [];
+      const healOptions = MOCK_HEAL_OPTIONS[job] ?? [];
+      for (const a of actions) {
+        abilityMeta[a.actionId] = {
+          id: a.actionId, name: a.name, iconPath: '', isOgcd: !a.isGcd,
+        };
+      }
+      for (const o of healOptions) {
+        abilityMeta[o.actionId] = {
+          id: o.actionId, name: o.name, iconPath: '', isOgcd: false,
+        };
+      }
+      return { slot, job, actions, healOptions };
+    });
+    return {
+      slots, abilityMeta,
+      resourcePools: {
+        addersgall: { capacity: 3, regenSec: 20, startTokens: 3 },
+        lily: { capacity: 3, regenSec: 20, startTokens: 0 },
+      },
+    };
+  },
+
+  async exportMitPlan(args) {
+    await delay(150);
+    const base = `C:\\mock\\mit_plans\\${args.fileName ?? 'mit-plan'}`;
+    return {
+      path: `${base}.json`,
+      ...(args.readable ? { readablePath: `${base}.txt` } : {}),
     };
   },
 };

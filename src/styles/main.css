@@ -1505,6 +1505,24 @@ input, select { font: inherit; color: inherit; }
     oklch(from var(--info) l c h / 0.36) 0, oklch(from var(--info) l c h / 0.36) 5px,
     oklch(from var(--info) l c h / 0.10) 5px, oklch(from var(--info) l c h / 0.10) 8px);
 }
+/* Consensus ranged-filler windows (Tier-B's sibling) — the refs kept casting
+   here but from range, so a different pardon than idle downtime: violet, and
+   the hatch runs the OPPOSITE way so the two families never read as one even
+   where they sit close. Never overlaps the downtime bands (subtracted at
+   detection). */
+.tl-band.ranged-filler, .tl-strip-tint.down-rf {
+  background: repeating-linear-gradient(-45deg,
+    oklch(0.72 0.12 300 / 0.12) 0, oklch(0.72 0.12 300 / 0.12) 6px,
+    transparent 6px, transparent 12px);
+  border-left: 1px dashed oklch(0.72 0.12 300 / 0.55);
+  border-right: 1px dashed oklch(0.72 0.12 300 / 0.55);
+}
+.tl-band.ranged-filler:hover, .tl-band.ranged-filler.on,
+.tl-strip-tint.down-rf.on {
+  background: repeating-linear-gradient(-45deg,
+    oklch(0.72 0.12 300 / 0.26) 0, oklch(0.72 0.12 300 / 0.26) 6px,
+    oklch(0.72 0.12 300 / 0.07) 6px, oklch(0.72 0.12 300 / 0.07) 12px);
+}
 
 /* Phase track — a slim labeled band per boss phase pinned to the top of the
    plot, with a boundary separator line running the full plot height. Phased
@@ -2753,6 +2771,162 @@ input, select { font: inherit; color: inherit; }
   box-shadow: 0 8px 28px oklch(0 0 0 / 0.3);
   background: var(--bg-2);
 }
+
+/* --- Custom plan editor (MitPalette.tsx + MitPlanBoard edit mode) ---------- */
+
+.mp-palette {
+  margin-top: 12px; padding: 10px 12px 8px;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: var(--bg-2);
+  display: flex; flex-direction: column; gap: 6px;
+  max-height: 320px; overflow: auto;
+}
+.mp-pal-group { display: flex; flex-direction: column; gap: 5px; }
+.mp-pal-head {
+  display: flex; align-items: center; gap: 7px;
+  padding: 2px 8px 2px 7px; margin: 0 -2px;
+  background: none; border: none; border-left: 3px solid transparent;
+  border-radius: 4px; cursor: pointer; text-align: left;
+  font-size: 11px; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.mp-pal-head:hover { background: var(--surface-hi); color: var(--fg); }
+.mp-pal-head .mono { font-family: var(--font-mono); }
+.mp-pal-job { text-transform: none; letter-spacing: 0; font-size: 12px; }
+.mp-pal-chev { transition: transform 0.15s ease; margin-left: 2px; }
+.mp-pal-chev.open { transform: rotate(180deg); }
+.mp-pal-chips {
+  display: flex; flex-wrap: wrap; gap: 4px; padding-left: 10px;
+}
+.mp-pal-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 8px 3px 4px; border: 1px solid var(--border);
+  border-radius: 6px; background: var(--surface);
+  font-size: 12px; cursor: grab; user-select: none; white-space: nowrap;
+}
+.mp-pal-chip:hover { border-color: var(--border-hi); background: var(--surface-hi); }
+.mp-pal-chip:active { cursor: grabbing; }
+.mp-pal-chip.dragging { opacity: 0.45; }
+.mp-pal-chip .mut { font-size: 10.5px; font-family: var(--font-mono); }
+.mp-pal-foot {
+  font-size: 11.5px; padding: 2px 2px 0;
+  border-top: 1px solid oklch(from var(--border) l c h / 0.6);
+  padding-top: 7px;
+}
+.mp-pal-loading {
+  margin-top: 12px; display: flex; align-items: center; gap: 7px;
+  font-size: 12.5px;
+}
+.mp-scoring {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; color: var(--muted);
+}
+
+/* Drop strips: full-width row targets rendered only during a palette drag.
+   Above the columns AND the sticky mechanic column (z 2) so a drop lands
+   anywhere on the row; below the inline detail card (z 5). */
+.mpb-droprow {
+  position: absolute; left: 0; right: 0; z-index: 4;
+  border: 1.5px dashed transparent; border-radius: 6px;
+  background: oklch(from var(--accent) l c h / 0.05);
+}
+.mpb-droprow.on {
+  background: oklch(from var(--accent) l c h / 0.16);
+  border-color: var(--accent);
+}
+.mpb-droprow.blocked {
+  background: repeating-linear-gradient(
+    -45deg,
+    oklch(from var(--muted) l c h / 0.10) 0 6px,
+    transparent 6px 12px);
+  cursor: not-allowed;
+}
+
+/* Per-row damage readout (edit mode): the most-hit role's per-person damage,
+   unmitigated → planned, explicitly labeled. */
+.mpb-row-dmg {
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--fg);
+  flex: none; margin-left: auto; padding-left: 6px; white-space: nowrap;
+}
+.mpb-row-dmg-was { color: var(--muted); text-decoration: line-through; }
+.mpb-row-dmg-sep { color: var(--muted-2); margin: 0 2px; }
+.mpb-row-dmg-lbl {
+  color: var(--muted-2); font-size: 9px; margin-left: 4px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+/* The readout takes over the auto-margin; the dot follows it. */
+.mpb-row-dmg + .mpb-dot { margin-left: 8px; }
+
+/* All-open edit board: the mechanic column widens to host every row's
+   detail card inline; bars/strips to the right follow the same cumulative
+   geometry. Taller scroll window so the long board breathes. */
+.mpb.edit .mpb-head-mech, .mpb.edit .mpb-mechcol { width: 470px; }
+.mpb.edit .mpb-scroll { max-height: 78vh; }
+.mpb.edit .mpb-row { cursor: default; }
+.mpb-inline-card { padding: 2px 12px 10px 22px; }
+.mpb-inline-card .mp-card {
+  box-shadow: none; background: var(--surface);
+}
+
+/* The detail card's GCD-heal incrementer (edit mode): heals are plan
+   content in a custom plan — authored per gap, never auto-inserted. */
+.mp-heals-edit {
+  margin-top: 8px; padding-top: 8px;
+  border-top: 1px solid oklch(from var(--border) l c h / 0.6);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.mp-heals-lbl {
+  font-size: 10.5px; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.mp-heal-ctls { display: flex; flex-wrap: wrap; gap: 6px; }
+.mp-heal-ctl {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 2px 4px 2px 4px; border: 1px solid var(--border);
+  border-radius: 6px; background: var(--surface); font-size: 12px;
+}
+.mp-heal-ctl.on { border-color: var(--accent); background: var(--accent-soft); }
+.mp-heal-name { white-space: nowrap; }
+.mp-heal-tgt {
+  font-size: 9px; color: var(--muted); text-transform: uppercase;
+  letter-spacing: 0.04em; border: 1px solid var(--border);
+  border-radius: 4px; padding: 0 3px;
+}
+.mp-heal-btn {
+  width: 18px; height: 18px; padding: 0; border-radius: 4px;
+  border: 1px solid var(--border); background: var(--bg-2);
+  color: var(--fg); font-size: 13px; line-height: 1; cursor: pointer;
+}
+.mp-heal-btn:hover:not(:disabled) {
+  border-color: var(--accent); color: var(--accent);
+}
+.mp-heal-btn:disabled { opacity: 0.35; cursor: default; }
+.mp-heal-n {
+  font-family: var(--font-mono); font-size: 12px; min-width: 14px;
+  text-align: center;
+}
+
+/* Move + remove affordances (edit mode): bars drag to another row; a ×
+   pinned to a bar's top corner shows on hover; the detail card's chips get
+   an inline ×. */
+.mpb-bar.movable { cursor: grab; }
+.mpb-bar.movable:active { cursor: grabbing; }
+.mpb-bar-rm {
+  position: absolute; top: -7px; right: -7px; z-index: 3;
+  width: 16px; height: 16px; padding: 0;
+  display: none; align-items: center; justify-content: center;
+  border-radius: 50%; border: 1px solid var(--bad);
+  background: var(--bg-2); color: var(--bad);
+  font-size: 12px; line-height: 1; cursor: pointer;
+}
+.mpb-bar:hover .mpb-bar-rm { display: flex; }
+.mpb-bar-rm:hover { background: var(--bad); color: #fff; }
+.mp-chip-rm {
+  margin-left: 2px; padding: 0 3px;
+  background: none; border: none; border-radius: 4px;
+  color: var(--muted); font-size: 13px; line-height: 1; cursor: pointer;
+}
+.mp-chip-rm:hover { color: var(--bad); background: var(--surface-hi); }
 
 /* --- Planner result sections (Mitigation Plan / Mitigation Timeline) ------- */
 .mp-section {

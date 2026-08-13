@@ -294,7 +294,10 @@ class DragoonRotationModel(engine.BaseRotationModel):
                 and not is_forbidden(LANCE_CHARGE, t, fw):
             return LANCE_CHARGE
         # Life of the Dragon chain — time-sensitive (inside the 20s window).
-        if state.nastrond_ready > 0:
+        # Nastrond is only castable while LotD is ACTIVE: without the gate a
+        # refine hold on Geirskogul (or a beam line spending the weave slot
+        # elsewhere) could emit an illegal out-of-window Nastrond.
+        if state.nastrond_ready > 0 and state.lotd_end > t:
             return NASTROND
         if state.starcross_ready:
             return STARCROSS

@@ -45,6 +45,10 @@ LOG_DIR = CONFIG_DIR / "logs"
 # sidecar/main.py::export_feedback_bundle; safe to delete wholesale.
 FEEDBACK_DIR = CONFIG_DIR / "feedback"
 
+# User-exported custom mitigation plans (the planner's Export button) — the
+# user's own shareable files, revealed in Explorer on export. Never pruned.
+MIT_PLANS_DIR = CONFIG_DIR / "mit_plans"
+
 
 def ensure_config_dir_migrated() -> None:
     """If the new dir is missing AND the legacy dir exists, rename it.

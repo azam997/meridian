@@ -166,7 +166,8 @@ class AstrologianScoringAspect(ScoringAspectBase):
         budget = reconcile_from_report(
             report, norm_casts, fight_duration_s,
             costed_ids=ad.COSTED_HEAL_GCD_IDS, locked_heal_id=ad.HELIOS_CONJUNCTION,
-            filler_potency=float(ad.POTENCIES[ad.FALL_MALEFIC]))
+            filler_potency=float(ad.POTENCIES[ad.FALL_MALEFIC]),
+            rez_ids=ad.REZ_GCD_IDS)
         return _AstCtx(heal_locks=budget.locks, heal_lock_state=budget.state)
 
     def sim_context(self, ctx: Any) -> Any:

@@ -124,7 +124,8 @@ def test_delivered_in_band_and_below_ceiling():
     pps = delivered / _DURATION_S
     assert 110 <= pps <= 320, f"p/sec out of band: {pps:.1f}"
     ratio = delivered / ideal if ideal > 0 else 0
-    assert ratio <= 1.005, f"delivered {delivered:.0f} > ideal {ideal:.0f}"
+    # Exact 100% gate (owner directive, v1.1): perfect includes the greedy line.
+    assert ratio <= 1.0 + 1e-6, f"delivered {delivered:.0f} > ideal {ideal:.0f}"
 
 
 def test_buff_scenarios_present():

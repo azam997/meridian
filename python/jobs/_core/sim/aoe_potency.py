@@ -66,7 +66,7 @@ def potency_for(aid: int, n: int, job_data: "JobData") -> float:
         secondary = job_data.aoe_potencies.get(aid)
     if secondary is None:
         return float(base)
-    cap = job_data.aoe_target_caps.get(aid, DEFAULT_AOE_CAP)
+    cap = max(1, job_data.aoe_target_caps.get(aid, DEFAULT_AOE_CAP))
     return float(base) + float(secondary) * (min(n, cap) - 1)
 
 

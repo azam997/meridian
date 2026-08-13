@@ -1,0 +1,4880 @@
+{
+  "abilityMeta": {
+    "15": {
+      "iconPath": "/i/000000/000156.png",
+      "id": 15,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Riot Blade"
+    },
+    "16459": {
+      "iconPath": "/i/002000/002518.png",
+      "id": 16459,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Confiteor"
+    },
+    "16460": {
+      "iconPath": "/i/002000/002519.png",
+      "id": 16460,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Atonement"
+    },
+    "16461": {
+      "iconPath": "/i/002000/002520.png",
+      "id": 16461,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Intervene"
+    },
+    "20": {
+      "iconPath": "/i/000000/000166.png",
+      "id": 20,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Fight or Flight"
+    },
+    "23": {
+      "iconPath": "/i/000000/000161.png",
+      "id": 23,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Circle of Scorn"
+    },
+    "25747": {
+      "iconPath": "/i/002000/002951.png",
+      "id": 25747,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Expiacion"
+    },
+    "25748": {
+      "iconPath": "/i/002000/002952.png",
+      "id": 25748,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Blade of Faith"
+    },
+    "25749": {
+      "iconPath": "/i/002000/002953.png",
+      "id": 25749,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Blade of Truth"
+    },
+    "25750": {
+      "iconPath": "/i/002000/002954.png",
+      "id": 25750,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Blade of Valor"
+    },
+    "3538": {
+      "iconPath": "/i/002000/002506.png",
+      "id": 3538,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Goring Blade"
+    },
+    "3539": {
+      "iconPath": "/i/002000/002507.png",
+      "id": 3539,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Royal Authority"
+    },
+    "36918": {
+      "iconPath": "/i/002000/002522.png",
+      "id": 36918,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Supplication"
+    },
+    "36919": {
+      "iconPath": "/i/002000/002523.png",
+      "id": 36919,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Sepulchre"
+    },
+    "36921": {
+      "iconPath": "/i/002000/002955.png",
+      "id": 36921,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Imperator"
+    },
+    "36922": {
+      "iconPath": "/i/002000/002956.png",
+      "id": 36922,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Blade of Honor"
+    },
+    "7384": {
+      "iconPath": "/i/002000/002514.png",
+      "id": 7384,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Holy Spirit"
+    },
+    "9": {
+      "iconPath": "/i/000000/000158.png",
+      "id": 9,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Fast Blade"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "15": 16,
+        "16459": 6,
+        "16460": 16,
+        "16461": 13,
+        "20": 6,
+        "23": 12,
+        "25747": 12,
+        "25748": 6,
+        "25749": 6,
+        "25750": 6,
+        "3538": 6,
+        "3539": 16,
+        "36918": 16,
+        "36919": 16,
+        "36921": 6,
+        "36922": 6,
+        "7384": 16,
+        "9": 17
+      },
+      "totalCasts": 198
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": []
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 520.42,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "targetability"
+    },
+    "Drift": {
+      "downtimeSource": "targetability",
+      "downtimeWindows": [],
+      "fightDurationSec": 360.0,
+      "findings": [
+        {
+          "abilityId": 16461,
+          "abilityName": "Intervene",
+          "cappedSeconds": 7.5,
+          "casts": 13,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 25747,
+          "abilityName": "Expiacion",
+          "cappedSeconds": 5.7,
+          "casts": 12,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 23,
+          "abilityName": "Circle of Scorn",
+          "cappedSeconds": 5.0,
+          "casts": 12,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 36921,
+          "abilityName": "Imperator",
+          "cappedSeconds": 3.2,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 20,
+          "abilityName": "Fight or Flight",
+          "cappedSeconds": 2.5,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 16459,
+          "expectedId": 15,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Confiteor, canonical uses Riot Blade (same potency)"
+        },
+        {
+          "actualId": 25748,
+          "expectedId": 3539,
+          "lostPotency": 0.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Blade of Faith, canonical uses Royal Authority (same potency)"
+        },
+        {
+          "actualId": 25749,
+          "expectedId": 3538,
+          "lostPotency": 0.0,
+          "position": 4,
+          "summary": "Opener slot #4: cast Blade of Truth, canonical uses Goring Blade (same potency)"
+        },
+        {
+          "actualId": 25750,
+          "expectedId": 16459,
+          "lostPotency": 0.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Blade of Valor, canonical uses Confiteor (same potency)"
+        },
+        {
+          "actualId": 15,
+          "expectedId": 25748,
+          "lostPotency": 430.0,
+          "position": 6,
+          "summary": "Opener slot #6: cast Riot Blade (330p), canonical uses Blade of Faith (760p), -430p"
+        },
+        {
+          "actualId": 3539,
+          "expectedId": 25749,
+          "lostPotency": 420.0,
+          "position": 7,
+          "summary": "Opener slot #7: cast Royal Authority (460p), canonical uses Blade of Truth (880p), -420p"
+        },
+        {
+          "actualId": 3538,
+          "expectedId": 25750,
+          "lostPotency": 300.0,
+          "position": 8,
+          "summary": "Opener slot #8: cast Goring Blade (700p), canonical uses Blade of Valor (1000p), -300p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Scoring": {
+      "deliveredObserved": 108449.61,
+      "deliveredPotency": 108449.61,
+      "downtimeSource": "targetability",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "20": 2447.16,
+        "36921": 4415.4
+      },
+      "entryComboStep": 0,
+      "entryDivineMight": false,
+      "fightDurationSec": 360.0,
+      "idealizedLenient": 111038.51,
+      "idealizedMaster": 109580.95,
+      "idealizedObserved": 109580.95,
+      "idealizedPotency": 111038.51,
+      "idealizedStrict": 111038.51,
+      "masterBuffIntervals": [],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.47,
+        "payload": null
+      },
+      "tinctureLoss": 2142.24,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.09,
+      "tinctureOptimalCount": 2
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 198"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Fast Blade",
+          17,
+          0
+        ],
+        [
+          "Atonement",
+          16,
+          0
+        ],
+        [
+          "Riot Blade",
+          16,
+          0
+        ],
+        [
+          "Royal Authority",
+          16,
+          0
+        ],
+        [
+          "Supplication",
+          16,
+          0
+        ],
+        [
+          "Sepulchre",
+          16,
+          0
+        ],
+        [
+          "Holy Spirit",
+          16,
+          0
+        ],
+        [
+          "Intervene",
+          13,
+          0
+        ],
+        [
+          "Expiacion",
+          12,
+          0
+        ],
+        [
+          "Circle of Scorn",
+          12,
+          0
+        ],
+        [
+          "Confiteor",
+          6,
+          0
+        ],
+        [
+          "Goring Blade",
+          6,
+          0
+        ],
+        [
+          "Fight or Flight",
+          6,
+          0
+        ],
+        [
+          "Blade of Faith",
+          6,
+          0
+        ],
+        [
+          "Blade of Truth",
+          6,
+          0
+        ],
+        [
+          "Blade of Valor",
+          6,
+          0
+        ],
+        [
+          "Imperator",
+          6,
+          0
+        ],
+        [
+          "Blade of Honor",
+          6,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No raid-buff providers in this party \u2014 burst alignment N/A."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 520p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "No notable cooldown drift."
+      ],
+      "summaryLines": [
+        "Total drift cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Fight or Flight",
+          6,
+          2.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Imperator",
+          6,
+          3.2,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Circle of Scorn",
+          12,
+          5.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Expiacion",
+          12,
+          5.7,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Intervene",
+          13,
+          7.5,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #6: cast Riot Blade (330p), canonical uses Blade of Faith (760p), -430p",
+        "[opener] Opener slot #7: cast Royal Authority (460p), canonical uses Blade of Truth (880p), -420p",
+        "[opener] Opener slot #8: cast Goring Blade (700p), canonical uses Blade of Valor (1000p), -300p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 1150p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          2,
+          "Riot Blade",
+          "Confiteor",
+          0
+        ],
+        [
+          3,
+          "Royal Authority",
+          "Blade of Faith",
+          0
+        ],
+        [
+          4,
+          "Goring Blade",
+          "Blade of Truth",
+          0
+        ],
+        [
+          5,
+          "Confiteor",
+          "Blade of Valor",
+          0
+        ],
+        [
+          6,
+          "Blade of Faith",
+          "Riot Blade",
+          430
+        ],
+        [
+          7,
+          "Blade of Truth",
+          "Royal Authority",
+          420
+        ],
+        [
+          8,
+          "Blade of Valor",
+          "Goring Blade",
+          300
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "examined": {
+    "basis": "strict",
+    "improvements": [
+      {
+        "abilityId": 0,
+        "abilityName": "Tincture",
+        "children": [],
+        "kind": "tincture",
+        "lostPotency": 2142.24,
+        "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+        "summary": "Used 0 of 2 tinctures",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 0,
+        "abilityName": "",
+        "children": [
+          {
+            "abilityId": 0,
+            "abilityName": "",
+            "children": [],
+            "kind": "cadence",
+            "lostPotency": 920.0,
+            "prescription": "Press the next GCD the moment it's ready.",
+            "summary": "Loose GCD pacing: ~2 GCDs of slightly-late casts, no single gap",
+            "timeSec": 0.0
+          }
+        ],
+        "countGaps": [
+          {
+            "name": "Sepulchre",
+            "sim": 17,
+            "you": 16
+          },
+          {
+            "name": "Supplication",
+            "sim": 17,
+            "you": 16
+          },
+          {
+            "name": "Atonement",
+            "sim": 17,
+            "you": 16
+          },
+          {
+            "name": "Royal Authority",
+            "sim": 17,
+            "you": 16
+          },
+          {
+            "name": "Holy Spirit",
+            "sim": 13,
+            "you": 16
+          }
+        ],
+        "kind": "residual",
+        "lostPotency": 252.4,
+        "prescription": "Biggest count gaps: Sepulchre and Supplication. Extra Holy Spirit casts took those slots at lower value.",
+        "summary": "Spacing & sequencing: 1 small located loss below the listing threshold",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 0,
+        "abilityName": "",
+        "children": [],
+        "evidence": [],
+        "kind": "cascade_pacing",
+        "lostPotency": 194.3,
+        "prescription": "Close the idle gaps after 2:34.",
+        "summary": "Sequencing slip from 2:34 to 2:39",
+        "timeSec": 153.8
+      },
+      {
+        "abilityId": 25748,
+        "abilityName": "Blade of Faith",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #6: Riot Blade instead of Blade of Faith (ordering only)",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 25749,
+        "abilityName": "Blade of Truth",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #7: Royal Authority instead of Blade of Truth (ordering only)",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 25750,
+        "abilityName": "Blade of Valor",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #8: Goring Blade instead of Blade of Valor (ordering only)",
+        "timeSec": 0.0
+      }
+    ],
+    "notes": [
+      "194p of the diffuse loss resolved into 1 root cause.",
+      "Cascade weights scaled \u00d70.42 to fit the residual budget."
+    ],
+    "recoverable": 2588.9
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 108449.61,
+    "downtimeSource": "targetability",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 97.67,
+    "efficiencyPctLenient": 97.67,
+    "efficiencyPctMaster": 98.97,
+    "efficiencyPctObserved": 98.97,
+    "efficiencyPctStrict": 97.67,
+    "idealizedMaster": 109580.95,
+    "idealizedObserved": 109580.95,
+    "killTimeSec": 360,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Paladin"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 111038.51,
+    "yourIdealizedPotencyLenient": 111038.51,
+    "yourPotency": 108449.61
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 28.5,
+      "multiplier": 1.09,
+      "startSec": -1.5
+    },
+    {
+      "endSec": 338.78,
+      "multiplier": 1.09,
+      "startSec": 308.78
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": -0.5,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": -1.5,
+      "tooltip": "Holy Spirit @ -1.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 3.5,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 2.5,
+      "tooltip": "Fast Blade @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 20,
+      "color": "#f59e0b",
+      "endSec": 3.1,
+      "iconPath": "/i/000000/000166.png",
+      "label": "Fig",
+      "startSec": 2.5,
+      "tooltip": "Fight or Flight @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36921,
+      "color": "#f59e0b",
+      "endSec": 3.8,
+      "iconPath": "/i/002000/002955.png",
+      "label": "Imp",
+      "startSec": 3.2,
+      "tooltip": "Imperator @ 3.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16459,
+      "color": "#3b82f6",
+      "endSec": 5.97,
+      "iconPath": "/i/002000/002518.png",
+      "label": "Con",
+      "startSec": 4.97,
+      "tooltip": "Confiteor @ 5.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 5.57,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 4.97,
+      "tooltip": "Circle of Scorn @ 5.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 6.27,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 5.67,
+      "tooltip": "Expiacion @ 5.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25748,
+      "color": "#3b82f6",
+      "endSec": 8.44,
+      "iconPath": "/i/002000/002952.png",
+      "label": "Bla",
+      "startSec": 7.44,
+      "tooltip": "Blade of Faith @ 7.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 8.04,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 7.44,
+      "tooltip": "Intervene @ 7.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 8.74,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 8.14,
+      "tooltip": "Intervene @ 8.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25749,
+      "color": "#3b82f6",
+      "endSec": 10.91,
+      "iconPath": "/i/002000/002953.png",
+      "label": "Bla",
+      "startSec": 9.91,
+      "tooltip": "Blade of Truth @ 9.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25750,
+      "color": "#3b82f6",
+      "endSec": 13.38,
+      "iconPath": "/i/002000/002954.png",
+      "label": "Bla",
+      "startSec": 12.38,
+      "tooltip": "Blade of Valor @ 12.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36922,
+      "color": "#f59e0b",
+      "endSec": 12.98,
+      "iconPath": "/i/002000/002956.png",
+      "label": "Bla",
+      "startSec": 12.38,
+      "tooltip": "Blade of Honor @ 12.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 15.85,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 14.85,
+      "tooltip": "Riot Blade @ 14.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 18.32,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 17.32,
+      "tooltip": "Royal Authority @ 17.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3538,
+      "color": "#3b82f6",
+      "endSec": 20.79,
+      "iconPath": "/i/002000/002506.png",
+      "label": "Gor",
+      "startSec": 19.79,
+      "tooltip": "Goring Blade @ 19.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 23.26,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 22.26,
+      "tooltip": "Atonement @ 22.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 25.73,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 24.73,
+      "tooltip": "Supplication @ 24.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 28.2,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 27.2,
+      "tooltip": "Sepulchre @ 27.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 30.67,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 29.67,
+      "tooltip": "Fast Blade @ 29.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 33.14,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 32.14,
+      "tooltip": "Riot Blade @ 32.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 35.61,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 34.61,
+      "tooltip": "Royal Authority @ 34.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 38.08,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 37.08,
+      "tooltip": "Atonement @ 37.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 37.68,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 37.08,
+      "tooltip": "Circle of Scorn @ 37.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 38.38,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 37.78,
+      "tooltip": "Expiacion @ 37.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 40.55,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 39.55,
+      "tooltip": "Supplication @ 39.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 40.15,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 39.55,
+      "tooltip": "Intervene @ 39.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 43.02,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 42.02,
+      "tooltip": "Sepulchre @ 42.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 45.49,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 44.49,
+      "tooltip": "Fast Blade @ 44.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 47.96,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 46.96,
+      "tooltip": "Riot Blade @ 47.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 50.43,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 49.43,
+      "tooltip": "Royal Authority @ 49.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 52.9,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 51.9,
+      "tooltip": "Atonement @ 51.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 55.37,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 54.37,
+      "tooltip": "Supplication @ 54.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 57.84,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 56.84,
+      "tooltip": "Sepulchre @ 56.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 60.31,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 59.31,
+      "tooltip": "Fast Blade @ 59.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 62.78,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 61.78,
+      "tooltip": "Riot Blade @ 61.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 65.25,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 64.25,
+      "tooltip": "Royal Authority @ 64.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 20,
+      "color": "#f59e0b",
+      "endSec": 64.85,
+      "iconPath": "/i/000000/000166.png",
+      "label": "Fig",
+      "startSec": 64.25,
+      "tooltip": "Fight or Flight @ 64.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36921,
+      "color": "#f59e0b",
+      "endSec": 65.55,
+      "iconPath": "/i/002000/002955.png",
+      "label": "Imp",
+      "startSec": 64.95,
+      "tooltip": "Imperator @ 64.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16459,
+      "color": "#3b82f6",
+      "endSec": 67.72,
+      "iconPath": "/i/002000/002518.png",
+      "label": "Con",
+      "startSec": 66.72,
+      "tooltip": "Confiteor @ 66.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25748,
+      "color": "#3b82f6",
+      "endSec": 70.19,
+      "iconPath": "/i/002000/002952.png",
+      "label": "Bla",
+      "startSec": 69.19,
+      "tooltip": "Blade of Faith @ 69.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 69.79,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 69.19,
+      "tooltip": "Circle of Scorn @ 69.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 70.49,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 69.89,
+      "tooltip": "Expiacion @ 69.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25749,
+      "color": "#3b82f6",
+      "endSec": 72.66,
+      "iconPath": "/i/002000/002953.png",
+      "label": "Bla",
+      "startSec": 71.66,
+      "tooltip": "Blade of Truth @ 71.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 72.26,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 71.66,
+      "tooltip": "Intervene @ 71.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25750,
+      "color": "#3b82f6",
+      "endSec": 75.13,
+      "iconPath": "/i/002000/002954.png",
+      "label": "Bla",
+      "startSec": 74.13,
+      "tooltip": "Blade of Valor @ 74.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36922,
+      "color": "#f59e0b",
+      "endSec": 74.73,
+      "iconPath": "/i/002000/002956.png",
+      "label": "Bla",
+      "startSec": 74.13,
+      "tooltip": "Blade of Honor @ 74.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3538,
+      "color": "#3b82f6",
+      "endSec": 77.6,
+      "iconPath": "/i/002000/002506.png",
+      "label": "Gor",
+      "startSec": 76.6,
+      "tooltip": "Goring Blade @ 76.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 80.07,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 79.07,
+      "tooltip": "Atonement @ 79.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 82.54,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 81.54,
+      "tooltip": "Supplication @ 81.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 85.01,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 84.01,
+      "tooltip": "Sepulchre @ 84.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 87.48,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 86.48,
+      "tooltip": "Fast Blade @ 86.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 89.95,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 88.95,
+      "tooltip": "Riot Blade @ 88.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 92.42,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 91.42,
+      "tooltip": "Holy Spirit @ 91.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 94.89,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 93.89,
+      "tooltip": "Royal Authority @ 93.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 97.36,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 96.36,
+      "tooltip": "Atonement @ 96.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 99.83,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 98.83,
+      "tooltip": "Supplication @ 98.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 99.43,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 98.83,
+      "tooltip": "Intervene @ 98.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 100.13,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 99.53,
+      "tooltip": "Circle of Scorn @ 99.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 102.3,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 101.3,
+      "tooltip": "Sepulchre @ 101.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 101.9,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 101.3,
+      "tooltip": "Expiacion @ 101.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 104.77,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 103.77,
+      "tooltip": "Fast Blade @ 103.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 107.24,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 106.24,
+      "tooltip": "Riot Blade @ 106.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 109.71,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 108.71,
+      "tooltip": "Holy Spirit @ 108.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 112.18,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 111.18,
+      "tooltip": "Royal Authority @ 111.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 114.65,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 113.65,
+      "tooltip": "Atonement @ 113.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 117.12,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 116.12,
+      "tooltip": "Supplication @ 116.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 119.59,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 118.59,
+      "tooltip": "Sepulchre @ 118.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 122.06,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 121.06,
+      "tooltip": "Fast Blade @ 121.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 124.53,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 123.53,
+      "tooltip": "Riot Blade @ 123.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 127.0,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 126.0,
+      "tooltip": "Royal Authority @ 126.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 20,
+      "color": "#f59e0b",
+      "endSec": 126.6,
+      "iconPath": "/i/000000/000166.png",
+      "label": "Fig",
+      "startSec": 126.0,
+      "tooltip": "Fight or Flight @ 126.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36921,
+      "color": "#f59e0b",
+      "endSec": 127.3,
+      "iconPath": "/i/002000/002955.png",
+      "label": "Imp",
+      "startSec": 126.7,
+      "tooltip": "Imperator @ 126.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16459,
+      "color": "#3b82f6",
+      "endSec": 129.47,
+      "iconPath": "/i/002000/002518.png",
+      "label": "Con",
+      "startSec": 128.47,
+      "tooltip": "Confiteor @ 128.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 129.07,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 128.47,
+      "tooltip": "Intervene @ 128.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25748,
+      "color": "#3b82f6",
+      "endSec": 131.94,
+      "iconPath": "/i/002000/002952.png",
+      "label": "Bla",
+      "startSec": 130.94,
+      "tooltip": "Blade of Faith @ 130.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 131.54,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 130.94,
+      "tooltip": "Circle of Scorn @ 130.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 132.24,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 131.64,
+      "tooltip": "Expiacion @ 131.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25749,
+      "color": "#3b82f6",
+      "endSec": 134.41,
+      "iconPath": "/i/002000/002953.png",
+      "label": "Bla",
+      "startSec": 133.41,
+      "tooltip": "Blade of Truth @ 133.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25750,
+      "color": "#3b82f6",
+      "endSec": 136.88,
+      "iconPath": "/i/002000/002954.png",
+      "label": "Bla",
+      "startSec": 135.88,
+      "tooltip": "Blade of Valor @ 135.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36922,
+      "color": "#f59e0b",
+      "endSec": 136.48,
+      "iconPath": "/i/002000/002956.png",
+      "label": "Bla",
+      "startSec": 135.88,
+      "tooltip": "Blade of Honor @ 135.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3538,
+      "color": "#3b82f6",
+      "endSec": 139.35,
+      "iconPath": "/i/002000/002506.png",
+      "label": "Gor",
+      "startSec": 138.35,
+      "tooltip": "Goring Blade @ 138.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 141.82,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 140.82,
+      "tooltip": "Atonement @ 140.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 144.29,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 143.29,
+      "tooltip": "Supplication @ 143.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 146.76,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 145.76,
+      "tooltip": "Sepulchre @ 145.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 149.23,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 148.23,
+      "tooltip": "Fast Blade @ 148.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 151.7,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 150.7,
+      "tooltip": "Riot Blade @ 150.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 154.17,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 153.17,
+      "tooltip": "Holy Spirit @ 153.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 156.64,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 155.64,
+      "tooltip": "Royal Authority @ 155.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 159.11,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 158.11,
+      "tooltip": "Atonement @ 158.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 158.71,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 158.11,
+      "tooltip": "Intervene @ 158.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 161.58,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 160.58,
+      "tooltip": "Supplication @ 160.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 164.05,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 163.05,
+      "tooltip": "Sepulchre @ 163.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 163.65,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 163.05,
+      "tooltip": "Circle of Scorn @ 163.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 164.35,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 163.75,
+      "tooltip": "Expiacion @ 163.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 166.52,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 165.52,
+      "tooltip": "Fast Blade @ 165.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 168.99,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 167.99,
+      "tooltip": "Riot Blade @ 168.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 171.46,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 170.46,
+      "tooltip": "Holy Spirit @ 170.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 173.93,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 172.93,
+      "tooltip": "Royal Authority @ 172.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 176.4,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 175.4,
+      "tooltip": "Atonement @ 175.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 178.87,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 177.87,
+      "tooltip": "Supplication @ 177.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 181.34,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 180.34,
+      "tooltip": "Sepulchre @ 180.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 183.81,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 182.81,
+      "tooltip": "Fast Blade @ 182.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 186.28,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 185.28,
+      "tooltip": "Riot Blade @ 185.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 188.75,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 187.75,
+      "tooltip": "Holy Spirit @ 187.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 20,
+      "color": "#f59e0b",
+      "endSec": 188.35,
+      "iconPath": "/i/000000/000166.png",
+      "label": "Fig",
+      "startSec": 187.75,
+      "tooltip": "Fight or Flight @ 187.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36921,
+      "color": "#f59e0b",
+      "endSec": 189.05,
+      "iconPath": "/i/002000/002955.png",
+      "label": "Imp",
+      "startSec": 188.45,
+      "tooltip": "Imperator @ 188.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16459,
+      "color": "#3b82f6",
+      "endSec": 191.22,
+      "iconPath": "/i/002000/002518.png",
+      "label": "Con",
+      "startSec": 190.22,
+      "tooltip": "Confiteor @ 190.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 190.82,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 190.22,
+      "tooltip": "Intervene @ 190.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25748,
+      "color": "#3b82f6",
+      "endSec": 193.69,
+      "iconPath": "/i/002000/002952.png",
+      "label": "Bla",
+      "startSec": 192.69,
+      "tooltip": "Blade of Faith @ 192.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25749,
+      "color": "#3b82f6",
+      "endSec": 196.16,
+      "iconPath": "/i/002000/002953.png",
+      "label": "Bla",
+      "startSec": 195.16,
+      "tooltip": "Blade of Truth @ 195.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 195.76,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 195.16,
+      "tooltip": "Circle of Scorn @ 195.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 196.46,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 195.86,
+      "tooltip": "Expiacion @ 195.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25750,
+      "color": "#3b82f6",
+      "endSec": 198.63,
+      "iconPath": "/i/002000/002954.png",
+      "label": "Bla",
+      "startSec": 197.63,
+      "tooltip": "Blade of Valor @ 197.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36922,
+      "color": "#f59e0b",
+      "endSec": 198.23,
+      "iconPath": "/i/002000/002956.png",
+      "label": "Bla",
+      "startSec": 197.63,
+      "tooltip": "Blade of Honor @ 197.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 201.1,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 200.1,
+      "tooltip": "Royal Authority @ 200.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3538,
+      "color": "#3b82f6",
+      "endSec": 203.57,
+      "iconPath": "/i/002000/002506.png",
+      "label": "Gor",
+      "startSec": 202.57,
+      "tooltip": "Goring Blade @ 202.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 206.04,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 205.04,
+      "tooltip": "Atonement @ 205.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 208.51,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 207.51,
+      "tooltip": "Supplication @ 207.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 210.98,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 209.98,
+      "tooltip": "Sepulchre @ 210.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 213.45,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 212.45,
+      "tooltip": "Fast Blade @ 212.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 215.92,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 214.92,
+      "tooltip": "Riot Blade @ 214.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 218.39,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 217.39,
+      "tooltip": "Holy Spirit @ 217.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 220.86,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 219.86,
+      "tooltip": "Royal Authority @ 219.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 220.46,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 219.86,
+      "tooltip": "Intervene @ 219.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 223.33,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 222.33,
+      "tooltip": "Atonement @ 222.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 225.8,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 224.8,
+      "tooltip": "Supplication @ 224.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 228.27,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 227.27,
+      "tooltip": "Sepulchre @ 227.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 227.87,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 227.27,
+      "tooltip": "Circle of Scorn @ 227.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 228.57,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 227.97,
+      "tooltip": "Expiacion @ 228.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 230.74,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 229.74,
+      "tooltip": "Fast Blade @ 229.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 233.21,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 232.21,
+      "tooltip": "Riot Blade @ 232.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 235.68,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 234.68,
+      "tooltip": "Holy Spirit @ 234.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 238.15,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 237.15,
+      "tooltip": "Royal Authority @ 237.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 240.62,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 239.62,
+      "tooltip": "Atonement @ 239.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 243.09,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 242.09,
+      "tooltip": "Supplication @ 242.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 245.56,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 244.56,
+      "tooltip": "Sepulchre @ 244.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 248.03,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 247.03,
+      "tooltip": "Fast Blade @ 247.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 250.5,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 249.5,
+      "tooltip": "Riot Blade @ 249.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 20,
+      "color": "#f59e0b",
+      "endSec": 250.1,
+      "iconPath": "/i/000000/000166.png",
+      "label": "Fig",
+      "startSec": 249.5,
+      "tooltip": "Fight or Flight @ 249.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36921,
+      "color": "#f59e0b",
+      "endSec": 250.8,
+      "iconPath": "/i/002000/002955.png",
+      "label": "Imp",
+      "startSec": 250.2,
+      "tooltip": "Imperator @ 250.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16459,
+      "color": "#3b82f6",
+      "endSec": 252.97,
+      "iconPath": "/i/002000/002518.png",
+      "label": "Con",
+      "startSec": 251.97,
+      "tooltip": "Confiteor @ 252.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 252.57,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 251.97,
+      "tooltip": "Intervene @ 252.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25748,
+      "color": "#3b82f6",
+      "endSec": 255.44,
+      "iconPath": "/i/002000/002952.png",
+      "label": "Bla",
+      "startSec": 254.44,
+      "tooltip": "Blade of Faith @ 254.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25749,
+      "color": "#3b82f6",
+      "endSec": 257.91,
+      "iconPath": "/i/002000/002953.png",
+      "label": "Bla",
+      "startSec": 256.91,
+      "tooltip": "Blade of Truth @ 256.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25750,
+      "color": "#3b82f6",
+      "endSec": 260.38,
+      "iconPath": "/i/002000/002954.png",
+      "label": "Bla",
+      "startSec": 259.38,
+      "tooltip": "Blade of Valor @ 259.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36922,
+      "color": "#f59e0b",
+      "endSec": 259.98,
+      "iconPath": "/i/002000/002956.png",
+      "label": "Bla",
+      "startSec": 259.38,
+      "tooltip": "Blade of Honor @ 259.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 260.68,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 260.08,
+      "tooltip": "Circle of Scorn @ 260.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 262.85,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 261.85,
+      "tooltip": "Holy Spirit @ 261.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 262.45,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 261.85,
+      "tooltip": "Expiacion @ 261.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 265.32,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 264.32,
+      "tooltip": "Royal Authority @ 264.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3538,
+      "color": "#3b82f6",
+      "endSec": 267.79,
+      "iconPath": "/i/002000/002506.png",
+      "label": "Gor",
+      "startSec": 266.79,
+      "tooltip": "Goring Blade @ 266.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 270.26,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 269.26,
+      "tooltip": "Atonement @ 269.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 272.73,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 271.73,
+      "tooltip": "Supplication @ 271.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 275.2,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 274.2,
+      "tooltip": "Sepulchre @ 274.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 277.67,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 276.67,
+      "tooltip": "Fast Blade @ 276.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 280.14,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 279.14,
+      "tooltip": "Riot Blade @ 279.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 279.74,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 279.14,
+      "tooltip": "Intervene @ 279.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 282.61,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 281.61,
+      "tooltip": "Holy Spirit @ 281.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 285.08,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 284.08,
+      "tooltip": "Royal Authority @ 284.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 287.55,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 286.55,
+      "tooltip": "Atonement @ 286.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 290.02,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 289.02,
+      "tooltip": "Supplication @ 289.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 292.49,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 291.49,
+      "tooltip": "Sepulchre @ 291.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 292.09,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 291.49,
+      "tooltip": "Circle of Scorn @ 291.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 292.79,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 292.19,
+      "tooltip": "Expiacion @ 292.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 294.96,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 293.96,
+      "tooltip": "Fast Blade @ 294.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 297.43,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 296.43,
+      "tooltip": "Riot Blade @ 296.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 299.9,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 298.9,
+      "tooltip": "Holy Spirit @ 298.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 302.37,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 301.37,
+      "tooltip": "Royal Authority @ 301.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 304.84,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 303.84,
+      "tooltip": "Atonement @ 303.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 307.31,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 306.31,
+      "tooltip": "Supplication @ 306.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 309.78,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 308.78,
+      "tooltip": "Sepulchre @ 308.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 309.38,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 308.78,
+      "tooltip": "Intervene @ 308.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 312.25,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 311.25,
+      "tooltip": "Fast Blade @ 311.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 20,
+      "color": "#f59e0b",
+      "endSec": 311.85,
+      "iconPath": "/i/000000/000166.png",
+      "label": "Fig",
+      "startSec": 311.25,
+      "tooltip": "Fight or Flight @ 311.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36921,
+      "color": "#f59e0b",
+      "endSec": 312.55,
+      "iconPath": "/i/002000/002955.png",
+      "label": "Imp",
+      "startSec": 311.95,
+      "tooltip": "Imperator @ 312.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16459,
+      "color": "#3b82f6",
+      "endSec": 314.72,
+      "iconPath": "/i/002000/002518.png",
+      "label": "Con",
+      "startSec": 313.72,
+      "tooltip": "Confiteor @ 313.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25748,
+      "color": "#3b82f6",
+      "endSec": 317.19,
+      "iconPath": "/i/002000/002952.png",
+      "label": "Bla",
+      "startSec": 316.19,
+      "tooltip": "Blade of Faith @ 316.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25749,
+      "color": "#3b82f6",
+      "endSec": 319.66,
+      "iconPath": "/i/002000/002953.png",
+      "label": "Bla",
+      "startSec": 318.66,
+      "tooltip": "Blade of Truth @ 318.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25750,
+      "color": "#3b82f6",
+      "endSec": 322.13,
+      "iconPath": "/i/002000/002954.png",
+      "label": "Bla",
+      "startSec": 321.13,
+      "tooltip": "Blade of Valor @ 321.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36922,
+      "color": "#f59e0b",
+      "endSec": 321.73,
+      "iconPath": "/i/002000/002956.png",
+      "label": "Bla",
+      "startSec": 321.13,
+      "tooltip": "Blade of Honor @ 321.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 322.43,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 321.83,
+      "tooltip": "Circle of Scorn @ 321.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 324.6,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 323.6,
+      "tooltip": "Holy Spirit @ 323.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 324.2,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 323.6,
+      "tooltip": "Expiacion @ 323.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 327.07,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 326.07,
+      "tooltip": "Riot Blade @ 326.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 329.54,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 328.54,
+      "tooltip": "Royal Authority @ 328.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3538,
+      "color": "#3b82f6",
+      "endSec": 332.01,
+      "iconPath": "/i/002000/002506.png",
+      "label": "Gor",
+      "startSec": 331.01,
+      "tooltip": "Goring Blade @ 331.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 334.48,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 333.48,
+      "tooltip": "Atonement @ 333.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 336.95,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 335.95,
+      "tooltip": "Supplication @ 336.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 339.42,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 338.42,
+      "tooltip": "Sepulchre @ 338.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16461,
+      "color": "#f59e0b",
+      "endSec": 339.02,
+      "iconPath": "/i/002000/002520.png",
+      "label": "Int",
+      "startSec": 338.42,
+      "tooltip": "Intervene @ 338.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 9,
+      "color": "#3b82f6",
+      "endSec": 341.89,
+      "iconPath": "/i/000000/000158.png",
+      "label": "Fas",
+      "startSec": 340.89,
+      "tooltip": "Fast Blade @ 340.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 15,
+      "color": "#3b82f6",
+      "endSec": 344.36,
+      "iconPath": "/i/000000/000156.png",
+      "label": "Rio",
+      "startSec": 343.36,
+      "tooltip": "Riot Blade @ 343.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 346.83,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 345.83,
+      "tooltip": "Holy Spirit @ 345.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3539,
+      "color": "#3b82f6",
+      "endSec": 349.3,
+      "iconPath": "/i/002000/002507.png",
+      "label": "Roy",
+      "startSec": 348.3,
+      "tooltip": "Royal Authority @ 348.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16460,
+      "color": "#3b82f6",
+      "endSec": 351.77,
+      "iconPath": "/i/002000/002519.png",
+      "label": "Ato",
+      "startSec": 350.77,
+      "tooltip": "Atonement @ 350.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36918,
+      "color": "#3b82f6",
+      "endSec": 354.24,
+      "iconPath": "/i/002000/002522.png",
+      "label": "Sup",
+      "startSec": 353.24,
+      "tooltip": "Supplication @ 353.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 23,
+      "color": "#f59e0b",
+      "endSec": 353.84,
+      "iconPath": "/i/000000/000161.png",
+      "label": "Cir",
+      "startSec": 353.24,
+      "tooltip": "Circle of Scorn @ 353.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25747,
+      "color": "#f59e0b",
+      "endSec": 354.54,
+      "iconPath": "/i/002000/002951.png",
+      "label": "Exp",
+      "startSec": 353.94,
+      "tooltip": "Expiacion @ 353.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36919,
+      "color": "#3b82f6",
+      "endSec": 356.71,
+      "iconPath": "/i/002000/002523.png",
+      "label": "Sep",
+      "startSec": 355.71,
+      "tooltip": "Sepulchre @ 355.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7384,
+      "color": "#3b82f6",
+      "endSec": 359.18,
+      "iconPath": "/i/002000/002514.png",
+      "label": "Hol",
+      "startSec": 358.18,
+      "tooltip": "Holy Spirit @ 358.2s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackCanonical": [],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 2142.24,
+      "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+      "summary": "Used 0 of 2 tinctures",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 0,
+          "abilityName": "",
+          "children": [],
+          "kind": "cadence",
+          "lostPotency": 920.0,
+          "prescription": "Press the next GCD the moment it's ready.",
+          "summary": "Loose GCD pacing: ~2 GCDs of slightly-late casts, no single gap",
+          "timeSec": 0.0
+        }
+      ],
+      "countGaps": [
+        {
+          "name": "Sepulchre",
+          "sim": 17,
+          "you": 16
+        },
+        {
+          "name": "Supplication",
+          "sim": 17,
+          "you": 16
+        },
+        {
+          "name": "Atonement",
+          "sim": 17,
+          "you": 16
+        },
+        {
+          "name": "Royal Authority",
+          "sim": 17,
+          "you": 16
+        },
+        {
+          "name": "Holy Spirit",
+          "sim": 13,
+          "you": 16
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 446.66,
+      "prescription": "Biggest count gaps: Sepulchre and Supplication. Extra Holy Spirit casts took those slots at lower value.",
+      "summary": "Spacing & sequencing: 1 small located loss below the listing threshold",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25748,
+      "abilityName": "Blade of Faith",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #6: Riot Blade instead of Blade of Faith (ordering only)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25749,
+      "abilityName": "Blade of Truth",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #7: Royal Authority instead of Blade of Truth (ordering only)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25750,
+      "abilityName": "Blade of Valor",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #8: Goring Blade instead of Blade of Valor (ordering only)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 2.5,
+        "tooltip": "Fast Blade  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 20,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/000000/000166.png",
+        "label": "Fig",
+        "startSec": 2.5,
+        "tooltip": "Fight or Flight  (oGCD)  @  0:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36921,
+        "color": "#777777",
+        "endSec": 3.7,
+        "iconPath": "/i/002000/002955.png",
+        "label": "Imp",
+        "startSec": 3.2,
+        "tooltip": "Imperator  (oGCD)  @  0:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16459,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/002000/002518.png",
+        "label": "Con",
+        "startSec": 5.0,
+        "tooltip": "Confiteor  (GCD)  @  0:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 5.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  0:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 6.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 5.7,
+        "tooltip": "Expiacion  (oGCD)  @  0:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25748,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/002000/002952.png",
+        "label": "Bla",
+        "startSec": 7.5,
+        "tooltip": "Blade of Faith  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 7.5,
+        "tooltip": "Intervene  (oGCD)  @  0:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 8.7,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 8.2,
+        "tooltip": "Intervene  (oGCD)  @  0:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25749,
+        "color": "#777777",
+        "endSec": 10.5,
+        "iconPath": "/i/002000/002953.png",
+        "label": "Bla",
+        "startSec": 10.0,
+        "tooltip": "Blade of Truth  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25750,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/002000/002954.png",
+        "label": "Bla",
+        "startSec": 12.5,
+        "tooltip": "Blade of Valor  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36922,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/002000/002956.png",
+        "label": "Bla",
+        "startSec": 12.5,
+        "tooltip": "Blade of Honor  (oGCD)  @  0:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 15.5,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 15.0,
+        "tooltip": "Riot Blade  (GCD)  @  0:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 18.0,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 17.5,
+        "tooltip": "Royal Authority  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3538,
+        "color": "#777777",
+        "endSec": 20.5,
+        "iconPath": "/i/002000/002506.png",
+        "label": "Gor",
+        "startSec": 20.0,
+        "tooltip": "Goring Blade  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 23.0,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 22.5,
+        "tooltip": "Atonement  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 25.5,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 25.0,
+        "tooltip": "Supplication  (GCD)  @  0:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 28.0,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 27.5,
+        "tooltip": "Sepulchre  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 30.5,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 30.0,
+        "tooltip": "Holy Spirit  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 33.0,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 32.5,
+        "tooltip": "Fast Blade  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 35.0,
+        "tooltip": "Riot Blade  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 35.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  0:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 36.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 35.7,
+        "tooltip": "Expiacion  (oGCD)  @  0:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 37.5,
+        "tooltip": "Royal Authority  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 37.5,
+        "tooltip": "Intervene  (oGCD)  @  0:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 40.0,
+        "tooltip": "Atonement  (GCD)  @  0:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 43.0,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 42.5,
+        "tooltip": "Supplication  (GCD)  @  0:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 45.5,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 45.0,
+        "tooltip": "Sepulchre  (GCD)  @  0:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 48.0,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 47.5,
+        "tooltip": "Holy Spirit  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 50.5,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 50.0,
+        "tooltip": "Fast Blade  (GCD)  @  0:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 53.0,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 52.5,
+        "tooltip": "Riot Blade  (GCD)  @  0:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 55.5,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 55.0,
+        "tooltip": "Royal Authority  (GCD)  @  0:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 58.0,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 57.5,
+        "tooltip": "Atonement  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 60.0,
+        "tooltip": "Supplication  (GCD)  @  1:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 62.5,
+        "tooltip": "Sepulchre  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 20,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/000000/000166.png",
+        "label": "Fig",
+        "startSec": 62.5,
+        "tooltip": "Fight or Flight  (oGCD)  @  1:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36921,
+        "color": "#777777",
+        "endSec": 63.7,
+        "iconPath": "/i/002000/002955.png",
+        "label": "Imp",
+        "startSec": 63.2,
+        "tooltip": "Imperator  (oGCD)  @  1:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16459,
+        "color": "#777777",
+        "endSec": 65.5,
+        "iconPath": "/i/002000/002518.png",
+        "label": "Con",
+        "startSec": 65.0,
+        "tooltip": "Confiteor  (GCD)  @  1:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 65.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 65.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  1:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 66.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 65.7,
+        "tooltip": "Expiacion  (oGCD)  @  1:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25748,
+        "color": "#777777",
+        "endSec": 68.0,
+        "iconPath": "/i/002000/002952.png",
+        "label": "Bla",
+        "startSec": 67.5,
+        "tooltip": "Blade of Faith  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 68.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 67.5,
+        "tooltip": "Intervene  (oGCD)  @  1:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25749,
+        "color": "#777777",
+        "endSec": 70.5,
+        "iconPath": "/i/002000/002953.png",
+        "label": "Bla",
+        "startSec": 70.0,
+        "tooltip": "Blade of Truth  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25750,
+        "color": "#777777",
+        "endSec": 73.0,
+        "iconPath": "/i/002000/002954.png",
+        "label": "Bla",
+        "startSec": 72.5,
+        "tooltip": "Blade of Valor  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36922,
+        "color": "#777777",
+        "endSec": 73.0,
+        "iconPath": "/i/002000/002956.png",
+        "label": "Bla",
+        "startSec": 72.5,
+        "tooltip": "Blade of Honor  (oGCD)  @  1:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3538,
+        "color": "#777777",
+        "endSec": 75.5,
+        "iconPath": "/i/002000/002506.png",
+        "label": "Gor",
+        "startSec": 75.0,
+        "tooltip": "Goring Blade  (GCD)  @  1:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 78.0,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 77.5,
+        "tooltip": "Holy Spirit  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 80.5,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 80.0,
+        "tooltip": "Fast Blade  (GCD)  @  1:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 83.0,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 82.5,
+        "tooltip": "Riot Blade  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 85.5,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 85.0,
+        "tooltip": "Royal Authority  (GCD)  @  1:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 88.0,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 87.5,
+        "tooltip": "Atonement  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 90.5,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 90.0,
+        "tooltip": "Supplication  (GCD)  @  1:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 92.5,
+        "tooltip": "Sepulchre  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 95.0,
+        "tooltip": "Holy Spirit  (GCD)  @  1:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 95.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  1:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 96.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 95.7,
+        "tooltip": "Expiacion  (oGCD)  @  1:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 98.0,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 97.5,
+        "tooltip": "Fast Blade  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 98.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 97.5,
+        "tooltip": "Intervene  (oGCD)  @  1:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 100.5,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 100.0,
+        "tooltip": "Riot Blade  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 103.0,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 102.5,
+        "tooltip": "Royal Authority  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 105.5,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 105.0,
+        "tooltip": "Atonement  (GCD)  @  1:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 107.5,
+        "tooltip": "Supplication  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 110.5,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 110.0,
+        "tooltip": "Sepulchre  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 113.0,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 112.5,
+        "tooltip": "Holy Spirit  (GCD)  @  1:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 115.5,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 115.0,
+        "tooltip": "Fast Blade  (GCD)  @  1:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 118.0,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 117.5,
+        "tooltip": "Riot Blade  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 120.5,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 120.0,
+        "tooltip": "Royal Authority  (GCD)  @  2:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 122.5,
+        "tooltip": "Atonement  (GCD)  @  2:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 20,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/000000/000166.png",
+        "label": "Fig",
+        "startSec": 122.5,
+        "tooltip": "Fight or Flight  (oGCD)  @  2:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36921,
+        "color": "#777777",
+        "endSec": 123.7,
+        "iconPath": "/i/002000/002955.png",
+        "label": "Imp",
+        "startSec": 123.2,
+        "tooltip": "Imperator  (oGCD)  @  2:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16459,
+        "color": "#777777",
+        "endSec": 125.5,
+        "iconPath": "/i/002000/002518.png",
+        "label": "Con",
+        "startSec": 125.0,
+        "tooltip": "Confiteor  (GCD)  @  2:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 125.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 125.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  2:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 126.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 125.7,
+        "tooltip": "Expiacion  (oGCD)  @  2:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25748,
+        "color": "#777777",
+        "endSec": 128.0,
+        "iconPath": "/i/002000/002952.png",
+        "label": "Bla",
+        "startSec": 127.5,
+        "tooltip": "Blade of Faith  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 128.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 127.5,
+        "tooltip": "Intervene  (oGCD)  @  2:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25749,
+        "color": "#777777",
+        "endSec": 130.5,
+        "iconPath": "/i/002000/002953.png",
+        "label": "Bla",
+        "startSec": 130.0,
+        "tooltip": "Blade of Truth  (GCD)  @  2:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25750,
+        "color": "#777777",
+        "endSec": 133.0,
+        "iconPath": "/i/002000/002954.png",
+        "label": "Bla",
+        "startSec": 132.5,
+        "tooltip": "Blade of Valor  (GCD)  @  2:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36922,
+        "color": "#777777",
+        "endSec": 133.0,
+        "iconPath": "/i/002000/002956.png",
+        "label": "Bla",
+        "startSec": 132.5,
+        "tooltip": "Blade of Honor  (oGCD)  @  2:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3538,
+        "color": "#777777",
+        "endSec": 135.5,
+        "iconPath": "/i/002000/002506.png",
+        "label": "Gor",
+        "startSec": 135.0,
+        "tooltip": "Goring Blade  (GCD)  @  2:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 138.0,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 137.5,
+        "tooltip": "Supplication  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 140.5,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 140.0,
+        "tooltip": "Sepulchre  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 143.0,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 142.5,
+        "tooltip": "Holy Spirit  (GCD)  @  2:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 145.5,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 145.0,
+        "tooltip": "Fast Blade  (GCD)  @  2:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 148.0,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 147.5,
+        "tooltip": "Riot Blade  (GCD)  @  2:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 150.5,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 150.0,
+        "tooltip": "Royal Authority  (GCD)  @  2:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 153.0,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 152.5,
+        "tooltip": "Atonement  (GCD)  @  2:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 155.5,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 155.0,
+        "tooltip": "Supplication  (GCD)  @  2:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 155.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 155.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  2:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 156.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 155.7,
+        "tooltip": "Expiacion  (oGCD)  @  2:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 158.0,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 157.5,
+        "tooltip": "Sepulchre  (GCD)  @  2:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 158.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 157.5,
+        "tooltip": "Intervene  (oGCD)  @  2:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 160.5,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 160.0,
+        "tooltip": "Holy Spirit  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 163.0,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 162.5,
+        "tooltip": "Fast Blade  (GCD)  @  2:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 165.5,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 165.0,
+        "tooltip": "Riot Blade  (GCD)  @  2:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 168.0,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 167.5,
+        "tooltip": "Royal Authority  (GCD)  @  2:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 170.5,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 170.0,
+        "tooltip": "Atonement  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 173.0,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 172.5,
+        "tooltip": "Supplication  (GCD)  @  2:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 175.5,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 175.0,
+        "tooltip": "Sepulchre  (GCD)  @  2:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 178.0,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 177.5,
+        "tooltip": "Holy Spirit  (GCD)  @  2:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 180.5,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 180.0,
+        "tooltip": "Fast Blade  (GCD)  @  3:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 183.0,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 182.5,
+        "tooltip": "Riot Blade  (GCD)  @  3:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 20,
+        "color": "#777777",
+        "endSec": 183.0,
+        "iconPath": "/i/000000/000166.png",
+        "label": "Fig",
+        "startSec": 182.5,
+        "tooltip": "Fight or Flight  (oGCD)  @  3:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36921,
+        "color": "#777777",
+        "endSec": 183.7,
+        "iconPath": "/i/002000/002955.png",
+        "label": "Imp",
+        "startSec": 183.2,
+        "tooltip": "Imperator  (oGCD)  @  3:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16459,
+        "color": "#777777",
+        "endSec": 185.5,
+        "iconPath": "/i/002000/002518.png",
+        "label": "Con",
+        "startSec": 185.0,
+        "tooltip": "Confiteor  (GCD)  @  3:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 185.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 185.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  3:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 186.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 185.7,
+        "tooltip": "Expiacion  (oGCD)  @  3:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25748,
+        "color": "#777777",
+        "endSec": 188.0,
+        "iconPath": "/i/002000/002952.png",
+        "label": "Bla",
+        "startSec": 187.5,
+        "tooltip": "Blade of Faith  (GCD)  @  3:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 188.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 187.5,
+        "tooltip": "Intervene  (oGCD)  @  3:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25749,
+        "color": "#777777",
+        "endSec": 190.5,
+        "iconPath": "/i/002000/002953.png",
+        "label": "Bla",
+        "startSec": 190.0,
+        "tooltip": "Blade of Truth  (GCD)  @  3:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25750,
+        "color": "#777777",
+        "endSec": 193.0,
+        "iconPath": "/i/002000/002954.png",
+        "label": "Bla",
+        "startSec": 192.5,
+        "tooltip": "Blade of Valor  (GCD)  @  3:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36922,
+        "color": "#777777",
+        "endSec": 193.0,
+        "iconPath": "/i/002000/002956.png",
+        "label": "Bla",
+        "startSec": 192.5,
+        "tooltip": "Blade of Honor  (oGCD)  @  3:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 195.5,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 195.0,
+        "tooltip": "Royal Authority  (GCD)  @  3:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3538,
+        "color": "#777777",
+        "endSec": 198.0,
+        "iconPath": "/i/002000/002506.png",
+        "label": "Gor",
+        "startSec": 197.5,
+        "tooltip": "Goring Blade  (GCD)  @  3:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 200.5,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 200.0,
+        "tooltip": "Atonement  (GCD)  @  3:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 203.0,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 202.5,
+        "tooltip": "Supplication  (GCD)  @  3:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 205.5,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 205.0,
+        "tooltip": "Sepulchre  (GCD)  @  3:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 208.0,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 207.5,
+        "tooltip": "Holy Spirit  (GCD)  @  3:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 210.5,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 210.0,
+        "tooltip": "Fast Blade  (GCD)  @  3:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 213.0,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 212.5,
+        "tooltip": "Riot Blade  (GCD)  @  3:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 215.5,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 215.0,
+        "tooltip": "Royal Authority  (GCD)  @  3:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 215.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 215.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  3:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 216.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 215.7,
+        "tooltip": "Expiacion  (oGCD)  @  3:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 218.0,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 217.5,
+        "tooltip": "Atonement  (GCD)  @  3:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 218.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 217.5,
+        "tooltip": "Intervene  (oGCD)  @  3:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 220.5,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 220.0,
+        "tooltip": "Supplication  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 223.0,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 222.5,
+        "tooltip": "Sepulchre  (GCD)  @  3:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 225.5,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 225.0,
+        "tooltip": "Holy Spirit  (GCD)  @  3:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 228.0,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 227.5,
+        "tooltip": "Fast Blade  (GCD)  @  3:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 230.5,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 230.0,
+        "tooltip": "Riot Blade  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 233.0,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 232.5,
+        "tooltip": "Royal Authority  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 235.5,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 235.0,
+        "tooltip": "Atonement  (GCD)  @  3:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 238.0,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 237.5,
+        "tooltip": "Supplication  (GCD)  @  3:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 240.5,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 240.0,
+        "tooltip": "Sepulchre  (GCD)  @  4:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 243.0,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 242.5,
+        "tooltip": "Holy Spirit  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 20,
+        "color": "#777777",
+        "endSec": 243.0,
+        "iconPath": "/i/000000/000166.png",
+        "label": "Fig",
+        "startSec": 242.5,
+        "tooltip": "Fight or Flight  (oGCD)  @  4:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36921,
+        "color": "#777777",
+        "endSec": 243.7,
+        "iconPath": "/i/002000/002955.png",
+        "label": "Imp",
+        "startSec": 243.2,
+        "tooltip": "Imperator  (oGCD)  @  4:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16459,
+        "color": "#777777",
+        "endSec": 245.5,
+        "iconPath": "/i/002000/002518.png",
+        "label": "Con",
+        "startSec": 245.0,
+        "tooltip": "Confiteor  (GCD)  @  4:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 245.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 245.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  4:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 246.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 245.7,
+        "tooltip": "Expiacion  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25748,
+        "color": "#777777",
+        "endSec": 248.0,
+        "iconPath": "/i/002000/002952.png",
+        "label": "Bla",
+        "startSec": 247.5,
+        "tooltip": "Blade of Faith  (GCD)  @  4:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 248.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 247.5,
+        "tooltip": "Intervene  (oGCD)  @  4:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25749,
+        "color": "#777777",
+        "endSec": 250.5,
+        "iconPath": "/i/002000/002953.png",
+        "label": "Bla",
+        "startSec": 250.0,
+        "tooltip": "Blade of Truth  (GCD)  @  4:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25750,
+        "color": "#777777",
+        "endSec": 253.0,
+        "iconPath": "/i/002000/002954.png",
+        "label": "Bla",
+        "startSec": 252.5,
+        "tooltip": "Blade of Valor  (GCD)  @  4:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36922,
+        "color": "#777777",
+        "endSec": 253.0,
+        "iconPath": "/i/002000/002956.png",
+        "label": "Bla",
+        "startSec": 252.5,
+        "tooltip": "Blade of Honor  (oGCD)  @  4:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3538,
+        "color": "#777777",
+        "endSec": 255.5,
+        "iconPath": "/i/002000/002506.png",
+        "label": "Gor",
+        "startSec": 255.0,
+        "tooltip": "Goring Blade  (GCD)  @  4:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 258.0,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 257.5,
+        "tooltip": "Fast Blade  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 260.5,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 260.0,
+        "tooltip": "Riot Blade  (GCD)  @  4:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 263.0,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 262.5,
+        "tooltip": "Royal Authority  (GCD)  @  4:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 265.5,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 265.0,
+        "tooltip": "Atonement  (GCD)  @  4:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 268.0,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 267.5,
+        "tooltip": "Supplication  (GCD)  @  4:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 270.5,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 270.0,
+        "tooltip": "Sepulchre  (GCD)  @  4:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 273.0,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 272.5,
+        "tooltip": "Holy Spirit  (GCD)  @  4:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 275.5,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 275.0,
+        "tooltip": "Fast Blade  (GCD)  @  4:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 275.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 275.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  4:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 276.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 275.7,
+        "tooltip": "Expiacion  (oGCD)  @  4:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 278.0,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 277.5,
+        "tooltip": "Riot Blade  (GCD)  @  4:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 278.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 277.5,
+        "tooltip": "Intervene  (oGCD)  @  4:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 280.5,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 280.0,
+        "tooltip": "Royal Authority  (GCD)  @  4:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 283.0,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 282.5,
+        "tooltip": "Atonement  (GCD)  @  4:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 285.5,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 285.0,
+        "tooltip": "Supplication  (GCD)  @  4:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 288.0,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 287.5,
+        "tooltip": "Sepulchre  (GCD)  @  4:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 290.5,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 290.0,
+        "tooltip": "Holy Spirit  (GCD)  @  4:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 293.0,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 292.5,
+        "tooltip": "Fast Blade  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 295.5,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 295.0,
+        "tooltip": "Riot Blade  (GCD)  @  4:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 298.0,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 297.5,
+        "tooltip": "Royal Authority  (GCD)  @  4:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 300.5,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 300.0,
+        "tooltip": "Atonement  (GCD)  @  5:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 303.0,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 302.5,
+        "tooltip": "Supplication  (GCD)  @  5:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 20,
+        "color": "#777777",
+        "endSec": 303.0,
+        "iconPath": "/i/000000/000166.png",
+        "label": "Fig",
+        "startSec": 302.5,
+        "tooltip": "Fight or Flight  (oGCD)  @  5:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36921,
+        "color": "#777777",
+        "endSec": 303.7,
+        "iconPath": "/i/002000/002955.png",
+        "label": "Imp",
+        "startSec": 303.2,
+        "tooltip": "Imperator  (oGCD)  @  5:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16459,
+        "color": "#777777",
+        "endSec": 305.5,
+        "iconPath": "/i/002000/002518.png",
+        "label": "Con",
+        "startSec": 305.0,
+        "tooltip": "Confiteor  (GCD)  @  5:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 305.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 305.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  5:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 306.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 305.7,
+        "tooltip": "Expiacion  (oGCD)  @  5:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25748,
+        "color": "#777777",
+        "endSec": 308.0,
+        "iconPath": "/i/002000/002952.png",
+        "label": "Bla",
+        "startSec": 307.5,
+        "tooltip": "Blade of Faith  (GCD)  @  5:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 308.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 307.5,
+        "tooltip": "Intervene  (oGCD)  @  5:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25749,
+        "color": "#777777",
+        "endSec": 310.5,
+        "iconPath": "/i/002000/002953.png",
+        "label": "Bla",
+        "startSec": 310.0,
+        "tooltip": "Blade of Truth  (GCD)  @  5:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25750,
+        "color": "#777777",
+        "endSec": 313.0,
+        "iconPath": "/i/002000/002954.png",
+        "label": "Bla",
+        "startSec": 312.5,
+        "tooltip": "Blade of Valor  (GCD)  @  5:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36922,
+        "color": "#777777",
+        "endSec": 313.0,
+        "iconPath": "/i/002000/002956.png",
+        "label": "Bla",
+        "startSec": 312.5,
+        "tooltip": "Blade of Honor  (oGCD)  @  5:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3538,
+        "color": "#777777",
+        "endSec": 315.5,
+        "iconPath": "/i/002000/002506.png",
+        "label": "Gor",
+        "startSec": 315.0,
+        "tooltip": "Goring Blade  (GCD)  @  5:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 318.0,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 317.5,
+        "tooltip": "Sepulchre  (GCD)  @  5:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 320.5,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 320.0,
+        "tooltip": "Holy Spirit  (GCD)  @  5:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 323.0,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 322.5,
+        "tooltip": "Fast Blade  (GCD)  @  5:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 325.5,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 325.0,
+        "tooltip": "Riot Blade  (GCD)  @  5:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 328.0,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 327.5,
+        "tooltip": "Royal Authority  (GCD)  @  5:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 330.5,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 330.0,
+        "tooltip": "Atonement  (GCD)  @  5:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 333.0,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 332.5,
+        "tooltip": "Supplication  (GCD)  @  5:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 335.5,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 335.0,
+        "tooltip": "Sepulchre  (GCD)  @  5:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 23,
+        "color": "#777777",
+        "endSec": 335.5,
+        "iconPath": "/i/000000/000161.png",
+        "label": "Cir",
+        "startSec": 335.0,
+        "tooltip": "Circle of Scorn  (oGCD)  @  5:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25747,
+        "color": "#777777",
+        "endSec": 336.2,
+        "iconPath": "/i/002000/002951.png",
+        "label": "Exp",
+        "startSec": 335.7,
+        "tooltip": "Expiacion  (oGCD)  @  5:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 338.0,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 337.5,
+        "tooltip": "Holy Spirit  (GCD)  @  5:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16461,
+        "color": "#777777",
+        "endSec": 338.0,
+        "iconPath": "/i/002000/002520.png",
+        "label": "Int",
+        "startSec": 337.5,
+        "tooltip": "Intervene  (oGCD)  @  5:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 340.5,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 340.0,
+        "tooltip": "Fast Blade  (GCD)  @  5:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 15,
+        "color": "#777777",
+        "endSec": 343.0,
+        "iconPath": "/i/000000/000156.png",
+        "label": "Rio",
+        "startSec": 342.5,
+        "tooltip": "Riot Blade  (GCD)  @  5:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3539,
+        "color": "#777777",
+        "endSec": 345.5,
+        "iconPath": "/i/002000/002507.png",
+        "label": "Roy",
+        "startSec": 345.0,
+        "tooltip": "Royal Authority  (GCD)  @  5:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16460,
+        "color": "#777777",
+        "endSec": 348.0,
+        "iconPath": "/i/002000/002519.png",
+        "label": "Ato",
+        "startSec": 347.5,
+        "tooltip": "Atonement  (GCD)  @  5:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36918,
+        "color": "#777777",
+        "endSec": 350.5,
+        "iconPath": "/i/002000/002522.png",
+        "label": "Sup",
+        "startSec": 350.0,
+        "tooltip": "Supplication  (GCD)  @  5:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36919,
+        "color": "#777777",
+        "endSec": 353.0,
+        "iconPath": "/i/002000/002523.png",
+        "label": "Sep",
+        "startSec": 352.5,
+        "tooltip": "Sepulchre  (GCD)  @  5:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7384,
+        "color": "#777777",
+        "endSec": 355.5,
+        "iconPath": "/i/002000/002514.png",
+        "label": "Hol",
+        "startSec": 355.0,
+        "tooltip": "Holy Spirit  (GCD)  @  5:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 9,
+        "color": "#777777",
+        "endSec": 358.0,
+        "iconPath": "/i/000000/000158.png",
+        "label": "Fas",
+        "startSec": 357.5,
+        "tooltip": "Fast Blade  (GCD)  @  5:58",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 108449.61,
+    "efficiencyPct": 97.67,
+    "fightDurationSec": 360.0,
+    "idealizedPotency": 111038.51,
+    "killTimeSec": 360,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

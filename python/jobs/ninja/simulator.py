@@ -273,14 +273,21 @@ class NinjaRotationModel(engine.BaseRotationModel):
         state.cd_ready = {KUNAIS_BANE: 0.0, KASSATSU: 0.0, DREAM: 0.0,
                           BUNSHIN: 0.0, DOKUMORI: 0.0, TEN_CHI_JIN: 0.0,
                           MEISUI: 0.0}
+        # Carried Ninki/Kazematoi on a phase-continuation pull. Seeded HERE, not
+        # in `prepull`, because it is not a cast effect: no cast in the stream
+        # can reconstruct it, and `sim.replay` skips prepull — seeding it there
+        # left every replayed continuation state at zero gauge (the deep-advice
+        # cascade then read the player's own carried resources as loss). Matches
+        # WAR/VPR/GNB/DRK/RPR/SMN/MCH, which all seed entry gauge in init_state.
+        if self.entry is not None:
+            seed_entry_gauge(state, self.entry.gauge_map, nd.JOB_DATA.gauges)
         return state
 
     def prepull(self, state: SimState, params) -> None:
         # The measured opener: mudras during the countdown (cosmetic pre-zone
         # casts), Suiton landing at ~0.5s as the pull (ranged, so no melee run-in
         # is exposed — the 1.5s ninjutsu recast covers the walk to the boss).
-        if self.entry is not None:
-            seed_entry_gauge(state, self.entry.gauge_map, nd.JOB_DATA.gauges)
+        # (Carried entry gauge is seeded in `init_state` — see the note there.)
         start = OPENER_SUITON_T_S
         if self.entry is not None and self.entry.opener_start_s is not None:
             start = min(start, self.entry.opener_start_s)
@@ -625,8 +632,8 @@ class NinjaRotationModel(engine.BaseRotationModel):
 
     # --- Downtime ------------------------------------------------------------
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         """NIN's signature downtime move: pre-cast the mudras at the window edge
         (they need no target) so the ninjutsu itself is the first uptime GCD.
         Charges regenerate through the window via the engine's generic regen (the

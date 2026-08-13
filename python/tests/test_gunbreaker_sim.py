@@ -120,7 +120,8 @@ def test_delivered_in_band_and_below_ceiling():
     pps = delivered / _DURATION_S
     assert 180 <= pps <= 480, f"p/sec out of band: {pps:.1f}"
     ratio = delivered / ideal if ideal > 0 else 0
-    assert ratio <= 1.005, f"delivered {delivered:.0f} > ideal {ideal:.0f}"
+    # Exact 100% gate (owner directive, v1.1): perfect includes the greedy line.
+    assert ratio <= 1.0 + 1e-6, f"delivered {delivered:.0f} > ideal {ideal:.0f}"
 
 
 def test_buff_scenarios_present():
@@ -256,16 +257,52 @@ def test_ability_metadata_bundled():
 def test_ready_to_break_expires():
     """Ready to Break lasts 30s: Sonic Break is offered inside the window and
     withdrawn after it, so a line can't hold the cast past the in-game buff."""
-    from jobs.gunbreaker.simulator import GunbreakerRotationModel
+    from jobs.gunbreaker.simulator import GunbreakerRotationModel, SimParams
     m = GunbreakerRotationModel()
     st = m.init_state()
     st.t = 5.0
     m.apply_cast(st, gd.NO_MERCY)
     assert st.ready_to_break and st.ready_to_break_end == 35.0
     st.t = 20.0
-    assert gd.SONIC_BREAK in m._st_candidates(st), "in-window Sonic Break missing"
+    p = SimParams()
+    assert gd.SONIC_BREAK in m._st_candidates(st, p), "in-window Sonic Break missing"
     st.t = 36.0
-    assert gd.SONIC_BREAK not in m._st_candidates(st), "expired Sonic Break offered"
+    assert gd.SONIC_BREAK not in m._st_candidates(st, p), "expired Sonic Break offered"
+
+
+def test_dd_predicates_hold_aware():
+    """The Fuseir Warblade lattice fix, part 1: `_dd_allowed_now` and
+    `_banking_for_dd` see through refine/canonical forbidden holds via
+    `next_allowed_time`. Without holds, a ready NM reads as imminent (DD held,
+    bank protected — the fork set narrows to the builder); under a LONG hold
+    the effective window open is far away, so the designed escapes (interim DD,
+    bank release) re-open; a SHORT hold keeps the lattice discipline."""
+    from jobs.gunbreaker.simulator import GunbreakerRotationModel, SimParams
+    m = GunbreakerRotationModel()
+    st = m.init_state()
+    st.t = 10.0
+    st.fight_duration_s = 360.0
+    st.cartridges = 2
+
+    # (a) No holds: NM ready now -> imminent window -> DD held, bank protected.
+    p = SimParams()
+    assert not m._dd_allowed_now(st, p)
+    assert m._banking_for_dd(st, p)
+    assert m._st_candidates(st, p) == [gd.KEEN_EDGE]
+
+    # (b) Long hold: effective NM open 30s away -> past the 25s DD horizon ->
+    # interim DD allowed, bank released, spenders restored.
+    p_long = SimParams(forbidden_windows=((gd.NO_MERCY, 0.0, 40.0),))
+    assert m._dd_allowed_now(st, p_long)
+    assert not m._banking_for_dd(st, p_long)
+    cands = m._st_candidates(st, p_long)
+    for aid in (gd.KEEN_EDGE, gd.BURST_STRIKE, gd.GNASHING_FANG, gd.DOUBLE_DOWN):
+        assert aid in cands, f"{aid} missing under a long hold"
+
+    # (c) Short hold: effective open 5s away -> still held/banking.
+    p_short = SimParams(forbidden_windows=((gd.NO_MERCY, 0.0, 15.0),))
+    assert not m._dd_allowed_now(st, p_short)
+    assert m._banking_for_dd(st, p_short)
 
 
 def test_combo_lost_across_long_downtime():
@@ -380,6 +417,24 @@ def test_entry_seeded_ceiling_at_least_cold_start():
         240.0, [], sim_context=CeilingContext(
             gcd_base_s=None, payload=EntryState(gauges=(("cartridges", 3),))))
     assert hot >= cold - 1e-6, f"entry seed lowered the ceiling: {hot} < {cold}"
+
+
+def test_replay_seeded_not_lower():
+    """The replay-seeded ceiling leg is max-guarded: threading a demonstrated
+    stream (here the sim's own greedy line) through the real shim path can only
+    RAISE the production (potted) ceiling, never lower it."""
+    from jobs._core.gcd_speed import CeilingContext
+    from jobs._core.tincture import TINCTURE_ACTION_ID
+    from jobs.gunbreaker.simulator import GNB_GCD_S
+    tl, _aux = simulate_idealized(240.0, [])
+    dem = tuple((float(t), int(a)) for t, a in tl if a != TINCTURE_ACTION_ID)
+    base = sc.idealized_at_duration(
+        240.0, [], sim_context=CeilingContext(gcd_base_s=GNB_GCD_S))
+    seeded = sc.idealized_at_duration(
+        240.0, [], sim_context=CeilingContext(gcd_base_s=GNB_GCD_S,
+                                              demonstrated=dem))
+    assert seeded >= base - 1e-6, \
+        f"seeding with the greedy line lowered the ceiling: {seeded} < {base}"
 
 
 def test_overcap_static_gauge_byte_identical():

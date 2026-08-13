@@ -88,6 +88,7 @@ def _register_self() -> None:
     global _registered
     if _registered:
         return
+    from jobs.warrior.advice import PACK as _advice_pack
     register(Job(
         name="Warrior",
         data=JOB_DATA,
@@ -95,5 +96,6 @@ def _register_self() -> None:
         simulator=_build_simulator(),
         bundle_extra_streams=_bundle_extra_streams,
         improvement_contributors=_improvement_contributors,
+        advice_probes=_advice_pack,
     ))
     _registered = True

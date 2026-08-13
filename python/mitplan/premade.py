@@ -40,13 +40,16 @@ _DIR = Path(__file__).parent / "premade"
 
 @dataclass(frozen=True)
 class PinnedEntry:
-    """One premade mechanic → its pinned mits (job, action_id pairs)."""
+    """One premade mechanic → its pinned mits (job, action_id pairs) and,
+    for user-authored plans, the GCD top-up heals cast in the gap BEFORE this
+    mechanic's hit: (job, action_id, count) triples."""
     label: str
     mits: tuple[tuple[str, int], ...]
     boss_ability_id: int | None = None
     name: str | None = None
     occurrence: int | None = None
     at_sec: float | None = None
+    heals: tuple[tuple[str, int, int], ...] = ()
 
 
 @dataclass
@@ -70,10 +73,105 @@ def has_premade(encounter_id: int) -> bool:
         return False
 
 
+def parse_plan_dict(raw: dict, *, encounter_id: int = 0,
+                    source_label: str = "PF plan") -> PremadePlan:
+    """Validate an already-parsed plan dict (the premade file format — also the
+    wire format for user-authored plans, which ride the same schema). Each
+    ``(job, action_id)`` is checked against the mit library; unknown ones are
+    dropped with a warning prefixed by ``source_label``. Best-effort by design:
+    a bad row degrades to a warning, never a hard failure."""
+    from mitplan.library import ROLE_JOBS
+    from mitplan.planner import _ACTION_BY_JOB_ID
+
+    warnings: list[str] = []
+    if not isinstance(raw, dict):
+        return PremadePlan(encounter_id=encounter_id, encounter_name="",
+                           entries=(),
+                           warnings=[f"{source_label}: not a plan object."])
+    entries: list[PinnedEntry] = []
+    for row in raw.get("assignments") or []:
+        if not isinstance(row, dict):
+            continue
+        label = str(row.get("mechanic") or row.get("name")
+                    or row.get("boss_ability_id") or "?")
+        # A mit is keyed by a specific "job" (healer mits) OR a "role"
+        # (shared-id party mit — Feint/Addle/Reprisal — resolved to a comp job
+        # by the planner). Role selectors are stored with a leading "@".
+        mits: list[tuple[str, int]] = []
+        for m in row.get("mits") or []:
+            if not isinstance(m, dict):
+                continue
+            try:
+                aid = int(m.get("action_id"))
+            except (TypeError, ValueError):
+                warnings.append(f"{source_label}: bad action_id in {label!r}.")
+                continue
+            role = str(m.get("role") or "").lower()
+            job = str(m.get("job") or "")
+            if role:
+                if role not in ROLE_JOBS:
+                    warnings.append(f"{source_label}: unknown role {role!r} "
+                                    f"in {label!r}.")
+                    continue
+                if not any((j, aid) in _ACTION_BY_JOB_ID for j in ROLE_JOBS[role]):
+                    warnings.append(f"{source_label}: no {role} job brings #{aid} — "
+                                    f"dropped from {label!r}.")
+                    continue
+                mits.append(("@" + role, aid))
+            elif job:
+                if (job, aid) not in _ACTION_BY_JOB_ID:
+                    warnings.append(f"{source_label}: {job} #{aid} is not in the "
+                                    f"mit library — dropped from {label!r}.")
+                    continue
+                mits.append((job, aid))
+            else:
+                warnings.append(f"{source_label}: a mit in {label!r} has no "
+                                "job/role.")
+        # User-authored GCD top-up heals for this mechanic's gap: a specific
+        # healer job's AoE GCD heal × count (clamped to a sane 1..8).
+        heals: list[tuple[str, int, int]] = []
+        for h in row.get("gcd_heals") or []:
+            if not isinstance(h, dict):
+                continue
+            try:
+                aid = int(h.get("action_id"))
+                count = int(h.get("count") or 1)
+            except (TypeError, ValueError):
+                warnings.append(f"{source_label}: bad heal in {label!r}.")
+                continue
+            job = str(h.get("job") or "")
+            if (job, aid) not in _ACTION_BY_JOB_ID:
+                warnings.append(f"{source_label}: {job} #{aid} is not in the "
+                                f"mit library — heal dropped from {label!r}.")
+                continue
+            heals.append((job, aid, max(1, min(8, count))))
+        if not mits and not heals:
+            continue
+        bid = row.get("boss_ability_id")
+        occ = row.get("occurrence")
+        at = row.get("at_sec")
+        try:
+            entries.append(PinnedEntry(
+                label=label, mits=tuple(mits),
+                boss_ability_id=int(bid) if bid is not None else None,
+                name=str(row["name"]) if row.get("name") else None,
+                occurrence=int(occ) if occ is not None else None,
+                at_sec=float(at) if at is not None else None,
+                heals=tuple(heals),
+            ))
+        except (TypeError, ValueError):
+            warnings.append(f"{source_label}: bad match keys in {label!r}.")
+    return PremadePlan(
+        encounter_id=int(raw.get("encounter_id") or encounter_id),
+        encounter_name=str(raw.get("encounter_name") or ""),
+        entries=tuple(entries), source=str(raw.get("source") or ""),
+        warnings=warnings,
+    )
+
+
 def load_premade(encounter_id: int) -> PremadePlan | None:
-    """Parse + validate ``premade/<id>.json``. Each ``(job, action_id)`` is
-    checked against the mit library; unknown ones are dropped with a warning.
-    Returns None if the file is absent or unparseable (analysis proceeds on the
+    """Parse + validate ``premade/<id>.json`` via ``parse_plan_dict``. Returns
+    None if the file is absent or unparseable (analysis proceeds on the
     auto-plan, never blocks)."""
     p = _path(encounter_id)
     if not p.is_file():
@@ -82,58 +180,4 @@ def load_premade(encounter_id: int) -> PremadePlan | None:
         raw = json.loads(p.read_text(encoding="utf-8"))
     except Exception:
         return None
-    from mitplan.library import ROLE_JOBS
-    from mitplan.planner import _ACTION_BY_JOB_ID
-
-    warnings: list[str] = []
-    entries: list[PinnedEntry] = []
-    for row in raw.get("assignments") or []:
-        label = str(row.get("mechanic") or row.get("name")
-                    or row.get("boss_ability_id") or "?")
-        # A mit is keyed by a specific "job" (healer mits) OR a "role"
-        # (shared-id party mit — Feint/Addle/Reprisal — resolved to a comp job
-        # by the planner). Role selectors are stored with a leading "@".
-        mits: list[tuple[str, int]] = []
-        for m in row.get("mits") or []:
-            try:
-                aid = int(m.get("action_id"))
-            except (TypeError, ValueError):
-                warnings.append(f"PF plan: bad action_id in {label!r}.")
-                continue
-            role = str(m.get("role") or "").lower()
-            job = str(m.get("job") or "")
-            if role:
-                if role not in ROLE_JOBS:
-                    warnings.append(f"PF plan: unknown role {role!r} in {label!r}.")
-                    continue
-                if not any((j, aid) in _ACTION_BY_JOB_ID for j in ROLE_JOBS[role]):
-                    warnings.append(f"PF plan: no {role} job brings #{aid} — "
-                                    f"dropped from {label!r}.")
-                    continue
-                mits.append(("@" + role, aid))
-            elif job:
-                if (job, aid) not in _ACTION_BY_JOB_ID:
-                    warnings.append(f"PF plan: {job} #{aid} is not in the mit "
-                                    f"library — dropped from {label!r}.")
-                    continue
-                mits.append((job, aid))
-            else:
-                warnings.append(f"PF plan: a mit in {label!r} has no job/role.")
-        if not mits:
-            continue
-        bid = row.get("boss_ability_id")
-        occ = row.get("occurrence")
-        at = row.get("at_sec")
-        entries.append(PinnedEntry(
-            label=label, mits=tuple(mits),
-            boss_ability_id=int(bid) if bid is not None else None,
-            name=str(row["name"]) if row.get("name") else None,
-            occurrence=int(occ) if occ is not None else None,
-            at_sec=float(at) if at is not None else None,
-        ))
-    return PremadePlan(
-        encounter_id=int(raw.get("encounter_id") or encounter_id),
-        encounter_name=str(raw.get("encounter_name") or ""),
-        entries=tuple(entries), source=str(raw.get("source") or ""),
-        warnings=warnings,
-    )
+    return parse_plan_dict(raw, encounter_id=encounter_id)

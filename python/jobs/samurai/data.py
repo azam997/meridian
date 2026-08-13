@@ -112,6 +112,7 @@ FUKA_STATUS_ID               = 1001299   # +13% haste (baked into the GCD base)
 TENGENTSU_STATUS_ID          = 1003853   # the 4s pre-hit defensive window
 TENGENTSU_FORESIGHT_STATUS_ID = 1003854  # applied on a successful block -> +10 Kenki
 TENDO_STATUS_ID              = 1003856   # enhanced-Iaijutsu state (from Meikyo)
+MEIKYO_SHISUI_STATUS_ID      = 1233      # the 3-stack buff (live-probed 1001233)
 TENGENTSU_KENKI_PER_PROC     = 10
 
 # --- Potencies --------------------------------------------------------------
@@ -214,6 +215,25 @@ KENKI_CAP = 100
 # Zanshin) are recast/proc-limited, so a raw Kenki unit is worth the Shinten floor.
 KENKI_VALUE_P_PER_UNIT: float = 10.0
 
+# Kenki spends the SIM never casts (the AoE spenders + the movement tools),
+# kept OUT of KENKI_SPENDERS so the simulator/scoring stay untouched. The
+# deep-advice Kenki ledger (jobs/samurai/advice.py) still debits them when the
+# PLAYER casts one: a missed debit runs that ledger hot and can invent overcap
+# on clean play. Guren also SHARES Senei's 60s recast, so the drift ledger
+# counts a Guren cast as a Senei use (the MCH Drill/Bioblaster quirk).
+# ⚠️ IDs from the contiguous SB Hissatsu block data.py already confirms
+# (Shinten 7490 ... Meikyo 7499); costs are DT 7.x tooltip values.
+HISSATSU_KYUTEN = 7491         # oGCD; 25 Kenki; AoE Shinten (no recast)
+HISSATSU_GUREN  = 7496         # oGCD; 25 Kenki; AoE burst; shares Senei's recast
+KENKI_SPENDERS_UNMODELED: dict[int, int] = {
+    HISSATSU_KYUTEN: 25, HISSATSU_GUREN: 25,
+    HISSATSU_GYOTEN: 10, HISSATSU_YATEN: 10,
+}
+# Hagakure dumps EVERY held Sen into 10 Kenki each. The sim never casts it, but
+# a player who does clears their Sen — so the deep-advice Sen ledger must clear
+# its mask too, or a dumped set reads as Sen stranded at the kill.
+HAGAKURE = 7495                # oGCD; converts each held Sen into 10 Kenki
+
 # --- Cooldowns (recast_s, max_charges) -------------------------------------
 # Only RECAST-gated actions live here. The Sen-/Meditation-/proc-gated buttons
 # (Iaijutsu, Shoha, Ogi Namikiri, Zanshin) are state-gated, so listing them would
@@ -289,4 +309,20 @@ JOB_DATA: JobData = JobData(
     # stat/slope as Reaper. ⚠️ refine per tier via scripts/calibrate_tincture.py.
     tincture_main_stat=6841,
     tincture_role_coeff=237,
+    # The canonical opener presses Meikyo during the countdown (the simulator's
+    # own prepull models it as load-bearing at -7s). FFLogs drops the cast; the
+    # 3-stack buff survives, so the shared reconstruction (jobs/_core/casts.py)
+    # reinstates it — the drift detector then sees 1 starting charge instead of
+    # reading the first in-fight Meikyo (~48s) as a 48s phantom drift.
+    prepull_buff_ids={MEIKYO_SHISUI: MEIKYO_SHISUI_STATUS_ID},
+    # No ranged_filler_id — a DELIBERATE hold, not an oversight. Enpi is a real
+    # Harpe-analog disconnect bridge (priced in POTENCIES, +10 Kenki, so
+    # delivered casts already credit), and SAM is the natural second candidate
+    # for the consensus ranged-filler windows. But enabling is not free: it
+    # needs a live consensus probe (probe_rpr_harpe.py pattern) proving top
+    # parses Enpi-bridge at shared fight times, RangedFillerContext unwrap
+    # support in simulator._model_for, and a re-validation of the pinned 50/50
+    # corpus. The corpus is clean today (no over-100 pressure), so the model
+    # stays byte-identical until that arc runs. See NEXT_STEPS.
+    ranged_filler_id=None,
 )

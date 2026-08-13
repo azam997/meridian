@@ -41,6 +41,7 @@ from __future__ import annotations
 import copy
 from dataclasses import dataclass
 
+from jobs._core.entry_gauge import EntryState, seed_entry_gauge
 from jobs._core.sim import engine
 from jobs._core.sim.aoe_potency import schedule_target_fn
 from jobs._core.sim.engine import SimParamsBase, SimStateBase, apply_cooldown, is_forbidden
@@ -168,12 +169,16 @@ class ViperRotationModel(engine.BaseRotationModel):
     tincture_spec = _TINCTURE_SPEC
 
     def __init__(self, gcd_base_s: float | None = None,
-                 mt_schedule: tuple[tuple[float, float, int], ...] = ()):
+                 mt_schedule: tuple[tuple[float, float, int], ...] = (),
+                 entry: "EntryState | None" = None):
         # Multi-target N(t) schedule (the cleave-aware ceiling): free-splash is
         # credited by the scorer's per-target valuation; the ST rotation itself is
         # unchanged at every N (Viper has no dedicated AoE buttons modeled yet), so
         # this only flows into `_make_score`. Empty () -> single target.
         self.mt_schedule = mt_schedule
+        # Phase-continuation entry state (carried Serpent Offering / Rattling
+        # Coils). None (cold start) keeps the sim byte-identical.
+        self.entry = entry
         # Per-player Skill Speed (threaded only when faster than the constant):
         # scales the base GCD and the Reawakened GCD by the same haste factor. None
         # keeps the tier constants, byte-identical.
@@ -185,6 +190,12 @@ class ViperRotationModel(engine.BaseRotationModel):
         state = SimState()
         state.charges = {VICEWINDER: 2.0}
         state.cd_ready = {SERPENTS_IRE: 0.0}
+        # Phase-continuation: seed carried gauge (GaugeModel.name == SimState
+        # field convention — `offering` / `rattling`). A continuation Viper
+        # entering with >=50 Offering opens on a Reawaken burst (~6k potency)
+        # a cold-started ceiling could not match (>100% exposure).
+        if self.entry is not None:
+            seed_entry_gauge(state, self.entry.gauge_map, vd.JOB_DATA.gauges)
         return state
 
     def prepull(self, state: SimState, params) -> None:
@@ -368,8 +379,9 @@ _MODEL = ViperRotationModel()
 
 def _model_for(sim_context) -> ViperRotationModel:
     """The model bound to this run's per-pull context — a per-player effective GCD
-    (CeilingContext, faster-than-constant Skill Speed) and/or a `MultiTargetContext`
-    (the cleave N(t) schedule). `None`/none -> the default model, byte-identical."""
+    (CeilingContext, faster-than-constant Skill Speed), a `MultiTargetContext`
+    (the cleave N(t) schedule), and/or a phase-continuation `EntryState`.
+    `None`/none -> the default model, byte-identical."""
     from jobs._core.downtime_sources import MultiTargetContext
     from jobs._core.gcd_speed import unwrap_ceiling_context
     gcd, payload = unwrap_ceiling_context(sim_context)
@@ -377,7 +389,8 @@ def _model_for(sim_context) -> ViperRotationModel:
     if isinstance(payload, MultiTargetContext):
         mt_schedule = payload.schedule
         payload = payload.inner
-    return ViperRotationModel(gcd_base_s=gcd, mt_schedule=mt_schedule)
+    entry = payload if isinstance(payload, EntryState) else None
+    return ViperRotationModel(gcd_base_s=gcd, mt_schedule=mt_schedule, entry=entry)
 
 
 def _make_score(schedule: tuple[tuple[float, float, int], ...] = ()):

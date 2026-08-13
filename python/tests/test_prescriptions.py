@@ -65,10 +65,10 @@ def test_missed_gcd_vs_ogcd_wording() -> None:
     ideal = [(0.0, DOUBLE_CHECK), (20.0, DOUBLE_CHECK)]
     actual = [(0.0, DOUBLE_CHECK)]
     out = compute_missed_cast_improvements(actual, ideal, MCH, None, 100.0)
-    _check("damaging oGCD says 'Weave one more' + displaces no GCD",
+    _check("damaging oGCD says 'Weave one more' + free weave",
            out[0].prescription is not None
            and out[0].prescription.startswith("Weave one more")
-           and "displaces no GCD" in out[0].prescription,
+           and "Free weave" in out[0].prescription,
            f"got {out[0].prescription!r}")
 
 
@@ -80,8 +80,8 @@ def test_missed_enabler_prescription() -> None:
     _check("one enabler note", len(out) == 1 and out[0].kind == "missed_enabler",
            f"got {out}")
     _check("prescription = keep on cooldown",
-           out[0].prescription == "Keep Wildfire on cooldown. The sim's line "
-                                  "fits one here.",
+           out[0].prescription == "Keep Wildfire on cooldown; one more fits "
+                                  "here.",
            f"got {out[0].prescription!r}")
 
 
@@ -146,11 +146,11 @@ def test_idle_clip_prescriptions_cite_worst() -> None:
     out = improvements_from_clipping({"clipping": f})
     idle = next(i for i in out if i.kind == "idle")
     clip = next(i for i in out if i.kind == "clip")
-    _check("idle cites the 1.9s gap at 0:45",
+    _check("idle cites the 1.9s gap at 0:45; the title holds the total",
            idle.prescription is not None
            and "1.9s gap at 0:45" in idle.prescription
-           and "3.5s idle total" in idle.prescription,
-           f"got {idle.prescription!r}")
+           and "3.5s" in idle.summary,
+           f"got {idle.prescription!r} / {idle.summary!r}")
     _check("clip cites the 3-oGCD weave at 1:02",
            clip.prescription is not None
            and "Trim a weave at 1:02" in clip.prescription
@@ -200,11 +200,10 @@ def test_tincture_variants() -> None:
 def test_death_prescription() -> None:
     print("\nTest: death card prescribes surviving the hit")
     out = improvements_from_deaths([(100.0, 115.0)], [(105.0, DRILL)], MCH)
-    _check("survive-this-hit wording with duration + time",
-           out[0].prescription is not None
-           and out[0].prescription.startswith("Survive this hit")
-           and "15s dead at 1:40" in out[0].prescription,
-           f"got {out[0].prescription!r}")
+    _check("survive-this-hit wording; the title carries duration + time",
+           out[0].prescription == "Survive this hit."
+           and "Died at 1:40: 15s recovering" in out[0].summary,
+           f"got {out[0].prescription!r} / {out[0].summary!r}")
 
 
 def test_cadence_prescription() -> None:
@@ -214,10 +213,11 @@ def test_cadence_prescription() -> None:
     out = improvements_from_cadence(player, ideal, MCH, {"clipping": None})
     _check("one cadence card", len(out) == 1 and out[0].kind == "cadence",
            f"got {out}")
-    _check("prescription cites ~2 more GCDs",
-           out[0].prescription is not None
-           and "~2 more GCDs" in out[0].prescription,
-           f"got {out[0].prescription!r}")
+    _check("title cites ~2 GCDs; prescription is press-on-ready",
+           "~2 GCDs" in out[0].summary
+           and out[0].prescription == "Press the next GCD the moment "
+                                      "it's ready.",
+           f"got {out[0].prescription!r} / {out[0].summary!r}")
 
 
 def test_grouped_missed_cast_prescription() -> None:
@@ -225,12 +225,12 @@ def test_grouped_missed_cast_prescription() -> None:
     items = [
         Improvement("missed_cast", DOUBLE_CHECK, "Double Check", 60.0, 180.0,
                     "Missed Double Check — fit one around 1:00",
-                    prescription="Weave one more Double Check around 1:00 — "
-                                 "~180p, it displaces no GCD."),
+                    prescription="Weave one more Double Check around 1:00. "
+                                 "Free weave, ~180p."),
         Improvement("missed_cast", DOUBLE_CHECK, "Double Check", 90.0, 180.0,
                     "Missed Double Check — fit one around 1:30",
-                    prescription="Weave one more Double Check around 1:30 — "
-                                 "~180p, it displaces no GCD."),
+                    prescription="Weave one more Double Check around 1:30. "
+                                 "Free weave, ~180p."),
     ]
     out = group_improvements(items)
     _check("one grouped card", len(out) == 1 and len(out[0].children) == 2,

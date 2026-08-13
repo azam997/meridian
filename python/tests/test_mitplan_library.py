@@ -96,6 +96,18 @@ def test_amplifier_rows_are_well_formed():
             assert a.heal_mult <= 0.50, ctx
         else:
             assert not a.heal_mult_scope, ctx
+            assert a.heal_mult_window_s == 0, ctx
+        if a.heal_mult_window_s > 0:
+            # A dedicated window span only makes sense under a % window and
+            # only when it genuinely differs from the row's duration.
+            assert a.heal_mult > 0, ctx
+            assert a.heal_mult_window_s < a.duration_s, ctx
+        if a.regen_window_s > 0:
+            # The HoT's own span, either side of duration_s: shorter (Shake:
+            # 15s ticks under a 30s barrier) or longer (Collective
+            # Unconscious: 15s Wheel of Fortune after a 5s channel clip).
+            assert a.regen_potency_per_tick > 0, ctx
+            assert a.regen_window_s != a.duration_s, ctx
         if a.shield_mult_windowed:
             # A window with no duration amplifies nothing.
             assert a.shield_mult > 0 and a.duration_s > 0, ctx
@@ -109,6 +121,23 @@ def test_amplifier_rows_are_well_formed():
                 assert by_job_name[(a.job, host)].is_shield, (ctx, host)
         else:
             assert not a.amp_partner, ctx
+        if a.heal_flat_potency > 0:
+            # A flat heal rider (Plenary's Confession) is pair-gated: it must
+            # name same-job GCD-heal hosts and carry a window, and it never
+            # doubles as a standalone heal or a mit.
+            assert a.heal_flat_partners and a.duration_s > 0, ctx
+            assert not a.is_mit and a.heal_potency == 0, ctx
+            for host in a.heal_flat_partners:
+                assert (a.job, host) in by_job_name, (ctx, host)
+                assert by_job_name[(a.job, host)].is_gcd, (ctx, host)
+                assert by_job_name[(a.job, host)].heal_potency > 0, (ctx, host)
+        else:
+            assert not a.heal_flat_partners, ctx
+        if a.requires:
+            # Prerequisite chains point at a real same-job action with a
+            # positive pairing window (Divine Caress -> Temperance).
+            assert (a.job, a.requires) in by_job_name, ctx
+            assert a.requires_within_s > 0, ctx
 
 
 def test_stack_groups_are_consistent():

@@ -87,6 +87,8 @@ ASPECTED_BENEFIC   = 3595
 HELIOS             = 3600
 ASPECTED_HELIOS    = 3601
 HELIOS_CONJUNCTION = 37030   # is_gcd heal, cast 1.5s, gcd_cost 270 (VERIFIED via mitplan)
+ASCEND             = 3603    # is_gcd raise, 8s hardcast (VERIFIED via live AST
+                             # fixture cast events, tests/fixtures/ast/)
 ESSENTIAL_DIGNITY  = 3614
 CELESTIAL_INTERSECTION = 16556
 CELESTIAL_OPPOSITION   = 16553
@@ -214,6 +216,11 @@ COSTED_HEAL_GCD_IDS: frozenset[int] = frozenset({
     HELIOS_CONJUNCTION,
 })
 
+# Resurrection GCDs — the heal-lock rez pardon (jobs/_core/heal_locks): an
+# uptime Ascend locks its own GCD(s) into the ceiling and opens a recovery
+# window for the costed heals that follow. Never in COSTED_HEAL_GCD_IDS.
+REZ_GCD_IDS: frozenset[int] = frozenset({ASCEND})
+
 # --- Burst-alignment abilities ----------------------------------------------
 BURST_ABILITIES: frozenset[int] = frozenset({
     DIVINATION, ORACLE, LORD_OF_CROWNS, EARTHLY_STAR,
@@ -236,8 +243,9 @@ FILLER_QUALITY_GCDS: frozenset[int] = frozenset({FALL_MALEFIC})
 # sim does NOT cast, so it stays in AOE_POTENCIES. ⚠️ probe falloffs.
 SPLASH_POTENCIES: dict[int, int] = {
     ORACLE:         516,   # ⚠️ probe (~40% falloff)
-    LORD_OF_CROWNS: 250,   # ⚠️ full-to-all AoE
-    EARTHLY_STAR:   540,   # ⚠️ full-to-all AoE
+    LORD_OF_CROWNS: 400,   # full-to-all — matches the probed 400 primary
+    EARTHLY_STAR:   310,   # full-to-all — matches the probed 310 primary (the
+                           # old 540 was the pre-fix primary value left behind)
 }
 
 
@@ -256,6 +264,12 @@ JOB_DATA: JobData = JobData(
     canonical_opener=CANONICAL_OPENER,
     defensive_ids=DEFENSIVE_IDS,
     burst_abilities=BURST_ABILITIES,
+    # Lord of Crowns is CARD RNG: its COOLDOWNS entry is a statistical ~120s
+    # cadence for the SIM (measured live, gotcha #1), not a real recast — the
+    # drift detector and the missed-cast diff must not flag a player's draw
+    # luck as drift or a missed cast.
+    drift_exclusions=frozenset({LORD_OF_CROWNS}),
+    rng_proc_ids=frozenset({LORD_OF_CROWNS}),
     filler_quality_gcds=FILLER_QUALITY_GCDS,
     splash_potencies=SPLASH_POTENCIES,
     aoe_potencies=AOE_POTENCIES,

@@ -91,6 +91,7 @@ def assert_solver_invariants(model, score_fn, duration_s, *, beam_score,
     root.fight_duration_s = duration_s
     root.downtime_windows = downtime
     root.buff_intervals = []
+    model.seed_run_state(root)
     model.prepull(root, params)
     assert model.exact_g(root, score_fn) + model.admissible_remaining(root) \
         >= opt - 1e-6, "root admissible bound underestimates the optimum"
@@ -215,6 +216,7 @@ def test_samurai_incremental_exact_g():
     root.fight_duration_s = duration
     root.downtime_windows = downtime
     root.buff_intervals = []
+    model.seed_run_state(root)
     model.prepull(root, params)
     optimal._settle_downtime(model, root, downtime)
 
@@ -370,6 +372,7 @@ def test_machinist_incremental_exact_g():
     root.fight_duration_s = duration
     root.downtime_windows = downtime
     root.buff_intervals = []
+    model.seed_run_state(root)
     model.prepull(root, params)
     optimal._settle_downtime(model, root, downtime)
 

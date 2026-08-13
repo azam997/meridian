@@ -216,18 +216,24 @@ class PictomancerRotationModel(engine.BaseRotationModel):
         state = SimState()
         state.charges = {POM_MUSE: 3.0, STRIKING_MUSE: 2.0}
         state.cd_ready = {STARRY_MUSE: 0.0, MOG: 0.0}
-        return state
-
-    def prepull(self, state: SimState, params) -> None:
-        # Out-of-combat prep (instant motifs, not logged — matching real logs):
-        # all three canvases painted, creature at Pom. The pre-pull Rainbow Drip
-        # hardcast lands at t~0 (+1 white paint); its 6s recast frees the GCD
-        # loop at ~2.5s, whose weave space carries the opener pot / Pom Muse /
-        # Striking Muse (the engine weaves them from the first slots).
+        # Out-of-combat prep: all three canvases painted, creature at Pom. Seeded
+        # HERE, not in `prepull`, precisely BECAUSE those instant motifs are never
+        # logged — no cast in the stream can reconstruct them, and `sim.replay`
+        # skips prepull, so seeding them there left every replayed state
+        # canvas-less while the from-scratch line opened with three.
         state.creature_canvas = True
         state.weapon_canvas = True
         state.landscape_canvas = True
         state.creature_stage = 0
+        return state
+
+    def prepull(self, state: SimState, params) -> None:
+        # Out-of-combat prep (instant motifs, not logged — matching real logs)
+        # is seeded in `init_state`. The pre-pull Rainbow Drip hardcast lands at
+        # t~0 (+1 white paint — a real logged cast, so a replayed stream grants
+        # it through `apply_cast`); its 6s recast frees the GCD loop at ~2.5s,
+        # whose weave space carries the opener pot / Pom Muse / Striking Muse
+        # (the engine weaves them from the first slots).
         state.timeline.append((PREPULL_CHANNEL_T, RAINBOW_DRIP))
         state._score_flat += potency_for(RAINBOW_DRIP, self._n(0.0), pd.JOB_DATA)
         state.white_paint = 1
@@ -505,13 +511,13 @@ class PictomancerRotationModel(engine.BaseRotationModel):
             state.white_paint = min(pd.WHITE_PAINT_CAP, state.white_paint + 1)
         elif base_id == BLIZZARD:
             state.hue_step = 1
-            state.subtractive -= 1
+            state.subtractive = max(0, state.subtractive - 1)
         elif base_id == STONE:
             state.hue_step = 2
-            state.subtractive -= 1
+            state.subtractive = max(0, state.subtractive - 1)
         elif base_id == THUNDER:
             state.hue_step = 0
-            state.subtractive -= 1
+            state.subtractive = max(0, state.subtractive - 1)
             state.white_paint = min(pd.WHITE_PAINT_CAP, state.white_paint + 1)
         elif ability_id == HOLY:
             state.white_paint = max(0, state.white_paint - 1)
@@ -572,8 +578,8 @@ class PictomancerRotationModel(engine.BaseRotationModel):
 
     # --- Downtime -------------------------------------------------------------------
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         """PCT's signature downtime move: re-paint empty canvases inside the
         window (motifs are self-targeted — no enemy needed; probe: M12S-P1's
         ~6.6s gap is filled with motif casts). In combat a motif is a 3s cast /

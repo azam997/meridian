@@ -169,6 +169,12 @@ class GunbreakerScoringAspect(ScoringAspectBase):
     # valid: top M12S-P1 parses sustain ~2.46s (162 GCDs) via pure server-tick tightness,
     # tighter than the fixed 2.47 band floor — this bounds them without inflating anything.
     demonstrated_cadence_anchor = True
+    # Replay-seeded ceiling leg (jobs/_core/sim/seeded.py): the M12S-P1 Fuseir Warblade
+    # survivor was a PROVEN pure search gap — the player's 7/7 in-window Double Down
+    # lattice replays legally and out-scores the width-256 beam raw by +908 (pot edge
+    # −89 → witness +819.5). Seeding the search with the demonstrated line closes it at
+    # the source; every heuristic credit/width/lock fix measured worse (NEXT_STEPS.md).
+    replay_seeded_ceiling = True
 
     def prepare(self, client, code: str, fight: dict[str, Any],
                 actor: dict[str, Any], report: dict[str, Any], norm_casts) -> Any:

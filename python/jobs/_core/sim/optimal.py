@@ -124,6 +124,7 @@ def solve_optimal(model: RotationModel, score_fn, fight_duration_s: float,
     root.fight_duration_s = fight_duration_s
     root.downtime_windows = downtime
     root.buff_intervals = list(buff_intervals) if buff_intervals else []
+    model.seed_run_state(root)
     model.prepull(root, params)
     _settle_downtime(model, root, downtime)
 

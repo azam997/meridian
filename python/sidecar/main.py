@@ -20,11 +20,13 @@ Bundled under Tauri it's invoked as a sidecar binary via tauri-plugin-shell.
 from __future__ import annotations
 
 import dataclasses
+import hashlib
 import json
 import multiprocessing
 import os
 import platform
 import random
+import re
 import sys
 import threading
 import time
@@ -45,6 +47,7 @@ from config import (  # noqa: E402
     CACHE_DIR,
     DEV_CACHE_DIR,
     FEEDBACK_DIR,
+    MIT_PLANS_DIR,
     load_config,
     save_config,
 )
@@ -1049,6 +1052,15 @@ def run_analysis(req: dict, req_id: str) -> dict:
     # (ultimates only) swaps the auto plan for the hand-authored premade one.
     comp_override = _comp_override_from_req(req)
     use_pf_plan = bool(req.get("usePfMitPlan"))
+    # Custom (user-authored) plan payload — the premade-schema dict, passed
+    # through verbatim to the exclusive planner path. Wins over the PF flag.
+    user_mit_plan = (req.get("userMitPlan")
+                     if isinstance(req.get("userMitPlan"), dict) else None)
+    # Dicts are unhashable and an edited plan must never collide with the
+    # un-planned run, so the cache key carries a stable content hash.
+    user_plan_key = (hashlib.sha1(
+        json.dumps(user_mit_plan, sort_keys=True).encode()).hexdigest()
+        if user_mit_plan is not None else None)
     steps = (_ANALYSIS_STEPS_HEALER if _is_locked_healer_analysis(job)
              else _ANALYSIS_STEPS)
 
@@ -1074,7 +1086,7 @@ def run_analysis(req: dict, req_id: str) -> dict:
     # comp override joins the key so a re-run after adjusting the planner's
     # comp never returns the stale plan's numbers.
     cache_key = (code, fight_id, job, encounter_id, refs_bucket, player_name,
-                 comp_override, use_pf_plan)
+                 comp_override, use_pf_plan, user_plan_key)
     with _result_cache_lock:
         cached = _result_cache.get(cache_key)
         if cached is not None:
@@ -1109,7 +1121,8 @@ def run_analysis(req: dict, req_id: str) -> dict:
         out = _analyze_and_build(client, job, code, fight_id, encounter_id,
                                  refs_bucket, progress, player_name=player_name,
                                  steps=steps, comp_override=comp_override,
-                                 use_pf_plan=use_pf_plan)
+                                 use_pf_plan=use_pf_plan,
+                                 user_mit_plan=user_mit_plan)
     finally:
         if owner:
             with _result_inflight_lock:
@@ -1197,7 +1210,8 @@ def _pf_pinned_plan(encounter_id: int, use_pf: bool):
 
 def _heal_lock_payload(client, job: str, code: str, fight_id: int,
                        encounter_id: int, comp_override: tuple | None,
-                       progress, use_pf_plan: bool = False) -> dict | None:
+                       progress, use_pf_plan: bool = False,
+                       user_mit_plan: dict | None = None) -> dict | None:
     """The healer run's `__heal_locks__` payload: mit plan → the analyzed
     player's locked heal-GCD windows + the headline meta. Comp precedence:
     the planner's explicit override (the comp the user reviewed) > the pull's
@@ -1246,10 +1260,22 @@ def _heal_lock_payload(client, job: str, code: str, fight_id: int,
             dps = ["Samurai", "Dragoon", "Bard", "Pictomancer"]
 
         model = _get_mitplan_model(client, encounter_id, progress)
-        pinned, pf_warnings = _pf_pinned_plan(encounter_id, use_pf_plan)
-        result = mitplan.plan(model, shield, regen, tanks, dps, pinned=pinned)
+        if user_mit_plan is not None:
+            # The user's own plan drives the locked ceiling (exclusive mode);
+            # the PF flag is ignored when both somehow arrive.
+            from mitplan.premade import parse_plan_dict
+            pinned = parse_plan_dict(user_mit_plan, encounter_id=encounter_id,
+                                     source_label="Your plan")
+            pf_warnings = list(pinned.warnings)
+            exclusive = True
+        else:
+            pinned, pf_warnings = _pf_pinned_plan(encounter_id, use_pf_plan)
+            exclusive = False
+        result = mitplan.plan(model, shield, regen, tanks, dps, pinned=pinned,
+                              pinned_exclusive=exclusive)
         warnings = warnings + pf_warnings + [
-            w for w in result.warnings if w.startswith("PF plan")]
+            w for w in result.warnings
+            if w.startswith(("PF plan", "Your plan"))]
         slot = slot_for_job(job)
         if slot is None:                       # not a healer-duo job (guarded upstream)
             return None
@@ -1278,7 +1304,8 @@ def _analyze_and_build(client, job: str, code: str, fight_id: int,
                        player_name: str | None = None,
                        steps: tuple = _ANALYSIS_STEPS,
                        comp_override: tuple | None = None,
-                       use_pf_plan: bool = False) -> dict:
+                       use_pf_plan: bool = False,
+                       user_mit_plan: dict | None = None) -> dict:
     """The actual run_analysis computation (no caching / dedup). Progress is
     staged so the *necessary* simulator work is named rather than hidden behind
     a generic 'Building dashboard…' — the bar advances through the user-pull
@@ -1295,7 +1322,8 @@ def _analyze_and_build(client, job: str, code: str, fight_id: int,
         progress(2, "Building the mitigation plan…", step=step("Mitigation plan"))
         payload = _heal_lock_payload(client, job, code, fight_id, encounter_id,
                                      comp_override, progress,
-                                     use_pf_plan=use_pf_plan)
+                                     use_pf_plan=use_pf_plan,
+                                     user_mit_plan=user_mit_plan)
         if payload is not None:
             extra_report = {"__heal_locks__": payload}
         if prof:
@@ -2516,6 +2544,17 @@ def _serialize_comparison(c: AspectComparison) -> dict:
 
 def _serialize_aspect_state(name: str, state: dict) -> dict:
     """camelCase + dataclass-aware. Skip None/empty by default; lists pass through."""
+    sim_ctx = state.get("sim_context")
+    if sim_ctx is not None:
+        from jobs._core.gcd_speed import CeilingContext
+        if isinstance(sim_ctx, CeilingContext):
+            # `demonstrated` is the replay-seeded leg's cache/search channel, not
+            # response data: strip it at this single boundary so the wire stays
+            # byte-identical for every job (`asdict` would emit `demonstrated:
+            # null` everywhere) and a ~260-cast tuple stays off GNB payloads.
+            d = dataclasses.asdict(sim_ctx)
+            d.pop("demonstrated", None)
+            state = {**state, "sim_context": d}
     return _camelize(state)
 
 
@@ -3250,7 +3289,8 @@ def _build_response(job: str, you: ModuleResult, refs: list[ModuleResult],
     # above, and the counterfactual cascade's restructured list (measured root
     # causes moved out of the residual, total conserved) as `examined`. Fast
     # enough to always run — the cascade itself only runs for jobs with an
-    # AdvicePack (MCH); everyone else gets the analytic enrichment only.
+    # AdvicePack (all 21 register one); a job without a pack, or one whose
+    # cascade finds nothing worth moving, gets the analytic enrichment only.
     examined = None
     if improvements:
         try:
@@ -3896,9 +3936,9 @@ def plan_mitigation(req: dict, req_id: str) -> dict:
     With `reportCode`/`fightId` (and no explicit comp fields) the comp is
     resolved from that pull's actors instead — the healer-flow preselection
     (`spec` = the analyzed player's job, kept in their own slot on
-    non-standard duos). See src/views/MitigationPlanner.tsx."""
-    from mitplan.library import (DPS_JOBS, REGEN_HEALERS, SHIELD_HEALERS,
-                                 TANK_JOBS)
+    non-standard duos). `userMitPlan` (the premade-schema dict, snake_case —
+    it IS the export file format) switches to the exclusive user-plan path.
+    See src/views/MitigationPlanner.tsx."""
     import mitplan
 
     shield = str(req.get("shieldHealer") or "Sage")
@@ -3933,14 +3973,7 @@ def plan_mitigation(req: dict, req_id: str) -> dict:
         tanks = ["Paladin", "Dark Knight"]
     if not dps:
         dps = ["Samurai", "Dragoon", "Bard", "Pictomancer"]
-    if shield not in SHIELD_HEALERS:
-        raise ValueError(f"shieldHealer must be one of {SHIELD_HEALERS}")
-    if regen not in REGEN_HEALERS:
-        raise ValueError(f"regenHealer must be one of {REGEN_HEALERS}")
-    if len(tanks) != 2 or any(j not in TANK_JOBS for j in tanks):
-        raise ValueError("tanks must be two tank jobs")
-    if len(dps) != 4 or any(j not in DPS_JOBS for j in dps):
-        raise ValueError("dps must be four DPS jobs")
+    _validate_comp(shield, regen, tanks, dps)
     encounter_id = int(req.get("encounterId") or 0)
     if not encounter_id:
         raise ValueError("encounterId required")
@@ -3952,10 +3985,23 @@ def plan_mitigation(req: dict, req_id: str) -> dict:
         _emit({"id": req_id, "progress": msg})
 
     model = _get_mitplan_model(_client(), encounter_id, progress)
-    pinned, pf_warnings = _pf_pinned_plan(encounter_id,
-                                          bool(req.get("usePfMitPlan")))
+    user_plan_raw = (req.get("userMitPlan")
+                     if isinstance(req.get("userMitPlan"), dict) else None)
+    if user_plan_raw is not None:
+        # Exclusive user-plan path: the payload rides the premade schema
+        # verbatim; the PF flag is ignored (the UI never sends both).
+        from mitplan.premade import parse_plan_dict
+        pinned = parse_plan_dict(user_plan_raw, encounter_id=encounter_id,
+                                 source_label="Your plan")
+        plan_warnings = list(pinned.warnings)
+        exclusive = True
+    else:
+        pinned, plan_warnings = _pf_pinned_plan(encounter_id,
+                                                bool(req.get("usePfMitPlan")))
+        exclusive = False
     progress(92, "Scheduling mitigation plan…")
-    result = mitplan.plan(model, shield, regen, tanks, dps, pinned=pinned)
+    result = mitplan.plan(model, shield, regen, tanks, dps, pinned=pinned,
+                          pinned_exclusive=exclusive)
     progress(97, "Rendering…")
     out = _serialize_mit_plan(model, result)
     # _serialize_mit_plan camelizes internally — these are wire keys.
@@ -3964,12 +4010,163 @@ def plan_mitigation(req: dict, req_id: str) -> dict:
         out["compWarnings"] = comp_warnings
     # `usePfMitPlan` was requested but no premade applied (non-ultimate / no file)
     # ⇒ pfPlanApplied False so the UI can fall back to the auto plan honestly.
-    out["pfPlanApplied"] = pinned is not None
-    if pf_warnings:
-        # Load-time (unknown-ability) warnings; the planner's PF match/comp-
+    out["pfPlanApplied"] = pinned is not None and not exclusive
+    out["userPlanApplied"] = exclusive
+    if plan_warnings:
+        # Load/parse-time (unknown-ability) warnings; the planner's match/comp-
         # mismatch warnings already ride out["warnings"] via result.warnings.
-        out["warnings"] = list(out.get("warnings") or []) + pf_warnings
+        out["warnings"] = list(out.get("warnings") or []) + plan_warnings
     progress(100, "Done")
+    return out
+
+
+def _validate_comp(shield: str, regen: str, tanks: list[str],
+                   dps: list[str]) -> None:
+    """The planner's comp shape rules, shared by plan_mitigation and
+    get_mit_library. Raises ValueError on any mismatch."""
+    from mitplan.library import (DPS_JOBS, REGEN_HEALERS, SHIELD_HEALERS,
+                                 TANK_JOBS)
+    if shield not in SHIELD_HEALERS:
+        raise ValueError(f"shieldHealer must be one of {SHIELD_HEALERS}")
+    if regen not in REGEN_HEALERS:
+        raise ValueError(f"regenHealer must be one of {REGEN_HEALERS}")
+    if len(tanks) != 2 or any(j not in TANK_JOBS for j in tanks):
+        raise ValueError("tanks must be two tank jobs")
+    if len(dps) != 4 or any(j not in DPS_JOBS for j in dps):
+        raise ValueError("dps must be four DPS jobs")
+
+
+# Comp-keyed palette memo: the library is static per comp and the ~90 icon
+# lookups deserve a one-shot. Process-lifetime, tiny.
+_mit_library_cache: dict[tuple, dict] = {}
+
+
+def get_mit_library(req: dict) -> dict:
+    """The drag-and-drop editor's ability palette for one comp: per slot, the
+    job's placeable MitActions with the cooldown/charge/duration/lead data the
+    UI needs for its availability preview, plus pre-seeded icons for every
+    palette id (the plan response only carries icons for ids a plan used).
+    Pure amplifiers (Zoe, Recitation…) are excluded — they cannot stand alone
+    in the model; the planner folds them onto host shields automatically.
+    Pure AoE GCD heals (Medica III, Rapture…) are split out per slot as
+    `heal_options` — the editor's per-gap +/- incrementer, not drag content."""
+    from mitplan.library import RESOURCE_POOLS, Target, Tier, actions_for_job
+    from mitplan.planner import SHIELD_PREPULL_MIN_S, cast_lead_for
+
+    shield = str(req.get("shieldHealer") or "Sage")
+    regen = str(req.get("regenHealer") or "White Mage")
+    tanks = [str(j) for j in (req.get("tanks") or []) if j] \
+        or ["Paladin", "Dark Knight"]
+    dps = [str(j) for j in (req.get("dps") or []) if j] \
+        or ["Samurai", "Dragoon", "Bard", "Pictomancer"]
+    _validate_comp(shield, regen, tanks, dps)
+    key = (shield, regen, tuple(tanks), tuple(dps))
+    cached = _mit_library_cache.get(key)
+    if cached is not None:
+        return cached
+
+    slots = [("T1", tanks[0]), ("T2", tanks[1]),
+             ("H1", shield), ("H2", regen),
+             ("D1", dps[0]), ("D2", dps[1]), ("D3", dps[2]), ("D4", dps[3])]
+    ability_meta: dict[int, dict] = {}
+    out_slots = []
+    for slot, job in slots:
+        rows = []
+        heal_options = []
+        job_by_name = {x.name: x for x in actions_for_job(job)}
+        for a in actions_for_job(job):
+            # Shield riders (Zoe/Recitation) fold onto host shields
+            # automatically and stay out of the palette. Pure HEAL amps with
+            # nothing else to their row (Krasis' +20% received, Plenary's
+            # Confession rider) ARE placeable — their windows scale the plan's
+            # healing where the user puts them.
+            if (a.is_amplifier and not a.is_mit and not a.is_shield
+                    and a.heal_potency <= 0 and a.regen_potency_per_tick <= 0
+                    and a.heal_mult <= 0 and a.heal_flat_potency <= 0):
+                continue
+            _ensure_ability_meta(ability_meta, a.action_id)
+            if (a.is_gcd and a.tier is Tier.HEALER_GCD
+                    and a.heal_potency > 0
+                    and not a.is_mit and not a.is_shield):
+                # Party top-ups AND single-target (tank) heals — the editor's
+                # incrementer options, never drag content.
+                heal_options.append({
+                    "action_id": a.action_id, "name": a.name,
+                    "heal_potency": a.heal_potency,
+                    "gcd_cost_potency": a.gcd_cost_potency,
+                    "cast_time_s": a.cast_time_s,
+                    "target": a.target.value,
+                })
+                continue
+            req = job_by_name.get(a.requires) if a.requires else None
+            rows.append({
+                "action_id": a.action_id, "name": a.name,
+                "cooldown_s": a.cooldown_s, "charges": a.charges,
+                "duration_s": a.duration_s,
+                "cast_lead_s": cast_lead_for(a),
+                "min_cast_s": (SHIELD_PREPULL_MIN_S
+                               if a.is_shield and not a.is_mit else 0.0),
+                "target": a.target.value, "tier": a.tier.value,
+                "is_gcd": a.is_gcd, "stack_group": a.stack_group,
+                "resource": a.resource,
+                "mit_all": a.mit_all, "mit_phys": a.mit_phys,
+                "mit_magic": a.mit_magic,
+                "shield_potency": a.shield_potency,
+                "shield_pct_maxhp": a.shield_pct_maxhp,
+                "heal_potency": a.heal_potency,
+                "heal_mult": a.heal_mult,
+                "heal_flat_potency": a.heal_flat_potency,
+                # Prerequisite chain (Divine Caress -> Temperance): the editor
+                # greys rows with no enabling cast in range.
+                "requires_action_id": (req.action_id if req else None),
+                "requires_within_s": a.requires_within_s,
+            })
+        out_slots.append({"slot": slot, "job": job, "actions": rows,
+                          "heal_options": heal_options})
+    out = _camelize({
+        "slots": out_slots,
+        "ability_meta": ability_meta,
+        "resource_pools": {name: {"capacity": cap, "regen_s": regen_s,
+                                  "start_tokens": start}
+                           for name, (cap, regen_s, start)
+                           in RESOURCE_POOLS.items()},
+    })
+    _mit_library_cache[key] = out
+    return out
+
+
+def export_mit_plan(req: dict) -> dict:
+    """Write a user-authored plan to <config>/mit_plans/<slug>.json and return
+    the path for the Explorer reveal. The payload is written verbatim — the
+    file IS the wire/premade format, so it re-imports and shares cleanly.
+    `readable` (a UI-rendered plain-text mit sheet) writes a same-stem .txt
+    beside it — the human copy for Discord/PF, not importable."""
+    plan_doc = req.get("plan")
+    if not isinstance(plan_doc, dict) or not plan_doc.get("assignments"):
+        raise ValueError("plan payload with assignments required")
+    enc = int(req.get("encounterId") or plan_doc.get("encounter_id") or 0)
+    hint = str(req.get("fileName") or "").strip()
+    slug = re.sub(r"[^A-Za-z0-9._ -]+", "-", hint).strip(" -.")
+    if not slug:
+        slug = f"mit-plan-{enc}" if enc else "mit-plan"
+    slug = slug[:80]
+    if not slug.lower().endswith(".json"):
+        slug += ".json"
+    MIT_PLANS_DIR.mkdir(parents=True, exist_ok=True)
+    path = MIT_PLANS_DIR / slug
+    if path.exists():
+        path = MIT_PLANS_DIR / (
+            path.stem + time.strftime("-%Y%m%d-%H%M%S") + path.suffix)
+    path.write_text(json.dumps(plan_doc, indent=2), encoding="utf-8")
+    out = {"path": str(path)}
+    readable = req.get("readable")
+    if isinstance(readable, str) and readable.strip():
+        readable_path = path.with_suffix(".txt")
+        readable_path.write_text(readable, encoding="utf-8")
+        out["readablePath"] = str(readable_path)
+    event_log.log("info", "mitplan", "user plan exported",
+                  {"path": str(path), "encounterId": enc,
+                   "readable": "readablePath" in out})
     return out
 
 
@@ -4116,6 +4313,8 @@ HANDLERS = {
     "run_analysis":     lambda req, _id: {"ok": True, "data": run_analysis(req, _id)},
     "theorize_kill_time": lambda req, _id: {"ok": True, "data": theorize_kill_time(req, _id)},
     "plan_mitigation":  lambda req, _id: {"ok": True, "data": plan_mitigation(req, _id)},
+    "get_mit_library":  lambda req, _id: {"ok": True, "data": get_mit_library(req)},
+    "export_mit_plan":  lambda req, _id: {"ok": True, "data": export_mit_plan(req)},
     "get_auth_status":    lambda req, _id: {"ok": True, "data": get_auth_status(req)},
     "fflogs_auth_begin":  lambda req, _id: {"ok": True, "data": fflogs_auth_begin(req)},
     "fflogs_auth_poll":   lambda req, _id: {"ok": True, "data": fflogs_auth_poll(req)},

@@ -193,6 +193,12 @@ _UB_FMF_P: float = md.POTENCIES[FMF] * _UB_CRIT      # Full Metal Field (innatel
 _UB_FILLER_P: float = max(                            # the richest non-premium GCD
     md.POTENCIES[HEATED_SPLIT], md.POTENCIES[HEATED_SLUG],
     md.POTENCIES[HEATED_CLEAN], md.POTENCIES[BLAZING_SHOT]) * _UB_CRIT
+# Double Check / Checkmate: the damaging filler oGCDs (never Reassembled). The
+# bound MUST carry them — over a 480s fight they are ~110 casts / ~20k potency,
+# and a bound that omits a scored term is unsound by construction: any future
+# tightening of the (currently ~2x overstated) GCD term would start pruning
+# the true optimum.
+_UB_DCM_P: float = float(md.POTENCIES[DOUBLE_CHECK])
 
 
 def _targetable_time_after(t: float, fight_duration_s: float,
@@ -318,6 +324,14 @@ _SWEEP_MAX_WEAVES: tuple[int, ...]          = (2, 3)
 # touch early (the safe error), overcapping strands battery (the costly one).
 _QUEEN_BANK_GEN_RATE_PER_S: float = 2.5   # conservative-high battery/s while banking
 
+# Cap-pressure threshold for the DC/CM filler pools (see pick_ogcd): a pool at
+# or above this many charges spends BEFORE the burst enablers, because at ~cap
+# both natural regen and the Blazing Shot CDR are being thrown away. 2.5 =
+# "one Blazing Shot from full": the highest threshold that still drains the
+# at-cap opener pools before the first chain overcaps them (measured — lower
+# preempts enablers it doesn't need to, higher recreates the opener waste).
+_CAP_PRESSURE_CHARGES: float = 2.5
+
 
 # --- The MCH rotation model -----------------------------------------------
 
@@ -336,7 +350,8 @@ class MachinistRotationModel(engine.BaseRotationModel):
     tincture_spec = _TINCTURE_SPEC
 
     def __init__(self, gcd_base_s: float | None = None,
-                 mt_schedule: tuple[tuple[float, float, int], ...] = ()) -> None:
+                 mt_schedule: tuple[tuple[float, float, int], ...] = (),
+                 entry=None) -> None:
         # Per-player Skill Speed: `gcd_base_s` (= min(constant, inferred), threaded only
         # when the player is faster than the constant) speeds the whole rotation. The
         # Overheated Blazing Shot recast scales by the same haste factor. `None` keeps
@@ -349,6 +364,9 @@ class MachinistRotationModel(engine.BaseRotationModel):
         # swaps in AoE buttons and the beam forks the heat-divergent combo. Empty
         # () -> single target, byte-identical.
         self.mt_schedule = mt_schedule
+        # Phase-continuation entry state (carried heat/battery). None -> cold
+        # start, byte-identical.
+        self.entry = entry
 
     def _n(self, t: float) -> int:
         """Target count active at time `t` (1 with no schedule)."""
@@ -370,6 +388,11 @@ class MachinistRotationModel(engine.BaseRotationModel):
             HYPERCHARGE:        0.0,
             QUEEN:              0.0,
         }
+        # Phase-continuation: seed carried heat/battery (GaugeModel.name ==
+        # SimState field convention).
+        if self.entry is not None:
+            from jobs._core.entry_gauge import seed_entry_gauge
+            seed_entry_gauge(state, self.entry.gauge_map, md.JOB_DATA.gauges)
         return state
 
     def prepull(self, state: SimState, params) -> None:
@@ -719,13 +742,27 @@ class MachinistRotationModel(engine.BaseRotationModel):
         # Wildfire payloads (<=6 hits x 240 each), bounded by the 120s cooldown.
         n_wf = 1 + int(rem / md.COOLDOWNS[WILDFIRE][0])
         wf_ub = n_wf * 6 * 240.0
+        # Double Check / Checkmate weaves: banked charges + natural regen + the
+        # Blazing Shot CDR (<= 0.5 charge/pool per remaining GCD slot — every
+        # slot Blazing at the fastest cadence, the same over-count as `n`),
+        # all capped by the physical two-weaves-per-slot budget.
+        recast_dcm = md.COOLDOWNS[DOUBLE_CHECK][0]
+        n_dcm = (state.charges.get(DOUBLE_CHECK, 0.0)
+                 + state.charges.get(CHECKMATE, 0.0)
+                 + 2.0 * rem / recast_dcm
+                 + 2.0 * n * md.BLAZING_SHOT_CDR_S / recast_dcm)
+        dcm_ub = min(n_dcm, 2.0 * n) * _UB_DCM_P
+        # Flamethrower downtime-edge ticks: at most one press per remaining
+        # boss-untargetable window (on_downtime_window emits exactly one).
+        ft_ub = md.POTENCIES[FLAMETHROWER] * sum(
+            1 for _s, e in state.downtime_windows if e > state.t)
         # Queen pet potency: current banked battery + an upper bound on future battery
         # generation (Air Anchor / Chain Saw / Excavator +20 each, Heated Clean +10).
         n_clean = int(n / 3) + 1
         battery_gen = (n_air + n_saw + n_exc) * 20 + n_clean * 10
         queen_ub = (state.battery + battery_gen) * md.BATTERY_VALUE_P_PER_UNIT
         tinct = self.tincture_spec.multiplier if self.tincture_spec else 1.0
-        return (gcd_ub + wf_ub + queen_ub) * tinct
+        return (gcd_ub + wf_ub + dcm_ub + ft_ub + queen_ub) * tinct
 
     def exact_g(self, state: SimState, score_fn) -> float:
         """Exact prefix score, O(1) from the incremental accumulators — the DP's
@@ -764,6 +801,21 @@ class MachinistRotationModel(engine.BaseRotationModel):
         """Highest-priority oGCD available right now, or None."""
         t = state.t
         fw = params.forbidden_windows
+        # Cap-pressure filler weave FIRST: a DC/CM pool at (or near) its cap
+        # freezes both the natural regen and the Blazing Shot CDR — every
+        # blocked half-charge is a 180p cast that never happens. Both pools
+        # start the fight at cap, so without this the opener's enabler weaves
+        # (Barrel Stabilizer / Hypercharge / Wildfire) let the first Blazing
+        # chain waste ~2.5 charges in the first 6s (measured on the M12S-P2
+        # fixture — the "player fit more Checkmates than the sim" gap). The
+        # threshold only preempts an enabler while a pool is ≥ _CAP_PRESSURE
+        # charges, i.e. when holding the weave slot has a real overcap cost.
+        if state.charges.get(DOUBLE_CHECK, 0) >= _CAP_PRESSURE_CHARGES \
+                and not is_forbidden(DOUBLE_CHECK, t, fw):
+            return DOUBLE_CHECK
+        if state.charges.get(CHECKMATE, 0) >= _CAP_PRESSURE_CHARGES \
+                and not is_forbidden(CHECKMATE, t, fw):
+            return CHECKMATE
         # Hypercharge — converts heat into the Blazing Shot chain
         if state.cd_ready.get(HYPERCHARGE, 0) <= t:
             if state.heat >= md.HYPERCHARGE_MIN_HEAT or state.free_hypercharges > 0:
@@ -816,9 +868,11 @@ class MachinistRotationModel(engine.BaseRotationModel):
             if will_target_tool or about_to_cap:
                 return REASSEMBLE
         # DC / CM as filler weaves
-        if state.charges.get(DOUBLE_CHECK, 0) >= 1:
+        if state.charges.get(DOUBLE_CHECK, 0) >= 1 \
+                and not is_forbidden(DOUBLE_CHECK, t, fw):
             return DOUBLE_CHECK
-        if state.charges.get(CHECKMATE, 0) >= 1:
+        if state.charges.get(CHECKMATE, 0) >= 1 \
+                and not is_forbidden(CHECKMATE, t, fw):
             return CHECKMATE
         # Defensive / utility oGCDs (Tactician etc.) are intentionally not fired.
         return None
@@ -955,12 +1009,12 @@ class MachinistRotationModel(engine.BaseRotationModel):
         elif ability_id == HEATED_SLUG:
             state.combo_step = 2 if state.combo_step == 1 else 0
         elif ability_id == HEATED_CLEAN:
-            state.combo_step = 0 if state.combo_step == 2 else 0
+            state.combo_step = 0
         elif ability_id == SCATTERGUN:
             state.combo_step = 0   # the AoE filler breaks the Heated combo
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         # Squeeze one Flamethrower tick at a boss-untargetable edge where it's
         # mechanically possible. As the boss goes untargetable you can fire
         # Flamethrower (a GCD) so a tick lands in the retarget gap as it
@@ -1019,18 +1073,23 @@ _BEAM_WIDTH = 64
 
 def _model_for(sim_context) -> MachinistRotationModel:
     """The model for this run. A `CeilingContext` with a faster-than-constant
-    `gcd_base_s` (per-player Skill Speed) and/or a `MultiTargetContext` (the AoE
-    N(t) schedule) builds a bound model; otherwise the shared singleton
-    (byte-identical)."""
+    `gcd_base_s` (per-player Skill Speed), a `MultiTargetContext` (the AoE
+    N(t) schedule), and/or a phase-continuation `EntryState` (carried
+    heat/battery — M12S-P2-style mid-combat starts) builds a bound model;
+    otherwise the shared singleton (byte-identical)."""
     from jobs._core.downtime_sources import MultiTargetContext
+    from jobs._core.entry_gauge import EntryState
     from jobs._core.gcd_speed import unwrap_ceiling_context
     gcd, payload = unwrap_ceiling_context(sim_context)
     mt_schedule: tuple[tuple[float, float, int], ...] = ()
     if isinstance(payload, MultiTargetContext):
         mt_schedule = payload.schedule
-    if gcd is None and not mt_schedule:
+        payload = payload.inner
+    entry = payload if isinstance(payload, EntryState) else None
+    if gcd is None and not mt_schedule and entry is None:
         return _MODEL
-    return MachinistRotationModel(gcd_base_s=gcd, mt_schedule=mt_schedule)
+    return MachinistRotationModel(gcd_base_s=gcd, mt_schedule=mt_schedule,
+                                  entry=entry)
 
 
 def _make_score(schedule: tuple[tuple[float, float, int], ...] = ()):
@@ -1215,7 +1274,8 @@ def _canonical_burst_forbidden(
     """MCH canonical anchors (Wildfire + Barrel Stabilizer) held into each
     full-stack buff window. Thin wrapper over the engine helper, kept
     module-local so the canonical-sim tests can address it directly."""
-    return engine.canonical_burst_forbidden(buff_intervals, _CANONICAL_ALIGN_ANCHORS)
+    return engine.canonical_burst_forbidden(
+        buff_intervals, _CANONICAL_ALIGN_ANCHORS, cooldowns=md.COOLDOWNS)
 
 
 def simulate_canonical_aligned(

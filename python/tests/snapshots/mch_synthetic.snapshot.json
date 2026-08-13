@@ -1,0 +1,7567 @@
+{
+  "abilityMeta": {
+    "16498": {
+      "iconPath": "/i/003000/003043.png",
+      "id": 16498,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Drill"
+    },
+    "16500": {
+      "iconPath": "/i/003000/003045.png",
+      "id": 16500,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Air Anchor"
+    },
+    "16501": {
+      "iconPath": "/i/003000/003501.png",
+      "id": 16501,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Automaton Queen"
+    },
+    "17209": {
+      "iconPath": "/i/003000/003041.png",
+      "id": 17209,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Hypercharge"
+    },
+    "25788": {
+      "iconPath": "/i/003000/003048.png",
+      "id": 25788,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Chain Saw"
+    },
+    "2876": {
+      "iconPath": "/i/003000/003022.png",
+      "id": 2876,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Reassemble"
+    },
+    "2878": {
+      "iconPath": "/i/003000/003018.png",
+      "id": 2878,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Wildfire"
+    },
+    "36978": {
+      "iconPath": "/i/003000/003506.png",
+      "id": 36978,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Blazing Shot"
+    },
+    "36979": {
+      "iconPath": "/i/003000/003507.png",
+      "id": 36979,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Double Check"
+    },
+    "36980": {
+      "iconPath": "/i/003000/003508.png",
+      "id": 36980,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Checkmate"
+    },
+    "36981": {
+      "iconPath": "/i/003000/003500.png",
+      "id": 36981,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Excavator"
+    },
+    "36982": {
+      "iconPath": "/i/003000/003049.png",
+      "id": 36982,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Full Metal Field"
+    },
+    "7411": {
+      "iconPath": "/i/003000/003031.png",
+      "id": 7411,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Heated Split Shot"
+    },
+    "7412": {
+      "iconPath": "/i/003000/003032.png",
+      "id": 7412,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Heated Slug Shot"
+    },
+    "7413": {
+      "iconPath": "/i/003000/003033.png",
+      "id": 7413,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Heated Clean Shot"
+    },
+    "7414": {
+      "iconPath": "/i/003000/003034.png",
+      "id": 7414,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Barrel Stabilizer"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "16498": 18,
+        "16500": 9,
+        "16501": 12,
+        "17209": 10,
+        "25788": 6,
+        "2876": 7,
+        "2878": 3,
+        "36978": 50,
+        "36979": 39,
+        "36980": 39,
+        "36981": 6,
+        "36982": 3,
+        "7411": 24,
+        "7412": 24,
+        "7413": 24,
+        "7414": 3
+      },
+      "totalCasts": 277
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": []
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 387.07,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "targetability"
+    },
+    "Drift": {
+      "downtimeSource": "targetability",
+      "downtimeWindows": [],
+      "fightDurationSec": 360.0,
+      "findings": [
+        {
+          "abilityId": 36979,
+          "abilityName": "Double Check",
+          "cappedSeconds": 0.0,
+          "casts": 39,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 4.0,
+          "lostPotency": 720.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 36980,
+          "abilityName": "Checkmate",
+          "cappedSeconds": 0.7,
+          "casts": 39,
+          "cdrOverflowSeconds": 9.3,
+          "lostCasts": 2.0,
+          "lostPotency": 360.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 2878,
+          "abilityName": "Wildfire",
+          "cappedSeconds": 103.2,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 2876,
+          "abilityName": "Reassemble",
+          "cappedSeconds": 31.0,
+          "casts": 7,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16498,
+          "abilityName": "Drill",
+          "cappedSeconds": 25.0,
+          "casts": 18,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 25788,
+          "abilityName": "Chain Saw",
+          "cappedSeconds": 17.5,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 16500,
+          "abilityName": "Air Anchor",
+          "cappedSeconds": 7.5,
+          "casts": 9,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7414,
+          "abilityName": "Barrel Stabilizer",
+          "cappedSeconds": 3.0,
+          "casts": 3,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Hypercharge": {
+      "windows": [
+        {
+          "bucket": 0,
+          "castTimeSec": 3.2,
+          "cutShort": false,
+          "hits": 5,
+          "lastShotSec": 11.0
+        },
+        {
+          "bucket": 1,
+          "castTimeSec": 50.0,
+          "cutShort": false,
+          "hits": 5,
+          "lastShotSec": 58.5
+        },
+        {
+          "bucket": 3,
+          "castTimeSec": 95.0,
+          "cutShort": false,
+          "hits": 5,
+          "lastShotSec": 103.5
+        },
+        {
+          "bucket": 4,
+          "castTimeSec": 123.2,
+          "cutShort": false,
+          "hits": 5,
+          "lastShotSec": 131.0
+        },
+        {
+          "bucket": 5,
+          "castTimeSec": 152.5,
+          "cutShort": false,
+          "hits": 5,
+          "lastShotSec": 161.0
+        },
+        {
+          "bucket": 6,
+          "castTimeSec": 197.5,
+          "cutShort": false,
+          "hits": 5,
+          "lastShotSec": 206.0
+        },
+        {
+          "bucket": 7,
+          "castTimeSec": 237.5,
+          "cutShort": false,
+          "hits": 5,
+          "lastShotSec": 246.0
+        },
+        {
+          "bucket": 8,
+          "castTimeSec": 247.5,
+          "cutShort": false,
+          "hits": 5,
+          "lastShotSec": 256.0
+        },
+        {
+          "bucket": 9,
+          "castTimeSec": 297.5,
+          "cutShort": false,
+          "hits": 5,
+          "lastShotSec": 306.0
+        },
+        {
+          "bucket": 11,
+          "castTimeSec": 342.5,
+          "cutShort": false,
+          "hits": 5,
+          "lastShotSec": 351.0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 25788,
+          "expectedId": 7411,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Chain Saw, canonical uses Heated Split Shot (same potency)"
+        },
+        {
+          "actualId": 36978,
+          "expectedId": 16498,
+          "lostPotency": 420.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Blazing Shot (240p), canonical uses Drill (660p), -420p"
+        },
+        {
+          "actualId": 36978,
+          "expectedId": 7412,
+          "lostPotency": 80.0,
+          "position": 4,
+          "summary": "Opener slot #4: cast Blazing Shot (240p), canonical uses Heated Slug Shot (320p), -80p"
+        },
+        {
+          "actualId": 36978,
+          "expectedId": 25788,
+          "lostPotency": 420.0,
+          "position": 5,
+          "summary": "Opener slot #5: cast Blazing Shot (240p), canonical uses Chain Saw (660p), -420p"
+        },
+        {
+          "actualId": 36978,
+          "expectedId": 7413,
+          "lostPotency": 180.0,
+          "position": 6,
+          "summary": "Opener slot #6: cast Blazing Shot (240p), canonical uses Heated Clean Shot (420p), -180p"
+        },
+        {
+          "actualId": 36978,
+          "expectedId": 36981,
+          "lostPotency": 420.0,
+          "position": 7,
+          "summary": "Opener slot #7: cast Blazing Shot (240p), canonical uses Excavator (660p), -420p"
+        },
+        {
+          "actualId": 36981,
+          "expectedId": 16498,
+          "lostPotency": 0.0,
+          "position": 9,
+          "summary": "Opener slot #9: cast Excavator, canonical uses Drill (same potency)"
+        },
+        {
+          "actualId": 16498,
+          "expectedId": 7411,
+          "lostPotency": 0.0,
+          "position": 10,
+          "summary": "Opener slot #10: cast Drill, canonical uses Heated Split Shot (same potency)"
+        },
+        {
+          "actualId": 16498,
+          "expectedId": 16500,
+          "lostPotency": 0.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Drill, canonical uses Air Anchor (same potency)"
+        },
+        {
+          "actualId": 7411,
+          "expectedId": 7412,
+          "lostPotency": 100.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Heated Split Shot (220p), canonical uses Heated Slug Shot (320p), -100p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Queen": {
+      "queens": [
+        {
+          "battery": 60,
+          "bucket": 0,
+          "durationSec": 32.5,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 15.0
+        },
+        {
+          "battery": 50,
+          "bucket": 1,
+          "durationSec": 22.5,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 47.5
+        },
+        {
+          "battery": 50,
+          "bucket": 2,
+          "durationSec": 37.5,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 70.0
+        },
+        {
+          "battery": 50,
+          "bucket": 3,
+          "durationSec": 17.5,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 107.5
+        },
+        {
+          "battery": 50,
+          "bucket": 4,
+          "durationSec": 37.5,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 125.0
+        },
+        {
+          "battery": 60,
+          "bucket": 5,
+          "durationSec": 22.5,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 162.5
+        },
+        {
+          "battery": 50,
+          "bucket": 6,
+          "durationSec": 30.0,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 185.0
+        },
+        {
+          "battery": 50,
+          "bucket": 7,
+          "durationSec": 42.5,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 215.0
+        },
+        {
+          "battery": 60,
+          "bucket": 8,
+          "durationSec": 30.0,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 257.5
+        },
+        {
+          "battery": 60,
+          "bucket": 9,
+          "durationSec": 30.0,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 287.5
+        },
+        {
+          "battery": 50,
+          "bucket": 10,
+          "durationSec": 15.0,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 317.5
+        },
+        {
+          "battery": 50,
+          "bucket": 11,
+          "durationSec": 27.5,
+          "finished": false,
+          "petDamage": 0,
+          "timeSec": 332.5
+        }
+      ],
+      "totalQueenDamage": 0
+    },
+    "Reassemble": {
+      "findings": []
+    },
+    "Scoring": {
+      "deliveredObserved": 120512.32,
+      "deliveredPotency": 120512.32,
+      "downtimeSource": "targetability",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "17209": 1064.76,
+        "2878": 1859.66,
+        "7414": 1669.66
+      },
+      "entryGauges": {
+        "battery": 10,
+        "heat": 100
+      },
+      "fightDurationSec": 360.0,
+      "idealizedLenient": 123974.38,
+      "idealizedMaster": 123235.98,
+      "idealizedObserved": 123235.98,
+      "idealizedPotency": 123974.38,
+      "idealizedStrict": 123974.38,
+      "masterBuffIntervals": [],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "queenBatterySpent": 640.0,
+      "simContext": {
+        "gcdBaseSec": 2.47,
+        "payload": {
+          "gauges": [
+            [
+              "battery",
+              10
+            ],
+            [
+              "heat",
+              100
+            ]
+          ],
+          "openerStartSec": null
+        }
+      },
+      "tinctureLoss": 1973.17,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.08,
+      "tinctureOptimalCount": 2
+    },
+    "Tools": {
+      "countsById": {
+        "16498": 18,
+        "16500": 9,
+        "25788": 6,
+        "36981": 6,
+        "36982": 3
+      },
+      "toolCasts": [
+        {
+          "abilityId": 16500,
+          "timeSec": 0.0
+        },
+        {
+          "abilityId": 25788,
+          "timeSec": 2.5
+        },
+        {
+          "abilityId": 36982,
+          "timeSec": 12.5
+        },
+        {
+          "abilityId": 36981,
+          "timeSec": 15.0
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 17.5
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 20.0
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 37.5
+        },
+        {
+          "abilityId": 16500,
+          "timeSec": 40.0
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 60.0
+        },
+        {
+          "abilityId": 25788,
+          "timeSec": 62.5
+        },
+        {
+          "abilityId": 36981,
+          "timeSec": 65.0
+        },
+        {
+          "abilityId": 16500,
+          "timeSec": 80.0
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 82.5
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 105.0
+        },
+        {
+          "abilityId": 16500,
+          "timeSec": 120.0
+        },
+        {
+          "abilityId": 25788,
+          "timeSec": 122.5
+        },
+        {
+          "abilityId": 36982,
+          "timeSec": 132.5
+        },
+        {
+          "abilityId": 36981,
+          "timeSec": 135.0
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 137.5
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 140.0
+        },
+        {
+          "abilityId": 16500,
+          "timeSec": 162.5
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 165.0
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 180.0
+        },
+        {
+          "abilityId": 25788,
+          "timeSec": 182.5
+        },
+        {
+          "abilityId": 36981,
+          "timeSec": 185.0
+        },
+        {
+          "abilityId": 16500,
+          "timeSec": 207.5
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 210.0
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 220.0
+        },
+        {
+          "abilityId": 16500,
+          "timeSec": 247.5
+        },
+        {
+          "abilityId": 25788,
+          "timeSec": 257.5
+        },
+        {
+          "abilityId": 36982,
+          "timeSec": 260.0
+        },
+        {
+          "abilityId": 36981,
+          "timeSec": 262.5
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 265.0
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 267.5
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 285.0
+        },
+        {
+          "abilityId": 16500,
+          "timeSec": 287.5
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 307.5
+        },
+        {
+          "abilityId": 25788,
+          "timeSec": 317.5
+        },
+        {
+          "abilityId": 36981,
+          "timeSec": 320.0
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 325.0
+        },
+        {
+          "abilityId": 16500,
+          "timeSec": 327.5
+        },
+        {
+          "abilityId": 16498,
+          "timeSec": 352.5
+        }
+      ]
+    },
+    "Wildfire": {
+      "windows": [
+        {
+          "bucket": 1,
+          "castTimeSec": 50.7,
+          "hits": 6
+        },
+        {
+          "bucket": 6,
+          "castTimeSec": 198.2,
+          "hits": 6
+        },
+        {
+          "bucket": 11,
+          "castTimeSec": 343.2,
+          "hits": 6
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 277"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Blazing Shot",
+          50,
+          0
+        ],
+        [
+          "Double Check",
+          39,
+          0
+        ],
+        [
+          "Checkmate",
+          39,
+          0
+        ],
+        [
+          "Heated Split Shot",
+          24,
+          0
+        ],
+        [
+          "Heated Slug Shot",
+          24,
+          0
+        ],
+        [
+          "Heated Clean Shot",
+          24,
+          0
+        ],
+        [
+          "Drill",
+          18,
+          0
+        ],
+        [
+          "Automaton Queen",
+          12,
+          0
+        ],
+        [
+          "Hypercharge",
+          10,
+          0
+        ],
+        [
+          "Air Anchor",
+          9,
+          0
+        ],
+        [
+          "Reassemble",
+          7,
+          0
+        ],
+        [
+          "Excavator",
+          6,
+          0
+        ],
+        [
+          "Chain Saw",
+          6,
+          0
+        ],
+        [
+          "Wildfire",
+          3,
+          0
+        ],
+        [
+          "Barrel Stabilizer",
+          3,
+          0
+        ],
+        [
+          "Full Metal Field",
+          3,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No raid-buff providers in this party \u2014 burst alignment N/A."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 387p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "[drift] Drill: 18 casts, drifted 25.0s \u2248 -660p (ref avg -0p)"
+      ],
+      "summaryLines": [
+        "Total drift cost: -660p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Drill",
+          18,
+          25.0,
+          660,
+          0,
+          "+660"
+        ],
+        [
+          "Reassemble",
+          7,
+          31.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Air Anchor",
+          9,
+          7.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Chain Saw",
+          6,
+          17.5,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Double Check",
+          39,
+          0.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Checkmate",
+          39,
+          0.7,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Barrel Stabilizer",
+          3,
+          3.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Wildfire",
+          3,
+          103.2,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Hypercharge": {
+      "aspectName": "Hypercharge",
+      "detailColumns": [
+        "HC#",
+        "Time",
+        "Blazing Shots",
+        "Short by"
+      ],
+      "findings": [
+        "Every Hypercharge fired a full 5 Blazing Shots."
+      ],
+      "summaryLines": [
+        "Your Hypercharges: 10",
+        "Average Blazing Shots/HC: 5.0/5"
+      ],
+      "yourDetailRowColors": [
+        "#27ae60",
+        "#27ae60",
+        "#27ae60",
+        "#27ae60",
+        "#27ae60",
+        "#27ae60",
+        "#27ae60",
+        "#27ae60",
+        "#27ae60",
+        "#27ae60"
+      ],
+      "yourDetailRows": [
+        [
+          "HC01",
+          "0:03",
+          "5/5",
+          0
+        ],
+        [
+          "HC02",
+          "0:50",
+          "5/5",
+          0
+        ],
+        [
+          "HC03",
+          "1:35",
+          "5/5",
+          0
+        ],
+        [
+          "HC04",
+          "2:03",
+          "5/5",
+          0
+        ],
+        [
+          "HC05",
+          "2:32",
+          "5/5",
+          0
+        ],
+        [
+          "HC06",
+          "3:18",
+          "5/5",
+          0
+        ],
+        [
+          "HC07",
+          "3:58",
+          "5/5",
+          0
+        ],
+        [
+          "HC08",
+          "4:08",
+          "5/5",
+          0
+        ],
+        [
+          "HC09",
+          "4:58",
+          "5/5",
+          0
+        ],
+        [
+          "HC10",
+          "5:42",
+          "5/5",
+          0
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #3: cast Blazing Shot (240p), canonical uses Drill (660p), -420p",
+        "[opener] Opener slot #4: cast Blazing Shot (240p), canonical uses Heated Slug Shot (320p), -80p",
+        "[opener] Opener slot #5: cast Blazing Shot (240p), canonical uses Chain Saw (660p), -420p",
+        "[opener] Opener slot #6: cast Blazing Shot (240p), canonical uses Heated Clean Shot (420p), -180p",
+        "[opener] Opener slot #7: cast Blazing Shot (240p), canonical uses Excavator (660p), -420p",
+        "[opener] Opener slot #12: cast Heated Split Shot (220p), canonical uses Heated Slug Shot (320p), -100p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 1620p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          2,
+          "Heated Split Shot",
+          "Chain Saw",
+          0
+        ],
+        [
+          3,
+          "Drill",
+          "Blazing Shot",
+          420
+        ],
+        [
+          4,
+          "Heated Slug Shot",
+          "Blazing Shot",
+          80
+        ],
+        [
+          5,
+          "Chain Saw",
+          "Blazing Shot",
+          420
+        ],
+        [
+          6,
+          "Heated Clean Shot",
+          "Blazing Shot",
+          180
+        ],
+        [
+          7,
+          "Excavator",
+          "Blazing Shot",
+          420
+        ],
+        [
+          9,
+          "Drill",
+          "Excavator",
+          0
+        ],
+        [
+          10,
+          "Heated Split Shot",
+          "Drill",
+          0
+        ],
+        [
+          11,
+          "Air Anchor",
+          "Drill",
+          0
+        ],
+        [
+          12,
+          "Heated Slug Shot",
+          "Heated Split Shot",
+          100
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Queen": {
+      "aspectName": "Queen",
+      "detailColumns": [
+        "Q#",
+        "Time",
+        "Battery",
+        "Duration",
+        "End",
+        "Damage"
+      ],
+      "findings": [
+        "No reference runs to compare against.",
+        "Queen at 15s (60 bat) was cut off: no Crowned Collider fired (duration 32.5s).",
+        "Queen at 47s (50 bat) was cut off: no Crowned Collider fired (duration 22.5s).",
+        "Queen at 70s (50 bat) was cut off: no Crowned Collider fired (duration 37.5s).",
+        "Queen at 107s (50 bat) was cut off: no Crowned Collider fired (duration 17.5s).",
+        "Queen at 125s (50 bat) was cut off: no Crowned Collider fired (duration 37.5s).",
+        "Queen at 162s (60 bat) was cut off: no Crowned Collider fired (duration 22.5s).",
+        "Queen at 185s (50 bat) was cut off: no Crowned Collider fired (duration 30.0s).",
+        "Queen at 215s (50 bat) was cut off: no Crowned Collider fired (duration 42.5s).",
+        "Queen at 257s (60 bat) was cut off: no Crowned Collider fired (duration 30.0s).",
+        "Queen at 287s (60 bat) was cut off: no Crowned Collider fired (duration 30.0s).",
+        "Queen at 317s (50 bat) was cut off: no Crowned Collider fired (duration 15.0s).",
+        "Queen at 332s (50 bat) was cut off: no Crowned Collider fired (duration 27.5s)."
+      ],
+      "summaryLines": [
+        "Your queens: 12",
+        "Your batteries: [60, 50, 50, 50, 50, 60, 50, 50, 60, 60, 50, 50]"
+      ],
+      "yourDetailRowColors": [
+        "#cf5527",
+        "#c0392b",
+        "#c0392b",
+        "#c0392b",
+        "#c0392b",
+        "#cf5527",
+        "#c0392b",
+        "#c0392b",
+        "#cf5527",
+        "#cf5527",
+        "#c0392b",
+        "#c0392b"
+      ],
+      "yourDetailRows": [
+        [
+          "Q01",
+          "0:15",
+          60,
+          "32.5s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q02",
+          "0:48",
+          50,
+          "22.5s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q03",
+          "1:10",
+          50,
+          "37.5s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q04",
+          "1:48",
+          50,
+          "17.5s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q05",
+          "2:05",
+          50,
+          "37.5s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q06",
+          "2:42",
+          60,
+          "22.5s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q07",
+          "3:05",
+          50,
+          "30.0s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q08",
+          "3:35",
+          50,
+          "42.5s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q09",
+          "4:18",
+          60,
+          "30.0s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q10",
+          "4:48",
+          60,
+          "30.0s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q11",
+          "5:18",
+          50,
+          "15.0s",
+          "CUT",
+          "0"
+        ],
+        [
+          "Q12",
+          "5:32",
+          50,
+          "27.5s",
+          "CUT",
+          "0"
+        ]
+      ]
+    },
+    "Reassemble": {
+      "aspectName": "Reassemble",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Lost (p)"
+      ],
+      "findings": [
+        "Reassemble targeting looks clean."
+      ],
+      "summaryLines": [
+        "Total Reassemble misalign: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Tools": {
+      "aspectName": "Tools",
+      "detailColumns": [
+        "Tool",
+        "Your casts",
+        "Ref median",
+        "Diff"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your tool casts: 42",
+        "Per tool: Drill 18, Air Anchor 9, Chain Saw 6, Excavator 6, Full Metal Field 3"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Drill",
+          18,
+          0,
+          "+18"
+        ],
+        [
+          "Air Anchor",
+          9,
+          0,
+          "+9"
+        ],
+        [
+          "Chain Saw",
+          6,
+          0,
+          "+6"
+        ],
+        [
+          "Excavator",
+          6,
+          0,
+          "+6"
+        ],
+        [
+          "Full Metal Field",
+          3,
+          0,
+          "+3"
+        ]
+      ]
+    },
+    "Wildfire": {
+      "aspectName": "Wildfire",
+      "detailColumns": [
+        "WF#",
+        "Time",
+        "Hits",
+        "Short by"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your Wildfires: 3",
+        "Average hits/WF: 6.0/6"
+      ],
+      "yourDetailRowColors": [
+        "#27ae60",
+        "#27ae60",
+        "#27ae60"
+      ],
+      "yourDetailRows": [
+        [
+          "WF01",
+          "0:51",
+          "6/6",
+          0
+        ],
+        [
+          "WF02",
+          "3:18",
+          "6/6",
+          0
+        ],
+        [
+          "WF03",
+          "5:43",
+          "6/6",
+          0
+        ]
+      ]
+    }
+  },
+  "examined": {
+    "basis": "strict",
+    "improvements": [
+      {
+        "abilityId": 0,
+        "abilityName": "Tincture",
+        "children": [],
+        "kind": "tincture",
+        "lostPotency": 1973.17,
+        "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+        "summary": "Used 0 of 2 tinctures",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 0,
+        "abilityName": "",
+        "children": [],
+        "evidence": [
+          {
+            "k": "Heat",
+            "note": "Hypercharge came later than the gauge allowed",
+            "v": "50 over ideal"
+          }
+        ],
+        "kind": "cascade_pacing",
+        "lostPotency": 567.7,
+        "prescription": "Use excess Heat right away here.",
+        "resources": [
+          {
+            "label": "Heat",
+            "short": "HEAT"
+          }
+        ],
+        "summary": "Heat held from 1:51 to 1:54",
+        "timeSec": 111.2
+      },
+      {
+        "abilityId": 0,
+        "abilityName": "",
+        "children": [],
+        "evidence": [
+          {
+            "k": "Heat",
+            "note": "Hypercharge came later than the gauge allowed",
+            "v": "50 over ideal"
+          },
+          {
+            "k": "Automaton Queen",
+            "note": "ran behind the ideal line through this stretch",
+            "v": "10.0s late"
+          }
+        ],
+        "kind": "cascade_pacing",
+        "lostPotency": 490.6,
+        "prescription": "Use excess Heat right away here.",
+        "resources": [
+          {
+            "label": "Heat",
+            "short": "HEAT"
+          }
+        ],
+        "summary": "Heat held from 0:46 to 0:49",
+        "timeSec": 46.2
+      },
+      {
+        "abilityId": 0,
+        "abilityName": "",
+        "children": [],
+        "evidence": [
+          {
+            "k": "Heat",
+            "note": "Hypercharge came later than the gauge allowed",
+            "v": "50 over ideal"
+          }
+        ],
+        "kind": "cascade_pacing",
+        "lostPotency": 370.5,
+        "prescription": "Use excess Heat right away here.",
+        "resources": [
+          {
+            "label": "Heat",
+            "short": "HEAT"
+          }
+        ],
+        "summary": "Heat held from 2:31 to 2:43",
+        "timeSec": 151.2
+      },
+      {
+        "abilityId": 0,
+        "abilityName": "",
+        "children": [
+          {
+            "abilityId": 0,
+            "abilityName": "",
+            "children": [],
+            "kind": "cadence",
+            "lostPotency": 1600.0,
+            "prescription": "Press the next GCD the moment it's ready.",
+            "summary": "Loose GCD pacing: ~5 GCDs of slightly-late casts, no single gap",
+            "timeSec": 0.0
+          },
+          {
+            "abilityId": 17209,
+            "abilityName": "Hypercharge",
+            "children": [],
+            "kind": "missed_enabler",
+            "lostPotency": 1064.76,
+            "prescription": "Keep Hypercharge on cooldown; one more fits here.",
+            "summary": "Missed Hypercharge, fit one around 0:13",
+            "timeSec": 13.05
+          },
+          {
+            "abilityId": 17209,
+            "abilityName": "Hypercharge",
+            "children": [],
+            "kind": "missed_enabler",
+            "lostPotency": 1064.76,
+            "prescription": "Keep Hypercharge on cooldown; one more fits here.",
+            "summary": "Missed Hypercharge, fit one around 0:25",
+            "timeSec": 24.7
+          },
+          {
+            "abilityId": 36979,
+            "abilityName": "Double Check",
+            "children": [],
+            "kind": "missed_cast",
+            "lostPotency": 720.0,
+            "prescription": "Fit 4 more Double Check. One belonged around 0:21, each worth ~180p.",
+            "summary": "Missed Double Check \u00d74, first around 0:21",
+            "timeSec": 20.75
+          },
+          {
+            "abilityId": 36980,
+            "abilityName": "Checkmate",
+            "children": [],
+            "kind": "missed_cast",
+            "lostPotency": 360.0,
+            "prescription": "Fit 2 more Checkmate. One belonged around 0:29, each worth ~180p.",
+            "summary": "Missed Checkmate \u00d72, first around 0:29",
+            "timeSec": 28.65
+          }
+        ],
+        "countGaps": [
+          {
+            "name": "Blazing Shot",
+            "sim": 57,
+            "you": 50
+          },
+          {
+            "name": "Double Check",
+            "sim": 43,
+            "you": 39
+          },
+          {
+            "name": "Checkmate",
+            "sim": 41,
+            "you": 39
+          },
+          {
+            "name": "Hypercharge",
+            "sim": 12,
+            "you": 10
+          },
+          {
+            "name": "Heated Clean Shot",
+            "sim": 23,
+            "you": 24
+          }
+        ],
+        "kind": "residual",
+        "lostPotency": 60.1,
+        "prescription": "Biggest count gaps: Blazing Shot and Double Check. Extra Heated Clean Shot casts took those slots at lower value.",
+        "summary": "Spacing & sequencing: 5 small located losses below the listing threshold",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "abilityName": "Heated Slug Shot",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #4: Blazing Shot instead of Heated Slug Shot (ordering only)",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "abilityName": "Heated Slug Shot",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #12: Heated Split Shot instead of Heated Slug Shot (ordering only)",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "abilityName": "Heated Clean Shot",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #6: Blazing Shot instead of Heated Clean Shot (ordering only)",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "abilityName": "Drill",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #3: Blazing Shot instead of Drill (ordering only)",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 25788,
+        "abilityName": "Chain Saw",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #5: Blazing Shot instead of Chain Saw (ordering only)",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 36981,
+        "abilityName": "Excavator",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #7: Blazing Shot instead of Excavator (ordering only)",
+        "timeSec": 0.0
+      }
+    ],
+    "notes": [
+      "1,429p of the diffuse loss resolved into 3 root causes.",
+      "Cascade weights scaled \u00d70.28 to fit the residual budget."
+    ],
+    "recoverable": 3462.1
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 120512.32,
+    "downtimeSource": "targetability",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 97.21,
+    "efficiencyPctLenient": 97.21,
+    "efficiencyPctMaster": 97.79,
+    "efficiencyPctObserved": 97.79,
+    "efficiencyPctStrict": 97.21,
+    "idealizedMaster": 123235.98,
+    "idealizedObserved": 123235.98,
+    "killTimeSec": 360,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Machinist"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 123974.38,
+    "yourIdealizedPotencyLenient": 123974.38,
+    "yourPotency": 120512.32
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 30.0,
+      "multiplier": 1.08,
+      "startSec": 0.0
+    },
+    {
+      "endSec": 328.87,
+      "multiplier": 1.08,
+      "startSec": 298.87
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 2876,
+      "color": "#f59e0b",
+      "endSec": -4.4,
+      "iconPath": "/i/003000/003022.png",
+      "label": "Rea",
+      "startSec": -5.0,
+      "tooltip": "Reassemble @ -5.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16500,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/003000/003045.png",
+      "label": "Air",
+      "startSec": 0.0,
+      "tooltip": "Air Anchor @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 0.6,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 0.0,
+      "tooltip": "Double Check @ 0.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 1.3,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 0.7,
+      "tooltip": "Checkmate @ 0.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25788,
+      "color": "#3b82f6",
+      "endSec": 3.47,
+      "iconPath": "/i/003000/003048.png",
+      "label": "Cha",
+      "startSec": 2.47,
+      "tooltip": "Chain Saw @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 3.07,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 2.47,
+      "tooltip": "Hypercharge @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 2878,
+      "color": "#f59e0b",
+      "endSec": 3.77,
+      "iconPath": "/i/003000/003018.png",
+      "label": "Wil",
+      "startSec": 3.17,
+      "tooltip": "Wildfire @ 3.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 5.94,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 4.94,
+      "tooltip": "Blazing Shot @ 4.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 5.54,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 4.94,
+      "tooltip": "Double Check @ 4.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 7.42,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 6.42,
+      "tooltip": "Blazing Shot @ 6.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 7.02,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 6.42,
+      "tooltip": "Checkmate @ 6.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 8.9,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 7.9,
+      "tooltip": "Blazing Shot @ 7.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 8.5,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 7.9,
+      "tooltip": "Double Check @ 7.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 10.39,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 9.39,
+      "tooltip": "Blazing Shot @ 9.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 9.99,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 9.39,
+      "tooltip": "Checkmate @ 9.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 11.87,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 10.87,
+      "tooltip": "Blazing Shot @ 10.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 11.47,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 10.87,
+      "tooltip": "Double Check @ 10.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36981,
+      "color": "#3b82f6",
+      "endSec": 13.35,
+      "iconPath": "/i/003000/003500.png",
+      "label": "Exc",
+      "startSec": 12.35,
+      "tooltip": "Excavator @ 12.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 12.95,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 12.35,
+      "tooltip": "Checkmate @ 12.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 13.65,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 13.05,
+      "tooltip": "Hypercharge @ 13.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 15.82,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 14.82,
+      "tooltip": "Blazing Shot @ 14.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7414,
+      "color": "#f59e0b",
+      "endSec": 15.42,
+      "iconPath": "/i/003000/003034.png",
+      "label": "Bar",
+      "startSec": 14.82,
+      "tooltip": "Barrel Stabilizer @ 14.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 17.3,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 16.3,
+      "tooltip": "Blazing Shot @ 16.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 16.9,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 16.3,
+      "tooltip": "Double Check @ 16.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 18.78,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 17.78,
+      "tooltip": "Blazing Shot @ 17.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 18.38,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 17.78,
+      "tooltip": "Double Check @ 17.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 20.27,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 19.27,
+      "tooltip": "Blazing Shot @ 19.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 19.87,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 19.27,
+      "tooltip": "Checkmate @ 19.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 21.75,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 20.75,
+      "tooltip": "Blazing Shot @ 20.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 21.35,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 20.75,
+      "tooltip": "Double Check @ 20.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36982,
+      "color": "#3b82f6",
+      "endSec": 23.23,
+      "iconPath": "/i/003000/003049.png",
+      "label": "Ful",
+      "startSec": 22.23,
+      "tooltip": "Full Metal Field @ 22.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 22.83,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 22.23,
+      "tooltip": "Checkmate @ 22.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 23.53,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 22.93,
+      "tooltip": "Automaton Queen @ 22.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 25.7,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 24.7,
+      "tooltip": "Drill @ 24.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 25.3,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 24.7,
+      "tooltip": "Hypercharge @ 24.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 26.0,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 25.4,
+      "tooltip": "Double Check @ 25.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 28.17,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 27.17,
+      "tooltip": "Blazing Shot @ 27.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 27.77,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 27.17,
+      "tooltip": "Double Check @ 27.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 29.65,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 28.65,
+      "tooltip": "Blazing Shot @ 28.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 29.25,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 28.65,
+      "tooltip": "Checkmate @ 28.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 31.13,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 30.13,
+      "tooltip": "Blazing Shot @ 30.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 30.73,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 30.13,
+      "tooltip": "Double Check @ 30.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 32.62,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 31.62,
+      "tooltip": "Blazing Shot @ 31.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 32.22,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 31.62,
+      "tooltip": "Checkmate @ 31.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 34.1,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 33.1,
+      "tooltip": "Blazing Shot @ 33.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 2876,
+      "color": "#f59e0b",
+      "endSec": 33.7,
+      "iconPath": "/i/003000/003022.png",
+      "label": "Rea",
+      "startSec": 33.1,
+      "tooltip": "Reassemble @ 33.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 35.58,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 34.58,
+      "tooltip": "Drill @ 34.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 35.18,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 34.58,
+      "tooltip": "Checkmate @ 34.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 35.88,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 35.28,
+      "tooltip": "Double Check @ 35.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 38.05,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 37.05,
+      "tooltip": "Heated Split Shot @ 37.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 37.65,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 37.05,
+      "tooltip": "Checkmate @ 37.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 40.52,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 39.52,
+      "tooltip": "Heated Slug Shot @ 39.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16500,
+      "color": "#3b82f6",
+      "endSec": 42.99,
+      "iconPath": "/i/003000/003045.png",
+      "label": "Air",
+      "startSec": 41.99,
+      "tooltip": "Air Anchor @ 42.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 45.46,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 44.46,
+      "tooltip": "Heated Clean Shot @ 44.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 47.93,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 46.93,
+      "tooltip": "Drill @ 46.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 47.53,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 46.93,
+      "tooltip": "Double Check @ 46.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 50.4,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 49.4,
+      "tooltip": "Heated Split Shot @ 49.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 50.0,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 49.4,
+      "tooltip": "Checkmate @ 49.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 52.87,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 51.87,
+      "tooltip": "Heated Slug Shot @ 51.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 55.34,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 54.34,
+      "tooltip": "Heated Clean Shot @ 54.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 57.81,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 56.81,
+      "tooltip": "Heated Split Shot @ 56.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 60.28,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 59.28,
+      "tooltip": "Heated Slug Shot @ 59.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 62.75,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 61.75,
+      "tooltip": "Heated Clean Shot @ 61.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 62.35,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 61.75,
+      "tooltip": "Automaton Queen @ 61.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25788,
+      "color": "#3b82f6",
+      "endSec": 65.22,
+      "iconPath": "/i/003000/003048.png",
+      "label": "Cha",
+      "startSec": 64.22,
+      "tooltip": "Chain Saw @ 64.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 2876,
+      "color": "#f59e0b",
+      "endSec": 64.82,
+      "iconPath": "/i/003000/003022.png",
+      "label": "Rea",
+      "startSec": 64.22,
+      "tooltip": "Reassemble @ 64.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36981,
+      "color": "#3b82f6",
+      "endSec": 67.69,
+      "iconPath": "/i/003000/003500.png",
+      "label": "Exc",
+      "startSec": 66.69,
+      "tooltip": "Excavator @ 66.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 70.16,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 69.16,
+      "tooltip": "Drill @ 69.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 72.63,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 71.63,
+      "tooltip": "Heated Split Shot @ 71.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 72.23,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 71.63,
+      "tooltip": "Hypercharge @ 71.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 75.1,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 74.1,
+      "tooltip": "Blazing Shot @ 74.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 74.7,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 74.1,
+      "tooltip": "Double Check @ 74.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 76.58,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 75.58,
+      "tooltip": "Blazing Shot @ 75.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 76.18,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 75.58,
+      "tooltip": "Checkmate @ 75.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 78.06,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 77.06,
+      "tooltip": "Blazing Shot @ 77.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 77.66,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 77.06,
+      "tooltip": "Double Check @ 77.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 79.55,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 78.55,
+      "tooltip": "Blazing Shot @ 78.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 79.15,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 78.55,
+      "tooltip": "Double Check @ 78.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 81.03,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 80.03,
+      "tooltip": "Blazing Shot @ 80.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 80.63,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 80.03,
+      "tooltip": "Checkmate @ 80.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 82.51,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 81.51,
+      "tooltip": "Heated Slug Shot @ 81.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 82.11,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 81.51,
+      "tooltip": "Checkmate @ 81.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16500,
+      "color": "#3b82f6",
+      "endSec": 84.98,
+      "iconPath": "/i/003000/003045.png",
+      "label": "Air",
+      "startSec": 83.98,
+      "tooltip": "Air Anchor @ 84.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 84.58,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 83.98,
+      "tooltip": "Automaton Queen @ 84.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 87.45,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 86.45,
+      "tooltip": "Drill @ 86.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 89.92,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 88.92,
+      "tooltip": "Heated Clean Shot @ 88.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 92.39,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 91.39,
+      "tooltip": "Heated Split Shot @ 91.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 91.99,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 91.39,
+      "tooltip": "Double Check @ 91.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 94.86,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 93.86,
+      "tooltip": "Heated Slug Shot @ 93.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 97.33,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 96.33,
+      "tooltip": "Heated Clean Shot @ 96.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 96.93,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 96.33,
+      "tooltip": "Checkmate @ 96.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 99.8,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 98.8,
+      "tooltip": "Heated Split Shot @ 98.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 102.27,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 101.27,
+      "tooltip": "Heated Slug Shot @ 101.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 104.74,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 103.74,
+      "tooltip": "Heated Clean Shot @ 103.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 107.21,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 106.21,
+      "tooltip": "Drill @ 106.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 109.68,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 108.68,
+      "tooltip": "Heated Split Shot @ 108.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 112.15,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 111.15,
+      "tooltip": "Heated Slug Shot @ 111.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 111.75,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 111.15,
+      "tooltip": "Hypercharge @ 111.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 114.62,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 113.62,
+      "tooltip": "Blazing Shot @ 113.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 114.22,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 113.62,
+      "tooltip": "Double Check @ 113.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 116.1,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 115.1,
+      "tooltip": "Blazing Shot @ 115.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 115.7,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 115.1,
+      "tooltip": "Checkmate @ 115.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 117.58,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 116.58,
+      "tooltip": "Blazing Shot @ 116.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 117.18,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 116.58,
+      "tooltip": "Double Check @ 116.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 119.07,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 118.07,
+      "tooltip": "Blazing Shot @ 118.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 118.67,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 118.07,
+      "tooltip": "Checkmate @ 118.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 120.55,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 119.55,
+      "tooltip": "Blazing Shot @ 119.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 120.15,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 119.55,
+      "tooltip": "Double Check @ 119.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 122.03,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 121.03,
+      "tooltip": "Heated Clean Shot @ 121.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 121.63,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 121.03,
+      "tooltip": "Checkmate @ 121.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 124.5,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 123.5,
+      "tooltip": "Heated Split Shot @ 123.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16500,
+      "color": "#3b82f6",
+      "endSec": 126.97,
+      "iconPath": "/i/003000/003045.png",
+      "label": "Air",
+      "startSec": 125.97,
+      "tooltip": "Air Anchor @ 126.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 126.57,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 125.97,
+      "tooltip": "Automaton Queen @ 126.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 2876,
+      "color": "#f59e0b",
+      "endSec": 127.27,
+      "iconPath": "/i/003000/003022.png",
+      "label": "Rea",
+      "startSec": 126.67,
+      "tooltip": "Reassemble @ 126.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25788,
+      "color": "#3b82f6",
+      "endSec": 129.44,
+      "iconPath": "/i/003000/003048.png",
+      "label": "Cha",
+      "startSec": 128.44,
+      "tooltip": "Chain Saw @ 128.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36981,
+      "color": "#3b82f6",
+      "endSec": 131.91,
+      "iconPath": "/i/003000/003500.png",
+      "label": "Exc",
+      "startSec": 130.91,
+      "tooltip": "Excavator @ 130.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 134.38,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 133.38,
+      "tooltip": "Drill @ 133.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 136.85,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 135.85,
+      "tooltip": "Heated Slug Shot @ 135.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7414,
+      "color": "#f59e0b",
+      "endSec": 136.45,
+      "iconPath": "/i/003000/003034.png",
+      "label": "Bar",
+      "startSec": 135.85,
+      "tooltip": "Barrel Stabilizer @ 135.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 137.15,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 136.55,
+      "tooltip": "Hypercharge @ 136.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 139.32,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 138.32,
+      "tooltip": "Blazing Shot @ 138.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 2878,
+      "color": "#f59e0b",
+      "endSec": 138.92,
+      "iconPath": "/i/003000/003018.png",
+      "label": "Wil",
+      "startSec": 138.32,
+      "tooltip": "Wildfire @ 138.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 140.8,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 139.8,
+      "tooltip": "Blazing Shot @ 139.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 140.4,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 139.8,
+      "tooltip": "Double Check @ 139.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 142.28,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 141.28,
+      "tooltip": "Blazing Shot @ 141.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 141.88,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 141.28,
+      "tooltip": "Checkmate @ 141.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 143.77,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 142.77,
+      "tooltip": "Blazing Shot @ 142.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 143.37,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 142.77,
+      "tooltip": "Double Check @ 142.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 145.25,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 144.25,
+      "tooltip": "Blazing Shot @ 144.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 144.85,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 144.25,
+      "tooltip": "Checkmate @ 144.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36982,
+      "color": "#3b82f6",
+      "endSec": 146.73,
+      "iconPath": "/i/003000/003049.png",
+      "label": "Ful",
+      "startSec": 145.73,
+      "tooltip": "Full Metal Field @ 145.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 146.33,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 145.73,
+      "tooltip": "Double Check @ 145.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 147.03,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 146.43,
+      "tooltip": "Checkmate @ 146.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 149.2,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 148.2,
+      "tooltip": "Drill @ 148.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 151.67,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 150.67,
+      "tooltip": "Heated Clean Shot @ 150.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 151.27,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 150.67,
+      "tooltip": "Automaton Queen @ 150.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 151.97,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 151.37,
+      "tooltip": "Double Check @ 151.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 154.14,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 153.14,
+      "tooltip": "Heated Split Shot @ 153.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 156.61,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 155.61,
+      "tooltip": "Heated Slug Shot @ 155.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 156.21,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 155.61,
+      "tooltip": "Checkmate @ 155.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 159.08,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 158.08,
+      "tooltip": "Heated Clean Shot @ 158.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 161.55,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 160.55,
+      "tooltip": "Heated Split Shot @ 160.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 164.02,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 163.02,
+      "tooltip": "Heated Slug Shot @ 163.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 166.49,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 165.49,
+      "tooltip": "Drill @ 165.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16500,
+      "color": "#3b82f6",
+      "endSec": 168.96,
+      "iconPath": "/i/003000/003045.png",
+      "label": "Air",
+      "startSec": 167.96,
+      "tooltip": "Air Anchor @ 168.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 171.43,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 170.43,
+      "tooltip": "Heated Clean Shot @ 170.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 171.03,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 170.43,
+      "tooltip": "Hypercharge @ 170.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 173.9,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 172.9,
+      "tooltip": "Blazing Shot @ 172.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 173.5,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 172.9,
+      "tooltip": "Double Check @ 172.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 175.38,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 174.38,
+      "tooltip": "Blazing Shot @ 174.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 174.98,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 174.38,
+      "tooltip": "Checkmate @ 174.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 176.86,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 175.86,
+      "tooltip": "Blazing Shot @ 175.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 176.46,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 175.86,
+      "tooltip": "Double Check @ 175.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 178.35,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 177.35,
+      "tooltip": "Blazing Shot @ 177.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 177.95,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 177.35,
+      "tooltip": "Checkmate @ 177.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 179.83,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 178.83,
+      "tooltip": "Blazing Shot @ 178.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 179.43,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 178.83,
+      "tooltip": "Double Check @ 178.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 181.31,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 180.31,
+      "tooltip": "Heated Split Shot @ 180.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 180.91,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 180.31,
+      "tooltip": "Checkmate @ 180.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 183.78,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 182.78,
+      "tooltip": "Heated Slug Shot @ 182.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 186.25,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 185.25,
+      "tooltip": "Drill @ 185.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 188.72,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 187.72,
+      "tooltip": "Heated Clean Shot @ 187.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 188.32,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 187.72,
+      "tooltip": "Automaton Queen @ 187.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25788,
+      "color": "#3b82f6",
+      "endSec": 191.19,
+      "iconPath": "/i/003000/003048.png",
+      "label": "Cha",
+      "startSec": 190.19,
+      "tooltip": "Chain Saw @ 190.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 2876,
+      "color": "#f59e0b",
+      "endSec": 190.79,
+      "iconPath": "/i/003000/003022.png",
+      "label": "Rea",
+      "startSec": 190.19,
+      "tooltip": "Reassemble @ 190.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36981,
+      "color": "#3b82f6",
+      "endSec": 193.66,
+      "iconPath": "/i/003000/003500.png",
+      "label": "Exc",
+      "startSec": 192.66,
+      "tooltip": "Excavator @ 192.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 196.13,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 195.13,
+      "tooltip": "Heated Split Shot @ 195.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 198.6,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 197.6,
+      "tooltip": "Heated Slug Shot @ 197.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 198.2,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 197.6,
+      "tooltip": "Double Check @ 197.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 201.07,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 200.07,
+      "tooltip": "Heated Clean Shot @ 200.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 200.67,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 200.07,
+      "tooltip": "Checkmate @ 200.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 201.37,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 200.77,
+      "tooltip": "Automaton Queen @ 200.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 203.54,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 202.54,
+      "tooltip": "Heated Split Shot @ 202.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 206.01,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 205.01,
+      "tooltip": "Drill @ 205.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 208.48,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 207.48,
+      "tooltip": "Heated Slug Shot @ 207.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16500,
+      "color": "#3b82f6",
+      "endSec": 210.95,
+      "iconPath": "/i/003000/003045.png",
+      "label": "Air",
+      "startSec": 209.95,
+      "tooltip": "Air Anchor @ 209.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 213.42,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 212.42,
+      "tooltip": "Heated Clean Shot @ 212.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 215.89,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 214.89,
+      "tooltip": "Heated Split Shot @ 214.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 215.49,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 214.89,
+      "tooltip": "Hypercharge @ 214.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 218.36,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 217.36,
+      "tooltip": "Blazing Shot @ 217.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 217.96,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 217.36,
+      "tooltip": "Double Check @ 217.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 219.84,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 218.84,
+      "tooltip": "Blazing Shot @ 218.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 219.44,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 218.84,
+      "tooltip": "Checkmate @ 218.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 221.32,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 220.32,
+      "tooltip": "Blazing Shot @ 220.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 220.92,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 220.32,
+      "tooltip": "Double Check @ 220.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 222.81,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 221.81,
+      "tooltip": "Blazing Shot @ 221.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 222.41,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 221.81,
+      "tooltip": "Checkmate @ 221.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 224.29,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 223.29,
+      "tooltip": "Blazing Shot @ 223.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 223.89,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 223.29,
+      "tooltip": "Double Check @ 223.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 225.77,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 224.77,
+      "tooltip": "Drill @ 224.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 225.37,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 224.77,
+      "tooltip": "Checkmate @ 224.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 228.24,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 227.24,
+      "tooltip": "Heated Slug Shot @ 227.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 230.71,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 229.71,
+      "tooltip": "Heated Clean Shot @ 229.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 233.18,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 232.18,
+      "tooltip": "Heated Split Shot @ 232.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 235.65,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 234.65,
+      "tooltip": "Heated Slug Shot @ 234.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 238.12,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 237.12,
+      "tooltip": "Heated Clean Shot @ 237.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 237.72,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 237.12,
+      "tooltip": "Automaton Queen @ 237.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 240.59,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 239.59,
+      "tooltip": "Heated Split Shot @ 239.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 243.06,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 242.06,
+      "tooltip": "Heated Slug Shot @ 242.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 242.66,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 242.06,
+      "tooltip": "Double Check @ 242.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 245.53,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 244.53,
+      "tooltip": "Heated Clean Shot @ 244.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 245.13,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 244.53,
+      "tooltip": "Checkmate @ 244.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 2876,
+      "color": "#f59e0b",
+      "endSec": 245.83,
+      "iconPath": "/i/003000/003022.png",
+      "label": "Rea",
+      "startSec": 245.23,
+      "tooltip": "Reassemble @ 245.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 248.0,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 247.0,
+      "tooltip": "Drill @ 247.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 250.47,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 249.47,
+      "tooltip": "Heated Split Shot @ 249.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16500,
+      "color": "#3b82f6",
+      "endSec": 252.94,
+      "iconPath": "/i/003000/003045.png",
+      "label": "Air",
+      "startSec": 251.94,
+      "tooltip": "Air Anchor @ 251.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25788,
+      "color": "#3b82f6",
+      "endSec": 255.41,
+      "iconPath": "/i/003000/003048.png",
+      "label": "Cha",
+      "startSec": 254.41,
+      "tooltip": "Chain Saw @ 254.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 255.01,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 254.41,
+      "tooltip": "Automaton Queen @ 254.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36981,
+      "color": "#3b82f6",
+      "endSec": 257.88,
+      "iconPath": "/i/003000/003500.png",
+      "label": "Exc",
+      "startSec": 256.88,
+      "tooltip": "Excavator @ 256.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7414,
+      "color": "#f59e0b",
+      "endSec": 257.48,
+      "iconPath": "/i/003000/003034.png",
+      "label": "Bar",
+      "startSec": 256.88,
+      "tooltip": "Barrel Stabilizer @ 256.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 258.18,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 257.58,
+      "tooltip": "Hypercharge @ 257.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 260.35,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 259.35,
+      "tooltip": "Blazing Shot @ 259.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 259.95,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 259.35,
+      "tooltip": "Double Check @ 259.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 261.83,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 260.83,
+      "tooltip": "Blazing Shot @ 260.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 261.43,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 260.83,
+      "tooltip": "Checkmate @ 260.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 263.31,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 262.31,
+      "tooltip": "Blazing Shot @ 262.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 262.91,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 262.31,
+      "tooltip": "Double Check @ 262.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 264.8,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 263.8,
+      "tooltip": "Blazing Shot @ 263.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 264.4,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 263.8,
+      "tooltip": "Checkmate @ 263.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 266.28,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 265.28,
+      "tooltip": "Blazing Shot @ 265.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 265.88,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 265.28,
+      "tooltip": "Double Check @ 265.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36982,
+      "color": "#3b82f6",
+      "endSec": 267.76,
+      "iconPath": "/i/003000/003049.png",
+      "label": "Ful",
+      "startSec": 266.76,
+      "tooltip": "Full Metal Field @ 266.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 267.36,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 266.76,
+      "tooltip": "Checkmate @ 266.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 270.23,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 269.23,
+      "tooltip": "Drill @ 269.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 272.7,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 271.7,
+      "tooltip": "Heated Slug Shot @ 271.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 275.17,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 274.17,
+      "tooltip": "Heated Clean Shot @ 274.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 277.64,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 276.64,
+      "tooltip": "Heated Split Shot @ 276.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 277.24,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 276.64,
+      "tooltip": "Hypercharge @ 276.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 2878,
+      "color": "#f59e0b",
+      "endSec": 277.94,
+      "iconPath": "/i/003000/003018.png",
+      "label": "Wil",
+      "startSec": 277.34,
+      "tooltip": "Wildfire @ 277.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 280.11,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 279.11,
+      "tooltip": "Blazing Shot @ 279.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 279.71,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 279.11,
+      "tooltip": "Double Check @ 279.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 281.59,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 280.59,
+      "tooltip": "Blazing Shot @ 280.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 281.19,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 280.59,
+      "tooltip": "Checkmate @ 280.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 283.07,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 282.07,
+      "tooltip": "Blazing Shot @ 282.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 282.67,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 282.07,
+      "tooltip": "Double Check @ 282.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 284.56,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 283.56,
+      "tooltip": "Blazing Shot @ 283.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 284.16,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 283.56,
+      "tooltip": "Checkmate @ 283.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 286.04,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 285.04,
+      "tooltip": "Blazing Shot @ 285.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 2876,
+      "color": "#f59e0b",
+      "endSec": 285.64,
+      "iconPath": "/i/003000/003022.png",
+      "label": "Rea",
+      "startSec": 285.04,
+      "tooltip": "Reassemble @ 285.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 287.52,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 286.52,
+      "tooltip": "Drill @ 286.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 287.12,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 286.52,
+      "tooltip": "Double Check @ 286.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 287.82,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 287.22,
+      "tooltip": "Checkmate @ 287.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 289.99,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 288.99,
+      "tooltip": "Heated Slug Shot @ 289.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 292.46,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 291.46,
+      "tooltip": "Heated Clean Shot @ 291.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16500,
+      "color": "#3b82f6",
+      "endSec": 294.93,
+      "iconPath": "/i/003000/003045.png",
+      "label": "Air",
+      "startSec": 293.93,
+      "tooltip": "Air Anchor @ 293.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 297.4,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 296.4,
+      "tooltip": "Heated Split Shot @ 296.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 299.87,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 298.87,
+      "tooltip": "Heated Slug Shot @ 298.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 302.34,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 301.34,
+      "tooltip": "Heated Clean Shot @ 301.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 301.94,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 301.34,
+      "tooltip": "Automaton Queen @ 301.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 302.64,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 302.04,
+      "tooltip": "Double Check @ 302.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 304.81,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 303.81,
+      "tooltip": "Heated Split Shot @ 303.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 307.28,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 306.28,
+      "tooltip": "Drill @ 306.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 306.88,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 306.28,
+      "tooltip": "Checkmate @ 306.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 309.75,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 308.75,
+      "tooltip": "Heated Slug Shot @ 308.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 312.22,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 311.22,
+      "tooltip": "Heated Clean Shot @ 311.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 314.69,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 313.69,
+      "tooltip": "Heated Split Shot @ 313.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 25788,
+      "color": "#3b82f6",
+      "endSec": 317.16,
+      "iconPath": "/i/003000/003048.png",
+      "label": "Cha",
+      "startSec": 316.16,
+      "tooltip": "Chain Saw @ 316.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36981,
+      "color": "#3b82f6",
+      "endSec": 319.63,
+      "iconPath": "/i/003000/003500.png",
+      "label": "Exc",
+      "startSec": 318.63,
+      "tooltip": "Excavator @ 318.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 319.23,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 318.63,
+      "tooltip": "Automaton Queen @ 318.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 319.93,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 319.33,
+      "tooltip": "Hypercharge @ 319.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 322.1,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 321.1,
+      "tooltip": "Blazing Shot @ 321.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 321.7,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 321.1,
+      "tooltip": "Double Check @ 321.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 323.58,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 322.58,
+      "tooltip": "Blazing Shot @ 322.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 323.18,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 322.58,
+      "tooltip": "Checkmate @ 322.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 325.06,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 324.06,
+      "tooltip": "Blazing Shot @ 324.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 324.66,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 324.06,
+      "tooltip": "Double Check @ 324.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 326.55,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 325.55,
+      "tooltip": "Blazing Shot @ 325.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 326.15,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 325.55,
+      "tooltip": "Checkmate @ 325.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 328.03,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 327.03,
+      "tooltip": "Blazing Shot @ 327.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 2876,
+      "color": "#f59e0b",
+      "endSec": 327.63,
+      "iconPath": "/i/003000/003022.png",
+      "label": "Rea",
+      "startSec": 327.03,
+      "tooltip": "Reassemble @ 327.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 329.51,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 328.51,
+      "tooltip": "Drill @ 328.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 329.11,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 328.51,
+      "tooltip": "Double Check @ 328.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 329.81,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 329.21,
+      "tooltip": "Checkmate @ 329.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 331.98,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 330.98,
+      "tooltip": "Heated Slug Shot @ 331.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 334.45,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 333.45,
+      "tooltip": "Heated Clean Shot @ 333.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16500,
+      "color": "#3b82f6",
+      "endSec": 336.92,
+      "iconPath": "/i/003000/003045.png",
+      "label": "Air",
+      "startSec": 335.92,
+      "tooltip": "Air Anchor @ 335.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 339.39,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 338.39,
+      "tooltip": "Heated Split Shot @ 338.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 341.86,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 340.86,
+      "tooltip": "Heated Slug Shot @ 340.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 344.33,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 343.33,
+      "tooltip": "Heated Clean Shot @ 343.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16498,
+      "color": "#3b82f6",
+      "endSec": 346.8,
+      "iconPath": "/i/003000/003043.png",
+      "label": "Dri",
+      "startSec": 345.8,
+      "tooltip": "Drill @ 345.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 349.27,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 348.27,
+      "tooltip": "Heated Split Shot @ 348.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 348.87,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 348.27,
+      "tooltip": "Double Check @ 348.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7412,
+      "color": "#3b82f6",
+      "endSec": 351.74,
+      "iconPath": "/i/003000/003032.png",
+      "label": "Hea",
+      "startSec": 350.74,
+      "tooltip": "Heated Slug Shot @ 350.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36980,
+      "color": "#f59e0b",
+      "endSec": 351.34,
+      "iconPath": "/i/003000/003508.png",
+      "label": "Che",
+      "startSec": 350.74,
+      "tooltip": "Checkmate @ 350.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7413,
+      "color": "#3b82f6",
+      "endSec": 354.21,
+      "iconPath": "/i/003000/003033.png",
+      "label": "Hea",
+      "startSec": 353.21,
+      "tooltip": "Heated Clean Shot @ 353.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 16501,
+      "color": "#f59e0b",
+      "endSec": 353.81,
+      "iconPath": "/i/003000/003501.png",
+      "label": "Aut",
+      "startSec": 353.21,
+      "tooltip": "Automaton Queen @ 353.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7411,
+      "color": "#3b82f6",
+      "endSec": 356.68,
+      "iconPath": "/i/003000/003031.png",
+      "label": "Hea",
+      "startSec": 355.68,
+      "tooltip": "Heated Split Shot @ 355.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 17209,
+      "color": "#f59e0b",
+      "endSec": 356.28,
+      "iconPath": "/i/003000/003041.png",
+      "label": "Hyp",
+      "startSec": 355.68,
+      "tooltip": "Hypercharge @ 355.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 359.15,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 358.15,
+      "tooltip": "Blazing Shot @ 358.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36978,
+      "color": "#3b82f6",
+      "endSec": 360.63,
+      "iconPath": "/i/003000/003506.png",
+      "label": "Bla",
+      "startSec": 359.63,
+      "tooltip": "Blazing Shot @ 359.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36979,
+      "color": "#f59e0b",
+      "endSec": 360.23,
+      "iconPath": "/i/003000/003507.png",
+      "label": "Dou",
+      "startSec": 359.63,
+      "tooltip": "Double Check @ 359.6s (idealized)",
+      "yOffset": -0.55
+    }
+  ],
+  "idealizedTrackCanonical": [],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "Tincture",
+      "children": [],
+      "kind": "tincture",
+      "lostPotency": 1973.17,
+      "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+      "summary": "Used 0 of 2 tinctures",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 0,
+          "abilityName": "",
+          "children": [],
+          "kind": "cadence",
+          "lostPotency": 1600.0,
+          "prescription": "Press the next GCD the moment it's ready.",
+          "summary": "Loose GCD pacing: ~5 GCDs of slightly-late casts, no single gap",
+          "timeSec": 0.0
+        },
+        {
+          "abilityId": 17209,
+          "abilityName": "Hypercharge",
+          "children": [],
+          "kind": "missed_enabler",
+          "lostPotency": 1064.76,
+          "prescription": "Keep Hypercharge on cooldown; one more fits here.",
+          "summary": "Missed Hypercharge, fit one around 0:13",
+          "timeSec": 13.05
+        },
+        {
+          "abilityId": 17209,
+          "abilityName": "Hypercharge",
+          "children": [],
+          "kind": "missed_enabler",
+          "lostPotency": 1064.76,
+          "prescription": "Keep Hypercharge on cooldown; one more fits here.",
+          "summary": "Missed Hypercharge, fit one around 0:25",
+          "timeSec": 24.7
+        },
+        {
+          "abilityId": 36979,
+          "abilityName": "Double Check",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 720.0,
+          "prescription": "Fit 4 more Double Check. One belonged around 0:21, each worth ~180p.",
+          "summary": "Missed Double Check \u00d74, first around 0:21",
+          "timeSec": 20.75
+        },
+        {
+          "abilityId": 36980,
+          "abilityName": "Checkmate",
+          "children": [],
+          "kind": "missed_cast",
+          "lostPotency": 360.0,
+          "prescription": "Fit 2 more Checkmate. One belonged around 0:29, each worth ~180p.",
+          "summary": "Missed Checkmate \u00d72, first around 0:29",
+          "timeSec": 28.65
+        }
+      ],
+      "countGaps": [
+        {
+          "name": "Blazing Shot",
+          "sim": 57,
+          "you": 50
+        },
+        {
+          "name": "Double Check",
+          "sim": 43,
+          "you": 39
+        },
+        {
+          "name": "Checkmate",
+          "sim": 41,
+          "you": 39
+        },
+        {
+          "name": "Hypercharge",
+          "sim": 12,
+          "you": 10
+        },
+        {
+          "name": "Heated Clean Shot",
+          "sim": 23,
+          "you": 24
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 1488.89,
+      "prescription": "Biggest count gaps: Blazing Shot and Double Check. Extra Heated Clean Shot casts took those slots at lower value.",
+      "summary": "Spacing & sequencing: 5 small located losses below the listing threshold",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16498,
+      "abilityName": "Drill",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #3: Blazing Shot instead of Drill (ordering only)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "abilityName": "Heated Slug Shot",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #4: Blazing Shot instead of Heated Slug Shot (ordering only)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 25788,
+      "abilityName": "Chain Saw",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #5: Blazing Shot instead of Chain Saw (ordering only)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 7413,
+      "abilityName": "Heated Clean Shot",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #6: Blazing Shot instead of Heated Clean Shot (ordering only)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 36981,
+      "abilityName": "Excavator",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #7: Blazing Shot instead of Excavator (ordering only)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 7412,
+      "abilityName": "Heated Slug Shot",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #12: Heated Split Shot instead of Heated Slug Shot (ordering only)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 16500,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003045.png",
+        "label": "Air",
+        "startSec": 0.0,
+        "tooltip": "Air Anchor  (GCD)  @  0:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 0.0,
+        "tooltip": "Double Check  (oGCD)  @  0:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 1.2,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 0.7,
+        "tooltip": "Checkmate  (oGCD)  @  0:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25788,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/003000/003048.png",
+        "label": "Cha",
+        "startSec": 2.5,
+        "tooltip": "Chain Saw  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7414,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/003000/003034.png",
+        "label": "Bar",
+        "startSec": 2.5,
+        "tooltip": "Barrel Stabilizer  (oGCD)  @  0:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 17209,
+        "color": "#777777",
+        "endSec": 3.7,
+        "iconPath": "/i/003000/003041.png",
+        "label": "Hyp",
+        "startSec": 3.2,
+        "tooltip": "Hypercharge  (oGCD)  @  0:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 5.0,
+        "tooltip": "Blazing Shot  (GCD)  @  0:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 5.0,
+        "tooltip": "Double Check  (oGCD)  @  0:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 7.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 6.5,
+        "tooltip": "Blazing Shot  (GCD)  @  0:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 7.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 6.5,
+        "tooltip": "Checkmate  (oGCD)  @  0:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 8.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 8.0,
+        "tooltip": "Blazing Shot  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 8.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 8.0,
+        "tooltip": "Double Check  (oGCD)  @  0:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 10.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 9.5,
+        "tooltip": "Blazing Shot  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 10.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 9.5,
+        "tooltip": "Checkmate  (oGCD)  @  0:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 11.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 11.0,
+        "tooltip": "Blazing Shot  (GCD)  @  0:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 11.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 11.0,
+        "tooltip": "Double Check  (oGCD)  @  0:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36982,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/003000/003049.png",
+        "label": "Ful",
+        "startSec": 12.5,
+        "tooltip": "Full Metal Field  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 12.5,
+        "tooltip": "Checkmate  (oGCD)  @  0:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 2876,
+        "color": "#777777",
+        "endSec": 13.7,
+        "iconPath": "/i/003000/003022.png",
+        "label": "Rea",
+        "startSec": 13.2,
+        "tooltip": "Reassemble  (oGCD)  @  0:13",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36981,
+        "color": "#777777",
+        "endSec": 15.5,
+        "iconPath": "/i/003000/003500.png",
+        "label": "Exc",
+        "startSec": 15.0,
+        "tooltip": "Excavator  (GCD)  @  0:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 15.5,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 15.0,
+        "tooltip": "Automaton Queen  (oGCD)  @  0:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 16.2,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 15.7,
+        "tooltip": "Double Check  (oGCD)  @  0:16",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 18.0,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 17.5,
+        "tooltip": "Drill  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 18.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 17.5,
+        "tooltip": "Double Check  (oGCD)  @  0:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 18.7,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 18.2,
+        "tooltip": "Checkmate  (oGCD)  @  0:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 20.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 20.0,
+        "tooltip": "Drill  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 23.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 22.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 25.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 25.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  0:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 25.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 25.0,
+        "tooltip": "Checkmate  (oGCD)  @  0:25",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 28.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 27.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 30.5,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 30.0,
+        "tooltip": "Heated Split Shot  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 33.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 32.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 35.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 37.5,
+        "tooltip": "Drill  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16500,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/003000/003045.png",
+        "label": "Air",
+        "startSec": 40.0,
+        "tooltip": "Air Anchor  (GCD)  @  0:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 43.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 42.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  0:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 45.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 45.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  0:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 45.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 45.0,
+        "tooltip": "Double Check  (oGCD)  @  0:45",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 48.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 47.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 48.0,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 47.5,
+        "tooltip": "Automaton Queen  (oGCD)  @  0:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 50.5,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 50.0,
+        "tooltip": "Heated Split Shot  (GCD)  @  0:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 17209,
+        "color": "#777777",
+        "endSec": 50.5,
+        "iconPath": "/i/003000/003041.png",
+        "label": "Hyp",
+        "startSec": 50.0,
+        "tooltip": "Hypercharge  (oGCD)  @  0:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 2878,
+        "color": "#777777",
+        "endSec": 51.2,
+        "iconPath": "/i/003000/003018.png",
+        "label": "Wil",
+        "startSec": 50.7,
+        "tooltip": "Wildfire  (oGCD)  @  0:51",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 53.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 52.5,
+        "tooltip": "Blazing Shot  (GCD)  @  0:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 53.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 52.5,
+        "tooltip": "Checkmate  (oGCD)  @  0:52",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 54.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 54.0,
+        "tooltip": "Blazing Shot  (GCD)  @  0:54",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 54.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 54.0,
+        "tooltip": "Double Check  (oGCD)  @  0:54",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 56.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 55.5,
+        "tooltip": "Blazing Shot  (GCD)  @  0:56",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 56.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 55.5,
+        "tooltip": "Checkmate  (oGCD)  @  0:56",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 57.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 57.0,
+        "tooltip": "Blazing Shot  (GCD)  @  0:57",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 57.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 57.0,
+        "tooltip": "Double Check  (oGCD)  @  0:57",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 59.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 58.5,
+        "tooltip": "Blazing Shot  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 2876,
+        "color": "#777777",
+        "endSec": 59.0,
+        "iconPath": "/i/003000/003022.png",
+        "label": "Rea",
+        "startSec": 58.5,
+        "tooltip": "Reassemble  (oGCD)  @  0:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 60.0,
+        "tooltip": "Drill  (GCD)  @  1:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 60.0,
+        "tooltip": "Double Check  (oGCD)  @  1:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 61.2,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 60.7,
+        "tooltip": "Checkmate  (oGCD)  @  1:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25788,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/003000/003048.png",
+        "label": "Cha",
+        "startSec": 62.5,
+        "tooltip": "Chain Saw  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36981,
+        "color": "#777777",
+        "endSec": 65.5,
+        "iconPath": "/i/003000/003500.png",
+        "label": "Exc",
+        "startSec": 65.0,
+        "tooltip": "Excavator  (GCD)  @  1:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 68.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 67.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 70.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 70.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 70.5,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 70.0,
+        "tooltip": "Automaton Queen  (oGCD)  @  1:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 71.2,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 70.7,
+        "tooltip": "Checkmate  (oGCD)  @  1:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 73.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 72.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 75.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 75.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  1:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 78.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 77.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16500,
+        "color": "#777777",
+        "endSec": 80.5,
+        "iconPath": "/i/003000/003045.png",
+        "label": "Air",
+        "startSec": 80.0,
+        "tooltip": "Air Anchor  (GCD)  @  1:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 83.0,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 82.5,
+        "tooltip": "Drill  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 85.5,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 85.0,
+        "tooltip": "Heated Split Shot  (GCD)  @  1:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 88.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 87.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 90.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 90.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  1:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 90.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 90.0,
+        "tooltip": "Double Check  (oGCD)  @  1:30",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 92.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 95.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  1:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 17209,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/003000/003041.png",
+        "label": "Hyp",
+        "startSec": 95.0,
+        "tooltip": "Hypercharge  (oGCD)  @  1:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 98.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 97.5,
+        "tooltip": "Blazing Shot  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 98.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 97.5,
+        "tooltip": "Checkmate  (oGCD)  @  1:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 99.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 99.0,
+        "tooltip": "Blazing Shot  (GCD)  @  1:39",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 99.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 99.0,
+        "tooltip": "Double Check  (oGCD)  @  1:39",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 101.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 100.5,
+        "tooltip": "Blazing Shot  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 101.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 100.5,
+        "tooltip": "Checkmate  (oGCD)  @  1:40",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 102.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 102.0,
+        "tooltip": "Blazing Shot  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 102.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 102.0,
+        "tooltip": "Double Check  (oGCD)  @  1:42",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 104.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 103.5,
+        "tooltip": "Blazing Shot  (GCD)  @  1:44",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 104.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 103.5,
+        "tooltip": "Checkmate  (oGCD)  @  1:44",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 105.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 105.0,
+        "tooltip": "Drill  (GCD)  @  1:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 105.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 105.0,
+        "tooltip": "Double Check  (oGCD)  @  1:45",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 107.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 107.5,
+        "tooltip": "Automaton Queen  (oGCD)  @  1:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 110.5,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 110.0,
+        "tooltip": "Heated Split Shot  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 113.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 112.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  1:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 115.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 115.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  1:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 115.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 115.0,
+        "tooltip": "Checkmate  (oGCD)  @  1:55",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 118.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 117.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16500,
+        "color": "#777777",
+        "endSec": 120.5,
+        "iconPath": "/i/003000/003045.png",
+        "label": "Air",
+        "startSec": 120.0,
+        "tooltip": "Air Anchor  (GCD)  @  2:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 2876,
+        "color": "#777777",
+        "endSec": 120.5,
+        "iconPath": "/i/003000/003022.png",
+        "label": "Rea",
+        "startSec": 120.0,
+        "tooltip": "Reassemble  (oGCD)  @  2:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25788,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/003000/003048.png",
+        "label": "Cha",
+        "startSec": 122.5,
+        "tooltip": "Chain Saw  (GCD)  @  2:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7414,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/003000/003034.png",
+        "label": "Bar",
+        "startSec": 122.5,
+        "tooltip": "Barrel Stabilizer  (oGCD)  @  2:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 17209,
+        "color": "#777777",
+        "endSec": 123.7,
+        "iconPath": "/i/003000/003041.png",
+        "label": "Hyp",
+        "startSec": 123.2,
+        "tooltip": "Hypercharge  (oGCD)  @  2:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 125.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 125.0,
+        "tooltip": "Blazing Shot  (GCD)  @  2:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 125.5,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 125.0,
+        "tooltip": "Automaton Queen  (oGCD)  @  2:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 127.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 126.5,
+        "tooltip": "Blazing Shot  (GCD)  @  2:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 127.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 126.5,
+        "tooltip": "Double Check  (oGCD)  @  2:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 128.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 128.0,
+        "tooltip": "Blazing Shot  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 128.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 128.0,
+        "tooltip": "Double Check  (oGCD)  @  2:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 130.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 129.5,
+        "tooltip": "Blazing Shot  (GCD)  @  2:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 130.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 129.5,
+        "tooltip": "Checkmate  (oGCD)  @  2:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 131.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 131.0,
+        "tooltip": "Blazing Shot  (GCD)  @  2:11",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 131.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 131.0,
+        "tooltip": "Double Check  (oGCD)  @  2:11",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36982,
+        "color": "#777777",
+        "endSec": 133.0,
+        "iconPath": "/i/003000/003049.png",
+        "label": "Ful",
+        "startSec": 132.5,
+        "tooltip": "Full Metal Field  (GCD)  @  2:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 133.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 132.5,
+        "tooltip": "Checkmate  (oGCD)  @  2:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 133.7,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 133.2,
+        "tooltip": "Checkmate  (oGCD)  @  2:13",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36981,
+        "color": "#777777",
+        "endSec": 135.5,
+        "iconPath": "/i/003000/003500.png",
+        "label": "Exc",
+        "startSec": 135.0,
+        "tooltip": "Excavator  (GCD)  @  2:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 138.0,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 137.5,
+        "tooltip": "Drill  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 140.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 140.0,
+        "tooltip": "Drill  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 143.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 142.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  2:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 145.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 145.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  2:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 148.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 147.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  2:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 150.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 150.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  2:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 150.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 150.0,
+        "tooltip": "Double Check  (oGCD)  @  2:30",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 153.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 152.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  2:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 17209,
+        "color": "#777777",
+        "endSec": 153.0,
+        "iconPath": "/i/003000/003041.png",
+        "label": "Hyp",
+        "startSec": 152.5,
+        "tooltip": "Hypercharge  (oGCD)  @  2:32",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 155.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 155.0,
+        "tooltip": "Blazing Shot  (GCD)  @  2:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 155.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 155.0,
+        "tooltip": "Checkmate  (oGCD)  @  2:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 157.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 156.5,
+        "tooltip": "Blazing Shot  (GCD)  @  2:36",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 157.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 156.5,
+        "tooltip": "Double Check  (oGCD)  @  2:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 158.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 158.0,
+        "tooltip": "Blazing Shot  (GCD)  @  2:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 158.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 158.0,
+        "tooltip": "Checkmate  (oGCD)  @  2:38",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 160.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 159.5,
+        "tooltip": "Blazing Shot  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 160.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 159.5,
+        "tooltip": "Double Check  (oGCD)  @  2:40",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 161.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 161.0,
+        "tooltip": "Blazing Shot  (GCD)  @  2:41",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 2876,
+        "color": "#777777",
+        "endSec": 161.5,
+        "iconPath": "/i/003000/003022.png",
+        "label": "Rea",
+        "startSec": 161.0,
+        "tooltip": "Reassemble  (oGCD)  @  2:41",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16500,
+        "color": "#777777",
+        "endSec": 163.0,
+        "iconPath": "/i/003000/003045.png",
+        "label": "Air",
+        "startSec": 162.5,
+        "tooltip": "Air Anchor  (GCD)  @  2:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 163.0,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 162.5,
+        "tooltip": "Automaton Queen  (oGCD)  @  2:42",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 163.7,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 163.2,
+        "tooltip": "Checkmate  (oGCD)  @  2:43",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 165.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 165.0,
+        "tooltip": "Drill  (GCD)  @  2:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 165.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 165.0,
+        "tooltip": "Double Check  (oGCD)  @  2:45",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 168.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 167.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  2:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 170.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 170.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 173.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 172.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  2:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 175.5,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 175.0,
+        "tooltip": "Heated Split Shot  (GCD)  @  2:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 175.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 175.0,
+        "tooltip": "Checkmate  (oGCD)  @  2:55",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 178.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 177.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  2:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 180.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 180.0,
+        "tooltip": "Drill  (GCD)  @  3:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 25788,
+        "color": "#777777",
+        "endSec": 183.0,
+        "iconPath": "/i/003000/003048.png",
+        "label": "Cha",
+        "startSec": 182.5,
+        "tooltip": "Chain Saw  (GCD)  @  3:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36981,
+        "color": "#777777",
+        "endSec": 185.5,
+        "iconPath": "/i/003000/003500.png",
+        "label": "Exc",
+        "startSec": 185.0,
+        "tooltip": "Excavator  (GCD)  @  3:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 185.5,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 185.0,
+        "tooltip": "Automaton Queen  (oGCD)  @  3:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 188.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 187.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  3:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 190.5,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 190.0,
+        "tooltip": "Heated Split Shot  (GCD)  @  3:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 193.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 192.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  3:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 195.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 195.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  3:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 195.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 195.0,
+        "tooltip": "Double Check  (oGCD)  @  3:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 198.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 197.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  3:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 17209,
+        "color": "#777777",
+        "endSec": 198.0,
+        "iconPath": "/i/003000/003041.png",
+        "label": "Hyp",
+        "startSec": 197.5,
+        "tooltip": "Hypercharge  (oGCD)  @  3:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 2878,
+        "color": "#777777",
+        "endSec": 198.7,
+        "iconPath": "/i/003000/003018.png",
+        "label": "Wil",
+        "startSec": 198.2,
+        "tooltip": "Wildfire  (oGCD)  @  3:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 200.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 200.0,
+        "tooltip": "Blazing Shot  (GCD)  @  3:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 200.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 200.0,
+        "tooltip": "Checkmate  (oGCD)  @  3:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 202.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 201.5,
+        "tooltip": "Blazing Shot  (GCD)  @  3:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 202.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 201.5,
+        "tooltip": "Double Check  (oGCD)  @  3:22",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 203.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 203.0,
+        "tooltip": "Blazing Shot  (GCD)  @  3:23",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 203.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 203.0,
+        "tooltip": "Checkmate  (oGCD)  @  3:23",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 205.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 204.5,
+        "tooltip": "Blazing Shot  (GCD)  @  3:24",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 205.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 204.5,
+        "tooltip": "Double Check  (oGCD)  @  3:24",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 206.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 206.0,
+        "tooltip": "Blazing Shot  (GCD)  @  3:26",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 206.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 206.0,
+        "tooltip": "Checkmate  (oGCD)  @  3:26",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16500,
+        "color": "#777777",
+        "endSec": 208.0,
+        "iconPath": "/i/003000/003045.png",
+        "label": "Air",
+        "startSec": 207.5,
+        "tooltip": "Air Anchor  (GCD)  @  3:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 210.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 210.0,
+        "tooltip": "Drill  (GCD)  @  3:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 210.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 210.0,
+        "tooltip": "Double Check  (oGCD)  @  3:30",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 213.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 212.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  3:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 215.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 215.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  3:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 215.5,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 215.0,
+        "tooltip": "Automaton Queen  (oGCD)  @  3:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 218.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 217.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  3:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 220.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 220.0,
+        "tooltip": "Drill  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 220.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 220.0,
+        "tooltip": "Checkmate  (oGCD)  @  3:40",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 223.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 222.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  3:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 225.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 225.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  3:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 228.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 227.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  3:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 230.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 230.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 233.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 232.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 235.5,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 235.0,
+        "tooltip": "Heated Split Shot  (GCD)  @  3:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 238.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 237.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  3:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 17209,
+        "color": "#777777",
+        "endSec": 238.0,
+        "iconPath": "/i/003000/003041.png",
+        "label": "Hyp",
+        "startSec": 237.5,
+        "tooltip": "Hypercharge  (oGCD)  @  3:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 240.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 240.0,
+        "tooltip": "Blazing Shot  (GCD)  @  4:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 240.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 240.0,
+        "tooltip": "Double Check  (oGCD)  @  4:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 242.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 241.5,
+        "tooltip": "Blazing Shot  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 242.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 241.5,
+        "tooltip": "Double Check  (oGCD)  @  4:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 243.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 243.0,
+        "tooltip": "Blazing Shot  (GCD)  @  4:03",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7414,
+        "color": "#777777",
+        "endSec": 243.5,
+        "iconPath": "/i/003000/003034.png",
+        "label": "Bar",
+        "startSec": 243.0,
+        "tooltip": "Barrel Stabilizer  (oGCD)  @  4:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 245.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 244.5,
+        "tooltip": "Blazing Shot  (GCD)  @  4:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 245.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 244.5,
+        "tooltip": "Checkmate  (oGCD)  @  4:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 246.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 246.0,
+        "tooltip": "Blazing Shot  (GCD)  @  4:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 2876,
+        "color": "#777777",
+        "endSec": 246.5,
+        "iconPath": "/i/003000/003022.png",
+        "label": "Rea",
+        "startSec": 246.0,
+        "tooltip": "Reassemble  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16500,
+        "color": "#777777",
+        "endSec": 248.0,
+        "iconPath": "/i/003000/003045.png",
+        "label": "Air",
+        "startSec": 247.5,
+        "tooltip": "Air Anchor  (GCD)  @  4:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 17209,
+        "color": "#777777",
+        "endSec": 248.0,
+        "iconPath": "/i/003000/003041.png",
+        "label": "Hyp",
+        "startSec": 247.5,
+        "tooltip": "Hypercharge  (oGCD)  @  4:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 248.7,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 248.2,
+        "tooltip": "Double Check  (oGCD)  @  4:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 250.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 250.0,
+        "tooltip": "Blazing Shot  (GCD)  @  4:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 250.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 250.0,
+        "tooltip": "Checkmate  (oGCD)  @  4:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 252.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 251.5,
+        "tooltip": "Blazing Shot  (GCD)  @  4:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 252.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 251.5,
+        "tooltip": "Checkmate  (oGCD)  @  4:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 253.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 253.0,
+        "tooltip": "Blazing Shot  (GCD)  @  4:13",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 253.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 253.0,
+        "tooltip": "Double Check  (oGCD)  @  4:13",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 255.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 254.5,
+        "tooltip": "Blazing Shot  (GCD)  @  4:14",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 255.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 254.5,
+        "tooltip": "Checkmate  (oGCD)  @  4:14",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 256.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 256.0,
+        "tooltip": "Blazing Shot  (GCD)  @  4:16",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 256.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 256.0,
+        "tooltip": "Double Check  (oGCD)  @  4:16",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25788,
+        "color": "#777777",
+        "endSec": 258.0,
+        "iconPath": "/i/003000/003048.png",
+        "label": "Cha",
+        "startSec": 257.5,
+        "tooltip": "Chain Saw  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 258.0,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 257.5,
+        "tooltip": "Automaton Queen  (oGCD)  @  4:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 258.7,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 258.2,
+        "tooltip": "Double Check  (oGCD)  @  4:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36982,
+        "color": "#777777",
+        "endSec": 260.5,
+        "iconPath": "/i/003000/003049.png",
+        "label": "Ful",
+        "startSec": 260.0,
+        "tooltip": "Full Metal Field  (GCD)  @  4:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 260.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 260.0,
+        "tooltip": "Checkmate  (oGCD)  @  4:20",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 261.2,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 260.7,
+        "tooltip": "Checkmate  (oGCD)  @  4:21",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36981,
+        "color": "#777777",
+        "endSec": 263.0,
+        "iconPath": "/i/003000/003500.png",
+        "label": "Exc",
+        "startSec": 262.5,
+        "tooltip": "Excavator  (GCD)  @  4:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 265.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 265.0,
+        "tooltip": "Drill  (GCD)  @  4:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 268.0,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 267.5,
+        "tooltip": "Drill  (GCD)  @  4:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 270.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 270.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  4:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 270.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 270.0,
+        "tooltip": "Double Check  (oGCD)  @  4:30",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 273.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 272.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  4:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 275.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 275.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  4:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 278.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 277.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  4:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 280.5,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 280.0,
+        "tooltip": "Heated Split Shot  (GCD)  @  4:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 283.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 282.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  4:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 283.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 282.5,
+        "tooltip": "Checkmate  (oGCD)  @  4:42",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 285.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 285.0,
+        "tooltip": "Drill  (GCD)  @  4:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16500,
+        "color": "#777777",
+        "endSec": 288.0,
+        "iconPath": "/i/003000/003045.png",
+        "label": "Air",
+        "startSec": 287.5,
+        "tooltip": "Air Anchor  (GCD)  @  4:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 288.0,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 287.5,
+        "tooltip": "Automaton Queen  (oGCD)  @  4:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 290.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 290.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  4:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 293.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 292.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 295.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 295.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  4:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 298.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 297.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  4:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 17209,
+        "color": "#777777",
+        "endSec": 298.0,
+        "iconPath": "/i/003000/003041.png",
+        "label": "Hyp",
+        "startSec": 297.5,
+        "tooltip": "Hypercharge  (oGCD)  @  4:58",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 300.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 300.0,
+        "tooltip": "Blazing Shot  (GCD)  @  5:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 300.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 300.0,
+        "tooltip": "Double Check  (oGCD)  @  5:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 302.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 301.5,
+        "tooltip": "Blazing Shot  (GCD)  @  5:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 302.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 301.5,
+        "tooltip": "Double Check  (oGCD)  @  5:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 303.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 303.0,
+        "tooltip": "Blazing Shot  (GCD)  @  5:03",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 303.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 303.0,
+        "tooltip": "Checkmate  (oGCD)  @  5:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 305.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 304.5,
+        "tooltip": "Blazing Shot  (GCD)  @  5:04",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 305.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 304.5,
+        "tooltip": "Double Check  (oGCD)  @  5:04",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 306.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 306.0,
+        "tooltip": "Blazing Shot  (GCD)  @  5:06",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 2876,
+        "color": "#777777",
+        "endSec": 306.5,
+        "iconPath": "/i/003000/003022.png",
+        "label": "Rea",
+        "startSec": 306.0,
+        "tooltip": "Reassemble  (oGCD)  @  5:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 308.0,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 307.5,
+        "tooltip": "Drill  (GCD)  @  5:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 308.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 307.5,
+        "tooltip": "Checkmate  (oGCD)  @  5:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 308.7,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 308.2,
+        "tooltip": "Checkmate  (oGCD)  @  5:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 310.5,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 310.0,
+        "tooltip": "Heated Split Shot  (GCD)  @  5:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 313.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 312.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  5:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 315.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 315.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  5:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 315.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 315.0,
+        "tooltip": "Double Check  (oGCD)  @  5:15",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25788,
+        "color": "#777777",
+        "endSec": 318.0,
+        "iconPath": "/i/003000/003048.png",
+        "label": "Cha",
+        "startSec": 317.5,
+        "tooltip": "Chain Saw  (GCD)  @  5:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 318.0,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 317.5,
+        "tooltip": "Automaton Queen  (oGCD)  @  5:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36981,
+        "color": "#777777",
+        "endSec": 320.5,
+        "iconPath": "/i/003000/003500.png",
+        "label": "Exc",
+        "startSec": 320.0,
+        "tooltip": "Excavator  (GCD)  @  5:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 323.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 322.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  5:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 325.5,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 325.0,
+        "tooltip": "Drill  (GCD)  @  5:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16500,
+        "color": "#777777",
+        "endSec": 328.0,
+        "iconPath": "/i/003000/003045.png",
+        "label": "Air",
+        "startSec": 327.5,
+        "tooltip": "Air Anchor  (GCD)  @  5:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 328.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 327.5,
+        "tooltip": "Checkmate  (oGCD)  @  5:28",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 330.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 330.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  5:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 333.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 332.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  5:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16501,
+        "color": "#777777",
+        "endSec": 333.0,
+        "iconPath": "/i/003000/003501.png",
+        "label": "Aut",
+        "startSec": 332.5,
+        "tooltip": "Automaton Queen  (oGCD)  @  5:32",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 335.5,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 335.0,
+        "tooltip": "Heated Split Shot  (GCD)  @  5:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 338.0,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 337.5,
+        "tooltip": "Heated Slug Shot  (GCD)  @  5:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 340.5,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 340.0,
+        "tooltip": "Heated Clean Shot  (GCD)  @  5:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7411,
+        "color": "#777777",
+        "endSec": 343.0,
+        "iconPath": "/i/003000/003031.png",
+        "label": "Hea",
+        "startSec": 342.5,
+        "tooltip": "Heated Split Shot  (GCD)  @  5:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 17209,
+        "color": "#777777",
+        "endSec": 343.0,
+        "iconPath": "/i/003000/003041.png",
+        "label": "Hyp",
+        "startSec": 342.5,
+        "tooltip": "Hypercharge  (oGCD)  @  5:42",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 2878,
+        "color": "#777777",
+        "endSec": 343.7,
+        "iconPath": "/i/003000/003018.png",
+        "label": "Wil",
+        "startSec": 343.2,
+        "tooltip": "Wildfire  (oGCD)  @  5:43",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 345.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 345.0,
+        "tooltip": "Blazing Shot  (GCD)  @  5:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 345.5,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 345.0,
+        "tooltip": "Double Check  (oGCD)  @  5:45",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 347.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 346.5,
+        "tooltip": "Blazing Shot  (GCD)  @  5:46",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 347.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 346.5,
+        "tooltip": "Double Check  (oGCD)  @  5:46",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 348.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 348.0,
+        "tooltip": "Blazing Shot  (GCD)  @  5:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 348.5,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 348.0,
+        "tooltip": "Checkmate  (oGCD)  @  5:48",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 350.0,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 349.5,
+        "tooltip": "Blazing Shot  (GCD)  @  5:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36979,
+        "color": "#777777",
+        "endSec": 350.0,
+        "iconPath": "/i/003000/003507.png",
+        "label": "Dou",
+        "startSec": 349.5,
+        "tooltip": "Double Check  (oGCD)  @  5:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36978,
+        "color": "#777777",
+        "endSec": 351.5,
+        "iconPath": "/i/003000/003506.png",
+        "label": "Bla",
+        "startSec": 351.0,
+        "tooltip": "Blazing Shot  (GCD)  @  5:51",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 2876,
+        "color": "#777777",
+        "endSec": 351.5,
+        "iconPath": "/i/003000/003022.png",
+        "label": "Rea",
+        "startSec": 351.0,
+        "tooltip": "Reassemble  (oGCD)  @  5:51",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16498,
+        "color": "#777777",
+        "endSec": 353.0,
+        "iconPath": "/i/003000/003043.png",
+        "label": "Dri",
+        "startSec": 352.5,
+        "tooltip": "Drill  (GCD)  @  5:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 353.0,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 352.5,
+        "tooltip": "Checkmate  (oGCD)  @  5:52",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 36980,
+        "color": "#777777",
+        "endSec": 353.7,
+        "iconPath": "/i/003000/003508.png",
+        "label": "Che",
+        "startSec": 353.2,
+        "tooltip": "Checkmate  (oGCD)  @  5:53",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7412,
+        "color": "#777777",
+        "endSec": 355.5,
+        "iconPath": "/i/003000/003032.png",
+        "label": "Hea",
+        "startSec": 355.0,
+        "tooltip": "Heated Slug Shot  (GCD)  @  5:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7413,
+        "color": "#777777",
+        "endSec": 358.0,
+        "iconPath": "/i/003000/003033.png",
+        "label": "Hea",
+        "startSec": 357.5,
+        "tooltip": "Heated Clean Shot  (GCD)  @  5:58",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 120512.32,
+    "efficiencyPct": 97.21,
+    "fightDurationSec": 360.0,
+    "idealizedPotency": 123974.38,
+    "killTimeSec": 360,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

@@ -28,11 +28,17 @@ DNC-specific rotation encoded:
 - **Burst** — Technical Step (the 2-min) + Devilment + Flourish are the alignment
   anchors the refinement nudges into the raid windows.
 
-Out of scope for v1 (documented, intentionally not modeled):
-- The AoE line (Windmill / Bladeshower / Bloodshower, Fan Dance II, AoE finishes).
-- Exact pre-pull dance timing (the opener pre-builds Standard Finish during the
-  countdown); the sim primes Last Dance Ready from it but doesn't credit a
-  pre-pull damage cast (keeps the ceiling honest). Refine live.
+Modeled since v1.1 (the docstring previously said otherwise):
+- The AoE line (Windmill / Bladeshower / Bloodshower, Fan Dance II) via
+  `_AOE_GCD_SWAP` / `_maybe_aoe` under a multi-target schedule.
+- The pre-pull Standard Finish IS credited (850p at t=0, symmetric with the
+  player's own pre-pull finish via the Scoring aspect's prepull_channel_ids),
+  and it occupies a real GCD slot (the next press waits out the 1.5s finish
+  recast).
+- Proc lifetimes: every proc/follow-up is a 20-30s expiry time, so nothing can
+  be banked indefinitely into a later raid window.
+
+Out of scope (documented, intentionally not modeled):
 - Frame-perfect step/cast timing; proc *timing* divergence from the player.
 """
 from __future__ import annotations
@@ -61,6 +67,15 @@ STANDARD_FINISH  = dd.STANDARD_FINISH
 TECHNICAL_FINISH = dd.TECHNICAL_FINISH
 FINISHING_MOVE   = dd.FINISHING_MOVE
 _STANDARD_STEP_RECAST_S = dd.COOLDOWNS[dd.STANDARD_STEP][0]
+_FINISH_RECAST_S = 1.5          # a dance Finish's own GCD recast
+_STARFALL_DURATION_S = 20.0     # Flourishing Starfall (Devilment) — 20s, not 30
+# The countdown Standard Step is PRESSED ~3.5s before the pull (2 x 1.0s steps
+# + the finish landing at t~0), and its 30s recast runs from that press — so a
+# real DNC's second Standard is ready at ~26.5s, not 30. Crediting the lead
+# (the SAM _PREPULL_MEIKYO_LEAD_S pattern) keeps the 30s finish cadence honest:
+# without it the ceiling lost ~2 Standard-family casts over a 500s fight
+# (measured on the Viola Meeps 100.15% pull: player 18 finishes, sim 16).
+_PREPULL_STEP_LEAD_S = 3.5
 TILLANA          = dd.TILLANA
 LAST_DANCE       = dd.LAST_DANCE
 STARFALL_DANCE   = dd.STARFALL_DANCE
@@ -128,21 +143,27 @@ class SimParams(SimParamsBase):
     pass
 
 
+_OFF = float("-inf")
+
+
 @dataclass
 class SimState(SimStateBase):
     # Combo: 0 expects Cascade, 1 expects Fountain.
     combo_step: int = 0
-    # Proc availability (set by the combo / Flourish; consumed by the proc GCDs).
-    silken_symmetry: bool = False   # -> Reverse Cascade
-    silken_flow: bool = False       # -> Fountainfall
-    threefold: bool = False         # -> Fan Dance III
-    fourfold: bool = False          # -> Fan Dance IV
+    # Proc availability as EXPIRY TIMES (armed while `end > t`): every one of
+    # these is a 20-30s buff in game, and a plain bool let the beam bank e.g. a
+    # 1000p Dance of the Dawn indefinitely and drop it into a raid window
+    # minutes after its Devilment (an illegal line no player can execute).
+    silken_symmetry: float = _OFF   # -> Reverse Cascade
+    silken_flow: float = _OFF       # -> Fountainfall
+    threefold: float = _OFF         # -> Fan Dance III
+    fourfold: float = _OFF          # -> Fan Dance IV
     # Burst follow-ups (granted by the finishes / Devilment).
-    flourishing_finish: bool = False  # -> Tillana (from Technical Finish)
-    last_dance_ready: bool = False    # -> Last Dance (from Standard/Technical Finish)
-    starfall_ready: bool = False      # -> Starfall Dance (from Devilment)
-    dawn_ready: bool = False          # -> Dance of the Dawn (from Devilment)
-    finishing_move_ready: bool = False  # Standard Step -> Finishing Move (from Flourish)
+    flourishing_finish: float = _OFF  # -> Tillana (from Technical Finish)
+    last_dance_ready: float = _OFF    # -> Last Dance (from Standard/Technical Finish)
+    starfall_ready: float = _OFF      # -> Starfall Dance (from Devilment, 20s)
+    dawn_ready: float = _OFF          # -> Dance of the Dawn (from Devilment)
+    finishing_move_ready: float = _OFF  # Standard Step -> Finishing Move (from Flourish)
     # Step dances.
     in_dance: int = 0                 # 0 none, else the dance's Finish id
     steps_remaining: int = 0
@@ -223,17 +244,23 @@ class DancerRotationModel(engine.BaseRotationModel):
 
     def prepull(self, state: SimState, params) -> None:
         # The pre-pull Standard Step -> Standard Finish completes AT the pull (t=0):
-        # a free 850 GCD (the steps were danced during the countdown) that, crucially,
+        # an 850 GCD (the steps were danced during the countdown) that, crucially,
         # opens the Standard Finish self-buff window from t=0 — so the idealized
         # opener burst (Technical + Devilment) is buffed exactly as a real DNC's is.
         # It primes Last Dance Ready and consumes the Standard Step cooldown (the next
         # Standard Step is 30s out). Emitted at t=0 so it's scored symmetrically with
-        # the player's pre-pull finish (which lands at t~=0 in their cast stream).
+        # the player's pre-pull finish (the Scoring aspect's prepull_channel_ids
+        # credits a t<0 player finish the same way).
         state.timeline.append((0.0, STANDARD_FINISH))
-        state.last_dance_ready = True
-        state.cd_ready[STANDARD_STEP] = _STANDARD_STEP_RECAST_S
+        state.last_dance_ready = dd.PROC_DURATION_S
+        state.cd_ready[STANDARD_STEP] = (_STANDARD_STEP_RECAST_S
+                                         - _PREPULL_STEP_LEAD_S)
+        # The finish is a real GCD press: the next GCD waits out its 1.5s
+        # recast. (It previously committed at t=0.0 as well — a free ~850p GCD
+        # slot the ceiling banked at the highest-multiplier moment.)
+        state.t = _FINISH_RECAST_S
         if self.ctx.opener_start_s is not None:
-            state.t = max(0.0, self.ctx.opener_start_s)
+            state.t = max(state.t, self.ctx.opener_start_s)
 
     def gcd_duration(self, state: SimState, gcd_id: int, params) -> float:
         # The whole dance — the Standard/Technical Step initiator AND the step
@@ -295,27 +322,28 @@ class DancerRotationModel(engine.BaseRotationModel):
             return TECHNICAL_STEP
         if (state.cd_ready.get(STANDARD_STEP, 0) <= t
                 and not is_forbidden(STANDARD_STEP, t, fw)):
-            return FINISHING_MOVE if state.finishing_move_ready else STANDARD_STEP
+            return FINISHING_MOVE if state.finishing_move_ready > t \
+                else STANDARD_STEP
 
         # 3. Burst / use-or-lose GCD procs that must not be wasted (Starfall and
         #    Last Dance are single-charge, overwritten if a later finish re-grants
         #    them — fire them before the budgeted filler so none are lost).
-        if state.flourishing_finish:
+        if state.flourishing_finish > t:
             return TILLANA
-        if state.dawn_ready and state.sabers_remaining > 0:
+        if state.dawn_ready > t and state.sabers_remaining > 0:
             return DANCE_OF_THE_DAWN
-        if state.starfall_ready:
+        if state.starfall_ready > t:
             return STARFALL_DANCE
-        if state.last_dance_ready:
+        if state.last_dance_ready > t:
             return LAST_DANCE
 
         # 4. Proc GCDs (budgeted, linearly paced; ASAP in a buff window).
         procs_used = self.ctx.proc_budget - state.procs_remaining
         if state.procs_remaining > 0 and self._spend_now(
                 state, procs_used, self.ctx.proc_budget, use_bank=False):
-            if state.silken_flow:
+            if state.silken_flow > t:
                 return FOUNTAINFALL
-            if state.silken_symmetry:
+            if state.silken_symmetry > t:
                 return REVERSE_CASCADE
 
         # 5. Saber Dance (esprit) — budgeted, buff-aware banked.
@@ -340,9 +368,9 @@ class DancerRotationModel(engine.BaseRotationModel):
                 and not is_forbidden(FLOURISH, t, fw)):
             return FLOURISH
         # Proc Fan Dances (free, fire ASAP).
-        if state.fourfold:
+        if state.fourfold > t:
             return FAN_DANCE_IV
-        if state.threefold:
+        if state.threefold > t:
             return FAN_DANCE_III
         # Fan Dance — spend a feather (budgeted, linearly paced; ASAP in a window).
         feathers_used = self.ctx.feather_budget - state.feathers_remaining
@@ -362,18 +390,18 @@ class DancerRotationModel(engine.BaseRotationModel):
         # Generic cooldown / charges (Standard/Technical Step, Flourish, Devilment).
         apply_cooldown(state, self.cooldowns, ability_id)
 
-        # --- Combo + proc generation ---
+        # --- Combo + proc generation (procs armed for PROC_DURATION_S) ---
         if ability_id in (CASCADE, WINDMILL):
             state.combo_step = 1
-            state.silken_symmetry = True       # 50% in game; budget caps the spend
+            state.silken_symmetry = t + dd.PROC_DURATION_S   # 50% in game; budget caps
         elif ability_id in (FOUNTAIN, BLADESHOWER):
             state.combo_step = 0
-            state.silken_flow = True
+            state.silken_flow = t + dd.PROC_DURATION_S
         elif ability_id in (REVERSE_CASCADE, RISING_WINDMILL):
-            state.silken_symmetry = False
+            state.silken_symmetry = _OFF
             state.procs_remaining = max(0, state.procs_remaining - 1)
         elif ability_id in (FOUNTAINFALL, BLOODSHOWER):
-            state.silken_flow = False
+            state.silken_flow = _OFF
             state.procs_remaining = max(0, state.procs_remaining - 1)
 
         # --- Esprit spenders ---
@@ -381,7 +409,7 @@ class DancerRotationModel(engine.BaseRotationModel):
             state.sabers_remaining = max(0, state.sabers_remaining - 1)
         elif ability_id == DANCE_OF_THE_DAWN:
             state.sabers_remaining = max(0, state.sabers_remaining - 1)
-            state.dawn_ready = False
+            state.dawn_ready = _OFF
 
         # --- Step dances ---
         elif ability_id == STANDARD_STEP:
@@ -395,42 +423,42 @@ class DancerRotationModel(engine.BaseRotationModel):
         elif ability_id == FINISHING_MOVE:
             # Replaces Standard Step: a single GCD (no dance), same Standard Finish
             # buff + Last Dance Ready, and it consumes the shared Standard Step cd.
-            state.finishing_move_ready = False
-            state.last_dance_ready = True
+            state.finishing_move_ready = _OFF
+            state.last_dance_ready = t + dd.PROC_DURATION_S
             state.cd_ready[STANDARD_STEP] = t + _STANDARD_STEP_RECAST_S
         elif ability_id == STANDARD_FINISH:
             state.in_dance = 0
-            state.last_dance_ready = True
+            state.last_dance_ready = t + dd.PROC_DURATION_S
         elif ability_id == TECHNICAL_FINISH:
             state.in_dance = 0
-            state.flourishing_finish = True
-            state.last_dance_ready = True
+            state.flourishing_finish = t + dd.PROC_DURATION_S
+            state.last_dance_ready = t + dd.PROC_DURATION_S
 
         # --- Burst follow-ups ---
         elif ability_id == TILLANA:
-            state.flourishing_finish = False
+            state.flourishing_finish = _OFF
         elif ability_id == LAST_DANCE:
-            state.last_dance_ready = False
+            state.last_dance_ready = _OFF
         elif ability_id == STARFALL_DANCE:
-            state.starfall_ready = False
+            state.starfall_ready = _OFF
         elif ability_id in (FAN_DANCE, FAN_DANCE_II):
             state.feathers_remaining = max(0, state.feathers_remaining - 1)
-            state.threefold = True             # 50% in game; modeled deterministically
+            state.threefold = t + dd.PROC_DURATION_S   # 50% in game; deterministic
         elif ability_id == FAN_DANCE_III:
-            state.threefold = False
+            state.threefold = _OFF
         elif ability_id == FAN_DANCE_IV:
-            state.fourfold = False
+            state.fourfold = _OFF
 
         # --- Burst enablers ---
         elif ability_id == FLOURISH:
-            state.threefold = True
-            state.fourfold = True
-            state.silken_symmetry = True
-            state.silken_flow = True
-            state.finishing_move_ready = True
+            state.threefold = t + dd.PROC_DURATION_S
+            state.fourfold = t + dd.PROC_DURATION_S
+            state.silken_symmetry = t + dd.PROC_DURATION_S
+            state.silken_flow = t + dd.PROC_DURATION_S
+            state.finishing_move_ready = t + dd.PROC_DURATION_S
         elif ability_id == DEVILMENT:
-            state.starfall_ready = True
-            state.dawn_ready = True
+            state.starfall_ready = t + _STARFALL_DURATION_S
+            state.dawn_ready = t + dd.PROC_DURATION_S
 
     def sweep_params(self, extra_forbidden):
         for mw in _SWEEP_MAX_WEAVES:

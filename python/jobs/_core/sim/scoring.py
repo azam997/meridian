@@ -305,13 +305,18 @@ def build_scoring(*, sim_module: Any, score_timeline: ScoreTimeline,
         rotation, then re-score with the enabler forbidden for the whole fight;
         the drop / cast-count is the average marginal value of one cast. This
         captures the real exchange (the GCDs / resources the rotation gets back
-        when the enabler is gone). Buff-agnostic, coverage-agnostic (raw potency)
-        — the improvements panel's reconcile_to_budget bounds the priced total to
-        the measured gap regardless. Single-point sims so the with/without
-        subtraction is apples-to-apples and cheap."""
+        when the enabler is gone). Buff-agnostic — the improvements panel's
+        reconcile_to_budget bounds the priced total to the measured gap
+        regardless — but multi-target-AWARE: the N(t) schedule rides
+        `sim_context`, and pricing an enabler at single-target potency on a
+        credited multi-target pull would systematically under-price a missed
+        Hypercharge/Wildfire against the per-target ceiling it reconciles to.
+        Single-point sims so the with/without subtraction is apples-to-apples
+        and cheap."""
         downtime = list(downtime_tuple)
+        tspec = _target_spec(sim_context)
         base_tl, base_aux = _run_idealized(duration_key, downtime, None, sim_context)
-        base_score = score_timeline(base_tl, base_aux, None, None)
+        base_score = score_timeline(base_tl, base_aux, None, None, tspec)
         out: list[tuple[int, float]] = []
         for aid in enabler_ids:
             n = sum(1 for t, a in base_tl if a == aid and t >= 0)
@@ -319,7 +324,7 @@ def build_scoring(*, sim_module: Any, score_timeline: ScoreTimeline,
                 continue
             params = SimParams(forbidden_windows=((aid, 0.0, float(duration_key)),))
             tl, aux = _run_idealized(duration_key, downtime, params, sim_context)
-            marginal = (base_score - score_timeline(tl, aux, None, None)) / n
+            marginal = (base_score - score_timeline(tl, aux, None, None, tspec)) / n
             out.append((aid, max(0.0, marginal)))
         return tuple(out)
 
@@ -450,6 +455,15 @@ class ScoringAspectBase:
     # cadence would fold those already-modeled fast GCDs in and double-credit them, wrongly
     # inflating the ceiling. Requires `gcd_constant`; no-op otherwise.
     demonstrated_cadence_anchor: bool = False
+    # Opt in to the REPLAY-SEEDED ceiling leg: the player's demonstrated cast stream is
+    # threaded into every ceiling context (`CeilingContext.demonstrated`), and the job's
+    # perfect path max-guards its solver against replay(prefix) ⊕ continuation candidates
+    # (`jobs/_core/sim/seeded.py`) — the demonstrated-cadence-anchor doctrine applied to
+    # rotation STRUCTURE (the GNB M12S-P1 pure-search-gap survivor). The candidates are
+    # executed lines, so the ceiling only ever rises toward feasibility — efficiency can
+    # only fall, never break 100%; the delivered-only witness guard stays as backstop.
+    # Requires `gcd_constant` (the casts ride CeilingContext); no-op otherwise.
+    replay_seeded_ceiling: bool = False
 
     def prepare(self, client, code: str, fight: dict[str, Any],
                 actor: dict[str, Any], report: dict[str, Any],
@@ -561,11 +575,22 @@ class ScoringAspectBase:
                     norm_casts, _is_gcd, fight_duration_s, downtime_windows, haste_excl)
                 if dem is not None:
                     dem = max(dem, self.gcd_constant * 0.95)   # floor: <=5% under gear
-                    if dem < cadences[-1] - 1e-6:
+                    if dem < min(cadences) - 1e-6:
                         cadences.append(dem)
-            sweep_ctxs = [CeilingContext(gcd_base_s=g, payload=sim_ctx)
+            # The replay-seeded leg's cast channel: on every band point, so the
+            # arg-max stash stays self-consistent (score, timeline and diff all
+            # come from the same context). None for opted-out jobs — their
+            # contexts stay byte-identical (dataclass default).
+            dem_casts = tuple((float(t), int(a)) for t, a in norm_casts) \
+                if (self.replay_seeded_ceiling and norm_casts) else None
+            sweep_ctxs = [CeilingContext(gcd_base_s=g, payload=sim_ctx,
+                                         demonstrated=dem_casts)
                           for g in cadences]
-            sim_ctx = sweep_ctxs[0]   # the gear (nominal) context — authoritative downstream
+            # The gear (nominal) context: the observed/master lenses run here
+            # (bounded per-pull cost — see the strict-sweep comment below). The
+            # STRICT lane stashes the arg-max band point instead, so the
+            # displayed rotation/diff is the one the headline score came from.
+            sim_ctx = sweep_ctxs[0]
 
         # Raid-buff windows for the two idealized scenarios:
         #  - observed: buffs that actually landed in this pull. Both delivered
@@ -662,8 +687,20 @@ class ScoringAspectBase:
             [(fight_duration_s, downtime_windows, None, c) for c in sweep_ctxs]
             + [(fight_duration_s, downtime_windows, observed_intervals, sim_ctx),
                (fight_duration_s, downtime_windows, expected_intervals, sim_ctx)])
-        idealized_strict = max(self.fns.idealized_at_duration(
-            fight_duration_s, downtime_windows, None, sim_context=c) for c in sweep_ctxs)
+        # Strict = max over the band, and the ARG-max context becomes the
+        # authoritative downstream sim_context (Timeline idealized lane,
+        # missed-cast diff, split_residual). Scoring at the max but diffing at
+        # the gear point compared the player against a DIFFERENT rotation than
+        # the one that set the score — the mechanism behind "the player fit
+        # more oGCDs than the ceiling" reports on pulls where a faster band
+        # point fit them. Ties prefer the earliest (gear-most) context.
+        strict_scores = [self.fns.idealized_at_duration(
+            fight_duration_s, downtime_windows, None, sim_context=c)
+            for c in sweep_ctxs]
+        strict_i = max(range(len(strict_scores)),
+                       key=lambda i: (strict_scores[i], -i))
+        idealized_strict = strict_scores[strict_i]
+        strict_ctx = sweep_ctxs[strict_i]
         idealized_observed = self.fns.idealized_at_duration(
             fight_duration_s, downtime_windows, observed_intervals, sim_context=sim_ctx)
         idealized_master = self.fns.idealized_at_duration(
@@ -702,14 +739,28 @@ class ScoringAspectBase:
         ceiling_witness_gap = 0.0
         from jobs._core.gcd_speed import unwrap_ceiling_context
         from jobs._core.heal_locks import HealLockContext
-        _, _guard_payload = unwrap_ceiling_context(sim_ctx)
-        if not isinstance(_guard_payload, HealLockContext):
+
+        def _has_heal_lock(ctx_obj: Any) -> bool:
+            # Walk the WHOLE payload chain: a MultiTargetContext can sit
+            # between the CeilingContext and the HealLockContext (the sidecar's
+            # `_with_multitarget` nests exactly that), and a single peel would
+            # silently clamp a locked healer ceiling to delivered.
+            _, payload = unwrap_ceiling_context(ctx_obj)
+            for _ in range(8):
+                if payload is None:
+                    return False
+                if isinstance(payload, HealLockContext):
+                    return True
+                payload = getattr(payload, "inner", None)
+            return False
+
+        if not _has_heal_lock(sim_ctx):
             if delivered > idealized_strict:
                 ceiling_witness_gap = delivered - idealized_strict
                 idealized_strict = delivered
 
         enabler_values = self.fns.enabler_net_values(
-            fight_duration_s, downtime_windows, sim_context=sim_ctx)
+            fight_duration_s, downtime_windows, sim_context=strict_ctx)
 
         state = {
             "delivered_potency": delivered,
@@ -752,9 +803,11 @@ class ScoringAspectBase:
         # The gcd-wrapped sim_context is authoritative for the sidecar's lenient /
         # Timeline recompute (`_user_sim_context`). Only override when non-None so a
         # no-op pull stays byte-identical (no stray `sim_context: null` key); an active
-        # pull's CeilingContext supersedes what extra_state emitted.
-        if self.gcd_constant is not None and sim_ctx is not None:
-            state["sim_context"] = sim_ctx
+        # pull's CeilingContext supersedes what extra_state emitted. This is the
+        # STRICT arg-max context (see the strict sweep above) — score, Timeline
+        # lane, and missed-cast diff all describe the same rotation.
+        if self.gcd_constant is not None and strict_ctx is not None:
+            state["sim_context"] = strict_ctx
         return AspectResult(
             name=self.name,
             track=Track(name=self.name, events=[]),

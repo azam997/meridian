@@ -176,7 +176,7 @@ def test_rdm_headline_has_efficiency(response: dict) -> None:
            f"got {h.get('yourIdealizedPotency')!r}")
     eff = h.get("efficiencyPct") or 0
     _check("0 < headline.efficiencyPct <= 100",
-           0 < eff <= 100.5, f"got {eff!r}")
+           0 < eff <= 100.0 + 1e-9, f"got {eff!r}")
     _check("headline.yourPotency > 0",
            (h.get("yourPotency") or 0) > 0)
 

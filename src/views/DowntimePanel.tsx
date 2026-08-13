@@ -124,8 +124,8 @@ export const DowntimePanel = ({ headline: h }: Props) => {
               }}
             >
               <EyeOff size={11} style={{ verticalAlign: '-2px', marginRight: 4 }} />
-              Lenient efficiency assumes these windows are forced; strict treats
-              them as the player&apos;s time.
+              The efficiency with forced stops excluded treats these windows as
+              forced; the headline number counts them as your time.
             </div>
           </>
         )}
@@ -164,9 +164,9 @@ export const DowntimePanel = ({ headline: h }: Props) => {
             <div className="mut" style={{ fontSize: 11, marginTop: 8 }}>
               <EyeOff size={11} style={{ verticalAlign: '-2px', marginRight: 4 }} />
               Top players bridged these stretches with their ranged filler
-              instead of melee GCDs. The lenient ceiling credits the full
-              consensus stretch; the strict (rank) ceiling credits the portion
-              you were personally forced out (below).
+              instead of melee GCDs. The efficiency with forced stops excluded
+              credits the full stretch; rank credits only the portion you were
+              personally forced out (below).
             </div>
           </>
         )}
@@ -179,7 +179,7 @@ export const DowntimePanel = ({ headline: h }: Props) => {
             <div className="mut" style={{ fontSize: 11 }}>
               <EyeOff size={11} style={{ verticalAlign: '-2px', marginRight: 4 }} />
               −{Math.round(md.potency).toLocaleString()}p ({md.pct.toFixed(1)}% of
-              the ideal ceiling) was removed from your strict efficiency: the
+              the ideal ceiling) was removed from your rank ceiling: the
               stretches you yourself were forced out of melee into your ranged
               filler, where no melee GCD was possible. Self-limited to your own
               disconnects, so it never credits time you spent in melee.

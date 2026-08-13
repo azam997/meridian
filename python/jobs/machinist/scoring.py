@@ -261,6 +261,16 @@ enabler_net_values = _FNS.enabler_net_values
 
 # --- MCHScoringAspect ------------------------------------------------------
 
+def _entry_spend_hook(gauge_name: str, ability_id: int, _scratch: dict):
+    """Entry-gauge spend override: Queen is an "all"-spend whose size the cast
+    stream can't see, so the deficit walk charges the 50-battery summon MINIMUM
+    (`QUEEN_MIN_BATTERY`) — a true lower bound on carried battery. Every other
+    spend falls back to the flat GaugeModel amount (None)."""
+    if gauge_name == "battery" and ability_id in md.BATTERY_SPENDERS:
+        return md.QUEEN_MIN_BATTERY
+    return None
+
+
 class MCHScoringAspect(ScoringAspectBase):
     """Computes delivered_potency + idealized_potency for an MCH run. Hidden
     from the per-aspect UI — exists so the sidecar can read scalars off
@@ -282,18 +292,33 @@ class MCHScoringAspect(ScoringAspectBase):
         # delivered side stay symmetric and efficiency can't exceed 100%). Keep
         # the raw total too — it's the display-only `queen_battery_spent` key.
         from jobs._core.downtime import read_downtime_from_report
+        from jobs._core.entry_gauge import entry_state
         fight_duration_s = (fight["endTime"] - fight["startTime"]) / 1000.0
         downtime_windows, _src = read_downtime_from_report(
             report, norm_casts, fight_duration_s)
         raw = compute_queen_battery_spent(norm_casts)
         deliverable = compute_queen_battery_spent(
             norm_casts, fight_duration_s, downtime_windows)
-        return (raw, deliverable)
+        # Phase-continuation entry (carried heat/battery — the M12S-P2 class of
+        # mid-combat starts). Queen is an "all"-spend: its size is unknowable
+        # from the cast stream, so the hook charges the 50-battery summon
+        # MINIMUM — a true lower bound on carried battery (never over-seeds).
+        entry = entry_state(norm_casts, md.JOB_DATA.gauges,
+                            spend_hook=_entry_spend_hook)
+        return (raw, deliverable, entry)
+
+    def sim_context(self, ctx: Any) -> Any:
+        _raw, _deliverable, entry = ctx
+        return entry or None
 
     def score_delivered(self, ctx, in_fight_casts, buff_intervals=None) -> float:
-        _raw, deliverable = ctx
+        _raw, deliverable, _entry = ctx
         return score_delivered_potency(in_fight_casts, deliverable, buff_intervals)
 
     def extra_state(self, ctx) -> dict:
-        raw, _deliverable = ctx
-        return {"queen_battery_spent": raw}
+        raw, _deliverable, entry = ctx
+        return {
+            "queen_battery_spent": raw,
+            "sim_context": entry or None,
+            "entryGauges": dict(entry.gauges) if entry else {},
+        }

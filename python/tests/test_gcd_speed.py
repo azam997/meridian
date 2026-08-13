@@ -160,6 +160,24 @@ def test_unwrap_ceiling_context() -> None:
     assert CeilingContext(payload="x")
 
 
+def test_demonstrated_channel_cache_semantics() -> None:
+    # An unset field is invisible: equal + hash-equal to the pre-field twin, so
+    # every opted-out job's cache keys stay byte-identical.
+    assert CeilingContext(2.42, "p") == CeilingContext(2.42, "p", demonstrated=None)
+    assert hash(CeilingContext(2.42, "p")) == \
+        hash(CeilingContext(2.42, "p", demonstrated=None))
+    # A demonstrated-bearing context is hashable (it joins the perfect-sim cache
+    # keys) and distinct from its unset twin — two pulls with equal rounded
+    # duration/downtime/gear must not serve each other's seeded ceiling.
+    dem = ((0.0, 16137), (2.5, 16139))
+    ctx = CeilingContext(2.42, "p", demonstrated=dem)
+    assert isinstance(hash(ctx), int)
+    assert ctx != CeilingContext(2.42, "p")
+    assert ctx == CeilingContext(2.42, "p", demonstrated=dem)
+    # unwrap ignores the channel — every job's _model_for peel is unaffected.
+    assert unwrap_ceiling_context(ctx) == (2.42, "p")
+
+
 def main() -> int:
     for name, fn in sorted(globals().items()):
         if name.startswith("test_") and callable(fn):

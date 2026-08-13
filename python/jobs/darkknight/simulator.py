@@ -452,8 +452,8 @@ class DarkKnightRotationModel(engine.BaseRotationModel):
         # Generic cooldown / charges.
         apply_cooldown(state, self.cooldowns, ability_id)
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         # The in-game combo timer: a mid-step combo (or chain step) does not
         # survive a downtime that puts the next GCD more than 30s after the last
         # — the ceiling must not resume a combo a real player would have lost.

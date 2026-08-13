@@ -15,7 +15,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from jobs._core.heal_locks import (LOCK_LEAD_S, LockedGcdWindow, locks_from_plan,
-                                   plan_gcd_cost, reconcile_heal_budget)
+                                   plan_gcd_cost, reconcile_from_report,
+                                   reconcile_heal_budget)
 from mitplan.classify import Mechanic
 from mitplan.comp import (canonical_job_name, resolve_comp_from_fight,
                           slot_for_job)
@@ -133,6 +134,50 @@ def test_plan_gcd_cost_prices_costed_only() -> None:
     assert abs(potency - 2 * 350.0) < 1e-6, potency
 
 
+def test_locks_over_exclusive_user_plan() -> None:
+    # Duck-typing regression: a pinned_exclusive (user-authored) plan built by
+    # the real planner flows through locks_from_plan / plan_gcd_cost unchanged.
+    from mitplan.classify import DamageModel
+    from mitplan.planner import plan as build_plan
+    from mitplan.premade import PinnedEntry, PremadePlan
+
+    def m(mid, t):
+        unmit = {"tank": 100_000.0, "healer": 200_000.0, "dps": 220_000.0}
+        return Mechanic(
+            id=mid, time_s=float(t), end_s=float(t) + 0.5, name=mid,
+            boss_ability_ids=[int(mid.split("#")[0])], kind="raidwide",
+            school="magical",
+            hits=[{"time_s": float(t), "unmitigated": dict(unmit)}],
+            unmitigated=unmit,
+            unmitigated_p90={k: v * 1.05 for k, v in unmit.items()},
+            observed_mit_pct=0.2, presence_ratio=1.0)
+
+    model = DamageModel(
+        mechanics=[m("300#0", 30.0), m("301#0", 45.0)], avoidable_count=0,
+        ref_count=10, model_kill_s=90.0, ref_avg_kill_s=500.0,
+        role_hp={"tank": 320_000.0, "healer": 205_000.0, "dps": 226_000.0},
+        hp_source="logs", tank_drain_hps=2_000.0,
+        magnitudes={"shield_hp_by_status": {}},
+        hp_per_potency={"_default": 80.0}, downtime_windows=[],
+        encounter_id=1085, encounter_name="Test Ultimate")
+    user = PremadePlan(
+        encounter_id=1085, encounter_name="Test Ultimate",
+        entries=(PinnedEntry(label="a", boss_ability_id=300,
+                             mits=(("Sage", 24298),)),
+                 PinnedEntry(label="b", boss_ability_id=301, mits=(),
+                             heals=(("White Mage", WHM_MEDICA_III, 2),))))
+    p = build_plan(model, "Sage", "White Mage", ["Paladin", "Dark Knight"],
+                   ["Samurai", "Dragoon", "Bard", "Pictomancer"],
+                   pinned=user, pinned_exclusive=True)
+    # A user plan's heals are its AUTHORED ones — never sweep-inserted.
+    assert [(g.action_id, g.count) for pm in p.mechanics for g in pm.gcd_heals] \
+        == [(WHM_MEDICA_III, 2)]
+    locks = locks_from_plan(p, "H2", 600.0)
+    assert locks, "the authored GCD heals must lock like any plan's"
+    count, potency, costed = plan_gcd_cost(p, "H2")
+    assert count == 2 and costed == 2 and potency > 0.0
+
+
 # --- reconcile_heal_budget (the honest-budget lift to actual healing) ------------
 
 _COSTED = frozenset({WHM_MEDICA_III})
@@ -224,6 +269,139 @@ def test_reconcile_credit_windows_straddle_actual_times() -> None:
     b = _reconcile([_win(50, 60, 1)], [55.0, 200.0, 400.0], is_prog=True)
     for w, t in zip(sorted(b.locks, key=lambda w: w.end_s), [55.0, 200.0, 400.0]):
         assert w.start_s <= t <= w.end_s, (w, t)
+
+
+# --- resurrection pardon (reconcile_from_report + rez_ids) -----------------------
+
+WHM_RAISE = 125
+WHM_GLARE_III = 25859
+
+
+def _rez_report(plan_locks=None, *, prog: bool = False,
+                dt: list[tuple[float, float]] | None = None) -> dict:
+    rep: dict = {"__downtime__": {"windows": list(dt or [])}}
+    if plan_locks is not None:
+        rep["__heal_locks__"] = {"locks": tuple(plan_locks), "source": "pull"}
+    if prog:
+        rep["__prog__"] = {"is_prog": True}
+    return rep
+
+
+def _rez_reconcile(report, casts, *, rez: bool = True, dur: float = 600.0):
+    kwargs = {"costed_ids": _COSTED, "locked_heal_id": WHM_MEDICA_III,
+              "filler_potency": 350.0}
+    if rez:
+        kwargs["rez_ids"] = frozenset({WHM_RAISE})
+    return reconcile_from_report(report, casts, dur, **kwargs)
+
+
+def test_rez_uptime_produces_credit_lock() -> None:
+    # A swift rez (next cast one GCD later) locks exactly one GCD, at its own
+    # cast time, ability_id = the rez id — even on the plan-floor branch.
+    report = _rez_report([_win(50, 60, 1)])
+    casts = [(55.0, WHM_MEDICA_III), (300.0, WHM_RAISE),
+             (302.5, WHM_GLARE_III)]
+    b = _rez_reconcile(report, casts)
+    rez_locks = [w for w in b.locks if w.ability_id == WHM_RAISE]
+    assert len(rez_locks) == 1
+    w = rez_locks[0]
+    assert w.count == 1 and w.start_s <= 300.0 <= w.end_s
+    assert b.state["heal_lock_rez_count"] == 1
+    assert b.state["heal_lock_rez_gcds"] == 1
+    assert b.state["heal_lock_rez_casts"] == [[300.0, WHM_RAISE, 1]]
+
+
+def test_rez_hardcast_prices_multiple_slots() -> None:
+    # The following inter-cast gap contains the ~8s bar -> priced as 3 locked
+    # slots covering it (ceil(8 / 2.5) capped at 3).
+    report = _rez_report([_win(50, 60, 1)])
+    casts = [(55.0, WHM_MEDICA_III), (100.0, WHM_RAISE),
+             (108.2, WHM_GLARE_III)]
+    b = _rez_reconcile(report, casts)
+    rez_locks = [w for w in b.locks if w.ability_id == WHM_RAISE]
+    assert len(rez_locks) == 1
+    w = rez_locks[0]
+    assert w.count == 3, w
+    assert w.start_s <= 100.0 and w.end_s >= 108.0    # covers the observed bar
+    assert b.state["heal_lock_rez_gcds"] == 3
+    assert b.state["heal_lock_rez_casts"] == [[100.0, WHM_RAISE, 3]]
+
+
+def test_rez_gap_swallowed_by_downtime_prices_single() -> None:
+    # A big gap after the rez that a downtime window opens into is idle, not a
+    # cast bar -> the honest floor of one locked GCD.
+    report = _rez_report([_win(50, 60, 1)], dt=[(102.0, 114.0)])
+    casts = [(55.0, WHM_MEDICA_III), (100.0, WHM_RAISE),
+             (115.0, WHM_GLARE_III)]
+    b = _rez_reconcile(report, casts)
+    rez_locks = [w for w in b.locks if w.ability_id == WHM_RAISE]
+    assert len(rez_locks) == 1 and rez_locks[0].count == 1
+
+
+def test_rez_in_downtime_not_locked() -> None:
+    # A downtime rez displaced no damage: no lock, no rez state keys, and the
+    # budget is byte-identical to the same pull without the rez cast.
+    dt = [(295.0, 310.0)]
+    report = _rez_report([_win(50, 60, 1)], dt=dt)
+    with_rez = _rez_reconcile(
+        report, [(55.0, WHM_MEDICA_III), (300.0, WHM_RAISE)])
+    without = _rez_reconcile(report, [(55.0, WHM_MEDICA_III)])
+    assert with_rez == without
+    assert "heal_lock_rez_count" not in with_rez.state
+
+
+def test_rez_recovery_heals_never_excess_on_kill() -> None:
+    # Kill pull, plan 1 costed (cap = 1 + slack 2 = 3). The isolated heal at
+    # 300s would be the carded excess — unless it follows a rez, in which case
+    # it ranks most-necessary AND lifts the cap, so nothing cards.
+    plan = [_win(100, 110, 1)]
+    heals = [(50.0, WHM_MEDICA_III), (105.0, WHM_MEDICA_III),
+             (108.0, WHM_MEDICA_III), (300.0, WHM_MEDICA_III)]
+    base = _rez_reconcile(_rez_report(plan), heals)
+    assert [t for t, _a in base.state["heal_lock_excess"]] == [300.0]
+    rez_casts = heals + [(295.0, WHM_RAISE), (297.5, WHM_GLARE_III)]
+    b = _rez_reconcile(_rez_report(plan), rez_casts)
+    assert b.state["heal_lock_excess"] == []
+    assert b.state["heal_lock_rez_recovery_count"] == 1
+    assert b.state["heal_lock_costed_count"] == 4
+    # The recovery heal is credited at its own time like any necessary heal.
+    assert any(w.start_s <= 300.0 <= w.end_s and w.ability_id == WHM_MEDICA_III
+               for w in b.locks)
+
+
+def test_rez_zero_rez_pull_byte_identical() -> None:
+    # rez_ids threaded but no rez cast -> byte-identical HealBudget to today's
+    # (no-kwarg) path, on both the kill and the prog branch.
+    plan = [_win(50, 60, 1), _win(150, 160, 1)]
+    casts = [(55.0, WHM_MEDICA_III), (100.0, WHM_MEDICA_III),
+             (155.0, WHM_MEDICA_III), (200.0, WHM_MEDICA_III),
+             (300.0, WHM_MEDICA_III), (400.0, WHM_MEDICA_III)]
+    for prog in (False, True):
+        report = _rez_report(plan, prog=prog)
+        with_ids = _rez_reconcile(report, casts, rez=True)
+        without = _rez_reconcile(report, casts, rez=False)
+        assert with_ids == without, prog
+        assert "heal_lock_rez_count" not in with_ids.state
+
+
+def test_rez_prog_path() -> None:
+    # Prog wipe: the cap is already waived — every heal credits with or without
+    # the rez; the rez itself still locks, and a plan-less rez-only wipe locks.
+    report = _rez_report(prog=True)
+    heals = [(40.0, WHM_MEDICA_III), (120.0, WHM_MEDICA_III)]
+    no_rez = _rez_reconcile(report, heals)
+    with_rez = _rez_reconcile(
+        report, heals + [(200.0, WHM_RAISE), (202.5, WHM_GLARE_III)])
+    assert no_rez.state["heal_lock_excess"] == []
+    assert with_rez.state["heal_lock_excess"] == []
+    assert with_rez.state["heal_lock_costed_count"] == 2
+    assert with_rez.state["heal_lock_rez_count"] == 1
+    assert len(with_rez.locks) == len(no_rez.locks) + 1
+    # Plan-less wipe with ONLY a rez: the pardon still applies.
+    only_rez = _rez_reconcile(
+        report, [(200.0, WHM_RAISE), (202.5, WHM_GLARE_III)])
+    assert only_rez.applied
+    assert [w.ability_id for w in only_rez.locks] == [WHM_RAISE]
 
 
 # --- resolve_comp_from_fight -----------------------------------------------------
@@ -326,7 +504,8 @@ def _patched_payload(client, job: str, comp_override=None,
         return object()
 
     sidecar_main._get_mitplan_model = _fake_model
-    mitplan.plan = lambda model, s, r, t, d, pinned=None: fake_plan
+    mitplan.plan = (
+        lambda model, s, r, t, d, pinned=None, pinned_exclusive=False: fake_plan)
     try:
         return sidecar_main._heal_lock_payload(
             client, job, "AbCd1234", 7, 99, comp_override,

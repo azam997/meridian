@@ -215,7 +215,7 @@ class PaladinRotationModel(engine.BaseRotationModel):
     def init_state(self) -> SimState:
         state = SimState()
         state.cd_ready = {
-            FIGHT_OR_FLIGHT: 0.0, IMPERATOR: 0.0, GORING_BLADE: 0.0,
+            FIGHT_OR_FLIGHT: 0.0, IMPERATOR: 0.0,
             CIRCLE_OF_SCORN: 0.0, EXPIACION: 0.0,
         }
         state.charges = {INTERVENE: 2.0}
@@ -253,8 +253,12 @@ class PaladinRotationModel(engine.BaseRotationModel):
         # 2. Goring Blade — the Fight or Flight proc (Goring Blade Ready). It's
         # granted by FoF, so it's always cast inside the buff window and always
         # amplified, which keeps the ceiling honest (a real in-buff Goring can't
-        # beat the idealized one).
-        if state.goring_ready:
+        # beat the idealized one). Deferred to a COMBO BOUNDARY: Goring is a
+        # weaponskill and breaks the physical combo, so firing it mid-combo
+        # (wherever FoF's cooldown landed) would trade combo potency away; the
+        # <=2-GCD defer stays well inside both Goring Blade Ready (30s) and the
+        # FoF window (20s).
+        if state.goring_ready and state.combo_step == 0:
             return GORING_BLADE
 
         # 3. Spend the Atonement chain, then the Divine Might Holy Spirit.
@@ -292,7 +296,11 @@ class PaladinRotationModel(engine.BaseRotationModel):
         greedy = self.pick_gcd(state, params)
         if state.magic_combo != 0 or state.goring_ready:
             return [greedy]
-        if greedy not in (ATONEMENT, SUPPLICATION, SEPULCHRE, HOLY_SPIRIT):
+        if greedy not in (ATONEMENT, SUPPLICATION, SEPULCHRE,
+                          HOLY_SPIRIT, HOLY_CIRCLE):
+            # HOLY_CIRCLE included: it's the Divine Might spend at high target
+            # counts — without it the whole FoF burst-packing fork silently
+            # vanished on AoE pulls.
             return [greedy]
         if state.combo_step == 1:
             alt = RIOT_BLADE
@@ -420,21 +428,30 @@ class PaladinRotationModel(engine.BaseRotationModel):
             state.supplication_ready = False
             state.sepulchre_ready = False
             state.divine_might = True
-        # Atonement chain (each step arms the next)
+        # Atonement chain (each step arms the next). These are WEAPONSKILLS: cast
+        # mid-combo they are legal but BREAK the physical combo (the reset below)
+        # — a beam hold-line that interleaves one now pays the real in-game cost
+        # instead of keeping Riot Blade / Royal Authority at combo'd potency.
+        # Holy Spirit / Holy Circle and the Confiteor chain are SPELLS and leave
+        # the combo intact.
         elif ability_id == ATONEMENT:
             state.atonement_ready = False
             state.supplication_ready = True
+            state.combo_step = 0
         elif ability_id == SUPPLICATION:
             state.supplication_ready = False
             state.sepulchre_ready = True
+            state.combo_step = 0
         elif ability_id == SEPULCHRE:
             state.sepulchre_ready = False
+            state.combo_step = 0
         elif ability_id in (HOLY_SPIRIT, HOLY_CIRCLE):
             state.divine_might = False
         elif ability_id == FIGHT_OR_FLIGHT:
             state.goring_ready = True     # grants Goring Blade Ready
         elif ability_id == GORING_BLADE:
             state.goring_ready = False
+            state.combo_step = 0          # weaponskill — breaks the combo too
         # Magical combo
         elif ability_id == IMPERATOR:
             state.magic_combo = 1

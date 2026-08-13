@@ -4,7 +4,9 @@ The companion to test_gunbreaker_sim.py (internal invariants). This one validate
 sim against actual human play — real quartile-stratified GNB pulls captured from FFLogs
 top rankings (one per quartile per encounter), under tests/fixtures/gnb/. Validating
 against the sim's own output would be circular; these are real cast streams, so the
-tests confirm the sim never under-rates a real top parse (efficiency <= 100.5%).
+tests confirm the sim never under-rates a real top parse (the exact-100% gate,
+de-guarded via `ceiling_witness_gap`; the Fuseir Warblade fixture is the documented
+live survivor — see NEXT_STEPS.md — kept here as permanent corpus coverage).
 
 GNB's No Mercy self-buff rides the player's own casts, so the captured cast stream is
 sufficient — no per-pull scalar. The fixtures carry no DamageDone / Buffs stream, which
@@ -43,7 +45,7 @@ _BUCKETS = ("topq", "q2", "q3", "botq")
 # Per-job efficiency tolerance. The ceiling is a true upper bound, so NO real pull may
 # exceed 100% (delivered <= idealized by construction). GNB's ceiling runs at the
 # gear-true 2.50 GCD; this is a genuine correctness guard, not a fudge factor.
-_EFFICIENCY_TOL = 1.005
+_EFFICIENCY_TOL = 1.0 + 1e-9   # exact 100% gate (owner directive, v1.1): fix or document every over
 
 
 class MockClient:
@@ -139,7 +141,9 @@ def test_pull_invariants(name: str) -> None:
     assert delivered > 0, f"{name}: delivered={delivered}"
     pps = delivered / fix["duration_s"]
     assert 150 <= pps <= 700, f"{name}: p/sec {pps:.1f} out of band"
-    ideal = st["idealized_potency"]
+    # De-guarded: production floors idealized_strict at delivered (the witness
+    # guard), which would blind this gate - the RAW search ceiling is the signal.
+    ideal = st["idealized_potency"] - float(st.get("ceiling_witness_gap") or 0.0)
     ratio = delivered / ideal if ideal > 0 else 0
     assert ratio <= _EFFICIENCY_TOL, \
         f"{name}: efficiency {ratio:.1%} (delivered {delivered:.0f} ideal {ideal:.0f})"
@@ -156,6 +160,53 @@ def test_sim_monotonicity(name: str) -> None:
     p = sc.score_delivered_potency(simulate_idealized_perfect(dur, [])[0])
     assert o >= d - 1e-6, f"{name}: optimal {o} < default {d}"
     assert p >= o - 1e-6, f"{name}: perfect {p} < optimal {o}"
+
+
+_FUSEIR = "m12sp1_fuseir_1"
+
+
+@pytest.mark.skipif(_FUSEIR not in _FIXTURE_NAMES, reason="no Fuseir fixture")
+def test_fuseir_ceiling_dominates_replay() -> None:
+    """The structural pin on the replay-seeded ceiling leg (fails on the pre-leg
+    code): the production strict ceiling, pot-stripped, must dominate the
+    player's own line replayed pot-free through the model. This was the v1.1
+    survivor — a PROVEN pure search gap (player raw 120,324 vs beam raw
+    119,416; NEXT_STEPS.md holds the decomposition) that the witness guard
+    papered over. The raw comparison is the real gate here: under the fixture's
+    unpotted delivered lens the witness guard rarely fires, so asserting
+    `ceiling_witness_gap` absent alone would be near-vacuous."""
+    from jobs._core.sim.replay import replay_state
+    from jobs._core.tincture import TINCTURE_ACTION_ID
+    from jobs.gunbreaker import data as gd
+    from jobs.gunbreaker import simulator as gnb_sim
+
+    mr, fix = _analyze(_FUSEIR)
+    st = mr.aspects["Scoring"].state
+    ctx = st["sim_context"]
+    assert getattr(ctx, "demonstrated", None), \
+        "the stashed arg-max context lost the demonstrated stream"
+    dur = float(fix["duration_s"])
+    dt = list(st["downtime_windows"])
+
+    def _raw(tl, aux, score):
+        return score([(t, a) for t, a in tl if a != TINCTURE_ACTION_ID],
+                     aux, None)
+
+    ceil_tl, ceil_aux = gnb_sim.simulate_idealized_perfect(
+        dur, dt, None, sim_context=ctx)
+    model = gnb_sim._model_for(dur, ctx)
+    score = gnb_sim._make_score(model.mt_schedule)
+    rst = replay_state(model, list(mr.norm_casts), dur, dur, dt,
+                       gcd_ids=gnb_sim._GCD_IDS, params=gnb_sim.SimParams(),
+                       skip_ids=gd.DEFENSIVE_IDS)
+    ceiling_raw = _raw(ceil_tl, ceil_aux, score)
+    replay_raw = _raw(rst.timeline, model.final_aux(rst), score)
+    assert ceiling_raw + 1e-6 >= replay_raw, \
+        f"search gap reopened: ceiling raw {ceiling_raw:.0f} < " \
+        f"player replay raw {replay_raw:.0f} (Δ {replay_raw - ceiling_raw:.0f}p)"
+    # Belt-and-braces: with the leg live the guard should have nothing to hide.
+    assert not st.get("ceiling_witness_gap"), \
+        f"witness gap {st.get('ceiling_witness_gap')} — the ceiling under-fits"
 
 
 @pytest.mark.skipif(not _FIXTURE_NAMES, reason="no GNB pull fixtures")
@@ -198,6 +249,9 @@ def main() -> int:
         eff = st["delivered_potency"] / st["idealized_potency"]
         print(f"  [OK  ] {name:24s} eff={eff:.1%} "
               f"pps={st['delivered_potency']/fix['duration_s']:.0f}")
+    if _FUSEIR in _FIXTURE_NAMES:
+        test_fuseir_ceiling_dominates_replay()
+        print(f"  [OK  ] {_FUSEIR}: ceiling dominates the player replay (raw)")
     test_quartile_efficiency_clustered()
     print(f"\nAll GNB real-pull tests passed ({len(_FIXTURE_NAMES)} fixtures)")
     return 0

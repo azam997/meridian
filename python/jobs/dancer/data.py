@@ -52,7 +52,7 @@ RISING_WINDMILL  = 15995   # AoE Reverse Cascade (Silken Symmetry proc)
 BLOODSHOWER      = 15996   # AoE Fountainfall (Silken Flow proc)
 
 # Esprit spenders (50 esprit each)
-SABER_DANCE      = 16005   # 520
+SABER_DANCE      = 16005   # 540 (probe-verified 543 implied; an old comment said 520)
 DANCE_OF_THE_DAWN = 36985  # 1000; needs Dance of the Dawn Ready (from Devilment, lv100)
 
 # Step dances (the step actions are forced, ~0 potency, ~1.0s step-GCD)
@@ -199,6 +199,15 @@ CANONICAL_OPENER: tuple[int, ...] = (
 # consecutive casts are NOT clips (the RPR Enshroud-Reaping analog).
 CLIP_EXCLUSIONS: frozenset[int] = frozenset(STEP_IDS | {STANDARD_STEP, TECHNICAL_STEP})
 
+# --- Per-ability GCD recast (multiple of the 2.5s global) --------------------
+# The dance family's true ~1.0s recast for the per-ability pacing consumers
+# (clipping.py / downtime_sources.py) — CLIP_EXCLUSIONS alone only suppressed
+# false clips, it didn't fix cadence pricing.
+GCD_RECAST_MULT: dict[int, float] = {
+    aid: STEP_RECAST_S / 2.5
+    for aid in (STEP_IDS | {STANDARD_STEP, TECHNICAL_STEP})
+}
+
 # --- Burst-alignment abilities ----------------------------------------------
 # Worth shifting into raid-buff windows (AlignmentAspect watches these): the
 # 2-minute burst + its enablers.
@@ -234,18 +243,25 @@ CHARGE_SHARING: dict[int, int] = {FINISHING_MOVE: STANDARD_STEP}
 
 # --- JOB_DATA bundle --------------------------------------------------------
 
-# --- AoE potencies (dedicated AoE buttons + the cleaving burst) -------------
-# ability_id -> per-extra-target potency. The AoE-line buttons (Windmill etc.)
-# are full-to-all; the burst the ST rotation already casts cleaves with wiki-
-# verified falloff (Saber Dance / Tillana / Dawn / Fan Dance IV / Technical
-# Finish all 60% -> x0.4; Starfall 75% -> x0.25). Both scale on delivered +
-# ceiling via `aoe_potency.potency_for`.
+# --- AoE potencies (dedicated AoE buttons only) -----------------------------
+# ability_id -> per-extra-target potency, full-to-all. ONLY the buttons the
+# AoE-line rotation swaps to belong here (jobs/_core/job.py: the two maps are
+# kept distinct so the free-splash overlay credits only ST-rotation casts).
 AOE_POTENCIES: dict[int, int] = {
     WINDMILL:          120,
     BLADESHOWER:       160,
     RISING_WINDMILL:   160,
     BLOODSHOWER:       200,
     FAN_DANCE_II:      100,
+}
+
+# --- Free-splash potencies (ST-rotation casts that innately cleave) ---------
+# The burst the SINGLE-TARGET rotation already casts, with wiki-verified
+# falloff (Saber Dance / Tillana / Dawn / Fan Dance IV / Technical Finish all
+# 60% -> x0.4; Starfall 75% -> x0.25). Scored identically via `potency_for`;
+# filed as SPLASH so the sidecar's per-cast splash dots render on the Timeline
+# (they silently vanished while these sat in AOE_POTENCIES).
+SPLASH_POTENCIES: dict[int, int] = {
     SABER_DANCE:       216,   # 540 x 0.4
     DANCE_OF_THE_DAWN: 400,   # 1000 x 0.4
     TILLANA:           240,   # 600 x 0.4
@@ -265,6 +281,7 @@ JOB_DATA: JobData = JobData(
     canonical_opener=CANONICAL_OPENER,
     defensive_ids=DEFENSIVE_IDS,
     clip_exclusions=CLIP_EXCLUSIONS,
+    gcd_recast_mult=GCD_RECAST_MULT,
     drift_exclusions=frozenset(),       # all recast oGCDs are pure DPS cooldowns
     rng_proc_ids=RNG_PROC_IDS,
     burst_abilities=BURST_ABILITIES,
@@ -273,6 +290,7 @@ JOB_DATA: JobData = JobData(
     raid_buffs={},                      # Technical Finish modeled via buff_windows (job-agnostic) / scoring
     role_policy=PHYSICAL_RANGED,
     aoe_potencies=AOE_POTENCIES,
+    splash_potencies=SPLASH_POTENCIES,
 
     # A dropped GCD backfills with a Cascade/Fountain filler (~220-280); price a
     # miss at opportunity cost above that.

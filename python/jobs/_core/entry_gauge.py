@@ -64,9 +64,14 @@ def measure_entry_gauge(norm_casts, gauges, *, spend_hook: SpendHook | None = No
     when every spend is covered by a modeled generator (RPR/MCH/WAR) — the deepest
     deficit anywhere is then a true lower bound on carried gauge. Set it when a job
     has an UN-modeled generation source (SAM's Meditate channel adds Kenki the cast
-    stream can't see) so later spends would otherwise read as phantom carried gauge."""
+    stream can't see) so later spends would otherwise read as phantom carried gauge.
+
+    PRE-PULL casts are part of the walk: gauge generated during the countdown is
+    real (a GNB pre-pull Bloodfest funds the opener's 3 cartridge spends — reading
+    those spends as a carried-gauge deficit made the ceiling bank the +3 TWICE,
+    once as entry seed and once as the sim's own t~0 Bloodfest)."""
     casts = sorted((t, a) for t, a in norm_casts
-                   if t >= 0.0 and (window_s is None or t <= window_s))
+                   if window_s is None or t <= window_s)
     out: dict[str, int] = {}
     for g in gauges:
         bal = mn = 0

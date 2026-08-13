@@ -343,4 +343,11 @@ JOB_DATA: JobData = JobData(
     # Pure melee with a gap-closer (Trajectory); forced disconnects are disengages
     # (like PLD/WAR), NOT an RPR-Harpe ranged filler.
     ranged_filler_id=None,
+    # Canonical opener presses Bloodfest during the countdown — FFLogs drops the
+    # cast but Ready to Reign survives, so the shared prepull reconstruction
+    # (jobs/_core/casts.py) reinstates it. That puts the +3 cartridge generation
+    # BEFORE the opener's spends in the entry-gauge walk: without it the spends
+    # read as a carried-gauge deficit and the ceiling banked the 3 carts TWICE
+    # (entry seed + the sim's own t~0 Bloodfest) — ~1.4k of unearned ceiling.
+    prepull_buff_ids={BLOODFEST: READY_TO_REIGN_STATUS_ID},
 )

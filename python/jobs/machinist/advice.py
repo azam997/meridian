@@ -67,10 +67,9 @@ TEXT: dict[str, dict[str, str]] = {
     "tool_drift": {
         "summary": ("{name} sat idle {drift:.0f}s in total, {deficit} "
                     "use{plural} lost"),
-        "prescription": ("Press {name} the moment it lights up. Your biggest "
-                         "slip starts at {when}, {worst:.1f}s late. Late "
-                         "presses stack until a whole use (~{value}p) falls "
-                         "off the end of the fight."),
+        "prescription": ("Drifting {name} is costly. Biggest drift at "
+                         "{when}, {worst:.1f}s late; the drift adds up until "
+                         "a use (~{value}p) is lost."),
         "count_v": "{player} / {ideal}",
         "count_note": "casts vs the sim's line",
         "idle_v": "{drift:.0f}s",
@@ -79,23 +78,20 @@ TEXT: dict[str, dict[str, str]] = {
     "heat_overcap": {
         "summary": ("Hypercharge held past full heat, {total:.0f} heat "
                     "wasted"),
-        "prescription": ("Use excess Heat right away here. The first overcap "
-                         "hits at {when}, and each delayed Hypercharge "
-                         "slides every later window until one stops "
-                         "fitting."),
+        "prescription": ("Use excess Heat right away here. First overcap at "
+                         "{when}; each late Hypercharge slides the rest "
+                         "until one stops fitting."),
         "worst_v": "{amount:.0f} heat",
-        "worst_note": "wasted at {when}, the worst single overcap",
+        "worst_note": "wasted at {when}, the most consequential overcap",
         "total_v": "{total:.0f} heat",
         "total_note": ("~{value:.0f}p of Overheat value across {count} "
                        "overcap{plural}"),
     },
     "queen_stranded": {
-        "summary": ("Automaton Queen stranded with {battery:.0f} battery at "
-                    "the kill"),
-        "prescription": ("Summon Queen once you cross 50 battery late in the "
-                         "fight. The {battery:.0f} you banked "
-                         "(~{value:.0f}p) never fired. A smaller early Queen "
-                         "beats a full one that never comes out."),
+        "summary": ("Automaton Queen left with {battery:.0f} battery at the "
+                    "kill"),
+        "prescription": ("An extra Queen use fits by summoning at lower "
+                         "battery late in the fight (~{value:.0f}p)."),
         "battery_v": "{battery:.0f} unspent",
         "battery_note": "last battery generator at {when} with no Queen after",
     },
@@ -111,7 +107,7 @@ GAUGE_TEXT: dict[str, GaugeText] = {
         min_delta=20.0),
     "battery": GaugeText(
         label="Battery", short="BAT",
-        over_note="a Queen was ready and waiting",
+        over_note="a Queen was ready",
         under_note=None,
         min_delta=20.0),
     "free_hypercharges": GaugeText(

@@ -126,10 +126,17 @@ def _measure_ctx(norm_casts) -> DancerCtx:
       * procs  = Reverse Cascade + Fountainfall (each needs a Silken proc),
       * feathers = Fan Dance (each spends a Fourfold Feather),
       * sabers = Saber Dance + Dance of the Dawn (each spends 50 Esprit)."""
+    # BOTH forms of each spend count: the simulator debits the same budgets for
+    # the AoE variants (Rising Windmill / Bloodshower / Fan Dance II), so
+    # counting only the ST forms starved the ceiling of resources the player
+    # provably had on add pulls (~4k potency on an M10S-style fight — delivered
+    # then exceeded the ceiling and the witness guard clamped it). The BRD
+    # measurer counts both forms; this is the same rule.
     proc = sum(1 for t, aid in norm_casts
-               if t >= 0 and aid in (dd.REVERSE_CASCADE, dd.FOUNTAINFALL))
+               if t >= 0 and aid in (dd.REVERSE_CASCADE, dd.FOUNTAINFALL,
+                                     dd.RISING_WINDMILL, dd.BLOODSHOWER))
     feather = sum(1 for t, aid in norm_casts
-                  if t >= 0 and aid == dd.FAN_DANCE)
+                  if t >= 0 and aid in (dd.FAN_DANCE, dd.FAN_DANCE_II))
     saber = sum(1 for t, aid in norm_casts
                 if t >= 0 and aid in (dd.SABER_DANCE, dd.DANCE_OF_THE_DAWN))
     return DancerCtx(proc_budget=proc, feather_budget=feather, saber_budget=saber)
@@ -145,6 +152,11 @@ class DancerScoringAspect(ScoringAspectBase):
     fns = _FNS
     tincture_spec = _TINCTURE_SPEC
     gcd_constant = dnc_simulator.GCD_BASE_S
+    # The pre-pull Standard Finish: a player's finish landing at t<0 is credited
+    # in-fight (nearest-to-zero, like the RDM/PCT precast channels) — symmetric
+    # with the 850p finish the sim emits at t=0. Without this a sub-second
+    # timing coin-flip decided whether the player got their finish counted.
+    prepull_channel_ids = frozenset({dd.STANDARD_FINISH})
 
     def prepare(self, client, code: str, fight: dict[str, Any],
                 actor: dict[str, Any], report: dict[str, Any],

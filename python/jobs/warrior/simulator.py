@@ -256,8 +256,10 @@ class WarriorRotationModel(engine.BaseRotationModel):
         if state.wrathful:
             return PRIMAL_WRATH
 
-        # Infuriate — +50 gauge + Nascent Chaos (-> Inner Chaos). Use a charge
-        # when it won't overcap the gauge, so the granted Inner Chaos lands.
+        # Infuriate — +50 gauge + Nascent Chaos (-> Inner Chaos). In-game the
+        # button has NO gauge restriction (tooltip-verified); `beast <= 50` is
+        # this model's anti-overcap heuristic — at exactly 50 the +50 lands on
+        # the 100 cap with zero waste, so <= (not <) is the optimal gate.
         if state.charges.get(INFURIATE, 0) >= 1 and state.beast <= 50 \
                 and not state.nascent_chaos and not is_forbidden(INFURIATE, t, fw):
             return INFURIATE

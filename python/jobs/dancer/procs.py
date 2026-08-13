@@ -7,7 +7,7 @@ DNC has four proc statuses:
     Reverse Cascade/Fountainfall could have been: ~60p + a forfeited feather/esprit.
   * **Threefold Fan Dance** (from Fan Dance) -> Fan Dance III, and
   * **Fourfold Fan Dance** (from Flourish) -> Fan Dance IV — free oGCD procs. A
-    wasted one loses the WHOLE button (200 / 420p), since nothing substitutes for it.
+    wasted one loses the WHOLE button (220 / 460p), since nothing substitutes for it.
 
 A proc is **wasted** when it's overwritten (re-proced before being spent — a
 `refreshbuff`) or expires unused. This aspect drives the dashboard's Proc
@@ -32,8 +32,8 @@ from jobs.dancer import data as dd
 # would have been over the basic combo GCD that filled the slot instead.
 _SILKEN_VALUE_P = dd.POTENCIES[dd.REVERSE_CASCADE] - dd.POTENCIES[dd.CASCADE]   # ~60
 # A wasted Fan Dance proc loses the whole oGCD (nothing substitutes for it).
-_FAN3_VALUE_P = dd.POTENCIES[dd.FAN_DANCE_III]   # 200
-_FAN4_VALUE_P = dd.POTENCIES[dd.FAN_DANCE_IV]    # 420
+_FAN3_VALUE_P = dd.POTENCIES[dd.FAN_DANCE_III]   # 220
+_FAN4_VALUE_P = dd.POTENCIES[dd.FAN_DANCE_IV]    # 460
 
 # FFLogs surfaces a status in aura events under the ability id (1000000 +
 # statusID). Match either form so the aspect is robust to the encoding.

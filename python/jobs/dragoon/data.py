@@ -260,7 +260,9 @@ COOLDOWN_VALUE_P: dict[int, int] = {
     LANCE_CHARGE:    900,   # +10% over a 20s burst window (priced via enablers)
     BATTLE_LITANY:     0,   # crit only -> no own-potency value (party buff)
     LIFE_SURGE:      285,   # ~the crit uplift on a 460p finisher (priced via enablers)
-    GEIRSKOGUL:     3200,   # LotD (+15%) + 3 Nastrond + Stardiver + Starcross (via enablers)
+    GEIRSKOGUL:     1760,   # LotD (+15%) + 1 Nastrond + Stardiver + Starcross (via
+                            # enablers). DT grants ONE Nastrond (NASTROND_PER_LOTD);
+                            # the old 3200 was sized for Endwalker's 3-per-window.
     DRAGONFIRE_DIVE: 500,   # + Rise of the Dragon follow-up
     HIGH_JUMP:       400,   # + Mirage Dive follow-up
 }
@@ -336,7 +338,8 @@ JOB_DATA: JobData = JobData(
     # stat/slope as Reaper/Samurai. ⚠️ refine per tier via scripts/calibrate_tincture.py.
     tincture_main_stat=6841,
     tincture_role_coeff=237,
-    # Pure melee with gap-closer JUMPS (no ranged GCD bridge) -> forced disconnects are
-    # disengages (like Viper/Paladin), NOT an RPR-Harpe ranged filler.
+    # Piercing Talon exists (priced in POTENCIES) but top parses bridge forced
+    # disconnects with gap-closer JUMPS, not a Talon consensus pattern -> treated
+    # as disengages (like Viper/Paladin), NOT an RPR-Harpe ranged filler.
     ranged_filler_id=None,
 )

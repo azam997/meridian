@@ -102,7 +102,7 @@ def test_gcd_fit_idle_then_fallback() -> None:
     far = compute_advice([_card("missed_cast", DRILL, 200.0, lost=340.0)],
                          [(0.0, DRILL)], [], clip, _data())
     _check("far from any idle → displaces-a-filler fallback with per-cast p",
-           len(far) == 1 and "displace a filler" in far[0]["prescription"]
+           len(far) == 1 and "displacing a filler" in far[0]["prescription"]
            and "~340p" in far[0]["prescription"],
            f"got {far}")
 
@@ -116,9 +116,9 @@ def test_residual_table() -> None:
                          player, ideal, {"clipping": None}, _data())
     _check("one item", len(out) == 1, f"got {len(out)}")
     it = out[0]
-    _check("prescription names the top gap as the sim fitting more",
-           it["prescription"].startswith("Biggest count gaps: Drill")
-           and "sim fits more" in it["prescription"],
+    _check("prescription names the top gap",
+           it["prescription"] == "Biggest count gaps: Drill and "
+                                 "Double Check.",
            f"got {it['prescription']!r}")
     _check("count gaps lead with the biggest deficit (Drill 3/5)",
            it["countGaps"][0] == {"name": "Drill", "you": 3, "sim": 5},
@@ -155,8 +155,8 @@ def test_residual_table_surplus_not_inverted() -> None:
            it["countGaps"][1] == {"name": "Drill", "you": 4, "sim": 3},
            f"got {it['countGaps']}")
     _check("prescription names the trade (extras are not free gains)",
-           "Your extra Drill casts came out of those slots" in it["prescription"]
-           and "worth less than what it displaced" in it["prescription"],
+           "Extra Drill casts took those slots at lower value"
+           in it["prescription"],
            f"got {it['prescription']!r}")
     # Pure-surplus table: no gap to name → the honest no-gaps framing.
     only_up = compute_advice([_card("residual", 0, 0.0)],

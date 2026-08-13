@@ -66,16 +66,14 @@ _IDLE_SCAN_S = 20.0
 # elsewhere stays legitimate. Run new dialogue copy by the user before
 # shipping it.
 TEXT: dict[str, str] = {
-    "weave_fit": ("Weave it after {name} at {when}. That {gap:.2f}s opening "
-                  "is already in your rotation."),
-    "idle_fit": ("It fits your {secs:.1f}s gap at {when}. Keep the GCD "
-                 "rolling and it costs nothing."),
-    "displace_filler": ("Your GCDs were tight here, so it has to displace a "
-                        "filler. Still worth ~{per:.0f}p net."),
-    "residual_deficits": ("Biggest count gaps: {names}. The sim fits more "
-                          "of them."),
-    "residual_trade": (" Your extra {surplus} casts came out of those slots; "
-                       "each extra is worth less than what it displaced."),
+    "weave_fit": ("Weave it after {name} at {when}; the {gap:.2f}s opening "
+                  "is already there."),
+    "idle_fit": "It fits free in your {secs:.1f}s gap at {when}.",
+    "displace_filler": ("Tight GCDs here; displacing a filler still nets "
+                        "~{per:.0f}p."),
+    "residual_deficits": "Biggest count gaps: {names}.",
+    "residual_trade": (" Extra {surplus} casts took those slots at lower "
+                       "value."),
     "residual_no_deficits": ("No ability ran behind the sim's counts. The "
                              "diffuse cost is burst spacing and GCD timing, "
                              "not which buttons you pressed."),

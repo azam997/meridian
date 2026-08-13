@@ -82,6 +82,7 @@ GCD_BASE_S = 2.50           # BLM base GCD (per-player Spell Speed threaded via 
 # Scored by time-to-next (capped at the duration), so refreshing a hair early just
 # credits less — overcap-safe.
 THUNDER_REFRESH_AT_S = 3.0
+_THUNDERHEAD_S = 30.0   # the Thunderhead buff's real duration (was an eternal bool)
 # MP needed to FINISH the current 6-soul set (so a Fire IV is only started when it
 # can be turned into a Flare Star) = remaining souls × Fire IV cost.
 _FULL_SET_MP = bd.ASTRAL_SOUL_CAP * bd.MP_COSTS[FIRE_IV]
@@ -116,15 +117,19 @@ class SimState(SimStateBase):
     astral_soul: int = 0          # 0–6 -> Flare Star
     polyglot: int = 0             # 0–3 -> Xenoglossy
     firestarter: bool = False     # next Fire III instant + free
-    thunderhead: bool = False     # enables High Thunder
+    thunderhead_until: float = -1.0   # High Thunder enabled while > t (30s buff)
     paradox_ready: bool = False   # FIRE Paradox available (lit entering Astral Fire)
     umbral_paradox_ready: bool = False  # ICE Paradox available (UI3 + 3 Umbral Hearts)
     thunder_dot_end: float = 0.0  # High Thunder DoT expiry
     ley_end: float = 0.0          # Ley Lines haste window end
     instant_this_slot: bool = False  # captured in gcd_duration for weave_budget
     aoe_flare_count: int = 0      # Flares cast this fire entry (caps the AoE set at 2)
-    # Polyglot accrual schedule (times of each +1, 1 / 30s of Enochian).
-    polyglot_schedule: list[float] = field(default_factory=list)
+    # Next Polyglot accrual time (+1 / 30s of Enochian, which is unbroken for
+    # the whole fight). A running clock rather than a prepull-built list: the
+    # deep-advice replay reconstructs states WITHOUT calling `prepull`, and a
+    # list seeded only there left every replayed continuation accruing no
+    # Polyglot at all.
+    polyglot_next_t: float = bd.POLYGLOT_INTERVAL_S
 
 
 # --- Refinement / canonical anchors ---------------------------------------
@@ -189,18 +194,22 @@ class BlackMageRotationModel(engine.BaseRotationModel):
         state.timeline.append((PREPULL_CHANNEL_T, FIRE_III))
         state.astral_fire = 3
         state.mp = bd.MP_CAP - bd.FIRE_III_HARDCAST_MP
-        state.thunderhead = True
+        state.thunderhead_until = PREPULL_CHANNEL_T + _THUNDERHEAD_S
         state.paradox_ready = True
-        # Polyglot accrual schedule (Enochian starts at the pre-pull cast).
-        dur = state.fight_duration_s
-        n = int(dur / bd.POLYGLOT_INTERVAL_S) + 1
-        state.polyglot_schedule = [bd.POLYGLOT_INTERVAL_S * (i + 1) for i in range(n)]
+
+    def catch_up_run_state(self, state: SimState) -> None:
+        # Polyglot accrues with the clock, but the greedy loop only releases it
+        # inside its pick hooks — which `sim.replay` never calls. Releasing on
+        # every replayed advance is what keeps a replayed state's Polyglot equal
+        # to the from-scratch line's at the same `t` (idempotent by the
+        # `while due <= t` walk below).
+        self._release_polyglot(state)
 
     def _release_polyglot(self, state: SimState) -> None:
         """Accrue Polyglot stacks now due (1 / 30s of Enochian, capped; overflow is
         wasted, which the picker avoids by spending Xenoglossy)."""
-        while state.polyglot_schedule and state.polyglot_schedule[0] <= state.t:
-            state.polyglot_schedule.pop(0)
+        while state.polyglot_next_t <= state.t:
+            state.polyglot_next_t += bd.POLYGLOT_INTERVAL_S
             state.polyglot = min(bd.POLYGLOT_CAP, state.polyglot + 1)
 
     def gcd_duration(self, state: SimState, gcd_id: int, params) -> float:
@@ -262,7 +271,8 @@ class BlackMageRotationModel(engine.BaseRotationModel):
         # 1. Refresh the High Thunder DoT near expiry (Thunderhead up). Kept as the
         #    ST High Thunder even at N>=2: its DoT is scored single-target, so the
         #    ceiling's DoT >= a player's AoE High Thunder II (which we under-credit).
-        if state.thunderhead and (state.thunder_dot_end - state.t) <= THUNDER_REFRESH_AT_S:
+        if state.thunderhead_until > state.t \
+                and (state.thunder_dot_end - state.t) <= THUNDER_REFRESH_AT_S:
             return HIGH_THUNDER
         # 2. Spend a full Astral Soul gauge (Flare Star cleaves -> always optimal).
         if state.astral_soul >= bd.ASTRAL_SOUL_CAP:
@@ -297,7 +307,8 @@ class BlackMageRotationModel(engine.BaseRotationModel):
     def _pick_ice(self, state: SimState, params) -> int:
         n = self._n(state.t)
         # Refresh the DoT in ice if due (Thunderhead granted on the transition).
-        if state.thunderhead and (state.thunder_dot_end - state.t) <= THUNDER_REFRESH_AT_S:
+        if state.thunderhead_until > state.t \
+                and (state.thunder_dot_end - state.t) <= THUNDER_REFRESH_AT_S:
             return HIGH_THUNDER
         # Blizzard IV / Freeze — grants the 3 Umbral Hearts (and lights the ice Paradox).
         if state.umbral_hearts < bd.UMBRAL_HEARTS_CAP:
@@ -348,6 +359,14 @@ class BlackMageRotationModel(engine.BaseRotationModel):
 
         # Per-ability effects + MP costs.
         if ability_id == FIRE_IV:
+            # Each Fire IV consumes one Umbral Heart while any remain (the
+            # heart nullifies the Astral Fire MP-cost doubling). Without the
+            # decrement the _pick_ice hearts gate was dead code after cycle 1
+            # and the correct B3->B4->Paradox line survived only by MP
+            # arithmetic coincidence (UI3_MP_REGEN_PER_GCD x exactly 2 ice
+            # GCDs) — a latent ~12k-potency-per-10min exposure if either
+            # constant ever moved.
+            state.umbral_hearts = max(0, state.umbral_hearts - 1)
             state.mp = max(0, state.mp - bd.MP_COSTS[FIRE_IV])
             state.astral_soul = min(bd.ASTRAL_SOUL_CAP, state.astral_soul + 1)
         elif ability_id == FLARE:
@@ -355,6 +374,7 @@ class BlackMageRotationModel(engine.BaseRotationModel):
             # per-fire-entry count gate (in _pick_fire) closes the set at 2 Flares
             # -> 6 soul -> Flare Star.
             state.mp = max(0, state.mp - FLARE_AOE_MP)
+            state.umbral_hearts = 0     # Flare consumes ALL Umbral Hearts
             state.astral_soul = min(bd.ASTRAL_SOUL_CAP, state.astral_soul + 3)
             state.astral_fire = 3
             state.aoe_flare_count += 1
@@ -380,7 +400,7 @@ class BlackMageRotationModel(engine.BaseRotationModel):
             state.umbral_ice = 0
             state.astral_soul = 0
             state.aoe_flare_count = 0               # fresh fire entry
-            state.thunderhead = True
+            state.thunderhead_until = t + _THUNDERHEAD_S
             state.paradox_ready = True
             state.umbral_paradox_ready = False
         elif ability_id in (BLIZZARD_III, HIGH_BLIZZARD_II):
@@ -389,13 +409,13 @@ class BlackMageRotationModel(engine.BaseRotationModel):
             state.astral_fire = 0
             state.astral_soul = 0
             state.aoe_flare_count = 0
-            state.thunderhead = True
+            state.thunderhead_until = t + _THUNDERHEAD_S
         elif ability_id in (BLIZZARD_IV, FREEZE):
             # Umbral Hearts builder (ST / AoE, gauge-equivalent).
             state.umbral_hearts = bd.UMBRAL_HEARTS_CAP
             state.umbral_paradox_ready = True    # UI3 + 3 hearts -> ice Paradox available
         elif ability_id == HIGH_THUNDER:
-            state.thunderhead = False
+            state.thunderhead_until = -1.0
             state.thunder_dot_end = t + bd.HIGH_THUNDER_DOT_DURATION_S
         elif ability_id in (XENOGLOSSY, FOUL):
             state.polyglot = max(0, state.polyglot - 1)
@@ -404,7 +424,7 @@ class BlackMageRotationModel(engine.BaseRotationModel):
             state.astral_fire = 3
             state.umbral_hearts = bd.UMBRAL_HEARTS_CAP
             state.aoe_flare_count = 0               # new fire batch
-            state.thunderhead = True
+            state.thunderhead_until = t + _THUNDERHEAD_S
             state.paradox_ready = True
         elif ability_id == AMPLIFIER:
             state.polyglot = min(bd.POLYGLOT_CAP, state.polyglot + 1)

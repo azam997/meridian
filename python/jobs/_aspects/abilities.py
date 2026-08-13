@@ -63,7 +63,10 @@ class AbilityTimelineAspect:
             toks = {status_id, 1_000_000 + status_id}
             evs = sorted((e for e in auras if e.get("abilityGameID") in toks),
                          key=lambda e: e.get("timestamp", 0))
-            if evs and evs[0].get("type") in ("removebuff", "refreshbuff"):
+            # removebuffstack: a STACKED countdown buff (SAM Meikyo) first
+            # loses a stack, not the whole buff.
+            if evs and evs[0].get("type") in ("removebuff", "refreshbuff",
+                                              "removebuffstack"):
                 inferred.append(ability_id)
         return inferred
 

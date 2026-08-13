@@ -254,11 +254,8 @@ BARREL_STABILIZER_GRANTS_FREE_HYPERCHARGE: bool = True
 # Filled in at M5 when raid-buff alignment lands. Conservative set; numbers
 # will be approximations applied uniformly to all runs (idealized / refs /
 # user) so deltas remain meaningful even if absolute multipliers drift.
-# status_id -> (name, base_duration_s, dmg_multiplier)
-
-RAID_BUFFS: dict[int, tuple[str, float, float]] = {
-    # populated at M5
-}
+# (Raid buffs are modeled job-agnostically via jobs/_core/buff_windows.py — a
+# per-job table never materialized and the old empty stub here was dead.)
 
 
 # --- Canonical opener -------------------------------------------------------
@@ -339,6 +336,10 @@ JOB_DATA: JobData = JobData(
     # post-Hypercharge resync is also hard to score without mechanic-level
     # modeling, so silent > wrong inside the window.
     clip_skip_windows={17209: 8.0},
+    # Blazing Shot's true 1.5s recast for the per-ability pacing consumers
+    # (clipping / downtime pricing) — the clip-skip window above only hides
+    # false clips, it doesn't fix cadence pricing.
+    gcd_recast_mult={36978: 0.6},
     drift_exclusions=DRIFT_EXCLUSIONS,
     burst_abilities=BURST_ABILITIES,
     cdr_rules=(
@@ -356,7 +357,7 @@ JOB_DATA: JobData = JobData(
     splash_potencies=SPLASH_POTENCIES,
     aoe_potencies=AOE_POTENCIES,
     aoe_radii_yalm=AOE_RADII_YALM,
-    raid_buffs={},  # filled in at M5
+    raid_buffs={},  # party buffs modeled via buff_windows (job-agnostic)
     role_policy=PHYSICAL_RANGED,
     # Reassemble is precast during the countdown (instant → clipped by FFLogs);
     # reconstruct it on the Timeline from the pre-applied Reassembled buff.

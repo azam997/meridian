@@ -28,7 +28,7 @@ import { Splash } from './components/Splash';
 import { WhatsNewModal } from './components/WhatsNewModal';
 import { APP_VERSION } from './data/changelog';
 import type {
-  AuthStatus, MitCompSelection, ProgressTask,
+  AuthStatus, MitCompSelection, ProgressTask, UserMitPlan,
 } from './sidecar/contract';
 import { onAuthExpired } from './sidecar/authExpired';
 import { PullsView } from './views/PullsView';
@@ -332,7 +332,7 @@ const App = () => {
    *  pull / encounter / job because setState is async. `comp` is the healer
    *  flow's (user-adjusted) mit-plan comp override from the planner. */
   const runAnalysis = async (snapshot?: Partial<AppState>, comp?: MitCompSelection,
-                             usePfPlan?: boolean) => {
+                             usePfPlan?: boolean, userMitPlan?: UserMitPlan) => {
     const s = { ...state, ...(snapshot ?? {}) };
 
     if (!s.job || !s.pullReportCode || s.pullFightId === 0) {
@@ -367,7 +367,8 @@ const App = () => {
           setProgressSteps(meta?.steps);
         },
         comp,
-        usePfPlan
+        usePfPlan,
+        userMitPlan
       );
       setState((cur) => ({ ...cur, analysis: result, analysisStatus: 'ready' }));
       // Fresh run: grade at the maximal-credit default, with the geometry
@@ -769,8 +770,9 @@ const App = () => {
             onAnalyze={
               mitPlanContext && ANALYZABLE_HEALERS.has(mitPlanContext.job)
                 && mitPlanContext.reportCode
-                ? (comp, compAdjusted, usePfPlan) =>
-                    runAnalysis(undefined, compAdjusted ? comp : undefined, usePfPlan)
+                ? (comp, compAdjusted, usePfPlan, userMitPlan) =>
+                    runAnalysis(undefined, compAdjusted ? comp : undefined,
+                                usePfPlan, userMitPlan)
                 : undefined
             }
           />

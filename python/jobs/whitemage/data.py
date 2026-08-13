@@ -191,6 +191,11 @@ COSTED_HEAL_GCD_IDS: frozenset[int] = frozenset({
     CURE, CURE_II, CURE_III, MEDICA, MEDICA_II, MEDICA_III, REGEN,
 })
 
+# Resurrection GCDs — the heal-lock rez pardon (jobs/_core/heal_locks): an
+# uptime Raise locks its own GCD(s) into the ceiling and opens a recovery
+# window for the costed heals that follow. Never in COSTED_HEAL_GCD_IDS.
+REZ_GCD_IDS: frozenset[int] = frozenset({RAISE})
+
 # --- Burst-alignment abilities ----------------------------------------------
 # Worth shifting into raid-buff windows: the banked Misery, the Glare IV
 # stacks, and PoM itself (the 2-minute anchor).

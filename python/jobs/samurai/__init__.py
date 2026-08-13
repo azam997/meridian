@@ -25,7 +25,7 @@ def _build_aspects():
     from jobs.samurai.scoring import SAMScoringAspect
 
     return (
-        AbilityTimelineAspect(),
+        AbilityTimelineAspect(prepull_buff_ids=JOB_DATA.prepull_buff_ids),
         DriftAspect(JOB_DATA),
         ClippingAspect(JOB_DATA),
         OvercapAspect(JOB_DATA),
@@ -56,10 +56,12 @@ def _register_self() -> None:
     global _registered
     if _registered:
         return
+    from jobs.samurai.advice import PACK as _advice_pack
     register(Job(
         name="Samurai",
         data=JOB_DATA,
         aspects=_build_aspects(),
         simulator=_build_simulator(),
+        advice_probes=_advice_pack,
     ))
     _registered = True

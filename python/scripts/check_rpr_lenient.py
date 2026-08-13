@@ -61,7 +61,7 @@ def main() -> None:
                      for w in (st.get("downtime_tier_b") or []))
             rw = sum(w["end_s"] - w["start_s"]
                      for w in (st.get("ranged_windows") or []))
-            flag = "  <-- LENIENT OVER" if el > 100.5 else ""
+            flag = "  <-- LENIENT OVER" if el > 100.0 else ""
             print(f"{you.label[:18]:<18}{st['fight_duration_s']:6.0f}"
                   f"{es:9.2f}{el:9.2f}{el - es:6.2f}{tb:9.1f}{rw:9.1f}{flag}")
 

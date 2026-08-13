@@ -55,10 +55,12 @@ def _register_self() -> None:
     global _registered
     if _registered:
         return
+    from jobs.viper.advice import PACK as _advice_pack
     register(Job(
         name="Viper",
         data=JOB_DATA,
         aspects=_build_aspects(),
         simulator=_build_simulator(),
+        advice_probes=_advice_pack,
     ))
     _registered = True

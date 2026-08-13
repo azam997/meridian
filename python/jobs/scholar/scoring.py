@@ -168,7 +168,8 @@ class ScholarScoringAspect(ScoringAspectBase):
         budget = reconcile_from_report(
             report, norm_casts, fight_duration_s,
             costed_ids=sd.COSTED_HEAL_GCD_IDS, locked_heal_id=sd.CONCITATION,
-            filler_potency=float(sd.POTENCIES[sd.BROIL_IV]))
+            filler_potency=float(sd.POTENCIES[sd.BROIL_IV]),
+            rez_ids=sd.REZ_GCD_IDS)
         return _SchCtx(heal_locks=budget.locks, heal_lock_state=budget.state)
 
     def sim_context(self, ctx: Any) -> Any:

@@ -163,7 +163,7 @@ def test_dnc_efficiency_within_guard(response: dict) -> None:
     idealized ceiling (perfect sim) — the <=100% guard the whole design rests on."""
     h = response.get("headline", {})
     eff = h.get("efficiencyPct") or 0
-    _check("efficiencyPct <= 100.5", eff <= 100.5, f"got {eff}")
+    _check("efficiencyPct <= 100", eff <= 100.0 + 1e-9, f"got {eff}")
 
 
 def test_dnc_ability_meta_only_dnc_ids(response: dict) -> None:

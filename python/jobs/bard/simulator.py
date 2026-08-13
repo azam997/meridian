@@ -146,7 +146,7 @@ class SimState(SimStateBase):
     barrage_armed: bool = False          # next Refulgent lands 3 hits
     resonant_ready_until: float = -1.0   # Resonant Arrow Ready expiry
     encore_ready_until: float = -1.0     # Radiant Encore Ready expiry
-    blast_ready: bool = False            # from a full-gauge Apex
+    blast_ready_until: float = -1.0      # Blast Arrow Ready expiry (10s, from Apex)
     # Budgets remaining (matched to the player's measured counts)
     refulgent_remaining: int = 0
     pp_remaining: int = 0
@@ -280,8 +280,10 @@ class BardRotationModel(engine.BaseRotationModel):
         if min(state.stormbite_end, state.caustic_end) - t <= IJ_REFRESH_AT_S:
             return IRON_JAWS
 
-        # 3. Armed follow-ups, tightest expiry first (Blast Arrow Ready ~10s).
-        if state.blast_ready and state.blast_remaining > 0:
+        # 3. Armed follow-ups, tightest expiry first (Blast Arrow Ready 10s —
+        # a real expiry, so the beam can't bank a 700p instant into a raid
+        # window its Apex could never legally reach).
+        if state.blast_ready_until > t and state.blast_remaining > 0:
             return BLAST_ARROW
         if state.encore_ready_until > t:
             return RADIANT_ENCORE
@@ -332,7 +334,7 @@ class BardRotationModel(engine.BaseRotationModel):
             int(t / g), state.song_idx, state.coda, state.rf_used,
             int(max(0.0, state.stormbite_end - t) / g),
             int(max(0.0, state.caustic_end - t) / g),
-            state.barrage_armed, state.blast_ready,
+            state.barrage_armed, state.blast_ready_until > t,
             state.resonant_ready_until > t, state.encore_ready_until > t,
             state.refulgent_remaining, state.pp_remaining,
             state.apex_remaining, state.blast_remaining, state.hb_remaining,
@@ -435,9 +437,9 @@ class BardRotationModel(engine.BaseRotationModel):
         elif ability_id == APEX_ARROW:
             state.apex_remaining = max(0, state.apex_remaining - 1)
             if state.blast_remaining > 0:
-                state.blast_ready = True
+                state.blast_ready_until = t + bd.BLAST_READY_S
         elif ability_id == BLAST_ARROW:
-            state.blast_ready = False
+            state.blast_ready_until = -1.0
             state.blast_remaining = max(0, state.blast_remaining - 1)
 
         # Armed follow-ups
@@ -469,18 +471,26 @@ class BardRotationModel(engine.BaseRotationModel):
             state.song_due_t = t + bd.SONG_SPLITS[ability_id]
             state.coda = min(3, state.coda + 1)
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         """Keep the song cycle rolling through a boss-untargetable gap: songs are
         targetless, and a real BRD re-songs during downtime so the haste/Coda/PP
         cadence is intact when the boss returns. Resources only — the damage
-        casts stay in uptime."""
+        casts stay in uptime. Honors `forbidden_windows`: a canonical-aligned
+        hold on a song must not be violated inside downtime (the scenario's
+        score has to be a reachable rotation), so a held song waits for its
+        hold to lapse — or falls back to the uptime picker after the window."""
+        fw = params.forbidden_windows if params is not None else ()
         saved_t = state.t
         try:
             while state.song_due_t < win_end - 0.5:
                 song = bd.SONG_ORDER[state.song_idx % len(bd.SONG_ORDER)]
                 ready = state.cd_ready.get(song, 0.0)
                 cast_t = max(win_start, state.song_due_t, ready)
+                if fw and is_forbidden(song, cast_t, fw):
+                    hold_ends = [e for aid, s, e in fw
+                                 if aid == song and s <= cast_t < e]
+                    cast_t = max([cast_t, *hold_ends])
                 if cast_t >= win_end - 1e-9 or ready > win_end:
                     break
                 state.t = cast_t

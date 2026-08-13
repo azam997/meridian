@@ -51,11 +51,29 @@ _HP1_BUCKET_MS = 2_000
 
 Progress = Callable[[int, str, list[dict] | None], None]
 
-# Direct (non-tick) heals with an authored potency — the per-log
-# potency->HP calibration set.
+# Direct (non-tick) heals whose LOGGED event amount corresponds 1:1 to the
+# authored potency — the per-log potency->HP calibration set. Explicit
+# whitelist: composite/reactive rows poison the ratio pool (Liturgy is modeled
+# at 1200 but logs 400-per-proc events; Horoscope is modeled at the upgraded
+# 400 while base-form events are 200; Essential Dignity scales with missing
+# HP; tank self-heals like Shake It Off scale off tank stats, not MND).
+_CALIBRATION_HEAL_NAMES = frozenset({
+    # WHM
+    "Tetragrammaton", "Assize", "Cure II", "Afflatus Solace",
+    "Afflatus Rapture", "Medica III",
+    # SCH
+    "Excogitation", "Physick", "Concitation", "Adloquium",
+    # SGE
+    "Taurochole", "Ixochole", "Diagnosis", "Holos",
+    "Eukrasian Diagnosis", "Eukrasian Prognosis II",
+    # AST
+    "Exaltation", "Benefic II", "Helios Conjunction",
+    "Celestial Intersection", "Celestial Opposition",
+})
 _HEAL_POTENCY_BY_NAME: dict[str, float] = {
     a.name: a.heal_potency for a in ACTIONS
     if a.heal_potency > 0 and a.target in (Target.PARTY, Target.SINGLE)
+    and a.name in _CALIBRATION_HEAL_NAMES
 }
 
 

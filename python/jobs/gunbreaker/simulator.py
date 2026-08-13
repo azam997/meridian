@@ -49,7 +49,9 @@ from functools import lru_cache
 from jobs._core.entry_gauge import EntryState, seed_entry_gauge
 from jobs._core.sim import engine
 from jobs._core.sim.aoe_potency import n_at, potency_for, schedule_target_fn
-from jobs._core.sim.engine import SimParamsBase, SimStateBase, apply_cooldown, is_forbidden
+from jobs._core.sim.engine import (
+    SimParamsBase, SimStateBase, apply_cooldown, is_forbidden, next_allowed_time,
+)
 from jobs._core.sim.timing import InstantGCD
 from jobs._core.tincture import spec_for_job
 from jobs.gunbreaker import data as gd
@@ -100,11 +102,29 @@ _BOW_FULL_DOT_P = (gd.BOW_SHOCK_DOT_DURATION_S / gd.BOW_SHOCK_DOT_TICK_S
 # 500/cart are higher). Keeps a cartridge-banking line alive until its spender lands. Not
 # scaled by No Mercy at bank time, so the bound holds even if No Mercy doesn't land.
 _CARTRIDGE_PRUNE_VALUE = float(gd.POTENCIES[BURST_STRIKE])
+# NOTE (v1.1 Fuseir Warblade investigation): a delayed-reward DD-in-NM prune credit was
+# prototyped here in several shapes (flat +360 for a held pair; a lattice-PHASE credit
+# keyed on `cd_ready[DD] - cd_ready[NM]`), plus a forced-DD lattice lock and an
+# in-window cart-banking arm. Every variant measured NEUTRAL-TO-WORSE on the production
+# strict ceiling (the beam trades a whole DD use for window-tail landings; width up to
+# 2048 does not recover the player's aligned line). Measured numbers + the surviving
+# work item live in NEXT_STEPS.md; the A/B harness is scripts/probe_gnb_refine.py and
+# scripts/diag_gnb_dd_lattice.py. Per the SAM lesson, measured-worse credits don't ship.
 
 # Hold the burst enablers into raid-buff windows; the payoff GCDs follow them.
 _ANCHORS: tuple[int, ...] = (NO_MERCY, BLOODFEST)
+
+# Double Down / No Mercy lattice discipline (see _st_boundary_pick): hold a
+# ready DD for a window opening within this long (a short hold realigns the
+# 60s-on-60s lattice; past it, holding starves casts)...
+_DD_HOLD_FOR_NM_S: float = 25.0
+# ...and protect the 2-cart DD bank from Burst Strike once NM is this close.
+_DD_BANK_LEAD_S: float = 15.0
 _SWEEP_MAX_WEAVES: tuple[int, ...] = (2, 3)
 _BEAM_WIDTH = 256
+# GCD ids for replay slot bookkeeping in the seeded ceiling leg: every potency-table
+# id that isn't an oGCD (includes Sonic Break / Lightning Shot).
+_GCD_IDS = frozenset(gd.POTENCIES) - gd.OGCD_IDS
 # `beam_signature` buckets every burst / cooldown timer to this granularity (one GCD):
 # two states within a GCD of each other on every timer choose the same next action, so
 # they should dedup to one beam. Keeps the width spent on genuinely distinct lines
@@ -248,7 +268,7 @@ class GunbreakerRotationModel(engine.BaseRotationModel):
             return DEMON_SLAUGHTER
         return None
 
-    def _st_boundary_pick(self, state: SimState) -> int:
+    def _st_boundary_pick(self, state: SimState, params) -> int:
         """Greedy boundary pick (single target): procs first, then spenders under No
         Mercy, then dump-near-cap / build. The beam explores the fork via
         `gcd_candidates`; this only needs a sane steady-state baseline."""
@@ -264,23 +284,81 @@ class GunbreakerRotationModel(engine.BaseRotationModel):
                 return GNASHING_FANG
             if state.cartridges >= 1:
                 return BURST_STRIKE
-        # Outside No Mercy: dump only to avoid overcap, else build toward the next burst.
+        # Outside No Mercy. Double Down discipline (the Fuseir Warblade
+        # 100.74% lesson): DD's 60s cooldown IS the No Mercy lattice — one
+        # cartridge-starved slip past a window (measured: +1.8s late) locks the
+        # misalignment in for the whole fight (2-of-7 windows caught, ~1000p of
+        # ceiling lost). So outside the window DD fires only when the next NM
+        # is too far to wait for (a short hold realigns the lattice; a long one
+        # starves casts), and the spenders never drain the 2-cart DD bank
+        # while the window is imminent.
+        if state.cartridges >= 2 and self._dd_ready(state) \
+                and self._dd_allowed_now(state, params):
+            return DOUBLE_DOWN
+        # Overcap dump: Gnashing / Burst Strike absorb it — never Double Down
+        # (the off-lattice spend). At the cap the bank is safe by definition
+        # (cap 3 > the 2-cart bank), so the dump always has a valve.
         if state.cartridges >= self._cap(state):
-            if state.cartridges >= 2 and self._dd_ready(state):
-                return DOUBLE_DOWN
             if self._gnashing_ready(state):
                 return GNASHING_FANG
             return BURST_STRIKE
         return KEEN_EDGE
 
-    def _aoe_boundary_pick(self, state: SimState) -> int:
+    def _nm_open_time(self, state: SimState, params) -> float:
+        """Hold-aware next No Mercy opportunity: the cooldown-ready time pushed
+        past any refine/canonical forbidden hold. Without this, a held NM reads
+        as `nm_next == t` ("the window opens NOW") for the hold's whole span —
+        `_dd_allowed_now` locks Double Down out and `_banking_for_dd` strips
+        Burst/Gnashing, collapsing the fork set to [KEEN_EDGE] for the entire
+        hold (up to 35s under refine's alignment delays, 60s under
+        `canonical_burst_forbidden`). The same blindness deadlocked DD in the
+        NM-forbidden enabler-value counterfactual, inflating No Mercy's
+        `enabler_net_values` entry (~+274 on the synthetic pipeline)."""
+        nm_next = max(state.cd_ready.get(NO_MERCY, 0.0), state.t)
+        fw = params.forbidden_windows if params is not None else ()
+        if fw:
+            nm_next = next_allowed_time(NO_MERCY, nm_next, fw)
+        return nm_next
+
+    def _dd_allowed_now(self, state: SimState, params) -> bool:
+        """Double Down placement rule: in-window always; outside only when the
+        next No Mercy is too far to hold for (or never comes) — a bounded hold
+        realigns the 60s-on-60s lattice without starving casts."""
+        if state.no_mercy_end > state.t:
+            return True
+        nm_next = self._nm_open_time(state, params)
+        return (nm_next - state.t > _DD_HOLD_FOR_NM_S
+                or nm_next > state.fight_duration_s)
+
+    def _banking_for_dd(self, state: SimState, params) -> bool:
+        """True while the 2-cart Double Down bank must be protected from the
+        1-cart spenders: the PRE-window lead only (NM opens within the banking
+        lead and DD will be ready for that window). Inside the window the
+        spends flow freely — an in-window hold measured WORSE (it starves the
+        window's own Gnashing/Burst potency for a phase problem that refine's
+        NM delay solves instead; an in-window cart-banking arm re-measured
+        WORSE in the v1.1 Fuseir investigation — cart GENERATION, not drain,
+        binds a mid-window DD). Above 2 cartridges the bank is safe by
+        definition (never trade overcap for it)."""
+        t = state.t
+        if state.cartridges > 2 or state.no_mercy_end > t:
+            return False
+        nm_next = self._nm_open_time(state, params)
+        if nm_next - t > _DD_BANK_LEAD_S or nm_next > state.fight_duration_s:
+            return False
+        return state.cd_ready.get(DOUBLE_DOWN, 0.0) \
+            <= nm_next + gd.NO_MERCY_DURATION_S
+
+    def _aoe_boundary_pick(self, state: SimState, params) -> int:
         if self._reign_ready(state):
             return REIGN_OF_BEASTS
         if self._break_ready(state):
             return SONIC_BREAK
-        if state.cartridges >= 2 and self._dd_ready(state):
+        # Same No-Mercy discipline as the ST pick (see _dd_allowed_now).
+        if state.cartridges >= 2 and self._dd_ready(state) \
+                and self._dd_allowed_now(state, params):
             return DOUBLE_DOWN
-        if state.cartridges >= 1:
+        if state.cartridges >= 1 and not self._banking_for_dd(state, params):
             return FATED_CIRCLE
         return DEMON_SLICE
 
@@ -289,8 +367,8 @@ class GunbreakerRotationModel(engine.BaseRotationModel):
         if forced is not None:
             return forced
         if self._n(state.t) >= _AOE_MIN_TARGETS:
-            return self._aoe_boundary_pick(state)
-        return self._st_boundary_pick(state)
+            return self._aoe_boundary_pick(state, params)
+        return self._st_boundary_pick(state, params)
 
     def gcd_candidates(self, state: SimState, params) -> list[int]:
         """The dense GCD move set. Inside a locked combo there is one forced move; at a
@@ -300,32 +378,41 @@ class GunbreakerRotationModel(engine.BaseRotationModel):
         if forced is not None:
             return [forced]
         if self._n(state.t) >= _AOE_MIN_TARGETS:
-            return self._aoe_candidates(state)
-        return self._st_candidates(state)
+            return self._aoe_candidates(state, params)
+        return self._st_candidates(state, params)
 
-    def _st_candidates(self, state: SimState) -> list[int]:
+    def _st_candidates(self, state: SimState, params) -> list[int]:
+        # The DD lattice discipline applies to the BEAM's move set too (the
+        # shipped ceiling is the beam line): an off-lattice Double Down and a
+        # bank-draining spend in the pre-window lead are pruned from the fork
+        # set — both have a bounded escape (`_dd_allowed_now`'s 25s horizon,
+        # `_banking_for_dd`'s cap valve), so no line is ever starved.
+        banking = self._banking_for_dd(state, params)
         cands: list[int] = [KEEN_EDGE]
         if self._reign_ready(state):
             cands.append(REIGN_OF_BEASTS)
         if self._break_ready(state):
             cands.append(SONIC_BREAK)
-        if state.cartridges >= 1:
+        if state.cartridges >= 1 and not banking:
             cands.append(BURST_STRIKE)
             if self._gnashing_ready(state):
                 cands.append(GNASHING_FANG)
-        if state.cartridges >= 2 and self._dd_ready(state):
+        if state.cartridges >= 2 and self._dd_ready(state) \
+                and self._dd_allowed_now(state, params):
             cands.append(DOUBLE_DOWN)
         return self._drop_builder_near_cap(state, cands, KEEN_EDGE)
 
-    def _aoe_candidates(self, state: SimState) -> list[int]:
+    def _aoe_candidates(self, state: SimState, params) -> list[int]:
+        banking = self._banking_for_dd(state, params)
         cands: list[int] = [DEMON_SLICE]
         if self._reign_ready(state):
             cands.append(REIGN_OF_BEASTS)
         if self._break_ready(state):
             cands.append(SONIC_BREAK)
-        if state.cartridges >= 1:
+        if state.cartridges >= 1 and not banking:
             cands.append(FATED_CIRCLE)
-        if state.cartridges >= 2 and self._dd_ready(state):
+        if state.cartridges >= 2 and self._dd_ready(state) \
+                and self._dd_allowed_now(state, params):
             cands.append(DOUBLE_DOWN)
         return self._drop_builder_near_cap(state, cands, DEMON_SLICE)
 
@@ -492,8 +579,8 @@ class GunbreakerRotationModel(engine.BaseRotationModel):
         elif ability_id == FATED_BRAND:
             state.ready_to_raze = False
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         # The in-game combo timer: a mid-step basic / Gnashing / Reign chain does
         # not survive a downtime that puts the next step more than 30s after the
         # last GCD — the ceiling must not resume a combo a real player would have
@@ -615,6 +702,36 @@ def _perfect_cached(duration_key: float,
     tl, aux = engine.beam_perfect(
         model, score, duration_key, list(downtime_tuple), buff_intervals,
         width=_BEAM_WIDTH)
+    # Replay-seeded ceiling leg (the Fuseir Warblade closure): when the context
+    # carries the player's demonstrated stream, max-guard the beam against
+    # replay(prefix) ⊕ continuation candidates. Cuts sit on the player's own
+    # No Mercy presses — the DD/NM lattice phase is exactly what the beam
+    # cannot find from a cold root. The lru key already carries `demonstrated`
+    # via sim_context, so seeded and unseeded results never collide.
+    demonstrated = getattr(sim_context, "demonstrated", None)
+    if demonstrated:
+        from jobs._core.sim.seeded import seeded_ceiling_max_guard
+        from jobs._core.tincture import place_optimal_pots
+
+        def _potted(cand_tl: list[tuple[float, int]], cand_aux: int) -> float:
+            # The adoption currency mirrors scoring._finalize: the shared DP
+            # re-pots whatever this shim returns, so candidates must be
+            # compared POST-DP (the uplift is line-dependent — a raw win can
+            # lose potted).
+            opt = place_optimal_pots(
+                list(cand_tl), duration_key, _TINCTURE_SPEC, buff_intervals,
+                lambda t2: score(list(t2), cand_aux, buff_intervals))
+            return score(opt, cand_aux, buff_intervals)
+
+        tl, aux = seeded_ceiling_max_guard(
+            model, score, duration_key, list(downtime_tuple), buff_intervals,
+            (list(tl), aux), demonstrated,
+            cut_times=tuple(t for t, a in demonstrated
+                            if a == NO_MERCY and 0.0 < t < duration_key)[-8:],
+            params_options=tuple(model.sweep_params(())),
+            gcd_ids=_GCD_IDS, skip_ids=gd.DEFENSIVE_IDS,
+            beam_width=_BEAM_WIDTH,
+            final_score=_potted)
     return tuple(tl), aux
 
 

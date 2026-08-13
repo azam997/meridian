@@ -89,9 +89,9 @@ def test_ogcd_bucket_full_value() -> None:
     _check("priced 2 × 180 = 360",
            abs(tails[0].lost_potency - 360.0) < 0.01,
            f"got {tails[0].lost_potency}")
-    _check("oGCD wording (displaces no GCD)",
+    _check("oGCD wording (a gain wherever it fits)",
            tails[0].prescription is not None
-           and "displace no GCD" in tails[0].prescription,
+           and "gain wherever it fits" in tails[0].prescription,
            f"got {tails[0].prescription!r}")
 
 

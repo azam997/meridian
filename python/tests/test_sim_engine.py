@@ -28,6 +28,7 @@ from jobs._core.sim.engine import (
     beam_search,
     in_top_window,
     is_forbidden,
+    next_allowed_time,
     reachable_richer_window,
     run_rotation,
     sweep_best,
@@ -158,7 +159,7 @@ class ToyModel(BaseRotationModel):
         state.timeline.append((round(state.t, 6), ability_id))
         apply_cooldown(state, self.cooldowns, ability_id)
 
-    def on_downtime_window(self, state, win_start, win_end) -> None:
+    def on_downtime_window(self, state, win_start, win_end, params=None) -> None:
         self.downtime_calls.append((win_start, win_end))
 
     def sweep_params(self, extra_forbidden):
@@ -200,6 +201,26 @@ def test_forbidden_window_blocks_an_ability() -> None:
     # Without the block, TOOL is picked.
     timeline2, _ = run_rotation(model, 30.0, [], SimParamsBase())
     assert TOOL in {aid for _t, aid in timeline2}
+
+
+def test_next_allowed_time() -> None:
+    """`next_allowed_time` is the inverse of `is_forbidden` for schedule
+    prediction: pushes a ready-time past any matching hold, walking chained
+    windows to a fixed point; a non-matching id or empty windows are identity."""
+    assert next_allowed_time(TOOL, 3.0, ()) == 3.0
+    assert next_allowed_time(TOOL, 3.0, ((OGCD, 0.0, 10.0),)) == 3.0
+    assert next_allowed_time(TOOL, 3.0, ((TOOL, 0.0, 10.0),)) == 10.0
+    # Chained windows (refine accumulates holds across iterations).
+    assert next_allowed_time(TOOL, 2.0, ((TOOL, 0.0, 5.0), (TOOL, 5.0, 9.0))) == 9.0
+    # Order-independent: the walk reaches the same fixed point.
+    assert next_allowed_time(TOOL, 2.0, ((TOOL, 5.0, 9.0), (TOOL, 0.0, 5.0))) == 9.0
+    # A window entirely ahead of t does not pull t forward.
+    assert next_allowed_time(TOOL, 3.0, ((TOOL, 5.0, 9.0),)) == 3.0
+    # Half-open: t == end is already castable.
+    assert next_allowed_time(TOOL, 10.0, ((TOOL, 0.0, 10.0),)) == 10.0
+    # Consistency with is_forbidden at the returned time.
+    fw = ((TOOL, 0.0, 5.0), (TOOL, 5.0, 9.0))
+    assert not is_forbidden(TOOL, next_allowed_time(TOOL, 2.0, fw), fw)
 
 
 # --- advance_time charge regen + apply_cooldown -----------------------------

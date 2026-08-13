@@ -27,7 +27,7 @@ def _build_aspects():
     from jobs.gunbreaker.scoring import GunbreakerScoringAspect
 
     return (
-        AbilityTimelineAspect(),
+        AbilityTimelineAspect(prepull_buff_ids=JOB_DATA.prepull_buff_ids),
         DriftAspect(JOB_DATA),
         ClippingAspect(JOB_DATA),
         OvercapAspect(JOB_DATA),
@@ -58,10 +58,12 @@ def _register_self() -> None:
     global _registered
     if _registered:
         return
+    from jobs.gunbreaker.advice import PACK as _advice_pack
     register(Job(
         name="Gunbreaker",
         data=JOB_DATA,
         aspects=_build_aspects(),
         simulator=_build_simulator(),
+        advice_probes=_advice_pack,
     ))
     _registered = True

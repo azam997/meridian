@@ -284,6 +284,21 @@ class SamuraiRotationModel(engine.BaseRotationModel):
         state.meditation = self.entry_meditation
         return state
 
+    def seed_run_state(self, state: SimState) -> None:
+        # Schedule the Tengentsu +10-Kenki blocks evenly across the fight. This
+        # is run-scoped bookkeeping (a measured budget spread over the pull),
+        # not a cast effect, so it seeds here rather than in `prepull`: a
+        # replayed state (deep-advice cascade) skips prepull, and without the
+        # schedule its continuation accrues no bonus Kenki at all.
+        dur = state.fight_duration_s
+        n = self.bonus_kenki // sd.TENGENTSU_KENKI_PER_PROC
+        # <= 0 (not == 0): a measured-but-sub-proc bonus (e.g. 5 Kenki) floors
+        # at zero procs — the honest budget — instead of silently keeping n = 0
+        # while ALSO skipping the no-data fallback.
+        if n <= 0 and self.bonus_kenki <= 0:
+            n = int(dur / _DEFAULT_TENGENTSU_PERIOD_S)
+        state.tengentsu_procs = [dur * (i + 0.5) / n for i in range(n)] if n > 0 else []
+
     def prepull(self, state: SimState, params) -> None:
         engage = sd.JOB_DATA.role_policy.engage_delay_s
         state.t = engage
@@ -301,12 +316,14 @@ class SamuraiRotationModel(engine.BaseRotationModel):
         # land as early as a real pre-pulled opener).
         recast_s = sd.COOLDOWNS[MEIKYO_SHISUI][0]
         state.charges[MEIKYO_SHISUI] = min(2.0, 1.0 + _PREPULL_MEIKYO_LEAD_S / recast_s)
-        # Schedule the Tengentsu +10-Kenki blocks evenly across the fight.
-        dur = state.fight_duration_s
-        n = self.bonus_kenki // sd.TENGENTSU_KENKI_PER_PROC
-        if n <= 0 and self.bonus_kenki == 0:
-            n = int(dur / _DEFAULT_TENGENTSU_PERIOD_S)
-        state.tengentsu_procs = [dur * (i + 0.5) / n for i in range(n)] if n > 0 else []
+
+    def catch_up_run_state(self, state: SimState) -> None:
+        # The Tengentsu blocks come due with the clock, but the greedy loop only
+        # releases them inside its pick hooks — which `sim.replay` never calls.
+        # Releasing on every replayed advance keeps a replayed Kenki total in
+        # step with the from-scratch line's (idempotent: the walk below pops
+        # only entries already due).
+        self._release_tengentsu_kenki(state)
 
     def _release_tengentsu_kenki(self, state: SimState) -> None:
         """Add +10 Kenki for each scheduled Tengentsu block now due (capped)."""
@@ -760,8 +777,8 @@ class SamuraiRotationModel(engine.BaseRotationModel):
         elif ability_id == SHOHA:
             state.meditation = max(0, state.meditation - 3)
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         """Bank resources through a boss-untargetable gap the way a real SAM does:
         channel Meditate (10 Kenki + 1 Meditation per 3s tick) for the window, and
         if a Meikyo charge is up, press it near the end so its 3 enders are ready

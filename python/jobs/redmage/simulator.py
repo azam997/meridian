@@ -399,8 +399,8 @@ class RedMageRotationModel(engine.BaseRotationModel):
         elif ability_id == PREFULGENCE:
             state.prefulgence_ready = False
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         # Cast Vercure during downtime to bank a Dualcast, so the first GCD out of
         # downtime is an INSTANT 440 (Verthunder/Veraero III) rather than a 2 s
         # hardcast enabler — the standard RDM downtime trick. Vercure is a heal

@@ -86,7 +86,6 @@ class AdviceContext:
     sim_module: str                              # e.g. "jobs.machinist.simulator"
     runner: Any = None                           # counterfactual.Runner | None
     gcd_ids: frozenset[int] = frozenset()        # ids that roll the GCD
-    replay_skip_ids: frozenset[int] = frozenset()  # job ids the replay ignores
     gauge_text: dict[str, GaugeText] = field(default_factory=dict)
 
 

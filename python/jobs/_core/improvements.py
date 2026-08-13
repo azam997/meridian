@@ -145,8 +145,8 @@ def compute_missed_cast_improvements(
                     kind="missed_enabler", ability_id=aid, ability_name=name,
                     time_s=t_i, lost_potency=priced,
                     summary=f"Missed {name}, fit one around {_mmss(t_i)}",
-                    prescription=f"Keep {name} on cooldown. The sim's line "
-                                 f"fits one here."))
+                    prescription=f"Keep {name} on cooldown; one more fits "
+                                 f"here."))
             continue
 
         for t_i in unmatched:
@@ -154,11 +154,11 @@ def compute_missed_cast_improvements(
             lost = gross if is_ogcd else max(0.0, gross - data.filler_gcd_potency)
             if lost < min_potency:
                 continue
-            rx = (f"Weave one more {name} around {_mmss(t_i)}. Worth "
-                  f"~{lost:.0f}p and it displaces no GCD."
+            rx = (f"Weave one more {name} around {_mmss(t_i)}. Free "
+                  f"weave, ~{lost:.0f}p."
                   if is_ogcd else
-                  f"Fit one more {name} around {_mmss(t_i)}. Worth "
-                  f"~{lost:.0f}p over the filler that backfills it.")
+                  f"Fit one more {name} around {_mmss(t_i)}. "
+                  f"~{lost:.0f}p over a filler GCD.")
             out.append(Improvement(
                 kind="missed_cast", ability_id=aid, ability_name=name,
                 time_s=t_i, lost_potency=lost,
@@ -294,8 +294,7 @@ def improvements_from_deaths(
             time_s=s, lost_potency=total,
             summary=f"Died at {_mmss(s)}: {dur:.0f}s recovering, "
                     f"~{gcd_count} GCDs lost",
-            prescription=f"Survive this hit. The {dur:.0f}s dead at "
-                         f"{_mmss(s)} costs the whole rotation across it."))
+            prescription="Survive this hit."))
     return out
 
 
@@ -403,8 +402,7 @@ def improvements_from_clipping(state: dict) -> list[Improvement]:
                     f"({f.idle_lost_gcds:.1f} GCDs)",
             children=children,
             prescription=f"Close the {worst_secs:.1f}s gap at {_mmss(t0)}, "
-                         f"your longest. {f.total_idle_s:.1f}s idle total "
-                         f"(~{f.idle_lost_gcds:.0f} GCDs)."))
+                         f"your longest."))
 
     if getattr(f, "total_clip_s", 0.0) >= 0.3 and f.clip_lost_potency > 0:
         children = [
@@ -515,13 +513,11 @@ def improvements_from_multi_target(scoring_state: dict) -> list[Improvement]:
     return [Improvement(
         kind="multitarget", ability_id=0, ability_name="",
         time_s=children[0].time_s, lost_potency=total,
-        summary=(f"Multi-target: you hit fewer targets than the optimal AoE line "
-                 f"across {n} window{'s' if n != 1 else ''}. Spread damage to every "
-                 f"enemy in these windows"),
+        summary=(f"Multi-target: fewer enemies hit than the AoE line allows, "
+                 f"across {n} window{'s' if n != 1 else ''}"),
         children=children,
-        prescription=(f"Swap to your AoE line inside the multi-enemy window at "
-                      f"{_mmss(children[0].time_s)}. The splash is free "
-                      f"potency."))]
+        prescription=(f"Swap to your AoE combo in the multi-target window at "
+                      f"{_mmss(children[0].time_s)}; the splash is free."))]
 
 
 # Wildfire payload: each weaponskill caught in the 10s window adds this much,
@@ -635,13 +631,11 @@ def improvements_from_tincture(state: dict) -> list[Improvement]:
     n_opt = int(state.get("tincture_optimal_count", 0) or 0)
     t = float(state.get("tincture_loss_time_s", 0.0) or 0.0)
     if n_obs < n_opt:
-        summary = (f"Used {n_obs} of {n_opt} tinctures. Fitting "
-                   f"{n_opt - n_obs} more on cooldown recovers this")
+        summary = f"Used {n_obs} of {n_opt} tinctures"
         rx = (f"Pot again the moment it's back up. {n_opt - n_obs} more "
               f"fit on cooldown.")
     else:
-        summary = ("Tinctures landed off your burst. Aligning them with your "
-                   "highest-potency windows recovers this")
+        summary = "Tincture landed off your burst"
         rx = f"Shift the pot into your burst at {_mmss(t)}."
     return [Improvement(
         kind="tincture", ability_id=0, ability_name="Tincture",
@@ -666,9 +660,8 @@ def diagnostics_from_opener(state: dict) -> list[Improvement]:
         out.append(Improvement(
             kind="opener", ability_id=getattr(o, "expected_id", 0) or 0,
             ability_name=expected_name, time_s=0.0, lost_potency=0.0,
-            summary=f"Opener slot #{o.position}: cast {actual_name}, canonical "
-                    f"opens {expected_name} (ordering only, no net loss unless "
-                    f"it drops a cast)"))
+            summary=f"Opener slot #{o.position}: {actual_name} instead of "
+                    f"{expected_name} (ordering only)"))
     return out
 
 
@@ -685,9 +678,7 @@ def improvements_from_drift(state: dict) -> list[Improvement]:
             time_s=0.0, lost_potency=d.lost_potency,
             summary=f"{d.ability_name} drifted {d.capped_seconds:.1f}s across "
                     f"{d.casts} casts",
-            prescription=f"Press {d.ability_name} closer to cooldown. "
-                         f"{d.capped_seconds:.1f}s drifted across "
-                         f"{d.casts} casts."))
+            prescription=f"Press {d.ability_name} closer to cooldown."))
     return out
 
 
@@ -797,9 +788,9 @@ def reconcile_to_budget(priced: list[Improvement],
             kind="residual", ability_id=0, ability_name="",
             time_s=0.0, lost_potency=residual, summary=summary,
             children=children,
-            prescription=("No single cast is at fault here. The cost is "
-                          "real, spread across many small choices: resource "
-                          "timing, burst spacing, filler picks.")))
+            prescription=("No single cast is at fault; this is spread "
+                          "across resource timing, burst spacing, and "
+                          "filler picks.")))
     kept.sort(key=lambda im: -im.lost_potency)
     return kept
 
@@ -842,12 +833,9 @@ def improvements_from_cadence(player_tl: list[tuple[float, int]],
     return [Improvement(
         kind="cadence", ability_id=0, ability_name="", time_s=0.0,
         lost_potency=round(val, 1),
-        summary=(f"Loose GCD pacing: the optimal line fit ~{cadence_gcds:.0f} more "
-                 f"GCDs than you (slightly-late casts spread across the fight, with "
-                 f"no single gap)"),
-        prescription=(f"Press the next GCD the moment it's ready. The optimal "
-                      f"line fits ~{cadence_gcds:.0f} more GCDs with no single "
-                      f"gap to point at."))]
+        summary=(f"Loose GCD pacing: ~{cadence_gcds:.0f} GCDs of slightly-late "
+                 f"casts, no single gap"),
+        prescription="Press the next GCD the moment it's ready.")]
 
 
 # Causally-linked pacing kinds: a gap (idle), an over-weave (clip) and loose
@@ -889,9 +877,8 @@ def group_families(cards: list[Improvement]) -> list[Improvement]:
     umbrella = Improvement(
         kind="pacing", ability_id=0, ability_name="",
         time_s=kids[0].time_s, lost_potency=round(total, 1),
-        summary=(f"GCD uptime & pacing: {lead}. These compound, since a dropped "
-                 f"or clipped GCD also shoves your next weave and burst window "
-                 f"later."),
+        summary=(f"GCD uptime & pacing: {lead}. One late GCD pushes every "
+                 f"weave and burst after it."),
         children=kids,
         prescription=(f"Start with the biggest piece: "
                       f"{top_rx[:1].lower()}{top_rx[1:]}" if top_rx else None))
@@ -992,8 +979,8 @@ def split_residual(cards: list[Improvement],
         buckets.append(Improvement(
             kind="residual_tail", ability_id=top_aid, ability_name=top_name,
             time_s=0.0, lost_potency=val, summary=summary,
-            prescription=("Spend gauge and procs the moment they're ready. "
-                          "Banked resource is a cast you never get back.")))
+            prescription=("Spending gauge and procs sooner fits more of "
+                          "these.")))
     if ogcd_rows and ogcd_val * scale >= _SPLIT_BUCKET_FLOOR:
         ogcd_rows.sort(key=lambda r: -r[0])
         _v, top_aid, top_name, top_d = ogcd_rows[0]
@@ -1001,12 +988,11 @@ def split_residual(cards: list[Improvement],
         val = round(ogcd_val * scale, 1)
         summary = (f"Damaging oGCDs the sim fit: {n_more} more "
                    f"{top_name if len(ogcd_rows) == 1 else 'weaves'} "
-                   f"(~{val:.0f}p; they displace no GCD)")
+                   f"(~{val:.0f}p, free)")
         buckets.append(Improvement(
             kind="residual_tail", ability_id=top_aid, ability_name=top_name,
             time_s=0.0, lost_potency=val, summary=summary,
-            prescription=("Weave damaging oGCDs on cooldown. They displace "
-                          "no GCD.")))
+            prescription="An extra weave is a gain wherever it fits."))
     if not buckets:
         return cards
 

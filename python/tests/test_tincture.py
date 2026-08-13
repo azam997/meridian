@@ -242,6 +242,50 @@ def test_timing_loss() -> None:
            abs(loss_off - 2700.0) < 1.0, f"loss={loss_off}")
 
 
+# --- 9. Free-weave-slot candidates: the relative fast-GCD cutoff ------------
+
+def test_free_slots_relative_fast_cutoff() -> None:
+    """The fast-GCD exclusion is relative to the line's own median cadence
+    (min'd with the absolute 2.05s): a fast-BASELINE job (MNK ~1.94s) keeps its
+    normal slots — the absolute cutoff alone excluded EVERY MNK slot, capping
+    the ceiling at one pot (the Vaknar Argelsk under-pot) — while genuine haste
+    WINDOWS stay excluded on both baselines."""
+    from jobs._core.tincture import _free_weave_slot_starts
+    GCD = 999_001   # unknown id -> metadata-free -> reads as a GCD
+
+    # A fast-baseline line (MNK-class, 1.94s): slots kept, 2nd pot reachable.
+    fast_base = [(round(i * 1.94, 2), GCD) for i in range(200)]
+    cands = _free_weave_slot_starts(fast_base, 200 * 1.94)
+    _check("fast-baseline slots kept (MNK-class)", len(cands) > 150,
+           f"only {len(cands)} candidates")
+    _check("a 2nd-pot slot exists >= 270s in",
+           any(c >= 270.0 for c in cands), "")
+
+    # A standard 2.5s line with a 1.5s haste window: the absolute cutoff holds
+    # (byte-identical to the pre-fix behavior); the haste slots stay excluded.
+    std = [(round(i * 2.5, 2), GCD) for i in range(40)]
+    haste = [(round(100.0 + i * 1.5, 2), GCD) for i in range(10)]
+    tail = [(round(116.5 + i * 2.5, 2), GCD) for i in range(40)]
+    cands2 = _free_weave_slot_starts(std + haste + tail, tail[-1][0] + 2.5)
+    _check("standard slots kept", any(90.0 <= c < 100.0 for c in cands2), "")
+    _check("haste-window slots excluded (standard baseline)",
+           not any(100.0 <= c < 113.0 for c in cands2),
+           f"{[c for c in cands2 if 100.0 <= c < 113.0]}")
+
+    # A fast baseline with its own even-faster window: the relative cutoff
+    # excludes the window, keeps the baseline.
+    fb = [(round(i * 1.94, 2), GCD) for i in range(40)]
+    win = [(round(78.0 + i * 1.5, 2), GCD) for i in range(10)]
+    tl3 = [(round(94.0 + i * 1.94, 2), GCD) for i in range(40)]
+    cands3 = _free_weave_slot_starts(fb + win + tl3, tl3[-1][0] + 1.94)
+    _check("fast baseline kept around its own haste window",
+           any(70.0 <= c < 78.0 for c in cands3)
+           and any(94.0 <= c < 100.0 for c in cands3), "")
+    _check("nested haste window excluded (fast baseline)",
+           not any(78.0 <= c < 91.0 for c in cands3),
+           f"{[c for c in cands3 if 78.0 <= c < 91.0]}")
+
+
 def main() -> int:
     print()
     print("Test: tincture modeling")
@@ -254,6 +298,7 @@ def main() -> int:
         test_delivered_credits_in_window_pot,
         test_spec_for_job,
         test_timing_loss,
+        test_free_slots_relative_fast_cutoff,
     ]
     for t in tests:
         try:

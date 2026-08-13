@@ -3,8 +3,10 @@
 The primary calibration tool when adding or tuning a job simulator: fetch the
 top-N ranked pulls per encounter, run the analysis pipeline, and report
 efficiency (delivered / idealized_strict). A well-calibrated ceiling sits
-~97-100% for top parses and never far over 100% — pulls much over 100% mean the
-ceiling is too LOW (a potency, buff, or uptime term is under-modeled). See the
+~97-100% for top parses and NEVER over 100% — a pull over means the ceiling is
+too LOW (a potency, buff, or uptime term is under-modeled). The gate is
+exactly 100% (owner directive, v1.1): every over-100 pull must be fixed or
+documented as a known work item in NEXT_STEPS.md — never left silent. See the
 `add-job` skill for the full workflow and how to read the decomposition.
 
 Run from python/ (needs FFLogs creds in ~/.fflogs_efficiency_analyzer/config.json):
@@ -40,6 +42,11 @@ from encounters import (  # noqa: E402
 from jobs import analyze_pull, get_job                                 # noqa: E402
 from jobs._core.ability_metadata import get_metadata                   # noqa: E402
 from sidecar.main import _client                                       # noqa: E402
+
+# The over-ceiling gate. Exactly 100: the ceiling is an upper bound, so ANY
+# raw (de-guarded) efficiency above it is a model looseness — fix it or
+# document it as a known work item (owner directive, v1.1; was 100.5).
+OVER_PCT = 100.0
 
 
 def _resolve_src(client, code, fight_id, name, subtype):
@@ -105,9 +112,9 @@ def sweep(job, encounters, top):
                 eff = 100 * dl / idl_raw if idl_raw > 0 else 0
                 effs.append(eff)
                 all_eff.append(eff)
-                if eff > 100.5:
+                if eff > OVER_PCT:
                     over += 1
-                flag = "  <-- OVER" if eff > 100.5 else ""
+                flag = "  <-- OVER" if eff > OVER_PCT else ""
                 if wgap > 0:
                     flag += f"  [witness +{wgap:.0f}p]"
                 print(f"{i:>2} {nm[:18]:<18}{dur:6.0f}{eff:8.2f}{dl/dur:6.0f}  "
@@ -118,12 +125,14 @@ def sweep(job, encounters, top):
             print(f"   {label}: min={min(effs):.2f} max={max(effs):.2f} "
                   f"mean={sum(effs)/len(effs):.2f}")
     if all_eff:
-        print(f"\nSUMMARY: {len(all_eff)} pulls, {over} over 100.5%, "
+        print(f"\nSUMMARY: {len(all_eff)} pulls, {over} over {OVER_PCT:g}%, "
               f"max={max(all_eff):.2f}% min={min(all_eff):.2f}% "
               f"mean={sum(all_eff)/len(all_eff):.2f}%")
         if over:
             print("  -> ceiling too LOW on those pulls. Run --decompose <name> on "
-                  "the worst to localize (uptime / mix / buff-weighting).")
+                  "the worst to localize (uptime / mix / buff-weighting), then "
+                  "either fix it or DOCUMENT it as a known over-100 work item "
+                  "(NEXT_STEPS.md) - the gate is exactly 100%.")
 
 
 def decompose(job, encounters, substr):

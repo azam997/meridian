@@ -120,12 +120,10 @@ PREPULL_CHANNEL_T = -rd.HARPE_CAST_S
 class SimParams(SimParamsBase):
     """RPR picker tunables. Adds to the shared knobs (max_weaves_per_gcd /
     triple_weave_clip_s / forbidden_windows):
-      * `harvest_moon_priority_high` — fire an armed Harvest Moon ASAP (True) or
-        hold it as low-priority filler (False).
       * `prepull_harpe` — pre-channel ranged Harpe during the run-in (True) for a
         free 300p that rolls the first GCD, or open straight into melee (False).
-    Both are valid lines; the sweep picks the higher-scoring per duration."""
-    harvest_moon_priority_high: bool = True
+    (A `harvest_moon_priority_high` axis existed but was a NO-OP — both branches
+    returned Harvest Moon — doubling every sweep for zero coverage; deleted.)"""
     prepull_harpe: bool = True
 
 
@@ -204,7 +202,6 @@ _CANONICAL_HOLD_S: float = engine._CANONICAL_HOLD_S
 
 # Sweep axes (kept here so the shape stays job-local).
 _SWEEP_MAX_WEAVES: tuple[int, ...] = (2, 3)
-_SWEEP_HARVEST_HIGH: tuple[bool, ...] = (True, False)
 _SWEEP_PREPULL_HARPE: tuple[bool, ...] = (True, False)
 
 
@@ -373,12 +370,12 @@ class ReaperRotationModel(engine.BaseRotationModel):
             return SHADOW_OF_DEATH
 
         # 8. Armed Harvest Moon (free value from a downtime-cast Soulsow).
-        if state.soulsow and params.harvest_moon_priority_high:
+        # Strict placement inside uptime is score-equivalent (it displaces one
+        # filler wherever it lands), so a single ASAP line suffices.
+        if state.soulsow:
             return HARVEST_MOON
 
         # 9. Main combo filler.
-        if state.soulsow:  # low-priority Harvest Moon line
-            return HARVEST_MOON
         if state.combo_step == 0:
             return SLICE
         if state.combo_step == 1:
@@ -631,8 +628,8 @@ class ReaperRotationModel(engine.BaseRotationModel):
             state.combo_step = 0
             state.aoe_combo_step = 0
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         # Re-arm Soulsow if it's down and the window is long enough, so an armed
         # Harvest Moon fires at the next uptime edge. Soulsow is a GCD but carries
         # no potency (0 in the table), so it's purely a flag set here, not scored.
@@ -645,12 +642,10 @@ class ReaperRotationModel(engine.BaseRotationModel):
 
     def sweep_params(self, extra_forbidden):
         for mw in _SWEEP_MAX_WEAVES:
-            for hm in _SWEEP_HARVEST_HIGH:
-                for ph in _SWEEP_PREPULL_HARPE:
-                    yield SimParams(max_weaves_per_gcd=mw,
-                                    harvest_moon_priority_high=hm,
-                                    prepull_harpe=ph,
-                                    forbidden_windows=extra_forbidden)
+            for ph in _SWEEP_PREPULL_HARPE:
+                yield SimParams(max_weaves_per_gcd=mw,
+                                prepull_harpe=ph,
+                                forbidden_windows=extra_forbidden)
 
 
 _MODEL = ReaperRotationModel()

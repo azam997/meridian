@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react';
 import {
-  ChevronDown, ClipboardList, Clock, ListChecks, Loader2, Play,
-  ShieldCheck, Sparkles, TriangleAlert, Users,
+  ChevronDown, ClipboardList, Clock, Download, Eraser, ListChecks, Loader2,
+  Play, ShieldCheck, Sparkles, TriangleAlert, Upload, Users, Wand2,
 } from 'lucide-react';
 import {
   DPS_JOBS, REGEN_HEALERS, SHIELD_HEALERS, TANK_JOBS, jobColor, jobIcon,
@@ -13,10 +13,18 @@ import { TimelineCast } from '../components/timeline/TimelineCast';
 import { clampBubbleLeft, useTimelineScale } from '../components/timeline/scale';
 import { fmtClock, fmtDuration } from '../format';
 import { sidecar } from '../sidecar';
+import { revealPath } from '../tauri/revealPath';
 import { MitPlanBoard } from './MitPlanBoard';
-import { KIND_LABEL, SCHOOL_LABEL, fmtK } from './mitPlanShared';
+import { MitPalette } from './MitPalette';
+import {
+  draftCount, draftToPlan, healCount, loadPlanDraft, planToDraft,
+  savePlanDraft, seedFromResult, type MitDraft, type MitHealDraft,
+} from './mitPlanDraft';
+import { blockedRowsFor } from './mitPlanAvailability';
+import { KIND_LABEL, SCHOOL_LABEL, fmtK, renderMitSheet } from './mitPlanShared';
 import type {
-  Catalog, MitCompSelection, MitDamageMarker, MitPlanResult,
+  Catalog, MitCompSelection, MitDamageMarker, MitLibraryAction,
+  MitLibraryResult, MitPlanResult, UserMitPlan,
 } from '../sidecar/contract';
 
 type Props = {
@@ -31,9 +39,10 @@ type Props = {
    *  the routed pull. `compAdjusted` = the user changed the comp away from
    *  the pull's — the adjusted comp then rides the analysis request so the
    *  locked ceiling matches the plan on screen. `usePfPlan` locks the premade
-   *  ("PF") plan instead of the auto one (ultimates that ship one). */
+   *  ("PF") plan instead of the auto one (ultimates that ship one);
+   *  `userMitPlan` locks the user's custom plan (never both). */
   onAnalyze?: (comp: MitCompSelection, compAdjusted: boolean,
-               usePfPlan: boolean) => void;
+               usePfPlan: boolean, userMitPlan?: UserMitPlan) => void;
 };
 
 const MP_HELP =
@@ -197,12 +206,40 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
   const [pullCompKey, setPullCompKey] = useState<string | null>(null);
   const [compSource, setCompSource] = useState<MitPlanResult['compSource']>();
   const [compWarnings, setCompWarnings] = useState<string[]>([]);
-  // Ultimate-only: lock the hand-authored premade ("PF") plan rather than the
-  // sim-derived one. Defaults ON — where an ultimate ships a PF plan it's the
-  // one groups actually run, so it's the better starting point; the `usePf`
-  // gate below no-ops it on encounters without a premade. Toggling marks the
-  // plan dirty (like a comp change), so the Re-plan button re-runs with it.
-  const [usePfPlan, setUsePfPlan] = useState(true);
+  // Where the plan comes from: the hand-authored premade ("PF") plan (defaults
+  // ON — where an ultimate ships one it's the plan groups actually run; the
+  // `usePf` gate below no-ops it elsewhere), the sim's auto plan, or the
+  // user's own drag-and-drop CUSTOM plan. Toggling pf/sim marks the plan dirty
+  // (like a comp change); custom auto-scores on every edit instead.
+  const [planSource, setPlanSource] = useState<'pf' | 'sim' | 'custom'>('pf');
+  // Custom-plan editor state: the draft (mechanicId → placed mits — the
+  // editor's source of truth), the comp's ability palette, the chip currently
+  // dragging, and the lightweight re-score spinner.
+  const [draft, setDraft] = useState<MitDraft>({});
+  // The authored per-gap GCD heals (the detail card's +/- incrementer) —
+  // plan content beside the mits, never auto-inserted for a custom plan.
+  const [healDraft, setHealDraft] = useState<MitHealDraft>({});
+  const [library, setLibrary] = useState<MitLibraryResult | null>(null);
+  const [dragAction, setDragAction] = useState<
+    { slot: string; job: string; action: MitLibraryAction;
+      /** Set when an already-placed bar is being MOVED (its mechanic id). */
+      from?: string } | null>(null);
+  const [scoring, setScoring] = useState(false);
+  // Editor-local notices (import matching, export fallback) merged into the
+  // notices row alongside the backend's warnings.
+  const [localNotices, setLocalNotices] = useState<string[]>([]);
+  const importInputRef = useRef<HTMLInputElement | null>(null);
+  const libCache = useRef<Record<string, MitLibraryResult>>({});
+  // The encounter whose autosave has been checked (restore runs once per
+  // encounter visit, and persisting is gated behind it so the on-switch draft
+  // clear can never wipe the NEXT encounter's autosave).
+  const restoredEnc = useRef<number | null>(null);
+  // Monotonic score sequence — the sidecar runs each request on its own
+  // thread, so a stale response must never clobber a newer draft's result.
+  const scoreSeq = useRef(0);
+  // Latest result without making the score effect depend on it (that would
+  // re-fire the effect on its own response — an infinite loop).
+  const resultRef = useRef<MitPlanResult | null>(null);
   // Healer flow only: a routed pull's comp is resolved backend-side, so until
   // its plan returns the selectors would show the stale defaults (Sage / White
   // Mage) — misleading on, say, a Scholar/Astrologian log. Gate the whole
@@ -242,10 +279,14 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
   const activeEnc = useMemo(
     () => encounters.find((e) => e.id === encounterId), [encounters, encounterId]);
   const pfAvailable = activeEnc?.category === 'ultimate' && !!activeEnc?.hasPfPlan;
-  const usePf = usePfPlan && pfAvailable;
+  const usePf = planSource === 'pf' && pfAvailable;
+  // The effective source: a 'pf' selection quietly means 'sim' on encounters
+  // without a premade (the PF tab isn't even rendered there).
+  const source: 'pf' | 'sim' | 'custom' =
+    planSource === 'custom' ? 'custom' : usePf ? 'pf' : 'sim';
 
   const compKey = `${shieldHealer}|${regenHealer}|${tanks.join(',')}|${dps.join(',')}`;
-  const runKey = `${encounterId}|${compKey}|${usePf ? 'pf' : 'auto'}`;
+  const runKey = `${encounterId}|${compKey}|${source === 'pf' ? 'pf' : source === 'custom' ? 'custom' : 'auto'}`;
   const dirty = lastRunKey === null || lastRunKey !== runKey;
   const canRun = !!encounterId && !loading;
 
@@ -283,7 +324,7 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
     // pull while the view stays mounted (same pattern as SetupView's reset).
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setEncounterId(pc.encounterId);
-    setUsePfPlan(true);    // default to the PF plan where the ultimate ships one
+    setPlanSource('pf');   // default to the PF plan where the ultimate ships one
     setPullSeeding(true);  // hide the config panel until the real comp seeds
     setLoading(true);
     setError(null);
@@ -329,6 +370,409 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
       alive = false;
     };
   }, [pullContext?.reportCode, pullContext?.fightId, pullContext?.encounterId]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    resultRef.current = result;
+  }, [result]);
+
+  // A draft is per-encounter: its keys are that encounter's mechanic ids.
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setDraft({});
+    setHealDraft({});
+    setLocalNotices([]);
+  }, [encounterId]);
+
+  // Restore the encounter's autosaved draft once the board's mechanics and
+  // the palette are both known (once per encounter visit; a user edit that
+  // lands first wins).
+  useEffect(() => {
+    if (planSource !== 'custom' || !library || !result
+        || result.encounterId !== encounterId) return;
+    if (restoredEnc.current === encounterId) return;
+    restoredEnc.current = encounterId;
+    const saved = loadPlanDraft(encounterId);
+    if (!saved || draftCount(draft) > 0 || healCount(healDraft) > 0) return;
+    const { draft: restored, heals, notices } = planToDraft(
+      saved, result.mechanics, library);
+    if (draftCount(restored) > 0 || healCount(heals) > 0) {
+      // Restoring persisted state IS this effect's job (it reads localStorage).
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setDraft(restored);
+      setHealDraft(heals);
+      if (notices.length) setLocalNotices((n) => [...n, ...notices]);
+    }
+  }, [planSource, library, result, encounterId, draft, healDraft]);
+
+  // Autosave: every draft change after the restore check persists (an empty
+  // draft removes the slot — "Clear plan" means it).
+  useEffect(() => {
+    if (planSource !== 'custom' || restoredEnc.current !== encounterId) return;
+    const mechs = resultRef.current?.encounterId === encounterId
+      ? resultRef.current.mechanics : [];
+    if (!mechs.length) return;
+    savePlanDraft(encounterId, draftCount(draft) || healCount(healDraft)
+      ? draftToPlan(draft, healDraft, mechs, encounterId, activeEnc?.name ?? '')
+      : null);
+    // resultRef/activeEnc read at save time on purpose.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [planSource, encounterId, draft, healDraft]);
+
+  // Custom mode needs the comp's ability palette (cached per comp — the
+  // backend memoizes too, this just skips the round trip).
+  useEffect(() => {
+    if (planSource !== 'custom') return;
+    const cached = libCache.current[compKey];
+    if (cached) {
+      setLibrary(cached);
+      return;
+    }
+    let alive = true;
+    setLibrary(null);
+    sidecar.getMitLibrary({ shieldHealer, regenHealer, tanks, dps })
+      .then((lib) => {
+        if (!alive) return;
+        libCache.current[compKey] = lib;
+        setLibrary(lib);
+      })
+      .catch(() => {
+        if (alive) setError('Could not load the ability palette.');
+      });
+    return () => {
+      alive = false;
+    };
+  }, [planSource, compKey, shieldHealer, regenHealer, tanks, dps]);
+
+  // Custom mode auto-scores: every draft/comp edit re-runs the backend with
+  // the authored plan (the damage model is cached, so warm re-scores are
+  // milliseconds — debounced + sequence-guarded against out-of-order
+  // responses). The first run on a cold encounter shows the full progress
+  // track while the model downloads.
+  useEffect(() => {
+    if (planSource !== 'custom' || !encounterId || pullSeeding) return;
+    const seq = ++scoreSeq.current;
+    const cold = !resultRef.current
+      || resultRef.current.encounterId !== encounterId;
+    const timer = setTimeout(() => {
+      const mechs = resultRef.current?.encounterId === encounterId
+        ? resultRef.current.mechanics : [];
+      if (cold) {
+        setLoading(true);
+        setProgress({ pct: 0, stage: 'Starting…' });
+      } else {
+        setScoring(true);
+      }
+      setError(null);
+      sidecar.planMitigation(
+        {
+          encounterId, shieldHealer, regenHealer, tanks, dps,
+          userMitPlan: draftToPlan(draft, healDraft, mechs, encounterId,
+                                   activeEnc?.name ?? ''),
+        },
+        cold ? (pct, stage) => setProgress({ pct, stage }) : undefined,
+      )
+        .then((res) => {
+          if (seq !== scoreSeq.current) return;
+          setResult(res);
+          setLastRunKey(`${encounterId}|${compKey}|custom`);
+          setCompSource(res.compSource ?? 'request');
+          setCompWarnings(res.compWarnings ?? []);
+          // Reconcile: entries the backend REJECTED (cooldown, invuln rules,
+          // same-debuff dedupe, off-comp imports) would otherwise linger
+          // invisibly in the draft — no bar to remove, yet still blocking
+          // the availability preview. Prune them; the backend's warning has
+          // already surfaced in the notices row. Safe against racing edits:
+          // the seq guard above means this response IS the current draft's.
+          const mechById = new Map(res.mechanics.map((m) => [m.id, m]));
+          setDraft((d) => {
+            let changed = false;
+            const next: MitDraft = {};
+            for (const [id, mits] of Object.entries(d)) {
+              const m = mechById.get(id);
+              const kept = mits.filter((x) => m?.assignments.some(
+                (a) => !a.isCarryover && a.job === x.job
+                  && a.actionId === x.actionId));
+              if (kept.length) next[id] = kept;
+              if (kept.length !== mits.length) changed = true;
+            }
+            return changed ? next : d;
+          });
+          setHealDraft((d) => {
+            let changed = false;
+            const next: MitHealDraft = {};
+            for (const [id, hs] of Object.entries(d)) {
+              const m = mechById.get(id);
+              const kept: typeof hs = [];
+              for (const x of hs) {
+                const g = m?.gcdHeals.find(
+                  (g2) => g2.job === x.job && g2.actionId === x.actionId);
+                if (!g) {
+                  changed = true;      // dropped entirely (off-comp, no pool)
+                  continue;
+                }
+                if (g.count < x.count) {
+                  // The backend trimmed the count (the lily bucket ran dry
+                  // before this mechanic) — sync the incrementer down so the
+                  // draft never claims heals the plan can't schedule.
+                  changed = true;
+                  kept.push({ ...x, count: g.count });
+                } else {
+                  kept.push(x);
+                }
+              }
+              if (kept.length) next[id] = kept;
+            }
+            return changed ? next : d;
+          });
+        })
+        .catch((e) => {
+          if (seq !== scoreSeq.current) return;
+          setError(`Plan failed: ${e instanceof Error ? e.message : String(e)}`);
+        })
+        .finally(() => {
+          if (seq !== scoreSeq.current) return;
+          setLoading(false);
+          setScoring(false);
+          setProgress(null);
+        });
+    }, cold ? 0 : 300);
+    return () => clearTimeout(timer);
+    // resultRef/activeEnc are read at fire time on purpose — depending on the
+    // result would re-fire the effect on its own response.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [planSource, encounterId, compKey, draft, healDraft, pullSeeding]);
+
+  // Editor edits — all paths just update the draft; the score effect owns
+  // the round trip. A payload with `from` is a MOVE: the source mechanic's
+  // copy is removed in the same update.
+  const addToDraft = (mechanicId: string,
+                      p: { job: string; actionId: number; from?: string }) => {
+    setDraft((d) => {
+      if (p.from === mechanicId) return d;     // dropped back home — no-op
+      let next = d;
+      if (p.from) {
+        const src = (d[p.from] ?? [])
+          .filter((x) => !(x.job === p.job && x.actionId === p.actionId));
+        next = { ...d };
+        if (src.length) next[p.from] = src;
+        else delete next[p.from];
+      }
+      const mits = next[mechanicId] ?? [];
+      if (mits.some((x) => x.job === p.job && x.actionId === p.actionId)) {
+        return next === d ? d : next;
+      }
+      return { ...next,
+               [mechanicId]: [...mits, { job: p.job, actionId: p.actionId }] };
+    });
+    setDragAction(null);
+  };
+
+  // A placed bar starts dragging: mirror it into dragAction (with `from`) so
+  // the drop strips + availability preview treat it as a move.
+  const onCastDragStart = (from: string, slot: string, job: string,
+                           actionId: number) => {
+    const action = library?.slots.find((s) => s.job === job)
+      ?.actions.find((a) => a.actionId === actionId);
+    if (action) setDragAction({ slot, job, action, from });
+  };
+
+  // Native HTML5 drag never scrolls overflow containers, so while a drag is
+  // live, edge-scroll every scrollable ancestor under the pointer (the board's
+  // .mpb-scroll and the page's .content both matter here).
+  useEffect(() => {
+    if (!dragAction) return;
+    const ZONE = 64;
+    // Arm only after real movement: grabbing a bar that happens to sit inside
+    // an edge zone must not start scrolling on its own.
+    let startY: number | null = null;
+    let armed = false;
+    const onDragOver = (e: DragEvent) => {
+      if (startY == null) startY = e.clientY;
+      if (!armed && Math.abs(e.clientY - startY) > 28) armed = true;
+      if (!armed) return;
+      let el: Element | null = e.target instanceof Element ? e.target : null;
+      while (el) {
+        if (el instanceof HTMLElement
+            && el.scrollHeight > el.clientHeight + 4) {
+          const cs = getComputedStyle(el);
+          if (/(auto|scroll)/.test(cs.overflowY)) {
+            const r = el.getBoundingClientRect();
+            if (e.clientY < r.top + ZONE) {
+              el.scrollTop -= Math.ceil((r.top + ZONE - e.clientY) / 3);
+            } else if (e.clientY > r.bottom - ZONE) {
+              el.scrollTop += Math.ceil((e.clientY - (r.bottom - ZONE)) / 3);
+            }
+          }
+        }
+        el = el.parentElement;
+      }
+    };
+    document.addEventListener('dragover', onDragOver);
+    return () => document.removeEventListener('dragover', onDragOver);
+  }, [dragAction]);
+  const removeFromDraft = (mechanicId: string, job: string, actionId: number) => {
+    setDraft((d) => {
+      const mits = (d[mechanicId] ?? [])
+        .filter((x) => !(x.job === job && x.actionId === actionId));
+      const next = { ...d };
+      if (mits.length) next[mechanicId] = mits;
+      else delete next[mechanicId];
+      return next;
+    });
+  };
+
+  // "Seed from sim plan": one plain (auto) plan round trip, converted into the
+  // draft — non-suggestion, non-carryover assignments, plus the sim's heal
+  // choices as authored heals (the user's to keep, trim, or grow).
+  const seedFromSim = async () => {
+    setScoring(true);
+    setError(null);
+    try {
+      const res = await sidecar.planMitigation(
+        { encounterId, shieldHealer, regenHealer, tanks, dps,
+          usePfMitPlan: false });
+      const seeded = seedFromResult(res);
+      setDraft(seeded.mits);
+      setHealDraft(seeded.heals);
+    } catch (e) {
+      setError(`Seed failed: ${e instanceof Error ? e.message : String(e)}`);
+    } finally {
+      setScoring(false);
+    }
+  };
+
+  // The detail card's heal incrementer: bump one healer AoE GCD heal for the
+  // gap before `mechanicId` (count clamps 0..8; 0 removes the row).
+  const onHealDelta = (mechanicId: string, job: string, actionId: number,
+                       delta: number) => {
+    setHealDraft((d) => {
+      const rows = d[mechanicId] ?? [];
+      const prior = rows.find((x) => x.job === job && x.actionId === actionId);
+      const count = Math.max(0, Math.min(8, (prior?.count ?? 0) + delta));
+      const kept = rows.filter((x) => !(x.job === job && x.actionId === actionId));
+      if (count > 0) kept.push({ job, actionId, count });
+      const next = { ...d };
+      if (kept.length) next[mechanicId] = kept;
+      else delete next[mechanicId];
+      return next;
+    });
+  };
+
+  // Export: the sidecar writes two files into the config dir's mit_plans/
+  // folder — the plan JSON (the wire format verbatim, re-importable) plus a
+  // same-stem .txt mit sheet (the human copy for Discord/PF) — and Explorer
+  // reveals them, the feedback-zip pattern (no extra Tauri permissions).
+  // Plain-browser dev can't reveal, so the paths land in the notices row.
+  const exportPlan = async () => {
+    const res = resultRef.current;
+    const mechs = res?.encounterId === encounterId ? res.mechanics : [];
+    if (!res || !mechs.length
+        || (draftCount(draft) === 0 && healCount(healDraft) === 0)) return;
+    // The premade files' convention: annotate each mit/heal with its ability
+    // name (documentation only, ignored by the parser) so even the JSON reads.
+    const nameOf = (aid: number): string | undefined =>
+      res.abilityMeta[aid]?.name ?? library?.abilityMeta[aid]?.name;
+    const plan = draftToPlan(draft, healDraft, mechs, encounterId,
+                             activeEnc?.name ?? '');
+    const annotated: UserMitPlan = {
+      ...plan,
+      assignments: plan.assignments.map((e) => ({
+        ...e,
+        mits: e.mits.map((mit) => {
+          const n = nameOf(mit.action_id);
+          return n ? { ...mit, _ability: n } : mit;
+        }),
+        ...(e.gcd_heals ? {
+          gcd_heals: e.gcd_heals.map((h) => {
+            const n = nameOf(h.action_id);
+            return n ? { ...h, _ability: n } : h;
+          }),
+        } : {}),
+      })),
+    };
+    try {
+      const { path } = await sidecar.exportMitPlan({
+        encounterId,
+        fileName: `${activeEnc?.name ?? `encounter-${encounterId}`} mit plan`,
+        plan: annotated,
+        readable: renderMitSheet(res),
+      });
+      try {
+        await revealPath(path);
+      } catch {
+        setLocalNotices((n) => [...n,
+          `Plan exported to ${path} (readable .txt copy beside it)`]);
+      }
+    } catch (e) {
+      setError(`Export failed: ${e instanceof Error ? e.message : String(e)}`);
+    }
+  };
+
+  // Import: a native file picker (WebView2 supports file inputs) + FileReader.
+  // planToDraft does the client-side matching; the backend re-validates on the
+  // score that follows, so a hand-edited file degrades to warnings, never an
+  // error.
+  const onImportFile = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';   // allow picking the same file again later
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const parsed = JSON.parse(String(reader.result)) as UserMitPlan;
+        if (!parsed || !Array.isArray(parsed.assignments)) {
+          setLocalNotices((n) => [...n,
+            `"${file.name}" is not a mitigation plan file.`]);
+          return;
+        }
+        const mechs = resultRef.current?.encounterId === encounterId
+          ? resultRef.current.mechanics : [];
+        if (!mechs.length || !library) {
+          setLocalNotices((n) => [...n,
+            'Wait for the plan board to finish loading, then import again.']);
+          return;
+        }
+        const pre: string[] = [];
+        if (parsed.encounter_id && parsed.encounter_id !== encounterId) {
+          pre.push(`"${file.name}" was made for another encounter `
+            + `(#${parsed.encounter_id}). Matching by mechanic anyway.`);
+        }
+        const { draft: imported, heals, notices } = planToDraft(
+          parsed, mechs, library);
+        setDraft(imported);
+        setHealDraft(heals);
+        setLocalNotices([...pre, ...notices]);
+      } catch {
+        setLocalNotices((n) => [...n, `Could not read "${file.name}" as JSON.`]);
+      }
+    };
+    reader.readAsText(file);
+  };
+
+  // Rows the dragged palette chip cannot land on (client preview; the backend
+  // stays authoritative and warns on anything this misses).
+  const blockedRows = useMemo(() => {
+    if (source !== 'custom' || !dragAction || !result || !library
+        || result.encounterId !== encounterId) {
+      return undefined;
+    }
+    return blockedRowsFor(dragAction.action, dragAction.job, draft,
+                          result.mechanics, library, dragAction.from);
+  }, [source, dragAction, result, library, draft, encounterId]);
+
+  // The healers' authorable AoE GCD heals (the detail card's incrementer),
+  // with palette icons folded in.
+  const healerHealOptions = useMemo(() => {
+    if (!library) return [];
+    return library.slots
+      .filter((s) => (s.healOptions ?? []).length > 0)
+      .map((s) => ({
+        slot: s.slot, job: s.job,
+        options: s.healOptions.map((o) => ({
+          ...o, iconPath: library.abilityMeta[o.actionId]?.iconPath,
+        })),
+      }));
+  }, [library]);
 
   const compAdjusted = pullCompKey !== null && compKey !== pullCompKey;
   const canAnalyze = !!onAnalyze && !!result && !!pullContext
@@ -461,12 +905,14 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
 
   // One collapsed row for everything the planner wants to flag, counted by
   // category (backend strings print verbatim in the expanded details).
-  const notices = result ? [...compWarnings, ...result.warnings] : [];
+  const notices = result
+    ? [...compWarnings, ...result.warnings, ...localNotices] : localNotices;
   const noticeSummary = (() => {
-    let skipped = 0, unmatched = 0, pf = 0, other = 0;
+    let skipped = 0, unmatched = 0, pf = 0, user = 0, other = 0;
     for (const w of result?.warnings ?? []) {
       if (w.startsWith('PF plan: no mechanic matched')) unmatched += 1;
       else if (w.startsWith('PF plan:')) pf += 1;
+      else if (w.startsWith('Your plan:')) user += 1;
       else if (w.includes('skipped:')) skipped += 1;
       else other += 1;
     }
@@ -474,6 +920,10 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
     if (skipped) parts.push(`${skipped} log${skipped === 1 ? '' : 's'} skipped`);
     if (unmatched) parts.push(`${unmatched} mechanic${unmatched === 1 ? '' : 's'} unmatched`);
     if (pf) parts.push(`${pf} PF plan notice${pf === 1 ? '' : 's'}`);
+    if (user) parts.push(`${user} custom plan notice${user === 1 ? '' : 's'}`);
+    if (localNotices.length) {
+      parts.push(`${localNotices.length} editor notice${localNotices.length === 1 ? '' : 's'}`);
+    }
     if (compWarnings.length) {
       parts.push(`${compWarnings.length} party notice${compWarnings.length === 1 ? '' : 's'}`);
     }
@@ -538,31 +988,44 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
             </div>
           </div>
 
-          {pfAvailable && (
-            <div className="setup-row">
-              <span className="setup-label">Plan source</span>
-              <div className="setup-controls">
-                <div className="seg-tabs">
+          <div className="setup-row">
+            <span className="setup-label">Plan source</span>
+            <div className="setup-controls">
+              <div className="seg-tabs">
+                {pfAvailable && (
                   <button
-                    className={'seg-tab' + (usePfPlan ? ' on' : '')}
-                    onClick={() => setUsePfPlan(true)}
+                    className={'seg-tab' + (source === 'pf' ? ' on' : '')}
+                    onClick={() => setPlanSource('pf')}
                   >
                     PF mit plan
                   </button>
-                  <button
-                    className={'seg-tab' + (!usePfPlan ? ' on' : '')}
-                    onClick={() => setUsePfPlan(false)}
-                  >
-                    Sim plan <span className="seg-suffix">BETA</span>
-                  </button>
-                </div>
-                <span className="setup-hint" style={{ maxWidth: 520 }}>
-                  The premade party-finder plan pins which mit covers each
-                  mechanic; the sim still schedules the timing.
-                </span>
+                )}
+                <button
+                  className={'seg-tab' + (source === 'sim' ? ' on' : '')}
+                  onClick={() => setPlanSource('sim')}
+                >
+                  Sim plan <span className="seg-suffix">BETA</span>
+                </button>
+                <button
+                  className={'seg-tab' + (source === 'custom' ? ' on' : '')}
+                  onClick={() => setPlanSource('custom')}
+                >
+                  Custom plan <span className="seg-suffix">NEW</span>
+                </button>
               </div>
+              <span className="setup-hint" style={{ maxWidth: 520 }}>
+                {source === 'custom'
+                  ? 'Build your own plan: drag abilities from the palette onto '
+                    + 'the damage rows below. Cooldowns and resources are '
+                    + 'enforced; healing GCDs are computed to survive the rest.'
+                  : source === 'pf'
+                    ? 'The premade party-finder plan pins which mit covers each '
+                      + 'mechanic; the sim still schedules the timing.'
+                    : 'The sim schedules mitigation automatically from the '
+                      + "encounter's forced damage."}
+              </span>
             </div>
-          )}
+          </div>
 
           <div className="setup-row">
             <span className="setup-label">Party</span>
@@ -593,11 +1056,65 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
 
           <div className="setup-footer">
             <span className="setup-footer-hint">
-              {swapLive
-                ? 'Click a slot to change the job · drag a card onto another to swap who casts'
-                : 'Click a slot to change the job'}
+              {source === 'custom'
+                ? 'Click a slot to change the job · drag abilities from the palette onto damage rows'
+                : swapLive
+                  ? 'Click a slot to change the job · drag a card onto another to swap who casts'
+                  : 'Click a slot to change the job'}
             </span>
-            {(dirty || loading) && (
+            {source === 'custom' ? (
+              <span className="setup-footer-run">
+                {scoring && (
+                  <span className="mp-scoring">
+                    <Loader2 size={12} className="mp-seeding-spin" /> scoring…
+                  </span>
+                )}
+                <button
+                  className="btn"
+                  disabled={loading || scoring || !encounterId}
+                  title="Copy the sim's auto plan into your draft as a starting point"
+                  onClick={() => void seedFromSim()}
+                >
+                  <Wand2 size={13} />
+                  Seed from sim plan
+                </button>
+                <button
+                  className="btn"
+                  disabled={loading || scoring
+                    || (draftCount(draft) === 0 && healCount(healDraft) === 0)}
+                  onClick={() => { setDraft({}); setHealDraft({}); }}
+                >
+                  <Eraser size={13} />
+                  Clear plan
+                </button>
+                <button
+                  className="btn"
+                  disabled={loading || scoring
+                    || (draftCount(draft) === 0 && healCount(healDraft) === 0)}
+                  title="Save the plan as a shareable JSON file plus a readable text mit sheet (revealed in Explorer)"
+                  onClick={() => void exportPlan()}
+                >
+                  <Download size={13} />
+                  Export
+                </button>
+                <button
+                  className="btn"
+                  disabled={loading || scoring || !result}
+                  title="Load a previously exported plan file"
+                  onClick={() => importInputRef.current?.click()}
+                >
+                  <Upload size={13} />
+                  Import
+                </button>
+                <input
+                  ref={importInputRef}
+                  type="file"
+                  accept=".json,application/json"
+                  style={{ display: 'none' }}
+                  onChange={onImportFile}
+                />
+              </span>
+            ) : (dirty || loading) && (
               <span className="setup-footer-run">
                 {dirty && lastRunKey !== null && !loading && (
                   <span className="setup-dirty">Party changed. Re-plan to apply.</span>
@@ -615,10 +1132,17 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
           <div className="ktt-run-row" style={{ marginTop: 14 }}>
             <button
               className="btn primary ktt-run"
-              disabled={loading || dirty}
-              title={dirty ? 'Re-plan first so the plan matches these selections' : undefined}
+              disabled={loading || (source === 'custom' ? scoring : dirty)}
+              title={source !== 'custom' && dirty
+                ? 'Re-plan first so the plan matches these selections' : undefined}
               onClick={() => onAnalyze!(
-                { shieldHealer, regenHealer, tanks, dps }, compAdjusted, usePf)}
+                { shieldHealer, regenHealer, tanks, dps }, compAdjusted, usePf,
+                source === 'custom'
+                  ? draftToPlan(draft, healDraft,
+                                result?.encounterId === encounterId
+                                  ? result.mechanics : [],
+                                encounterId, activeEnc?.name ?? '')
+                  : undefined)}
             >
               <Sparkles size={13} />
               Analyze my pull
@@ -672,6 +1196,14 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
                   <ClipboardList size={11} /> PF plan
                 </span>
               )}
+              {result.userPlanApplied && (
+                <span
+                  className="mp-pill covered"
+                  title="Scored from your custom plan: only the mits you placed are in it; healing GCDs are computed to survive the rest"
+                >
+                  <ClipboardList size={11} /> Custom plan
+                </span>
+              )}
               <span className="mp-pill covered">{s.coveredCount} covered</span>
               {s.tightCount > 0 && <span className="mp-pill tight">{s.tightCount} tight</span>}
               {s.uncoveredCount > 0 && <span className="mp-pill uncovered">{s.uncoveredCount} uncovered</span>}
@@ -715,10 +1247,39 @@ export const MitigationPlanner = ({ defaultEncounterId, pullContext, onAnalyze }
               <ListChecks size={14} />
               <h3>Mitigation Plan</h3>
               <span className="sub mut">
-                who covers what, top to bottom — click a row for details
+                {source === 'custom'
+                  ? 'drag abilities onto damage rows · drag a bar to move it · × removes · click a row for details and heals'
+                  : 'who covers what, top to bottom — click a row for details'}
               </span>
             </div>
-            <MitPlanBoard result={result} />
+            {source === 'custom' && (
+              library ? (
+                <MitPalette
+                  library={library}
+                  onDragStart={(slot, job, action) =>
+                    setDragAction({ slot, job, action })}
+                  onDragEnd={() => setDragAction(null)}
+                />
+              ) : (
+                <div className="mp-pal-loading mut">
+                  <Loader2 size={13} className="mp-seeding-spin" /> Loading
+                  ability palette…
+                </div>
+              )
+            )}
+            <MitPlanBoard
+              result={result}
+              editable={source === 'custom'}
+              dragAction={source === 'custom' ? dragAction : null}
+              blockedRows={blockedRows}
+              onDropAction={addToDraft}
+              onRemove={source === 'custom' ? removeFromDraft : undefined}
+              onCastDragStart={source === 'custom' ? onCastDragStart : undefined}
+              onCastDragEnd={() => setDragAction(null)}
+              healOptions={source === 'custom' ? healerHealOptions : undefined}
+              healDraft={healDraft}
+              onHealDelta={source === 'custom' ? onHealDelta : undefined}
+            />
           </div>
           <div className="mp-section mp-section-timeline">
             <div className="mp-section-head">

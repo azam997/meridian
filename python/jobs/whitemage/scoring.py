@@ -188,7 +188,8 @@ class WHMScoringAspect(ScoringAspectBase):
         budget = reconcile_from_report(
             report, norm_casts, fight_duration_s,
             costed_ids=wd.COSTED_HEAL_GCD_IDS, locked_heal_id=wd.MEDICA_III,
-            filler_potency=float(wd.POTENCIES[wd.GLARE_III]))
+            filler_potency=float(wd.POTENCIES[wd.GLARE_III]),
+            rez_ids=wd.REZ_GCD_IDS)
         return _WhmCtx(entry_l, entry_b,
                        heal_locks=budget.locks, heal_lock_state=budget.state)
 

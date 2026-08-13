@@ -199,9 +199,14 @@ class WhiteMageRotationModel(engine.BaseRotationModel):
         """A lily spend only buys damage if the Misery it feeds still lands
         before the fight ends (otherwise the spend is a free heal at best —
         never worth an uptime GCD on the ceiling)."""
+        return self._misery_still_fits_at(state, state.t)
+
+    def _misery_still_fits_at(self, state: SimState, t: float) -> bool:
+        """`_misery_still_fits` evaluated at an arbitrary clock (the downtime
+        lily filler paces its own local `t` without advancing state)."""
         spends_needed = wd.BLOOD_LILY_CAP - state.blood
         gcds = spends_needed + 1
-        return state.t + gcds * self.timing.gcd_recast_s <= state.fight_duration_s
+        return t + gcds * self.timing.gcd_recast_s <= state.fight_duration_s
 
     # --- Timing --------------------------------------------------------------
 
@@ -368,8 +373,8 @@ class WhiteMageRotationModel(engine.BaseRotationModel):
             return frozenset((RAPTURE, SOLACE, wd.MEDICA_III))
         return frozenset((ability_id,))
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         # Spend lily heals during downtime: instant, party-targeted, so they
         # cost ZERO damage GCDs — the free Blood Lily progress every real WHM
         # banks on a disconnect. The ceiling must do it too, or a player who
@@ -384,6 +389,12 @@ class WhiteMageRotationModel(engine.BaseRotationModel):
             state.t = t
             self._accrue_lilies(state)
             state.t = saved_t
+            # Same fight-end guard as the uptime picker: nourishing Blood Lily
+            # stacks a Misery can never bloom is dead value — but the beam's
+            # prune credit (~350/stack) would still PREFER the line that banked
+            # them, pruning the genuinely better tails.
+            if not self._misery_still_fits_at(state, t):
+                break
             if state.lilies > 0 and state.blood < wd.BLOOD_LILY_CAP:
                 state.timeline.append((t, SOLACE))
                 state.lilies -= 1
@@ -467,11 +478,10 @@ def simulate_idealized_optimal(
         buff_intervals: list[tuple[float, float, float]] | None = None,
         sim_context=None,
         ) -> tuple[list[tuple[float, int]], int]:
-    """The beam-refined optimum (buff-aware when given)."""
-    model = _model_for(fight_duration_s, sim_context)
-    return engine.beam_perfect(model, _make_score(model.mt_schedule),
-                               fight_duration_s, downtime_windows or [],
-                               buff_intervals, width=_BEAM_WIDTH)
+    """Alias of `simulate_idealized_perfect` (delegated so the two can't
+    silently drift apart — they were duplicated bodies before)."""
+    return simulate_idealized_perfect(
+        fight_duration_s, downtime_windows, buff_intervals, sim_context)
 
 
 def simulate_idealized_perfect(

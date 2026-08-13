@@ -193,16 +193,27 @@ AOE_POTENCIES: dict[int, int] = {
 # Non-positional ("missed") potency for the positional abilities. The delta
 # (POTENCIES[id] - this) is what a missed positional costs — priced only when
 # the bonus-byte detector (positionals.py) is wired in. Idealized always uses
-# the hit value above.
+# the hit value above. Void/Cross Reaping are NOT here: they have no positional
+# in game — their 580-vs-640 delta is the Enhanced ALTERNATION bonus, which the
+# simulator models as the alternation flag (a broken alternation is a
+# sequencing error, not a positioning one).
 POSITIONAL_MISS_POTENCY: dict[int, int] = {
     GIBBET:        500,
     GALLOWS:       500,
     EXEC_GIBBET:   700,
     EXEC_GALLOWS:  700,
-    VOID_REAPING:  580,
-    CROSS_REAPING: 580,
 }
 POSITIONAL_IDS: frozenset[int] = frozenset(POSITIONAL_MISS_POTENCY)
+
+# --- Defensives (NO damage value; rendered on the Timeline Defensives lane and
+# excluded from the DPS diff/scoring via the isDefensive flag). Live-probed ids.
+HELLS_INGRESS = 24401
+HELLS_EGRESS  = 24402
+REGRESS       = 24403
+ARCANE_CREST  = 24404
+DEFENSIVE_IDS: frozenset[int] = frozenset({
+    HELLS_INGRESS, HELLS_EGRESS, REGRESS, ARCANE_CREST,
+})
 
 # oGCD set — kept job-local (not read from XIVAPI) so scoring's GCD/oGCD split
 # stays hermetic under the test stub. Everything else in POTENCIES is a GCD.
@@ -218,7 +229,9 @@ OGCD_IDS: frozenset[int] = frozenset({
 
 COOLDOWNS: dict[int, tuple[float, int]] = {
     SOUL_SLICE:    (30.0, 2),
-    SOUL_SCYTHE:   (30.0, 2),
+    # SOUL_SCYTHE is NOT a second pool: it shares Soul Slice's 2-charge/30s
+    # timer (charge_sharing below). Listing it here spun up a phantom charge
+    # pool that advance_time kept regenerating and nothing read.
     GLUTTONY:      (60.0, 1),
     ARCANE_CIRCLE: (120.0, 1),
 }
@@ -374,7 +387,10 @@ JOB_DATA: JobData = JobData(
     drift_exclusions=DRIFT_EXCLUSIONS,
     burst_abilities=BURST_ABILITIES,
     cdr_rules=(),          # no cross-cooldown reductions
-    charge_sharing={},     # no shared-charge pools
+    # Soul Scythe (AoE) spends Soul Slice's charge pool — one pool, two buttons
+    # (the simulator's manual decrement mirrors this).
+    charge_sharing={SOUL_SCYTHE: SOUL_SLICE},
+    defensive_ids=DEFENSIVE_IDS,
     splash_potencies=SPLASH_POTENCIES,
     aoe_potencies=AOE_POTENCIES,
     raid_buffs={},         # Arcane Circle modeled via buff_windows (job-agnostic)

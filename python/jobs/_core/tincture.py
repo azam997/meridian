@@ -223,7 +223,8 @@ def make_tincture_windows(starts: list[float],
 # by the burst oGCD that drives those windows (Gauss/Ricochet, Lemure's Slice, the
 # Reawaken Legacy) — so it's never an available pot slot, even when a sim doesn't
 # model that oGCD explicitly. A standard GCD fits two weaves (double-weaving is safe
-# between GCDs); the pot takes the second.
+# between GCDs); the pot takes the second. This absolute bound only applies to a
+# ~2.5s-baseline line — see the relative cutoff in `_free_weave_slot_starts`.
 _FAST_GCD_S = 2.05
 
 
@@ -235,7 +236,19 @@ def _free_weave_slot_starts(rot: list[tuple[float, int]],
     Returns the start of every standard-GCD gap with a weave slot to spare, plus the
     pre-pull opener (t=0, popped during the countdown — never a weave). Fast-GCD gaps
     are excluded wholesale (their lone weave belongs to the burst oGCD). This is the
-    candidate set for the pot search, so the chosen optimum is always a usable slot."""
+    candidate set for the pot search, so the chosen optimum is always a usable slot.
+
+    The fast-GCD cutoff is RELATIVE to the line's own median cadence, min'd with
+    the absolute `_FAST_GCD_S`: an absolute 2.05s misclassified a fast-BASELINE
+    job as one long haste window — MNK at ~1.94s had EVERY normal slot excluded,
+    so the DP could place only 1 of its max_pots=2 (proven live on Vaknar
+    Argelsk, M12S-P1: ceiling under-potted by ~1.1k while the player's own log
+    shows 2 pots at t=4.0/361.0 woven at a 1.94s GCD in a 100%-efficiency parse
+    — real fast-baseline double-weaves don't clip). Any line whose median gap is
+    >= 2.05/0.85 (every ~2.4s+-base job) keeps the absolute cutoff exactly —
+    byte-identical; haste WINDOWS stay excluded because they run well under
+    0.85x their own line's median (MCH 1.5 vs 2.5, RPR 1.5 vs 2.47, VPR 1.7 vs
+    2.12)."""
     from . import ability_metadata
 
     def is_ogcd(aid: int) -> bool:
@@ -245,12 +258,20 @@ def _free_weave_slot_starts(rot: list[tuple[float, int]],
     casts = sorted(rot)
     gcd_times = [t for t, a in casts if not is_ogcd(a)]
     ogcd_times = sorted(t for t, a in casts if is_ogcd(a))
+    gaps = sorted(b - a for a, b in zip(gcd_times, gcd_times[1:]))
+    fast_cutoff = _FAST_GCD_S
+    if gaps:
+        fast_cutoff = min(_FAST_GCD_S, 0.85 * gaps[len(gaps) // 2])
     starts = {0.0}
     for i, g in enumerate(gcd_times):
         nxt = gcd_times[i + 1] if i + 1 < len(gcd_times) else fight_duration_s
-        if (nxt - g) < _FAST_GCD_S:
+        if (nxt - g) < fast_cutoff:
             continue   # fast GCD — its single weave is the burst oGCD's, not a pot's
-        n_woven = sum(1 for o in ogcd_times if g < o < nxt)
+        # g <= o: `_commit_gcd` applies the FIRST weave at exactly the GCD's
+        # timestamp, so a strict lower bound missed it and reported ~one free
+        # slot per fully-woven GCD (measured: 124/158 oGCDs share their GCD's
+        # timestamp; 11/161 "free" slots were actually full).
+        n_woven = sum(1 for o in ogcd_times if g <= o < nxt)
         if n_woven < 2:
             starts.add(round(g, 2))
     return sorted(starts)

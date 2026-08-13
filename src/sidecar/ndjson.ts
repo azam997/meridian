@@ -14,8 +14,8 @@ import { emitAuthExpired } from './authExpired';
 import { flushPendingLogs, logEvent } from '../log';
 import type {
   Sidecar, LookupResult, AnalysisResult, Catalog, CacheStats, PrefetchResult, ProgressTask,
-  ProgressMeta, HandshakeResult, TheorizeResult, MitPlanResult, RankingEntry,
-  AuthStatus, AuthBeginResult, AuthPollResult, UserCharactersResult,
+  ProgressMeta, HandshakeResult, TheorizeResult, MitPlanResult, MitLibraryResult,
+  RankingEntry, AuthStatus, AuthBeginResult, AuthPollResult, UserCharactersResult,
   RecentEventsResult, FeedbackBundleResult, ProgPullsResult, CharacterPullsResult,
 } from './contract';
 import type { Region, RefsBucket } from '../state/appState';
@@ -379,16 +379,17 @@ export const ndjsonSidecar: Sidecar = {
     // is unchanged for normal fetches.
     call<RankingEntry[]>('list_rankings', { spec, encounterId, forceRefresh }),
 
-  runAnalysis: (reportCode, fightId, spec, encounterId, refsBucket: RefsBucket, playerName, onProgress, comp, usePfMitPlan) =>
+  runAnalysis: (reportCode, fightId, spec, encounterId, refsBucket: RefsBucket, playerName, onProgress, comp, usePfMitPlan, userMitPlan) =>
     call<AnalysisResult>(
       'run_analysis',
       // An undefined playerName is dropped by JSON.stringify — the wire shape
       // is unchanged for normal (own-character) runs. The healer flow's comp
-      // override + usePfMitPlan spread the same way (absent unless given).
+      // override + usePfMitPlan + userMitPlan spread the same way (absent
+      // unless given).
       {
         reportCode, fightId, spec, encounterId, refsBucket, playerName,
         shieldHealer: comp?.shieldHealer, regenHealer: comp?.regenHealer,
-        tanks: comp?.tanks, dps: comp?.dps, usePfMitPlan,
+        tanks: comp?.tanks, dps: comp?.dps, usePfMitPlan, userMitPlan,
       },
       onProgress
     ),
@@ -400,4 +401,10 @@ export const ndjsonSidecar: Sidecar = {
 
   planMitigation: (args, onProgress) =>
     call<MitPlanResult>('plan_mitigation', { ...args }, onProgress),
+
+  getMitLibrary: (args) =>
+    call<MitLibraryResult>('get_mit_library', { ...args }),
+
+  exportMitPlan: (args) =>
+    call<{ path: string; readablePath?: string }>('export_mit_plan', { ...args }),
 };

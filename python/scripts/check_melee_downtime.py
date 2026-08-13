@@ -5,7 +5,7 @@ onto the strict/rank ceiling, self-limited per pull. The existing validate_job_c
 sweep calls `analyze_pull` only, so it never sees this credit. This harness mirrors the
 sidecar: analyze the top-N as the pool, run `_inject_tier_b` then `_inject_melee_downtime`
 over the pool, and print strict efficiency BEFORE vs AFTER the credit + the credited
-potency, flagging any pull now over 100.5% (the guard).
+potency, flagging any pull now over 100% (the guard).
 
 Run from python/:  python scripts/check_melee_downtime.py Reaper --enc 101 102 105
 """
@@ -72,7 +72,7 @@ def main() -> None:
             eff_a = 100 * dl / a if a else 0.0
             effs_a.append(eff_a)
             grand_n += 1
-            over = eff_a > 100.5
+            over = eff_a > 100.0
             grand_over += int(over)
             flag = "  <-- OVER" if over else ""
             credpct = 100 * credit / b if b else 0.0
@@ -81,7 +81,7 @@ def main() -> None:
                   f"{nwins:5d}{flag}")
         print(f"   after-credit: min={min(effs_a):.2f} max={max(effs_a):.2f} "
               f"mean={sum(effs_a)/len(effs_a):.2f}")
-    print(f"\nSUMMARY: {grand_n} pulls, {grand_over} over 100.5%")
+    print(f"\nSUMMARY: {grand_n} pulls, {grand_over} over 100%")
 
 
 if __name__ == "__main__":

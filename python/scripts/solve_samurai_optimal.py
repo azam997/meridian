@@ -285,6 +285,7 @@ class Solver:
         root = self.model.init_state()
         root.fight_duration_s = self.dur
         root.downtime_windows = self.downtime
+        self.model.seed_run_state(root)
         self.model.prepull(root, self.params)
         root._flat = sum(_flat_value(a) for _t, a in root.timeline)
         root._finalized_dot = 0.0
@@ -443,6 +444,10 @@ def replay_legality(sim_context, casts) -> list[tuple]:
     # Seed the pre-pull (countdown) Meikyo Shisui — FFLogs omits casts before the
     # pull timer, so the opener's Tendo/3-stacks aren't in the stream; without this
     # the first Tendo Setsugekka reads as a (spurious) tendo=False violation.
+    # NOTE: `st.fight_duration_s` is still 0 here, so seed_run_state schedules no
+    # Tengentsu blocks and this walk sees no bonus Kenki — the same as it always
+    # has (prepull computed the schedule from the same unset duration).
+    model.seed_run_state(st)
     model.prepull(st, SimParams())
     viol: list[tuple] = []
     for t, aid in sorted(casts, key=lambda c: c[0]):
@@ -520,6 +525,7 @@ def max_setsugekka_count(duration_s, downtime, sim_context, min_higanbana=8,
     root = model.init_state()
     root.fight_duration_s = duration_s
     root.downtime_windows = downtime or []
+    model.seed_run_state(root)
     model.prepull(root, params)
     dfs(root)
     return best["setsu"], best["higan"]

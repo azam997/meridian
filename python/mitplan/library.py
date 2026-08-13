@@ -40,11 +40,22 @@ Modeling conventions:
       sweep, NOT a flat heal): caster (own GCD spells) WHM Temperance +0.20, SGE
       Philosophia +0.18; receiver (all incoming) SGE Physis II/Krasis, SCH
       Protraction. Genuine base regen/heal stays; only the % rides the window.
+    * Flat heal RIDERS (heal_flat_potency + heal_flat_partners): WHM Plenary's
+      Confession adds a fixed 200p to each qualifying same-job AoE GCD heal
+      cast inside its window. PAIR-GATED in the sweep: no qualifying host cast
+      in the window, no credit — Plenary has NO standalone heal and NO
+      mitigation component.
     * Base GCD shields Adloquium / Eukrasian Diagnosis are their own single-target
-      entries the shield riders act on; Deployment spreads Galvanize party-wide.
+      entries the shield riders act on; Deployment spreads Galvanize party-wide
+      (and is itself a valid Recitation/Seraphism host — the Recite-Adlo-Deploy
+      crit spread).
+  Prerequisite chains (`requires` + `requires_within_s`): WHM Divine Caress is
+  only castable within Divine Grace, i.e. shortly after Temperance — the
+  planner and the editor both refuse a placement with no enabling cast in
+  range. (PCT Tempera Grassa's enabler, Tempera Coat, is not a library action;
+  Grassa stays modeled on the Coat cadence instead.)
   Rule (user): a heal boost in a healer's OWN kit is planned for; cross-JOB
-  interplay is out of scope. WHM Plenary's Confession stays a flat +200 (a real
-  fixed heal, not a % window). AST Synastry (co-tank copy) + Macrocosmos's 50%
+  interplay is out of scope. AST Synastry (co-tank copy) + Macrocosmos's 50%
   heal-back (accumulator) are approximated as recovery. SCH Emergency Tactics /
   SGE Pepsis (shield→heal converters) are extremely niche and intentionally NOT
   modeled — the honest way to ignore a button is to simply not model it.
@@ -104,12 +115,30 @@ class MitAction:
     # rides the heal/shield it powers. See the module docstring.
     heal_mult: float = 0.0          # +% healing WINDOW, applied in the sweep
     heal_mult_scope: str = ""       # "caster" (own GCD spells) | "receiver" (all incoming)
+    # The +% window's own span when it differs from duration_s (Physis II:
+    # 15s regen, but the +10% healing-received rider lasts only 10s).
+    # 0 -> duration_s.
+    heal_mult_window_s: float = 0.0
     shield_mult: float = 0.0        # rider: multiplies a co-cast partner shield's barrier
     amp_partner: tuple[str, ...] = ()   # host action names a shield_mult rider
     # One-shot rider (Zoe, Recitation: "the next Adloquium/Prognosis") vs a
     # WINDOW that transforms every host cast for duration_s (Seraphism: "while
     # under the effect of"). A window amps all its hosts, not just the first.
     shield_mult_windowed: bool = False
+    # Flat heal RIDER (WHM Plenary's Confession): each qualifying same-job GCD
+    # heal (a heal_flat_partners host) cast inside this action's duration_s
+    # window heals a bonus heal_flat_potency. Pair-gated in the sweep — no
+    # host cast in the window means no credit; never a standalone heal.
+    heal_flat_potency: float = 0.0
+    heal_flat_partners: tuple[str, ...] = ()
+    # Prerequisite chain (WHM Divine Caress needs Temperance): placeable only
+    # within requires_within_s AFTER a same-slot cast of the `requires` action
+    # (the planner allows a small co-weave tolerance on the order).
+    requires: str | None = None
+    requires_within_s: float = 0.0
+    # Regen pacing when the HoT's real span is shorter than duration_s (Shake
+    # It Off: 30s barrier, 15s HoT). 0 -> the regen spans duration_s.
+    regen_window_s: float = 0.0
     # Invulns only: the tank comes out at ~1 HP (Superbolide) or must be healed
     # to full (Living Dead) or was damage-floored (Holmgang) — the HP sweep
     # models a full re-heal debt. Hallowed Ground leaves HP untouched.
@@ -126,16 +155,21 @@ class MitAction:
 
     @property
     def is_amplifier(self) -> bool:
-        """Scales a host heal/shield instead of carrying its own value."""
-        return self.heal_mult > 0 or self.shield_mult > 0
+        """Scales (or rides) a host heal/shield instead of carrying its own
+        standalone value."""
+        return (self.heal_mult > 0 or self.shield_mult > 0
+                or self.heal_flat_potency > 0)
 
 
-# Shared token buckets: (capacity, seconds per token). Aetherflow is really
-# 3-at-once every 60s; a 20s trickle is the schedule-friendly equivalent.
-RESOURCE_POOLS: dict[str, tuple[int, float]] = {
-    "addersgall": (3, 20.0),
-    "aetherflow": (3, 20.0),
-    "lily": (3, 20.0),
+# Shared token buckets: (capacity, seconds per token, tokens at pull start).
+# Aetherflow is really 3-at-once every 60s; a 20s trickle is the
+# schedule-friendly equivalent. Addersgall/Aetherflow enter the pull stocked;
+# LILIES accrue in combat only — a White Mage starts every pull at zero, so
+# the first lily heal cannot exist before ~20s.
+RESOURCE_POOLS: dict[str, tuple[int, float, int]] = {
+    "addersgall": (3, 20.0, 3),
+    "aetherflow": (3, 20.0, 3),
+    "lily": (3, 20.0, 0),
 }
 
 # Damage potency a healer filler GCD would have dealt — prices GCD heals.
@@ -218,14 +252,20 @@ ACTIONS: tuple[MitAction, ...] = (
        notes="Barrier sized off the Paladin's own max HP."),
     _a(job="Paladin", name="Passage of Arms", action_id=7385,
        status_names=("Passage of Arms", "Arms Up"), mit_all=0.15,
-       duration_s=5, cooldown_s=120,
-       notes="Channel — modeled at a 5s practical window; the Paladin can hold it up to 18s."),
+       duration_s=3, cooldown_s=120,
+       notes="Channel that ROOTS the Paladin (no moving or attacking), so in "
+             "practice it is clipped for a split second to cover exactly one "
+             "mechanic — modeled at a 3s practical window (the 18s hold is "
+             "theoretical), which also stops it blanketing neighbors via "
+             "carryover."),
     _a(job="Warrior", name="Shake It Off", action_id=7388,
        status_names=("Shake It Off", "Shake It Off (Over Time)"),
-       shield_pct_maxhp=0.15, heal_potency=100,
+       shield_pct_maxhp=0.15, heal_potency=300,
        regen_potency_per_tick=100, regen_ticks=5,
-       duration_s=30, cooldown_s=90, recovery=True,
-       notes="Barrier is 15% of each target's own max HP (+2% per consumed self-buff, unmodeled)."),
+       duration_s=30, cooldown_s=90, regen_window_s=15, recovery=True,
+       notes="Barrier is 15% of each target's own max HP (+2% per consumed "
+             "self-buff, unmodeled); 300p instant heal + a 100p/tick HoT over "
+             "15s (the barrier alone runs the full 30s)."),
     _a(job="Dark Knight", name="Dark Missionary", action_id=16471,
        status_names=("Dark Missionary",), mit_magic=0.10, mit_phys=0.05,
        duration_s=15, cooldown_s=90),
@@ -296,10 +336,11 @@ ACTIONS: tuple[MitAction, ...] = (
        target=Target.SINGLE, tier=Tier.HEALER_OGCD, resource="addersgall"),
     _a(job="Sage", name="Physis II", action_id=24302, status_names=("Physis II",),
        regen_potency_per_tick=130, regen_ticks=5,
-       heal_mult=0.10, heal_mult_scope="receiver",
+       heal_mult=0.10, heal_mult_scope="receiver", heal_mult_window_s=10,
        duration_s=15, cooldown_s=60, tier=Tier.HEALER_OGCD, recovery=True,
-       notes="Base regen + a +10% healing-received party WINDOW (log +11%) — the "
-             "+10% applied as a windowed receiver multiplier on all party heals."),
+       notes="Base regen (15s) + a +10% healing-received party WINDOW (log "
+             "+11%) that lasts only 10s — the +10% applied as a windowed "
+             "receiver multiplier on all party heals."),
     _a(job="Sage", name="Philosophia", action_id=37035,
        status_names=("Philosophia", "Eudaimonia"),
        regen_potency_per_tick=150, regen_ticks=5, duration_s=20, cooldown_s=180,
@@ -327,15 +368,21 @@ ACTIONS: tuple[MitAction, ...] = (
     _a(job="Sage", name="Eukrasian Prognosis II", action_id=37034,
        status_names=("Eukrasian Prognosis",), heal_potency=100,
        shield_potency=360, duration_s=30, cooldown_s=0,
-       is_gcd=True, cast_time_s=2.0, gcd_cost_potency=370.0,
+       is_gcd=True, cast_time_s=2.0, gcd_cost_potency=380.0,
        tier=Tier.HEALER_GCD,
-       notes="Barrier = 360% of the heal; the classic pre-shield GCD."),
+       notes="Barrier = 360% of the heal; the classic pre-shield GCD. Priced "
+             "at one Dosis III (the extra 1.0s Eukrasia GCD is deliberately "
+             "not surcharged)."),
     _a(job="Sage", name="Eukrasian Diagnosis", action_id=24291,
        status_names=("Eukrasian Diagnosis",), heal_potency=300,
        shield_potency=540, duration_s=30, cooldown_s=0,
        is_gcd=True, cast_time_s=2.0, gcd_cost_potency=380.0,
        target=Target.SINGLE, tier=Tier.HEALER_GCD,
        notes="ST base shield (barrier 180% of a 300p heal); Zoe's ST partner."),
+    _a(job="Sage", name="Diagnosis", action_id=24284,
+       heal_potency=450, cooldown_s=0, is_gcd=True, cast_time_s=2.0,
+       gcd_cost_potency=380.0, target=Target.SINGLE, tier=Tier.HEALER_GCD,
+       notes="Hardcast ST heal — the costed tank top-up."),
     _a(job="Sage", name="Zoe", action_id=24300, status_names=("Zoe",),
        shield_mult=0.50,
        amp_partner=("Eukrasian Prognosis II", "Eukrasian Diagnosis"),
@@ -369,7 +416,8 @@ ACTIONS: tuple[MitAction, ...] = (
     _a(job="Scholar", name="Seraphism", action_id=37014,
        status_names=("Seraphism",), regen_potency_per_tick=100, regen_ticks=7,
        duration_s=20, cooldown_s=180, tier=Tier.HEALER_OGCD, recovery=True,
-       shield_mult=0.20, amp_partner=("Concitation", "Adloquium"),
+       shield_mult=0.20,
+       amp_partner=("Concitation", "Adloquium", "Deployment Tactics"),
        shield_mult_windowed=True,
        notes="Party regen aura + for its whole 20s it transforms BOTH GCD shields: "
              "Adloquium→Manifestation (300→360p) and Concitation→Accession "
@@ -397,11 +445,13 @@ ACTIONS: tuple[MitAction, ...] = (
        notes="Barrier = 180% of the heal."),
     _a(job="Scholar", name="Recitation", action_id=16542,
        status_names=("Recitation",),
-       shield_mult=0.54, amp_partner=("Concitation", "Adloquium"),
+       shield_mult=0.54,
+       amp_partner=("Concitation", "Adloquium", "Deployment Tactics"),
        duration_s=30, cooldown_s=60, tier=Tier.HEALER_OGCD,
        notes="Amplifier RIDER: forces a crit (+Catalyze) on the next Adloquium / "
              "Concitation — log-measured ~×1.54 on the barrier. Multiplies a co-cast "
-             "Adlo/Concitation shield; the 'Spreadlo' backbone."),
+             "Adlo/Concitation shield, including the Deployment Tactics composite "
+             "(the 'Spreadlo' backbone: Recite → Adlo → Deploy)."),
     _a(job="Scholar", name="Deployment Tactics", action_id=3585,
        status_names=("Galvanize",), heal_potency=300, shield_potency=540,
        duration_s=30, cooldown_s=90, is_gcd=True, cast_time_s=2.0,
@@ -413,6 +463,10 @@ ACTIONS: tuple[MitAction, ...] = (
        gcd_cost_potency=320.0, target=Target.SINGLE, tier=Tier.HEALER_GCD,
        notes="ST base shield (Galvanize 180% of a 300p heal); the host Recitation "
              "rides and Deployment spreads."),
+    _a(job="Scholar", name="Physick", action_id=190,
+       heal_potency=450, cooldown_s=0, is_gcd=True, cast_time_s=2.0,
+       gcd_cost_potency=320.0, target=Target.SINGLE, tier=Tier.HEALER_GCD,
+       notes="Hardcast ST heal — the costed tank top-up."),
 
     # ------------------------------------------------------------------- WHM
     _a(job="White Mage", name="Temperance", action_id=16536,
@@ -426,16 +480,22 @@ ACTIONS: tuple[MitAction, ...] = (
        status_names=("Divine Grace", "Divine Aura"), shield_potency=400,
        regen_potency_per_tick=200, regen_ticks=5, duration_s=10, cooldown_s=120,
        tier=Tier.HEALER_OGCD, recovery=True,
-       notes="Follow-up granted by Temperance."),
+       requires="Temperance", requires_within_s=30.0,
+       notes="Follow-up granted by Temperance (Divine Grace) — only placeable "
+             "within 30s of a Temperance cast."),
     _a(job="White Mage", name="Asylum", action_id=3569, status_names=("Asylum",),
        regen_potency_per_tick=100, regen_ticks=8, duration_s=24, cooldown_s=90,
        tier=Tier.HEALER_OGCD, recovery=True,
        notes="Ground placement; also +10% healing received inside (unmodeled)."),
     _a(job="White Mage", name="Plenary Indulgence", action_id=7433,
-       status_names=("Confession",), mit_all=0.10, heal_potency=200,
-       duration_s=10, cooldown_s=60, tier=Tier.HEALER_OGCD, recovery=True,
-       notes="10% party DR (Dawntrail) + Confession adds ~200p to the next "
-             "Medica III / Rapture — modeled as the extra heal it enables."),
+       status_names=("Confession",),
+       heal_flat_potency=200,
+       heal_flat_partners=("Medica III", "Afflatus Rapture"),
+       duration_s=10, cooldown_s=60, tier=Tier.HEALER_OGCD,
+       notes="Confession only — NO damage reduction. Each qualifying AoE GCD "
+             "heal (Medica III / Afflatus Rapture) cast inside the 10s window "
+             "heals a bonus 200p; pair-gated, so with no qualifying heal in "
+             "the window it credits nothing."),
     _a(job="White Mage", name="Liturgy of the Bell", action_id=25862,
        heal_potency=1200, duration_s=20, cooldown_s=180,
        tier=Tier.HEALER_OGCD, recovery=True,
@@ -465,13 +525,24 @@ ACTIONS: tuple[MitAction, ...] = (
        regen_potency_per_tick=175, regen_ticks=5, duration_s=15,
        cooldown_s=0, is_gcd=True, cast_time_s=2.0, gcd_cost_potency=350.0,
        tier=Tier.HEALER_GCD),
+    _a(job="White Mage", name="Afflatus Solace", action_id=16531,
+       heal_potency=800, cooldown_s=0, is_gcd=True, gcd_cost_potency=0.0,
+       target=Target.SINGLE, tier=Tier.HEALER_GCD, resource="lily",
+       notes="ST lily heal — DPS-neutral tank top-up (spent lilies feed "
+             "Misery)."),
+    _a(job="White Mage", name="Cure II", action_id=135,
+       heal_potency=800, cooldown_s=0, is_gcd=True, cast_time_s=2.0,
+       gcd_cost_potency=350.0, target=Target.SINGLE, tier=Tier.HEALER_GCD,
+       notes="Hardcast ST heal — the costed tank top-up."),
 
     # ------------------------------------------------------------------- AST
     _a(job="Astrologian", name="Collective Unconscious", action_id=3613,
        status_names=("Collective Unconscious", "Wheel of Fortune"),
        mit_all=0.10, regen_potency_per_tick=100, regen_ticks=5,
-       duration_s=5, cooldown_s=60, tier=Tier.HEALER_OGCD, recovery=True,
-       notes="Channel — 10% only while channeling (5s modeled); the regen persists."),
+       duration_s=5, cooldown_s=60, regen_window_s=15,
+       tier=Tier.HEALER_OGCD, recovery=True,
+       notes="Channel — 10% only while channeling (5s clip modeled); the "
+             "Wheel of Fortune regen persists for its own 15s after."),
     _a(job="Astrologian", name="Exaltation", action_id=25873,
        status_names=("Exaltation",), mit_all=0.10, heal_potency=500,
        duration_s=8, cooldown_s=60, target=Target.SINGLE,
@@ -529,6 +600,10 @@ ACTIONS: tuple[MitAction, ...] = (
        regen_potency_per_tick=175, regen_ticks=5, duration_s=15,
        cooldown_s=0, is_gcd=True, cast_time_s=1.5, gcd_cost_potency=270.0,
        tier=Tier.HEALER_GCD),
+    _a(job="Astrologian", name="Benefic II", action_id=3610,
+       heal_potency=800, cooldown_s=0, is_gcd=True, cast_time_s=1.5,
+       gcd_cost_potency=270.0, target=Target.SINGLE, tier=Tier.HEALER_GCD,
+       notes="Hardcast ST heal — the costed tank top-up."),
 
     # -------------------------------------------- tank personals (suggested)
     _a(job="Paladin", name="Rampart", action_id=7531, status_names=("Rampart",),
@@ -557,8 +632,11 @@ ACTIONS: tuple[MitAction, ...] = (
        cooldown_s=120, target=Target.SELF, tier=Tier.TANK_SUGGESTION),
     _a(job="Warrior", name="Bloodwhetting", action_id=25751,
        status_names=("Bloodwhetting", "Stem the Flow"), mit_all=0.10,
-       heal_potency=400, duration_s=8, cooldown_s=25, target=Target.SELF,
-       tier=Tier.TANK_SUGGESTION),
+       heal_potency=400, regen_potency_per_tick=400, regen_ticks=3,
+       shield_potency=400, duration_s=8, cooldown_s=25, target=Target.SELF,
+       tier=Tier.TANK_SUGGESTION,
+       notes="400p per weaponskill over 8s modeled as an initial heal + 3 "
+             "ticks; Stem the Tide is the 400p barrier."),
     _a(job="Dark Knight", name="Shadowed Vigil", action_id=36927,
        status_names=("Shadowed Vigil",), mit_all=0.40, duration_s=15,
        cooldown_s=120, target=Target.SELF, tier=Tier.TANK_SUGGESTION),
@@ -572,8 +650,36 @@ ACTIONS: tuple[MitAction, ...] = (
        cooldown_s=120, target=Target.SELF, tier=Tier.TANK_SUGGESTION),
     _a(job="Gunbreaker", name="Heart of Corundum", action_id=25758,
        status_names=("Catharsis of Corundum", "Clarity of Corundum"),
-       mit_all=0.15, heal_potency=250, duration_s=8, cooldown_s=25,
-       target=Target.SELF, tier=Tier.TANK_SUGGESTION),
+       mit_all=0.15, heal_potency=900, duration_s=8, cooldown_s=25,
+       target=Target.SELF, tier=Tier.TANK_SUGGESTION,
+       notes="Catharsis pops for 900p at 50% HP or on expiry; the extra 15% "
+             "Clarity window (4s) rides inside the modeled 15%."),
+    _a(job="Gunbreaker", name="Aurora", action_id=16151,
+       status_names=("Aurora",), regen_potency_per_tick=300, regen_ticks=6,
+       duration_s=18, cooldown_s=60, charges=2, target=Target.SELF,
+       tier=Tier.TANK_SUGGESTION,
+       notes="300p/tick regen (7.1), two charges; castable on an ally."),
+    # Warrior self-sustain — the free (weave) healing kit. Note: PLD Clemency
+    # is deliberately ABSENT: it is a GCD heal that costs damage, and tanks
+    # should be doing damage — the model never plans or offers it.
+    _a(job="Warrior", name="Thrill of Battle", action_id=40,
+       status_names=("Thrill of Battle",), heal_pct_maxhp=0.20,
+       duration_s=10, cooldown_s=90, target=Target.SELF,
+       tier=Tier.TANK_SUGGESTION,
+       notes="+20% max HP restored on use; the +20% healing-received window "
+             "is unmodeled."),
+    _a(job="Warrior", name="Equilibrium", action_id=3552,
+       status_names=("Equilibrium",), heal_potency=1200,
+       regen_potency_per_tick=200, regen_ticks=5, duration_s=15,
+       cooldown_s=60, target=Target.SELF, tier=Tier.TANK_SUGGESTION),
+    _a(job="Warrior", name="Nascent Flash", action_id=16464,
+       status_names=("Nascent Glint", "Stem the Flow"), mit_all=0.10,
+       heal_potency=400, regen_potency_per_tick=400, regen_ticks=3,
+       shield_potency=400, duration_s=8, cooldown_s=25,
+       target=Target.SELF, tier=Tier.TANK_SUGGESTION,
+       notes="Bloodwhetting given to an ally — usually the other tank, so the "
+             "model credits the tank either way; shares its recast with "
+             "Bloodwhetting (unmodeled)."),
 
     _a(job="Paladin", name="Hallowed Ground", action_id=30,
        status_names=("Hallowed Ground",), duration_s=10, cooldown_s=420,

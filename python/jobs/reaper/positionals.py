@@ -25,8 +25,12 @@ from jobs.reaper import data as rd
 # Candidate JSON keys for the positional/combo bonus byte on a FFLogs damage
 # event. The live probe replaces this with the confirmed key.
 BONUS_KEYS: tuple[str, ...] = ("bonusPercent", "directionalBonusPercent", "bonus")
-# Damage event types that carry the resolved bonus (snapshot then resolution).
-_DAMAGE_TYPES = ("calculateddamage", "damage")
+# One cast emits BOTH a `calculateddamage` (snapshot) and a `damage`
+# (resolution) event ~1s apart, so a (timestamp, id) dedupe can't collapse the
+# pair — count ONE type only, preferring the resolved `damage` events, falling
+# back to the snapshots for logs without them (the DRG/MNK fix, ported here
+# before this dormant aspect is ever wired in).
+_DAMAGE_TYPES = ("damage", "calculateddamage")
 
 
 def _bonus_value(ev: dict) -> int | None:
@@ -44,7 +48,24 @@ def detect_positional_misses(events: list[dict], fight_start_ms: int
     """From the actor's DamageDone stream, count positional hits/misses on the
     POSITIONAL_IDS. Returns a state dict; `detected=False` when the bonus byte
     isn't present on any event (FFLogs doesn't expose it) — the assume-hit case."""
-    seen: set[tuple[int, int]] = set()   # (timestamp, abilityGameID) dedupe
+    by_type: dict[str, list[dict]] = {k: [] for k in _DAMAGE_TYPES}
+    seen: set[tuple[str, int, int]] = set()
+    for ev in events:
+        typ = ev.get("type")
+        if typ not in by_type:
+            continue
+        aid = ev.get("abilityGameID")
+        if aid not in rd.POSITIONAL_IDS:
+            continue
+        key = (typ, ev.get("timestamp", 0), aid)
+        if key in seen:
+            continue
+        seen.add(key)
+        by_type[typ].append(ev)
+    # One event per cast: the resolved `damage` stream when present, else the
+    # `calculateddamage` snapshots.
+    rows = by_type["damage"] or by_type["calculateddamage"]
+
     detected = False
     total = 0
     missed = 0
@@ -53,16 +74,8 @@ def detect_positional_misses(events: list[dict], fight_start_ms: int
     misses: list[dict[str, Any]] = []
     lost = 0.0
 
-    for ev in events:
-        if ev.get("type") not in _DAMAGE_TYPES:
-            continue
+    for ev in rows:
         aid = ev.get("abilityGameID")
-        if aid not in rd.POSITIONAL_IDS:
-            continue
-        key = (ev.get("timestamp", 0), aid)
-        if key in seen:
-            continue
-        seen.add(key)
         bonus = _bonus_value(ev)
         if bonus is None:
             continue

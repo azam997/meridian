@@ -190,10 +190,13 @@ def test_pull_invariants(name: str) -> None:
     _check(f"{name}: {pps:.1f} p/sec in [200,400] band",
            200 <= pps <= 400, f"got {pps:.1f}")
 
-    ideal = scoring.state["idealized_potency"]
+    # De-guarded: production floors idealized_strict at delivered (the witness
+    # guard), which would blind this gate - the RAW search ceiling is the signal.
+    ideal = (scoring.state["idealized_potency"]
+             - float(scoring.state.get("ceiling_witness_gap") or 0.0))
     ratio = delivered / ideal if ideal > 0 else 0
-    _check(f"{name}: efficiency <= 1.005 (got {ratio:.1%})",
-           ratio <= 1.005, f"delivered={delivered:.0f} ideal={ideal:.0f}")
+    _check(f"{name}: efficiency <= 100% (got {ratio:.1%})",
+           ratio <= 1.0 + 1e-9, f"delivered={delivered:.0f} ideal={ideal:.0f}")
 
 
 @pytest.mark.parametrize("name", _FIXTURE_NAMES)

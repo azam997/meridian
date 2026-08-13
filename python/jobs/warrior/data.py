@@ -79,11 +79,14 @@ SURGING_TEMPEST_DURATION_S: float = 30.0   # Storm's Eye duration
 SURGING_TEMPEST_MAX_S: float = 60.0        # bankable cap (Storm's Eye + Inner Release extends)
 INNER_RELEASE_EXTEND_S: float = 10.0       # Inner Release extends Surging Tempest
 
-# Inner Release grants 3 free guaranteed-crit-DH weaponskills. The window that
-# scoring scans for those crit-DH Fell Cleaves is anchored on the IR cast: 3 GCDs
-# (~7.5s) plus a small buffer. (Inner Chaos is innately crit-DH regardless.)
+# Inner Release grants 3 free guaranteed-crit-DH weaponskills. (Inner Chaos is
+# innately crit-DH regardless.)
 INNER_RELEASE_STACKS = 3
-INNER_RELEASE_WINDOW_S: float = 8.0
+# The Inner Release buff itself: 15s / 3 stacks. Crediting is STACK-counted
+# (scoring._ir_credited_indices) — the next 3 FC/Decimate inside the buff —
+# never a fixed window (an 8s box dropped the 3rd free cast's crit-DH once
+# Inner Chaos interleaved first).
+INNER_RELEASE_BUFF_S: float = 15.0
 
 # --- Defensives (NO damage value; rendered on the Timeline Defensives lane and
 # excluded from the DPS diff/scoring via the isDefensive flag). ⚠️ verify ids.
@@ -289,7 +292,10 @@ JOB_DATA: JobData = JobData(
     drift_exclusions=DRIFT_EXCLUSIONS,
     burst_abilities=BURST_ABILITIES,
     cdr_rules=CDR_RULES,       # Fell Cleave / Inner Chaos cut Infuriate's recast 5s
-    charge_sharing={},         # no shared-charge pools
+    # Orogeny (AoE) shares Upheaval's 30s recast — the simulator already models
+    # the shared spend; without this entry the drift detector saw phantom
+    # Upheaval drift on every multi-target pull.
+    charge_sharing={OROGENY: UPHEAVAL},
     raid_buffs={},             # party buffs modeled via buff_windows (job-agnostic)
     role_policy=MELEE_TANK,
     aoe_potencies=AOE_POTENCIES,
@@ -299,4 +305,8 @@ JOB_DATA: JobData = JobData(
     # tank attribute slope ~190. ⚠️ refine per tier via scripts/calibrate_tincture.py.
     tincture_main_stat=6386,
     tincture_role_coeff=190,
+    # No ranged_filler_id: tank forced disconnects are disengages (like
+    # PLD/GNB/DRK), NOT an RPR-Harpe consensus bridge. Tomahawk stays in
+    # POTENCIES so delivered casts still credit.
+    ranged_filler_id=None,
 )

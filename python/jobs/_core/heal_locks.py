@@ -17,6 +17,21 @@ contributor).
 Duck-typed over the mitplan output (no mitplan import at module level): this
 module is imported by job scoring aspects and the engine's consumers, and the
 sidecar is the only caller of the plan-walking helpers.
+
+Resurrection pardon (`_rez_pardon` / the `rez_ids` kwarg): a rez the analyzed
+healer cast during uptime is death recovery, not a throughput choice — the
+ceiling pays for it like any other locked GCD (a credit lock pinned at the rez's
+own cast time), and the costed heals that follow it (topping the rezzed player
+back up, `_REZ_RECOVERY_WINDOW_S`) rank most-necessary and lift the kill-pull
+cap so they never card as over-healing. Hardcast pricing: `norm_casts` anchors a
+hardcast to its begincast, so the rez's ~8s cast bar shows up as the inter-cast
+gap to the NEXT cast; when that gap genuinely contains the bar (>=
+`_REZ_HARDCAST_MIN_GAP_S`, not explained by a downtime window opening first) the
+rez is priced as `ceil(bar / 2.5)` locked slots capped at `_REZ_MAX_SLOTS`;
+otherwise one locked GCD is the honest floor (a Swiftcast rez costs exactly
+one). Swiftcast state itself is out of scope. Follow-up: RDM Verraise / SMN
+Resurrection have no lock plumbing (DPS jobs carry no heal budget) and are NOT
+pardoned here.
 """
 from __future__ import annotations
 
@@ -196,6 +211,19 @@ _CREDIT_TRAIL_S: float = 1.0
 _KILL_SLACK_MIN: int = 2
 _KILL_SLACK_FRAC: float = 0.2
 
+# --- Resurrection pardon (see module docstring) -------------------------------
+# Costed heals within this window after a rez cast completes are rez recovery:
+# they rank most-necessary and lift the kill-pull cap by their count.
+_REZ_RECOVERY_WINDOW_S: float = 15.0
+# Base healer rez cast bar (Raise / Ascend / Resurrection / Egeiro: 8s hardcast;
+# spell speed shaves a few tenths, slidecast a few more — hence the MIN_GAP).
+_REZ_HARDCAST_BAR_S: float = 8.0
+# The following inter-cast gap must genuinely contain the bar before a rez is
+# priced as a hardcast (below this, one locked GCD is the honest floor).
+_REZ_HARDCAST_MIN_GAP_S: float = 7.0
+# ceil(8s / 2.5s) = 4, capped: the sim pays at most 3 locked slots per rez.
+_REZ_MAX_SLOTS: int = 3
+
 
 @dataclass(frozen=True)
 class HealBudget:
@@ -224,15 +252,90 @@ def _credit_window(t: float, ability_id: int, fight_duration_s: float
                            end_s=round(end, 2), count=1, cast_s=_SLOT_S)
 
 
+@dataclass(frozen=True)
+class RezPardon:
+    """One pull's pardoned resurrection casts: the locks the ceiling must pay,
+    the post-rez recovery intervals (costed heals inside them are rez recovery),
+    and the per-cast info `(t, ability_id, locked_slots)` for the state block.
+    Falsy when the pull had no pardonable rez, so cold paths stay
+    byte-identical."""
+    locks: tuple[LockedGcdWindow, ...] = ()
+    recovery: tuple[tuple[float, float], ...] = ()
+    casts: tuple[tuple[float, int, int], ...] = ()
+
+    def __bool__(self) -> bool:
+        return bool(self.casts)
+
+
+def _rez_pardon(norm_casts: Any, rez_ids: frozenset,
+                dt_windows: Any, fight_duration_s: float) -> RezPardon | None:
+    """Build the rez pardon from the normalized cast stream (module docstring:
+    "Resurrection pardon"). Uptime-only — a downtime rez displaces no damage on
+    either side of the ratio, exactly like a downtime heal. Hardcast detection:
+    the gap to the next cast, clipped at the first downtime window opening
+    inside it (idle explained by a disconnect is not a cast bar)."""
+    if not rez_ids:
+        return None
+    casts = sorted((float(t), int(aid)) for t, aid in norm_casts
+                   if t is not None)
+    dt = tuple(dt_windows or ())
+
+    def _uptime(t: float) -> bool:
+        return not any(s <= t < e for s, e in dt)
+
+    locks: list[LockedGcdWindow] = []
+    recovery: list[tuple[float, float]] = []
+    info: list[tuple[float, int, int]] = []
+    for i, (t, aid) in enumerate(casts):
+        if aid not in rez_ids or not (0.0 <= t < fight_duration_s) \
+                or not _uptime(t):
+            continue
+        next_t = next((t2 for t2, _a in casts[i + 1:] if t2 > t),
+                      fight_duration_s)
+        gap = next_t - t
+        for s, _e in dt:
+            if t < s < next_t:
+                gap = min(gap, s - t)
+        if gap >= _REZ_HARDCAST_MIN_GAP_S:
+            bar = min(gap, _REZ_HARDCAST_BAR_S)
+            slots = min(_REZ_MAX_SLOTS, math.ceil(bar / _SLOT_S))
+        else:
+            bar = 0.0
+            slots = 1
+        if slots <= 1:
+            w = _credit_window(t, aid, fight_duration_s)
+        else:
+            start = max(0.0, t - _CREDIT_LEAD_S)
+            end = min(float(fight_duration_s), t + bar + _CREDIT_TRAIL_S)
+            n = min(slots, int((end - start) / _SLOT_S))
+            w = (LockedGcdWindow(ability_id=int(aid), start_s=round(start, 2),
+                                 end_s=round(end, 2), count=n, cast_s=_SLOT_S)
+                 if n > 1 else _credit_window(t, aid, fight_duration_s))
+        if w is None:
+            continue
+        locks.append(w)
+        recovery.append((t, t + bar + _REZ_RECOVERY_WINDOW_S))
+        info.append((round(t, 2), int(aid), int(w.count)))
+    if not info:
+        return None
+    return RezPardon(
+        locks=tuple(sorted(locks,
+                           key=lambda w: (w.end_s, w.start_s, w.ability_id))),
+        recovery=tuple(recovery), casts=tuple(info))
+
+
 def _necessary_rank(casts: list[tuple[float, int]],
-                    windows: tuple[LockedGcdWindow, ...]
+                    windows: tuple[LockedGcdWindow, ...],
+                    recovery: tuple[tuple[float, float], ...] = (),
                     ) -> list[tuple[float, int]]:
-    """The player's costed heal casts, MOST-necessary first: a cast inside (or
-    nearest to) a plan mechanic window is surely mechanic-driven; an isolated
-    cast far from every window is the likeliest discretionary over-heal, so it
-    sorts last and is the first to fall outside a capped budget. Stable — with no
-    plan windows every distance ties and the order stays chronological (the
-    excess then falls on the latest casts, the historic card heuristic)."""
+    """The player's costed heal casts, MOST-necessary first: a cast inside a
+    post-rez recovery interval is surely forced (the party is being topped back
+    up); then a cast inside (or nearest to) a plan mechanic window is surely
+    mechanic-driven; an isolated cast far from every window is the likeliest
+    discretionary over-heal, so it sorts last and is the first to fall outside a
+    capped budget. Stable — with no rez and no plan windows every key ties and
+    the order stays chronological (the excess then falls on the latest casts,
+    the historic card heuristic)."""
     def dist(t: float) -> float:
         best = math.inf
         for w in windows:
@@ -240,7 +343,11 @@ def _necessary_rank(casts: list[tuple[float, int]],
                 return 0.0
             best = min(best, abs(t - w.start_s), abs(t - w.end_s))
         return best if best != math.inf else 0.0
-    return sorted(casts, key=lambda ta: dist(ta[0]))
+
+    def key(ta: tuple[float, int]) -> tuple[int, float]:
+        in_rec = any(s <= ta[0] < e for s, e in recovery)
+        return (0 if in_rec else 1, dist(ta[0]))
+    return sorted(casts, key=key)
 
 
 def reconcile_heal_budget(
@@ -253,10 +360,13 @@ def reconcile_heal_budget(
     filler_potency: float,
     fight_duration_s: float,
     is_prog: bool,
+    rez: RezPardon | None = None,
 ) -> HealBudget:
     """Reconcile the plan's (top-parse) heal windows against the healing the
     player actually delivered. Pure — the sidecar/report plumbing lives in
-    `reconcile_from_report`."""
+    `reconcile_from_report`. `rez` (default None — byte-identical) adds the
+    resurrection pardon: its locks join the output in every branch, its recovery
+    intervals rank/cap-lift the costed heals that follow a rez."""
     # Re-clip to the SCORED span: `_heal_lock_payload` builds the plan against the
     # full wipe, but a prog pull is scored only to the terminal death.
     plan_locks = tuple(w for w in plan_locks
@@ -269,6 +379,11 @@ def reconcile_heal_budget(
     actual = sorted((float(t), int(aid)) for t, aid in actual_costed_casts
                     if 0.0 <= float(t) < fight_duration_s)
     n_actual = len(actual)
+
+    rez_locks = rez.locks if rez else ()
+    rez_recovery = rez.recovery if rez else ()
+    n_recovery = sum(1 for t, _a in actual
+                     if any(s <= t < e for s, e in rez_recovery))
 
     comp_state = {
         "mit_plan_comp": list(plan_meta.get("comp") or []),
@@ -283,6 +398,10 @@ def reconcile_heal_budget(
         # still exceed this ceiling — the ">100% above the honest ceiling" case.
         credited = plan_costed
         locks = plan_locks
+        if rez_locks:
+            locks = tuple(sorted(
+                plan_locks + rez_locks,
+                key=lambda w: (w.end_s, w.start_s, w.ability_id)))
     else:
         # Credit the healing the player actually did, at the times they did it.
         if is_prog:
@@ -290,9 +409,11 @@ def reconcile_heal_budget(
         else:
             slack = max(_KILL_SLACK_MIN,
                         math.ceil(_KILL_SLACK_FRAC * (plan_costed + plan_free)))
-            cap = plan_costed + slack
+            # Post-rez recovery heals are forced by the death, not the plan —
+            # each lifts the cap so it can never land in the excess.
+            cap = plan_costed + slack + n_recovery
         credited = min(n_actual, max(cap, plan_costed))
-        ranked = _necessary_rank(actual, plan_locks)
+        ranked = _necessary_rank(actual, plan_locks, rez_recovery)
         credited_casts = ranked[:credited]
         excess = sorted(ranked[credited:])
         credit_locks = tuple(
@@ -300,7 +421,7 @@ def reconcile_heal_budget(
                         for t, _aid in credited_casts)
             if w is not None)
         locks = tuple(sorted(
-            free_windows + credit_locks,
+            free_windows + credit_locks + rez_locks,
             key=lambda w: (w.end_s, w.start_s, w.ability_id)))
 
     # Nothing to lock and nothing to card (a fully-clipped plan on a heal-less
@@ -319,17 +440,26 @@ def reconcile_heal_budget(
         "heal_lock_is_prog": bool(is_prog),
         **comp_state,
     }
+    if rez:
+        # Additive rez block — absent on every rez-less pull (byte-identity).
+        state["heal_lock_rez_count"] = len(rez.casts)
+        state["heal_lock_rez_casts"] = [[t, aid, n] for t, aid, n in rez.casts]
+        state["heal_lock_rez_gcds"] = int(sum(n for _t, _a, n in rez.casts))
+        state["heal_lock_rez_recovery_count"] = int(n_recovery)
     return HealBudget(applied=True, locks=locks, state=state)
 
 
 def reconcile_from_report(
     report: Any, norm_casts: Any, fight_duration_s: float, *,
     costed_ids: frozenset, locked_heal_id: int, filler_potency: float,
+    rez_ids: frozenset = frozenset(),
 ) -> HealBudget:
     """`prepare`-time convenience: read the sidecar-staged plan (`__heal_locks__`)
     and prog flag (`__prog__`), pull the player's costed heal casts from
     `norm_casts`, and reconcile. Empty (byte-identical historic path) when there
-    is neither a staged plan nor a wipe with healing to credit."""
+    is neither a staged plan nor a wipe with healing to credit. `rez_ids`
+    (default empty — today's behavior exactly) enables the resurrection pardon
+    for the job's rez GCDs (module docstring)."""
     hl = report.get("__heal_locks__") or {}
     is_prog = bool(report.get("__prog__"))
     if not hl and not is_prog:
@@ -345,14 +475,17 @@ def reconcile_from_report(
     actual = [(float(t), int(aid)) for t, aid in norm_casts
               if aid in costed_ids and t is not None and float(t) >= 0.0
               and _uptime(float(t))]
-    # A plan-less, healing-less run has nothing to lock either way.
-    if not hl and not actual:
+    # The rez pardon shares the SAME uptime rule: only an uptime rez displaced
+    # damage, so only an uptime rez is locked into the ceiling.
+    rez = _rez_pardon(norm_casts, rez_ids, dt, fight_duration_s)
+    # A plan-less, healing-less, rez-less run has nothing to lock either way.
+    if not hl and not actual and not rez:
         return _empty_budget()
     return reconcile_heal_budget(
         plan_locks=tuple(hl.get("locks") or ()), plan_meta=hl,
         actual_costed_casts=actual, costed_ids=costed_ids,
         locked_heal_id=locked_heal_id, filler_potency=filler_potency,
-        fight_duration_s=fight_duration_s, is_prog=is_prog)
+        fight_duration_s=fight_duration_s, is_prog=is_prog, rez=rez)
 
 
 def improvements_from_heal_gcds(you) -> list:

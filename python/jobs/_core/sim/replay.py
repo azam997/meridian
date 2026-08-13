@@ -7,7 +7,7 @@ model's own transition function over the delivered `(t, ability_id)` stream
 (`ModuleResult.norm_casts`), so the reconstruction and the ceiling share one
 state machine by construction.
 
-Two rules distinguish this from the ad-hoc replay in
+Three rules distinguish this from the ad-hoc replay in
 `scripts/solve_samurai_optimal.py::replay_legality` (the proof-pattern
 ancestor):
 
@@ -18,6 +18,9 @@ ancestor):
   (`model.gcd_duration` at the pre-apply state, mirroring `_commit_gcd`'s
   order), so a continuation resumed at the cut cannot fire a GCD inside the
   player's still-rolling slot.
+* Every advance is followed by `model.catch_up_run_state` — the engine releases
+  time-based accruals inside its pick hooks, which this module never calls, so
+  without it a replayed Polyglot/Kenki clock stays frozen on its seed.
 
 `apply_cast` "always realizes a cast" (every job's contract): unknown or
 utility ids are structural no-ops, and model-illegal player sequences apply
@@ -50,6 +53,12 @@ def _seed_state(model, first_t: float, fight_duration_s: float,
     state = model.init_state()
     state.fight_duration_s = fight_duration_s
     state.downtime_windows = list(downtime_windows or [])
+    # Run-scoped bookkeeping (accrual clocks, measured budgets, proc schedules).
+    # `prepull` is deliberately skipped below, so this hook is what keeps a
+    # replayed state's economy identical to a from-scratch one; without it the
+    # continuation runs a resource-starved rotation and the cascade attributes
+    # the difference to the player as phantom loss.
+    model.seed_run_state(state)
     if first_t < state.t:
         # Pre-pull rewind: nothing has been spent yet, so a bare assignment is
         # exact (advance_time only regenerates on forward moves anyway).
@@ -61,6 +70,10 @@ def _apply_one(model, state, t: float, aid: int, gcd_ids: frozenset[int],
                params, slot_end: float) -> float:
     """Advance to `t`, realize one cast, return the updated GCD slot end."""
     engine.advance_time(model, state, max(state.t, t))
+    # Time moved, so time-based bookkeeping is now due. Released BEFORE the cast
+    # (mirroring the engine, which releases inside the pick that precedes its
+    # own cast), so a spender in the stream sees the accrual it spent.
+    model.catch_up_run_state(state)
     if aid in gcd_ids:
         state.last_gcd_t = state.t
         try:
@@ -100,6 +113,7 @@ def replay_state(model, casts: Iterable[tuple[float, int]], until_t: float,
                               gcd_ids if params is not None else frozenset(),
                               params, slot_end)
     engine.advance_time(model, state, max(until_t, slot_end, state.t))
+    model.catch_up_run_state(state)
     return state
 
 
@@ -130,5 +144,6 @@ def replay_prefix_states(model, casts: Iterable[tuple[float, int]],
             i += 1
         snap = model.clone(state)
         engine.advance_time(model, snap, max(cut, slot_end, snap.t))
+        model.catch_up_run_state(snap)
         out.append((cut, snap))
     return out

@@ -41,7 +41,7 @@ _BUCKETS = ("topq", "q2", "q3", "botq")
 # Per-job efficiency tolerance. The ceiling is a true upper bound, so NO real pull
 # may exceed 100% (delivered <= idealized by construction). DRG's ceiling runs at the
 # gear-true 2.50 GCD; this is a genuine correctness guard, not a fudge factor.
-_EFFICIENCY_TOL = 1.005
+_EFFICIENCY_TOL = 1.0 + 1e-9   # exact 100% gate (owner directive, v1.1): fix or document every over
 
 
 class MockClient:
@@ -137,7 +137,9 @@ def test_pull_invariants(name: str) -> None:
     assert delivered > 0, f"{name}: delivered={delivered}"
     pps = delivered / fix["duration_s"]
     assert 150 <= pps <= 700, f"{name}: p/sec {pps:.1f} out of band"
-    ideal = st["idealized_potency"]
+    # De-guarded: production floors idealized_strict at delivered (the witness
+    # guard), which would blind this gate - the RAW search ceiling is the signal.
+    ideal = st["idealized_potency"] - float(st.get("ceiling_witness_gap") or 0.0)
     ratio = delivered / ideal if ideal > 0 else 0
     assert ratio <= _EFFICIENCY_TOL, \
         f"{name}: efficiency {ratio:.1%} (delivered {delivered:.0f} ideal {ideal:.0f})"

@@ -82,8 +82,8 @@ def sweep(job: str, enc: int, top: int) -> None:
         else:
             mt_eff = st_eff
         lift = mt_eff - st_eff
-        flag = "  <-- OVER" if (credited and mt_eff > 100.5) else ""
-        if credited and mt_eff > 100.5:
+        flag = "  <-- OVER" if (credited and mt_eff > 100.0) else ""
+        if credited and mt_eff > 100.0:
             over += 1
         print(f"{i + 1:>2} {nm[:18]:<18}{dur:6.0f}{('Y' if is_mt else 'n'):>4}"
               f"{('Y' if credited else 'n'):>5}{st_eff:8.2f}{mt_eff:8.2f}"

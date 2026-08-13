@@ -92,6 +92,9 @@ export type Req =
       /** Healer flow (ultimates only): lock the hand-authored premade ("PF")
        *  mit plan into the ceiling instead of the auto-derived one. */
       usePfMitPlan?: boolean;
+      /** Healer flow: lock the user's own custom plan into the ceiling
+       *  (exclusive mode). Wins over `usePfMitPlan`. */
+      userMitPlan?: UserMitPlan;
     }
   | {
       id: string;
@@ -115,15 +118,47 @@ export type Req =
        *  top-ranked kill logs (no character/pull needed). */
       encounterId: number;
       /** The healer duo: one shield ('Sage' | 'Scholar') + one regen
-       *  ('White Mage' | 'Astrologian'). */
-      shieldHealer: string;
-      regenHealer: string;
+       *  ('White Mage' | 'Astrologian'). When present, pull resolution is
+       *  skipped. */
+      shieldHealer?: string;
+      regenHealer?: string;
       /** The rest of the comp: exactly two tank jobs + four DPS jobs. */
-      tanks: string[];
-      dps: string[];
+      tanks?: string[];
+      dps?: string[];
+      /** Resolve the comp from this pull's actors instead (the healer-flow
+       *  preselection). Only consulted when no explicit comp is given. */
+      reportCode?: string;
+      fightId?: number;
+      /** The analyzed player's job — kept in their own slot when a
+       *  non-standard duo forces a substitution. */
+      spec?: string;
       /** Use the encounter's hand-authored premade ("PF") plan (ultimates only)
        *  instead of the auto-derived one. */
       usePfMitPlan?: boolean;
+      /** Score the user's own custom plan (exclusive mode) instead of
+       *  generating one. Wins over `usePfMitPlan`. */
+      userMitPlan?: UserMitPlan;
+    }
+  | {
+      id: string;
+      kind: 'get_mit_library';
+      /** Explicit comp (same shape rules as plan_mitigation's). */
+      shieldHealer?: string;
+      regenHealer?: string;
+      tanks?: string[];
+      dps?: string[];
+    }
+  | {
+      id: string;
+      kind: 'export_mit_plan';
+      encounterId: number;
+      /** Optional file-name hint; the sidecar slugs + de-collides it. */
+      fileName?: string;
+      /** The plan document, written to disk verbatim. */
+      plan: UserMitPlan;
+      /** Optional human-readable mit sheet, written as a same-stem .txt next
+       *  to the .json (the Discord-paste copy; not importable). */
+      readable?: string;
     };
 
 /** Per-parallel-task progress entry. Emitted while downloading reference
@@ -1306,6 +1341,9 @@ export type MitAssignment = {
   shieldAmount: number;
   healAmount: number;
   hotHps: number;
+  /** The HoT's real span when shorter than durationSec (Shake It Off: 15s of
+   *  ticks under a 30s barrier). 0 = spans durationSec. Informational. */
+  hotWindowSec: number;
   isGcd: boolean;
   castTimeSec: number;
   /** Tank personals / invulns — feasibility-checked but rendered as advice. */
@@ -1430,6 +1468,136 @@ export type MitPlanResult = {
    *  (ultimate + a shipped premade/<id>.json). False ⇒ fell back to the auto
    *  plan. Any PF match / comp-mismatch notes ride `warnings`. */
   pfPlanApplied?: boolean;
+  /** True when a `userMitPlan` drove this plan (exclusive mode: the result is
+   *  exactly the authored casts + the HP sweep). Parse/placement problems ride
+   *  `warnings` with a "Your plan:" prefix. */
+  userPlanApplied?: boolean;
+};
+
+/** One mit inside a user-plan entry — a specific job OR a role selector
+ *  ('tank' | 'melee' | 'ranged' | 'caster') for shared-id party mits
+ *  (Feint / Addle / Reprisal / ranged mit). Exactly one of job/role. */
+export type UserMitPlanMit = {
+  job?: string;
+  role?: string;
+  action_id: number;
+  /** Ability name, documentation only — the premade files' convention for
+   *  keeping the JSON human-readable. Ignored by the parser. */
+  _ability?: string;
+};
+
+/** An authored GCD top-up heal cast in the gap BEFORE the entry's mechanic:
+ *  a specific healer job's AoE GCD heal × count. Plan content (exported,
+ *  imported, and locked into the analysis ceiling) — never auto-inserted for
+ *  a user plan. */
+export type UserMitPlanHeal = {
+  job: string;
+  action_id: number;
+  count: number;
+  /** Documentation only; ignored by the parser. */
+  _ability?: string;
+};
+
+/** One user-plan entry: a mechanic match key + its mits. Matching (backend):
+ *  `boss_ability_id` → time-sorted candidates → `occurrence` index, else
+ *  nearest `at_sec`, else normalized `name`. */
+export type UserMitPlanEntry = {
+  /** Display label only (falls back to name / boss id). */
+  mechanic?: string;
+  name?: string;
+  boss_ability_id?: number;
+  occurrence?: number;
+  at_sec?: number;
+  mits: UserMitPlanMit[];
+  gcd_heals?: UserMitPlanHeal[];
+};
+
+/** A user-authored mitigation plan. DELIBERATE snake_case exception: this is
+ *  the premade-v3 FILE format (mitplan/premade/<id>.json) passing through the
+ *  wire opaquely — the request payload, the export file, and an imported file
+ *  are byte-compatible, and the backend parses them with one validator
+ *  (mitplan.premade.parse_plan_dict). */
+export type UserMitPlan = {
+  encounter_id: number;
+  encounter_name?: string;
+  source?: string;
+  assignments: UserMitPlanEntry[];
+};
+
+/** One palette action in the mit library (get_mit_library) — the per-ability
+ *  data the editor needs to preview availability client-side. The backend
+ *  planner stays authoritative on placement. */
+export type MitLibraryAction = {
+  actionId: number;
+  name: string;
+  cooldownSec: number;
+  charges: number;
+  durationSec: number;
+  /** Seconds before a mechanic's first hit the planner would cast this
+   *  (mit 2s / shield 4s / regen 8s — policy lives backend-side). */
+  castLeadSec: number;
+  /** Earliest legal cast time (pure shields may go pre-pull: -10). */
+  minCastSec: number;
+  target: 'party' | 'self' | 'single' | 'enemy';
+  tier: 'party_other' | 'healer_ogcd' | 'healer_gcd' | 'tank_suggestion' | 'invuln';
+  isGcd: boolean;
+  /** Same group never stacks on one hit (reprisal/feint/addle/ranged_mit). */
+  stackGroup: string | null;
+  /** Token pool this consumes (addersgall/aetherflow/lily), if any. */
+  resource: string | null;
+  mitAll: number;
+  mitPhys: number;
+  mitMagic: number;
+  shieldPotency: number;
+  shieldPctMaxhp: number;
+  healPotency: number;
+  /** +% healing window the action carries (Temperance/Krasis/Philosophia…);
+   *  the backend sweep applies it — shown on the chip only. */
+  healMult: number;
+  /** Flat heal rider (Plenary's Confession): bonus potency added to each
+   *  qualifying GCD heal cast inside the action's window. Pair-gated
+   *  backend-side. */
+  healFlatPotency: number;
+  /** Prerequisite chain (Divine Caress → Temperance): placeable only within
+   *  `requiresWithinSec` after a cast of this same-job action. Null = none. */
+  requiresActionId: number | null;
+  requiresWithinSec: number;
+};
+
+/** One GCD heal a healer can author into a gap (the +/- incrementer):
+ *  party top-ups (Medica III…) or single-target tank heals (Cure II,
+ *  Benefic II…). */
+export type MitLibraryHealOption = {
+  actionId: number;
+  name: string;
+  healPotency: number;
+  /** Lost DPS potency per cast (0 for free lily heals). */
+  gcdCostPotency: number;
+  castTimeSec: number;
+  /** 'single' heals the TANK only in the HP model; 'party' heals everyone. */
+  target: 'party' | 'single';
+};
+
+export type MitLibrarySlot = {
+  slot: string;
+  job: string;
+  actions: MitLibraryAction[];
+  /** Non-empty for healer slots only: their pure AoE GCD heals (split out of
+   *  `actions` — heals are incremented per gap, not dragged). */
+  healOptions: MitLibraryHealOption[];
+};
+
+/** Result of `get_mit_library`: the comp's palette (shield riders like Zoe /
+ *  Recitation excluded — they fold onto host shields automatically; pure HEAL
+ *  amps like Krasis / Plenary ARE placeable) + icons for every palette id. */
+export type MitLibraryResult = {
+  slots: MitLibrarySlot[];
+  abilityMeta: Record<number, AbilityMetaJson>;
+  /** Token buckets for the client-side pool preview: capacity, seconds per
+   *  regenerated token, and the stock at pull start (lilies start at ZERO —
+   *  they accrue in combat only). */
+  resourcePools: Record<string,
+    { capacity: number; regenSec: number; startTokens: number }>;
 };
 
 /** The healer duo + party the mitigation plan is built for — also the comp
@@ -1460,6 +1628,9 @@ export type MitPlanArgs = {
   /** Use the encounter's hand-authored premade ("PF") plan (ultimates only)
    *  instead of the auto-derived one. */
   usePfMitPlan?: boolean;
+  /** Score the user's own custom plan (exclusive mode) instead of generating
+   *  one. Wins over `usePfMitPlan`. */
+  userMitPlan?: UserMitPlan;
 };
 
 export interface Sidecar {
@@ -1550,7 +1721,10 @@ export interface Sidecar {
     comp?: MitCompSelection,
     /** Healer flow (ultimates only): lock the premade ("PF") mit plan into the
      *  ceiling instead of the auto-derived one. */
-    usePfMitPlan?: boolean
+    usePfMitPlan?: boolean,
+    /** Healer flow: lock the user's own custom plan into the ceiling
+     *  (exclusive mode). Wins over `usePfMitPlan`. */
+    userMitPlan?: UserMitPlan
   ): Promise<AnalysisResult>;
   /** Compute the sim's ideal output + timeline for a theorized kill time. The
    *  encounter's downtime is derived backend-side from its reference logs (no
@@ -1575,4 +1749,18 @@ export interface Sidecar {
     onProgress?: (pct: number, stage: string, tasks?: ProgressTask[],
                   meta?: ProgressMeta) => void
   ): Promise<MitPlanResult>;
+  /** The drag-and-drop editor's per-comp ability palette (cooldown/charge/
+   *  duration/lead data + icons for every palette id). Cached per comp
+   *  backend-side — cheap to re-request. */
+  getMitLibrary(args: MitCompSelection): Promise<MitLibraryResult>;
+  /** Write a user-authored plan to the config dir's mit_plans/ folder and
+   *  return its path for the Explorer reveal. The .json is the same document
+   *  the wire carries — re-importable and shareable as-is; `readable` adds a
+   *  same-stem .txt mit sheet beside it (the human copy). */
+  exportMitPlan(args: {
+    encounterId: number;
+    fileName?: string;
+    plan: UserMitPlan;
+    readable?: string;
+  }): Promise<{ path: string; readablePath?: string }>;
 }

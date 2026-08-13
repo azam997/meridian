@@ -103,12 +103,13 @@ enabler_net_values = _FNS.enabler_net_values
 
 class _VprCtx:
     """Per-pull context: the measured Hunter's Instinct coverage (the delivered
-    multiplier) + its uptime %."""
-    __slots__ = ("hi_intervals", "hi_pct")
+    multiplier) + its uptime %, plus the phase-continuation entry state."""
+    __slots__ = ("hi_intervals", "hi_pct", "entry")
 
-    def __init__(self, hi_intervals, hi_pct):
+    def __init__(self, hi_intervals, hi_pct, entry=None):
         self.hi_intervals = hi_intervals
         self.hi_pct = hi_pct
+        self.entry = entry
 
 
 class VPRScoringAspect(ScoringAspectBase):
@@ -132,13 +133,21 @@ class VPRScoringAspect(ScoringAspectBase):
     gcd_constant = 2.125
 
     def prepare(self, client, code, fight, actor, report, norm_casts):
+        from jobs._core.entry_gauge import entry_state
         from jobs.viper.buffs import (
             hunters_instinct_coverage_pct,
             measured_hunters_instinct_intervals,
         )
         hi = measured_hunters_instinct_intervals(client, code, report, fight, actor)
         dur = (fight["endTime"] - fight["startTime"]) / 1000.0
-        return _VprCtx(hi, hunters_instinct_coverage_pct(hi, dur))
+        entry = entry_state(norm_casts, vd.JOB_DATA.gauges)
+        return _VprCtx(hi, hunters_instinct_coverage_pct(hi, dur), entry)
+
+    def sim_context(self, ctx):
+        # Phase-continuation entry gauge (carried Serpent Offering / Rattling
+        # Coils) threaded into the ceiling. None (cold start) keeps the ceiling
+        # pure (duration, downtime, buffs) data, byte-identical.
+        return ctx.entry or None
 
     def score_delivered(self, ctx, in_fight_casts, buff_intervals=None):
         return score_delivered_potency(
@@ -146,7 +155,12 @@ class VPRScoringAspect(ScoringAspectBase):
             buff_intervals=buff_intervals)
 
     def extra_state(self, ctx):
-        return {"hunterInstinctUptimePct": ctx.hi_pct}
+        e = ctx.entry
+        return {
+            "hunterInstinctUptimePct": ctx.hi_pct,
+            "sim_context": e or None,
+            "entryGauges": dict(e.gauges) if e else {},
+        }
 
     def gcd_inference_exclusions(self, norm_casts):
         # Keep the fast Reawakened combo (Generations + Ouroboros, ~1.7s) out of the

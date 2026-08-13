@@ -1,0 +1,4714 @@
+{
+  "abilityMeta": {
+    "16465": {
+      "iconPath": "/i/002000/002568.png",
+      "id": 16465,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Inner Chaos"
+    },
+    "25753": {
+      "iconPath": "/i/002000/002571.png",
+      "id": 25753,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Primal Rend"
+    },
+    "31": {
+      "iconPath": "/i/000000/000260.png",
+      "id": 31,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Heavy Swing"
+    },
+    "3549": {
+      "iconPath": "/i/002000/002557.png",
+      "id": 3549,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Fell Cleave"
+    },
+    "36924": {
+      "iconPath": "/i/002000/002574.png",
+      "id": 36924,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Primal Wrath"
+    },
+    "36925": {
+      "iconPath": "/i/002000/002050.png",
+      "id": 36925,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Primal Ruination"
+    },
+    "37": {
+      "iconPath": "/i/000000/000255.png",
+      "id": 37,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Maim"
+    },
+    "42": {
+      "iconPath": "/i/000000/000258.png",
+      "id": 42,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Storm's Path"
+    },
+    "45": {
+      "iconPath": "/i/000000/000264.png",
+      "id": 45,
+      "isDefensive": false,
+      "isOgcd": false,
+      "name": "Storm's Eye"
+    },
+    "52": {
+      "iconPath": "/i/002000/002555.png",
+      "id": 52,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Infuriate"
+    },
+    "7386": {
+      "iconPath": "/i/002000/002561.png",
+      "id": 7386,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Onslaught"
+    },
+    "7387": {
+      "iconPath": "/i/002000/002562.png",
+      "id": 7387,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Upheaval"
+    },
+    "7389": {
+      "iconPath": "/i/002000/002564.png",
+      "id": 7389,
+      "isDefensive": false,
+      "isOgcd": true,
+      "name": "Inner Release"
+    }
+  },
+  "aspectStates": {
+    "Abilities": {
+      "abilityCounts": {
+        "16465": 11,
+        "25753": 6,
+        "31": 30,
+        "3549": 32,
+        "36924": 6,
+        "36925": 6,
+        "37": 30,
+        "42": 19,
+        "45": 10,
+        "52": 11,
+        "7386": 14,
+        "7387": 12,
+        "7389": 6
+      },
+      "totalCasts": 193
+    },
+    "Alignment": {
+      "compKnown": true,
+      "findings": [],
+      "providers": []
+    },
+    "BuffDrift": {
+      "findings": []
+    },
+    "Clipping": {
+      "clipping": {
+        "avgGcdPotency": 531.94,
+        "clipLostGcds": 0.0,
+        "clipLostPotency": 0.0,
+        "effectiveGcdSec": 2.5,
+        "idleLostGcds": 0.0,
+        "idleLostPotency": 0.0,
+        "totalClipSec": 0.0,
+        "totalIdleSec": 0.0,
+        "worstClips": [],
+        "worstIdle": []
+      },
+      "downtimeSource": "targetability"
+    },
+    "Drift": {
+      "downtimeSource": "targetability",
+      "downtimeWindows": [],
+      "fightDurationSec": 360.0,
+      "findings": [
+        {
+          "abilityId": 7387,
+          "abilityName": "Upheaval",
+          "cappedSeconds": 5.7,
+          "casts": 12,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7386,
+          "abilityName": "Onslaught",
+          "cappedSeconds": 5.0,
+          "casts": 14,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 52,
+          "abilityName": "Infuriate",
+          "cappedSeconds": 0.7,
+          "casts": 11,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        },
+        {
+          "abilityId": 7389,
+          "abilityName": "Inner Release",
+          "cappedSeconds": 0.0,
+          "casts": 6,
+          "cdrOverflowSeconds": 0.0,
+          "lostCasts": 0.0,
+          "lostPotency": 0.0,
+          "sharedConsumers": 0
+        }
+      ]
+    },
+    "Opener": {
+      "findings": [
+        {
+          "actualId": 16465,
+          "expectedId": 37,
+          "lostPotency": 0.0,
+          "position": 2,
+          "summary": "Opener slot #2: cast Inner Chaos, canonical uses Maim (same potency)"
+        },
+        {
+          "actualId": 16465,
+          "expectedId": 45,
+          "lostPotency": 0.0,
+          "position": 3,
+          "summary": "Opener slot #3: cast Inner Chaos, canonical uses Storm's Eye (same potency)"
+        },
+        {
+          "actualId": 3549,
+          "expectedId": 16465,
+          "lostPotency": 360.0,
+          "position": 4,
+          "summary": "Opener slot #4: cast Fell Cleave (580p), canonical uses Inner Chaos (940p), -360p"
+        },
+        {
+          "actualId": 37,
+          "expectedId": 31,
+          "lostPotency": 0.0,
+          "position": 9,
+          "summary": "Opener slot #9: cast Maim, canonical uses Heavy Swing (same potency)"
+        },
+        {
+          "actualId": 45,
+          "expectedId": 37,
+          "lostPotency": 0.0,
+          "position": 10,
+          "summary": "Opener slot #10: cast Storm's Eye, canonical uses Maim (same potency)"
+        },
+        {
+          "actualId": 31,
+          "expectedId": 42,
+          "lostPotency": 280.0,
+          "position": 11,
+          "summary": "Opener slot #11: cast Heavy Swing (300p), canonical uses Storm's Path (580p), -280p"
+        },
+        {
+          "actualId": 37,
+          "expectedId": 3549,
+          "lostPotency": 140.0,
+          "position": 12,
+          "summary": "Opener slot #12: cast Maim (440p), canonical uses Fell Cleave (580p), -140p"
+        }
+      ]
+    },
+    "Overcap": {
+      "findings": []
+    },
+    "Scoring": {
+      "deliveredObserved": 126896.11,
+      "deliveredPotency": 126896.11,
+      "downtimeSource": "targetability",
+      "downtimeTierB": [],
+      "downtimeWindows": [],
+      "enablerNetValues": {
+        "52": 1476.76,
+        "7389": 4424.25
+      },
+      "entryGauges": {
+        "beast": 100
+      },
+      "fightDurationSec": 360.0,
+      "idealizedLenient": 128974.81,
+      "idealizedMaster": 127948.9,
+      "idealizedObserved": 127948.9,
+      "idealizedPotency": 128974.81,
+      "idealizedStrict": 128974.81,
+      "masterBuffIntervals": [],
+      "observedBuffWindows": [],
+      "observedTinctureWindows": [],
+      "simContext": {
+        "gcdBaseSec": 2.47,
+        "payload": {
+          "gauges": [
+            [
+              "beast",
+              100
+            ]
+          ],
+          "openerStartSec": null
+        }
+      },
+      "tinctureLoss": 2509.88,
+      "tinctureLossTimeSec": 0.0,
+      "tinctureMultiplier": 1.09,
+      "tinctureOptimalCount": 2
+    },
+    "SurgingTempest": {
+      "coveragePct": 100.0,
+      "coveredUptimeSec": 360.0,
+      "lostPotency": 0.0,
+      "uncoveredLost": [],
+      "uncoveredWindows": [],
+      "uptimeSec": 360.0
+    }
+  },
+  "comparisons": {
+    "Abilities": {
+      "aspectName": "Abilities",
+      "detailColumns": [
+        "Ability",
+        "Your casts",
+        "Ref median"
+      ],
+      "findings": [
+        "No reference runs to compare against."
+      ],
+      "summaryLines": [
+        "Your total casts: 193"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Fell Cleave",
+          32,
+          0
+        ],
+        [
+          "Maim",
+          30,
+          0
+        ],
+        [
+          "Heavy Swing",
+          30,
+          0
+        ],
+        [
+          "Storm's Path",
+          19,
+          0
+        ],
+        [
+          "Onslaught",
+          14,
+          0
+        ],
+        [
+          "Upheaval",
+          12,
+          0
+        ],
+        [
+          "Inner Chaos",
+          11,
+          0
+        ],
+        [
+          "Infuriate",
+          11,
+          0
+        ],
+        [
+          "Storm's Eye",
+          10,
+          0
+        ],
+        [
+          "Primal Ruination",
+          6,
+          0
+        ],
+        [
+          "Primal Rend",
+          6,
+          0
+        ],
+        [
+          "Primal Wrath",
+          6,
+          0
+        ],
+        [
+          "Inner Release",
+          6,
+          0
+        ]
+      ]
+    },
+    "Alignment": {
+      "aspectName": "Alignment",
+      "detailColumns": [
+        "Time",
+        "Summary",
+        "Benefit (p)"
+      ],
+      "findings": [
+        "No raid-buff providers in this party \u2014 burst alignment N/A."
+      ],
+      "summaryLines": [
+        "Total potential benefit: +0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "BuffDrift": {
+      "aspectName": "BuffDrift",
+      "detailColumns": [
+        "Kind",
+        "Provider",
+        "Time",
+        "Detail"
+      ],
+      "findings": [
+        "Party raid buffs landed on the expected cadence (no timing drift detected)."
+      ],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Clipping": {
+      "aspectName": "Clipping",
+      "detailColumns": [
+        "#",
+        "Time (s)",
+        "Clip (s)",
+        "oGCDs"
+      ],
+      "findings": [
+        "Clean GCD pacing: eff GCD 2.50s, no notable idle time or clipping."
+      ],
+      "summaryLines": [
+        "Effective GCD: 2.50s",
+        "Avg GCD potency: 532p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Drift": {
+      "aspectName": "Drift",
+      "detailColumns": [
+        "Ability",
+        "Casts",
+        "Drift (s)",
+        "Lost (p)",
+        "Ref avg (p)",
+        "\u0394"
+      ],
+      "findings": [
+        "No notable cooldown drift."
+      ],
+      "summaryLines": [
+        "Total drift cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          "Inner Release",
+          6,
+          0.0,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Infuriate",
+          11,
+          0.7,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Upheaval",
+          12,
+          5.7,
+          0,
+          0,
+          "+0"
+        ],
+        [
+          "Onslaught",
+          14,
+          5.0,
+          0,
+          0,
+          "+0"
+        ]
+      ]
+    },
+    "Opener": {
+      "aspectName": "Opener",
+      "detailColumns": [
+        "Slot",
+        "Expected",
+        "Actual",
+        "Lost (p)"
+      ],
+      "findings": [
+        "[opener] Opener slot #4: cast Fell Cleave (580p), canonical uses Inner Chaos (940p), -360p",
+        "[opener] Opener slot #11: cast Heavy Swing (300p), canonical uses Storm's Path (580p), -280p",
+        "[opener] Opener slot #12: cast Maim (440p), canonical uses Fell Cleave (580p), -140p"
+      ],
+      "summaryLines": [
+        "Your opener cost: 780p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": [
+        [
+          2,
+          "Maim",
+          "Inner Chaos",
+          0
+        ],
+        [
+          3,
+          "Storm's Eye",
+          "Inner Chaos",
+          0
+        ],
+        [
+          4,
+          "Inner Chaos",
+          "Fell Cleave",
+          360
+        ],
+        [
+          9,
+          "Heavy Swing",
+          "Maim",
+          0
+        ],
+        [
+          10,
+          "Maim",
+          "Storm's Eye",
+          0
+        ],
+        [
+          11,
+          "Storm's Path",
+          "Heavy Swing",
+          280
+        ],
+        [
+          12,
+          "Fell Cleave",
+          "Maim",
+          140
+        ]
+      ]
+    },
+    "Overcap": {
+      "aspectName": "Overcap",
+      "detailColumns": [
+        "Time",
+        "Gauge",
+        "Ability",
+        "Wasted",
+        "Lost (p)"
+      ],
+      "findings": [
+        "No notable gauge overcap."
+      ],
+      "summaryLines": [
+        "Total overcap cost: -0p"
+      ],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "Scoring": {
+      "aspectName": "Scoring",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    },
+    "SurgingTempest": {
+      "aspectName": "SurgingTempest",
+      "detailColumns": [],
+      "findings": [],
+      "summaryLines": [],
+      "yourDetailRowColors": [],
+      "yourDetailRows": []
+    }
+  },
+  "examined": {
+    "basis": "strict",
+    "improvements": [
+      {
+        "abilityId": 0,
+        "abilityName": "",
+        "children": [
+          {
+            "abilityId": 0,
+            "abilityName": "Tincture",
+            "children": [],
+            "kind": "tincture",
+            "lostPotency": 2509.88,
+            "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+            "summary": "Used 0 of 2 tinctures",
+            "timeSec": 0.0
+          },
+          {
+            "abilityId": 0,
+            "abilityName": "",
+            "children": [],
+            "kind": "cadence",
+            "lostPotency": 1160.0,
+            "prescription": "Press the next GCD the moment it's ready.",
+            "summary": "Loose GCD pacing: ~2 GCDs of slightly-late casts, no single gap",
+            "timeSec": 0.0
+          }
+        ],
+        "countGaps": [
+          {
+            "name": "Fell Cleave",
+            "sim": 35,
+            "you": 32
+          },
+          {
+            "name": "Maim",
+            "sim": 29,
+            "you": 30
+          },
+          {
+            "name": "action -1000049",
+            "sim": 0,
+            "you": 2
+          }
+        ],
+        "kind": "residual",
+        "lostPotency": 938.7,
+        "prescription": "Biggest count gaps: Fell Cleave. Extra Maim casts took those slots at lower value.",
+        "summary": "Spacing & sequencing: 2 small located losses below the listing threshold",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 0,
+        "abilityName": "",
+        "children": [],
+        "evidence": [
+          {
+            "k": "Upheaval",
+            "note": "ran behind the ideal line through this stretch",
+            "v": "27.5s late"
+          }
+        ],
+        "kind": "cascade_pacing",
+        "lostPotency": 580.0,
+        "prescription": "Close the idle gaps after 2:31.",
+        "summary": "Sequencing slip from 2:31 to 2:35",
+        "timeSec": 151.2
+      },
+      {
+        "abilityId": 0,
+        "abilityName": "",
+        "children": [],
+        "evidence": [
+          {
+            "k": "Upheaval",
+            "note": "ran behind the ideal line through this stretch",
+            "v": "2.4s late"
+          }
+        ],
+        "kind": "cascade_pacing",
+        "lostPotency": 560.0,
+        "prescription": "Close the idle gaps after 5:56.",
+        "summary": "Sequencing slip from 5:56 to 6:00",
+        "timeSec": 356.2
+      },
+      {
+        "abilityId": 42,
+        "abilityName": "Storm's Path",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #11: Heavy Swing instead of Storm's Path (ordering only)",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "abilityName": "Fell Cleave",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #12: Maim instead of Fell Cleave (ordering only)",
+        "timeSec": 0.0
+      },
+      {
+        "abilityId": 16465,
+        "abilityName": "Inner Chaos",
+        "children": [],
+        "kind": "opener",
+        "lostPotency": 0.0,
+        "summary": "Opener slot #4: Fell Cleave instead of Inner Chaos (ordering only)",
+        "timeSec": 0.0
+      }
+    ],
+    "notes": [
+      "1,140p of the diffuse loss resolved into 2 root causes."
+    ],
+    "recoverable": 2078.7
+  },
+  "headline": {
+    "beat": {
+      "count": 0,
+      "of": 0
+    },
+    "deaths": [],
+    "deathsLostPotency": 0,
+    "deliveredObserved": 126896.11,
+    "downtimeSource": "targetability",
+    "downtimeTierA": [],
+    "downtimeTierB": [],
+    "downtimeTierBHigh": [],
+    "effectiveGcdSec": 2.5,
+    "efficiencyPct": 98.39,
+    "efficiencyPctLenient": 98.39,
+    "efficiencyPctMaster": 99.18,
+    "efficiencyPctObserved": 99.18,
+    "efficiencyPctStrict": 98.39,
+    "idealizedMaster": 127948.9,
+    "idealizedObserved": 127948.9,
+    "killTimeSec": 360,
+    "multiTargetCredited": false,
+    "multiTargetDisclaimed": false,
+    "multiTargetWindows": [],
+    "partyJobs": [
+      "Warrior"
+    ],
+    "percentile": 100,
+    "rangedWindows": [],
+    "rank": {
+      "total": 1,
+      "you": 1
+    },
+    "refAvgIdealizedPotency": 0.0,
+    "refAvgPotency": 0.0,
+    "refEfficiencyPct": 0.0,
+    "refKillTimeSec": 0,
+    "yourIdealizedPotency": 128974.81,
+    "yourIdealizedPotencyLenient": 128974.81,
+    "yourPotency": 126896.11
+  },
+  "idealizedTinctureWindows": [
+    {
+      "endSec": 30.0,
+      "multiplier": 1.09,
+      "startSec": 0.0
+    },
+    {
+      "endSec": 358.51,
+      "multiplier": 1.09,
+      "startSec": 328.51
+    }
+  ],
+  "idealizedTrack": [
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 1.0,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 0.0,
+      "tooltip": "Fell Cleave @ 0.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7389,
+      "color": "#f59e0b",
+      "endSec": 0.6,
+      "iconPath": "/i/002000/002564.png",
+      "label": "Inn",
+      "startSec": 0.0,
+      "tooltip": "Inner Release @ 0.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 1.3,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 0.7,
+      "tooltip": "Infuriate @ 0.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 3.47,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 2.47,
+      "tooltip": "Inner Chaos @ 2.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 3.07,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 2.47,
+      "tooltip": "Infuriate @ 2.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 3.77,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 3.17,
+      "tooltip": "Upheaval @ 3.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 5.94,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 4.94,
+      "tooltip": "Inner Chaos @ 4.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 5.54,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 4.94,
+      "tooltip": "Onslaught @ 4.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 6.24,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 5.64,
+      "tooltip": "Onslaught @ 5.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 8.41,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 7.41,
+      "tooltip": "Fell Cleave @ 7.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 8.01,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 7.41,
+      "tooltip": "Onslaught @ 7.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 10.88,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 9.88,
+      "tooltip": "Fell Cleave @ 9.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 13.35,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 12.35,
+      "tooltip": "Fell Cleave @ 12.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36924,
+      "color": "#f59e0b",
+      "endSec": 12.95,
+      "iconPath": "/i/002000/002574.png",
+      "label": "Pri",
+      "startSec": 12.35,
+      "tooltip": "Primal Wrath @ 12.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25753,
+      "color": "#3b82f6",
+      "endSec": 15.82,
+      "iconPath": "/i/002000/002571.png",
+      "label": "Pri",
+      "startSec": 14.82,
+      "tooltip": "Primal Rend @ 14.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36925,
+      "color": "#3b82f6",
+      "endSec": 18.29,
+      "iconPath": "/i/002000/002050.png",
+      "label": "Pri",
+      "startSec": 17.29,
+      "tooltip": "Primal Ruination @ 17.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 20.76,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 19.76,
+      "tooltip": "Fell Cleave @ 19.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 23.23,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 22.23,
+      "tooltip": "Heavy Swing @ 22.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 25.7,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 24.7,
+      "tooltip": "Maim @ 24.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 45,
+      "color": "#3b82f6",
+      "endSec": 28.17,
+      "iconPath": "/i/000000/000264.png",
+      "label": "Sto",
+      "startSec": 27.17,
+      "tooltip": "Storm's Eye @ 27.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 30.64,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 29.64,
+      "tooltip": "Heavy Swing @ 29.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 33.11,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 32.11,
+      "tooltip": "Maim @ 32.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 32.71,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 32.11,
+      "tooltip": "Infuriate @ 32.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 35.58,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 34.58,
+      "tooltip": "Inner Chaos @ 34.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 35.18,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 34.58,
+      "tooltip": "Upheaval @ 34.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 35.88,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 35.28,
+      "tooltip": "Onslaught @ 35.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 38.05,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 37.05,
+      "tooltip": "Storm's Path @ 37.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 40.52,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 39.52,
+      "tooltip": "Fell Cleave @ 39.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 42.99,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 41.99,
+      "tooltip": "Heavy Swing @ 42.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 45.46,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 44.46,
+      "tooltip": "Maim @ 44.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 45,
+      "color": "#3b82f6",
+      "endSec": 47.93,
+      "iconPath": "/i/000000/000264.png",
+      "label": "Sto",
+      "startSec": 46.93,
+      "tooltip": "Storm's Eye @ 46.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 50.4,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 49.4,
+      "tooltip": "Heavy Swing @ 49.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 52.87,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 51.87,
+      "tooltip": "Maim @ 51.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 55.34,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 54.34,
+      "tooltip": "Storm's Path @ 54.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 57.81,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 56.81,
+      "tooltip": "Fell Cleave @ 56.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 60.28,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 59.28,
+      "tooltip": "Heavy Swing @ 59.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 62.75,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 61.75,
+      "tooltip": "Maim @ 61.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7389,
+      "color": "#f59e0b",
+      "endSec": 62.35,
+      "iconPath": "/i/002000/002564.png",
+      "label": "Inn",
+      "startSec": 61.75,
+      "tooltip": "Inner Release @ 61.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 65.22,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 64.22,
+      "tooltip": "Fell Cleave @ 64.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 67.69,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 66.69,
+      "tooltip": "Fell Cleave @ 66.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 67.29,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 66.69,
+      "tooltip": "Infuriate @ 66.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 67.99,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 67.39,
+      "tooltip": "Upheaval @ 67.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 70.16,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 69.16,
+      "tooltip": "Inner Chaos @ 69.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 69.76,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 69.16,
+      "tooltip": "Onslaught @ 69.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 72.63,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 71.63,
+      "tooltip": "Fell Cleave @ 71.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36924,
+      "color": "#f59e0b",
+      "endSec": 72.23,
+      "iconPath": "/i/002000/002574.png",
+      "label": "Pri",
+      "startSec": 71.63,
+      "tooltip": "Primal Wrath @ 71.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25753,
+      "color": "#3b82f6",
+      "endSec": 75.1,
+      "iconPath": "/i/002000/002571.png",
+      "label": "Pri",
+      "startSec": 74.1,
+      "tooltip": "Primal Rend @ 74.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36925,
+      "color": "#3b82f6",
+      "endSec": 77.57,
+      "iconPath": "/i/002000/002050.png",
+      "label": "Pri",
+      "startSec": 76.57,
+      "tooltip": "Primal Ruination @ 76.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 80.04,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 79.04,
+      "tooltip": "Storm's Path @ 79.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 82.51,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 81.51,
+      "tooltip": "Heavy Swing @ 81.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 84.98,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 83.98,
+      "tooltip": "Maim @ 84.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 45,
+      "color": "#3b82f6",
+      "endSec": 87.45,
+      "iconPath": "/i/000000/000264.png",
+      "label": "Sto",
+      "startSec": 86.45,
+      "tooltip": "Storm's Eye @ 86.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 89.92,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 88.92,
+      "tooltip": "Fell Cleave @ 88.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 92.39,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 91.39,
+      "tooltip": "Heavy Swing @ 91.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 94.86,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 93.86,
+      "tooltip": "Maim @ 93.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 97.33,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 96.33,
+      "tooltip": "Storm's Path @ 96.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 96.93,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 96.33,
+      "tooltip": "Onslaught @ 96.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 99.8,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 98.8,
+      "tooltip": "Heavy Swing @ 98.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 99.4,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 98.8,
+      "tooltip": "Upheaval @ 98.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 102.27,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 101.27,
+      "tooltip": "Maim @ 101.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 104.74,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 103.74,
+      "tooltip": "Storm's Path @ 103.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 107.21,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 106.21,
+      "tooltip": "Fell Cleave @ 106.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 106.81,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 106.21,
+      "tooltip": "Infuriate @ 106.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 109.68,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 108.68,
+      "tooltip": "Inner Chaos @ 108.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 112.15,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 111.15,
+      "tooltip": "Heavy Swing @ 111.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 114.62,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 113.62,
+      "tooltip": "Maim @ 113.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 45,
+      "color": "#3b82f6",
+      "endSec": 117.09,
+      "iconPath": "/i/000000/000264.png",
+      "label": "Sto",
+      "startSec": 116.09,
+      "tooltip": "Storm's Eye @ 116.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 119.56,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 118.56,
+      "tooltip": "Heavy Swing @ 118.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 122.03,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 121.03,
+      "tooltip": "Maim @ 121.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 124.5,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 123.5,
+      "tooltip": "Storm's Path @ 123.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7389,
+      "color": "#f59e0b",
+      "endSec": 124.1,
+      "iconPath": "/i/002000/002564.png",
+      "label": "Inn",
+      "startSec": 123.5,
+      "tooltip": "Inner Release @ 123.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 126.97,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 125.97,
+      "tooltip": "Fell Cleave @ 126.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 126.57,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 125.97,
+      "tooltip": "Onslaught @ 126.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 129.44,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 128.44,
+      "tooltip": "Fell Cleave @ 128.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 131.91,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 130.91,
+      "tooltip": "Fell Cleave @ 130.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36924,
+      "color": "#f59e0b",
+      "endSec": 131.51,
+      "iconPath": "/i/002000/002574.png",
+      "label": "Pri",
+      "startSec": 130.91,
+      "tooltip": "Primal Wrath @ 130.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 132.21,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 131.61,
+      "tooltip": "Upheaval @ 131.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25753,
+      "color": "#3b82f6",
+      "endSec": 134.38,
+      "iconPath": "/i/002000/002571.png",
+      "label": "Pri",
+      "startSec": 133.38,
+      "tooltip": "Primal Rend @ 133.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36925,
+      "color": "#3b82f6",
+      "endSec": 136.85,
+      "iconPath": "/i/002000/002050.png",
+      "label": "Pri",
+      "startSec": 135.85,
+      "tooltip": "Primal Ruination @ 135.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 139.32,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 138.32,
+      "tooltip": "Fell Cleave @ 138.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 141.79,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 140.79,
+      "tooltip": "Heavy Swing @ 140.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 141.39,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 140.79,
+      "tooltip": "Infuriate @ 140.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 144.26,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 143.26,
+      "tooltip": "Inner Chaos @ 143.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 146.73,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 145.73,
+      "tooltip": "Maim @ 145.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 149.2,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 148.2,
+      "tooltip": "Storm's Path @ 148.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 151.67,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 150.67,
+      "tooltip": "Heavy Swing @ 150.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 154.14,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 153.14,
+      "tooltip": "Maim @ 153.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 45,
+      "color": "#3b82f6",
+      "endSec": 156.61,
+      "iconPath": "/i/000000/000264.png",
+      "label": "Sto",
+      "startSec": 155.61,
+      "tooltip": "Storm's Eye @ 155.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 156.21,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 155.61,
+      "tooltip": "Onslaught @ 155.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 159.08,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 158.08,
+      "tooltip": "Fell Cleave @ 158.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 161.55,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 160.55,
+      "tooltip": "Heavy Swing @ 160.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 164.02,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 163.02,
+      "tooltip": "Maim @ 163.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 163.62,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 163.02,
+      "tooltip": "Upheaval @ 163.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 166.49,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 165.49,
+      "tooltip": "Storm's Path @ 165.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 168.96,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 167.96,
+      "tooltip": "Heavy Swing @ 168.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 171.43,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 170.43,
+      "tooltip": "Maim @ 170.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 173.9,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 172.9,
+      "tooltip": "Storm's Path @ 172.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 176.37,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 175.37,
+      "tooltip": "Fell Cleave @ 175.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 178.84,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 177.84,
+      "tooltip": "Heavy Swing @ 177.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 181.31,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 180.31,
+      "tooltip": "Maim @ 180.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 183.78,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 182.78,
+      "tooltip": "Storm's Path @ 182.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 186.25,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 185.25,
+      "tooltip": "Fell Cleave @ 185.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7389,
+      "color": "#f59e0b",
+      "endSec": 185.85,
+      "iconPath": "/i/002000/002564.png",
+      "label": "Inn",
+      "startSec": 185.25,
+      "tooltip": "Inner Release @ 185.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 186.55,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 185.95,
+      "tooltip": "Infuriate @ 185.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 188.72,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 187.72,
+      "tooltip": "Inner Chaos @ 187.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 188.32,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 187.72,
+      "tooltip": "Onslaught @ 187.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 191.19,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 190.19,
+      "tooltip": "Fell Cleave @ 190.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 193.66,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 192.66,
+      "tooltip": "Fell Cleave @ 192.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 196.13,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 195.13,
+      "tooltip": "Fell Cleave @ 195.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36924,
+      "color": "#f59e0b",
+      "endSec": 195.73,
+      "iconPath": "/i/002000/002574.png",
+      "label": "Pri",
+      "startSec": 195.13,
+      "tooltip": "Primal Wrath @ 195.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 196.43,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 195.83,
+      "tooltip": "Upheaval @ 195.8s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25753,
+      "color": "#3b82f6",
+      "endSec": 198.6,
+      "iconPath": "/i/002000/002571.png",
+      "label": "Pri",
+      "startSec": 197.6,
+      "tooltip": "Primal Rend @ 197.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36925,
+      "color": "#3b82f6",
+      "endSec": 201.07,
+      "iconPath": "/i/002000/002050.png",
+      "label": "Pri",
+      "startSec": 200.07,
+      "tooltip": "Primal Ruination @ 200.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 203.54,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 202.54,
+      "tooltip": "Heavy Swing @ 202.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 206.01,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 205.01,
+      "tooltip": "Maim @ 205.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 45,
+      "color": "#3b82f6",
+      "endSec": 208.48,
+      "iconPath": "/i/000000/000264.png",
+      "label": "Sto",
+      "startSec": 207.48,
+      "tooltip": "Storm's Eye @ 207.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 210.95,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 209.95,
+      "tooltip": "Heavy Swing @ 209.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 213.42,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 212.42,
+      "tooltip": "Maim @ 212.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 215.89,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 214.89,
+      "tooltip": "Storm's Path @ 214.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 218.36,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 217.36,
+      "tooltip": "Fell Cleave @ 217.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 217.96,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 217.36,
+      "tooltip": "Infuriate @ 217.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 218.66,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 218.06,
+      "tooltip": "Onslaught @ 218.1s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 220.83,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 219.83,
+      "tooltip": "Inner Chaos @ 219.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 223.3,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 222.3,
+      "tooltip": "Heavy Swing @ 222.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 225.77,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 224.77,
+      "tooltip": "Maim @ 224.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 45,
+      "color": "#3b82f6",
+      "endSec": 228.24,
+      "iconPath": "/i/000000/000264.png",
+      "label": "Sto",
+      "startSec": 227.24,
+      "tooltip": "Storm's Eye @ 227.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 227.84,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 227.24,
+      "tooltip": "Upheaval @ 227.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 230.71,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 229.71,
+      "tooltip": "Heavy Swing @ 229.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 233.18,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 232.18,
+      "tooltip": "Maim @ 232.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 235.65,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 234.65,
+      "tooltip": "Storm's Path @ 234.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 238.12,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 237.12,
+      "tooltip": "Fell Cleave @ 237.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 240.59,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 239.59,
+      "tooltip": "Heavy Swing @ 239.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 243.06,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 242.06,
+      "tooltip": "Maim @ 242.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 245.53,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 244.53,
+      "tooltip": "Storm's Path @ 244.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 248.0,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 247.0,
+      "tooltip": "Heavy Swing @ 247.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 247.6,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 247.0,
+      "tooltip": "Onslaught @ 247.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 250.47,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 249.47,
+      "tooltip": "Maim @ 249.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 252.94,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 251.94,
+      "tooltip": "Storm's Path @ 251.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 255.41,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 254.41,
+      "tooltip": "Fell Cleave @ 254.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 257.88,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 256.88,
+      "tooltip": "Heavy Swing @ 256.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 260.35,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 259.35,
+      "tooltip": "Maim @ 259.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 259.95,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 259.35,
+      "tooltip": "Upheaval @ 259.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 45,
+      "color": "#3b82f6",
+      "endSec": 262.82,
+      "iconPath": "/i/000000/000264.png",
+      "label": "Sto",
+      "startSec": 261.82,
+      "tooltip": "Storm's Eye @ 261.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 265.29,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 264.29,
+      "tooltip": "Heavy Swing @ 264.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 264.89,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 264.29,
+      "tooltip": "Infuriate @ 264.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 267.76,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 266.76,
+      "tooltip": "Inner Chaos @ 266.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 270.23,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 269.23,
+      "tooltip": "Maim @ 269.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7389,
+      "color": "#f59e0b",
+      "endSec": 269.83,
+      "iconPath": "/i/002000/002564.png",
+      "label": "Inn",
+      "startSec": 269.23,
+      "tooltip": "Inner Release @ 269.2s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 272.7,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 271.7,
+      "tooltip": "Fell Cleave @ 271.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 275.17,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 274.17,
+      "tooltip": "Fell Cleave @ 274.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 277.64,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 276.64,
+      "tooltip": "Fell Cleave @ 276.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36924,
+      "color": "#f59e0b",
+      "endSec": 277.24,
+      "iconPath": "/i/002000/002574.png",
+      "label": "Pri",
+      "startSec": 276.64,
+      "tooltip": "Primal Wrath @ 276.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 277.94,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 277.34,
+      "tooltip": "Onslaught @ 277.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25753,
+      "color": "#3b82f6",
+      "endSec": 280.11,
+      "iconPath": "/i/002000/002571.png",
+      "label": "Pri",
+      "startSec": 279.11,
+      "tooltip": "Primal Rend @ 279.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36925,
+      "color": "#3b82f6",
+      "endSec": 282.58,
+      "iconPath": "/i/002000/002050.png",
+      "label": "Pri",
+      "startSec": 281.58,
+      "tooltip": "Primal Ruination @ 281.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 285.05,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 284.05,
+      "tooltip": "Storm's Path @ 284.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 287.52,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 286.52,
+      "tooltip": "Fell Cleave @ 286.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 289.99,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 288.99,
+      "tooltip": "Heavy Swing @ 289.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 292.46,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 291.46,
+      "tooltip": "Maim @ 291.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 292.06,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 291.46,
+      "tooltip": "Upheaval @ 291.5s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 45,
+      "color": "#3b82f6",
+      "endSec": 294.93,
+      "iconPath": "/i/000000/000264.png",
+      "label": "Sto",
+      "startSec": 293.93,
+      "tooltip": "Storm's Eye @ 293.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 297.4,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 296.4,
+      "tooltip": "Heavy Swing @ 296.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 297.0,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 296.4,
+      "tooltip": "Infuriate @ 296.4s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 299.87,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 298.87,
+      "tooltip": "Inner Chaos @ 298.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 302.34,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 301.34,
+      "tooltip": "Maim @ 301.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 304.81,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 303.81,
+      "tooltip": "Storm's Path @ 303.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 307.28,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 306.28,
+      "tooltip": "Fell Cleave @ 306.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 306.88,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 306.28,
+      "tooltip": "Onslaught @ 306.3s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 309.75,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 308.75,
+      "tooltip": "Heavy Swing @ 308.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 312.22,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 311.22,
+      "tooltip": "Maim @ 311.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 314.69,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 313.69,
+      "tooltip": "Storm's Path @ 313.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 317.16,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 316.16,
+      "tooltip": "Heavy Swing @ 316.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 319.63,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 318.63,
+      "tooltip": "Maim @ 318.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 322.1,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 321.1,
+      "tooltip": "Storm's Path @ 321.1s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 324.57,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 323.57,
+      "tooltip": "Fell Cleave @ 323.6s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 324.17,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 323.57,
+      "tooltip": "Upheaval @ 323.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 327.04,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 326.04,
+      "tooltip": "Heavy Swing @ 326.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 329.51,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 328.51,
+      "tooltip": "Maim @ 328.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 45,
+      "color": "#3b82f6",
+      "endSec": 331.98,
+      "iconPath": "/i/000000/000264.png",
+      "label": "Sto",
+      "startSec": 330.98,
+      "tooltip": "Storm's Eye @ 331.0s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7389,
+      "color": "#f59e0b",
+      "endSec": 331.58,
+      "iconPath": "/i/002000/002564.png",
+      "label": "Inn",
+      "startSec": 330.98,
+      "tooltip": "Inner Release @ 331.0s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 334.45,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 333.45,
+      "tooltip": "Fell Cleave @ 333.5s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 336.92,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 335.92,
+      "tooltip": "Fell Cleave @ 335.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 52,
+      "color": "#f59e0b",
+      "endSec": 336.52,
+      "iconPath": "/i/002000/002555.png",
+      "label": "Inf",
+      "startSec": 335.92,
+      "tooltip": "Infuriate @ 335.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 7386,
+      "color": "#f59e0b",
+      "endSec": 337.22,
+      "iconPath": "/i/002000/002561.png",
+      "label": "Ons",
+      "startSec": 336.62,
+      "tooltip": "Onslaught @ 336.6s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 16465,
+      "color": "#3b82f6",
+      "endSec": 339.39,
+      "iconPath": "/i/002000/002568.png",
+      "label": "Inn",
+      "startSec": 338.39,
+      "tooltip": "Inner Chaos @ 338.4s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 341.86,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 340.86,
+      "tooltip": "Fell Cleave @ 340.9s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36924,
+      "color": "#f59e0b",
+      "endSec": 341.46,
+      "iconPath": "/i/002000/002574.png",
+      "label": "Pri",
+      "startSec": 340.86,
+      "tooltip": "Primal Wrath @ 340.9s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 25753,
+      "color": "#3b82f6",
+      "endSec": 344.33,
+      "iconPath": "/i/002000/002571.png",
+      "label": "Pri",
+      "startSec": 343.33,
+      "tooltip": "Primal Rend @ 343.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 36925,
+      "color": "#3b82f6",
+      "endSec": 346.8,
+      "iconPath": "/i/002000/002050.png",
+      "label": "Pri",
+      "startSec": 345.8,
+      "tooltip": "Primal Ruination @ 345.8s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 349.27,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 348.27,
+      "tooltip": "Heavy Swing @ 348.3s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 37,
+      "color": "#3b82f6",
+      "endSec": 351.74,
+      "iconPath": "/i/000000/000255.png",
+      "label": "Mai",
+      "startSec": 350.74,
+      "tooltip": "Maim @ 350.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 42,
+      "color": "#3b82f6",
+      "endSec": 354.21,
+      "iconPath": "/i/000000/000258.png",
+      "label": "Sto",
+      "startSec": 353.21,
+      "tooltip": "Storm's Path @ 353.2s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "color": "#3b82f6",
+      "endSec": 356.68,
+      "iconPath": "/i/002000/002557.png",
+      "label": "Fel",
+      "startSec": 355.68,
+      "tooltip": "Fell Cleave @ 355.7s (idealized)",
+      "yOffset": 0.0
+    },
+    {
+      "abilityId": 7387,
+      "color": "#f59e0b",
+      "endSec": 356.28,
+      "iconPath": "/i/002000/002562.png",
+      "label": "Uph",
+      "startSec": 355.68,
+      "tooltip": "Upheaval @ 355.7s (idealized)",
+      "yOffset": -0.55
+    },
+    {
+      "abilityId": 31,
+      "color": "#3b82f6",
+      "endSec": 359.15,
+      "iconPath": "/i/000000/000260.png",
+      "label": "Hea",
+      "startSec": 358.15,
+      "tooltip": "Heavy Swing @ 358.2s (idealized)",
+      "yOffset": 0.0
+    }
+  ],
+  "idealizedTrackCanonical": [],
+  "idealizedTrackStrict": [],
+  "improvements": [
+    {
+      "abilityId": 0,
+      "abilityName": "",
+      "children": [
+        {
+          "abilityId": 0,
+          "abilityName": "Tincture",
+          "children": [],
+          "kind": "tincture",
+          "lostPotency": 2509.88,
+          "prescription": "Pot again the moment it's back up. 2 more fit on cooldown.",
+          "summary": "Used 0 of 2 tinctures",
+          "timeSec": 0.0
+        },
+        {
+          "abilityId": 0,
+          "abilityName": "",
+          "children": [],
+          "kind": "cadence",
+          "lostPotency": 1160.0,
+          "prescription": "Press the next GCD the moment it's ready.",
+          "summary": "Loose GCD pacing: ~2 GCDs of slightly-late casts, no single gap",
+          "timeSec": 0.0
+        }
+      ],
+      "countGaps": [
+        {
+          "name": "Fell Cleave",
+          "sim": 35,
+          "you": 32
+        },
+        {
+          "name": "Maim",
+          "sim": 29,
+          "you": 30
+        },
+        {
+          "name": "action -1000049",
+          "sim": 0,
+          "you": 2
+        }
+      ],
+      "kind": "residual",
+      "lostPotency": 2078.7,
+      "prescription": "Biggest count gaps: Fell Cleave. Extra Maim casts took those slots at lower value.",
+      "summary": "Spacing & sequencing: 2 small located losses below the listing threshold",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 16465,
+      "abilityName": "Inner Chaos",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #4: Fell Cleave instead of Inner Chaos (ordering only)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 42,
+      "abilityName": "Storm's Path",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #11: Heavy Swing instead of Storm's Path (ordering only)",
+      "timeSec": 0.0
+    },
+    {
+      "abilityId": 3549,
+      "abilityName": "Fell Cleave",
+      "children": [],
+      "kind": "opener",
+      "lostPotency": 0.0,
+      "summary": "Opener slot #12: Maim instead of Fell Cleave (ordering only)",
+      "timeSec": 0.0
+    }
+  ],
+  "refs": [],
+  "reviewableWindows": [],
+  "you": {
+    "abilitiesTrack": [
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 0.0,
+        "tooltip": "Heavy Swing  (GCD)  @  0:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7389,
+        "color": "#777777",
+        "endSec": 0.5,
+        "iconPath": "/i/002000/002564.png",
+        "label": "Inn",
+        "startSec": 0.0,
+        "tooltip": "Inner Release  (oGCD)  @  0:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 1.2,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 0.7,
+        "tooltip": "Infuriate  (oGCD)  @  0:01",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 2.5,
+        "tooltip": "Inner Chaos  (GCD)  @  0:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 3.0,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 2.5,
+        "tooltip": "Infuriate  (oGCD)  @  0:02",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 3.7,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 3.2,
+        "tooltip": "Upheaval  (oGCD)  @  0:03",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 5.0,
+        "tooltip": "Inner Chaos  (GCD)  @  0:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 5.5,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 5.0,
+        "tooltip": "Onslaught  (oGCD)  @  0:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 6.2,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 5.7,
+        "tooltip": "Onslaught  (oGCD)  @  0:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 7.5,
+        "tooltip": "Fell Cleave  (GCD)  @  0:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 8.0,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 7.5,
+        "tooltip": "Onslaught  (oGCD)  @  0:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 10.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 10.0,
+        "tooltip": "Fell Cleave  (GCD)  @  0:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 12.5,
+        "tooltip": "Fell Cleave  (GCD)  @  0:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36924,
+        "color": "#777777",
+        "endSec": 13.0,
+        "iconPath": "/i/002000/002574.png",
+        "label": "Pri",
+        "startSec": 12.5,
+        "tooltip": "Primal Wrath  (oGCD)  @  0:12",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25753,
+        "color": "#777777",
+        "endSec": 15.5,
+        "iconPath": "/i/002000/002571.png",
+        "label": "Pri",
+        "startSec": 15.0,
+        "tooltip": "Primal Rend  (GCD)  @  0:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36925,
+        "color": "#777777",
+        "endSec": 18.0,
+        "iconPath": "/i/002000/002050.png",
+        "label": "Pri",
+        "startSec": 17.5,
+        "tooltip": "Primal Ruination  (GCD)  @  0:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 20.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 20.0,
+        "tooltip": "Maim  (GCD)  @  0:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 45,
+        "color": "#777777",
+        "endSec": 23.0,
+        "iconPath": "/i/000000/000264.png",
+        "label": "Sto",
+        "startSec": 22.5,
+        "tooltip": "Storm's Eye  (GCD)  @  0:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 25.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 25.0,
+        "tooltip": "Heavy Swing  (GCD)  @  0:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 28.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 27.5,
+        "tooltip": "Maim  (GCD)  @  0:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 30.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 30.0,
+        "tooltip": "Storm's Path  (GCD)  @  0:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 33.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 32.5,
+        "tooltip": "Heavy Swing  (GCD)  @  0:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 35.0,
+        "tooltip": "Maim  (GCD)  @  0:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 35.5,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 35.0,
+        "tooltip": "Upheaval  (oGCD)  @  0:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 36.2,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 35.7,
+        "tooltip": "Onslaught  (oGCD)  @  0:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 38.0,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 37.5,
+        "tooltip": "Storm's Path  (GCD)  @  0:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 40.0,
+        "tooltip": "Fell Cleave  (GCD)  @  0:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 40.5,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 40.0,
+        "tooltip": "Infuriate  (oGCD)  @  0:40",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 43.0,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 42.5,
+        "tooltip": "Inner Chaos  (GCD)  @  0:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 45.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 45.0,
+        "tooltip": "Heavy Swing  (GCD)  @  0:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 48.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 47.5,
+        "tooltip": "Maim  (GCD)  @  0:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 45,
+        "color": "#777777",
+        "endSec": 50.5,
+        "iconPath": "/i/000000/000264.png",
+        "label": "Sto",
+        "startSec": 50.0,
+        "tooltip": "Storm's Eye  (GCD)  @  0:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 53.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 52.5,
+        "tooltip": "Heavy Swing  (GCD)  @  0:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 55.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 55.0,
+        "tooltip": "Maim  (GCD)  @  0:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 58.0,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 57.5,
+        "tooltip": "Storm's Path  (GCD)  @  0:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 60.0,
+        "tooltip": "Fell Cleave  (GCD)  @  1:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7389,
+        "color": "#777777",
+        "endSec": 60.5,
+        "iconPath": "/i/002000/002564.png",
+        "label": "Inn",
+        "startSec": 60.0,
+        "tooltip": "Inner Release  (oGCD)  @  1:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 63.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 62.5,
+        "tooltip": "Fell Cleave  (GCD)  @  1:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 65.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 65.0,
+        "tooltip": "Fell Cleave  (GCD)  @  1:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 65.5,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 65.0,
+        "tooltip": "Upheaval  (oGCD)  @  1:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 66.2,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 65.7,
+        "tooltip": "Onslaught  (oGCD)  @  1:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 68.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 67.5,
+        "tooltip": "Fell Cleave  (GCD)  @  1:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36924,
+        "color": "#777777",
+        "endSec": 68.0,
+        "iconPath": "/i/002000/002574.png",
+        "label": "Pri",
+        "startSec": 67.5,
+        "tooltip": "Primal Wrath  (oGCD)  @  1:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 68.7,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 68.2,
+        "tooltip": "Infuriate  (oGCD)  @  1:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25753,
+        "color": "#777777",
+        "endSec": 70.5,
+        "iconPath": "/i/002000/002571.png",
+        "label": "Pri",
+        "startSec": 70.0,
+        "tooltip": "Primal Rend  (GCD)  @  1:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36925,
+        "color": "#777777",
+        "endSec": 73.0,
+        "iconPath": "/i/002000/002050.png",
+        "label": "Pri",
+        "startSec": 72.5,
+        "tooltip": "Primal Ruination  (GCD)  @  1:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 75.5,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 75.0,
+        "tooltip": "Inner Chaos  (GCD)  @  1:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 78.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 77.5,
+        "tooltip": "Heavy Swing  (GCD)  @  1:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 80.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 80.0,
+        "tooltip": "Maim  (GCD)  @  1:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 45,
+        "color": "#777777",
+        "endSec": 83.0,
+        "iconPath": "/i/000000/000264.png",
+        "label": "Sto",
+        "startSec": 82.5,
+        "tooltip": "Storm's Eye  (GCD)  @  1:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 85.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 85.0,
+        "tooltip": "Heavy Swing  (GCD)  @  1:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 88.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 87.5,
+        "tooltip": "Maim  (GCD)  @  1:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 90.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 90.0,
+        "tooltip": "Storm's Path  (GCD)  @  1:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 93.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 92.5,
+        "tooltip": "Fell Cleave  (GCD)  @  1:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 95.0,
+        "tooltip": "Heavy Swing  (GCD)  @  1:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 95.5,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 95.0,
+        "tooltip": "Upheaval  (oGCD)  @  1:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 96.2,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 95.7,
+        "tooltip": "Onslaught  (oGCD)  @  1:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 98.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 97.5,
+        "tooltip": "Maim  (GCD)  @  1:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 100.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 100.0,
+        "tooltip": "Storm's Path  (GCD)  @  1:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 103.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 102.5,
+        "tooltip": "Heavy Swing  (GCD)  @  1:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 105.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 105.0,
+        "tooltip": "Maim  (GCD)  @  1:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 108.0,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 107.5,
+        "tooltip": "Storm's Path  (GCD)  @  1:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 110.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 110.0,
+        "tooltip": "Fell Cleave  (GCD)  @  1:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 113.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 112.5,
+        "tooltip": "Heavy Swing  (GCD)  @  1:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 113.0,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 112.5,
+        "tooltip": "Infuriate  (oGCD)  @  1:52",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 115.5,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 115.0,
+        "tooltip": "Inner Chaos  (GCD)  @  1:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 118.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 117.5,
+        "tooltip": "Maim  (GCD)  @  1:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 45,
+        "color": "#777777",
+        "endSec": 120.5,
+        "iconPath": "/i/000000/000264.png",
+        "label": "Sto",
+        "startSec": 120.0,
+        "tooltip": "Storm's Eye  (GCD)  @  2:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7389,
+        "color": "#777777",
+        "endSec": 120.5,
+        "iconPath": "/i/002000/002564.png",
+        "label": "Inn",
+        "startSec": 120.0,
+        "tooltip": "Inner Release  (oGCD)  @  2:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 123.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 122.5,
+        "tooltip": "Fell Cleave  (GCD)  @  2:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 125.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 125.0,
+        "tooltip": "Fell Cleave  (GCD)  @  2:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 125.5,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 125.0,
+        "tooltip": "Upheaval  (oGCD)  @  2:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 126.2,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 125.7,
+        "tooltip": "Onslaught  (oGCD)  @  2:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 128.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 127.5,
+        "tooltip": "Fell Cleave  (GCD)  @  2:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36924,
+        "color": "#777777",
+        "endSec": 128.0,
+        "iconPath": "/i/002000/002574.png",
+        "label": "Pri",
+        "startSec": 127.5,
+        "tooltip": "Primal Wrath  (oGCD)  @  2:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25753,
+        "color": "#777777",
+        "endSec": 130.5,
+        "iconPath": "/i/002000/002571.png",
+        "label": "Pri",
+        "startSec": 130.0,
+        "tooltip": "Primal Rend  (GCD)  @  2:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36925,
+        "color": "#777777",
+        "endSec": 133.0,
+        "iconPath": "/i/002000/002050.png",
+        "label": "Pri",
+        "startSec": 132.5,
+        "tooltip": "Primal Ruination  (GCD)  @  2:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 135.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 135.0,
+        "tooltip": "Heavy Swing  (GCD)  @  2:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 138.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 137.5,
+        "tooltip": "Maim  (GCD)  @  2:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 140.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 140.0,
+        "tooltip": "Storm's Path  (GCD)  @  2:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 143.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 142.5,
+        "tooltip": "Fell Cleave  (GCD)  @  2:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 145.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 145.0,
+        "tooltip": "Heavy Swing  (GCD)  @  2:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 148.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 147.5,
+        "tooltip": "Maim  (GCD)  @  2:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 148.0,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 147.5,
+        "tooltip": "Infuriate  (oGCD)  @  2:28",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 150.5,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 150.0,
+        "tooltip": "Inner Chaos  (GCD)  @  2:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 45,
+        "color": "#777777",
+        "endSec": 153.0,
+        "iconPath": "/i/000000/000264.png",
+        "label": "Sto",
+        "startSec": 152.5,
+        "tooltip": "Storm's Eye  (GCD)  @  2:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 155.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 155.0,
+        "tooltip": "Heavy Swing  (GCD)  @  2:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 155.5,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 155.0,
+        "tooltip": "Upheaval  (oGCD)  @  2:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 156.2,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 155.7,
+        "tooltip": "Onslaught  (oGCD)  @  2:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 158.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 157.5,
+        "tooltip": "Maim  (GCD)  @  2:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 160.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 160.0,
+        "tooltip": "Storm's Path  (GCD)  @  2:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 163.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 162.5,
+        "tooltip": "Fell Cleave  (GCD)  @  2:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 165.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 165.0,
+        "tooltip": "Heavy Swing  (GCD)  @  2:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 168.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 167.5,
+        "tooltip": "Maim  (GCD)  @  2:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 170.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 170.0,
+        "tooltip": "Storm's Path  (GCD)  @  2:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 173.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 172.5,
+        "tooltip": "Heavy Swing  (GCD)  @  2:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 175.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 175.0,
+        "tooltip": "Maim  (GCD)  @  2:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 178.0,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 177.5,
+        "tooltip": "Storm's Path  (GCD)  @  2:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 180.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 180.0,
+        "tooltip": "Fell Cleave  (GCD)  @  3:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7389,
+        "color": "#777777",
+        "endSec": 180.5,
+        "iconPath": "/i/002000/002564.png",
+        "label": "Inn",
+        "startSec": 180.0,
+        "tooltip": "Inner Release  (oGCD)  @  3:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 183.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 182.5,
+        "tooltip": "Fell Cleave  (GCD)  @  3:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 185.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 185.0,
+        "tooltip": "Fell Cleave  (GCD)  @  3:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 185.5,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 185.0,
+        "tooltip": "Infuriate  (oGCD)  @  3:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 186.2,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 185.7,
+        "tooltip": "Upheaval  (oGCD)  @  3:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 188.0,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 187.5,
+        "tooltip": "Inner Chaos  (GCD)  @  3:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 188.0,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 187.5,
+        "tooltip": "Onslaught  (oGCD)  @  3:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 190.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 190.0,
+        "tooltip": "Fell Cleave  (GCD)  @  3:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36924,
+        "color": "#777777",
+        "endSec": 190.5,
+        "iconPath": "/i/002000/002574.png",
+        "label": "Pri",
+        "startSec": 190.0,
+        "tooltip": "Primal Wrath  (oGCD)  @  3:10",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25753,
+        "color": "#777777",
+        "endSec": 193.0,
+        "iconPath": "/i/002000/002571.png",
+        "label": "Pri",
+        "startSec": 192.5,
+        "tooltip": "Primal Rend  (GCD)  @  3:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36925,
+        "color": "#777777",
+        "endSec": 195.5,
+        "iconPath": "/i/002000/002050.png",
+        "label": "Pri",
+        "startSec": 195.0,
+        "tooltip": "Primal Ruination  (GCD)  @  3:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 198.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 197.5,
+        "tooltip": "Heavy Swing  (GCD)  @  3:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 200.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 200.0,
+        "tooltip": "Maim  (GCD)  @  3:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 45,
+        "color": "#777777",
+        "endSec": 203.0,
+        "iconPath": "/i/000000/000264.png",
+        "label": "Sto",
+        "startSec": 202.5,
+        "tooltip": "Storm's Eye  (GCD)  @  3:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 205.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 205.0,
+        "tooltip": "Heavy Swing  (GCD)  @  3:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 208.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 207.5,
+        "tooltip": "Maim  (GCD)  @  3:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 210.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 210.0,
+        "tooltip": "Storm's Path  (GCD)  @  3:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 213.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 212.5,
+        "tooltip": "Fell Cleave  (GCD)  @  3:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 215.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 215.0,
+        "tooltip": "Heavy Swing  (GCD)  @  3:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 215.5,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 215.0,
+        "tooltip": "Onslaught  (oGCD)  @  3:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 216.2,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 215.7,
+        "tooltip": "Upheaval  (oGCD)  @  3:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 218.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 217.5,
+        "tooltip": "Maim  (GCD)  @  3:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 45,
+        "color": "#777777",
+        "endSec": 220.5,
+        "iconPath": "/i/000000/000264.png",
+        "label": "Sto",
+        "startSec": 220.0,
+        "tooltip": "Storm's Eye  (GCD)  @  3:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 223.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 222.5,
+        "tooltip": "Heavy Swing  (GCD)  @  3:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 225.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 225.0,
+        "tooltip": "Maim  (GCD)  @  3:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 228.0,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 227.5,
+        "tooltip": "Storm's Path  (GCD)  @  3:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 230.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 230.0,
+        "tooltip": "Fell Cleave  (GCD)  @  3:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 230.5,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 230.0,
+        "tooltip": "Infuriate  (oGCD)  @  3:50",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 233.0,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 232.5,
+        "tooltip": "Inner Chaos  (GCD)  @  3:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 235.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 235.0,
+        "tooltip": "Heavy Swing  (GCD)  @  3:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 238.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 237.5,
+        "tooltip": "Maim  (GCD)  @  3:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 240.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 240.0,
+        "tooltip": "Storm's Path  (GCD)  @  4:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7389,
+        "color": "#777777",
+        "endSec": 240.5,
+        "iconPath": "/i/002000/002564.png",
+        "label": "Inn",
+        "startSec": 240.0,
+        "tooltip": "Inner Release  (oGCD)  @  4:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 243.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 242.5,
+        "tooltip": "Fell Cleave  (GCD)  @  4:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 245.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 245.0,
+        "tooltip": "Fell Cleave  (GCD)  @  4:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 245.5,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 245.0,
+        "tooltip": "Onslaught  (oGCD)  @  4:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 246.2,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 245.7,
+        "tooltip": "Upheaval  (oGCD)  @  4:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 248.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 247.5,
+        "tooltip": "Fell Cleave  (GCD)  @  4:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36924,
+        "color": "#777777",
+        "endSec": 248.0,
+        "iconPath": "/i/002000/002574.png",
+        "label": "Pri",
+        "startSec": 247.5,
+        "tooltip": "Primal Wrath  (oGCD)  @  4:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25753,
+        "color": "#777777",
+        "endSec": 250.5,
+        "iconPath": "/i/002000/002571.png",
+        "label": "Pri",
+        "startSec": 250.0,
+        "tooltip": "Primal Rend  (GCD)  @  4:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36925,
+        "color": "#777777",
+        "endSec": 253.0,
+        "iconPath": "/i/002000/002050.png",
+        "label": "Pri",
+        "startSec": 252.5,
+        "tooltip": "Primal Ruination  (GCD)  @  4:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 255.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 255.0,
+        "tooltip": "Fell Cleave  (GCD)  @  4:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 258.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 257.5,
+        "tooltip": "Heavy Swing  (GCD)  @  4:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 258.0,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 257.5,
+        "tooltip": "Infuriate  (oGCD)  @  4:18",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 260.5,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 260.0,
+        "tooltip": "Inner Chaos  (GCD)  @  4:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 263.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 262.5,
+        "tooltip": "Maim  (GCD)  @  4:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 45,
+        "color": "#777777",
+        "endSec": 265.5,
+        "iconPath": "/i/000000/000264.png",
+        "label": "Sto",
+        "startSec": 265.0,
+        "tooltip": "Storm's Eye  (GCD)  @  4:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 268.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 267.5,
+        "tooltip": "Heavy Swing  (GCD)  @  4:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 270.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 270.0,
+        "tooltip": "Maim  (GCD)  @  4:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 273.0,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 272.5,
+        "tooltip": "Storm's Path  (GCD)  @  4:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 275.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 275.0,
+        "tooltip": "Fell Cleave  (GCD)  @  4:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 275.5,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 275.0,
+        "tooltip": "Onslaught  (oGCD)  @  4:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 276.2,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 275.7,
+        "tooltip": "Upheaval  (oGCD)  @  4:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 278.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 277.5,
+        "tooltip": "Heavy Swing  (GCD)  @  4:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 280.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 280.0,
+        "tooltip": "Maim  (GCD)  @  4:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 283.0,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 282.5,
+        "tooltip": "Storm's Path  (GCD)  @  4:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 285.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 285.0,
+        "tooltip": "Heavy Swing  (GCD)  @  4:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 288.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 287.5,
+        "tooltip": "Maim  (GCD)  @  4:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 45,
+        "color": "#777777",
+        "endSec": 290.5,
+        "iconPath": "/i/000000/000264.png",
+        "label": "Sto",
+        "startSec": 290.0,
+        "tooltip": "Storm's Eye  (GCD)  @  4:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 293.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 292.5,
+        "tooltip": "Fell Cleave  (GCD)  @  4:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 295.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 295.0,
+        "tooltip": "Heavy Swing  (GCD)  @  4:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 298.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 297.5,
+        "tooltip": "Maim  (GCD)  @  4:58",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 300.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 300.0,
+        "tooltip": "Storm's Path  (GCD)  @  5:00",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7389,
+        "color": "#777777",
+        "endSec": 300.5,
+        "iconPath": "/i/002000/002564.png",
+        "label": "Inn",
+        "startSec": 300.0,
+        "tooltip": "Inner Release  (oGCD)  @  5:00",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 303.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 302.5,
+        "tooltip": "Fell Cleave  (GCD)  @  5:02",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 305.5,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 305.0,
+        "tooltip": "Fell Cleave  (GCD)  @  5:05",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 305.5,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 305.0,
+        "tooltip": "Onslaught  (oGCD)  @  5:05",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 306.2,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 305.7,
+        "tooltip": "Upheaval  (oGCD)  @  5:06",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 308.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 307.5,
+        "tooltip": "Fell Cleave  (GCD)  @  5:08",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36924,
+        "color": "#777777",
+        "endSec": 308.0,
+        "iconPath": "/i/002000/002574.png",
+        "label": "Pri",
+        "startSec": 307.5,
+        "tooltip": "Primal Wrath  (oGCD)  @  5:08",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 25753,
+        "color": "#777777",
+        "endSec": 310.5,
+        "iconPath": "/i/002000/002571.png",
+        "label": "Pri",
+        "startSec": 310.0,
+        "tooltip": "Primal Rend  (GCD)  @  5:10",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 36925,
+        "color": "#777777",
+        "endSec": 313.0,
+        "iconPath": "/i/002000/002050.png",
+        "label": "Pri",
+        "startSec": 312.5,
+        "tooltip": "Primal Ruination  (GCD)  @  5:12",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 315.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 315.0,
+        "tooltip": "Heavy Swing  (GCD)  @  5:15",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 318.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 317.5,
+        "tooltip": "Maim  (GCD)  @  5:18",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 320.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 320.0,
+        "tooltip": "Storm's Path  (GCD)  @  5:20",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 323.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 322.5,
+        "tooltip": "Fell Cleave  (GCD)  @  5:22",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 323.0,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 322.5,
+        "tooltip": "Infuriate  (oGCD)  @  5:22",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 325.5,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 325.0,
+        "tooltip": "Inner Chaos  (GCD)  @  5:25",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 328.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 327.5,
+        "tooltip": "Heavy Swing  (GCD)  @  5:28",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 330.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 330.0,
+        "tooltip": "Maim  (GCD)  @  5:30",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 45,
+        "color": "#777777",
+        "endSec": 333.0,
+        "iconPath": "/i/000000/000264.png",
+        "label": "Sto",
+        "startSec": 332.5,
+        "tooltip": "Storm's Eye  (GCD)  @  5:32",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 335.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 335.0,
+        "tooltip": "Heavy Swing  (GCD)  @  5:35",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 7386,
+        "color": "#777777",
+        "endSec": 335.5,
+        "iconPath": "/i/002000/002561.png",
+        "label": "Ons",
+        "startSec": 335.0,
+        "tooltip": "Onslaught  (oGCD)  @  5:35",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 7387,
+        "color": "#777777",
+        "endSec": 336.2,
+        "iconPath": "/i/002000/002562.png",
+        "label": "Uph",
+        "startSec": 335.7,
+        "tooltip": "Upheaval  (oGCD)  @  5:36",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 338.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 337.5,
+        "tooltip": "Maim  (GCD)  @  5:38",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 340.5,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 340.0,
+        "tooltip": "Storm's Path  (GCD)  @  5:40",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 3549,
+        "color": "#777777",
+        "endSec": 343.0,
+        "iconPath": "/i/002000/002557.png",
+        "label": "Fel",
+        "startSec": 342.5,
+        "tooltip": "Fell Cleave  (GCD)  @  5:42",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 52,
+        "color": "#777777",
+        "endSec": 343.0,
+        "iconPath": "/i/002000/002555.png",
+        "label": "Inf",
+        "startSec": 342.5,
+        "tooltip": "Infuriate  (oGCD)  @  5:42",
+        "yOffset": -0.55
+      },
+      {
+        "abilityId": 16465,
+        "color": "#777777",
+        "endSec": 345.5,
+        "iconPath": "/i/002000/002568.png",
+        "label": "Inn",
+        "startSec": 345.0,
+        "tooltip": "Inner Chaos  (GCD)  @  5:45",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 348.0,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 347.5,
+        "tooltip": "Heavy Swing  (GCD)  @  5:48",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 350.5,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 350.0,
+        "tooltip": "Maim  (GCD)  @  5:50",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 42,
+        "color": "#777777",
+        "endSec": 353.0,
+        "iconPath": "/i/000000/000258.png",
+        "label": "Sto",
+        "startSec": 352.5,
+        "tooltip": "Storm's Path  (GCD)  @  5:52",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 31,
+        "color": "#777777",
+        "endSec": 355.5,
+        "iconPath": "/i/000000/000260.png",
+        "label": "Hea",
+        "startSec": 355.0,
+        "tooltip": "Heavy Swing  (GCD)  @  5:55",
+        "yOffset": 0.0
+      },
+      {
+        "abilityId": 37,
+        "color": "#777777",
+        "endSec": 358.0,
+        "iconPath": "/i/000000/000255.png",
+        "label": "Mai",
+        "startSec": 357.5,
+        "tooltip": "Maim  (GCD)  @  5:58",
+        "yOffset": 0.0
+      }
+    ],
+    "deliveredPotency": 126896.11,
+    "efficiencyPct": 98.39,
+    "fightDurationSec": 360.0,
+    "idealizedPotency": 128974.81,
+    "killTimeSec": 360,
+    "label": "You",
+    "tinctureWindows": []
+  }
+}

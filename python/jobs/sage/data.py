@@ -101,6 +101,13 @@ FIXED_RATE_GCDS: dict[int, float] = {
     EUKRASIA:            EUKRASIA_GCD_S,        # 1.0s setup GCD
     EUKRASIAN_DOSIS_III: EUKRASIAN_DOSIS_GCD_S,  # 1.5s DoT-application GCD
 }
+# The third consumer: JobData.gcd_recast_mult (clipping / downtime pacing).
+# Derived so the "single source of truth" claim above holds — without it the
+# 1.5s Eukrasian-Dosis gap sat exactly ON the idle filter's lower bound and
+# dragged the inferred effective GCD fast (~20 refreshes per fight).
+GCD_RECAST_MULT: dict[int, float] = {
+    aid: dur / 2.5 for aid, dur in FIXED_RATE_GCDS.items()
+}
 
 EUKRASIAN_DOSIS_DOT_DURATION_S: float = 30.0
 EUKRASIAN_DOSIS_DOT_TICK_S: float = 3.0
@@ -238,6 +245,11 @@ COSTED_HEAL_GCD_IDS: frozenset[int] = frozenset({
     EUKRASIAN_PROGNOSIS_II,
 })
 
+# Resurrection GCDs — the heal-lock rez pardon (jobs/_core/heal_locks): an
+# uptime Egeiro locks its own GCD(s) into the ceiling and opens a recovery
+# window for the costed heals that follow. Never in COSTED_HEAL_GCD_IDS.
+REZ_GCD_IDS: frozenset[int] = frozenset({EGEIRO})
+
 # --- Burst-alignment abilities ----------------------------------------------
 # SGE has no self damage-buff window; Phlegma III + Psyche are the high-potency casts
 # a good SGE aligns into the party's 2-minute raid windows.
@@ -279,6 +291,7 @@ JOB_DATA: JobData = JobData(
     splash_potencies=SPLASH_POTENCIES,
     aoe_potencies=AOE_POTENCIES,
     role_policy=CASTER_HEALER,
+    gcd_recast_mult=GCD_RECAST_MULT,
     filler_gcd_potency=380,
     # Tincture of Mind. ⚠️ Placeholder: effective BiS Mind incl. party bonus + food,
     # mirrored from the WHM/AST/SCH/RDM caster value; refine per tier via

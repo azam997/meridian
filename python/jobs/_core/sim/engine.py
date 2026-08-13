@@ -64,7 +64,8 @@ from jobs._core.tincture import TINCTURE_ACTION_ID
 # --- Engine-wide tuning (identical across every current job) ----------------
 
 WEAVE_DURATION_S = 0.7        # animation lockout per oGCD weave
-_MAX_ITERS = 6000            # belt-and-braces against simulator bugs (never binds)
+_MAX_ITERS = 6000            # belt-and-braces against simulator bugs — bounds the
+                             # greedy loop AND beam_search's outer slot loop
 
 # Local-search refinement (the "perfect" sim).
 _PERFECT_DELAY_OPTIONS: tuple[float, ...] = (2.5, 5.0, 7.5)
@@ -149,6 +150,8 @@ class RotationModel(Protocol):
     tincture_spec: object                        # tincture.TinctureSpec | None
 
     def init_state(self) -> SimStateBase: ...
+    def seed_run_state(self, state: SimStateBase) -> None: ...
+    def catch_up_run_state(self, state: SimStateBase) -> None: ...
     def prepull(self, state: SimStateBase, params) -> None: ...
     def gcd_slot(self, state: SimStateBase, params) -> tuple[int, float]: ...
     def pick_gcd(self, state: SimStateBase, params) -> int: ...
@@ -158,8 +161,10 @@ class RotationModel(Protocol):
     def pick_ogcd(self, state: SimStateBase, params) -> Optional[int]: ...
     def apply_cast(self, state: SimStateBase, ability_id: int) -> None: ...
     def weave_budget(self, state: SimStateBase, gcd_id: int, params) -> int: ...
-    def on_downtime_window(self, state: SimStateBase,
-                           win_start: float, win_end: float) -> None: ...
+    def weave_capacity(self, state: SimStateBase, gcd_id: int,
+                       gcd_duration: float, params) -> int: ...
+    def on_downtime_window(self, state: SimStateBase, win_start: float,
+                           win_end: float, params=None) -> None: ...
     def should_pot(self, state: SimStateBase, params) -> bool: ...
     def final_aux(self, state: SimStateBase) -> int: ...
     def sweep_params(self, extra_forbidden: tuple[tuple[int, float, float], ...]
@@ -214,6 +219,40 @@ class BaseRotationModel:
         obligations, not exact scripts."""
         return frozenset((ability_id,))
 
+    def seed_run_state(self, state: SimStateBase) -> None:
+        """Run-scoped bookkeeping that is NOT a cast effect: an accrual clock, a
+        measured budget, a proc schedule. Runs once after `fight_duration_s` /
+        `downtime_windows` are set and before `prepull`.
+
+        This exists because `sim.replay` reconstructs a player's state WITHOUT
+        calling `prepull` (the player's own pre-pull casts are their opener, so
+        replaying prepull too would double it). Bookkeeping seeded in `prepull`
+        is therefore missing from every replayed state, and the deep-advice
+        cascade reads its absence as loss — inventing sequencing cards for a
+        clean player. Put such state here and both paths agree; leave genuine
+        cast effects (an opener hardcast's gauge, a countdown charge spend) in
+        `prepull`, where skipping them is correct. No-op by default."""
+
+    def catch_up_run_state(self, state: SimStateBase) -> None:
+        """Walk TIME-based run-scoped bookkeeping forward to `state.t` — an
+        accrual clock, a scheduled proc. The sibling of `seed_run_state`: that
+        one plants the schedule, this one advances it.
+
+        Called ONLY by `sim.replay`, after every time advance — never by the
+        engine loop — so every shipped solver path stays byte-identical. It
+        exists because a job releases its accruals from a DECISION hook
+        (`pick_gcd` / `pick_ogcd` / `gcd_candidates`), and replay drives only
+        `advance_time` + `apply_cast`. Without this the replayed clock sits
+        frozen on its seed, the continuation opens with a lump release that
+        overcaps, and the deep-advice cascade reads the missing resource as the
+        player's loss.
+
+        MUST be idempotent — replay calls it repeatedly at the same `state.t`
+        (the natural `while due <= state.t` releaser already is). A job that
+        implements this AND opts into the replay-seeded ceiling leg
+        (`sim/seeded.py`) would move its own ceiling; no job does both today.
+        No-op by default."""
+
     def prepull(self, state: SimStateBase, params) -> None:
         """Pre-pull setup, run once before the loop. May set gauge/buff state,
         emit a pre-pull channel cast (append to `state.timeline` at a small
@@ -261,8 +300,34 @@ class BaseRotationModel:
     def weave_budget(self, state: SimStateBase, gcd_id: int, params) -> int:
         return self.timing.weave_budget(state, gcd_id, params)
 
-    def on_downtime_window(self, state: SimStateBase,
-                           win_start: float, win_end: float) -> None:
+    def weave_capacity(self, state: SimStateBase, gcd_id: int,
+                       gcd_duration: float, params) -> int:
+        """Physical weave capacity of THIS slot, from its length relative to the
+        job's standard GCD: a ~1.0s slot fits no weave (DNC steps, SGE Eukrasia,
+        NIN mudras), a ~1.5s slot exactly one (MCH Overheat, RPR Enshroud,
+        ninjutsu, Eukrasian Dosis, RDM enchanted melee, SMN Emerald), and a
+        standard slot the full swept budget. Ratio-based so neither the sub-GCD
+        sweep nor a haste window can flip a slot's class (1.482/2.47 ==
+        1.5/2.5). The engine min()s this with `weave_budget` — capacity is the
+        physical cap, the budget the swept preference. Capacity must never be
+        raised without FFLogs clip-proof (measured real-player weave patterns)."""
+        base = getattr(self.timing, "base_s", None) \
+            or getattr(self.timing, "gcd_recast_s", 0.0) or 0.0
+        if base <= 0.0 or gcd_duration >= base:
+            return params.max_weaves_per_gcd
+        r = gcd_duration / base
+        if r < 0.45:
+            return 0
+        if r < 0.80:
+            return 1
+        return params.max_weaves_per_gcd
+
+    def on_downtime_window(self, state: SimStateBase, win_start: float,
+                           win_end: float, params=None) -> None:
+        """Squeeze boundary actions into a boss-untargetable window. `params`
+        carries the run's SimParams so a hook that CASTS (BRD songs) can honor
+        `forbidden_windows` — without it a canonical-aligned hold was silently
+        violated inside downtime and the scenario's score wasn't reachable."""
         return None
 
     def should_pot(self, state: SimStateBase, params) -> bool:
@@ -407,6 +472,28 @@ def is_forbidden(ability_id: int, t: float,
     return False
 
 
+def next_allowed_time(ability_id: int, t: float,
+                      forbidden_windows: tuple[tuple[int, float, float], ...],
+                      ) -> float:
+    """Earliest time >= t at which `ability_id` may fire given `forbidden_windows`.
+
+    The inverse of `is_forbidden`, for schedule PREDICTION: a hold blocks the
+    cast but never advances `cd_ready`, so a picker predicting a held ability's
+    next cast from the cooldown alone believes it fires DURING the hold. Any
+    model gating on "how soon does X come back" must push the cooldown-ready
+    time through this (the GNB held-No-Mercy economy collapse: during a refine
+    hold `nm_next == t` read as "the window opens NOW" for the hold's whole
+    span). Chained windows are walked to a fixed point; empty windows -> `t`."""
+    moved = True
+    while moved:
+        moved = False
+        for fid, start, end in forbidden_windows:
+            if fid == ability_id and start <= t < end:
+                t = end
+                moved = True
+    return t
+
+
 # --- Locked-GCD windows (healer mit-plan integration) -------------------------
 # `model.locked_gcd_windows` (jobs/_core/heal_locks.LockedGcdWindow) are
 # count-in-window obligations: cast N of ability X inside [start_s, end_s).
@@ -461,6 +548,8 @@ def _forced_lock_pick(model: RotationModel, state: SimStateBase, params
         return None                      # nothing castable yet
     resolved = model.resolve_locked_gcd(state, first_open.ability_id)
     slot_s = model.gcd_duration(state, resolved, params)
+    if slot_s <= 0.0:
+        return None   # defensive: an id outside the timing table must not div/0
     required = 0
     for end_s, _s, i, lk in pending:
         required += lk.count - state.lock_done[i]
@@ -582,10 +671,20 @@ def _commit_gcd(model: RotationModel, state: SimStateBase, params: SimParamsBase
     state.last_gcd_t = state.t
     model.apply_cast(state, gcd_id)
 
-    budget = model.weave_budget(state, gcd_id, params)
+    budget = min(model.weave_budget(state, gcd_id, params),
+                 model.weave_capacity(state, gcd_id, gcd_duration, params))
     weaves_used = 0
     while weaves_used < budget:
-        if state.t + WEAVE_DURATION_S > weave_end - 0.1:
+        # -1e-9: the raw comparison is an EXACT float tie for a 1.5s slot
+        # (1.5 - 0.1 == 2 x 0.7), so whether the weave fit depended on the IEEE
+        # representation of `state.t`. The epsilon resolves every borderline
+        # case the same way — dropped (the physically conservative side).
+        if state.t + WEAVE_DURATION_S > weave_end - 0.1 - 1e-9:
+            break
+        # No weave starts after the kill: the scorers count every cast on the
+        # timeline, so an over-the-end oGCD would inflate the ceiling with a
+        # press no player gets to make.
+        if state.t >= state.fight_duration_s:
             break
         ogcd_id = model.pick_ogcd(state, params)
         if ogcd_id is None:
@@ -616,14 +715,18 @@ def commit_gcd_states(model: RotationModel, state: SimStateBase,
     root.last_gcd_t = root.t
     model.apply_cast(root, gcd_id)
     weave_end = root.t + gcd_duration
-    budget = model.weave_budget(root, gcd_id, params)
+    budget = min(model.weave_budget(root, gcd_id, params),
+                 model.weave_capacity(root, gcd_id, gcd_duration, params))
 
     done: list[SimStateBase] = []
     stack: list[tuple[SimStateBase, int, float]] = [(root, 0, weave_end)]
     while stack:
         st, used, wend = stack.pop()
         while True:
-            if used >= budget or st.t + WEAVE_DURATION_S > wend - 0.1:
+            # Same gate as `_commit_gcd`: epsilon-resolved borderline (dropped)
+            # + no weave starts after the kill.
+            if used >= budget or st.t + WEAVE_DURATION_S > wend - 0.1 - 1e-9 \
+                    or st.t >= st.fight_duration_s:
                 advance_time(model, st, wend)
                 done.append(st)
                 break
@@ -669,7 +772,7 @@ def _maybe_skip_downtime(model: RotationModel, state: SimStateBase,
     if win is not None:
         if model.locked_gcd_windows and params is not None:
             _satisfy_locks_in_downtime(model, state, params, win[0], win[1])
-        model.on_downtime_window(state, win[0], win[1])
+        model.on_downtime_window(state, win[0], win[1], params)
     advance_time(model, state, next_uptime(state.t, downtime))
     return True
 
@@ -687,6 +790,7 @@ def run_rotation(model: RotationModel, fight_duration_s: float,
     state.fight_duration_s = fight_duration_s
     state.downtime_windows = downtime
     _locks_init(model, state)
+    model.seed_run_state(state)
     model.prepull(state, params)
     return continue_rotation(model, state, fight_duration_s, downtime, params)
 
@@ -731,26 +835,61 @@ ScoreFn = Callable[[list[tuple[float, int]], int,
                     Optional[list[tuple[float, float, float]]]], float]
 
 
+def _mutable_inside(val) -> bool:
+    """One-level probe: does this container hold a mutable element?"""
+    items = val.values() if isinstance(val, dict) else val
+    return any(isinstance(v, (dict, list, set)) for v in items)
+
+
+# Per-STATE-CLASS clone plan: which fields need a container copy, and with
+# which copier. Built once per class from a live instance, then every clone is
+# copy.copy + a tight constructor loop — no per-clone isinstance sweep and no
+# deepcopy dispatch (which was ~half of every beam/one-shot's wall clock, the
+# NEXT_STEPS hot-path note). A field holding NESTED mutables gets deepcopy as
+# its copier, so a future dict-of-lists field can never alias across beam
+# branches (test_clone_state.py pins the flat-container invariant per job).
+# The engine-owned big three (timeline / downtime_windows / buff_intervals)
+# are handled explicitly in _clone_state.
+_CLONE_SKIP = ("timeline", "downtime_windows", "buff_intervals")
+_CLONE_PLANS: dict[type, tuple[int, tuple[tuple[str, object], ...]]] = {}
+
+
+def _build_clone_plan(state) -> tuple[int, tuple[tuple[str, object], ...]]:
+    plan: list[tuple[str, object]] = []
+    fields = vars(state)
+    for name, val in fields.items():
+        if name in _CLONE_SKIP:
+            continue
+        cls = val.__class__
+        if cls is dict:
+            plan.append((name, copy.deepcopy if _mutable_inside(val) else dict))
+        elif cls is list:
+            plan.append((name, copy.deepcopy if _mutable_inside(val) else list))
+        elif cls is set:
+            plan.append((name, copy.deepcopy if _mutable_inside(val) else set))
+        elif cls is tuple and _mutable_inside(val):
+            plan.append((name, copy.deepcopy))
+    return len(fields), tuple(plan)
+
+
 def _clone_state(state: SimStateBase) -> SimStateBase:
-    """Fast clone for beam search: deep-copy the (small) gauge/flag/cooldown state
-    but reference-copy the append-only timeline (its tuples are immutable) and
-    share the constant downtime list — so cloning stays O(state), not O(timeline),
-    even as the rotation grows."""
-    tl = state.timeline
-    dt = state.downtime_windows
-    bi = state.buff_intervals
-    state.timeline = []
-    state.downtime_windows = []
-    state.buff_intervals = []
-    try:
-        new = copy.deepcopy(state)
-    finally:
-        state.timeline = tl
-        state.downtime_windows = dt
-        state.buff_intervals = bi
-    new.timeline = list(tl)        # reference-copy (immutable tuples)
-    new.downtime_windows = dt      # constant — share
-    new.buff_intervals = bi        # constant — share
+    """Fast clone for beam search: shallow-copy the instance, re-copy the
+    mutable container fields via the cached per-class plan, reference-copy the
+    append-only timeline (its tuples are immutable) and share the constant
+    downtime/buff lists — O(state), not O(timeline). The plan is rebuilt if
+    the instance's field count changes (an attr added after the first clone)."""
+    cls = state.__class__
+    entry = _CLONE_PLANS.get(cls)
+    fields = vars(state)
+    if entry is None or entry[0] != len(fields):
+        entry = _build_clone_plan(state)
+        _CLONE_PLANS[cls] = entry
+    new = copy.copy(state)
+    for name, copier in entry[1]:
+        setattr(new, name, copier(fields[name]))
+    new.timeline = list(state.timeline)             # append-only, immutable tuples
+    new.downtime_windows = state.downtime_windows   # constant — share
+    new.buff_intervals = state.buff_intervals       # constant — share
     return new
 
 
@@ -760,6 +899,8 @@ def beam_search(model: RotationModel, score_fn: "ScoreFn",
                 params: SimParamsBase,
                 width: int,
                 buff_intervals: list[tuple[float, float, float]] | None = None,
+                *,
+                roots: list[SimStateBase] | None = None,
                 ) -> tuple[list[tuple[float, int]], int]:
     """GCD-perfect rotation search: explore the GCD decision tree keeping the
     top-`width` partial rotations and returning the highest *true*-scoring one.
@@ -770,25 +911,42 @@ def beam_search(model: RotationModel, score_fn: "ScoreFn",
     Pruning (top-K) uses `model.beam_prune` (default = the exact score); a job with
     a delayed reward overrides it to keep investing lines alive. The *final* pick
     always uses the exact `score_fn`. `buff_intervals` threads the raid-buff overlay
-    into both."""
+    into both.
+
+    `roots` seeds the beam from pre-built mid-fight states (e.g. replay-prefix
+    states for the demonstrated-line ceiling leg) instead of init+prepull. Roots
+    are CONSUMED (mutated in place — pass clones) and must share one clock:
+    `beam_prune` ranks accumulated score, so roots at different times are
+    prune-unfair against each other. Lock-bearing jobs cannot use the seam
+    (seeded roots skip `_locks_init`)."""
     downtime = downtime_windows or []
-    root = model.init_state()
-    root.fight_duration_s = fight_duration_s
-    root.downtime_windows = downtime
-    # Expose the raid-buff overlay on the state so a model's *picker* can see it
-    # (e.g. MCH banks Queen battery toward a buff window). Cloned beams inherit it
-    # (`_clone_state`). Pickers that ignore it stay byte-identical; the agnostic
-    # beam (`buff_intervals is None`) leaves it the empty default.
-    root.buff_intervals = buff_intervals or []
-    _locks_init(model, root)
-    model.prepull(root, params)
+    if roots is None:
+        root = model.init_state()
+        root.fight_duration_s = fight_duration_s
+        root.downtime_windows = downtime
+        # Expose the raid-buff overlay on the state so a model's *picker* can see it
+        # (e.g. MCH banks Queen battery toward a buff window). Cloned beams inherit it
+        # (`_clone_state`). Pickers that ignore it stay byte-identical; the agnostic
+        # beam (`buff_intervals is None`) leaves it the empty default.
+        root.buff_intervals = buff_intervals or []
+        _locks_init(model, root)
+        model.seed_run_state(root)
+        model.prepull(root, params)
+        roots = [root]
+    else:
+        assert not model.locked_gcd_windows, \
+            "seeded beam roots skip _locks_init — unsupported on a locked model"
+        for r in roots:
+            r.fight_duration_s = fight_duration_s
+            r.downtime_windows = downtime
+            r.buff_intervals = buff_intervals or []
     locks = bool(model.locked_gcd_windows)
 
     def _prune(st: SimStateBase) -> float:
         return model.beam_prune(st, score_fn, buff_intervals)
 
     # Each beam carries its state + its prune score (the top-K key).
-    beams: list[tuple[SimStateBase, float]] = [(root, _prune(root))]
+    beams: list[tuple[SimStateBase, float]] = [(r, _prune(r)) for r in roots]
     iters = 0
     while iters < _MAX_ITERS:
         iters += 1

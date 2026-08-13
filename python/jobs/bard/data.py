@@ -62,6 +62,7 @@ STORMBITE        = 7407    # 100 + DoT 25/3s, 45s; 35% Hawk's Eye
 IRON_JAWS        = 3560    # 100; refreshes both DoTs (re-snapshots buffs); 35% HE
 APEX_ARROW       = 16496   # ≤700 (scales with Soul Voice; ≥80 gauge grants Blast Arrow Ready)
 BLAST_ARROW      = 25784   # 700; needs Blast Arrow Ready
+BLAST_READY_S: float = 10.0   # Blast Arrow Ready duration (the follow-up window)
 RESONANT_ARROW   = 36976   # 640; needs Resonant Arrow Ready (Barrage, 30s)
 RADIANT_ENCORE   = 36977   # 1100/800/700 by Coda (see ENCORE_POTENCY_BY_CODA)
 # AoE line (not present in single-target logs; ⚠️ XIVAPI ids)

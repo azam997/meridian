@@ -253,7 +253,10 @@ COEURL_FURY_SPENDERS: dict[int, int]   = {POUNCING_COEURL: 1}
 # Star runs its own 4s slot (2.0x) and Forbidden Meditation a 1s GCD-linked
 # recast (0.5x). The idle/clip detector scales the run's standard effective GCD
 # by these so an SSS gap isn't read as idle and a Meditation chain isn't read as
-# clipping.
+# clipping. NOTE: Meditation's real recast is a FIXED 1.00s (speed-immune — the
+# simulator models it flat via MEDITATION_GCD_S); 0.5x of a hasted base drifts
+# a few percent with Skill Speed, an accepted approximation on the detector
+# side only.
 GCD_RECAST_MULT: dict[int, float] = {
     SIX_SIDED_STAR: 2.0,
     FORBIDDEN_MEDITATION: 0.5,

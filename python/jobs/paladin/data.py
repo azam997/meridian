@@ -51,8 +51,9 @@ HOLY_CIRCLE       = 16458   # AoE Holy Spirit (the Divine Might free instant)
 ATONEMENT         = 16460
 SUPPLICATION      = 36918
 SEPULCHRE         = 36919
-# Goring Blade — burst GCD. ⚠️ gating (Royal-Authority-granted vs recast) unclear;
-# modeled here as a 60s-recast GCD (~one per Fight or Flight). Verify live.
+# Goring Blade — burst GCD, a PROC: Goring Blade Ready is granted by Fight or
+# Flight (the simulator's goring_ready flag), ~one per FoF window. A weaponskill,
+# so it breaks the physical combo (the sim defers it to a combo boundary).
 GORING_BLADE      = 3538
 # Ranged magical
 HOLY_SPIRIT       = 7384    # instant under Divine Might / Requiescat (only form modeled)

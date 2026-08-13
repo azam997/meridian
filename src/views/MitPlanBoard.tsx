@@ -8,8 +8,45 @@ import { jobColor, jobIcon } from '../components/jobs';
 import { fmtClock } from '../format';
 import { KIND_LABEL, SCHOOL_LABEL, fmtK, roleLine } from './mitPlanShared';
 import type {
-  MitAssignment, MitMechanic, MitPlanResult, RoleAmounts,
+  MitAssignment, MitLibraryAction, MitLibraryHealOption, MitMechanic,
+  MitPlanResult, RoleAmounts,
 } from '../sidecar/contract';
+
+/** What a drag carries through dataTransfer: a palette chip (no `from`), or a
+ *  placed bar being MOVED (`from` = its current mechanic id). */
+type DragPayload = { slot: string; job: string; actionId: number; from?: string };
+
+/** A healer slot's authorable AoE GCD heals (the detail card's incrementer). */
+type HealerHealOptions = {
+  slot: string;
+  job: string;
+  options: (MitLibraryHealOption & { iconPath?: string })[];
+};
+type DraftHealRow = { job: string; actionId: number; count: number };
+
+/** Edit-mode callbacks/state — all optional, `{result}`-only callers are the
+ *  read-only board unchanged. */
+type EditProps = {
+  editable?: boolean;
+  /** The chip/bar currently being dragged (drop strips render only then). */
+  dragAction?: { slot: string; job: string; action: MitLibraryAction } | null;
+  /** Row indexes where that chip cannot land (cooldown/pool/hpSet preview). */
+  blockedRows?: Set<number>;
+  /** A drop landed on a row — a placement, or a move when payload.from set. */
+  onDropAction?: (mechanicId: string, payload: DragPayload) => void;
+  onRemove?: (mechanicId: string, job: string, actionId: number) => void;
+  /** A placed bar started/finished dragging (the parent mirrors this into its
+   *  dragAction state so the strips + availability preview light up). */
+  onCastDragStart?: (from: string, slot: string, job: string,
+                     actionId: number) => void;
+  onCastDragEnd?: () => void;
+  /** The healers' authorable AoE GCD heals + the current heal draft — the
+   *  detail card renders a per-gap +/- incrementer from these. */
+  healOptions?: HealerHealOptions[];
+  healDraft?: Record<string, DraftHealRow[]>;
+  onHealDelta?: (mechanicId: string, job: string, actionId: number,
+                 delta: number) => void;
+};
 
 /** Row-per-mechanic vertical plan board: compact icon-first mechanic rows on
  *  the left, one column per party slot on the right, every planned cast drawn
@@ -45,6 +82,11 @@ type BoardCast = {
   shieldAmount: number;
   /** Row indexes (into the mechanics array) this cast covers. */
   rows: number[];
+  /** The row whose mechanic OWNS the cast (its non-carryover copy). NOT
+   *  always rows[0]: a cast's duration can blanket an EARLIER mechanic (a
+   *  bleed ticking through the lead window), and move/remove must target the
+   *  owner or the draft entry is missed and the cast duplicates. */
+  ownerRow: number;
   coveredNames: string[];
   lane: number;
 };
@@ -66,7 +108,8 @@ function deriveCasts(result: MitPlanResult): {
           key, slot: a.slot, job: a.job, actionId: a.actionId, name: a.name,
           castAtSec: a.castAtSec, durationSec: a.durationSec,
           isSuggestion: a.isSuggestion, isGcd: a.isGcd,
-          mitPct: 0, shieldAmount: 0, rows: [], coveredNames: [], lane: 0,
+          mitPct: 0, shieldAmount: 0, rows: [], ownerRow: row,
+          coveredNames: [], lane: 0,
         };
         byKey.set(key, c);
       }
@@ -74,6 +117,7 @@ function deriveCasts(result: MitPlanResult): {
         c.mitPct = a.mitPct;
         c.shieldAmount = a.shieldAmount;
         c.isSuggestion = a.isSuggestion;
+        c.ownerRow = row;
       }
       if (!c.rows.includes(row)) {
         c.rows.push(row);
@@ -141,7 +185,19 @@ const HpBar = ({ label, hp, max }: { label: string; hp: number; max: number }) =
   );
 };
 
-export const MechanicDetail = ({ m, result }: { m: MitMechanic; result: MitPlanResult }) => {
+export const MechanicDetail = ({ m, result, onRemove, healOptions, healDraft,
+                                 onHealDelta }: {
+  m: MitMechanic; result: MitPlanResult;
+  /** Edit mode: render a remove control on user-placed (non-carryover,
+   *  non-suggestion) assignment chips. */
+  onRemove?: (mechanicId: string, job: string, actionId: number) => void;
+  /** Edit mode: the per-gap GCD-heal incrementer (heals are plan content —
+   *  authored here, never auto-inserted for a user plan). */
+  healOptions?: HealerHealOptions[];
+  healDraft?: Record<string, DraftHealRow[]>;
+  onHealDelta?: (mechanicId: string, job: string, actionId: number,
+                 delta: number) => void;
+}) => {
   const hasRole = (r: keyof RoleAmounts) => (m.unmitigated[r] ?? 0) > 0;
   return (
     <div className={`mp-card ${m.status}`}>
@@ -192,6 +248,18 @@ export const MechanicDetail = ({ m, result }: { m: MitMechanic; result: MitPlanR
                 <span className="mp-chip-slot">{a.slot}</span>
                 {a.name}
                 {extras.length > 0 && <span className="mp-chip-x mut">{extras[0]}</span>}
+                {onRemove && !a.isCarryover && !a.isSuggestion && (
+                  <button
+                    className="mp-chip-rm"
+                    title={`Remove ${a.name} from this mechanic`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onRemove(m.id, a.job, a.actionId);
+                    }}
+                  >
+                    ×
+                  </button>
+                )}
               </span>
             );
           })}
@@ -208,6 +276,59 @@ export const MechanicDetail = ({ m, result }: { m: MitMechanic; result: MitPlanR
           ))}
         </div>
       )}
+      {onHealDelta && healOptions && healOptions.length > 0
+        && m.kind !== 'hpSet' && (
+        <div className="mp-heals-edit">
+          <span className="mp-heals-lbl">Healing GCDs before this hit</span>
+          <div className="mp-heal-ctls">
+            {healOptions.map((h) => h.options.map((o) => {
+              const count = healDraft?.[m.id]?.find(
+                (x) => x.job === h.job && x.actionId === o.actionId)?.count ?? 0;
+              return (
+                <span key={`${h.slot}|${o.actionId}`}
+                      className={'mp-heal-ctl' + (count > 0 ? ' on' : '')}
+                      title={`${o.name} (${h.slot} ${h.job})`
+                        + (o.target === 'single' ? ' · heals the tank only' : '')
+                        + (o.gcdCostPotency > 0
+                          ? ` · costs ~${Math.round(o.gcdCostPotency)} potency per cast`
+                          : ' · free (resource-gated)')}>
+                  <AbilityIcon kind="gcd1" glyph={o.name}
+                               name={result.abilityMeta[o.actionId]?.name ?? o.name}
+                               iconPath={result.abilityMeta[o.actionId]?.iconPath
+                                 ?? o.iconPath}
+                               size={16} />
+                  <span className="mp-heal-name">{o.name}</span>
+                  <span className="mp-chip-slot">{h.slot}</span>
+                  {o.target === 'single' && (
+                    <span className="mp-heal-tgt">tank</span>
+                  )}
+                  <button
+                    className="mp-heal-btn"
+                    disabled={count === 0}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onHealDelta(m.id, h.job, o.actionId, -1);
+                    }}
+                  >
+                    −
+                  </button>
+                  <span className="mp-heal-n">{count}</span>
+                  <button
+                    className="mp-heal-btn"
+                    disabled={count >= 8}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onHealDelta(m.id, h.job, o.actionId, 1);
+                    }}
+                  >
+                    +
+                  </button>
+                </span>
+              );
+            }))}
+          </div>
+        </div>
+      )}
       <div className="mp-card-foot">
         <div className="mp-hp-row">
           {hasRole('tank') && <HpBar label="T" hp={m.hpAfter.tank} max={result.roleHp.tank} />}
@@ -222,10 +343,15 @@ export const MechanicDetail = ({ m, result }: { m: MitMechanic; result: MitPlanR
 
 // --- The board ----------------------------------------------------------------
 
-export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
+export const MitPlanBoard = ({
+  result, editable, dragAction, blockedRows, onDropAction, onRemove,
+  onCastDragStart, onCastDragEnd, healOptions, healDraft, onHealDelta,
+}: { result: MitPlanResult } & EditProps) => {
   const [selected, setSelected] = useState<string | null>(null);
   const [hoverRow, setHoverRow] = useState<number | null>(null);
   const [hoverCast, setHoverCast] = useState<string | null>(null);
+  // Drop-strip highlight while a palette chip drags over a row.
+  const [overRow, setOverRow] = useState<number | null>(null);
   // Measured height of the inline detail card, so every row/bar below the
   // expanded row shifts down by exactly the space the card needs.
   const [panelH, setPanelH] = useState(0);
@@ -233,6 +359,25 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
 
   const { casts, lanesBySlot, chips } = useMemo(() => deriveCasts(result), [result]);
   const mechanics = result.mechanics;
+
+  // Edit mode: EVERY row's detail card is open, hosted inline in a widened
+  // mechanic column. The bars/strips to the right position through the same
+  // cumulative-offset geometry, so a spanning bar stretches across the card
+  // zones and drop strips stay row-sized.
+  const allOpen = !!editable;
+  const CARD_EST = 150;
+  const [cardHs, setCardHs] = useState<number[]>([]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  useLayoutEffect(() => {
+    if (!allOpen) return;
+    const hs = mechanics.map((_, i) => cardRefs.current[i]?.offsetHeight ?? 0);
+    setCardHs((prev) =>
+      prev.length === hs.length && prev.every((v, i) => v === hs[i])
+        ? prev : hs);
+    // Heights change with card content: a new result, or heal-incrementer
+    // edits re-wrapping the controls. The identity check guarantees
+    // convergence (measure → same heights → no state change).
+  }, [allOpen, mechanics, healDraft, result]);
 
   const expandedIdx = useMemo(
     () => (selected == null ? -1 : mechanics.findIndex((m) => m.id === selected)),
@@ -243,12 +388,26 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
       ? panelRef.current.offsetHeight + 14
       : 0;
     setPanelH((prev) => (prev === h ? prev : h));
-  }, [expandedIdx, selected, result]);
+    // healDraft: the edit card's heal incrementer content changes height
+    // without a new result — re-measure or the rows below drift/overlap.
+  }, [expandedIdx, selected, result, healDraft]);
 
-  const gap = expandedIdx >= 0 ? panelH : 0;
+  const gap = expandedIdx >= 0 && !allOpen ? panelH : 0;
+  // Prefix sums of the inline card heights (all-open mode): cum[r] = total
+  // card height above row r.
+  const cum = useMemo(() => {
+    const out = [0];
+    for (let i = 0; i < mechanics.length; i++) {
+      out.push(out[i] + (allOpen ? (cardHs[i] ?? CARD_EST) : 0));
+    }
+    return out;
+  }, [mechanics.length, cardHs, allOpen]);
   const yOf = (row: number) =>
-    row * ROW_H + (expandedIdx >= 0 && row > expandedIdx ? gap : 0);
-  const bodyH = mechanics.length * ROW_H + gap;
+    row * ROW_H + (allOpen
+      ? cum[row]
+      : (expandedIdx >= 0 && row > expandedIdx ? gap : 0));
+  const bodyH = mechanics.length * ROW_H
+    + (allOpen ? cum[mechanics.length] : gap);
 
   const litRows = useMemo(() => {
     if (hoverCast == null) return new Set<number>();
@@ -264,7 +423,7 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
   const selectedMech = expandedIdx >= 0 ? mechanics[expandedIdx] : null;
 
   return (
-    <div className="mpb">
+    <div className={'mpb' + (allOpen ? ' edit' : '')}>
       <div className="mpb-scroll">
         {/* header */}
         <div className="mpb-head" style={{ height: 40 }}>
@@ -285,10 +444,12 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
           })}
         </div>
         <div className="mpb-body" style={{ height: bodyH }}>
-          {/* row separators + hover wash (span the full board width) */}
+          {/* row separators + hover wash (span the full board width). In
+              all-open mode the separator sits BELOW each row's inline card
+              (just before the next row). */}
           {mechanics.map((_, r) => (
             <div key={`ln${r}`} className="mpb-line"
-                 style={{ top: yOf(r) + ROW_H - 1 }} />
+                 style={{ top: (allOpen ? yOf(r + 1) : yOf(r) + ROW_H) - 1 }} />
           ))}
           {hoverRow != null && (
             <div className="mpb-rowlight"
@@ -314,7 +475,8 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
                     style={{ height: ROW_H }}
                     onMouseEnter={() => setHoverRow(i)}
                     onMouseLeave={() => setHoverRow(null)}
-                    onClick={() => setSelected(selected === m.id ? null : m.id)}
+                    onClick={allOpen ? undefined
+                      : () => setSelected(selected === m.id ? null : m.id)}
                   >
                     <span className="mpb-row-time">{fmtClock(m.timeSec)}</span>
                     {meta?.iconPath && m.kind !== 'hpSet' ? (
@@ -329,11 +491,58 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
                     {m.kind === 'hpSet' && (
                       <span className="mpb-row-note mut">→ 1 HP</span>
                     )}
+                    {editable && m.kind !== 'hpSet' && (() => {
+                      // Live damage readout for the editor: the most-hit
+                      // role's per-person damage, shrinking as mit lands.
+                      // Explicitly labeled — a single HP number was tried
+                      // and hides the per-class HP differences; an unlabeled
+                      // pair read like an HP before/after.
+                      const role = (['tank', 'healer', 'dps'] as const).reduce(
+                        (b, r) => (m.unmitigated[r] > m.unmitigated[b] ? r : b),
+                        'tank' as 'tank' | 'healer' | 'dps');
+                      const unmit = m.unmitigated[role];
+                      const planned = m.predicted[role];
+                      const reduced = fmtK(planned) !== fmtK(unmit);
+                      return (
+                        <span
+                          className="mpb-row-dmg"
+                          title={'Damage dealt per person '
+                            + '(unmitigated → with your mitigation):\n'
+                            + `Unmitigated ${roleLine(m.unmitigated)}\n`
+                            + `Planned ${roleLine(m.predicted)}\n`
+                            + 'HP after this hit: '
+                            + `T ${fmtK(m.hpAfter.tank)} · H ${fmtK(m.hpAfter.healer)}`
+                            + ` · D ${fmtK(m.hpAfter.dps)}`}
+                        >
+                          {reduced ? (
+                            <>
+                              <span className="mpb-row-dmg-was">{fmtK(unmit)}</span>
+                              <span className="mpb-row-dmg-sep">→</span>
+                              {fmtK(planned)}
+                            </>
+                          ) : fmtK(unmit)}
+                          <span className="mpb-row-dmg-lbl">damage dealt</span>
+                        </span>
+                      );
+                    })()}
                     <span className={`mpb-dot ${m.status}`}
                           title={`${m.status}${m.kind !== 'hpSet'
                             ? ` — planned ${roleLine(m.predicted)}` : ''}`} />
                   </div>
-                  {i === expandedIdx && <div style={{ height: gap }} />}
+                  {allOpen ? (
+                    <div
+                      className="mpb-inline-card"
+                      ref={(el) => { cardRefs.current[i] = el; }}
+                    >
+                      <MechanicDetail m={m} result={result}
+                                      onRemove={onRemove}
+                                      healOptions={healOptions}
+                                      healDraft={healDraft}
+                                      onHealDelta={onHealDelta} />
+                    </div>
+                  ) : (
+                    i === expandedIdx && <div style={{ height: gap }} />
+                  )}
                 </div>
               );
             })}
@@ -349,13 +558,16 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
                   yOf(c.rows[c.rows.length - 1]) - yOf(c.rows[0]) + ROW_H - 8;
                 const lit = hoverCast === c.key
                   || (hoverRow != null && c.rows.includes(hoverRow));
+                const movable = !!editable && !c.isSuggestion
+                  && !!onCastDragStart;
                 return (
                   <div
                     key={c.key}
                     className={
                       'mpb-bar' +
                       (c.isGcd ? ' gcd' : '') +
-                      (lit ? ' lit' : '')
+                      (lit ? ' lit' : '') +
+                      (movable ? ' movable' : '')
                     }
                     style={{
                       top,
@@ -366,6 +578,18 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
                       borderColor: jobColor(c.job),
                     }}
                     title={castTip(c)}
+                    draggable={movable}
+                    onDragStart={movable ? (e) => {
+                      // Owner mechanic, NOT rows[0] — a bar can visually start
+                      // on an earlier mechanic it merely blankets (carryover).
+                      const from = mechanics[c.ownerRow].id;
+                      e.dataTransfer.setData('text/plain', JSON.stringify({
+                        slot: c.slot, job: c.job, actionId: c.actionId, from,
+                      }));
+                      e.dataTransfer.effectAllowed = 'move';
+                      onCastDragStart!(from, c.slot, c.job, c.actionId);
+                    } : undefined}
+                    onDragEnd={movable ? () => onCastDragEnd?.() : undefined}
                     onMouseEnter={() => setHoverCast(c.key)}
                     onMouseLeave={() => setHoverCast(null)}
                   >
@@ -376,6 +600,18 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
                       iconPath={result.abilityMeta[c.actionId]?.iconPath}
                       size={BAR_W - 4}
                     />
+                    {editable && onRemove && !c.isSuggestion && (
+                      <button
+                        className="mpb-bar-rm"
+                        title={`Remove ${c.name}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onRemove(mechanics[c.ownerRow].id, c.job, c.actionId);
+                        }}
+                      >
+                        ×
+                      </button>
+                    )}
                   </div>
                 );
               })}
@@ -399,11 +635,53 @@ export const MitPlanBoard = ({ result }: { result: MitPlanResult }) => {
               </div>
             </div>
           ))}
-          {/* the inline detail card, directly under the clicked row */}
-          {selectedMech && (
+          {/* drop strips: rendered only during an active palette drag, one per
+              row via yOf() (they follow the expanded-row gap and need no
+              pointer math — element hit-testing dodges the root-zoom trap).
+              z-index above the columns and the sticky mechanic column so a
+              drop lands anywhere on the row; below the inline detail (5). */}
+          {editable && dragAction && mechanics.map((m, r) => {
+            const blocked = blockedRows?.has(r) ?? m.kind === 'hpSet';
+            return (
+              <div
+                key={`dz${r}`}
+                className={'mpb-droprow' + (blocked ? ' blocked' : '')
+                  + (overRow === r && !blocked ? ' on' : '')}
+                style={{ top: yOf(r), height: ROW_H }}
+                onDragOver={(e) => {
+                  if (blocked) return;
+                  e.preventDefault();
+                  e.dataTransfer.dropEffect = 'copy';
+                }}
+                onDragEnter={() => setOverRow(r)}
+                onDragLeave={() => setOverRow((o) => (o === r ? null : o))}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  setOverRow(null);
+                  if (blocked) return;
+                  try {
+                    const p = JSON.parse(
+                      e.dataTransfer.getData('text/plain')) as DragPayload;
+                    if (p && typeof p.actionId === 'number' && p.job) {
+                      onDropAction?.(m.id, p);
+                    }
+                  } catch {
+                    /* not a palette chip — ignore */
+                  }
+                }}
+              />
+            );
+          })}
+          {/* the inline detail card, directly under the clicked row
+              (read-only mode; edit mode hosts every card in the column) */}
+          {!allOpen && selectedMech && (
             <div ref={panelRef} className="mpb-inline-detail"
                  style={{ top: yOf(expandedIdx) + ROW_H + 6 }}>
-              <MechanicDetail m={selectedMech} result={result} />
+              <MechanicDetail m={selectedMech} result={result}
+                              onRemove={editable ? onRemove : undefined}
+                              healOptions={editable ? healOptions : undefined}
+                              healDraft={healDraft}
+                              onHealDelta={editable ? onHealDelta : undefined} />
             </div>
           )}
         </div>

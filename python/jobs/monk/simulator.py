@@ -155,11 +155,12 @@ class MonkCtx:
     `tfc_budget` is the player's The Forbidden Chakra cast count: chakra
     generation is crit-RNG + party-fed (invisible to the cast stream), so the
     ceiling spends the SAME chakra the player actually got and below-average
-    luck never costs efficiency (the DNC budget pattern)."""
+    luck never costs efficiency (the DNC budget pattern). A budget of 0 is
+    DATA (the player cast none — the ceiling gets none), never "absent": a
+    truthiness collapse here once routed 0-TFC players onto the rate-based
+    default (~50 TFC on a 600s fight, a ~20k-potency ceiling swing between
+    two adjacent inputs)."""
     tfc_budget: int = 0
-
-    def __bool__(self) -> bool:
-        return self.tfc_budget > 0
 
 
 @dataclass(frozen=True)
@@ -225,6 +226,13 @@ class MonkRotationModel(engine.BaseRotationModel):
                           BROTHERHOOD: 0.0}
         return state
 
+    def seed_run_state(self, state: SimState) -> None:
+        # The measured chakra budget is run-scoped bookkeeping, not a cast
+        # effect, so it seeds here rather than in `prepull` — a replayed state
+        # (deep-advice cascade) skips prepull, and a zero budget there makes the
+        # continuation cast no Forbidden Chakra at all.
+        state.tfc_total = state.tfc_left = self.ctx.tfc_budget
+
     def prepull(self, state: SimState, params) -> None:
         # The measured opener: Form Shift + Meditation x5 during the countdown
         # (the pot lands in the first weave via the engine's `_maybe_pot`), then
@@ -232,9 +240,10 @@ class MonkRotationModel(engine.BaseRotationModel):
         # emitted in the pre-zone (the delivered side reconstructs the player's
         # via `prepull_buff_ids`); the pre-pull chakra is already inside the
         # measured TFC budget.
-        state.tfc_total = state.tfc_left = self.ctx.tfc_budget
         state.timeline.append((-1.5, FORM_SHIFT))
-        state.formless_end = md.FORMLESS_DURATION_S
+        # The 30s buff runs from the -1.5s press (28.5, not 30.0 — kept exact,
+        # though formless is always consumed on the first GCD regardless).
+        state.formless_end = -1.5 + md.FORMLESS_DURATION_S
         state.t = md.JOB_DATA.role_policy.engage_delay_s
 
     # --- GCD timing ----------------------------------------------------------
@@ -541,8 +550,8 @@ class MonkRotationModel(engine.BaseRotationModel):
 
     # --- Downtime ------------------------------------------------------------
 
-    def on_downtime_window(self, state: SimState,
-                           win_start: float, win_end: float) -> None:
+    def on_downtime_window(self, state: SimState, win_start: float,
+                           win_end: float, params=None) -> None:
         """MNK's downtime moves: Forbidden Meditation pumps chakra through the
         window (its yield is already inside the measured TFC budget, so the 1s
         GCDs are emitted for timeline realism only — matching the observed x5)
@@ -616,10 +625,17 @@ def _default_ctx(duration_s: float) -> MonkCtx:
     return MonkCtx(tfc_budget=max(0, int(duration_s / _DEFAULT_TFC_RATE_S)))
 
 
-def _model_for(sim_context, duration_s: float) -> MonkRotationModel:
+def _model_for(duration_s: float, sim_context) -> MonkRotationModel:
     """Build the model bound to this run's per-pull context: a per-player
     effective GCD (CeilingContext) and/or the measured chakra budget (MonkCtx).
-    `None` -> the default model (rate-based budget)."""
+    `None` -> the default model (rate-based budget).
+
+    Argument order is `(duration, context)` — the second convention
+    `jobs._core.sim.counterfactual._resolve` probes. Monk needs the duration to
+    size its chakra budget, so the context-only convention can't serve it; the
+    reversed order is what lets the deep-advice cascade build this model at all
+    (with the arguments the other way round the resolver bound the duration
+    float to `sim_context` and crashed, so Monk shipped no `examined` panel)."""
     from jobs._core.downtime_sources import MultiTargetContext
     from jobs._core.gcd_speed import unwrap_ceiling_context
     gcd, payload = unwrap_ceiling_context(sim_context)
@@ -629,10 +645,29 @@ def _model_for(sim_context, duration_s: float) -> MonkRotationModel:
     return MonkRotationModel(gcd_base_s=gcd, ctx=ctx, duration_hint_s=duration_s)
 
 
-def _score(timeline, aux, buff_intervals):
-    """Engine-facing score_fn (lazy import to avoid a scoring<->simulator cycle)."""
-    from jobs.monk.scoring import score_delivered_potency
-    return score_delivered_potency(timeline, buff_intervals=buff_intervals)
+def _make_score(schedule: tuple[tuple[float, float, int], ...] = ()):
+    """Build the engine-facing score_fn `(timeline, aux, buff_intervals)` bound
+    to the multi-target N(t) `schedule` (the GNB pattern). Empty schedule ->
+    single target, byte-identical. Without the binding the beam optimized a
+    pure-single-target objective and the winner was then scored WITH splash
+    credit — the reply/blitz cleave never influenced which line was chosen.
+    Lazy import to avoid a scoring<->simulator cycle at module load."""
+    from jobs._core.sim.aoe_potency import schedule_target_fn
+    target_fn = schedule_target_fn(schedule)
+
+    def _score(timeline, aux, buff_intervals):
+        from jobs.monk.scoring import score_delivered_potency
+        return score_delivered_potency(
+            timeline, buff_intervals=buff_intervals, target_fn=target_fn)
+    return _score
+
+
+_score = _make_score(())   # single-target default (greedy shims, canonical)
+
+
+def _schedule_of(sim_context) -> tuple[tuple[float, float, int], ...]:
+    from jobs._core.downtime_sources import schedule_from_context
+    return tuple(schedule_from_context(sim_context) or ())
 
 
 @lru_cache(maxsize=64)
@@ -640,24 +675,50 @@ def _perfect_cached(duration_key: float,
                     downtime_tuple: tuple[tuple[float, float], ...],
                     buff_tuple: tuple[tuple[float, float, float], ...] | None,
                     sim_context) -> tuple[tuple[tuple[float, int], ...], int]:
-    model = _model_for(sim_context, duration_key)
+    model = _model_for(duration_key, sim_context)
     buff_intervals = list(buff_tuple) if buff_tuple else None
     tl, aux = engine.beam_perfect(
-        model, _score, duration_key, list(downtime_tuple), buff_intervals,
-        width=_BEAM_WIDTH)
+        model, _make_score(_schedule_of(sim_context)), duration_key,
+        list(downtime_tuple), buff_intervals, width=_BEAM_WIDTH)
     return tuple(tl), aux
+
+
+def _st_context(sim_context):
+    """`sim_context` with any MultiTargetContext layer peeled (GCD axis kept)
+    — the single-target beam the multi-target guard compares against."""
+    from jobs._core.downtime_sources import MultiTargetContext
+    from jobs._core.gcd_speed import CeilingContext, unwrap_ceiling_context
+    gcd, payload = unwrap_ceiling_context(sim_context)
+    if isinstance(payload, MultiTargetContext):
+        payload = payload.inner
+    if gcd is not None:
+        return CeilingContext(gcd_base_s=gcd, payload=payload)
+    return payload
 
 
 def _optimal_best(fight_duration_s, downtime, buff_intervals, sim_context):
     """The MNK ceiling: the diverse beam over the lunar/solar, Fury-banking and
     reply-timing forks on top of the burst-timing refinement. (Beam-only, like
-    DRG/GNB/NIN — the exact DP seam is deferred.)"""
-    tl, aux = _perfect_cached(
-        round(fight_duration_s, 3),
-        tuple((round(s, 3), round(e, 3)) for s, e in (downtime or [])),
-        tuple((round(s, 3), round(e, 3), round(m, 4))
-              for s, e, m in buff_intervals) if buff_intervals else None,
-        sim_context)
+    DRG/GNB/NIN — the exact DP seam is deferred.)
+
+    Multi-target guard: the beam's objective is bound to the N(t) schedule,
+    but a perturbed objective can reorder pruning and (at low N, measured -66p
+    at N=2) lose the line the single-target objective finds. Both lines are
+    always feasible, so the ceiling takes the better of the two UNDER THE REAL
+    SCHEDULE — the same max construction as `max(credited, delivered)`."""
+    dur_key = round(fight_duration_s, 3)
+    dt_key = tuple((round(s, 3), round(e, 3)) for s, e in (downtime or []))
+    buff_key = tuple((round(s, 3), round(e, 3), round(m, 4))
+                     for s, e, m in buff_intervals) if buff_intervals else None
+    tl, aux = _perfect_cached(dur_key, dt_key, buff_key, sim_context)
+    sched = _schedule_of(sim_context)
+    if sched:
+        st_tl, st_aux = _perfect_cached(
+            dur_key, dt_key, buff_key, _st_context(sim_context))
+        score = _make_score(sched)
+        if score(list(st_tl), st_aux, buff_intervals) \
+                > score(list(tl), aux, buff_intervals):
+            tl, aux = st_tl, st_aux
     return list(tl), aux
 
 
@@ -672,7 +733,7 @@ def simulate_idealized(fight_duration_s: float,
     — MNK has no pet/payload scalar, so aux is always 0."""
     if params is None:
         params = SimParams()
-    model = _model_for(sim_context, fight_duration_s)
+    model = _model_for(fight_duration_s, sim_context)
     return engine.run_rotation(model, fight_duration_s, downtime_windows or [], params)
 
 
@@ -707,6 +768,7 @@ def simulate_canonical_aligned(
         ) -> tuple[list[tuple[float, int]], int]:
     """Idealized rotation with the 2-min burst forced into the raid-buff windows.
     Falls back to the throughput optimum when there are no party buffs."""
-    model = _model_for(sim_context, fight_duration_s)
-    return engine.canonical_aligned(model, _score, fight_duration_s,
-                                    downtime_windows or [], buff_intervals)
+    model = _model_for(fight_duration_s, sim_context)
+    return engine.canonical_aligned(
+        model, _make_score(_schedule_of(sim_context)), fight_duration_s,
+        downtime_windows or [], buff_intervals)

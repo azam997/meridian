@@ -1,7 +1,7 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "Meridian",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "identifier": "io.github.azam997.meridian",
   "build": {
     "frontendDist": "../dist",
@@ -20,7 +20,8 @@
         "minHeight": 640,
         "decorations": false,
         "resizable": true,
-        "fullscreen": false
+        "fullscreen": false,
+        "dragDropEnabled": false
       }
     ],
     "security": {
